@@ -57,7 +57,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_coil_open
       likelihood: high
@@ -703,7 +703,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_coil_open
       likelihood: high
@@ -741,7 +741,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_ground
       likelihood: high
@@ -779,7 +779,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_power
       likelihood: high
@@ -817,7 +817,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_coil_open
       likelihood: high
@@ -898,7 +898,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_ground
       likelihood: high
@@ -1086,7 +1086,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_power
       likelihood: high
@@ -1124,7 +1124,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_coil_open
       likelihood: high
@@ -1200,7 +1200,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_ground
       likelihood: high
@@ -1238,7 +1238,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_power
       likelihood: high
@@ -1351,7 +1351,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_ground
       likelihood: high
@@ -1389,7 +1389,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_power
       likelihood: high
@@ -1427,7 +1427,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_coil_open
       likelihood: high
@@ -1503,7 +1503,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_ground
       likelihood: high
@@ -1541,7 +1541,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_power
       likelihood: high
@@ -1691,7 +1691,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_coil_open
       likelihood: high
@@ -1767,7 +1767,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_ground
       likelihood: high
@@ -1805,7 +1805,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_power
       likelihood: high
@@ -1843,7 +1843,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_coil_open
       likelihood: high
@@ -1919,7 +1919,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_ground
       likelihood: high
@@ -1957,7 +1957,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_power
       likelihood: high
@@ -1995,7 +1995,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_coil_open
       likelihood: high
@@ -2071,7 +2071,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_ground
       likelihood: high
@@ -2109,7 +2109,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_power
       likelihood: high
@@ -2147,7 +2147,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_coil_open
       likelihood: high
@@ -2223,7 +2223,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_ground
       likelihood: high
@@ -2261,7 +2261,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_power
       likelihood: high
@@ -2299,7 +2299,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_coil_open
       likelihood: high
@@ -2337,7 +2337,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_short_to_ground
       likelihood: high
@@ -2381,7 +2381,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_short_to_ground
       likelihood: high
@@ -2425,7 +2425,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_short_to_ground
       likelihood: high
@@ -2469,7 +2469,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_coil_open
       likelihood: high
@@ -2545,7 +2545,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_ground
       likelihood: high
@@ -2583,7 +2583,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_power
       likelihood: high
@@ -2621,7 +2621,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_coil_open
       likelihood: high
@@ -2697,7 +2697,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_ground
       likelihood: high
@@ -2735,7 +2735,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: wiring_short_power
       likelihood: high
@@ -2773,7 +2773,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_short_to_power
       likelihood: high
@@ -3245,7 +3245,7 @@
   affected_components:
     - oil_pressure_switch
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: pressure_switch_failed
       likelihood: high
@@ -3332,7 +3332,7 @@
   affected_components:
     - oil_pressure_switch
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: pressure_switch_failed
       likelihood: high
@@ -3419,7 +3419,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_coil_open
       likelihood: high
@@ -3463,7 +3463,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_coil_open
       likelihood: high
@@ -3545,7 +3545,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_short_to_ground
       likelihood: high
@@ -3589,7 +3589,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_short_to_power
       likelihood: high
@@ -3633,7 +3633,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_short_to_ground
       likelihood: high
@@ -3677,7 +3677,7 @@
   affected_components:
     - cylinder_deactivation_solenoid
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: solenoid_short_to_power
       likelihood: high
@@ -3948,7 +3948,7 @@
   affected_components:
     - position_sensor
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: sensor_failed
       likelihood: high
@@ -3992,7 +3992,7 @@
   affected_components:
     - position_sensor
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: sensor_failed
       likelihood: high
@@ -4204,7 +4204,7 @@
   affected_components:
     - oil_pressure_sensor
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: sensor_failed
       likelihood: high
@@ -4248,7 +4248,7 @@
   affected_components:
     - oil_pressure_sensor
     - engine_wiring_harness
-    - engine_control_module
+    - ecm
   common_causes:
     - id: sensor_failed
       likelihood: high

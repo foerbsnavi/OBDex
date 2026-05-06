@@ -3890,7 +3890,7 @@
     en: A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.
     de: Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.
   affected_components:
-    - engine_control_module
+    - ecm
     - can_bus_wiring
   common_causes:
     - id: ecm_unpowered
@@ -3932,7 +3932,7 @@
     en: The ECU has stopped receiving messages from the transmission control module. The transmission falls into limp-home mode (typically locked in 3rd or 4th gear), the speedometer may stop working, and shift adaptation freezes.
     de: Die Motorsteuerung empfängt keine Botschaften vom Getriebesteuergerät mehr. Das Getriebe geht in den Notlauf (typischerweise verriegelt im 3. oder 4. Gang), der Tacho fällt eventuell aus und die Schaltadaption friert ein.
   affected_components:
-    - transmission_control_module
+    - tcm
     - can_bus_wiring
   common_causes:
     - id: tcm_unpowered
@@ -4638,7 +4638,7 @@
     en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
     de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
   affected_components:
-    - engine_control_module
+    - ecm
     - can_bus_wiring
   common_causes:
     - id: ecm_b_unpowered
@@ -10090,7 +10090,7 @@
     en: ECU lost CAN communication with the main battery management control module (BMS) — central HV battery controller.
     de: Steuergerät hat die CAN-Kommunikation zum zentralen Batteriemanagement-Modul (BMS) verloren — Hauptcontroller der HV-Batterie.
   affected_components:
-    - bms_module
+    - bms
     - can_bus
   common_causes:
     - id: module_unpowered
@@ -17056,7 +17056,7 @@
     en: A control module has detected that its software/calibration is incompatible with the engine ECM/PCM. Typically appears after a partial flash, mismatched coding, or fitting a used ECM from a different vehicle.
     de: Ein Steuergerät hat erkannt, dass seine Software/Kalibrierung mit dem Motor-ECM/PCM inkompatibel ist. Tritt typischerweise nach einem Teil-Flash, falscher Codierung oder dem Einbau eines gebrauchten ECM aus einem anderen Fahrzeug auf.
   affected_components:
-    - engine_control_module
+    - ecm
     - control_module
   common_causes:
     - id: software_mismatch
@@ -17091,7 +17091,7 @@
     en: A control module has detected that its software/calibration is incompatible with the transmission control module. Often appears after a TCM swap or partial flash.
     de: Ein Steuergerät hat erkannt, dass seine Software/Kalibrierung mit dem Getriebesteuergerät inkompatibel ist. Tritt häufig nach einem TCM-Tausch oder Teil-Flash auf.
   affected_components:
-    - transmission_control_module
+    - tcm
     - control_module
   common_causes:
     - id: software_mismatch
@@ -17161,7 +17161,7 @@
     en: The ECU receives messages from the TCM but their content is implausible (e.g. invalid gear, impossible speed). The transmission may switch to limp-home mode and shift quality is degraded.
     de: Die Motorsteuerung empfängt Botschaften vom TCM, deren Inhalt aber unplausibel ist (z. B. ungültiger Gang, unmögliche Drehzahl). Das Getriebe geht eventuell in den Notlauf, die Schaltqualität verschlechtert sich.
   affected_components:
-    - transmission_control_module
+    - tcm
     - can_bus_wiring
   common_causes:
     - id: tcm_software_mismatch
@@ -17232,7 +17232,7 @@
     de: Das Einspritzdüsen-Treibermodul meldet eine Software-Version, die nicht zur Erwartung der Motorsteuerung passt. Der Motor startet nicht oder läuft unrund, bis beide Module auf kompatible Versionen geflasht sind.
   affected_components:
     - injector_driver_module
-    - engine_control_module
+    - ecm
   common_causes:
     - id: incomplete_flash
       likelihood: high
@@ -17261,7 +17261,7 @@
     de: Das Glühkerzen-Steuergerät und die Motorsteuerung laufen mit inkompatiblen Software-Versionen. Das Vorglühen kann gesperrt sein, die Vorglühanzeige bleibt eventuell an.
   affected_components:
     - glow_plug_module
-    - engine_control_module
+    - ecm
   common_causes:
     - id: flash_mismatch
       likelihood: high
@@ -18394,7 +18394,7 @@
     en: A control module has detected that its software version does not match the engine/powertrain ECU. Typically after a partial flash, mismatched coding, or fitting a used ECM from a different vehicle.
     de: Ein Steuergerät hat erkannt, dass seine Software-Version nicht zum Motor-/Antriebsstrang-Steuergerät passt. Typischerweise nach Teil-Flash, falscher Codierung oder Verbau eines gebrauchten ECM aus anderem Fahrzeug.
   affected_components:
-    - engine_control_module
+    - ecm
     - control_module
   common_causes:
     - id: ecm_software_mismatch
@@ -19964,7 +19964,7 @@
     en: A control module is communicating with the engine ECU but receives data that is implausible or out of range — wrong checksum, value frozen, or value outside expected limits. Typical effects include limp-home and incorrect dashboard readings.
     de: Ein Steuergerät kommuniziert mit dem Motorsteuergerät, empfängt aber unplausible oder außerhalb des Bereichs liegende Daten — falsche Checksumme, eingefrorener Wert oder Wert außerhalb der erwarteten Grenzen. Typische Folgen sind Notlauf und falsche Anzeigen im Kombiinstrument.
   affected_components:
-    - engine_control_module
+    - ecm
     - can_bus_wiring
   common_causes:
     - id: ecm_software_bug
@@ -20005,7 +20005,7 @@
     en: A control module is communicating with the transmission control module but receives implausible data — wrong checksum, frozen value, or out-of-range value. Often results in transmission limp-home.
     de: Ein Steuergerät kommuniziert mit dem Getriebesteuergerät, empfängt aber unplausible Daten — falsche Checksumme, eingefrorener Wert oder Wert außerhalb des Bereichs. Führt oft zum Getriebenotlauf.
   affected_components:
-    - transmission_control_module
+    - tcm
     - can_bus_wiring
   common_causes:
     - id: tcm_software_bug
@@ -20215,7 +20215,7 @@
     de: Die Motorsteuerung empfängt vom Wegfahrsperren-Steuergerät eine Freigabe-Botschaft, die nicht zum erwarteten Rolling-Code passt. Der Motorstart wird blockiert.
   affected_components:
     - immobilizer_module
-    - engine_control_module
+    - ecm
   common_causes:
     - id: key_not_learned
       likelihood: high
@@ -26535,7 +26535,7 @@
     en: A receiving module detected implausible data from the battery management control module (BMS master). SoC, SoH, current or voltage values fail plausibility checks against other inputs and are rejected.
     de: Ein empfangendes Steuergerät erkennt unstimmige Daten vom Batterie-Management-Steuergerät (BMS-Master). SoC, SoH, Strom oder Spannung bestehen Plausibilitätsprüfungen nicht und werden verworfen.
   affected_components:
-    - battery_management_module
+    - bms
   common_causes:
     - id: module_internal_fault
       likelihood: high
@@ -31645,7 +31645,7 @@
     de: NOx-Sensor A (smarter Sensor mit eigenem Steuergerät) erhielt unstimmige Daten vom ECM/PCM. Motorlast, Kraftstoffrate oder Temperaturdaten, die der Sensor für die interne Kompensation benötigt, bestehen Plausibilitätsprüfungen nicht; der Sensor meldet beeinträchtigte Messwerte.
   affected_components:
     - nox_sensor_a
-    - ecm_pcm
+    - ecm
   common_causes:
     - id: module_internal_fault
       likelihood: high
@@ -31684,7 +31684,7 @@
     de: NOx-Sensor B (smarter Sensor mit eigenem Steuergerät) erhielt unstimmige Daten vom ECM/PCM. Motorlast, Kraftstoffrate oder Temperaturdaten, die der Sensor für die interne Kompensation benötigt, bestehen Plausibilitätsprüfungen nicht; der Sensor meldet beeinträchtigte Messwerte.
   affected_components:
     - nox_sensor_b
-    - ecm_pcm
+    - ecm
   common_causes:
     - id: module_internal_fault
       likelihood: high
@@ -31760,7 +31760,7 @@
     de: Der Partikelsensor (smarter Sensor mit eigenem Steuergerät) erhielt unstimmige Daten vom ECM/PCM. Motorlast, Abgastemperatur oder DPF-Status-Daten, die zur Kompensation benötigt werden, bestehen Plausibilitätsprüfungen nicht; PM-Messwerte sind beeinträchtigt.
   affected_components:
     - pm_sensor
-    - ecm_pcm
+    - ecm
   common_causes:
     - id: module_internal_fault
       likelihood: high
@@ -31947,7 +31947,7 @@
     de: NOx-Sensor C (smarter Sensor mit eigenem Steuergerät) erhielt unstimmige Daten vom ECM/PCM. Motorlast, Kraftstoffrate oder Temperaturdaten, die der Sensor für die interne Kompensation benötigt, bestehen Plausibilitätsprüfungen nicht; der Sensor meldet beeinträchtigte Messwerte.
   affected_components:
     - nox_sensor_c
-    - ecm_pcm
+    - ecm
   common_causes:
     - id: module_internal_fault
       likelihood: high
