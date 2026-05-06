@@ -48,6 +48,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0002
   category: body
@@ -95,6 +96,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0003
   category: body
@@ -141,6 +143,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0004
   category: body
@@ -187,6 +190,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0005
   category: body
@@ -233,6 +237,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0006
   category: body
@@ -279,6 +284,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0007
   category: body
@@ -325,6 +331,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0010
   category: body
@@ -371,6 +378,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0011
   category: body
@@ -418,6 +426,7 @@
   related_codes: [B0012]
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0012
   category: body
@@ -465,6 +474,7 @@
   related_codes: [B0011]
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0013
   category: body
@@ -549,6 +559,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0015
   category: body
@@ -590,6 +601,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0016
   category: body
@@ -630,6 +642,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0017
   category: body
@@ -670,6 +683,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0018
   category: body
@@ -710,6 +724,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0019
   category: body
@@ -750,6 +765,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B001A
   category: body
@@ -835,6 +851,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0021
   category: body
@@ -881,6 +898,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0022
   category: body
@@ -921,6 +939,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0023
   category: body
@@ -961,6 +980,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0024
   category: body
@@ -1008,6 +1028,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0025
   category: body
@@ -1048,6 +1069,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0026
   category: body
@@ -1088,6 +1110,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0028
   category: body
@@ -1134,6 +1157,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0029
   category: body
@@ -1180,6 +1204,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B002A
   category: body
@@ -1259,6 +1284,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0031
   category: body
@@ -1300,6 +1326,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0032
   category: body
@@ -1340,6 +1367,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0033
   category: body
@@ -1380,6 +1408,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0034
   category: body
@@ -1420,6 +1449,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0036
   category: body
@@ -1455,6 +1485,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0038
   category: body
@@ -1648,6 +1679,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0041
   category: body
@@ -1726,6 +1758,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0043
   category: body
@@ -1804,6 +1837,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0047
   category: body
@@ -1839,6 +1873,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0048
   category: body
@@ -2037,6 +2072,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0051
   category: body
@@ -2084,6 +2120,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0052
   category: body
@@ -2168,6 +2205,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0054
   category: body
@@ -2284,6 +2322,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0057
   category: body
@@ -2319,6 +2358,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0058
   category: body
@@ -2398,6 +2438,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0061
   category: body
@@ -2438,6 +2479,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0062
   category: body
@@ -2473,6 +2515,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0064
   category: body
@@ -2514,6 +2557,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0070
   category: body
@@ -2560,6 +2604,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0071
   category: body
@@ -2638,6 +2683,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Seat_belt
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0073
   category: body
@@ -2673,6 +2719,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Seat_belt
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0074
   category: body
@@ -2708,6 +2755,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Seat_belt
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0075
   category: body
@@ -2781,6 +2829,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Seat_belt
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0077
   category: body
@@ -2816,6 +2865,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Seat_belt
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0078
   category: body
@@ -3206,6 +3256,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0082
   category: body
@@ -3246,6 +3297,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Seat_belt
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0083
   category: body
@@ -3281,6 +3333,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Seat_belt
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0084
   category: body
@@ -3322,6 +3375,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0085
   category: body
@@ -3363,6 +3417,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0086
   category: body
@@ -3398,6 +3453,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Seat_belt
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0087
   category: body
@@ -3433,6 +3489,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Seat_belt
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0088
   category: body
@@ -3517,6 +3574,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0091
   category: body
@@ -3563,6 +3621,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0092
   category: body
@@ -3608,6 +3667,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0093
   category: body
@@ -3653,6 +3713,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0094
   category: body
@@ -3693,6 +3754,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0095
   category: body
@@ -3739,6 +3801,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0096
   category: body
@@ -3779,6 +3842,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0097
   category: body
@@ -3819,6 +3883,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0098
   category: body
@@ -3860,6 +3925,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0099
   category: body
@@ -3900,6 +3966,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B009A
   category: body
@@ -6102,6 +6169,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0101
   category: body
@@ -6142,6 +6210,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0102
   category: body
@@ -6183,6 +6252,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Wing_mirror
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0103
   category: body
@@ -6228,6 +6298,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0104
   category: body
@@ -6268,6 +6339,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Wing_mirror
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0105
   category: body
@@ -6313,6 +6385,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0106
   category: body
@@ -6353,6 +6426,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Wing_mirror
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0107
   category: body
@@ -6393,6 +6467,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0108
   category: body
@@ -6433,6 +6508,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Wing_mirror
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0109
   category: body
@@ -6745,6 +6821,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0111
   category: body
@@ -7370,6 +7447,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0121
   category: body
@@ -7565,6 +7643,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Wing_mirror
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0126
   category: body
@@ -7605,6 +7684,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Wing_mirror
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0127
   category: body
@@ -7700,6 +7780,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0129
   category: body
@@ -8040,6 +8121,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Seat_belt
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0131
   category: body
@@ -8236,6 +8318,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Seat_belt
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0150
   category: body
@@ -8282,6 +8365,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0152
   category: body
@@ -8322,6 +8406,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Seat_belt
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0154
   category: body
@@ -8362,6 +8447,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Seat_belt
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0156
   category: body
@@ -8402,6 +8488,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0158
   category: body
@@ -8442,6 +8529,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0159
   category: body
@@ -8487,6 +8575,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0160
   category: body
@@ -8527,6 +8616,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0162
   category: body
@@ -8567,6 +8657,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0164
   category: body
@@ -8607,6 +8698,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0166
   category: body
@@ -8647,6 +8739,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0168
   category: body
@@ -8688,6 +8781,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0170
   category: body
@@ -8729,6 +8823,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0173
   category: body
@@ -8769,6 +8864,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0175
   category: body
@@ -8809,6 +8905,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0181
   category: body
@@ -8855,6 +8952,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0182
   category: body
@@ -8890,6 +8988,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Seat_belt
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0184
   category: body
@@ -8931,6 +9030,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0186
   category: body
@@ -8972,6 +9072,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0188
   category: body
@@ -9018,6 +9119,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0190
   category: body
@@ -9059,6 +9161,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Windscreen_wiper
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0192
   category: body
@@ -9099,6 +9202,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Windscreen_wiper
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0200
   category: body
@@ -9145,6 +9249,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0205
   category: body
@@ -9185,6 +9290,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0210
   category: body
@@ -9226,6 +9332,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Windscreen_wiper
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0220
   category: body
@@ -9272,6 +9379,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0223
   category: body
@@ -9313,6 +9421,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0226
   category: body
@@ -9354,6 +9463,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0228
   category: body
@@ -9400,6 +9510,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0231
   category: body
@@ -9440,6 +9551,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Headlamp
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0233
   category: body
@@ -9480,6 +9592,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Headlamp
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0235
   category: body
@@ -9521,6 +9634,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Headlamp
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0237
   category: body
@@ -9562,6 +9676,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Headlamp
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0239
   category: body
@@ -9603,6 +9718,7 @@
   related_codes: [B0860]
   sources:
     - https://en.wikipedia.org/wiki/Headlamp
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0240
   category: body
@@ -9644,6 +9760,7 @@
   related_codes: [B0800]
   sources:
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0245
   category: body
@@ -9685,6 +9802,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_window
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0247
   category: body
@@ -9725,6 +9843,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_window
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0250
   category: body
@@ -9770,6 +9889,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0252
   category: body
@@ -9810,6 +9930,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_window
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0255
   category: body
@@ -9850,6 +9971,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0258
   category: body
@@ -9895,6 +10017,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0260
   category: body
@@ -9937,6 +10060,7 @@
   related_codes: [B0970]
   sources:
     - https://en.wikipedia.org/wiki/Headlamp
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0263
   category: body
@@ -9977,6 +10101,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0265
   category: body
@@ -10018,6 +10143,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_window
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0268
   category: body
@@ -10058,6 +10184,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0270
   category: body
@@ -10099,6 +10226,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_window
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0272
   category: body
@@ -10140,6 +10268,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_door_lock
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0273
   category: body
@@ -10180,6 +10309,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0274
   category: body
@@ -10220,6 +10350,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_door_lock
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0278
   category: body
@@ -10255,6 +10386,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0283
   category: body
@@ -10301,6 +10433,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0288
   category: body
@@ -10347,6 +10480,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0290
   category: body
@@ -10387,6 +10521,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0292
   category: body
@@ -10433,6 +10568,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0300
   category: body
@@ -10473,6 +10609,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0305
   category: body
@@ -10513,6 +10650,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0310
   category: body
@@ -10554,6 +10692,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_seat
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0312
   category: body
@@ -10594,6 +10733,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_seat
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0320
   category: body
@@ -10635,6 +10775,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_seat
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0322
   category: body
@@ -10675,6 +10816,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_seat
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0325
   category: body
@@ -10720,6 +10862,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_seat
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0327
   category: body
@@ -10765,6 +10908,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_seat
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0330
   category: body
@@ -10806,6 +10950,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0335
   category: body
@@ -10846,6 +10991,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_seat
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0337
   category: body
@@ -10886,6 +11032,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_seat
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0339
   category: body
@@ -10926,6 +11073,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_seat
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0341
   category: body
@@ -10971,6 +11119,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0342
   category: body
@@ -11011,6 +11160,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0420
   category: body
@@ -11051,6 +11201,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0425
   category: body
@@ -11091,6 +11242,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0440
   category: body
@@ -11132,6 +11284,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Bluetooth
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0445
   category: body
@@ -11172,6 +11325,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0450
   category: body
@@ -11212,6 +11366,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Bluetooth
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0455
   category: body
@@ -11252,6 +11407,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0460
   category: body
@@ -11292,6 +11448,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Bluetooth
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0490
   category: body
@@ -11332,6 +11489,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0500
   category: body
@@ -11378,6 +11536,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_window
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0501
   category: body
@@ -11419,6 +11578,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_window
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0502
   category: body
@@ -11454,6 +11614,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_window
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0503
   category: body
@@ -11489,6 +11650,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_window
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0510
   category: body
@@ -11530,6 +11692,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_door_lock
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0520
   category: body
@@ -11571,6 +11734,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_door_lock
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0530
   category: body
@@ -11617,6 +11781,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_door_locks
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0531
   category: body
@@ -11657,6 +11822,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_door_locks
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0532
   category: body
@@ -11692,6 +11858,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_door_locks
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0533
   category: body
@@ -11727,6 +11894,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_door_locks
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0540
   category: body
@@ -11767,6 +11935,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_door_locks
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0541
   category: body
@@ -11802,6 +11971,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_door_locks
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0560
   category: body
@@ -11842,6 +12012,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Car_seat
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0561
   category: body
@@ -11877,6 +12048,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Car_seat
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0562
   category: body
@@ -11912,6 +12084,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Car_seat
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0570
   category: body
@@ -11947,6 +12120,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Car_seat
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0580
   category: body
@@ -11991,6 +12165,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Car_seat
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0600
   category: body
@@ -12031,6 +12206,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Wing_mirror
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0601
   category: body
@@ -12066,6 +12242,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Wing_mirror
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0610
   category: body
@@ -12106,6 +12283,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Wing_mirror
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0700
   category: body
@@ -12151,6 +12329,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Sunroof
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0710
   category: body
@@ -12191,6 +12370,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Sunroof
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0800
   category: body
@@ -12232,6 +12412,7 @@
   related_codes: [B0240]
   sources:
     - https://en.wikipedia.org/wiki/Headlamp
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0810
   category: body
@@ -12272,6 +12453,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Headlamp
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0811
   category: body
@@ -12307,6 +12489,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Headlamp
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0820
   category: body
@@ -12342,6 +12525,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Headlamp
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0821
   category: body
@@ -12377,6 +12561,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Headlamp
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0830
   category: body
@@ -12412,6 +12597,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_lighting
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0831
   category: body
@@ -12447,6 +12633,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_lighting
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0840
   category: body
@@ -12482,6 +12669,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_lighting
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0841
   category: body
@@ -12517,6 +12705,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_lighting
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0850
   category: body
@@ -12557,6 +12746,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_lighting
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0851
   category: body
@@ -12592,6 +12782,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_lighting
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0860
   category: body
@@ -12633,6 +12824,7 @@
   related_codes: [B0239]
   sources:
     - https://en.wikipedia.org/wiki/Automotive_lighting
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0900
   category: body
@@ -12679,6 +12871,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Windscreen_wiper
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0910
   category: body
@@ -12714,6 +12907,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Windscreen_wiper
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0920
   category: body
@@ -12754,6 +12948,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Windscreen_wiper
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0950
   category: body
@@ -12795,6 +12990,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Defogger
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0960
   category: body
@@ -12841,6 +13037,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Horn_(acoustic)
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0970
   category: body
@@ -12882,6 +13079,7 @@
   related_codes: [B0260]
   sources:
     - https://en.wikipedia.org/wiki/Automotive_lighting
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0980
   category: body
@@ -12922,6 +13120,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Ignition_switch
+    - https://en.wikipedia.org/wiki/Body_control_module
 
 - code: B0990
   category: body

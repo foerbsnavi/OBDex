@@ -6229,6 +6229,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Engine_control_unit
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0106
   category: network
@@ -6279,6 +6280,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Engine_control_unit
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0107
   category: network
@@ -6329,6 +6331,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Engine_control_unit
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0108
   category: network
@@ -6431,6 +6434,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Engine_control_unit
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U010A
   category: network
@@ -7047,6 +7051,7 @@
   related_codes: [U0100]
   sources:
     - https://en.wikipedia.org/wiki/Engine_control_unit
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0116
   category: network
@@ -7096,6 +7101,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_steering
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0117
   category: network
@@ -7196,6 +7202,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0119
   category: network
@@ -7246,6 +7253,7 @@
   related_codes: [U0212]
   sources:
     - https://en.wikipedia.org/wiki/Power_steering
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U011A
   category: network
@@ -7611,6 +7619,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Engine_control_unit
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0121
   category: network
@@ -7660,6 +7669,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0122
   category: network
@@ -7709,6 +7719,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0123
   category: network
@@ -7759,6 +7770,7 @@
   related_codes: [U0133]
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0124
   category: network
@@ -7808,6 +7820,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0125
   category: network
@@ -7857,6 +7870,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0126
   category: network
@@ -7907,6 +7921,7 @@
   related_codes: [U0236]
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0127
   category: network
@@ -7956,6 +7971,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0128
   category: network
@@ -8005,6 +8021,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0129
   category: network
@@ -8055,6 +8072,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U012A
   category: network
@@ -8420,6 +8438,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_steering
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0131
   category: network
@@ -8570,6 +8589,7 @@
   related_codes: [U0123]
   sources:
     - https://en.wikipedia.org/wiki/Electronic_stability_control
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0134
   category: network
@@ -8619,6 +8639,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0135
   category: network
@@ -8668,6 +8689,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Electronic_parking_brake
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0136
   category: network
@@ -8717,6 +8739,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0137
   category: network
@@ -8765,6 +8788,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Trailer_brake_controller
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0138
   category: network
@@ -8813,6 +8837,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Four-wheel_drive
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0139
   category: network
@@ -8861,6 +8886,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Active_suspension
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U013C
   category: network
@@ -9120,6 +9146,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0141
   category: network
@@ -9169,6 +9196,7 @@
   related_codes: [U0142, U0143]
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0142
   category: network
@@ -9219,6 +9247,7 @@
   related_codes: [U0141, U0143]
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0143
   category: network
@@ -9268,6 +9297,7 @@
   related_codes: [U0142, U0141]
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0144
   category: network
@@ -9317,6 +9347,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0145
   category: network
@@ -9365,6 +9396,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Airbag
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0146
   category: network
@@ -9516,6 +9548,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0149
   category: network
@@ -9565,6 +9598,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_window
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U014A
   category: network
@@ -10121,6 +10155,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Instrument_cluster
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0156
   category: network
@@ -10219,6 +10254,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0158
   category: network
@@ -10268,6 +10304,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Heads-up_display
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0159
   category: network
@@ -10682,6 +10719,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0161
   category: network
@@ -10731,6 +10769,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_navigation_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0162
   category: network
@@ -10780,6 +10819,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_navigation_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0163
   category: network
@@ -10829,6 +10869,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_navigation_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0164
   category: network
@@ -10878,6 +10919,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0165
   category: network
@@ -10927,6 +10969,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0166
   category: network
@@ -10977,6 +11020,7 @@
   related_codes: [U0189]
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0167
   category: network
@@ -11026,6 +11070,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0168
   category: network
@@ -11075,6 +11120,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Immobiliser
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0169
   category: network
@@ -11124,6 +11170,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U016A
   category: network
@@ -11741,6 +11788,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_seat
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0178
   category: network
@@ -11843,6 +11891,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U017A
   category: network
@@ -12210,6 +12259,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0181
   category: network
@@ -12259,6 +12309,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0182
   category: network
@@ -12307,6 +12358,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Headlamp
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0183
   category: network
@@ -12355,6 +12407,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0184
   category: network
@@ -12452,6 +12505,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Vehicle_audio
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0186
   category: network
@@ -12648,6 +12702,7 @@
   related_codes: [U0166]
   sources:
     - https://en.wikipedia.org/wiki/Auxiliary_heater
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U018A
   category: network
@@ -12846,6 +12901,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Telematics
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0193
   category: network
@@ -12943,6 +12999,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Voice_user_interface
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0195
   category: network
@@ -13089,6 +13146,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Bluetooth
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0198
   category: network
@@ -13137,6 +13195,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/ECall
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0199
   category: network
@@ -13186,6 +13245,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U019A
   category: network
@@ -16082,6 +16142,7 @@
   related_codes: [U0119]
   sources:
     - https://en.wikipedia.org/wiki/Clock_spring
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0213
   category: network
@@ -16130,6 +16191,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0214
   category: network
@@ -16178,6 +16240,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Remote_keyless_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0215
   category: network
@@ -16226,6 +16289,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0216
   category: network
@@ -16274,6 +16338,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0217
   category: network
@@ -16322,6 +16387,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0218
   category: network
@@ -16370,6 +16436,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0219
   category: network
@@ -16418,6 +16485,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_liftgate
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0220
   category: network
@@ -16467,6 +16535,7 @@
   related_codes: [U0221, U0222, U020B, U0205, U0204, U0203, U0202, U0201, U0200]
   sources:
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0221
   category: network
@@ -16516,6 +16585,7 @@
   related_codes: [U0220, U0222, U020B, U0205, U0204, U0203, U0202, U0201, U0200]
   sources:
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0222
   category: network
@@ -16565,6 +16635,7 @@
   related_codes: [U0221, U0220, U020B, U0205, U0204, U0203, U0202, U0201, U0200]
   sources:
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0223
   category: network
@@ -17141,6 +17212,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Rain_sensor
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0232
   category: network
@@ -17189,6 +17261,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Blind_spot_monitor
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0233
   category: network
@@ -17237,6 +17310,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Blind_spot_monitor
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0234
   category: network
@@ -17337,6 +17411,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Adaptive_cruise_control
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0236
   category: network
@@ -17388,6 +17463,7 @@
   related_codes: [U0126]
   sources:
     - https://en.wikipedia.org/wiki/Electronic_stability_control
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0237
   category: network
@@ -17436,6 +17512,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0238
   category: network
@@ -21863,6 +21940,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Hybrid_vehicle
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0294
   category: network
@@ -21912,6 +21990,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Engine_control_unit
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0295
   category: network
@@ -21962,6 +22041,7 @@
   related_codes: [U0131]
   sources:
     - https://en.wikipedia.org/wiki/Power_steering
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0296
   category: network
@@ -22063,6 +22143,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Hybrid_vehicle
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0298
   category: network
@@ -24367,6 +24448,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Engine_control_unit
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0302
   category: network
@@ -24514,6 +24596,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Engine_control_unit
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0305
   category: network
@@ -24611,6 +24694,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Engine_control_unit
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0307
   category: network
@@ -24659,6 +24743,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Glowplug
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0308
   category: network
@@ -24707,6 +24792,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0309
   category: network
@@ -25372,6 +25458,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0316
   category: network
@@ -25421,6 +25508,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0317
   category: network
@@ -25470,6 +25558,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0318
   category: network
@@ -25520,6 +25609,7 @@
   related_codes: [U0320]
   sources:
     - https://en.wikipedia.org/wiki/Power_steering
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0319
   category: network
@@ -25568,6 +25658,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U031A
   category: network
@@ -26027,6 +26118,7 @@
   related_codes: [U0331, U0339]
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0323
   category: network
@@ -26125,6 +26217,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0325
   category: network
@@ -26172,6 +26265,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Auxiliary_heater
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0326
   category: network
@@ -26273,6 +26367,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Engine_control_unit
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0328
   category: network
@@ -28436,6 +28531,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Engine_control_unit
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0402
   category: network
@@ -28681,6 +28777,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Adaptive_cruise_control
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0407
   category: network
@@ -28729,6 +28826,7 @@
   related_codes: [U0428]
   sources:
     - https://en.wikipedia.org/wiki/Electronic_stability_control
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0408
   category: network
@@ -28778,6 +28876,7 @@
   related_codes: [U0425]
   sources:
     - https://en.wikipedia.org/wiki/Immobiliser
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0409
   category: network
@@ -28826,6 +28925,7 @@
   related_codes: [U0427]
   sources:
     - https://en.wikipedia.org/wiki/Vehicle_anti-theft_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U040A
   category: network
@@ -29183,6 +29283,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Electronic_parking_brake
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0411
   category: network
@@ -29230,6 +29331,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0412
   category: network
@@ -29277,6 +29379,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0413
   category: network
@@ -29324,6 +29427,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0414
   category: network
@@ -29423,6 +29527,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0416
   category: network
@@ -29472,6 +29577,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0417
   category: network
@@ -29520,6 +29626,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Park_assist
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0418
   category: network
@@ -29571,6 +29678,7 @@
   related_codes: [U0419]
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0419
   category: network
@@ -29621,6 +29729,7 @@
   related_codes: [U0418]
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U041A
   category: network
@@ -29980,6 +30089,7 @@
   related_codes: [U0521]
   sources:
     - https://en.wikipedia.org/wiki/Power_steering
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0421
   category: network
@@ -30029,6 +30139,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Throttle_position_sensor
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0422
   category: network
@@ -30079,6 +30190,7 @@
   related_codes: [U0431]
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0423
   category: network
@@ -30177,6 +30289,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0425
   category: network
@@ -30225,6 +30338,7 @@
   related_codes: [U0408]
   sources:
     - https://en.wikipedia.org/wiki/Immobiliser
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0426
   category: network
@@ -30274,6 +30388,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0427
   category: network
@@ -30322,6 +30437,7 @@
   related_codes: [U0409]
   sources:
     - https://en.wikipedia.org/wiki/Vehicle_anti-theft_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0428
   category: network
@@ -30372,6 +30488,7 @@
   related_codes: [U0407]
   sources:
     - https://en.wikipedia.org/wiki/Power_steering
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0429
   category: network
@@ -30421,6 +30538,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Power_steering
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U042A
   category: network
@@ -30779,6 +30897,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0431
   category: network
@@ -30827,6 +30946,7 @@
   related_codes: [U0422]
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0432
   category: network
@@ -30874,6 +30994,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Four-wheel_drive
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0433
   category: network
@@ -31178,6 +31299,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0439
   category: network
@@ -31946,6 +32068,7 @@
   related_codes: [U0448]
   sources:
     - https://en.wikipedia.org/wiki/Gateway_(telecommunications)
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0448
   category: network
@@ -31994,6 +32117,7 @@
   related_codes: [U0447]
   sources:
     - https://en.wikipedia.org/wiki/Gateway_(telecommunications)
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0449
   category: network
@@ -34154,6 +34278,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Automotive_navigation_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0477
   category: network
@@ -38907,6 +39032,7 @@
   related_codes: [U0420]
   sources:
     - https://en.wikipedia.org/wiki/Power_steering
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0522
   category: network
@@ -43409,6 +43535,7 @@
   related_codes: [U0463]
   sources:
     - https://en.wikipedia.org/wiki/Automotive_navigation_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0587
   category: network
@@ -43508,6 +43635,7 @@
   related_codes: [U0464]
   sources:
     - https://en.wikipedia.org/wiki/Automotive_navigation_system
+    - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0589
   category: network

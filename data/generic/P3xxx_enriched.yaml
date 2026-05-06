@@ -88,6 +88,7 @@
   related_codes: [P3425]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3402
   category: powertrain
@@ -130,6 +131,7 @@
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3403
   category: powertrain
@@ -172,6 +174,7 @@
   related_codes: [P3407, P3413, P3435]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3404
   category: powertrain
@@ -214,6 +217,7 @@
   related_codes: [P3408]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3405
   category: powertrain
@@ -256,6 +260,7 @@
   related_codes: [P3409]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3406
   category: powertrain
@@ -298,6 +303,7 @@
   related_codes: [P3412, P3434]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3407
   category: powertrain
@@ -340,6 +346,7 @@
   related_codes: [P3403, P3413, P3435]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3408
   category: powertrain
@@ -382,6 +389,7 @@
   related_codes: [P3404]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3409
   category: powertrain
@@ -424,6 +432,7 @@
   related_codes: [P3405]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P340A
   category: powertrain
@@ -662,6 +671,7 @@
   related_codes: [P3433, P3441, P3449]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3412
   category: powertrain
@@ -704,6 +714,7 @@
   related_codes: [P3406, P3434]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3413
   category: powertrain
@@ -746,6 +757,7 @@
   related_codes: [P3407, P3403, P3435]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3414
   category: powertrain
@@ -789,6 +801,7 @@
   related_codes: [P3421, P3429, P3436, P3444, P3452, P3460]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3415
   category: powertrain
@@ -832,6 +845,7 @@
   related_codes: [P3423, P3431, P3438, P3446, P3453, P3454, P3455, P3462, P3487]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3416
   category: powertrain
@@ -875,6 +889,7 @@
   related_codes: [P3424, P3432, P3439, P3447, P3463, P3464, P3488]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3417
   category: powertrain
@@ -918,6 +933,7 @@
   related_codes: [P3440, P3448, P3456]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3418
   category: powertrain
@@ -961,6 +977,7 @@
   related_codes: [P3426]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3419
   category: powertrain
@@ -1004,6 +1021,7 @@
   related_codes: [P3427, P3442, P3450, P3458]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P341A
   category: powertrain
@@ -1197,6 +1215,7 @@
   related_codes: [P3428, P3443, P3451, P3459]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3421
   category: powertrain
@@ -1240,6 +1259,7 @@
   related_codes: [P3429, P3414, P3436, P3444, P3452, P3460]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3422
   category: powertrain
@@ -1278,6 +1298,7 @@
   related_codes: [P3430, P3437, P3445, P3461]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3423
   category: powertrain
@@ -1321,6 +1342,7 @@
   related_codes: [P3415, P3431, P3438, P3446, P3453, P3454, P3455, P3462, P3487]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3424
   category: powertrain
@@ -1364,6 +1386,7 @@
   related_codes: [P3416, P3432, P3439, P3447, P3463, P3464, P3488]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3425
   category: powertrain
@@ -1406,6 +1429,7 @@
   related_codes: [P3401]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3426
   category: powertrain
@@ -1444,6 +1468,7 @@
   related_codes: [P3418]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3427
   category: powertrain
@@ -1487,6 +1512,7 @@
   related_codes: [P3419, P3442, P3450, P3458]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3428
   category: powertrain
@@ -1530,6 +1556,7 @@
   related_codes: [P3420, P3443, P3451, P3459]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3429
   category: powertrain
@@ -1573,6 +1600,7 @@
   related_codes: [P3421, P3436, P3414, P3444, P3452, P3460]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3430
   category: powertrain
@@ -1611,6 +1639,7 @@
   related_codes: [P3437, P3422, P3445, P3461]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3431
   category: powertrain
@@ -1654,6 +1683,7 @@
   related_codes: [P3438, P3423, P3446, P3415, P3453, P3454, P3455, P3462, P3487]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3432
   category: powertrain
@@ -1697,6 +1727,7 @@
   related_codes: [P3439, P3424, P3447, P3416, P3463, P3464, P3488]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3433
   category: powertrain
@@ -1735,6 +1766,7 @@
   related_codes: [P3441, P3449, P3411]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3434
   category: powertrain
@@ -1777,6 +1809,7 @@
   related_codes: [P3412, P3406]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3435
   category: powertrain
@@ -1819,6 +1852,7 @@
   related_codes: [P3413, P3407, P3403]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3436
   category: powertrain
@@ -1862,6 +1896,7 @@
   related_codes: [P3429, P3444, P3421, P3452, P3414, P3460]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3437
   category: powertrain
@@ -1900,6 +1935,7 @@
   related_codes: [P3430, P3445, P3422, P3461]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3438
   category: powertrain
@@ -1943,6 +1979,7 @@
   related_codes: [P3431, P3446, P3423, P3453, P3454, P3455, P3415, P3462, P3487]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3439
   category: powertrain
@@ -1986,6 +2023,7 @@
   related_codes: [P3432, P3447, P3424, P3416, P3463, P3464, P3488]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3440
   category: powertrain
@@ -2029,6 +2067,7 @@
   related_codes: [P3448, P3456, P3417]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3441
   category: powertrain
@@ -2067,6 +2106,7 @@
   related_codes: [P3449, P3433, P3411]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3442
   category: powertrain
@@ -2110,6 +2150,7 @@
   related_codes: [P3450, P3458, P3427, P3419]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3443
   category: powertrain
@@ -2153,6 +2194,7 @@
   related_codes: [P3451, P3459, P3428, P3420]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3444
   category: powertrain
@@ -2196,6 +2238,7 @@
   related_codes: [P3436, P3452, P3429, P3460, P3421, P3414]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3445
   category: powertrain
@@ -2234,6 +2277,7 @@
   related_codes: [P3437, P3430, P3461, P3422]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3446
   category: powertrain
@@ -2277,6 +2321,7 @@
   related_codes: [P3453, P3438, P3454, P3455, P3431, P3462, P3423, P3415, P3487]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3447
   category: powertrain
@@ -2320,6 +2365,7 @@
   related_codes: [P3439, P3432, P3463, P3464, P3424, P3416, P3488]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3448
   category: powertrain
@@ -2363,6 +2409,7 @@
   related_codes: [P3440, P3456, P3417]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3449
   category: powertrain
@@ -2401,6 +2448,7 @@
   related_codes: [P3441, P3433, P3411]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3450
   category: powertrain
@@ -2444,6 +2492,7 @@
   related_codes: [P3458, P3442, P3427, P3419]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3451
   category: powertrain
@@ -2487,6 +2536,7 @@
   related_codes: [P3459, P3443, P3428, P3420]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3452
   category: powertrain
@@ -2530,6 +2580,7 @@
   related_codes: [P3444, P3460, P3436, P3429, P3421, P3414]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3453
   category: powertrain
@@ -2705,6 +2756,7 @@
   related_codes: [P3448, P3440, P3417]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3457
   category: powertrain
@@ -2743,6 +2795,7 @@
   related_codes: [P3465, P3473, P3481, P3489, P3496]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3458
   category: powertrain
@@ -2786,6 +2839,7 @@
   related_codes: [P3450, P3442, P3427, P3419]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3459
   category: powertrain
@@ -2829,6 +2883,7 @@
   related_codes: [P3451, P3443, P3428, P3420]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3460
   category: powertrain
@@ -2872,6 +2927,7 @@
   related_codes: [P3452, P3444, P3436, P3429, P3421, P3414]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3461
   category: powertrain
@@ -2910,6 +2966,7 @@
   related_codes: [P3445, P3437, P3430, P3422]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3462
   category: powertrain
@@ -2953,6 +3010,7 @@
   related_codes: [P3455, P3454, P3453, P3446, P3487, P3438, P3431, P3423, P3415]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3463
   category: powertrain
@@ -2996,6 +3054,7 @@
   related_codes: [P3464, P3447, P3488, P3439, P3432, P3424, P3416]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3464
   category: powertrain
@@ -3078,6 +3137,7 @@
   related_codes: [P3457, P3473, P3481, P3489, P3496]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3466
   category: powertrain
@@ -3425,6 +3485,7 @@
   related_codes: [P3465, P3481, P3489, P3457, P3496]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3474
   category: powertrain
@@ -3768,6 +3829,7 @@
   related_codes: [P3489, P3473, P3496, P3465, P3457]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3482
   category: powertrain
@@ -4103,6 +4165,7 @@
   related_codes: [P3481, P3496, P3473, P3465, P3457]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3490
   category: powertrain
@@ -4403,6 +4466,7 @@
   related_codes: [P3489, P3481, P3473, P3465, P3457]
   sources:
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://en.wikipedia.org/wiki/On-board_diagnostics
 
 - code: P3497
   category: powertrain
