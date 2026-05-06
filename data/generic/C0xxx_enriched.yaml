@@ -1381,8 +1381,8 @@
     en: Left Rear Wheel Speed Sensor
     de: Hinten links Radgeschwindigkeitssensor
   description:
-    en: Generic fault on left rear wheel speed sensor.
-    de: Allgemeiner Fehler am Radgeschwindigkeitssensor hinten links.
+    en: 'Generic fault on left rear wheel speed sensor. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Allgemeiner Fehler am Radgeschwindigkeitssensor hinten links. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - lr_wss
   common_causes:
@@ -1425,8 +1425,8 @@
     en: Left Rear Wheel Speed Sensor Supply
     de: Hinten links Radgeschwindigkeitssensor Versorgung
   description:
-    en: Fault on left rear wheel speed sensor supply circuit.
-    de: Fehler am Versorgungsschaltkreis des Sensors hinten links.
+    en: 'Fault on left rear wheel speed sensor supply circuit. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Fehler am Versorgungsschaltkreis des Sensors hinten links. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - lr_wss
     - sensor_supply
@@ -1514,8 +1514,8 @@
     en: Right Rear Wheel Speed Sensor
     de: Hinten rechts Radgeschwindigkeitssensor
   description:
-    en: Generic fault on right rear wheel speed sensor.
-    de: Allgemeiner Fehler am Radgeschwindigkeitssensor hinten rechts.
+    en: 'Generic fault on right rear wheel speed sensor. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Allgemeiner Fehler am Radgeschwindigkeitssensor hinten rechts. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - rr_wss
   common_causes:
@@ -1558,8 +1558,8 @@
     en: Right Rear Wheel Speed Sensor Supply
     de: Hinten rechts Radgeschwindigkeitssensor Versorgung
   description:
-    en: Fault on right rear wheel speed sensor supply circuit.
-    de: Fehler am Versorgungsschaltkreis des Sensors hinten rechts.
+    en: 'Fault on right rear wheel speed sensor supply circuit. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Fehler am Versorgungsschaltkreis des Sensors hinten rechts. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - rr_wss
     - sensor_supply
@@ -1647,8 +1647,8 @@
     en: Rear Wheel Speed Sensor
     de: Hinten Radgeschwindigkeitssensor
   description:
-    en: Generic fault on shared rear wheel speed sensor.
-    de: Allgemeiner Fehler am gemeinsamen hinteren Radgeschwindigkeitssensor.
+    en: 'Generic fault on shared rear wheel speed sensor. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Allgemeiner Fehler am gemeinsamen hinteren Radgeschwindigkeitssensor. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - rear_wss
   common_causes:
@@ -1691,8 +1691,8 @@
     en: Rear Wheel Speed Sensor Supply
     de: Hinten Radgeschwindigkeitssensor Versorgung
   description:
-    en: Fault on rear wheel speed sensor supply circuit.
-    de: Fehler am Versorgungsschaltkreis des hinteren Sensors.
+    en: 'Fault on rear wheel speed sensor supply circuit. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Fehler am Versorgungsschaltkreis des hinteren Sensors. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - rear_wss
     - sensor_supply
@@ -1736,8 +1736,8 @@
     en: Wheel Speed Sensors Rotation Direction Correlation
     de: Radgeschwindigkeitssensoren Drehrichtungs-Korrelation
   description:
-    en: Wheel speed sensors disagree on rotation direction — typically detected when reversing.
-    de: Radgeschwindigkeitssensoren liefern widersprüchliche Drehrichtungen — meist beim Rückwärtsfahren erkannt.
+    en: 'Wheel speed sensors disagree on rotation direction — typically detected when reversing. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Radgeschwindigkeitssensoren liefern widersprüchliche Drehrichtungen — meist beim Rückwärtsfahren erkannt. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wheel_speed_sensors
   common_causes:
@@ -1994,8 +1994,8 @@
     en: Right Front Wheel Speed Sensor Signal Erratic
     de: Raddrehzahlsensor vorne rechts Signal sprunghaft
   description:
-    en: Erratic pulses on the right front wheel speed sensor at speed.
-    de: Sprunghafte Impulse des Raddrehzahlsensors vorne rechts waehrend der Fahrt.
+    en: 'Erratic pulses on the right front wheel speed sensor at speed. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Sprunghafte Impulse des Raddrehzahlsensors vorne rechts waehrend der Fahrt. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wheel_speed_sensor_fr
     - tone_ring
@@ -2106,8 +2106,8 @@
     en: Right Front Wheel Speed Sensor Circuit Intermittent
     de: Raddrehzahlsensor vorne rechts Stromkreis aussetzend
   description:
-    en: Intermittent open or short on the right front wheel speed sensor circuit.
-    de: Aussetzende Unterbrechung oder Kurzschluss im Stromkreis des Raddrehzahlsensors vorne rechts.
+    en: 'Intermittent open or short on the right front wheel speed sensor circuit. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Aussetzende Unterbrechung oder Kurzschluss im Stromkreis des Raddrehzahlsensors vorne rechts. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wheel_speed_sensor_fr
     - sensor_wiring
@@ -2157,8 +2157,8 @@
     en: Brake Booster Pressure Sensor
     de: Bremskraftverstärker Drucksensor
   description:
-    en: Generic fault on brake booster pressure sensor.
-    de: Allgemeiner Fehler am Drucksensor des Bremskraftverstärkers.
+    en: 'Generic fault on brake booster pressure sensor. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Allgemeiner Fehler am Drucksensor des Bremskraftverstärkers. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_pressure_sensor
   common_causes:
@@ -2201,8 +2201,8 @@
     en: Brake Booster Travel Sensor
     de: Bremskraftverstärker Hubsensor
   description:
-    en: Generic fault on brake booster travel/position sensor.
-    de: Allgemeiner Fehler am Weg-/Positionssensor des Bremskraftverstärkers.
+    en: 'Generic fault on brake booster travel/position sensor. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Allgemeiner Fehler am Weg-/Positionssensor des Bremskraftverstärkers. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_travel_sensor
   common_causes:
@@ -2387,8 +2387,8 @@
     en: Brake Booster Motor A Position Sensor Exceeded Learning Limit
     de: Bremskraftverstärker Motor A Positionssensor Lerngrenze überschritten
   description:
-    en: Brake booster motor A position sensor learned offset exceeded the allowed range.
-    de: Gelernter Offset des Positionssensors am Booster-Motor A überschreitet zulässigen Bereich.
+    en: 'Brake booster motor A position sensor learned offset exceeded the allowed range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Gelernter Offset des Positionssensors am Booster-Motor A überschreitet zulässigen Bereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - booster_motor_a_pos_sensor
   common_causes:
@@ -2677,8 +2677,8 @@
     en: Left Rear Wheel Speed Sensor Circuit Low
     de: Raddrehzahlsensor hinten links Stromkreis niedrig
   description:
-    en: Voltage in the left rear wheel speed sensor circuit is below the expected range.
-    de: Die Spannung im Stromkreis des Raddrehzahlsensors hinten links liegt unter dem erwarteten Bereich.
+    en: 'Voltage in the left rear wheel speed sensor circuit is below the expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Die Spannung im Stromkreis des Raddrehzahlsensors hinten links liegt unter dem erwarteten Bereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wheel_speed_sensor_rl
     - sensor_wiring
@@ -2728,8 +2728,8 @@
     en: Left Rear Wheel Speed Sensor Circuit High
     de: Raddrehzahlsensor hinten links Stromkreis hoch
   description:
-    en: Voltage in the left rear wheel speed sensor circuit is above the expected range.
-    de: Die Spannung im Stromkreis des Raddrehzahlsensors hinten links liegt ueber dem erwarteten Bereich.
+    en: 'Voltage in the left rear wheel speed sensor circuit is above the expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Die Spannung im Stromkreis des Raddrehzahlsensors hinten links liegt ueber dem erwarteten Bereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wheel_speed_sensor_rl
     - sensor_wiring
@@ -2779,8 +2779,8 @@
     en: Left Rear Wheel Speed Sensor Signal Erratic
     de: Raddrehzahlsensor hinten links Signal sprunghaft
   description:
-    en: Erratic pulses from the left rear wheel speed sensor.
-    de: Sprunghafte Impulse des Raddrehzahlsensors hinten links.
+    en: 'Erratic pulses from the left rear wheel speed sensor. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Sprunghafte Impulse des Raddrehzahlsensors hinten links. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wheel_speed_sensor_rl
     - tone_ring
@@ -2831,8 +2831,8 @@
     en: Left Rear Wheel Speed Sensor No Signal
     de: Raddrehzahlsensor hinten links kein Signal
   description:
-    en: No pulses received from the left rear wheel speed sensor.
-    de: Vom Raddrehzahlsensor hinten links werden keine Impulse empfangen.
+    en: 'No pulses received from the left rear wheel speed sensor. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Vom Raddrehzahlsensor hinten links werden keine Impulse empfangen. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wheel_speed_sensor_rl
     - sensor_wiring
@@ -2878,8 +2878,8 @@
     en: Left Rear Wheel Speed Sensor Circuit Intermittent
     de: Raddrehzahlsensor hinten links Stromkreis aussetzend
   description:
-    en: Intermittent open or short on the left rear wheel speed sensor circuit.
-    de: Aussetzende Unterbrechung oder Kurzschluss im Stromkreis des Raddrehzahlsensors hinten links.
+    en: 'Intermittent open or short on the left rear wheel speed sensor circuit. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Aussetzende Unterbrechung oder Kurzschluss im Stromkreis des Raddrehzahlsensors hinten links. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wheel_speed_sensor_rl
     - sensor_wiring
@@ -2976,8 +2976,8 @@
     en: Right Rear Wheel Speed Sensor Circuit Range/Performance
     de: Raddrehzahlsensor hinten rechts Bereich/Leistung
   description:
-    en: The right rear wheel speed signal is implausible compared to the other wheels.
-    de: Das Signal des Raddrehzahlsensors hinten rechts ist im Vergleich zu den anderen Raedern unplausibel.
+    en: 'The right rear wheel speed signal is implausible compared to the other wheels. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Das Signal des Raddrehzahlsensors hinten rechts ist im Vergleich zu den anderen Raedern unplausibel. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wheel_speed_sensor_rr
     - tone_ring
@@ -3028,8 +3028,8 @@
     en: Right Rear Wheel Speed Sensor Circuit Low
     de: Raddrehzahlsensor hinten rechts Stromkreis niedrig
   description:
-    en: Voltage in the right rear wheel speed sensor circuit is below the expected range.
-    de: Die Spannung im Stromkreis des Raddrehzahlsensors hinten rechts liegt unter dem erwarteten Bereich.
+    en: 'Voltage in the right rear wheel speed sensor circuit is below the expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Die Spannung im Stromkreis des Raddrehzahlsensors hinten rechts liegt unter dem erwarteten Bereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wheel_speed_sensor_rr
     - sensor_wiring
@@ -3079,8 +3079,8 @@
     en: Right Rear Wheel Speed Sensor Circuit High
     de: Raddrehzahlsensor hinten rechts Stromkreis hoch
   description:
-    en: Voltage in the right rear wheel speed sensor circuit is above the expected range.
-    de: Die Spannung im Stromkreis des Raddrehzahlsensors hinten rechts liegt ueber dem erwarteten Bereich.
+    en: 'Voltage in the right rear wheel speed sensor circuit is above the expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Die Spannung im Stromkreis des Raddrehzahlsensors hinten rechts liegt ueber dem erwarteten Bereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wheel_speed_sensor_rr
     - sensor_wiring
@@ -3130,8 +3130,8 @@
     en: Right Rear Wheel Speed Sensor Signal Erratic
     de: Raddrehzahlsensor hinten rechts Signal sprunghaft
   description:
-    en: Erratic pulses from the right rear wheel speed sensor.
-    de: Sprunghafte Impulse des Raddrehzahlsensors hinten rechts.
+    en: 'Erratic pulses from the right rear wheel speed sensor. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Sprunghafte Impulse des Raddrehzahlsensors hinten rechts. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wheel_speed_sensor_rr
     - tone_ring
@@ -3182,8 +3182,8 @@
     en: Right Rear Wheel Speed Sensor No Signal
     de: Raddrehzahlsensor hinten rechts kein Signal
   description:
-    en: No pulses received from the right rear wheel speed sensor.
-    de: Vom Raddrehzahlsensor hinten rechts werden keine Impulse empfangen.
+    en: 'No pulses received from the right rear wheel speed sensor. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Vom Raddrehzahlsensor hinten rechts werden keine Impulse empfangen. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wheel_speed_sensor_rr
     - sensor_wiring
@@ -3229,8 +3229,8 @@
     en: Right Rear Wheel Speed Sensor Circuit Intermittent
     de: Raddrehzahlsensor hinten rechts Stromkreis aussetzend
   description:
-    en: Intermittent open or short on the right rear wheel speed sensor circuit.
-    de: Aussetzende Unterbrechung oder Kurzschluss im Stromkreis des Raddrehzahlsensors hinten rechts.
+    en: 'Intermittent open or short on the right rear wheel speed sensor circuit. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Aussetzende Unterbrechung oder Kurzschluss im Stromkreis des Raddrehzahlsensors hinten rechts. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wheel_speed_sensor_rr
     - sensor_wiring
@@ -3948,8 +3948,8 @@
     en: Wheel Speed Mismatch (Rear Axle)
     de: Raddrehzahl-Abweichung Hinterachse
   description:
-    en: Rear axle wheel speeds differ beyond the plausibility threshold.
-    de: Die Raddrehzahlen der Hinterachse weichen ueber dem Plausibilitaetsschwellwert ab.
+    en: 'Rear axle wheel speeds differ beyond the plausibility threshold. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Die Raddrehzahlen der Hinterachse weichen ueber dem Plausibilitaetsschwellwert ab. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wheel_speed_sensor_rl
     - wheel_speed_sensor_rr
@@ -4350,8 +4350,8 @@
     en: Hydraulic Brake Pressure Sensor Circuit Range/Performance
     de: Bremsdrucksensor Bereich/Leistung
   description:
-    en: The brake pressure sensor signal is outside the plausibility band relative to pedal application.
-    de: Das Signal des Bremsdrucksensors liegt im Verhaeltnis zur Pedalbetaetigung ausserhalb des Plausibilitaetsbandes.
+    en: 'The brake pressure sensor signal is outside the plausibility band relative to pedal application. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Das Signal des Bremsdrucksensors liegt im Verhaeltnis zur Pedalbetaetigung ausserhalb des Plausibilitaetsbandes. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor
     - abs_control_module
@@ -7567,8 +7567,8 @@
     en: Brake Booster Vacuum Sensor Circuit
     de: Bremskraftverstaerker-Vakuumsensor Stromkreis
   description:
-    en: The brake booster vacuum sensor reports an implausible signal; brake assist functions are reduced.
-    de: Der Vakuumsensor des Bremskraftverstaerkers meldet ein unplausibles Signal; Bremsassistent-Funktionen werden reduziert.
+    en: 'The brake booster vacuum sensor reports an implausible signal; brake assist functions are reduced. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Der Vakuumsensor des Bremskraftverstaerkers meldet ein unplausibles Signal; Bremsassistent-Funktionen werden reduziert. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_vacuum_sensor
     - vacuum_hose
@@ -10097,8 +10097,8 @@
     en: Left Front Wheel Speed Sensor A Circuit Low
     de: Links vorne Raddrehzahlsensor A Schaltkreis niedrig
   description:
-    en: Left-front wheel speed sensor A signal voltage below expected range.
-    de: Signalspannung Raddrehzahlsensor A links vorne unter Sollbereich.
+    en: 'Left-front wheel speed sensor A signal voltage below expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Signalspannung Raddrehzahlsensor A links vorne unter Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_lf
     - sensor_wiring
@@ -10153,8 +10153,8 @@
     en: Left Front Wheel Speed Sensor A Circuit High
     de: Links vorne Raddrehzahlsensor A Schaltkreis hoch
   description:
-    en: Left-front wheel speed sensor A signal voltage above expected range.
-    de: Signalspannung Raddrehzahlsensor A links vorne über Sollbereich.
+    en: 'Left-front wheel speed sensor A signal voltage above expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Signalspannung Raddrehzahlsensor A links vorne über Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_lf
     - sensor_wiring
@@ -10209,8 +10209,8 @@
     en: Left Front Wheel Speed Sensor A Intermittent/Erratic
     de: Links vorne Raddrehzahlsensor A sporadisch/unstetig
   description:
-    en: Intermittent or erratic signal from left-front wheel speed sensor A.
-    de: Sporadisches oder unruhiges Signal vom Raddrehzahlsensor A links vorne.
+    en: 'Intermittent or erratic signal from left-front wheel speed sensor A. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Sporadisches oder unruhiges Signal vom Raddrehzahlsensor A links vorne. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_lf
     - sensor_wiring
@@ -10311,8 +10311,8 @@
     en: Right Front Wheel Speed Sensor A Circuit/Open
     de: Rechts vorne Raddrehzahlsensor A Schaltkreis unterbrochen
   description:
-    en: Open circuit on right-front wheel speed sensor A.
-    de: Unterbrochener Schaltkreis am Raddrehzahlsensor A rechts vorne.
+    en: 'Open circuit on right-front wheel speed sensor A. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Unterbrochener Schaltkreis am Raddrehzahlsensor A rechts vorne. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_rf
     - sensor_wiring
@@ -10367,8 +10367,8 @@
     en: Right Front Wheel Speed Sensor A Range/Performance
     de: Rechts vorne Raddrehzahlsensor A Bereich/Leistung
   description:
-    en: Right-front wheel speed sensor A reading implausible.
-    de: Wert des Raddrehzahlsensors A rechts vorne unstimmig.
+    en: 'Right-front wheel speed sensor A reading implausible. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Wert des Raddrehzahlsensors A rechts vorne unstimmig. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_rf
   common_causes:
@@ -10422,8 +10422,8 @@
     en: Right Front Wheel Speed Sensor A Circuit Low
     de: Rechts vorne Raddrehzahlsensor A Schaltkreis niedrig
   description:
-    en: Right-front WSS A signal voltage below expected range.
-    de: Signalspannung WSS A rechts vorne unter Sollbereich.
+    en: 'Right-front WSS A signal voltage below expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Signalspannung WSS A rechts vorne unter Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_rf
     - sensor_wiring
@@ -10478,8 +10478,8 @@
     en: Right Front Wheel Speed Sensor A Circuit High
     de: Rechts vorne Raddrehzahlsensor A Schaltkreis hoch
   description:
-    en: Right-front WSS A signal voltage above expected range.
-    de: Signalspannung WSS A rechts vorne über Sollbereich.
+    en: 'Right-front WSS A signal voltage above expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Signalspannung WSS A rechts vorne über Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_rf
     - sensor_wiring
@@ -10534,8 +10534,8 @@
     en: Right Front Wheel Speed Sensor A Intermittent/Erratic
     de: Rechts vorne Raddrehzahlsensor A sporadisch/unstetig
   description:
-    en: Intermittent signal from right-front WSS A.
-    de: Sporadisches Signal vom WSS A rechts vorne.
+    en: 'Intermittent signal from right-front WSS A. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Sporadisches Signal vom WSS A rechts vorne. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_rf
     - sensor_wiring
@@ -10590,8 +10590,8 @@
     en: Right Front Wheel Speed Sensor A Correlation
     de: Rechts vorne Raddrehzahlsensor A Korrelation
   description:
-    en: Right-front WSS A reading does not correlate with the other wheel speed sensors during straight-line driving.
-    de: Rechts-vorne-WSS A korreliert bei Geradeausfahrt nicht mit den anderen Raddrehzahlsensoren.
+    en: 'Right-front WSS A reading does not correlate with the other wheel speed sensors during straight-line driving. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Rechts-vorne-WSS A korreliert bei Geradeausfahrt nicht mit den anderen Raddrehzahlsensoren. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_rf
   common_causes:
@@ -10635,8 +10635,8 @@
     en: Left Rear Wheel Speed Sensor A Circuit/Open
     de: Links hinten Raddrehzahlsensor A Schaltkreis unterbrochen
   description:
-    en: Open circuit on left-rear WSS A.
-    de: Unterbrochener Schaltkreis am WSS A links hinten.
+    en: 'Open circuit on left-rear WSS A. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Unterbrochener Schaltkreis am WSS A links hinten. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_lr
     - sensor_wiring
@@ -10691,8 +10691,8 @@
     en: Left Rear Wheel Speed Sensor A Range/Performance
     de: Links hinten Raddrehzahlsensor A Bereich/Leistung
   description:
-    en: Left-rear WSS A reading implausible.
-    de: Wert des WSS A links hinten unstimmig.
+    en: 'Left-rear WSS A reading implausible. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Wert des WSS A links hinten unstimmig. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_lr
   common_causes:
@@ -10745,8 +10745,8 @@
     en: Left Rear Wheel Speed Sensor A Circuit Low
     de: Links hinten Raddrehzahlsensor A Schaltkreis niedrig
   description:
-    en: Left-rear WSS A signal voltage below expected range.
-    de: Signalspannung WSS A links hinten unter Sollbereich.
+    en: 'Left-rear WSS A signal voltage below expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Signalspannung WSS A links hinten unter Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_lr
     - sensor_wiring
@@ -10801,8 +10801,8 @@
     en: Left Rear Wheel Speed Sensor A Circuit High
     de: Links hinten Raddrehzahlsensor A Schaltkreis hoch
   description:
-    en: Left-rear WSS A signal voltage above expected range.
-    de: Signalspannung WSS A links hinten über Sollbereich.
+    en: 'Left-rear WSS A signal voltage above expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Signalspannung WSS A links hinten über Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_lr
     - sensor_wiring
@@ -10905,8 +10905,8 @@
     en: Left Rear Wheel Speed Sensor A Correlation
     de: Links hinten Raddrehzahlsensor A Korrelation
   description:
-    en: Left-rear WSS A correlation fault with other wheel speed sensors.
-    de: Links-hinten-WSS A korreliert nicht mit den anderen Raddrehzahlsensoren.
+    en: 'Left-rear WSS A correlation fault with other wheel speed sensors. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Links-hinten-WSS A korreliert nicht mit den anderen Raddrehzahlsensoren. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_lr
   common_causes:
@@ -10950,8 +10950,8 @@
     en: Right Rear Wheel Speed Sensor A Circuit/Open
     de: Rechts hinten Raddrehzahlsensor A Schaltkreis unterbrochen
   description:
-    en: Open circuit on right-rear WSS A.
-    de: Unterbrochener Schaltkreis am WSS A rechts hinten.
+    en: 'Open circuit on right-rear WSS A. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Unterbrochener Schaltkreis am WSS A rechts hinten. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_rr
     - sensor_wiring
@@ -11006,8 +11006,8 @@
     en: Right Rear Wheel Speed Sensor A Range/Performance
     de: Rechts hinten Raddrehzahlsensor A Bereich/Leistung
   description:
-    en: Right-rear WSS A reading implausible.
-    de: Wert des WSS A rechts hinten unstimmig.
+    en: 'Right-rear WSS A reading implausible. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Wert des WSS A rechts hinten unstimmig. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_rr
   common_causes:
@@ -11061,8 +11061,8 @@
     en: Right Rear Wheel Speed Sensor A Circuit Low
     de: Rechts hinten Raddrehzahlsensor A Schaltkreis niedrig
   description:
-    en: Right-rear WSS A signal voltage below expected range.
-    de: Signalspannung WSS A rechts hinten unter Sollbereich.
+    en: 'Right-rear WSS A signal voltage below expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Signalspannung WSS A rechts hinten unter Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_rr
     - sensor_wiring
@@ -11117,8 +11117,8 @@
     en: Right Rear Wheel Speed Sensor A Circuit High
     de: Rechts hinten Raddrehzahlsensor A Schaltkreis hoch
   description:
-    en: Right-rear WSS A signal voltage above expected range.
-    de: Signalspannung WSS A rechts hinten über Sollbereich.
+    en: 'Right-rear WSS A signal voltage above expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Signalspannung WSS A rechts hinten über Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_rr
     - sensor_wiring
@@ -11173,8 +11173,8 @@
     en: Right Rear Wheel Speed Sensor A Intermittent/Erratic
     de: Rechts hinten Raddrehzahlsensor A sporadisch/unstetig
   description:
-    en: Intermittent signal from right-rear WSS A.
-    de: Sporadisches Signal vom WSS A rechts hinten.
+    en: 'Intermittent signal from right-rear WSS A. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Sporadisches Signal vom WSS A rechts hinten. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_rr
     - sensor_wiring
@@ -11229,8 +11229,8 @@
     en: Right Rear Wheel Speed Sensor A Correlation
     de: Rechts hinten Raddrehzahlsensor A Korrelation
   description:
-    en: Right-rear WSS A correlation fault.
-    de: Rechts-hinten-WSS A Korrelationsfehler.
+    en: 'Right-rear WSS A correlation fault. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Rechts-hinten-WSS A Korrelationsfehler. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_rr
   common_causes:
@@ -12283,8 +12283,8 @@
     en: ABS Pump Motor Control Circuit High
     de: ABS-Pumpenmotor-Steuerung Schaltkreis hoch
   description:
-    en: ABS pump motor control voltage above expected range.
-    de: Steuerspannung ABS-Pumpenmotor über Sollbereich.
+    en: 'ABS pump motor control voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung ABS-Pumpenmotor über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - abs_pump_motor
     - motor_wiring
@@ -12338,8 +12338,8 @@
     en: ABS Pump Motor Control Circuit Low
     de: ABS-Pumpenmotor-Steuerung Schaltkreis niedrig
   description:
-    en: ABS pump motor control voltage below expected range.
-    de: Steuerspannung ABS-Pumpenmotor unter Sollbereich.
+    en: 'ABS pump motor control voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung ABS-Pumpenmotor unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - abs_pump_motor
     - motor_wiring
@@ -12559,8 +12559,8 @@
     en: Motor Control A Circuit High
     de: Motorsteuerung A Schaltkreis hoch
   description:
-    en: Chassis motor A control voltage above expected range.
-    de: Steuerspannung Chassis-Motor A über Sollbereich.
+    en: 'Chassis motor A control voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung Chassis-Motor A über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - chassis_motor_a
     - motor_wiring
@@ -12615,8 +12615,8 @@
     en: Motor Control A Circuit Low
     de: Motorsteuerung A Schaltkreis niedrig
   description:
-    en: Chassis motor A control voltage below expected range.
-    de: Steuerspannung Chassis-Motor A unter Sollbereich.
+    en: 'Chassis motor A control voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung Chassis-Motor A unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - chassis_motor_a
     - motor_wiring
@@ -12838,8 +12838,8 @@
     en: Motor Control B Circuit High
     de: Motorsteuerung B Schaltkreis hoch
   description:
-    en: 'Chassis motor A control voltage above expected range.'
-    de: 'Steuerspannung Chassis-Motor A über Sollbereich.'
+    en: 'Chassis motor A control voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung Chassis-Motor A über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - chassis_motor_b
     - motor_wiring
@@ -12894,8 +12894,8 @@
     en: Motor Control B Circuit Low
     de: Motorsteuerung B Schaltkreis niedrig
   description:
-    en: 'Chassis motor A control voltage below expected range.'
-    de: 'Steuerspannung Chassis-Motor A unter Sollbereich.'
+    en: 'Chassis motor A control voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung Chassis-Motor A unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - chassis_motor_b
     - motor_wiring
@@ -13105,8 +13105,8 @@
     en: Wheel Speed Sensor Generic Range/Performance
     de: Raddrehzahlsensor allgemein Bereich/Leistung
   description:
-    en: Generic wheel speed sensor reading implausible — does not specify which wheel.
-    de: Allgemeiner Raddrehzahlsensor-Wert unstimmig — ohne Angabe welches Rad.
+    en: 'Generic wheel speed sensor reading implausible — does not specify which wheel. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Allgemeiner Raddrehzahlsensor-Wert unstimmig — ohne Angabe welches Rad. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_sensors
   common_causes:
@@ -13214,8 +13214,8 @@
     en: Brake Pressure Sensor A Circuit Low
     de: Bremsdrucksensor A Schaltkreis niedrig
   description:
-    en: Brake pressure sensor A signal voltage below expected range.
-    de: Signalspannung Bremsdrucksensor A unter Sollbereich.
+    en: 'Brake pressure sensor A signal voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor A unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_a
     - sensor_wiring
@@ -13270,8 +13270,8 @@
     en: Brake Pressure Sensor A Circuit High
     de: Bremsdrucksensor A Schaltkreis hoch
   description:
-    en: Brake pressure sensor A signal voltage above expected range.
-    de: Signalspannung Bremsdrucksensor A über Sollbereich.
+    en: 'Brake pressure sensor A signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor A über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_a
     - sensor_wiring
@@ -13428,8 +13428,8 @@
     en: Brake Pressure Sensor B Circuit Low
     de: Bremsdrucksensor B Schaltkreis niedrig
   description:
-    en: 'Brake pressure sensor B signal voltage below expected range.'
-    de: 'Signalspannung Bremsdrucksensor B unter Sollbereich.'
+    en: 'Brake pressure sensor B signal voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor B unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_b
     - sensor_wiring
@@ -13484,8 +13484,8 @@
     en: Brake Pressure Sensor B Circuit High
     de: Bremsdrucksensor B Schaltkreis hoch
   description:
-    en: 'Brake pressure sensor B signal voltage above expected range.'
-    de: 'Signalspannung Bremsdrucksensor B über Sollbereich.'
+    en: 'Brake pressure sensor B signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor B über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_b
     - sensor_wiring
@@ -13895,8 +13895,8 @@
     en: Vacuum Sensor A Circuit Low
     de: Unterdrucksensor A Schaltkreis niedrig
   description:
-    en: Vacuum sensor A signal voltage below expected range.
-    de: Signalspannung Unterdrucksensor A unter Sollbereich.
+    en: 'Vacuum sensor A signal voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Unterdrucksensor A unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - vacuum_sensor_a
     - sensor_wiring
@@ -13951,8 +13951,8 @@
     en: Vacuum Sensor A Circuit High
     de: Unterdrucksensor A Schaltkreis hoch
   description:
-    en: Vacuum sensor A signal voltage above expected range.
-    de: Signalspannung Unterdrucksensor A über Sollbereich.
+    en: 'Vacuum sensor A signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Unterdrucksensor A über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - vacuum_sensor_a
     - sensor_wiring
@@ -14117,8 +14117,8 @@
     en: Vacuum Sensor B Circuit Low
     de: Unterdrucksensor B Schaltkreis niedrig
   description:
-    en: 'Vacuum sensor B signal voltage below expected range.'
-    de: 'Signalspannung Unterdrucksensor B unter Sollbereich.'
+    en: 'Vacuum sensor B signal voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Unterdrucksensor B unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - vacuum_sensor_b
     - sensor_wiring
@@ -14335,8 +14335,8 @@
     en: Longitudinal Acceleration Sensor Circuit Low
     de: Längsbeschleunigungssensor Schaltkreis niedrig
   description:
-    en: Longitudinal accel sensor signal voltage below expected range.
-    de: Signalspannung Längsbeschleunigungssensor unter Sollbereich.
+    en: 'Longitudinal accel sensor signal voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Längsbeschleunigungssensor unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - longitudinal_accel_sensor
     - sensor_wiring
@@ -14390,8 +14390,8 @@
     en: Longitudinal Acceleration Sensor Circuit High
     de: Längsbeschleunigungssensor Schaltkreis hoch
   description:
-    en: Longitudinal accel sensor signal voltage above expected range.
-    de: Signalspannung Längsbeschleunigungssensor über Sollbereich.
+    en: 'Longitudinal accel sensor signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Längsbeschleunigungssensor über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - longitudinal_accel_sensor
     - sensor_wiring
@@ -15252,8 +15252,8 @@
     en: Brake Booster Solenoid Circuit/Open
     de: Bremskraftverstärker-Magnetventil Schaltkreis unterbrochen
   description:
-    en: Open circuit on brake booster solenoid.
-    de: Unterbrochener Schaltkreis am Magnetventil des Bremskraftverstärkers.
+    en: 'Open circuit on brake booster solenoid. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Unterbrochener Schaltkreis am Magnetventil des Bremskraftverstärkers. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_solenoid
   common_causes:
@@ -15306,8 +15306,8 @@
     en: Brake Booster Solenoid Circuit Low
     de: Bremskraftverstärker-Magnetventil Schaltkreis niedrig
   description:
-    en: Brake booster solenoid control voltage below expected range.
-    de: Steuerspannung Magnetventil unter Sollbereich.
+    en: 'Brake booster solenoid control voltage below expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Steuerspannung Magnetventil unter Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_solenoid
   common_causes:
@@ -15360,8 +15360,8 @@
     en: Brake Booster Solenoid Circuit High
     de: Bremskraftverstärker-Magnetventil Schaltkreis hoch
   description:
-    en: Brake booster solenoid control voltage above expected range.
-    de: Steuerspannung Magnetventil über Sollbereich.
+    en: 'Brake booster solenoid control voltage above expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Steuerspannung Magnetventil über Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_solenoid
   common_causes:
@@ -15414,8 +15414,8 @@
     en: Brake Booster Solenoid Circuit Performance
     de: Bremskraftverstärker-Magnetventil Schaltkreis Leistung
   description:
-    en: Brake booster solenoid does not respond mechanically as expected.
-    de: Magnetventil reagiert mechanisch nicht erwartungsgemäß.
+    en: 'Brake booster solenoid does not respond mechanically as expected. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Magnetventil reagiert mechanisch nicht erwartungsgemäß. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_solenoid
   common_causes:
@@ -15458,8 +15458,8 @@
     en: Brake Booster Pressure Sensor Power Supply Circuit
     de: Bremskraftverstärker Drucksensor Versorgungsspannung
   description:
-    en: Fault on brake booster pressure sensor power supply circuit.
-    de: Fehler an der Versorgungsspannung des Bremskraftverstärker-Drucksensors.
+    en: 'Fault on brake booster pressure sensor power supply circuit. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Fehler an der Versorgungsspannung des Bremskraftverstärker-Drucksensors. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_pressure_sensor
   common_causes:
@@ -15612,8 +15612,8 @@
     en: Brake Pedal Position Sensor Supply Voltage Circuit Low
     de: Bremspedal-Positionssensor Versorgungsspannung niedrig
   description:
-    en: Brake pedal position sensor supply voltage below expected range.
-    de: Versorgungsspannung Bremspedalsensor unter Sollbereich.
+    en: 'Brake pedal position sensor supply voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Versorgungsspannung Bremspedalsensor unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pedal_sensor
     - sensor_supply
@@ -15667,8 +15667,8 @@
     en: Brake Pedal Position Sensor Supply Voltage Circuit High
     de: Bremspedal-Positionssensor Versorgungsspannung hoch
   description:
-    en: Brake pedal position sensor supply voltage above expected range.
-    de: Versorgungsspannung Bremspedalsensor über Sollbereich.
+    en: 'Brake pedal position sensor supply voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Versorgungsspannung Bremspedalsensor über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pedal_sensor
     - sensor_supply
@@ -15722,8 +15722,8 @@
     en: Brake Booster Travel Sensor Circuit Low
     de: Bremskraftverstärker Wegsensor Schaltkreis niedrig
   description:
-    en: Brake booster travel sensor signal voltage below expected range.
-    de: Signalspannung Wegsensor unter Sollbereich.
+    en: 'Brake booster travel sensor signal voltage below expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Signalspannung Wegsensor unter Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_travel_sensor
   common_causes:
@@ -15776,8 +15776,8 @@
     en: Brake Booster Travel Sensor Circuit High
     de: Bremskraftverstärker Wegsensor Schaltkreis hoch
   description:
-    en: Brake booster travel sensor signal voltage above expected range.
-    de: Signalspannung Wegsensor über Sollbereich.
+    en: 'Brake booster travel sensor signal voltage above expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Signalspannung Wegsensor über Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_travel_sensor
   common_causes:
@@ -15883,8 +15883,8 @@
     en: Brake Pressure Sensor C Circuit High
     de: Bremsdrucksensor C Schaltkreis hoch
   description:
-    en: Brake pressure sensor C signal voltage above expected range.
-    de: Signalspannung Bremsdrucksensor C über Sollbereich.
+    en: 'Brake pressure sensor C signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor C über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_c
     - sensor_wiring
@@ -15987,8 +15987,8 @@
     en: Brake Pressure Sensor C Circuit Range/Performance
     de: Bremsdrucksensor C Bereich/Leistung
   description:
-    en: Brake pressure sensor C reading implausible.
-    de: Wert des Bremsdrucksensors C unstimmig.
+    en: 'Brake pressure sensor C reading implausible. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Wert des Bremsdrucksensors C unstimmig. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_c
   common_causes:
@@ -16090,8 +16090,8 @@
     en: Brake Pressure Sensor D Circuit High
     de: Bremsdrucksensor D Schaltkreis hoch
   description:
-    en: Brake pressure sensor D signal voltage above expected range.
-    de: Signalspannung Bremsdrucksensor D über Sollbereich.
+    en: 'Brake pressure sensor D signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor D über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_d
     - sensor_wiring
@@ -16247,8 +16247,8 @@
     en: Brake Booster Temperature Sensor B Circuit Low
     de: Bremskraftverstärker Temperatursensor B niedrig
   description:
-    en: Brake booster temperature sensor B signal voltage below expected range.
-    de: Signalspannung Temperatursensor B unter Sollbereich.
+    en: 'Brake booster temperature sensor B signal voltage below expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Signalspannung Temperatursensor B unter Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_temp_sensor_b
   common_causes:
@@ -16302,8 +16302,8 @@
     en: Brake Booster Temperature Sensor B Circuit High
     de: Bremskraftverstärker Temperatursensor B hoch
   description:
-    en: Brake booster temperature sensor B signal voltage above expected range.
-    de: Signalspannung Temperatursensor B über Sollbereich.
+    en: 'Brake booster temperature sensor B signal voltage above expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Signalspannung Temperatursensor B über Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_temp_sensor_b
   common_causes:
@@ -16357,8 +16357,8 @@
     en: Brake Booster Temperature Sensor B Circuit/Open
     de: Bremskraftverstärker Temperatursensor B unterbrochen
   description:
-    en: Open circuit on brake booster temperature sensor B.
-    de: Unterbrochener Schaltkreis am Temperatursensor B.
+    en: 'Open circuit on brake booster temperature sensor B. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Unterbrochener Schaltkreis am Temperatursensor B. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_temp_sensor_b
   common_causes:
@@ -16412,8 +16412,8 @@
     en: Brake Booster Temperature Sensor B Circuit Range/Performance
     de: Bremskraftverstärker Temperatursensor B Bereich/Leistung
   description:
-    en: Brake booster temperature sensor B reading implausible.
-    de: Wert des Temperatursensors B unstimmig.
+    en: 'Brake booster temperature sensor B reading implausible. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Wert des Temperatursensors B unstimmig. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_temp_sensor_b
   common_causes:
@@ -16467,8 +16467,8 @@
     en: Brake Booster Temperature Sensor Circuit B Intermittent/Erratic
     de: Bremskraftverstärker Temperatursensor B sporadisch/unstetig
   description:
-    en: Intermittent signal from brake booster temp sensor B.
-    de: Sporadisches Signal vom Temperatursensor B.
+    en: 'Intermittent signal from brake booster temp sensor B. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Sporadisches Signal vom Temperatursensor B. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_temp_sensor_b
   common_causes:
@@ -16521,8 +16521,8 @@
     en: Brake Booster Temperature Sensor A/B Correlation
     de: Bremskraftverstärker Temperatursensor A/B Korrelation
   description:
-    en: Brake booster temperature sensors A and B disagree beyond plausible deviation.
-    de: Temperatursensoren A und B des Bremskraftverstärkers weichen über plausibles Maß ab.
+    en: 'Brake booster temperature sensors A and B disagree beyond plausible deviation. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Temperatursensoren A und B des Bremskraftverstärkers weichen über plausibles Maß ab. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_temp_sensors
   common_causes:
@@ -16620,8 +16620,8 @@
     en: Brake Booster Motor A Phase U-V-W Circuit Low
     de: Bremskraftverstärker Motor A Phase U-V-W niedrig
   description:
-    en: Brake booster motor A phase U/V/W voltage below expected range.
-    de: Phasenspannung U/V/W am Booster-Motor A unter Sollbereich.
+    en: 'Brake booster motor A phase U/V/W voltage below expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Phasenspannung U/V/W am Booster-Motor A unter Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_motor_a
     - motor_phase_wiring
@@ -16730,8 +16730,8 @@
     en: Brake Booster Motor A Phase U-V-W Circuit Range/Performance
     de: Bremskraftverstärker Motor A Phase U-V-W Bereich/Leistung
   description:
-    en: Booster motor A phase voltage drifts or fluctuates outside spec.
-    de: Phasenspannung am Booster-Motor A driftet oder schwankt außerhalb der Spezifikation.
+    en: 'Booster motor A phase voltage drifts or fluctuates outside spec. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Phasenspannung am Booster-Motor A driftet oder schwankt außerhalb der Spezifikation. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_motor_a
   common_causes:
@@ -16839,8 +16839,8 @@
     en: Brake Booster Motor B Phase U-V-W Circuit Low
     de: Bremskraftverstärker Motor B Phase U-V-W niedrig
   description:
-    en: 'Brake booster motor A phase U/V/W voltage below expected range.'
-    de: 'Phasenspannung U/V/W am Booster-Motor A unter Sollbereich.'
+    en: 'Brake booster motor A phase U/V/W voltage below expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Phasenspannung U/V/W am Booster-Motor A unter Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_motor_b
     - motor_phase_wiring
@@ -16895,8 +16895,8 @@
     en: Brake Booster Motor B Phase U-V-W Circuit High
     de: Bremskraftverstärker Motor B Phase U-V-W hoch
   description:
-    en: Brake booster motor B phase voltage above expected range.
-    de: Phasenspannung am Booster-Motor B über Sollbereich.
+    en: 'Brake booster motor B phase voltage above expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Phasenspannung am Booster-Motor B über Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_motor_b
     - motor_phase_wiring
@@ -16950,8 +16950,8 @@
     en: Brake Booster Motor B Phase U-V-W Circuit Range/Performance
     de: Bremskraftverstärker Motor B Phase U-V-W Bereich/Leistung
   description:
-    en: 'Booster motor A phase voltage drifts or fluctuates outside spec.'
-    de: 'Phasenspannung am Booster-Motor A driftet oder schwankt außerhalb der Spezifikation.'
+    en: 'Booster motor A phase voltage drifts or fluctuates outside spec. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Phasenspannung am Booster-Motor A driftet oder schwankt außerhalb der Spezifikation. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_motor_b
   common_causes:
@@ -17060,8 +17060,8 @@
     en: Brake Booster Motor A Position Sensor Circuit Low
     de: Bremskraftverstärker Motor A Positionssensor niedrig
   description:
-    en: Booster motor A position sensor signal voltage below expected range.
-    de: Signalspannung Positionssensor unter Sollbereich.
+    en: 'Booster motor A position sensor signal voltage below expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Signalspannung Positionssensor unter Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - booster_motor_a_pos_sensor
   common_causes:
@@ -17115,8 +17115,8 @@
     en: Brake Booster Motor A Position Sensor Circuit High
     de: Bremskraftverstärker Motor A Positionssensor hoch
   description:
-    en: Booster motor A position sensor signal voltage above expected range.
-    de: Signalspannung Positionssensor über Sollbereich.
+    en: 'Booster motor A position sensor signal voltage above expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Signalspannung Positionssensor über Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - booster_motor_a_pos_sensor
   common_causes:
@@ -17170,8 +17170,8 @@
     en: Brake Booster Motor A Position Sensor Circuit Range/Performance
     de: Bremskraftverstärker Motor A Positionssensor Bereich/Leistung
   description:
-    en: Booster motor A position sensor reading implausible.
-    de: Wert des Booster-Motor-A-Positionssensors unstimmig.
+    en: 'Booster motor A position sensor reading implausible. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Wert des Booster-Motor-A-Positionssensors unstimmig. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - booster_motor_a_pos_sensor
   common_causes:
@@ -17280,8 +17280,8 @@
     en: Brake Booster Motor B Position Sensor Circuit Low
     de: Bremskraftverstärker Motor B Positionssensor niedrig
   description:
-    en: 'Booster motor A position sensor signal voltage below expected range.'
-    de: 'Signalspannung Positionssensor unter Sollbereich.'
+    en: 'Booster motor A position sensor signal voltage below expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Signalspannung Positionssensor unter Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - booster_motor_b_pos_sensor
   common_causes:
@@ -17335,8 +17335,8 @@
     en: Brake Booster Motor B Position Sensor Circuit High
     de: Bremskraftverstärker Motor B Positionssensor hoch
   description:
-    en: 'Booster motor A position sensor signal voltage above expected range.'
-    de: 'Signalspannung Positionssensor über Sollbereich.'
+    en: 'Booster motor A position sensor signal voltage above expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Signalspannung Positionssensor über Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - booster_motor_b_pos_sensor
   common_causes:
@@ -17390,8 +17390,8 @@
     en: Brake Booster Motor B Position Sensor Circuit Range/Performance
     de: Bremskraftverstärker Motor B Positionssensor Bereich/Leistung
   description:
-    en: 'Booster motor A position sensor reading implausible.'
-    de: 'Wert des Booster-Motor-A-Positionssensors unstimmig.'
+    en: 'Booster motor A position sensor reading implausible. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Wert des Booster-Motor-A-Positionssensors unstimmig. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - booster_motor_b_pos_sensor
   common_causes:
@@ -17489,8 +17489,8 @@
     en: Brake Booster Motor A Phase U-V-W Current High
     de: Bremskraftverstärker Motor A Phasenstrom hoch
   description:
-    en: Brake booster motor A phase current above safe limit — overcurrent protection triggered.
-    de: Phasenstrom Booster-Motor A über Sicherheitsgrenze — Überstrom-Schutz ausgelöst.
+    en: 'Brake booster motor A phase current above safe limit — overcurrent protection triggered. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Phasenstrom Booster-Motor A über Sicherheitsgrenze — Überstrom-Schutz ausgelöst. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_motor_a
   common_causes:
@@ -17579,8 +17579,8 @@
     en: Brake Booster Motor B Phase U-V-W Current High
     de: Bremskraftverstärker Motor B Phasenstrom hoch
   description:
-    en: 'Brake booster motor A phase current above safe limit — overcurrent protection triggered.'
-    de: 'Phasenstrom Booster-Motor A über Sicherheitsgrenze — Überstrom-Schutz ausgelöst.'
+    en: 'Brake booster motor A phase current above safe limit — overcurrent protection triggered. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Phasenstrom Booster-Motor A über Sicherheitsgrenze — Überstrom-Schutz ausgelöst. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_motor_b
   common_causes:
@@ -17722,8 +17722,8 @@
     en: Brake Booster Internal Power Driver Range/Performance
     de: Bremskraftverstärker interne Endstufe Bereich/Leistung
   description:
-    en: Internal power driver in brake booster controller does not respond as expected.
-    de: Interne Endstufe im Booster-Controller reagiert nicht erwartungsgemäß.
+    en: 'Internal power driver in brake booster controller does not respond as expected. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Interne Endstufe im Booster-Controller reagiert nicht erwartungsgemäß. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - booster_internal_driver
   common_causes:
@@ -17776,8 +17776,8 @@
     en: Brake Booster Motor A Current Sensor Circuit Range/Performance
     de: Bremskraftverstärker Motor A Stromsensor Bereich/Leistung
   description:
-    en: Brake booster motor A current sensor reading implausible.
-    de: Wert des Stromsensors am Booster-Motor A unstimmig.
+    en: 'Brake booster motor A current sensor reading implausible. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Wert des Stromsensors am Booster-Motor A unstimmig. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - booster_motor_a_current_sensor
   common_causes:
@@ -17921,8 +17921,8 @@
     en: Brake Booster Control Module Missing Calibration
     de: Bremskraftverstärker-Steuermodul Kalibrierung fehlt
   description:
-    en: Brake booster control module not calibrated — typically required after replacement.
-    de: Booster-Steuermodul nicht kalibriert — meist nach Tausch erforderlich.
+    en: 'Brake booster control module not calibrated — typically required after replacement. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Booster-Steuermodul nicht kalibriert — meist nach Tausch erforderlich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_module
   common_causes:
@@ -18189,8 +18189,8 @@
     en: Brake Pressure Sensor E Circuit Low
     de: Bremsdrucksensor E Schaltkreis niedrig
   description:
-    en: Brake pressure sensor E signal voltage below expected range.
-    de: Signalspannung Bremsdrucksensor E unter Sollbereich.
+    en: 'Brake pressure sensor E signal voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor E unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_e
     - sensor_wiring
@@ -18245,8 +18245,8 @@
     en: Brake Pressure Sensor E Circuit High
     de: Bremsdrucksensor E Schaltkreis hoch
   description:
-    en: Brake pressure sensor E signal voltage above expected range.
-    de: Signalspannung Bremsdrucksensor E über Sollbereich.
+    en: 'Brake pressure sensor E signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor E über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_e
     - sensor_wiring
@@ -18412,8 +18412,8 @@
     en: Wheel Speed Sensors Supply Circuit High
     de: Raddrehzahlsensoren Versorgung hoch
   description:
-    en: Wheel speed sensors supply voltage above expected range.
-    de: Versorgungsspannung der Raddrehzahlsensoren über Sollbereich.
+    en: 'Wheel speed sensors supply voltage above expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Versorgungsspannung der Raddrehzahlsensoren über Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_supply
   common_causes:
@@ -18466,8 +18466,8 @@
     en: Wheel Speed Sensors Supply Circuit Low
     de: Raddrehzahlsensoren Versorgung niedrig
   description:
-    en: Wheel speed sensors supply voltage below expected range.
-    de: Versorgungsspannung der Raddrehzahlsensoren unter Sollbereich.
+    en: 'Wheel speed sensors supply voltage below expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Versorgungsspannung der Raddrehzahlsensoren unter Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - wss_supply
   common_causes:
@@ -18575,8 +18575,8 @@
     en: ABS Pump Motor Supply Voltage B Circuit High
     de: ABS-Pumpenmotor Versorgungsspannung B hoch
   description:
-    en: ABS pump motor supply B above expected range.
-    de: Versorgungsspannung B des ABS-Pumpenmotors über Sollbereich.
+    en: 'ABS pump motor supply B above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Versorgungsspannung B des ABS-Pumpenmotors über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - abs_pump_supply_b
   common_causes:
@@ -18629,8 +18629,8 @@
     en: ABS Pump Motor Supply Voltage B Circuit Low
     de: ABS-Pumpenmotor Versorgungsspannung B niedrig
   description:
-    en: ABS pump motor supply B below expected range.
-    de: Versorgungsspannung B unter Sollbereich.
+    en: 'ABS pump motor supply B below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Versorgungsspannung B unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - abs_pump_supply_b
   common_causes:
@@ -18683,8 +18683,8 @@
     en: ABS Pump Motor Supply Voltage B Circuit Range/Performance
     de: ABS-Pumpenmotor Versorgungsspannung B Bereich/Leistung
   description:
-    en: ABS pump motor supply B drifts or fluctuates.
-    de: Versorgungsspannung B driftet oder schwankt.
+    en: 'ABS pump motor supply B drifts or fluctuates. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Versorgungsspannung B driftet oder schwankt. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - abs_pump_supply_b
   common_causes:
@@ -19012,8 +19012,8 @@
     en: Brake Booster Motor B Current Sensor Circuit Range/Performance
     de: Bremskraftverstärker Motor B Stromsensor Bereich/Leistung
   description:
-    en: 'Brake booster motor A current sensor reading implausible.'
-    de: 'Wert des Stromsensors am Booster-Motor A unstimmig.'
+    en: 'Brake booster motor A current sensor reading implausible. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Wert des Stromsensors am Booster-Motor A unstimmig. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - booster_motor_b_current_sensor
   common_causes:
@@ -19202,8 +19202,8 @@
     en: Brake Booster Temperature Sensor C Circuit Low
     de: Bremskraftverstärker Temperatursensor C niedrig
   description:
-    en: Brake booster temperature sensor C signal voltage below expected range.
-    de: Signalspannung Temperatursensor C unter Sollbereich.
+    en: 'Brake booster temperature sensor C signal voltage below expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Signalspannung Temperatursensor C unter Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_temp_sensor_c
   common_causes:
@@ -19257,8 +19257,8 @@
     en: Brake Booster Temperature Sensor C Circuit High
     de: Bremskraftverstärker Temperatursensor C hoch
   description:
-    en: Brake booster temperature sensor C signal voltage above expected range.
-    de: Signalspannung Temperatursensor C über Sollbereich.
+    en: 'Brake booster temperature sensor C signal voltage above expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Signalspannung Temperatursensor C über Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_temp_sensor_c
   common_causes:
@@ -19312,8 +19312,8 @@
     en: Brake Booster Temperature Sensor C Circuit/Open
     de: Bremskraftverstärker Temperatursensor C unterbrochen
   description:
-    en: Open circuit on brake booster temperature sensor C.
-    de: Unterbrochener Schaltkreis am Temperatursensor C.
+    en: 'Open circuit on brake booster temperature sensor C. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Unterbrochener Schaltkreis am Temperatursensor C. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_temp_sensor_c
   common_causes:
@@ -19367,8 +19367,8 @@
     en: Brake Booster Temperature Sensor C Circuit Range/Performance
     de: Bremskraftverstärker Temperatursensor C Bereich/Leistung
   description:
-    en: Brake booster temperature sensor C reading implausible.
-    de: Wert des Temperatursensors C unstimmig.
+    en: 'Brake booster temperature sensor C reading implausible. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Wert des Temperatursensors C unstimmig. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_temp_sensor_c
   common_causes:
@@ -19422,8 +19422,8 @@
     en: Brake Booster Temperature Sensor C Circuit Intermittent/Erratic
     de: Bremskraftverstärker Temperatursensor C sporadisch/unstetig
   description:
-    en: Intermittent signal from brake booster temperature sensor C.
-    de: Sporadisches Signal vom Temperatursensor C.
+    en: 'Intermittent signal from brake booster temperature sensor C. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Sporadisches Signal vom Temperatursensor C. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_temp_sensor_c
   common_causes:
@@ -19477,8 +19477,8 @@
     en: Brake Booster Motor A Position Sensor Supply Circuit/Open
     de: Bremskraftverstärker Motor A Positionssensor Versorgung unterbrochen
   description:
-    en: Open circuit on brake booster motor A position sensor supply line.
-    de: Unterbrochener Schaltkreis an der Versorgung des Positionssensors am Booster-Motor A.
+    en: 'Open circuit on brake booster motor A position sensor supply line. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Unterbrochener Schaltkreis an der Versorgung des Positionssensors am Booster-Motor A. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - booster_motor_a_pos_sensor_supply
   common_causes:
@@ -19532,8 +19532,8 @@
     en: Brake Booster Motor A Position Sensor Supply Circuit Low
     de: Bremskraftverstärker Motor A Positionssensor Versorgung niedrig
   description:
-    en: Booster motor A position sensor supply voltage below expected range.
-    de: Versorgungsspannung Positionssensor unter Sollbereich.
+    en: 'Booster motor A position sensor supply voltage below expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Versorgungsspannung Positionssensor unter Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - booster_motor_a_pos_sensor_supply
   common_causes:
@@ -19587,8 +19587,8 @@
     en: Brake Booster Motor A Position Sensor Supply Circuit High
     de: Bremskraftverstärker Motor A Positionssensor Versorgung hoch
   description:
-    en: Booster motor A position sensor supply voltage above expected range.
-    de: Versorgungsspannung Positionssensor über Sollbereich.
+    en: 'Booster motor A position sensor supply voltage above expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Versorgungsspannung Positionssensor über Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - booster_motor_a_pos_sensor_supply
   common_causes:
@@ -19642,8 +19642,8 @@
     en: Brake Booster Motor A Position Sensor Supply Circuit Range/Performance
     de: Bremskraftverstärker Motor A Positionssensor Versorgung Bereich/Leistung
   description:
-    en: Booster motor A position sensor supply drifts or fluctuates.
-    de: Versorgung des Positionssensors driftet oder schwankt.
+    en: 'Booster motor A position sensor supply drifts or fluctuates. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Versorgung des Positionssensors driftet oder schwankt. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - booster_motor_a_pos_sensor_supply
   common_causes:
@@ -19697,8 +19697,8 @@
     en: Brake Booster Motor B Position Sensor Supply Circuit/Open
     de: Bremskraftverstärker Motor B Positionssensor Versorgung unterbrochen
   description:
-    en: 'Open circuit on brake booster motor A position sensor supply line.'
-    de: 'Unterbrochener Schaltkreis an der Versorgung des Positionssensors am Booster-Motor A.'
+    en: 'Open circuit on brake booster motor A position sensor supply line. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Unterbrochener Schaltkreis an der Versorgung des Positionssensors am Booster-Motor A. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - booster_motor_b_pos_sensor_supply
   common_causes:
@@ -19752,8 +19752,8 @@
     en: Brake Booster Motor B Position Sensor Supply Circuit Low
     de: Bremskraftverstärker Motor B Positionssensor Versorgung niedrig
   description:
-    en: 'Booster motor A position sensor supply voltage below expected range.'
-    de: 'Versorgungsspannung Positionssensor unter Sollbereich.'
+    en: 'Booster motor A position sensor supply voltage below expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Versorgungsspannung Positionssensor unter Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - booster_motor_b_pos_sensor_supply
   common_causes:
@@ -19807,8 +19807,8 @@
     en: Brake Booster Motor B Position Sensor Supply Circuit High
     de: Bremskraftverstärker Motor B Positionssensor Versorgung hoch
   description:
-    en: 'Booster motor A position sensor supply voltage above expected range.'
-    de: 'Versorgungsspannung Positionssensor über Sollbereich.'
+    en: 'Booster motor A position sensor supply voltage above expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Versorgungsspannung Positionssensor über Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - booster_motor_b_pos_sensor_supply
   common_causes:
@@ -19862,8 +19862,8 @@
     en: Brake Booster Motor B Position Sensor Supply Circuit Range/Performance
     de: Bremskraftverstärker Motor B Positionssensor Versorgung Bereich/Leistung
   description:
-    en: 'Booster motor A position sensor supply drifts or fluctuates.'
-    de: 'Versorgung des Positionssensors driftet oder schwankt.'
+    en: 'Booster motor A position sensor supply drifts or fluctuates. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Versorgung des Positionssensors driftet oder schwankt. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - booster_motor_b_pos_sensor_supply
   common_causes:
@@ -20007,8 +20007,8 @@
     en: Brake Booster Motor A Over Temperature
     de: Bremskraftverstärker Motor A Übertemperatur
   description:
-    en: Brake booster motor A exceeded its safe operating temperature.
-    de: Booster-Motor A hat die zulässige Betriebstemperatur überschritten.
+    en: 'Brake booster motor A exceeded its safe operating temperature. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Booster-Motor A hat die zulässige Betriebstemperatur überschritten. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_motor_a
   common_causes:
@@ -20051,8 +20051,8 @@
     en: Brake Booster Motor A Supply Circuit
     de: Bremskraftverstärker Motor A Versorgung
   description:
-    en: Generic fault on brake booster motor A supply circuit.
-    de: Allgemeiner Fehler an der Versorgung des Booster-Motors A.
+    en: 'Generic fault on brake booster motor A supply circuit. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Allgemeiner Fehler an der Versorgung des Booster-Motors A. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_motor_a_supply
     - fuse
@@ -20141,8 +20141,8 @@
     en: Brake Pressure Sensor F Circuit Range/Performance
     de: Bremsdrucksensor F Bereich/Leistung
   description:
-    en: Brake pressure sensor F reading implausible.
-    de: Wert des Bremsdrucksensors F unstimmig.
+    en: 'Brake pressure sensor F reading implausible. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Wert des Bremsdrucksensors F unstimmig. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_f
   common_causes:
@@ -20196,8 +20196,8 @@
     en: Brake Pressure Sensor F Circuit Low
     de: Bremsdrucksensor F Schaltkreis niedrig
   description:
-    en: Brake pressure sensor F signal voltage below expected range.
-    de: Signalspannung Bremsdrucksensor F unter Sollbereich.
+    en: 'Brake pressure sensor F signal voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor F unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_f
     - sensor_wiring
@@ -20252,8 +20252,8 @@
     en: Brake Pressure Sensor F Circuit High
     de: Bremsdrucksensor F Schaltkreis hoch
   description:
-    en: Brake pressure sensor F signal voltage above expected range.
-    de: Signalspannung Bremsdrucksensor F über Sollbereich.
+    en: 'Brake pressure sensor F signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor F über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_f
     - sensor_wiring
@@ -20498,8 +20498,8 @@
     en: Brake Master Cylinder Piston Position Sensor A Circuit Range/Performance
     de: Bremshauptzylinder Kolben-Positionssensor A Bereich/Leistung
   description:
-    en: Master cylinder piston position sensor A reading implausible.
-    de: Wert des Hauptzylinder-Kolben-Positionssensors A unstimmig.
+    en: 'Master cylinder piston position sensor A reading implausible. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Wert des Hauptzylinder-Kolben-Positionssensors A unstimmig. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - master_cylinder_pos_sensor_a
   common_causes:
@@ -20643,8 +20643,8 @@
     en: Brake Master Cylinder Piston Position Sensor B Circuit Range/Performance
     de: Bremshauptzylinder Kolben-Positionssensor B Bereich/Leistung
   description:
-    en: 'Master cylinder piston position sensor B reading implausible.'
-    de: 'Wert des Hauptzylinder-Kolben-Positionssensors A unstimmig.'
+    en: 'Master cylinder piston position sensor B reading implausible. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Wert des Hauptzylinder-Kolben-Positionssensors A unstimmig. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - master_cylinder_pos_sensor_b
   common_causes:
@@ -21162,8 +21162,8 @@
     en: 4WD/AWD Clutch A Actuator Control Circuit Low
     de: 4WD/AWD Kupplung A Aktuator-Steuerschaltkreis niedrig
   description:
-    en: AWD clutch A actuator control voltage below expected range.
-    de: Steuerspannung Aktuator unter Sollbereich.
+    en: 'AWD clutch A actuator control voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung Aktuator unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - awd_clutch_a_actuator
   common_causes:
@@ -21217,8 +21217,8 @@
     en: 4WD/AWD Clutch A Actuator Control Circuit High
     de: 4WD/AWD Kupplung A Aktuator-Steuerschaltkreis hoch
   description:
-    en: AWD clutch A actuator control voltage above expected range.
-    de: Steuerspannung Aktuator über Sollbereich.
+    en: 'AWD clutch A actuator control voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung Aktuator über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - awd_clutch_a_actuator
   common_causes:
@@ -21496,8 +21496,8 @@
     en: 4WD/AWD Clutch A Position Sensor Circuit Range/Performance
     de: 4WD/AWD Kupplung A Positionssensor Bereich/Leistung
   description:
-    en: AWD clutch A position sensor reading implausible.
-    de: Wert des Kupplungs-Positionssensors A unstimmig.
+    en: 'AWD clutch A position sensor reading implausible. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Wert des Kupplungs-Positionssensors A unstimmig. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - awd_clutch_a_pos_sensor
   common_causes:
@@ -21550,8 +21550,8 @@
     en: 4WD/AWD Clutch A Position Sensor Circuit Low
     de: 4WD/AWD Kupplung A Positionssensor niedrig
   description:
-    en: Position sensor signal voltage below expected range.
-    de: Signalspannung Positionssensor unter Sollbereich.
+    en: 'Position sensor signal voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Positionssensor unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - awd_clutch_a_pos_sensor
   common_causes:
@@ -21604,8 +21604,8 @@
     en: 4WD/AWD Clutch A Position Sensor Circuit High
     de: 4WD/AWD Kupplung A Positionssensor hoch
   description:
-    en: Position sensor signal voltage above expected range.
-    de: Signalspannung Positionssensor über Sollbereich.
+    en: 'Position sensor signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Positionssensor über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - awd_clutch_a_pos_sensor
   common_causes:
@@ -21658,8 +21658,8 @@
     en: 4WD/AWD Clutch A Position Sensor Circuit Intermittent
     de: 4WD/AWD Kupplung A Positionssensor sporadisch
   description:
-    en: Intermittent signal from AWD clutch A position sensor.
-    de: Sporadisches Signal vom Positionssensor.
+    en: 'Intermittent signal from AWD clutch A position sensor. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Sporadisches Signal vom Positionssensor. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - awd_clutch_a_pos_sensor
   common_causes:
@@ -21901,8 +21901,8 @@
     en: 4WD/AWD Clutch B Actuator Control Circuit Low
     de: 4WD/AWD Kupplung B Aktuator-Steuerschaltkreis niedrig
   description:
-    en: 'AWD clutch A actuator control voltage below expected range.'
-    de: 'Steuerspannung Aktuator unter Sollbereich.'
+    en: 'AWD clutch A actuator control voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung Aktuator unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - awd_clutch_b_actuator
   common_causes:
@@ -21956,8 +21956,8 @@
     en: 4WD/AWD Clutch B Actuator Control Circuit High
     de: 4WD/AWD Kupplung B Aktuator-Steuerschaltkreis hoch
   description:
-    en: 'AWD clutch A actuator control voltage above expected range.'
-    de: 'Steuerspannung Aktuator über Sollbereich.'
+    en: 'AWD clutch A actuator control voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung Aktuator über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - awd_clutch_b_actuator
   common_causes:
@@ -22236,8 +22236,8 @@
     en: Rear Drive Shaft Speed Sensor Circuit Low
     de: Hinterachs-Kardanwellen-Drehzahlsensor niedrig
   description:
-    en: Rear drive shaft speed sensor signal voltage below expected range.
-    de: Signalspannung Hinterachs-Kardanwellen-Drehzahlsensor unter Sollbereich.
+    en: 'Rear drive shaft speed sensor signal voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Hinterachs-Kardanwellen-Drehzahlsensor unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - rear_drive_shaft_speed_sensor
   common_causes:
@@ -22290,8 +22290,8 @@
     en: Rear Drive Shaft Speed Sensor Circuit High
     de: Hinterachs-Kardanwellen-Drehzahlsensor hoch
   description:
-    en: Rear drive shaft speed sensor signal voltage above expected range.
-    de: Signalspannung Hinterachs-Kardanwellen-Drehzahlsensor über Sollbereich.
+    en: 'Rear drive shaft speed sensor signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Hinterachs-Kardanwellen-Drehzahlsensor über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - rear_drive_shaft_speed_sensor
   common_causes:
@@ -22344,8 +22344,8 @@
     en: Rear Drive Shaft Speed Sensor Circuit Intermittent
     de: Hinterachs-Kardanwellen-Drehzahlsensor sporadisch
   description:
-    en: Intermittent signal from rear drive shaft speed sensor.
-    de: Sporadisches Signal vom Hinterachs-Kardanwellen-Drehzahlsensor.
+    en: 'Intermittent signal from rear drive shaft speed sensor. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Sporadisches Signal vom Hinterachs-Kardanwellen-Drehzahlsensor. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - rear_drive_shaft_speed_sensor
   common_causes:
@@ -22443,8 +22443,8 @@
     en: Rear Drive Shaft Speed Sensor Circuit Range/Performance
     de: Hinterachs-Kardanwellen-Drehzahlsensor Bereich/Leistung
   description:
-    en: Rear drive shaft speed sensor reading implausible.
-    de: Wert des Hinterachs-Kardanwellen-Drehzahlsensors unstimmig.
+    en: 'Rear drive shaft speed sensor reading implausible. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Wert des Hinterachs-Kardanwellen-Drehzahlsensors unstimmig. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - rear_drive_shaft_speed_sensor
   common_causes:
@@ -22595,8 +22595,8 @@
     en: 4WD/AWD Range Actuator Control Circuit Low
     de: 4WD/AWD Bereichswähler-Aktuator niedrig
   description:
-    en: Range actuator control voltage below expected range.
-    de: Steuerspannung Bereichswähler unter Sollbereich.
+    en: 'Range actuator control voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung Bereichswähler unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - range_actuator
   common_causes:
@@ -22649,8 +22649,8 @@
     en: 4WD/AWD Range Actuator Control Circuit High
     de: 4WD/AWD Bereichswähler-Aktuator hoch
   description:
-    en: Range actuator control voltage above expected range.
-    de: Steuerspannung Bereichswähler über Sollbereich.
+    en: 'Range actuator control voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung Bereichswähler über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - range_actuator
   common_causes:
@@ -22835,8 +22835,8 @@
     en: 4WD/AWD Range Actuator Position Sensor Circuit Range/Performance
     de: 4WD/AWD Bereichswähler-Positionssensor Bereich/Leistung
   description:
-    en: Range actuator position sensor reading implausible.
-    de: Wert des Positionssensors unstimmig.
+    en: 'Range actuator position sensor reading implausible. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Wert des Positionssensors unstimmig. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - range_pos_sensor
   common_causes:
@@ -22889,8 +22889,8 @@
     en: 4WD/AWD Range Actuator Position Sensor Circuit Low
     de: 4WD/AWD Bereichswähler-Positionssensor niedrig
   description:
-    en: Range actuator position sensor signal voltage below expected range.
-    de: Signalspannung Positionssensor unter Sollbereich.
+    en: 'Range actuator position sensor signal voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Positionssensor unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - range_pos_sensor
   common_causes:
@@ -22943,8 +22943,8 @@
     en: 4WD/AWD Range Actuator Position Sensor Circuit High
     de: 4WD/AWD Bereichswähler-Positionssensor hoch
   description:
-    en: Range actuator position sensor signal voltage above expected range.
-    de: Signalspannung Positionssensor über Sollbereich.
+    en: 'Range actuator position sensor signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Positionssensor über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - range_pos_sensor
   common_causes:
@@ -23142,8 +23142,8 @@
     en: Active Air Dam Control Circuit Low
     de: Aktiver Luftleitspoiler Steuerschaltkreis niedrig
   description:
-    en: Active air dam actuator control voltage below expected range.
-    de: Steuerspannung Aktuator unter Sollbereich.
+    en: 'Active air dam actuator control voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung Aktuator unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - active_air_dam_actuator
   common_causes:
@@ -23196,8 +23196,8 @@
     en: Active Air Dam Control Circuit High
     de: Aktiver Luftleitspoiler Steuerschaltkreis hoch
   description:
-    en: Active air dam actuator control voltage above expected range.
-    de: Steuerspannung Aktuator über Sollbereich.
+    en: 'Active air dam actuator control voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung Aktuator über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - active_air_dam_actuator
   common_causes:
@@ -23334,8 +23334,8 @@
     en: Steering Wheel Angle Sensor Circuit Low
     de: Lenkradwinkelsensor niedrig
   description:
-    en: Steering wheel angle sensor signal voltage below expected range.
-    de: Signalspannung Lenkradwinkelsensor unter Sollbereich.
+    en: 'Steering wheel angle sensor signal voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Lenkradwinkelsensor unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - steering_angle_sensor
   common_causes:
@@ -23388,8 +23388,8 @@
     en: Steering Wheel Angle Sensor Circuit High
     de: Lenkradwinkelsensor hoch
   description:
-    en: Steering wheel angle sensor signal voltage above expected range.
-    de: Signalspannung Lenkradwinkelsensor über Sollbereich.
+    en: 'Steering wheel angle sensor signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Lenkradwinkelsensor über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - steering_angle_sensor
   common_causes:
@@ -23629,8 +23629,8 @@
     en: Left Park Brake Actuator Control Circuit Low
     de: Feststellbrems-Aktuator links niedrig
   description:
-    en: Left EPB actuator control voltage below expected range.
-    de: Steuerspannung Aktuator links unter Sollbereich.
+    en: 'Left EPB actuator control voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung Aktuator links unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - left_epb_actuator
   common_causes:
@@ -23683,8 +23683,8 @@
     en: Left Park Brake Actuator Control Circuit High
     de: Feststellbrems-Aktuator links hoch
   description:
-    en: Left EPB actuator control voltage above expected range.
-    de: Steuerspannung Aktuator links über Sollbereich.
+    en: 'Left EPB actuator control voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung Aktuator links über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - left_epb_actuator
   common_causes:
@@ -23897,8 +23897,8 @@
     en: Right Park Brake Actuator Control Circuit Low
     de: Feststellbrems-Aktuator rechts niedrig
   description:
-    en: Right EPB actuator control voltage below expected range.
-    de: Steuerspannung Aktuator rechts unter Sollbereich.
+    en: 'Right EPB actuator control voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung Aktuator rechts unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - right_epb_actuator
   common_causes:
@@ -23951,8 +23951,8 @@
     en: Right Park Brake Actuator Control Circuit High
     de: Feststellbrems-Aktuator rechts hoch
   description:
-    en: Right EPB actuator control voltage above expected range.
-    de: Steuerspannung Aktuator rechts über Sollbereich.
+    en: 'Right EPB actuator control voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung Aktuator rechts über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - right_epb_actuator
   common_causes:
@@ -24200,8 +24200,8 @@
     en: Park Brake Control Module Control Circuit Low
     de: Feststellbrems-Steuermodul Schaltkreis niedrig
   description:
-    en: Park brake control module supply voltage below expected range.
-    de: Versorgungsspannung des EPB-Moduls unter Sollbereich.
+    en: 'Park brake control module supply voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Versorgungsspannung des EPB-Moduls unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - epb_module
     - power_supply
@@ -24255,8 +24255,8 @@
     en: Park Brake Control Module Control Circuit High
     de: Feststellbrems-Steuermodul Schaltkreis hoch
   description:
-    en: Park brake control module supply voltage above expected range.
-    de: Versorgungsspannung des EPB-Moduls über Sollbereich.
+    en: 'Park brake control module supply voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Versorgungsspannung des EPB-Moduls über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - epb_module
     - alternator
@@ -24499,8 +24499,8 @@
     en: Variable Effort Steering Actuator Control Circuit Low
     de: Variable Lenkkraft-Aktuator niedrig
   description:
-    en: VES actuator control voltage below expected range.
-    de: Steuerspannung VES-Aktuator unter Sollbereich.
+    en: 'VES actuator control voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung VES-Aktuator unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - ves_actuator
   common_causes:
@@ -24553,8 +24553,8 @@
     en: Variable Effort Steering Actuator Control Circuit High
     de: Variable Lenkkraft-Aktuator hoch
   description:
-    en: VES actuator control voltage above expected range.
-    de: Steuerspannung VES-Aktuator über Sollbereich.
+    en: 'VES actuator control voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung VES-Aktuator über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - ves_actuator
   common_causes:
@@ -24704,8 +24704,8 @@
     en: Variable Effort Steering Lock/Safety Actuator Control Circuit Low
     de: Variable Lenkkraft Sperr-/Sicherheits-Aktuator niedrig
   description:
-    en: VES safety lock actuator control voltage below expected range.
-    de: Steuerspannung des Sicherheits-Sperr-Aktuators unter Sollbereich.
+    en: 'VES safety lock actuator control voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung des Sicherheits-Sperr-Aktuators unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - ves_lock_actuator
   common_causes:
@@ -24758,8 +24758,8 @@
     en: Variable Effort Steering Lock/Safety Actuator Control Circuit High
     de: Variable Lenkkraft Sperr-/Sicherheits-Aktuator hoch
   description:
-    en: VES safety lock actuator control voltage above expected range.
-    de: Steuerspannung des Sicherheits-Sperr-Aktuators über Sollbereich.
+    en: 'VES safety lock actuator control voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Steuerspannung des Sicherheits-Sperr-Aktuators über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - ves_lock_actuator
   common_causes:
@@ -24900,8 +24900,8 @@
     en: Variable Effort Steering Sensor Circuit Range/Performance
     de: Variable Lenkkraft Sensor Bereich/Leistung
   description:
-    en: VES sensor reading implausible.
-    de: Wert des VES-Sensors unstimmig.
+    en: 'VES sensor reading implausible. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Wert des VES-Sensors unstimmig. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - ves_sensor
   common_causes:
@@ -24954,8 +24954,8 @@
     en: Variable Effort Steering Sensor Circuit Low
     de: Variable Lenkkraft Sensor niedrig
   description:
-    en: VES sensor signal voltage below expected range.
-    de: Signalspannung VES-Sensor unter Sollbereich.
+    en: 'VES sensor signal voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung VES-Sensor unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - ves_sensor
   common_causes:
@@ -25008,8 +25008,8 @@
     en: Variable Effort Steering Sensor Circuit High
     de: Variable Lenkkraft Sensor hoch
   description:
-    en: VES sensor signal voltage above expected range.
-    de: Signalspannung VES-Sensor über Sollbereich.
+    en: 'VES sensor signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung VES-Sensor über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - ves_sensor
   common_causes:
@@ -25248,8 +25248,8 @@
     en: Brake Booster Motor B Performance
     de: Bremskraftverstärker Motor B Leistung
   description:
-    en: Brake booster motor B does not deliver expected performance.
-    de: Bremskraftverstärker-Motor B liefert nicht die erwartete Leistung.
+    en: 'Brake booster motor B does not deliver expected performance. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
+    de: 'Bremskraftverstärker-Motor B liefert nicht die erwartete Leistung. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
   affected_components:
     - brake_booster_motor_b
   common_causes:
@@ -25346,8 +25346,8 @@
     en: Active Air Dam Supply Voltage Circuit Low
     de: Aktiver Luftleitspoiler Versorgungsspannung niedrig
   description:
-    en: Active air dam supply voltage below expected range.
-    de: Versorgungsspannung Luftspoiler unter Sollbereich.
+    en: 'Active air dam supply voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Versorgungsspannung Luftspoiler unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - active_air_dam_actuator
     - power_supply
@@ -25401,8 +25401,8 @@
     en: Active Air Dam Supply Voltage Circuit High
     de: Aktiver Luftleitspoiler Versorgungsspannung hoch
   description:
-    en: Active air dam supply voltage above expected range.
-    de: Versorgungsspannung Luftspoiler über Sollbereich.
+    en: 'Active air dam supply voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Versorgungsspannung Luftspoiler über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - active_air_dam_actuator
     - alternator
@@ -25733,8 +25733,8 @@
     en: Brake Pressure Sensor G Circuit High
     de: Bremsdrucksensor G hoch
   description:
-    en: Brake pressure sensor G signal voltage above expected range.
-    de: Signalspannung Bremsdrucksensor G über Sollbereich.
+    en: 'Brake pressure sensor G signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor G über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_g
   common_causes:
@@ -25788,8 +25788,8 @@
     en: Brake Pressure Sensor G Circuit Low
     de: Bremsdrucksensor G niedrig
   description:
-    en: Brake pressure sensor G signal voltage below expected range.
-    de: Signalspannung Bremsdrucksensor G unter Sollbereich.
+    en: 'Brake pressure sensor G signal voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor G unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_g
   common_causes:
@@ -25953,8 +25953,8 @@
     en: Brake Pressure Sensor H Circuit High
     de: Bremsdrucksensor H hoch
   description:
-    en: Brake pressure sensor H signal voltage above expected range.
-    de: Signalspannung Bremsdrucksensor H über Sollbereich.
+    en: 'Brake pressure sensor H signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor H über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_h
   common_causes:
@@ -26008,8 +26008,8 @@
     en: Brake Pressure Sensor H Circuit Low
     de: Bremsdrucksensor H niedrig
   description:
-    en: Brake pressure sensor H signal voltage below expected range.
-    de: Signalspannung Bremsdrucksensor H unter Sollbereich.
+    en: 'Brake pressure sensor H signal voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor H unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_h
   common_causes:
@@ -26173,8 +26173,8 @@
     en: Brake Pressure Sensor J Circuit High
     de: Bremsdrucksensor J hoch
   description:
-    en: Brake pressure sensor J signal voltage above expected range.
-    de: Signalspannung Bremsdrucksensor J über Sollbereich.
+    en: 'Brake pressure sensor J signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor J über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_j
   common_causes:
@@ -26228,8 +26228,8 @@
     en: Brake Pressure Sensor J Circuit Low
     de: Bremsdrucksensor J niedrig
   description:
-    en: Brake pressure sensor J signal voltage below expected range.
-    de: Signalspannung Bremsdrucksensor J unter Sollbereich.
+    en: 'Brake pressure sensor J signal voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor J unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_j
   common_causes:
@@ -26393,8 +26393,8 @@
     en: Brake Pressure Sensor K Circuit High
     de: Bremsdrucksensor K hoch
   description:
-    en: Brake pressure sensor K signal voltage above expected range.
-    de: Signalspannung Bremsdrucksensor K über Sollbereich.
+    en: 'Brake pressure sensor K signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor K über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_k
   common_causes:
@@ -26448,8 +26448,8 @@
     en: Brake Pressure Sensor K Circuit Low
     de: Bremsdrucksensor K niedrig
   description:
-    en: Brake pressure sensor K signal voltage below expected range.
-    de: Signalspannung Bremsdrucksensor K unter Sollbereich.
+    en: 'Brake pressure sensor K signal voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor K unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_k
   common_causes:
@@ -26613,8 +26613,8 @@
     en: Brake Pressure Sensor L Circuit High
     de: Bremsdrucksensor L hoch
   description:
-    en: Brake pressure sensor L signal voltage above expected range.
-    de: Signalspannung Bremsdrucksensor L über Sollbereich.
+    en: 'Brake pressure sensor L signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor L über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_l
   common_causes:
@@ -26668,8 +26668,8 @@
     en: Brake Pressure Sensor L Circuit Low
     de: Bremsdrucksensor L niedrig
   description:
-    en: Brake pressure sensor L signal voltage below expected range.
-    de: Signalspannung Bremsdrucksensor L unter Sollbereich.
+    en: 'Brake pressure sensor L signal voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor L unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_l
   common_causes:
@@ -26833,8 +26833,8 @@
     en: Brake Pressure Sensor M Circuit High
     de: Bremsdrucksensor M hoch
   description:
-    en: Brake pressure sensor M signal voltage above expected range.
-    de: Signalspannung Bremsdrucksensor M über Sollbereich.
+    en: 'Brake pressure sensor M signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor M über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_m
   common_causes:
@@ -26888,8 +26888,8 @@
     en: Brake Pressure Sensor M Circuit Low
     de: Bremsdrucksensor M niedrig
   description:
-    en: Brake pressure sensor M signal voltage below expected range.
-    de: Signalspannung Bremsdrucksensor M unter Sollbereich.
+    en: 'Brake pressure sensor M signal voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor M unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_m
   common_causes:
@@ -27053,8 +27053,8 @@
     en: Brake Pressure Sensor N Circuit High
     de: Bremsdrucksensor N hoch
   description:
-    en: Brake pressure sensor N signal voltage above expected range.
-    de: Signalspannung Bremsdrucksensor N über Sollbereich.
+    en: 'Brake pressure sensor N signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor N über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_n
   common_causes:
@@ -27108,8 +27108,8 @@
     en: Brake Pressure Sensor N Circuit Low
     de: Bremsdrucksensor N niedrig
   description:
-    en: Brake pressure sensor N signal voltage below expected range.
-    de: Signalspannung Bremsdrucksensor N unter Sollbereich.
+    en: 'Brake pressure sensor N signal voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
+    de: 'Signalspannung Bremsdrucksensor N unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
   affected_components:
     - brake_pressure_sensor_n
   common_causes:
@@ -27218,8 +27218,8 @@
     en: Left Front Wheel Speed Sensor B Circuit/Open
     de: Vorne links Radgeschwindigkeitssensor B unterbrochen
   description:
-    en: Open circuit on left front wheel speed sensor B (secondary sensor).
-    de: Unterbrochener Schaltkreis am Radgeschwindigkeitssensor B vorne links (Zweitsensor).
+    en: 'Open circuit on left front wheel speed sensor B (secondary sensor). Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Unterbrochener Schaltkreis am Radgeschwindigkeitssensor B vorne links (Zweitsensor). Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - lf_wss_b
   common_causes:
@@ -27272,8 +27272,8 @@
     en: Left Front Wheel Speed Sensor B Range/Performance
     de: Vorne links Radgeschwindigkeitssensor B Bereich/Leistung
   description:
-    en: LF wheel speed sensor B reading implausible.
-    de: Wert vom Radgeschwindigkeitssensor B vorne links unstimmig.
+    en: 'LF wheel speed sensor B reading implausible. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Wert vom Radgeschwindigkeitssensor B vorne links unstimmig. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - lf_wss_b
   common_causes:
@@ -27326,8 +27326,8 @@
     en: Left Front Wheel Speed Sensor B Circuit Low
     de: Vorne links Radgeschwindigkeitssensor B niedrig
   description:
-    en: LF wheel speed sensor B signal voltage below expected range.
-    de: Signalspannung Sensor B vorne links unter Sollbereich.
+    en: 'LF wheel speed sensor B signal voltage below expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Signalspannung Sensor B vorne links unter Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - lf_wss_b
   common_causes:
@@ -27381,8 +27381,8 @@
     en: Left Front Wheel Speed Sensor B Circuit High
     de: Vorne links Radgeschwindigkeitssensor B hoch
   description:
-    en: LF wheel speed sensor B signal voltage above expected range.
-    de: Signalspannung Sensor B vorne links über Sollbereich.
+    en: 'LF wheel speed sensor B signal voltage above expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Signalspannung Sensor B vorne links über Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - lf_wss_b
   common_causes:
@@ -27436,8 +27436,8 @@
     en: Left Front Wheel Speed Sensor B Intermittent/Erratic
     de: Vorne links Radgeschwindigkeitssensor B sporadisch/unstetig
   description:
-    en: Intermittent signal from LF wheel speed sensor B.
-    de: Sporadisches Signal vom Sensor B vorne links.
+    en: 'Intermittent signal from LF wheel speed sensor B. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Sporadisches Signal vom Sensor B vorne links. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - lf_wss_b
   common_causes:
@@ -27491,8 +27491,8 @@
     en: Left Front Wheel Speed Sensor B Correlation
     de: Vorne links Radgeschwindigkeitssensor B Korrelation
   description:
-    en: LF wheel speed sensor B does not correlate with the primary LF sensor or other wheels.
-    de: Sensor B vorne links korreliert nicht mit dem Primärsensor oder den anderen Rädern.
+    en: 'LF wheel speed sensor B does not correlate with the primary LF sensor or other wheels. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Sensor B vorne links korreliert nicht mit dem Primärsensor oder den anderen Rädern. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - lf_wss_b
     - lf_wss
@@ -27536,8 +27536,8 @@
     en: Left Front Wheel Speed Sensor B Incorrect Component Installed
     de: Vorne links Radgeschwindigkeitssensor B falsche Komponente verbaut
   description:
-    en: LF wheel speed sensor B identifier mismatched — wrong sensor type for the vehicle.
-    de: Sensor-Kennung passt nicht zum Fahrzeug — falscher Sensortyp verbaut.
+    en: 'LF wheel speed sensor B identifier mismatched — wrong sensor type for the vehicle. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Sensor-Kennung passt nicht zum Fahrzeug — falscher Sensortyp verbaut. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - lf_wss_b
   common_causes:
@@ -27580,8 +27580,8 @@
     en: Right Front Wheel Speed Sensor B Circuit/Open
     de: Vorne rechts Radgeschwindigkeitssensor B unterbrochen
   description:
-    en: 'Open circuit on left front wheel speed sensor B (secondary sensor).'
-    de: 'Unterbrochener Schaltkreis am Radgeschwindigkeitssensor B vorne links (Zweitsensor).'
+    en: 'Open circuit on left front wheel speed sensor B (secondary sensor). Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Unterbrochener Schaltkreis am Radgeschwindigkeitssensor B vorne links (Zweitsensor). Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - rf_wss_b
   common_causes:
@@ -27635,8 +27635,8 @@
     en: Right Front Wheel Speed Sensor B Range/Performance
     de: Vorne rechts Radgeschwindigkeitssensor B Bereich/Leistung
   description:
-    en: 'LF wheel speed sensor B reading implausible.'
-    de: 'Wert vom Radgeschwindigkeitssensor B vorne links unstimmig.'
+    en: 'LF wheel speed sensor B reading implausible. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Wert vom Radgeschwindigkeitssensor B vorne links unstimmig. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - rf_wss_b
   common_causes:
@@ -27690,8 +27690,8 @@
     en: Right Front Wheel Speed Sensor B Circuit Low
     de: Vorne rechts Radgeschwindigkeitssensor B niedrig
   description:
-    en: 'LF wheel speed sensor B signal voltage below expected range.'
-    de: 'Signalspannung Sensor B vorne links unter Sollbereich.'
+    en: 'LF wheel speed sensor B signal voltage below expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Signalspannung Sensor B vorne links unter Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - rf_wss_b
   common_causes:
@@ -27745,8 +27745,8 @@
     en: Right Front Wheel Speed Sensor B Circuit High
     de: Vorne rechts Radgeschwindigkeitssensor B hoch
   description:
-    en: 'LF wheel speed sensor B signal voltage above expected range.'
-    de: 'Signalspannung Sensor B vorne links über Sollbereich.'
+    en: 'LF wheel speed sensor B signal voltage above expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Signalspannung Sensor B vorne links über Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - rf_wss_b
   common_causes:
@@ -27800,8 +27800,8 @@
     en: Right Front Wheel Speed Sensor B Intermittent/Erratic
     de: Vorne rechts Radgeschwindigkeitssensor B sporadisch/unstetig
   description:
-    en: 'Intermittent signal from LF wheel speed sensor B.'
-    de: 'Sporadisches Signal vom Sensor B vorne links.'
+    en: 'Intermittent signal from LF wheel speed sensor B. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Sporadisches Signal vom Sensor B vorne links. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - rf_wss_b
   common_causes:
@@ -27855,8 +27855,8 @@
     en: Right Front Wheel Speed Sensor B Correlation
     de: Vorne rechts Radgeschwindigkeitssensor B Korrelation
   description:
-    en: 'LF wheel speed sensor B does not correlate with the primary LF sensor or other wheels.'
-    de: 'Sensor B vorne links korreliert nicht mit dem Primärsensor oder den anderen Rädern.'
+    en: 'LF wheel speed sensor B does not correlate with the primary LF sensor or other wheels. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Sensor B vorne links korreliert nicht mit dem Primärsensor oder den anderen Rädern. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - rf_wss_b
     - rf_wss
@@ -27901,8 +27901,8 @@
     en: Right Front Wheel Speed Sensor B Incorrect Component Installed
     de: Vorne rechts Radgeschwindigkeitssensor B falsche Komponente verbaut
   description:
-    en: 'LF wheel speed sensor B identifier mismatched — wrong sensor type for the vehicle.'
-    de: 'Sensor-Kennung passt nicht zum Fahrzeug — falscher Sensortyp verbaut.'
+    en: 'LF wheel speed sensor B identifier mismatched — wrong sensor type for the vehicle. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Sensor-Kennung passt nicht zum Fahrzeug — falscher Sensortyp verbaut. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - rf_wss_b
   common_causes:
@@ -27945,8 +27945,8 @@
     en: Left Rear Wheel Speed Sensor B Circuit/Open
     de: Hinten links Radgeschwindigkeitssensor B unterbrochen
   description:
-    en: 'Open circuit on left front wheel speed sensor B (secondary sensor).'
-    de: 'Unterbrochener Schaltkreis am Radgeschwindigkeitssensor B vorne links (Zweitsensor).'
+    en: 'Open circuit on left front wheel speed sensor B (secondary sensor). Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Unterbrochener Schaltkreis am Radgeschwindigkeitssensor B vorne links (Zweitsensor). Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - lr_wss_b
   common_causes:
@@ -28047,8 +28047,8 @@
     en: Left Rear Wheel Speed Sensor B Circuit Low
     de: Hinten links Radgeschwindigkeitssensor B niedrig
   description:
-    en: 'LF wheel speed sensor B signal voltage below expected range.'
-    de: 'Signalspannung Sensor B vorne links unter Sollbereich.'
+    en: 'LF wheel speed sensor B signal voltage below expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Signalspannung Sensor B vorne links unter Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - lr_wss_b
   common_causes:
@@ -28102,8 +28102,8 @@
     en: Left Rear Wheel Speed Sensor B Circuit High
     de: Hinten links Radgeschwindigkeitssensor B hoch
   description:
-    en: 'LF wheel speed sensor B signal voltage above expected range.'
-    de: 'Signalspannung Sensor B vorne links über Sollbereich.'
+    en: 'LF wheel speed sensor B signal voltage above expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Signalspannung Sensor B vorne links über Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - lr_wss_b
   common_causes:
@@ -28157,8 +28157,8 @@
     en: Left Rear Wheel Speed Sensor B Intermittent/Erratic
     de: Hinten links Radgeschwindigkeitssensor B sporadisch/unstetig
   description:
-    en: 'Intermittent signal from LF wheel speed sensor B.'
-    de: 'Sporadisches Signal vom Sensor B vorne links.'
+    en: 'Intermittent signal from LF wheel speed sensor B. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Sporadisches Signal vom Sensor B vorne links. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - lr_wss_b
   common_causes:
@@ -28211,8 +28211,8 @@
     en: Left Rear Wheel Speed Sensor B Correlation
     de: Hinten links Radgeschwindigkeitssensor B Korrelation
   description:
-    en: 'LF wheel speed sensor B does not correlate with the primary LF sensor or other wheels.'
-    de: 'Sensor B vorne links korreliert nicht mit dem Primärsensor oder den anderen Rädern.'
+    en: 'LF wheel speed sensor B does not correlate with the primary LF sensor or other wheels. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Sensor B vorne links korreliert nicht mit dem Primärsensor oder den anderen Rädern. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - lr_wss_b
     - lr_wss
@@ -28257,8 +28257,8 @@
     en: Left Rear Wheel Speed Sensor B Incorrect Component Installed
     de: Hinten links Radgeschwindigkeitssensor B falsche Komponente verbaut
   description:
-    en: 'LF wheel speed sensor B identifier mismatched — wrong sensor type for the vehicle.'
-    de: 'Sensor-Kennung passt nicht zum Fahrzeug — falscher Sensortyp verbaut.'
+    en: 'LF wheel speed sensor B identifier mismatched — wrong sensor type for the vehicle. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Sensor-Kennung passt nicht zum Fahrzeug — falscher Sensortyp verbaut. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - lr_wss_b
   common_causes:
@@ -28302,8 +28302,8 @@
     en: Right Rear Wheel Speed Sensor B Circuit/Open
     de: Hinten rechts Radgeschwindigkeitssensor B unterbrochen
   description:
-    en: 'Open circuit on left front wheel speed sensor B (secondary sensor).'
-    de: 'Unterbrochener Schaltkreis am Radgeschwindigkeitssensor B vorne links (Zweitsensor).'
+    en: 'Open circuit on left front wheel speed sensor B (secondary sensor). Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Unterbrochener Schaltkreis am Radgeschwindigkeitssensor B vorne links (Zweitsensor). Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - rr_wss_b
   common_causes:
@@ -28357,8 +28357,8 @@
     en: Right Rear Wheel Speed Sensor B Range/Performance
     de: Hinten rechts Radgeschwindigkeitssensor B Bereich/Leistung
   description:
-    en: 'LF wheel speed sensor B reading implausible.'
-    de: 'Wert vom Radgeschwindigkeitssensor B vorne links unstimmig.'
+    en: 'LF wheel speed sensor B reading implausible. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Wert vom Radgeschwindigkeitssensor B vorne links unstimmig. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - rr_wss_b
   common_causes:
@@ -28412,8 +28412,8 @@
     en: Right Rear Wheel Speed Sensor B Circuit Low
     de: Hinten rechts Radgeschwindigkeitssensor B niedrig
   description:
-    en: 'LF wheel speed sensor B signal voltage below expected range.'
-    de: 'Signalspannung Sensor B vorne links unter Sollbereich.'
+    en: 'LF wheel speed sensor B signal voltage below expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Signalspannung Sensor B vorne links unter Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - rr_wss_b
   common_causes:
@@ -28467,8 +28467,8 @@
     en: Right Rear Wheel Speed Sensor B Circuit High
     de: Hinten rechts Radgeschwindigkeitssensor B hoch
   description:
-    en: 'LF wheel speed sensor B signal voltage above expected range.'
-    de: 'Signalspannung Sensor B vorne links über Sollbereich.'
+    en: 'LF wheel speed sensor B signal voltage above expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Signalspannung Sensor B vorne links über Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - rr_wss_b
   common_causes:
@@ -28522,8 +28522,8 @@
     en: Right Rear Wheel Speed Sensor B Intermittent/Erratic
     de: Hinten rechts Radgeschwindigkeitssensor B sporadisch/unstetig
   description:
-    en: 'Intermittent signal from LF wheel speed sensor B.'
-    de: 'Sporadisches Signal vom Sensor B vorne links.'
+    en: 'Intermittent signal from LF wheel speed sensor B. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Sporadisches Signal vom Sensor B vorne links. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - rr_wss_b
   common_causes:
@@ -28577,8 +28577,8 @@
     en: Right Rear Wheel Speed Sensor B Correlation
     de: Hinten rechts Radgeschwindigkeitssensor B Korrelation
   description:
-    en: 'LF wheel speed sensor B does not correlate with the primary LF sensor or other wheels.'
-    de: 'Sensor B vorne links korreliert nicht mit dem Primärsensor oder den anderen Rädern.'
+    en: 'LF wheel speed sensor B does not correlate with the primary LF sensor or other wheels. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Sensor B vorne links korreliert nicht mit dem Primärsensor oder den anderen Rädern. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - rr_wss_b
     - rr_wss
@@ -28623,8 +28623,8 @@
     en: Right Rear Wheel Speed Sensor B Incorrect Component Installed
     de: Hinten rechts Radgeschwindigkeitssensor B falsche Komponente verbaut
   description:
-    en: 'LF wheel speed sensor B identifier mismatched — wrong sensor type for the vehicle.'
-    de: 'Sensor-Kennung passt nicht zum Fahrzeug — falscher Sensortyp verbaut.'
+    en: 'LF wheel speed sensor B identifier mismatched — wrong sensor type for the vehicle. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
+    de: 'Sensor-Kennung passt nicht zum Fahrzeug — falscher Sensortyp verbaut. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
   affected_components:
     - rr_wss_b
   common_causes:

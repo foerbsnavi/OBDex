@@ -586,8 +586,8 @@
     en: Ignition Input Accessory/On/Start
     de: Zündungseingang Zubehör/Ein/Start
   description:
-    en: Fault on the combined ACC/ON/START ignition input line of the control module.
-    de: Fehler am kombinierten ACC/EIN/START-Zündungseingang des Steuermoduls.
+    en: 'Fault on the combined ACC/ON/START ignition input line of the control module. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Fehler am kombinierten ACC/EIN/START-Zündungseingang des Steuermoduls. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - ignition_input
     - wiring
@@ -638,8 +638,8 @@
     en: Ignition Input Off/On/Start
     de: Zündungseingang Aus/Ein/Start
   description:
-    en: Fault on the OFF/ON/START ignition input line.
-    de: Fehler am AUS/EIN/START-Zündungseingang.
+    en: 'Fault on the OFF/ON/START ignition input line. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Fehler am AUS/EIN/START-Zündungseingang. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - ignition_input
     - wiring
@@ -690,8 +690,8 @@
     en: Ignition Input On/Start
     de: Zündungseingang Ein/Start
   description:
-    en: Fault on the ON/START ignition input line — module sees inconsistent ON or START signal.
-    de: Fehler am EIN/START-Zündungseingang — Modul sieht inkonsistentes EIN- oder START-Signal.
+    en: 'Fault on the ON/START ignition input line — module sees inconsistent ON or START signal. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Fehler am EIN/START-Zündungseingang — Modul sieht inkonsistentes EIN- oder START-Signal. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - ignition_input
     - wiring
@@ -794,8 +794,8 @@
     en: Ignition Input Accessory
     de: Zündungseingang Zubehör
   description:
-    en: Fault on the ignition ACC (accessory) input.
-    de: Fehler am Zündung-ACC-Eingang (Zubehör).
+    en: 'Fault on the ignition ACC (accessory) input. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Fehler am Zündung-ACC-Eingang (Zubehör). Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - ignition_input
     - wiring
@@ -898,8 +898,8 @@
     en: Ignition Input Off
     de: Zündungseingang Aus
   description:
-    en: Fault on the ignition OFF input — module does not detect OFF state correctly.
-    de: Fehler am Zündung-AUS-Eingang — Modul erkennt AUS-Zustand nicht korrekt.
+    en: 'Fault on the ignition OFF input — module does not detect OFF state correctly. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Fehler am Zündung-AUS-Eingang — Modul erkennt AUS-Zustand nicht korrekt. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - ignition_input
     - wiring
@@ -1055,8 +1055,8 @@
     en: Control Module Input Power D Circuit/Open
     de: Steuermodul Versorgungsspannung D Schaltkreis unterbrochen
   description:
-    en: Open circuit on input power line D of the control module (fourth supply rail).
-    de: Unterbrochener Schaltkreis an der Versorgungsspannung D (vierte Versorgung).
+    en: 'Open circuit on input power line D of the control module (fourth supply rail). A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Unterbrochener Schaltkreis an der Versorgungsspannung D (vierte Versorgung). Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - module_power_d
     - fuse
@@ -1108,8 +1108,8 @@
     en: Control Module Ground C
     de: Steuermodul Masse C
   description:
-    en: Fault on the third ground reference of the module.
-    de: Fehler an der dritten Masse-Referenz des Moduls.
+    en: 'Fault on the third ground reference of the module. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Fehler an der dritten Masse-Referenz des Moduls. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - module_ground_c
   common_causes:
@@ -1160,8 +1160,8 @@
     en: Control Module Ground D
     de: Steuermodul Masse D
   description:
-    en: Fault on the fourth ground reference of the module.
-    de: Fehler an der vierten Masse-Referenz des Moduls.
+    en: 'Fault on the fourth ground reference of the module. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Fehler an der vierten Masse-Referenz des Moduls. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - module_ground_d
   common_causes:
@@ -1317,8 +1317,8 @@
     en: Control Module Input Power Circuit B/C Correlation
     de: Steuermodul Versorgungsspannung B/C Korrelation
   description:
-    en: Voltages on input power lines B and C do not correlate as expected.
-    de: Spannungen auf den Versorgungsleitungen B und C korrelieren nicht erwartungsgemäß.
+    en: 'Voltages on input power lines B and C do not correlate as expected. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannungen auf den Versorgungsleitungen B und C korrelieren nicht erwartungsgemäß. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - module_power_b
     - module_power_c
@@ -1370,8 +1370,8 @@
     en: Control Module Wake-up Circuit A/Open
     de: Steuermodul Wake-up-Kreis A unterbrochen
   description:
-    en: Open circuit on the wake-up signal line A — module cannot be woken from sleep via this path.
-    de: Unterbrochener Schaltkreis an der Wake-up-Signalleitung A — Modul kann über diesen Pfad nicht geweckt werden.
+    en: 'Open circuit on the wake-up signal line A — module cannot be woken from sleep via this path. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Unterbrochener Schaltkreis an der Wake-up-Signalleitung A — Modul kann über diesen Pfad nicht geweckt werden. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - wakeup_circuit_a
     - wakeup_wiring
@@ -1423,8 +1423,8 @@
     en: Control Module Wake-up Circuit A Low
     de: Steuermodul Wake-up-Kreis A niedrig
   description:
-    en: Wake-up signal A voltage below expected range — short to ground.
-    de: Spannung am Wake-up-Signal A unter Sollbereich — Masseschluss.
+    en: 'Wake-up signal A voltage below expected range — short to ground. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am Wake-up-Signal A unter Sollbereich — Masseschluss. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - wakeup_circuit_a
     - wakeup_wiring
@@ -1476,8 +1476,8 @@
     en: Control Module Wake-up Circuit A High
     de: Steuermodul Wake-up-Kreis A hoch
   description:
-    en: Wake-up signal A voltage above expected range — short to power.
-    de: Spannung am Wake-up-Signal A über Sollbereich — Plus-Schluss.
+    en: 'Wake-up signal A voltage above expected range — short to power. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am Wake-up-Signal A über Sollbereich — Plus-Schluss. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - wakeup_circuit_a
     - wakeup_wiring
@@ -1529,8 +1529,8 @@
     en: Control Module Wake-up Circuit A Performance
     de: Steuermodul Wake-up-Kreis A Leistung
   description:
-    en: Wake-up signal A is electrically OK but timing or pattern does not match expected behavior.
-    de: Wake-up-Signal A ist elektrisch in Ordnung, Timing oder Muster entspricht jedoch nicht dem Sollverhalten.
+    en: 'Wake-up signal A is electrically OK but timing or pattern does not match expected behavior. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Wake-up-Signal A ist elektrisch in Ordnung, Timing oder Muster entspricht jedoch nicht dem Sollverhalten. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - wakeup_circuit_a
   common_causes:
@@ -1581,8 +1581,8 @@
     en: Control Module Wake-up Circuit B/Open
     de: Steuermodul Wake-up-Kreis B unterbrochen
   description:
-    en: Open circuit on wake-up signal line B (second wake-up path).
-    de: Unterbrochener Schaltkreis an der Wake-up-Signalleitung B (zweiter Wake-up-Pfad).
+    en: 'Open circuit on wake-up signal line B (second wake-up path). A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Unterbrochener Schaltkreis an der Wake-up-Signalleitung B (zweiter Wake-up-Pfad). Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - wakeup_circuit_b
     - wakeup_wiring
@@ -1634,8 +1634,8 @@
     en: Control Module Wake-up Circuit B Low
     de: Steuermodul Wake-up-Kreis B niedrig
   description:
-    en: Wake-up signal B voltage below expected range.
-    de: Spannung am Wake-up-Signal B unter Sollbereich.
+    en: 'Wake-up signal B voltage below expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am Wake-up-Signal B unter Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - wakeup_circuit_b
     - wakeup_wiring
@@ -1687,8 +1687,8 @@
     en: Control Module Wake-up Circuit B High
     de: Steuermodul Wake-up-Kreis B hoch
   description:
-    en: Wake-up signal B voltage above expected range.
-    de: Spannung am Wake-up-Signal B über Sollbereich.
+    en: 'Wake-up signal B voltage above expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am Wake-up-Signal B über Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - wakeup_circuit_b
     - wakeup_wiring
@@ -1740,8 +1740,8 @@
     en: Control Module Wake-up Circuit B Performance
     de: Steuermodul Wake-up-Kreis B Leistung
   description:
-    en: Wake-up signal B timing or pattern does not match expected behavior.
-    de: Timing oder Muster des Wake-up-Signals B entspricht nicht dem Sollverhalten.
+    en: 'Wake-up signal B timing or pattern does not match expected behavior. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Timing oder Muster des Wake-up-Signals B entspricht nicht dem Sollverhalten. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - wakeup_circuit_b
   common_causes:
@@ -1792,8 +1792,8 @@
     en: Ignition Input Accessory/Off
     de: Zündungseingang Zubehör/Aus
   description:
-    en: Fault on the combined ACC/OFF ignition input.
-    de: Fehler am kombinierten ACC/AUS-Zündungseingang.
+    en: 'Fault on the combined ACC/OFF ignition input. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Fehler am kombinierten ACC/AUS-Zündungseingang. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - ignition_input
     - wiring
@@ -2002,8 +2002,8 @@
     en: Control Module A Disable Circuit Low
     de: Steuermodul A Disable-Schaltkreis niedrig
   description:
-    en: Disable line A voltage below expected range.
-    de: Spannung an der Disable-Leitung A unter Sollbereich.
+    en: 'Disable line A voltage below expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung an der Disable-Leitung A unter Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - module_disable_a
     - control_wiring
@@ -2054,8 +2054,8 @@
     en: Control Module A Disable Circuit High
     de: Steuermodul A Disable-Schaltkreis hoch
   description:
-    en: Disable line A voltage above expected range.
-    de: Spannung an der Disable-Leitung A über Sollbereich.
+    en: 'Disable line A voltage above expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung an der Disable-Leitung A über Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - module_disable_a
     - control_wiring
@@ -2106,8 +2106,8 @@
     en: Control Module A Disable Feedback Circuit
     de: Steuermodul A Disable-Rückmelde-Schaltkreis
   description:
-    en: Generic fault on the feedback line that confirms the module has entered/exited disabled state.
-    de: Allgemeiner Fehler an der Rückmeldeleitung, die den Disable-Zustand des Moduls bestätigt.
+    en: 'Generic fault on the feedback line that confirms the module has entered/exited disabled state. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler an der Rückmeldeleitung, die den Disable-Zustand des Moduls bestätigt. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - module_disable_feedback_a
     - feedback_wiring
@@ -2158,8 +2158,8 @@
     en: Control Module A Disable Feedback Circuit Low
     de: Steuermodul A Disable-Rückmelde-Schaltkreis niedrig
   description:
-    en: Disable feedback line A voltage below expected range.
-    de: Spannung der Disable-Rückmeldung A unter Sollbereich.
+    en: 'Disable feedback line A voltage below expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung der Disable-Rückmeldung A unter Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - module_disable_feedback_a
     - feedback_wiring
@@ -2210,8 +2210,8 @@
     en: Control Module A Disable Feedback Circuit High
     de: Steuermodul A Disable-Rückmelde-Schaltkreis hoch
   description:
-    en: Disable feedback line A voltage above expected range.
-    de: Spannung der Disable-Rückmeldung A über Sollbereich.
+    en: 'Disable feedback line A voltage above expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung der Disable-Rückmeldung A über Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - module_disable_feedback_a
     - feedback_wiring
@@ -2262,8 +2262,8 @@
     en: Ignition Output Accessory/On/Start
     de: Zündungsausgang Zubehör/Ein/Start
   description:
-    en: Fault on the ACC/ON/START ignition output line driven by the module.
-    de: Fehler am ACC/EIN/START-Zündungsausgang, der vom Modul angesteuert wird.
+    en: 'Fault on the ACC/ON/START ignition output line driven by the module. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Fehler am ACC/EIN/START-Zündungsausgang, der vom Modul angesteuert wird. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - ignition_output
     - output_wiring
@@ -2314,8 +2314,8 @@
     en: Ignition Output Off/On/Start
     de: Zündungsausgang Aus/Ein/Start
   description:
-    en: Fault on the OFF/ON/START ignition output.
-    de: Fehler am AUS/EIN/START-Zündungsausgang.
+    en: 'Fault on the OFF/ON/START ignition output. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Fehler am AUS/EIN/START-Zündungsausgang. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - ignition_output
     - output_wiring
@@ -2366,8 +2366,8 @@
     en: Ignition Output On/Start
     de: Zündungsausgang Ein/Start
   description:
-    en: Fault on the ON/START ignition output.
-    de: Fehler am EIN/START-Zündungsausgang.
+    en: 'Fault on the ON/START ignition output. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Fehler am EIN/START-Zündungsausgang. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - ignition_output
     - output_wiring
@@ -2418,8 +2418,8 @@
     en: Ignition Output On
     de: Zündungsausgang Ein
   description:
-    en: Fault on the ignition ON output.
-    de: Fehler am Zündung-EIN-Ausgang.
+    en: 'Fault on the ignition ON output. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Fehler am Zündung-EIN-Ausgang. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - ignition_output
     - output_wiring
@@ -2470,8 +2470,8 @@
     en: Ignition Output Accessory
     de: Zündungsausgang Zubehör
   description:
-    en: Fault on the ignition ACC (accessory) output.
-    de: Fehler am Zündung-ACC-Ausgang (Zubehör).
+    en: 'Fault on the ignition ACC (accessory) output. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Fehler am Zündung-ACC-Ausgang (Zubehör). Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - ignition_output
     - output_wiring
@@ -2522,8 +2522,8 @@
     en: Ignition Output Start
     de: Zündungsausgang Start
   description:
-    en: Fault on the ignition START output — module cannot drive the starter solenoid via this line.
-    de: Fehler am Zündung-START-Ausgang — Modul kann den Anlasser-Magnetschalter über diese Leitung nicht ansteuern.
+    en: 'Fault on the ignition START output — module cannot drive the starter solenoid via this line. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Fehler am Zündung-START-Ausgang — Modul kann den Anlasser-Magnetschalter über diese Leitung nicht ansteuern. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - ignition_output
     - starter_relay
@@ -2574,8 +2574,8 @@
     en: Ignition Output Off
     de: Zündungsausgang Aus
   description:
-    en: Fault on the ignition OFF output.
-    de: Fehler am Zündung-AUS-Ausgang.
+    en: 'Fault on the ignition OFF output. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Fehler am Zündung-AUS-Ausgang. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - ignition_output
     - output_wiring
@@ -2626,8 +2626,8 @@
     en: Ignition Output Accessory/Off
     de: Zündungsausgang Zubehör/Aus
   description:
-    en: Fault on the combined ACC/OFF ignition output.
-    de: Fehler am kombinierten ACC/AUS-Zündungsausgang.
+    en: 'Fault on the combined ACC/OFF ignition output. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Fehler am kombinierten ACC/AUS-Zündungsausgang. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - ignition_output
     - output_wiring
@@ -2939,8 +2939,8 @@
     en: Control Module Input Power A Circuit Low
     de: Steuermodul Versorgungsspannung A niedrig
   description:
-    en: Input power line A voltage below expected range.
-    de: Spannung der Versorgungsleitung A unter Sollbereich.
+    en: 'Input power line A voltage below expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung der Versorgungsleitung A unter Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - module_power_a
     - power_wiring
@@ -2992,8 +2992,8 @@
     en: Control Module Input Power A Circuit High
     de: Steuermodul Versorgungsspannung A hoch
   description:
-    en: Input power line A voltage above expected range — typically charging system overvoltage.
-    de: Spannung der Versorgungsleitung A über Sollbereich — meist Überspannung im Bordnetz.
+    en: 'Input power line A voltage above expected range — typically charging system overvoltage. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung der Versorgungsleitung A über Sollbereich — meist Überspannung im Bordnetz. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - module_power_a
     - charging_system
@@ -3045,8 +3045,8 @@
     en: Control Module Input Power A Circuit Intermittent/Erratic
     de: Steuermodul Versorgungsspannung A sporadisch/unstetig
   description:
-    en: Intermittent dropouts or noise on input power line A.
-    de: Sporadische Aussetzer oder Störungen an der Versorgungsleitung A.
+    en: 'Intermittent dropouts or noise on input power line A. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Sporadische Aussetzer oder Störungen an der Versorgungsleitung A. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - module_power_a
     - power_wiring
@@ -3151,8 +3151,8 @@
     en: Control Module Input Power B Circuit Low
     de: Steuermodul Versorgungsspannung B niedrig
   description:
-    en: Input power line B voltage below expected range.
-    de: Spannung der Versorgungsleitung B unter Sollbereich.
+    en: 'Input power line B voltage below expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung der Versorgungsleitung B unter Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - module_power_b
     - power_wiring
@@ -3204,8 +3204,8 @@
     en: Control Module Input Power B Circuit High
     de: Steuermodul Versorgungsspannung B hoch
   description:
-    en: Input power line B voltage above expected range.
-    de: Spannung der Versorgungsleitung B über Sollbereich.
+    en: 'Input power line B voltage above expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung der Versorgungsleitung B über Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - module_power_b
     - charging_system
@@ -3257,8 +3257,8 @@
     en: Control Module Input Power B Circuit Intermittent/Erratic
     de: Steuermodul Versorgungsspannung B sporadisch/unstetig
   description:
-    en: Intermittent dropouts or noise on input power line B.
-    de: Sporadische Aussetzer oder Störungen an der Versorgungsleitung B.
+    en: 'Intermittent dropouts or noise on input power line B. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Sporadische Aussetzer oder Störungen an der Versorgungsleitung B. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - module_power_b
     - power_wiring
@@ -3363,8 +3363,8 @@
     en: Control Module Input Power C Circuit Low
     de: Steuermodul Versorgungsspannung C niedrig
   description:
-    en: Input power line C voltage below expected range.
-    de: Spannung der Versorgungsleitung C unter Sollbereich.
+    en: 'Input power line C voltage below expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung der Versorgungsleitung C unter Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - module_power_c
     - power_wiring
@@ -3416,8 +3416,8 @@
     en: Control Module Input Power C Circuit High
     de: Steuermodul Versorgungsspannung C hoch
   description:
-    en: Input power line C voltage above expected range.
-    de: Spannung der Versorgungsleitung C über Sollbereich.
+    en: 'Input power line C voltage above expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung der Versorgungsleitung C über Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - module_power_c
     - charging_system
@@ -3469,8 +3469,8 @@
     en: Control Module Input Power C Circuit Intermittent/Erratic
     de: Steuermodul Versorgungsspannung C sporadisch/unstetig
   description:
-    en: Intermittent dropouts or noise on input power line C.
-    de: Sporadische Aussetzer oder Störungen an der Versorgungsleitung C.
+    en: 'Intermittent dropouts or noise on input power line C. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Sporadische Aussetzer oder Störungen an der Versorgungsleitung C. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - module_power_c
     - power_wiring
@@ -3574,8 +3574,8 @@
     en: Control Module Cooling Fan Circuit Low
     de: Steuermodul-Lüfter Schaltkreis niedrig
   description:
-    en: Module cooling fan control voltage below expected range.
-    de: Steuerspannung Modul-Lüfter unter Sollbereich.
+    en: 'Module cooling fan control voltage below expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Steuerspannung Modul-Lüfter unter Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - module_cooling_fan
     - fan_wiring
@@ -3626,8 +3626,8 @@
     en: Control Module Cooling Fan Circuit High
     de: Steuermodul-Lüfter Schaltkreis hoch
   description:
-    en: Module cooling fan control voltage above expected range.
-    de: Steuerspannung Modul-Lüfter über Sollbereich.
+    en: 'Module cooling fan control voltage above expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Steuerspannung Modul-Lüfter über Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - module_cooling_fan
     - fan_wiring
@@ -3886,8 +3886,8 @@
     en: High Voltage System Interlock Circuit B Low
     de: Hochvoltsystem-Interlock-Kreis B niedrig
   description:
-    en: HVIL loop B voltage below expected range — short to ground in the interlock wiring.
-    de: Spannung am HVIL-Loop B unter Sollbereich — Masseschluss in der Interlock-Verkabelung.
+    en: 'HVIL loop B voltage below expected range — short to ground in the interlock wiring. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop B unter Sollbereich — Masseschluss in der Interlock-Verkabelung. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_b
     - hvil_wiring
@@ -3939,8 +3939,8 @@
     en: High Voltage System Interlock Circuit B High
     de: Hochvoltsystem-Interlock-Kreis B hoch
   description:
-    en: HVIL loop B voltage above expected range — open or short to power.
-    de: Spannung am HVIL-Loop B über Sollbereich — Unterbrechung oder Plus-Schluss.
+    en: 'HVIL loop B voltage above expected range — open or short to power. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop B über Sollbereich — Unterbrechung oder Plus-Schluss. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_b
     - hvil_wiring
@@ -3992,8 +3992,8 @@
     en: High Voltage System Interlock Circuit C
     de: Hochvoltsystem-Interlock-Kreis C
   description:
-    en: Generic fault on HVIL loop C. See U3511 for general HVIL behavior.
-    de: Allgemeiner Fehler am HVIL-Loop C. Siehe U3511 für allgemeines HVIL-Verhalten.
+    en: 'Generic fault on HVIL loop C. See U3511 for general HVIL behavior. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am HVIL-Loop C. Siehe U3511 für allgemeines HVIL-Verhalten. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_c
     - hv_connectors
@@ -4045,8 +4045,8 @@
     en: High Voltage System Interlock Circuit C Performance
     de: Hochvoltsystem-Interlock-Kreis C Leistung
   description:
-    en: HVIL loop C timing/pattern does not match expected behavior.
-    de: HVIL-Loop C Timing/Muster entspricht nicht dem Sollverhalten.
+    en: 'HVIL loop C timing/pattern does not match expected behavior. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'HVIL-Loop C Timing/Muster entspricht nicht dem Sollverhalten. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_c
   common_causes:
@@ -4097,8 +4097,8 @@
     en: High Voltage System Interlock Circuit C Low
     de: Hochvoltsystem-Interlock-Kreis C niedrig
   description:
-    en: HVIL loop C voltage below expected range.
-    de: Spannung am HVIL-Loop C unter Sollbereich.
+    en: 'HVIL loop C voltage below expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop C unter Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_c
     - hvil_wiring
@@ -4150,8 +4150,8 @@
     en: High Voltage System Interlock Circuit C High
     de: Hochvoltsystem-Interlock-Kreis C hoch
   description:
-    en: HVIL loop C voltage above expected range.
-    de: Spannung am HVIL-Loop C über Sollbereich.
+    en: 'HVIL loop C voltage above expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop C über Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_c
     - hvil_wiring
@@ -4203,8 +4203,8 @@
     en: High Voltage System Interlock Circuit D
     de: Hochvoltsystem-Interlock-Kreis D
   description:
-    en: Generic fault on HVIL loop D.
-    de: Allgemeiner Fehler am HVIL-Loop D.
+    en: 'Generic fault on HVIL loop D. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am HVIL-Loop D. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_d
     - hv_connectors
@@ -4256,8 +4256,8 @@
     en: High Voltage System Interlock Circuit D Performance
     de: Hochvoltsystem-Interlock-Kreis D Leistung
   description:
-    en: HVIL loop D timing/pattern does not match expected behavior.
-    de: HVIL-Loop D Timing/Muster entspricht nicht dem Sollverhalten.
+    en: 'HVIL loop D timing/pattern does not match expected behavior. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'HVIL-Loop D Timing/Muster entspricht nicht dem Sollverhalten. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_d
   common_causes:
@@ -4308,8 +4308,8 @@
     en: High Voltage System Interlock Circuit D Low
     de: Hochvoltsystem-Interlock-Kreis D niedrig
   description:
-    en: HVIL loop D voltage below expected range.
-    de: Spannung am HVIL-Loop D unter Sollbereich.
+    en: 'HVIL loop D voltage below expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop D unter Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_d
     - hvil_wiring
@@ -4361,8 +4361,8 @@
     en: High Voltage System Interlock Circuit D High
     de: Hochvoltsystem-Interlock-Kreis D hoch
   description:
-    en: HVIL loop D voltage above expected range.
-    de: Spannung am HVIL-Loop D über Sollbereich.
+    en: 'HVIL loop D voltage above expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop D über Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_d
     - hvil_wiring
@@ -4414,8 +4414,8 @@
     en: High Voltage System Interlock Circuit E
     de: Hochvoltsystem-Interlock-Kreis E
   description:
-    en: Generic fault on HVIL loop E.
-    de: Allgemeiner Fehler am HVIL-Loop E.
+    en: 'Generic fault on HVIL loop E. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am HVIL-Loop E. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_e
     - hv_connectors
@@ -4467,8 +4467,8 @@
     en: High Voltage System Interlock Circuit E Performance
     de: Hochvoltsystem-Interlock-Kreis E Leistung
   description:
-    en: HVIL loop E timing/pattern does not match expected behavior.
-    de: HVIL-Loop E Timing/Muster entspricht nicht dem Sollverhalten.
+    en: 'HVIL loop E timing/pattern does not match expected behavior. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'HVIL-Loop E Timing/Muster entspricht nicht dem Sollverhalten. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_e
   common_causes:
@@ -4519,8 +4519,8 @@
     en: High Voltage System Interlock Circuit E Low
     de: Hochvoltsystem-Interlock-Kreis E niedrig
   description:
-    en: HVIL loop E voltage below expected range.
-    de: Spannung am HVIL-Loop E unter Sollbereich.
+    en: 'HVIL loop E voltage below expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop E unter Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_e
     - hvil_wiring
@@ -4572,8 +4572,8 @@
     en: High Voltage System Interlock Circuit E High
     de: Hochvoltsystem-Interlock-Kreis E hoch
   description:
-    en: HVIL loop E voltage above expected range.
-    de: Spannung am HVIL-Loop E über Sollbereich.
+    en: 'HVIL loop E voltage above expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop E über Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_e
     - hvil_wiring
@@ -4625,8 +4625,8 @@
     en: High Voltage System Interlock Circuit F
     de: Hochvoltsystem-Interlock-Kreis F
   description:
-    en: Generic fault on HVIL loop F.
-    de: Allgemeiner Fehler am HVIL-Loop F.
+    en: 'Generic fault on HVIL loop F. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am HVIL-Loop F. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_f
     - hv_connectors
@@ -4678,8 +4678,8 @@
     en: High Voltage System Interlock Circuit F Performance
     de: Hochvoltsystem-Interlock-Kreis F Leistung
   description:
-    en: HVIL loop F timing/pattern does not match expected behavior.
-    de: HVIL-Loop F Timing/Muster entspricht nicht dem Sollverhalten.
+    en: 'HVIL loop F timing/pattern does not match expected behavior. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'HVIL-Loop F Timing/Muster entspricht nicht dem Sollverhalten. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_f
   common_causes:
@@ -4730,8 +4730,8 @@
     en: High Voltage System Interlock Circuit F Low
     de: Hochvoltsystem-Interlock-Kreis F niedrig
   description:
-    en: HVIL loop F voltage below expected range.
-    de: Spannung am HVIL-Loop F unter Sollbereich.
+    en: 'HVIL loop F voltage below expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop F unter Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_f
     - hvil_wiring
@@ -4783,8 +4783,8 @@
     en: High Voltage System Interlock Circuit F High
     de: Hochvoltsystem-Interlock-Kreis F hoch
   description:
-    en: HVIL loop F voltage above expected range.
-    de: Spannung am HVIL-Loop F über Sollbereich.
+    en: 'HVIL loop F voltage above expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop F über Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_f
     - hvil_wiring
@@ -4836,8 +4836,8 @@
     en: High Voltage System Interlock Circuit G
     de: Hochvoltsystem-Interlock-Kreis G
   description:
-    en: Generic fault on HVIL loop G.
-    de: Allgemeiner Fehler am HVIL-Loop G.
+    en: 'Generic fault on HVIL loop G. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am HVIL-Loop G. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_g
     - hv_connectors
@@ -4889,8 +4889,8 @@
     en: High Voltage System Interlock Circuit G Performance
     de: Hochvoltsystem-Interlock-Kreis G Leistung
   description:
-    en: HVIL loop G timing/pattern does not match expected behavior.
-    de: HVIL-Loop G Timing/Muster entspricht nicht dem Sollverhalten.
+    en: 'HVIL loop G timing/pattern does not match expected behavior. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'HVIL-Loop G Timing/Muster entspricht nicht dem Sollverhalten. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_g
   common_causes:
@@ -4941,8 +4941,8 @@
     en: High Voltage System Interlock Circuit G Low
     de: Hochvoltsystem-Interlock-Kreis G niedrig
   description:
-    en: HVIL loop G voltage below expected range.
-    de: Spannung am HVIL-Loop G unter Sollbereich.
+    en: 'HVIL loop G voltage below expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop G unter Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_g
     - hvil_wiring
@@ -4994,8 +4994,8 @@
     en: High Voltage System Interlock Circuit G High
     de: Hochvoltsystem-Interlock-Kreis G hoch
   description:
-    en: HVIL loop G voltage above expected range.
-    de: Spannung am HVIL-Loop G über Sollbereich.
+    en: 'HVIL loop G voltage above expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop G über Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_g
     - hvil_wiring
@@ -5047,8 +5047,8 @@
     en: High Voltage System Interlock Circuit H
     de: Hochvoltsystem-Interlock-Kreis H
   description:
-    en: Generic fault on HVIL loop H.
-    de: Allgemeiner Fehler am HVIL-Loop H.
+    en: 'Generic fault on HVIL loop H. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am HVIL-Loop H. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_h
     - hv_connectors
@@ -5100,8 +5100,8 @@
     en: High Voltage System Interlock Circuit H Performance
     de: Hochvoltsystem-Interlock-Kreis H Leistung
   description:
-    en: HVIL loop H timing/pattern does not match expected behavior.
-    de: HVIL-Loop H Timing/Muster entspricht nicht dem Sollverhalten.
+    en: 'HVIL loop H timing/pattern does not match expected behavior. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'HVIL-Loop H Timing/Muster entspricht nicht dem Sollverhalten. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_h
   common_causes:
@@ -5152,8 +5152,8 @@
     en: High Voltage System Interlock Circuit H Low
     de: Hochvoltsystem-Interlock-Kreis H niedrig
   description:
-    en: HVIL loop H voltage below expected range.
-    de: Spannung am HVIL-Loop H unter Sollbereich.
+    en: 'HVIL loop H voltage below expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop H unter Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_h
     - hvil_wiring
@@ -5205,8 +5205,8 @@
     en: High Voltage System Interlock Circuit H High
     de: Hochvoltsystem-Interlock-Kreis H hoch
   description:
-    en: HVIL loop H voltage above expected range.
-    de: Spannung am HVIL-Loop H über Sollbereich.
+    en: 'HVIL loop H voltage above expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop H über Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_h
     - hvil_wiring
@@ -5258,8 +5258,8 @@
     en: High Voltage System Interlock Circuit J
     de: Hochvoltsystem-Interlock-Kreis J
   description:
-    en: 'Generic fault on HVIL loop J. Note - SAE skips letter "I" to avoid confusion with the digit 1.'
-    de: 'Allgemeiner Fehler am HVIL-Loop J. Hinweis - SAE überspringt den Buchstaben "I", um Verwechslung mit der Ziffer 1 zu vermeiden.'
+    en: 'Generic fault on HVIL loop J. Note - SAE skips letter "I" to avoid confusion with the digit 1. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am HVIL-Loop J. Hinweis - SAE überspringt den Buchstaben "I", um Verwechslung mit der Ziffer 1 zu vermeiden. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_j
     - hv_connectors
@@ -5311,8 +5311,8 @@
     en: High Voltage System Interlock Circuit J Performance
     de: Hochvoltsystem-Interlock-Kreis J Leistung
   description:
-    en: HVIL loop J timing/pattern does not match expected behavior.
-    de: HVIL-Loop J Timing/Muster entspricht nicht dem Sollverhalten.
+    en: 'HVIL loop J timing/pattern does not match expected behavior. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'HVIL-Loop J Timing/Muster entspricht nicht dem Sollverhalten. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_j
   common_causes:
@@ -5363,8 +5363,8 @@
     en: High Voltage System Interlock Circuit J Low
     de: Hochvoltsystem-Interlock-Kreis J niedrig
   description:
-    en: HVIL loop J voltage below expected range.
-    de: Spannung am HVIL-Loop J unter Sollbereich.
+    en: 'HVIL loop J voltage below expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop J unter Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_j
     - hvil_wiring
@@ -5416,8 +5416,8 @@
     en: High Voltage System Interlock Circuit J High
     de: Hochvoltsystem-Interlock-Kreis J hoch
   description:
-    en: HVIL loop J voltage above expected range.
-    de: Spannung am HVIL-Loop J über Sollbereich.
+    en: 'HVIL loop J voltage above expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop J über Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_j
     - hvil_wiring
@@ -5469,8 +5469,8 @@
     en: High Voltage System Interlock Circuit K
     de: Hochvoltsystem-Interlock-Kreis K
   description:
-    en: Generic fault on HVIL loop K.
-    de: Allgemeiner Fehler am HVIL-Loop K.
+    en: 'Generic fault on HVIL loop K. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am HVIL-Loop K. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_k
     - hv_connectors
@@ -5522,8 +5522,8 @@
     en: High Voltage System Interlock Circuit K Performance
     de: Hochvoltsystem-Interlock-Kreis K Leistung
   description:
-    en: HVIL loop K timing/pattern does not match expected behavior.
-    de: HVIL-Loop K Timing/Muster entspricht nicht dem Sollverhalten.
+    en: 'HVIL loop K timing/pattern does not match expected behavior. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'HVIL-Loop K Timing/Muster entspricht nicht dem Sollverhalten. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_k
   common_causes:
@@ -5574,8 +5574,8 @@
     en: High Voltage System Interlock Circuit K Low
     de: Hochvoltsystem-Interlock-Kreis K niedrig
   description:
-    en: HVIL loop K voltage below expected range.
-    de: Spannung am HVIL-Loop K unter Sollbereich.
+    en: 'HVIL loop K voltage below expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop K unter Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_k
     - hvil_wiring
@@ -5627,8 +5627,8 @@
     en: High Voltage System Interlock Circuit K High
     de: Hochvoltsystem-Interlock-Kreis K hoch
   description:
-    en: HVIL loop K voltage above expected range.
-    de: Spannung am HVIL-Loop K über Sollbereich.
+    en: 'HVIL loop K voltage above expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop K über Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_k
     - hvil_wiring
@@ -5680,8 +5680,8 @@
     en: High Voltage System Interlock Circuit L
     de: Hochvoltsystem-Interlock-Kreis L
   description:
-    en: Generic fault on HVIL loop L.
-    de: Allgemeiner Fehler am HVIL-Loop L.
+    en: 'Generic fault on HVIL loop L. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am HVIL-Loop L. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_l
     - hv_connectors
@@ -5733,8 +5733,8 @@
     en: High Voltage System Interlock Circuit L Performance
     de: Hochvoltsystem-Interlock-Kreis L Leistung
   description:
-    en: HVIL loop L timing/pattern does not match expected behavior.
-    de: HVIL-Loop L Timing/Muster entspricht nicht dem Sollverhalten.
+    en: 'HVIL loop L timing/pattern does not match expected behavior. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'HVIL-Loop L Timing/Muster entspricht nicht dem Sollverhalten. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_l
   common_causes:
@@ -5785,8 +5785,8 @@
     en: High Voltage System Interlock Circuit L Low
     de: Hochvoltsystem-Interlock-Kreis L niedrig
   description:
-    en: HVIL loop L voltage below expected range.
-    de: Spannung am HVIL-Loop L unter Sollbereich.
+    en: 'HVIL loop L voltage below expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop L unter Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_l
     - hvil_wiring
@@ -5838,8 +5838,8 @@
     en: High Voltage System Interlock Circuit L High
     de: Hochvoltsystem-Interlock-Kreis L hoch
   description:
-    en: HVIL loop L voltage above expected range.
-    de: Spannung am HVIL-Loop L über Sollbereich.
+    en: 'HVIL loop L voltage above expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop L über Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_l
     - hvil_wiring
@@ -5891,8 +5891,8 @@
     en: High Voltage System Interlock Circuit M
     de: Hochvoltsystem-Interlock-Kreis M
   description:
-    en: Generic fault on HVIL loop M.
-    de: Allgemeiner Fehler am HVIL-Loop M.
+    en: 'Generic fault on HVIL loop M. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am HVIL-Loop M. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_m
     - hv_connectors
@@ -5944,8 +5944,8 @@
     en: High Voltage System Interlock Circuit M Performance
     de: Hochvoltsystem-Interlock-Kreis M Leistung
   description:
-    en: HVIL loop M timing/pattern does not match expected behavior.
-    de: HVIL-Loop M Timing/Muster entspricht nicht dem Sollverhalten.
+    en: 'HVIL loop M timing/pattern does not match expected behavior. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'HVIL-Loop M Timing/Muster entspricht nicht dem Sollverhalten. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_m
   common_causes:
@@ -5996,8 +5996,8 @@
     en: High Voltage System Interlock Circuit M Low
     de: Hochvoltsystem-Interlock-Kreis M niedrig
   description:
-    en: HVIL loop M voltage below expected range.
-    de: Spannung am HVIL-Loop M unter Sollbereich.
+    en: 'HVIL loop M voltage below expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop M unter Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_m
     - hvil_wiring
@@ -6049,8 +6049,8 @@
     en: High Voltage System Interlock Circuit M High
     de: Hochvoltsystem-Interlock-Kreis M hoch
   description:
-    en: HVIL loop M voltage above expected range.
-    de: Spannung am HVIL-Loop M über Sollbereich.
+    en: 'HVIL loop M voltage above expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop M über Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_m
     - hvil_wiring
@@ -6102,8 +6102,8 @@
     en: High Voltage System Interlock Circuit N
     de: Hochvoltsystem-Interlock-Kreis N
   description:
-    en: Generic fault on HVIL loop N.
-    de: Allgemeiner Fehler am HVIL-Loop N.
+    en: 'Generic fault on HVIL loop N. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am HVIL-Loop N. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_n
     - hv_connectors
@@ -6155,8 +6155,8 @@
     en: High Voltage System Interlock Circuit N Performance
     de: Hochvoltsystem-Interlock-Kreis N Leistung
   description:
-    en: HVIL loop N timing/pattern does not match expected behavior.
-    de: HVIL-Loop N Timing/Muster entspricht nicht dem Sollverhalten.
+    en: 'HVIL loop N timing/pattern does not match expected behavior. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'HVIL-Loop N Timing/Muster entspricht nicht dem Sollverhalten. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_n
   common_causes:
@@ -6207,8 +6207,8 @@
     en: High Voltage System Interlock Circuit N Low
     de: Hochvoltsystem-Interlock-Kreis N niedrig
   description:
-    en: HVIL loop N voltage below expected range.
-    de: Spannung am HVIL-Loop N unter Sollbereich.
+    en: 'HVIL loop N voltage below expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop N unter Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_n
     - hvil_wiring
@@ -6260,8 +6260,8 @@
     en: High Voltage System Interlock Circuit N High
     de: Hochvoltsystem-Interlock-Kreis N hoch
   description:
-    en: HVIL loop N voltage above expected range.
-    de: Spannung am HVIL-Loop N über Sollbereich.
+    en: 'HVIL loop N voltage above expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop N über Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_n
     - hvil_wiring
@@ -6313,8 +6313,8 @@
     en: High Voltage System Interlock Circuit O
     de: Hochvoltsystem-Interlock-Kreis O
   description:
-    en: Generic fault on HVIL loop O.
-    de: Allgemeiner Fehler am HVIL-Loop O.
+    en: 'Generic fault on HVIL loop O. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am HVIL-Loop O. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_o
     - hv_connectors
@@ -6366,8 +6366,8 @@
     en: High Voltage System Interlock Circuit O Performance
     de: Hochvoltsystem-Interlock-Kreis O Leistung
   description:
-    en: HVIL loop O timing/pattern does not match expected behavior.
-    de: HVIL-Loop O Timing/Muster entspricht nicht dem Sollverhalten.
+    en: 'HVIL loop O timing/pattern does not match expected behavior. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'HVIL-Loop O Timing/Muster entspricht nicht dem Sollverhalten. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_o
   common_causes:
@@ -6418,8 +6418,8 @@
     en: High Voltage System Interlock Circuit O Low
     de: Hochvoltsystem-Interlock-Kreis O niedrig
   description:
-    en: HVIL loop O voltage below expected range.
-    de: Spannung am HVIL-Loop O unter Sollbereich.
+    en: 'HVIL loop O voltage below expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop O unter Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_o
     - hvil_wiring
@@ -6471,8 +6471,8 @@
     en: High Voltage System Interlock Circuit O High
     de: Hochvoltsystem-Interlock-Kreis O hoch
   description:
-    en: HVIL loop O voltage above expected range.
-    de: Spannung am HVIL-Loop O über Sollbereich.
+    en: 'HVIL loop O voltage above expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop O über Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_o
     - hvil_wiring
@@ -6524,8 +6524,8 @@
     en: High Voltage System Interlock Circuit P
     de: Hochvoltsystem-Interlock-Kreis P
   description:
-    en: Generic fault on HVIL loop P.
-    de: Allgemeiner Fehler am HVIL-Loop P.
+    en: 'Generic fault on HVIL loop P. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am HVIL-Loop P. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_p
     - hv_connectors
@@ -6577,8 +6577,8 @@
     en: High Voltage System Interlock Circuit P Performance
     de: Hochvoltsystem-Interlock-Kreis P Leistung
   description:
-    en: HVIL loop P timing/pattern does not match expected behavior.
-    de: HVIL-Loop P Timing/Muster entspricht nicht dem Sollverhalten.
+    en: 'HVIL loop P timing/pattern does not match expected behavior. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'HVIL-Loop P Timing/Muster entspricht nicht dem Sollverhalten. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_p
   common_causes:
@@ -6629,8 +6629,8 @@
     en: High Voltage System Interlock Circuit P Low
     de: Hochvoltsystem-Interlock-Kreis P niedrig
   description:
-    en: HVIL loop P voltage below expected range.
-    de: Spannung am HVIL-Loop P unter Sollbereich.
+    en: 'HVIL loop P voltage below expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop P unter Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_p
     - hvil_wiring
@@ -6682,8 +6682,8 @@
     en: High Voltage System Interlock Circuit P High
     de: Hochvoltsystem-Interlock-Kreis P hoch
   description:
-    en: HVIL loop P voltage above expected range.
-    de: Spannung am HVIL-Loop P über Sollbereich.
+    en: 'HVIL loop P voltage above expected range. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Spannung am HVIL-Loop P über Sollbereich. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - hvil_loop_p
     - hvil_wiring
@@ -7105,8 +7105,8 @@
     en: Hydrogen Tank A Valve Control Circuit
     de: Wasserstofftank A Ventilsteuerung Schaltkreis
   description:
-    en: Generic electrical fault on the control circuit of the hydrogen tank A shut-off valve.
-    de: Allgemeiner elektrischer Fehler am Steuerschaltkreis des Absperrventils von Wasserstofftank A.
+    en: 'Generic electrical fault on the control circuit of the hydrogen tank A shut-off valve. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner elektrischer Fehler am Steuerschaltkreis des Absperrventils von Wasserstofftank A. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - h2_tank_a_valve
     - valve_wiring
@@ -7263,8 +7263,8 @@
     en: Hydrogen Tank B Valve Control Circuit
     de: Wasserstofftank B Ventilsteuerung Schaltkreis
   description:
-    en: 'Generic electrical fault on the control circuit of the hydrogen tank A shut-off valve.'
-    de: 'Allgemeiner elektrischer Fehler am Steuerschaltkreis des Absperrventils von Wasserstofftank A.'
+    en: 'Generic electrical fault on the control circuit of the hydrogen tank A shut-off valve. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner elektrischer Fehler am Steuerschaltkreis des Absperrventils von Wasserstofftank A. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - h2_tank_b_valve
     - valve_wiring
@@ -7421,8 +7421,8 @@
     en: Hydrogen Tank C Valve Control Circuit
     de: Wasserstofftank C Ventilsteuerung Schaltkreis
   description:
-    en: 'Generic electrical fault on the control circuit of the hydrogen tank A shut-off valve.'
-    de: 'Allgemeiner elektrischer Fehler am Steuerschaltkreis des Absperrventils von Wasserstofftank A.'
+    en: 'Generic electrical fault on the control circuit of the hydrogen tank A shut-off valve. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner elektrischer Fehler am Steuerschaltkreis des Absperrventils von Wasserstofftank A. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - h2_tank_c_valve
     - valve_wiring
@@ -7736,8 +7736,8 @@
     en: Charge Air Cooler Outlet Temperature Sensor Circuit
     de: Ladeluftkühler-Ausgangstemperatursensor Schaltkreis
   description:
-    en: Generic fault on the charge air cooler outlet temperature sensor in the FCEV cathode supply path.
-    de: Allgemeiner Fehler am Ladeluftkühler-Ausgangstemperatursensor im Kathodenpfad eines FCEV.
+    en: 'Generic fault on the charge air cooler outlet temperature sensor in the FCEV cathode supply path. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am Ladeluftkühler-Ausgangstemperatursensor im Kathodenpfad eines FCEV. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - cac_outlet_temp_sensor
     - sensor_wiring
@@ -8050,8 +8050,8 @@
     en: Cathode Bypass Valve
     de: Kathoden-Bypassventil
   description:
-    en: Generic fault on the cathode bypass valve — combines circuit and mechanical performance.
-    de: Allgemeiner Fehler am Kathoden-Bypassventil — fasst Schaltkreis- und mechanische Leistung zusammen.
+    en: 'Generic fault on the cathode bypass valve — combines circuit and mechanical performance. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am Kathoden-Bypassventil — fasst Schaltkreis- und mechanische Leistung zusammen. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - cathode_bypass_valve
   common_causes:
@@ -8101,8 +8101,8 @@
     en: Cathode Bypass Valve Position Sensor Circuit
     de: Kathoden-Bypassventil Positionssensor Schaltkreis
   description:
-    en: Generic fault on the position sensor of the cathode bypass valve.
-    de: Allgemeiner Fehler am Positionssensor des Kathoden-Bypassventils.
+    en: 'Generic fault on the position sensor of the cathode bypass valve. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am Positionssensor des Kathoden-Bypassventils. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - cathode_bypass_valve_position_sensor
     - sensor_wiring
@@ -8259,8 +8259,8 @@
     en: Anode Inlet Pressure Sensor 1 Circuit
     de: Anoden-Eingangsdrucksensor 1 Schaltkreis
   description:
-    en: Generic fault on the anode inlet pressure sensor 1 (hydrogen pressure into the stack).
-    de: Allgemeiner Fehler am Anoden-Eingangsdrucksensor 1 (Wasserstoffdruck am Stack-Eingang).
+    en: 'Generic fault on the anode inlet pressure sensor 1 (hydrogen pressure into the stack). A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am Anoden-Eingangsdrucksensor 1 (Wasserstoffdruck am Stack-Eingang). Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - anode_inlet_pressure_sensor_1
     - sensor_wiring
@@ -8312,8 +8312,8 @@
     en: Anode Inlet Pressure Sensor 2 Circuit
     de: Anoden-Eingangsdrucksensor 2 Schaltkreis
   description:
-    en: 'Generic fault on the anode inlet pressure sensor 2 (hydrogen pressure into the stack).'
-    de: 'Allgemeiner Fehler am Anoden-Eingangsdrucksensor 2 (Wasserstoffdruck am Stack-Eingang).'
+    en: 'Generic fault on the anode inlet pressure sensor 2 (hydrogen pressure into the stack). A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am Anoden-Eingangsdrucksensor 2 (Wasserstoffdruck am Stack-Eingang). Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - anode_inlet_pressure_sensor_2
     - sensor_wiring
@@ -8417,8 +8417,8 @@
     en: Anode Multifunction Valve
     de: Anoden-Multifunktionsventil
   description:
-    en: Generic fault on the anode multifunction valve — combines circuit and mechanical issues.
-    de: Allgemeiner Fehler am Anoden-Multifunktionsventil — fasst Schaltkreis- und mechanische Probleme zusammen.
+    en: 'Generic fault on the anode multifunction valve — combines circuit and mechanical issues. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am Anoden-Multifunktionsventil — fasst Schaltkreis- und mechanische Probleme zusammen. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - anode_multifunction_valve
   common_causes:
@@ -8520,8 +8520,8 @@
     en: Anode Drain Valve
     de: Anoden-Ablassventil
   description:
-    en: Generic fault on the anode drain valve — combines circuit and mechanical issues.
-    de: Allgemeiner Fehler am Anoden-Ablassventil — fasst Schaltkreis- und mechanische Probleme zusammen.
+    en: 'Generic fault on the anode drain valve — combines circuit and mechanical issues. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am Anoden-Ablassventil — fasst Schaltkreis- und mechanische Probleme zusammen. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - anode_drain_valve
   common_causes:
@@ -8623,8 +8623,8 @@
     en: Anode Header Drain Valve
     de: Anoden-Sammler-Ablassventil
   description:
-    en: Generic fault on the anode header drain valve.
-    de: Allgemeiner Fehler am Anoden-Sammler-Ablassventil.
+    en: 'Generic fault on the anode header drain valve. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am Anoden-Sammler-Ablassventil. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - anode_header_drain_valve
   common_causes:
@@ -8988,8 +8988,8 @@
     en: Coolant Mixing Valve
     de: Kühlmittel-Mischventil
   description:
-    en: Generic fault on the coolant mixing valve — combines circuit and mechanical issues.
-    de: Allgemeiner Fehler am Kühlmittel-Mischventil — fasst Schaltkreis- und mechanische Probleme zusammen.
+    en: 'Generic fault on the coolant mixing valve — combines circuit and mechanical issues. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am Kühlmittel-Mischventil — fasst Schaltkreis- und mechanische Probleme zusammen. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - coolant_mixing_valve
   common_causes:
@@ -9039,8 +9039,8 @@
     en: Coolant Mixing Valve Position Sensor Circuit
     de: Kühlmittel-Mischventil Positionssensor Schaltkreis
   description:
-    en: Generic fault on the position sensor of the coolant mixing valve.
-    de: Allgemeiner Fehler am Positionssensor des Kühlmittel-Mischventils.
+    en: 'Generic fault on the position sensor of the coolant mixing valve. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
+    de: 'Allgemeiner Fehler am Positionssensor des Kühlmittel-Mischventils. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
   affected_components:
     - coolant_mixing_valve_position_sensor
     - sensor_wiring

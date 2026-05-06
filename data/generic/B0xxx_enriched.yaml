@@ -6517,8 +6517,8 @@
     en: Camera Washer Actuator B
     de: Kamera-Reinigungsaktuator B
   description:
-    en: Fault on camera washer actuator B.
-    de: Fehler am Kamera-Reinigungsaktuator B.
+    en: 'Fault on camera washer actuator B. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
+    de: 'Fehler am Kamera-Reinigungsaktuator B. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
   affected_components:
     - camera_washer_actuator_b
     - actuator_wiring
@@ -6556,8 +6556,8 @@
     en: Camera Washer Actuator C
     de: Kamera-Reinigungsaktuator C
   description:
-    en: Fault on camera washer actuator C.
-    de: Fehler am Kamera-Reinigungsaktuator C.
+    en: 'Fault on camera washer actuator C. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
+    de: 'Fehler am Kamera-Reinigungsaktuator C. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
   affected_components:
     - camera_washer_actuator_c
     - actuator_wiring
@@ -6595,8 +6595,8 @@
     en: Camera Washer Actuator D
     de: Kamera-Reinigungsaktuator D
   description:
-    en: Fault on camera washer actuator D.
-    de: Fehler am Kamera-Reinigungsaktuator D.
+    en: 'Fault on camera washer actuator D. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
+    de: 'Fehler am Kamera-Reinigungsaktuator D. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
   affected_components:
     - camera_washer_actuator_d
     - actuator_wiring
@@ -6634,8 +6634,8 @@
     en: Camera Washer Actuator E
     de: Kamera-Reinigungsaktuator E
   description:
-    en: Fault on camera washer actuator E.
-    de: Fehler am Kamera-Reinigungsaktuator E.
+    en: 'Fault on camera washer actuator E. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
+    de: 'Fehler am Kamera-Reinigungsaktuator E. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
   affected_components:
     - camera_washer_actuator_e
     - actuator_wiring
@@ -6673,8 +6673,8 @@
     en: Camera Washer Actuator F
     de: Kamera-Reinigungsaktuator F
   description:
-    en: Fault on camera washer actuator F.
-    de: Fehler am Kamera-Reinigungsaktuator F.
+    en: 'Fault on camera washer actuator F. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
+    de: 'Fehler am Kamera-Reinigungsaktuator F. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
   affected_components:
     - camera_washer_actuator_f
     - actuator_wiring
@@ -6752,8 +6752,8 @@
     en: Camera Washer Actuator H
     de: Kamera-Reinigungsaktuator H
   description:
-    en: Fault on camera washer actuator H.
-    de: Fehler am Kamera-Reinigungsaktuator H.
+    en: 'Fault on camera washer actuator H. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
+    de: 'Fehler am Kamera-Reinigungsaktuator H. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
   affected_components:
     - camera_washer_actuator_h
     - actuator_wiring
@@ -6791,8 +6791,8 @@
     en: Camera Washer Actuator J
     de: Kamera-Reinigungsaktuator J
   description:
-    en: Fault on camera washer actuator J.
-    de: Fehler am Kamera-Reinigungsaktuator J.
+    en: 'Fault on camera washer actuator J. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
+    de: 'Fehler am Kamera-Reinigungsaktuator J. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
   affected_components:
     - camera_washer_actuator_j
     - actuator_wiring
@@ -6830,8 +6830,8 @@
     en: Camera Washer Actuator K
     de: Kamera-Reinigungsaktuator K
   description:
-    en: Fault on camera washer actuator K.
-    de: Fehler am Kamera-Reinigungsaktuator K.
+    en: 'Fault on camera washer actuator K. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
+    de: 'Fehler am Kamera-Reinigungsaktuator K. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
   affected_components:
     - camera_washer_actuator_k
     - actuator_wiring
@@ -6869,8 +6869,8 @@
     en: Camera Washer Actuator L
     de: Kamera-Reinigungsaktuator L
   description:
-    en: Fault on camera washer actuator L.
-    de: Fehler am Kamera-Reinigungsaktuator L.
+    en: 'Fault on camera washer actuator L. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
+    de: 'Fehler am Kamera-Reinigungsaktuator L. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
   affected_components:
     - camera_washer_actuator_l
     - actuator_wiring
@@ -6908,8 +6908,8 @@
     en: Camera Washer Actuator M
     de: Kamera-Reinigungsaktuator M
   description:
-    en: Fault on camera washer actuator M.
-    de: Fehler am Kamera-Reinigungsaktuator M.
+    en: 'Fault on camera washer actuator M. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
+    de: 'Fehler am Kamera-Reinigungsaktuator M. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
   affected_components:
     - camera_washer_actuator_m
     - actuator_wiring
@@ -6947,8 +6947,8 @@
     en: Camera Washer Actuator N
     de: Kamera-Reinigungsaktuator N
   description:
-    en: Fault on camera washer actuator N.
-    de: Fehler am Kamera-Reinigungsaktuator N.
+    en: 'Fault on camera washer actuator N. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
+    de: 'Fehler am Kamera-Reinigungsaktuator N. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
   affected_components:
     - camera_washer_actuator_n
     - actuator_wiring
@@ -6986,8 +6986,8 @@
     en: Camera Washer Actuator O
     de: Kamera-Reinigungsaktuator O
   description:
-    en: Fault on camera washer actuator O.
-    de: Fehler am Kamera-Reinigungsaktuator O.
+    en: 'Fault on camera washer actuator O. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
+    de: 'Fehler am Kamera-Reinigungsaktuator O. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
   affected_components:
     - camera_washer_actuator_o
     - actuator_wiring
@@ -7025,8 +7025,8 @@
     en: Camera Washer Actuator P
     de: Kamera-Reinigungsaktuator P
   description:
-    en: Fault on camera washer actuator P.
-    de: Fehler am Kamera-Reinigungsaktuator P.
+    en: 'Fault on camera washer actuator P. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
+    de: 'Fehler am Kamera-Reinigungsaktuator P. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
   affected_components:
     - camera_washer_actuator_p
     - actuator_wiring
@@ -7064,8 +7064,8 @@
     en: Camera Washer Actuator Q
     de: Kamera-Reinigungsaktuator Q
   description:
-    en: Fault on camera washer actuator Q.
-    de: Fehler am Kamera-Reinigungsaktuator Q.
+    en: 'Fault on camera washer actuator Q. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
+    de: 'Fehler am Kamera-Reinigungsaktuator Q. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
   affected_components:
     - camera_washer_actuator_q
     - actuator_wiring
@@ -7103,8 +7103,8 @@
     en: Camera Washer Actuator R
     de: Kamera-Reinigungsaktuator R
   description:
-    en: Fault on camera washer actuator R.
-    de: Fehler am Kamera-Reinigungsaktuator R.
+    en: 'Fault on camera washer actuator R. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
+    de: 'Fehler am Kamera-Reinigungsaktuator R. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
   affected_components:
     - camera_washer_actuator_r
     - actuator_wiring
@@ -7142,8 +7142,8 @@
     en: Camera Washer Actuator S
     de: Kamera-Reinigungsaktuator S
   description:
-    en: Fault on camera washer actuator S.
-    de: Fehler am Kamera-Reinigungsaktuator S.
+    en: 'Fault on camera washer actuator S. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
+    de: 'Fehler am Kamera-Reinigungsaktuator S. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
   affected_components:
     - camera_washer_actuator_s
     - actuator_wiring
