@@ -32638,7 +32638,7 @@
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [0, 200]
+    estimated_cost_eur: [20, 200]
     estimated_hours: [0.1, 1.0]
   flags:
     mil: true
