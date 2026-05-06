@@ -30,6 +30,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0003]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Traction_control_system
@@ -65,6 +66,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0004]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Traction_control_system
@@ -100,6 +102,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0001]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Traction_control_system
@@ -135,6 +138,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0002]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Traction_control_system
@@ -3571,6 +3575,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0097]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -3606,6 +3611,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0098]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -3641,6 +3647,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0095]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -3676,6 +3683,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0096]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -3747,6 +3755,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C009B, C009D, C009E, C009F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -3782,6 +3791,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C009A, C009D, C009E, C009F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -3819,6 +3829,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C00A0]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -3854,6 +3865,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C009E, C009B, C009F, C009A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -3889,6 +3901,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C009D, C009F, C009B, C009A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -3924,6 +3937,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C009E, C009D, C009B, C009A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -3961,6 +3975,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C009C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -4068,6 +4083,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C00A4]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -4104,6 +4120,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C00A3]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -4210,6 +4227,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C00A8]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Transfer_case
@@ -4245,6 +4263,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C00A7]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Transfer_case
@@ -4534,6 +4553,7 @@
     mil: false
   references:
     - sae:J2012
+  related_codes: [C0205]
   sources:
     - https://en.wikipedia.org/wiki/Brake_light_switch
 - code: C0141
@@ -5007,6 +5027,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [C0499]
   sources:
     - https://en.wikipedia.org/wiki/Electronic_stability_control
 - code: C0186
@@ -5051,6 +5072,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [C0498]
   sources:
     - https://en.wikipedia.org/wiki/Electronic_stability_control
 - code: C0196
@@ -5095,6 +5117,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [C0496]
   sources:
     - https://en.wikipedia.org/wiki/Electronic_stability_control
 - code: C0200
@@ -5303,6 +5326,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [C0136]
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
 - code: C0206
@@ -7656,6 +7680,7 @@
     mil: false
   references:
     - sae:J2012
+  related_codes: [C0455]
   sources:
     - https://en.wikipedia.org/wiki/Steering_angle_sensor
 - code: C0445
@@ -7768,6 +7793,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [C0440]
   sources:
     - https://en.wikipedia.org/wiki/Power_steering
     - https://en.wikipedia.org/wiki/Electronic_stability_control
@@ -7845,6 +7871,7 @@
     mil: false
   references:
     - sae:J2012
+  related_codes: [C0196]
   sources:
     - https://en.wikipedia.org/wiki/Electronic_stability_control
 - code: C0497
@@ -7921,6 +7948,7 @@
     mil: false
   references:
     - sae:J2012
+  related_codes: [C0186]
   sources:
     - https://en.wikipedia.org/wiki/Electronic_stability_control
 - code: C0499
@@ -7958,6 +7986,7 @@
     mil: false
   references:
     - sae:J2012
+  related_codes: [C0185]
   sources:
     - https://en.wikipedia.org/wiki/Electronic_stability_control
 - code: C0500
@@ -8070,6 +8099,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0653]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -8106,6 +8136,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0654]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -8142,6 +8173,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0655]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -8215,6 +8247,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0658]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -8250,6 +8283,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0659]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -8286,6 +8320,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C065A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -8322,6 +8357,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C065B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -8358,6 +8394,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C065C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -8393,6 +8430,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C065D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -8429,6 +8467,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C065F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -8500,6 +8539,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0661]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -8536,6 +8576,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0662]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -8610,6 +8651,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0664]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -8646,6 +8688,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0666]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -8681,6 +8724,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0667]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -8717,6 +8761,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0668]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -8753,6 +8798,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0669]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -8789,6 +8835,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C066A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -8824,6 +8871,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C066B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -9003,6 +9051,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0521]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Electronic_stability_control
@@ -9038,6 +9087,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0522]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Electronic_stability_control
@@ -9073,6 +9123,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0523]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Electronic_stability_control
@@ -9108,6 +9159,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0524]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Electronic_stability_control
@@ -9180,6 +9232,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C051C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Electronic_stability_control
@@ -9215,6 +9268,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C051D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Electronic_stability_control
@@ -9250,6 +9304,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C051E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Electronic_stability_control
@@ -9285,6 +9340,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C051F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Electronic_stability_control
@@ -9709,6 +9765,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0535]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -9745,6 +9802,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0536]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -9781,6 +9839,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0537]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -9817,6 +9876,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0538]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -9853,6 +9913,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0539]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -9888,6 +9949,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0530]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -9924,6 +9986,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0531]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -9960,6 +10023,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0532]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -9996,6 +10060,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0533]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -10032,6 +10097,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0534]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -10173,6 +10239,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0541, C05A2, C0638, C063C, C0640, C0644, C0648, C064C, C0650]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -10209,6 +10276,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0542, C059F, C05C6, C0637, C063B, C063F, C0643, C0647, C064B, C064F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -10245,6 +10313,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0543, C0572, C0576, C05A0, C05C7, C0636, C063A, C063E, C0642, C0646, C064A, C064E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -10318,6 +10387,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C053D, C05A2, C0638, C063C, C0640, C0644, C0648, C064C, C0650]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -10354,6 +10424,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C053E, C059F, C05C6, C0637, C063B, C063F, C0643, C0647, C064B, C064F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -10390,6 +10461,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C053F, C0572, C0576, C05A0, C05C7, C0636, C063A, C063E, C0642, C0646, C064A, C064E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -10426,6 +10498,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05A1, C05C8, C0635, C0639, C063D, C0641, C0645, C0649, C064D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -10604,6 +10677,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C054D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -10639,6 +10713,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C054E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -10675,6 +10750,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C054F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -10747,6 +10823,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0549]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -10782,6 +10859,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C054A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -10818,6 +10896,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C054B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -11114,6 +11193,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0665]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -11149,6 +11229,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C066C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -11324,6 +11405,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C055E, C05B0, C05B1]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -11359,6 +11441,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C055D, C05B0, C05B1]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -11830,6 +11913,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C056C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -11865,6 +11949,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C056B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -12087,6 +12172,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0576, C05A0, C0543, C053F, C05C7, C0636, C063A, C063E, C0642, C0646, C064A, C064E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -12161,6 +12247,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05C5]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -12236,6 +12323,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0572, C05A0, C0543, C053F, C05C7, C0636, C063A, C063E, C0642, C0646, C064A, C064E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -12349,6 +12437,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C05B3, P25C6]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -12384,6 +12473,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C05B4, P25C7]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -12419,6 +12509,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C05B5]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -12454,6 +12545,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C05B6, P25C5]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -12596,6 +12688,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0584]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -12676,6 +12769,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0586]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -12757,6 +12851,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0580]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -12828,6 +12923,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0582]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -12863,6 +12959,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C058B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -12898,6 +12995,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C058C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -12933,6 +13031,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C058D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -12968,6 +13067,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C058E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -13003,6 +13103,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0587]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -13038,6 +13139,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0588]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -13073,6 +13175,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0589]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -13108,6 +13211,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C058A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -13178,6 +13282,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0592]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -13213,6 +13318,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0593]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -13248,6 +13354,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0590]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -13283,6 +13390,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0591]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -13397,6 +13505,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05AF]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -13432,6 +13541,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0598]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -13467,6 +13577,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0597]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -13572,6 +13683,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C059C, C059D, C059E, C05C4]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -13607,6 +13719,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C059B, C059D, C059E, C05C4]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -13642,6 +13755,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C059C, C059E, C059B, C05C4]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -13677,6 +13791,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C059D, C059C, C059B, C05C4]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -13713,6 +13828,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05C6, C0542, C053E, C0637, C063B, C063F, C0643, C0647, C064B, C064F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -13749,6 +13865,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05C7, C0576, C0572, C0543, C053F, C0636, C063A, C063E, C0642, C0646, C064A, C064E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -13785,6 +13902,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05C8, C0544, C0635, C0639, C063D, C0641, C0645, C0649, C064D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -13820,6 +13938,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0541, C053D, C0638, C063C, C0640, C0644, C0648, C064C, C0650]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -14277,6 +14396,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0596]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -14312,6 +14432,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05B1, C055E, C055D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -14347,6 +14468,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05B0, C055E, C055D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -14418,6 +14540,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C0579, P25C6]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -14453,6 +14576,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C057A, P25C7]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -14488,6 +14612,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C057B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -14523,6 +14648,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C057C, P25C5]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -14558,6 +14684,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P25C8]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -14593,6 +14720,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05BC]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -14628,6 +14756,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05BD]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -14663,6 +14792,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05BE]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -14698,6 +14828,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05BF]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -14733,6 +14864,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05B8]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -14768,6 +14900,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05B9]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -14803,6 +14936,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05BA]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -14838,6 +14972,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05BB]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -14873,6 +15008,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C05C1]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -14908,6 +15044,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C05C0]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -15014,6 +15151,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C059E, C059D, C059C, C059B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -15049,6 +15187,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0574]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -15085,6 +15224,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C059F, C0637, C063B, C063F, C0643, C0647, C0542, C064B, C053E, C064F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -15121,6 +15261,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05A0, C0576, C0572, C0636, C063A, C063E, C0642, C0646, C064A, C0543, C064E, C053F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -15157,6 +15298,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05A1, C0635, C0639, C063D, C0641, C0645, C0649, C0544, C064D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -15227,6 +15369,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05CD]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Master_cylinder
@@ -15262,6 +15405,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05CE]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Master_cylinder
@@ -15297,6 +15441,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05CF]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Master_cylinder
@@ -15332,6 +15477,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05CA]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Master_cylinder
@@ -15367,6 +15513,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05CB]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Master_cylinder
@@ -15402,6 +15549,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05CC]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Master_cylinder
@@ -15719,6 +15867,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05E7]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -15754,6 +15903,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05E8]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -15789,6 +15939,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05E9]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -15824,6 +15975,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05EA]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -15859,6 +16011,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05EB]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -15894,6 +16047,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05EC]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -15929,6 +16083,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05ED]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -15964,6 +16119,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05EE]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -16209,6 +16365,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05EF]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -16244,6 +16401,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05D8]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -16279,6 +16437,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05D9]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -16314,6 +16473,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05DA]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -16349,6 +16509,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05DB]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -16384,6 +16545,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05DC]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -16419,6 +16581,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05DD]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -16454,6 +16617,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05DE]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -16489,6 +16653,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05DF]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -16524,6 +16689,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C05E6]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Four-wheel_drive
@@ -17434,6 +17600,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C0660]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Parking_brake
@@ -17998,6 +18165,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C061A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -18033,6 +18201,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C0619]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -18992,6 +19161,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0639, C063D, C0641, C0645, C0649, C064D, C05C8, C05A1, C0544]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19027,6 +19197,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C063A, C063E, C0642, C0646, C064A, C064E, C05C7, C05A0, C0576, C0572, C0543, C053F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19062,6 +19233,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C063B, C063F, C0643, C0647, C064B, C064F, C05C6, C059F, C0542, C053E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19097,6 +19269,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C063C, C0640, C0644, C0648, C064C, C0650, C05A2, C0541, C053D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19132,6 +19305,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0635, C063D, C0641, C0645, C0649, C064D, C05C8, C05A1, C0544]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19167,6 +19341,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0636, C063E, C0642, C0646, C064A, C064E, C05C7, C05A0, C0576, C0572, C0543, C053F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19202,6 +19377,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0637, C063F, C0643, C0647, C064B, C064F, C05C6, C059F, C0542, C053E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19237,6 +19413,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0638, C0640, C0644, C0648, C064C, C0650, C05A2, C0541, C053D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19272,6 +19449,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0639, C0641, C0635, C0645, C0649, C064D, C05C8, C05A1, C0544]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19307,6 +19485,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C063A, C0642, C0636, C0646, C064A, C064E, C05C7, C05A0, C0576, C0572, C0543, C053F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19342,6 +19521,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C063B, C0643, C0637, C0647, C064B, C064F, C05C6, C059F, C0542, C053E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19377,6 +19557,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C063C, C0644, C0638, C0648, C064C, C0650, C05A2, C0541, C053D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19412,6 +19593,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C063D, C0645, C0639, C0649, C0635, C064D, C05C8, C05A1, C0544]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19447,6 +19629,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C063E, C0646, C063A, C064A, C0636, C064E, C05C7, C05A0, C0576, C0572, C0543, C053F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19482,6 +19665,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C063F, C0647, C063B, C064B, C0637, C064F, C05C6, C059F, C0542, C053E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19517,6 +19701,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0640, C0648, C063C, C064C, C0638, C0650, C05A2, C0541, C053D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19552,6 +19737,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0641, C0649, C063D, C064D, C0639, C0635, C05C8, C05A1, C0544]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19587,6 +19773,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0642, C064A, C063E, C064E, C063A, C0636, C05C7, C05A0, C0576, C0572, C0543, C053F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19622,6 +19809,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0643, C064B, C063F, C064F, C063B, C0637, C05C6, C059F, C0542, C053E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19657,6 +19845,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0644, C064C, C0640, C0650, C063C, C0638, C05A2, C0541, C053D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19692,6 +19881,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0645, C064D, C0641, C063D, C0639, C0635, C05C8, C05A1, C0544]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19727,6 +19917,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0646, C064E, C0642, C063E, C063A, C0636, C05C7, C05A0, C0576, C0572, C0543, C053F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19762,6 +19953,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0647, C064F, C0643, C063F, C063B, C0637, C05C6, C059F, C0542, C053E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19797,6 +19989,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0648, C0650, C0644, C0640, C063C, C0638, C05A2, C0541, C053D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19832,6 +20025,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0649, C0645, C0641, C063D, C0639, C0635, C05C8, C05A1, C0544]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19867,6 +20061,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C064A, C0646, C0642, C063E, C063A, C0636, C05C7, C05A0, C0576, C0572, C0543, C053F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19902,6 +20097,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C064B, C0647, C0643, C063F, C063B, C0637, C05C6, C059F, C0542, C053E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -19937,6 +20133,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C064C, C0648, C0644, C0640, C063C, C0638, C05A2, C0541, C053D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
@@ -20042,6 +20239,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0502]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -20077,6 +20275,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0503]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -20112,6 +20311,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0504]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -20218,6 +20418,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0506]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -20253,6 +20454,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0507]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -20288,6 +20490,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0508]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -20323,6 +20526,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0509]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -20358,6 +20562,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C050A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -20394,6 +20599,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C050B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -20464,6 +20670,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C050C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -20502,6 +20709,7 @@
     mil: false
   references:
     - sae:J2012
+  related_codes: [C0609]
   sources:
     - https://en.wikipedia.org/wiki/Electronic_parking_brake
 - code: C0661
@@ -20536,6 +20744,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C050E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -20571,6 +20780,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C050F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -20642,6 +20852,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0511]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -20677,6 +20888,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0557]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -20712,6 +20924,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0512]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -20747,6 +20960,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0513]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -20782,6 +20996,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0514]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -20817,6 +21032,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0515]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -20852,6 +21068,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0516]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -20888,6 +21105,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0517]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -20923,6 +21141,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0558]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Speed_sensor
@@ -21308,6 +21527,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [P0551]
   sources:
     - https://en.wikipedia.org/wiki/Power_steering
 - code: C0720
@@ -22383,6 +22603,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [C0902]
   sources:
     - https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system
 - code: C0901
@@ -22421,6 +22642,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [C0903]
   sources:
     - https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system
 - code: C0902
@@ -22459,6 +22681,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [C0900]
   sources:
     - https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system
 - code: C0903
@@ -22497,6 +22720,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [C0901]
   sources:
     - https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system
 - code: C0905
@@ -22535,6 +22759,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [C0907]
   sources:
     - https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system
 - code: C0907
@@ -22573,6 +22798,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [C0905]
   sources:
     - https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system
 - code: C0910

@@ -370,6 +370,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [B0012]
   sources:
     - https://en.wikipedia.org/wiki/Airbag
 
@@ -411,6 +412,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [B0011]
   sources:
     - https://en.wikipedia.org/wiki/Airbag
 
@@ -2532,6 +2534,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B007E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Seat_belt#Pretensioner
@@ -2565,6 +2568,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B007F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Seat_belt#Pretensioner
@@ -2598,6 +2602,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00E3]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Seat_belt#Pretensioner
@@ -2631,6 +2636,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00E4]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Seat_belt#Pretensioner
@@ -2664,6 +2670,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00E5]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Seat_belt#Pretensioner
@@ -2697,6 +2704,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0079]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Seat_belt#Pretensioner
@@ -2730,6 +2738,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B007A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Seat_belt#Pretensioner
@@ -3436,6 +3445,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B009B, B009C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -3469,6 +3479,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B009A, B009C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -3502,6 +3513,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B009B, B009A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -3535,6 +3547,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B009E, B009F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -3568,6 +3581,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B009D, B009F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -3601,6 +3615,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B009E, B009D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -3700,6 +3715,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00B1, B00B2, B00B3, B00B4]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -3733,6 +3749,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00B0, B00B2, B00B3, B00B4]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -3766,6 +3783,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00B1, B00B3, B00B0, B00B4]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -3799,6 +3817,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00B2, B00B4, B00B1, B00B0]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -3832,6 +3851,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00B3, B00B2, B00B1, B00B0]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -3931,6 +3951,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00B8, B00B9, B00BA, B00BB]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -3964,6 +3985,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00B7, B00B9, B00BA, B00BB]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -3997,6 +4019,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00B8, B00BA, B00B7, B00BB]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -4030,6 +4053,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00B9, B00BB, B00B8, B00B7]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -4063,6 +4087,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00BA, B00B9, B00B8, B00B7]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -4096,6 +4121,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00C1, B00C2, B00C3, B00C4]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -4129,6 +4155,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00C0, B00C2, B00C3, B00C4]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -4162,6 +4189,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00C1, B00C3, B00C0, B00C4]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -4195,6 +4223,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00C2, B00C4, B00C1, B00C0]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -4228,6 +4257,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00C3, B00C2, B00C1, B00C0]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -4327,6 +4357,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00C8, B00C9, B00CA, B00CB]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -4360,6 +4391,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00C7, B00C9, B00CA, B00CB]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -4393,6 +4425,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00C8, B00CA, B00C7, B00CB]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -4426,6 +4459,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00C9, B00CB, B00C8, B00C7]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -4459,6 +4493,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00CA, B00C9, B00C8, B00C7]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -4721,6 +4756,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00E7]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Seat_belt#Pretensioner
@@ -4754,6 +4790,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00E6]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Seat_belt#Pretensioner
@@ -4787,6 +4824,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00E8]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Seat_belt#Pretensioner
@@ -4820,6 +4858,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B007B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Seat_belt#Pretensioner
@@ -4853,6 +4892,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B007C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Seat_belt#Pretensioner
@@ -4886,6 +4926,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B007D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Seat_belt#Pretensioner
@@ -4919,6 +4960,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00E1]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Seat_belt#Pretensioner
@@ -4952,6 +4994,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00E0]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Seat_belt#Pretensioner
@@ -4985,6 +5028,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B00E2]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Seat_belt#Pretensioner
@@ -5622,6 +5666,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B010B, B010C, B010D, B010E, B010F, B0111, B0112, B0113, B0114, B0115, B0116, B0117]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -5655,6 +5700,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B010A, B010C, B010D, B010E, B010F, B0111, B0112, B0113, B0114, B0115, B0116, B0117]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -5688,6 +5734,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B010B, B010D, B010A, B010E, B010F, B0111, B0112, B0113, B0114, B0115, B0116, B0117]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -5721,6 +5768,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B010C, B010E, B010B, B010F, B010A, B0111, B0112, B0113, B0114, B0115, B0116, B0117]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -5754,6 +5802,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B010D, B010F, B010C, B010B, B0111, B010A, B0112, B0113, B0114, B0115, B0116, B0117]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -5787,6 +5836,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B010E, B010D, B0111, B010C, B0112, B010B, B0113, B010A, B0114, B0115, B0116, B0117]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -5855,6 +5905,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0112, B010F, B0113, B010E, B0114, B010D, B0115, B010C, B0116, B010B, B0117, B010A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -5888,6 +5939,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0111, B0113, B0114, B010F, B0115, B010E, B0116, B010D, B0117, B010C, B0118, B010B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -5921,6 +5973,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0112, B0114, B0111, B0115, B0116, B010F, B0117, B010E, B0118, B010D, B0119, B010C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -5954,6 +6007,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0113, B0115, B0112, B0116, B0111, B0117, B0118, B010F, B0119, B010E, B011A, B010D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -5987,6 +6041,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0114, B0116, B0113, B0117, B0112, B0118, B0111, B0119, B011A, B010F, B011B, B010E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -6020,6 +6075,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0115, B0117, B0114, B0118, B0113, B0119, B0112, B011A, B0111, B011B, B010F, B010E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -6053,6 +6109,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0116, B0118, B0115, B0119, B0114, B011A, B0113, B011B, B0112, B0111, B010F, B010E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -6086,6 +6143,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0117, B0119, B0116, B011A, B0115, B011B, B0114, B0113, B0112, B0111, B010F, B010E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -6119,6 +6177,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0118, B011A, B0117, B011B, B0116, B0115, B0114, B0113, B0112, B0111, B010F, B010E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -6152,6 +6211,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0119, B011B, B0118, B0117, B0116, B0115, B0114, B0113, B0112, B0111, B010F, B010E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -6185,6 +6245,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B011A, B0119, B0118, B0117, B0116, B0115, B0114, B0113, B0112, B0111, B010F, B010E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -6218,6 +6279,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B011D, B011E, B011F, B0121]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -6251,6 +6313,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B011C, B011E, B011F, B0121]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -6284,6 +6347,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B011D, B011F, B011C, B0121]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -6317,6 +6381,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B011E, B011D, B0121, B011C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -6385,6 +6450,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B011F, B011E, B011D, B011C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -6418,6 +6484,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0123]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Acoustic_vehicle_alerting_system
@@ -6451,6 +6518,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0122]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Acoustic_vehicle_alerting_system
@@ -6587,6 +6655,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0129, B012A, B012B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle-to-grid
@@ -6661,6 +6730,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B012A, B0127, B012B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle-to-grid
@@ -6694,6 +6764,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0129, B012B, B0127]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle-to-grid
@@ -6727,6 +6798,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B012A, B0129, B0127]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle-to-grid
@@ -6759,6 +6831,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B012D, B012E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle-to-grid
@@ -6791,6 +6864,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B012C, B012E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle-to-grid
@@ -6823,6 +6897,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B012D, B012C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle-to-grid
@@ -6856,6 +6931,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0131, B0132, B0133, B0134]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -6924,6 +7000,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0132, B012F, B0133, B0134]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -6957,6 +7034,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0131, B0133, B0134, B012F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -6990,6 +7068,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0132, B0134, B0131, B012F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -7023,6 +7102,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0133, B0132, B0131, B012F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -8255,6 +8335,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [B0860]
   sources:
     - https://en.wikipedia.org/wiki/Headlamp
 
@@ -8290,6 +8371,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [B0800]
   sources:
     - https://en.wikipedia.org/wiki/On-board_diagnostics
 
@@ -8547,6 +8629,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [B0970]
   sources:
     - https://en.wikipedia.org/wiki/Headlamp
 
@@ -10541,6 +10624,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [B0240]
   sources:
     - https://en.wikipedia.org/wiki/Headlamp
 
@@ -10886,6 +10970,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [B0239]
   sources:
     - https://en.wikipedia.org/wiki/Automotive_lighting
 
@@ -11104,6 +11189,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [B0260]
   sources:
     - https://en.wikipedia.org/wiki/Automotive_lighting
 

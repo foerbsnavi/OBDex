@@ -942,6 +942,7 @@
   references:
     - sae:J2012
     - iso:11898
+  related_codes: [U0029, U0037, U0046, U0055, U0064, U0089, U009B, U009D]
   sources:
     - https://en.wikipedia.org/wiki/CAN_bus
 
@@ -972,6 +973,7 @@
   references:
     - sae:J2012
     - iso:11898
+  related_codes: [U0028, U0037, U0046, U0055, U0064, U0089, U009B, U009D]
   sources:
     - https://en.wikipedia.org/wiki/CAN_bus
 
@@ -1037,6 +1039,7 @@
   references:
     - sae:J2012
     - iso:11898
+  related_codes: [U0039, U0042, U0048, U0050, U0057, U0060, U0066, U0078, U008B, U0094]
   sources:
     - https://en.wikipedia.org/wiki/CAN_bus
 
@@ -1074,6 +1077,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0041, U0059, U0068, U0080, U008D, U0096]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1107,6 +1111,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0051, U0069, U008E, U0097]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1140,6 +1145,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0043, U0052, U0061, U008F, U0098]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1173,6 +1179,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0044, U0053, U0062, U0090, U0099]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1205,6 +1212,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0045, U0054, U0063, U009A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1238,6 +1246,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0029, U0028, U0046, U0055, U0064, U0089, U009B, U009D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1270,6 +1279,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0047, U0056, U0065, U0081, U008A, U0093, U009C, U009E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1302,6 +1312,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0031, U0042, U0048, U0050, U0057, U0060, U0066, U0078, U008B, U0094]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1372,6 +1383,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0032, U0059, U0068, U0080, U008D, U0096]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1403,6 +1415,7 @@
   references:
     - sae:J2012
     - iso:11898
+  related_codes: [U0048, U0039, U0050, U0031, U0057, U0060, U0066, U0078, U008B, U0094]
   sources:
     - https://en.wikipedia.org/wiki/CAN_bus
 
@@ -1434,6 +1447,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0034, U0052, U0061, U008F, U0098]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1466,6 +1480,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0035, U0053, U0062, U0090, U0099]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1498,6 +1513,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0036, U0054, U0063, U009A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1531,6 +1547,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0037, U0055, U0029, U0028, U0064, U0089, U009B, U009D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1563,6 +1580,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0038, U0056, U0065, U0081, U008A, U0093, U009C, U009E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1595,6 +1613,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0042, U0050, U0039, U0057, U0031, U0060, U0066, U0078, U008B, U0094]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1627,6 +1646,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0058, U0067, U0079, U008C, U0095]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1657,6 +1677,7 @@
   references:
     - sae:J2012
     - iso:11898
+  related_codes: [U0057, U0048, U0042, U0060, U0066, U0039, U0031, U0078, U008B, U0094]
   sources:
     - https://en.wikipedia.org/wiki/CAN_bus
 
@@ -1688,6 +1709,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0069, U0033, U008E, U0097]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1720,6 +1742,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0043, U0061, U0034, U008F, U0098]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1752,6 +1775,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0044, U0062, U0035, U0090, U0099]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1784,6 +1808,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0045, U0063, U0036, U009A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1817,6 +1842,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0046, U0064, U0037, U0029, U0028, U0089, U009B, U009D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1849,6 +1875,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0047, U0065, U0038, U0081, U008A, U0093, U009C, U009E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1881,6 +1908,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0050, U0060, U0048, U0066, U0042, U0039, U0078, U0031, U008B, U0094]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1913,6 +1941,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0049, U0067, U0079, U008C, U0095]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1945,6 +1974,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0068, U0041, U0032, U0080, U008D, U0096]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -1975,6 +2005,7 @@
   references:
     - sae:J2012
     - iso:11898
+  related_codes: [U0066, U0057, U0050, U0048, U0078, U0042, U0039, U008B, U0031, U0094]
   sources:
     - https://en.wikipedia.org/wiki/CAN_bus
 
@@ -2006,6 +2037,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0052, U0043, U0034, U008F, U0098]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -2038,6 +2070,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0053, U0044, U0035, U0090, U0099]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -2070,6 +2103,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0054, U0045, U0036, U009A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -2103,6 +2137,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0055, U0046, U0089, U0037, U009B, U009D, U0029, U0028]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -2135,6 +2170,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0056, U0081, U0047, U008A, U0038, U0093, U009C, U009E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -2167,6 +2203,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0060, U0057, U0078, U0050, U0048, U0042, U008B, U0039, U0094, U0031]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -2199,6 +2236,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0058, U0079, U0049, U008C, U0095]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -2231,6 +2269,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0059, U0080, U008D, U0041, U0096, U0032]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -2263,6 +2302,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0051, U008E, U0097, U0033]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -2409,6 +2449,7 @@
   references:
     - sae:J2012
     - iso:11898
+  related_codes: [U0074, U0076]
   sources:
     - https://en.wikipedia.org/wiki/CAN_bus
 
@@ -2447,6 +2488,7 @@
   references:
     - sae:J2012
     - iso:11898
+  related_codes: [U0073, U0076]
   sources:
     - https://en.wikipedia.org/wiki/CAN_bus
 
@@ -2520,6 +2562,7 @@
   references:
     - sae:J2012
     - iso:11898
+  related_codes: [U0074, U0073]
   sources:
     - https://en.wikipedia.org/wiki/CAN_bus
 
@@ -2579,6 +2622,7 @@
   references:
     - sae:J2012
     - iso:11898
+  related_codes: [U0066, U008B, U0060, U0094, U0057, U0050, U0048, U0042, U0039, U0031]
   sources:
     - https://en.wikipedia.org/wiki/CAN_bus
 
@@ -2608,6 +2652,7 @@
   references:
     - sae:J2012
     - iso:11898
+  related_codes: [U0067, U008C, U0095, U0058, U0049]
   sources:
     - https://en.wikipedia.org/wiki/CAN_bus
 
@@ -2640,6 +2685,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U007B, U007C, U007D, U007E, U007F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -2673,6 +2719,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U007A, U007C, U007D, U007E, U007F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -2706,6 +2753,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U007B, U007D, U007A, U007E, U007F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -2739,6 +2787,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U007C, U007E, U007B, U007F, U007A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -2772,6 +2821,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U007D, U007F, U007C, U007B, U007A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -2805,6 +2855,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U007E, U007D, U007C, U007B, U007A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -2835,6 +2886,7 @@
   references:
     - sae:J2012
     - iso:11898
+  related_codes: [U008D, U0096, U0068, U0059, U0041, U0032]
   sources:
     - https://en.wikipedia.org/wiki/CAN_bus
 
@@ -2866,6 +2918,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U008A, U0093, U009C, U0065, U009E, U0056, U0047, U0038]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -3123,6 +3176,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U009B, U009D, U0064, U0055, U0046, U0037, U0029, U0028]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -3155,6 +3209,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0081, U0093, U009C, U009E, U0065, U0056, U0047, U0038]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -3187,6 +3242,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0094, U0078, U0066, U0060, U0057, U0050, U0048, U0042, U0039, U0031]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -3219,6 +3275,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0095, U0079, U0067, U0058, U0049]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -3251,6 +3308,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0096, U0080, U0068, U0059, U0041, U0032]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -3283,6 +3341,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0097, U0069, U0051, U0033]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -3315,6 +3374,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0098, U0061, U0052, U0043, U0034]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -3347,6 +3407,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0099, U0062, U0053, U0044, U0035]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -3450,6 +3511,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U008A, U009C, U009E, U0081, U0065, U0056, U0047, U0038]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -3482,6 +3544,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U008B, U0078, U0066, U0060, U0057, U0050, U0048, U0042, U0039, U0031]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -3514,6 +3577,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U008C, U0079, U0067, U0058, U0049]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -3546,6 +3610,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U008D, U0080, U0068, U0059, U0041, U0032]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -3578,6 +3643,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U008E, U0069, U0051, U0033]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -3610,6 +3676,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U008F, U0061, U0052, U0043, U0034]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -3642,6 +3709,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0090, U0062, U0053, U0044, U0035]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -3674,6 +3742,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0063, U0054, U0045, U0036]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -3707,6 +3776,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U009D, U0089, U0064, U0055, U0046, U0037, U0029, U0028]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -3739,6 +3809,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U009E, U0093, U008A, U0081, U0065, U0056, U0047, U0038]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -3772,6 +3843,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U009B, U0089, U0064, U0055, U0046, U0037, U0029, U0028]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -3804,6 +3876,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U009C, U0093, U008A, U0081, U0065, U0056, U0047, U0038]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -3846,6 +3919,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0115]
   sources:
     - https://en.wikipedia.org/wiki/CAN_bus
 
@@ -4203,6 +4277,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U010B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Exhaust_gas_recirculation
@@ -4236,6 +4311,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U010A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Exhaust_gas_recirculation
@@ -4269,6 +4345,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U010D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Turbocharger
@@ -4302,6 +4379,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U010C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Turbocharger
@@ -4584,6 +4662,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0100]
   sources:
     - https://en.wikipedia.org/wiki/Engine_control_unit
 
@@ -4655,6 +4734,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0292, U029B, U029C]
   sources:
     - https://en.wikipedia.org/wiki/CAN_bus
 
@@ -4725,6 +4805,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [U0212]
   sources:
     - https://en.wikipedia.org/wiki/Power_steering
 
@@ -4757,6 +4838,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U016D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -4790,6 +4872,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U011C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Variable_valve_timing
@@ -4823,6 +4906,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U011B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Variable_valve_timing
@@ -5069,6 +5153,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [U0133]
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
 
@@ -5174,6 +5259,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [U0236]
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
 
@@ -5312,6 +5398,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U012B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Electronic_stability_control
@@ -5345,6 +5432,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U012A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Electronic_stability_control
@@ -5411,6 +5499,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U012F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -5477,6 +5566,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U012D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -5548,6 +5638,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [U0295]
   sources:
     - https://en.wikipedia.org/wiki/CAN_bus
 
@@ -5619,6 +5710,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0123]
   sources:
     - https://en.wikipedia.org/wiki/Electronic_stability_control
 
@@ -5876,6 +5968,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U013E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -5909,6 +6002,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U013D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -6012,6 +6106,7 @@
     mil: true
   references:
     - sae:J2012
+  related_codes: [U0142, U0143]
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
 
@@ -6047,6 +6142,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [U0141, U0143]
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
 
@@ -6076,6 +6172,7 @@
     mil: true
   references:
     - sae:J2012
+  related_codes: [U0142, U0141]
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
 
@@ -6176,6 +6273,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0147]
   sources:
     - https://en.wikipedia.org/wiki/CAN_bus
 
@@ -6212,6 +6310,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0146]
   sources:
     - https://en.wikipedia.org/wiki/CAN_bus
 
@@ -6314,6 +6413,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U014C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -6380,6 +6480,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U014A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -6895,6 +6996,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U015D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -6928,6 +7030,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U015C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -6961,6 +7064,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U015F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -6994,6 +7098,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U015E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -7240,6 +7345,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [U0189]
   sources:
     - https://en.wikipedia.org/wiki/Air_conditioning
 
@@ -7476,6 +7582,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U011A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -7547,6 +7654,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [U0172]
   sources:
     - https://en.wikipedia.org/wiki/CAN_bus
 
@@ -7582,6 +7690,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [U0171]
   sources:
     - https://en.wikipedia.org/wiki/CAN_bus
 
@@ -7651,6 +7760,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0175, U0176, U0178, U017A, U017B, U017C, U017D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -7684,6 +7794,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0174, U0176, U0178, U017A, U017B, U017C, U017D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -7717,6 +7828,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0175, U0174, U0178, U017A, U017B, U017C, U017D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -7785,6 +7897,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0176, U017A, U0175, U017B, U0174, U017C, U017D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -7853,6 +7966,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U017B, U0178, U017C, U017D, U0176, U0175, U0174]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -7886,6 +8000,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U017A, U017C, U017D, U0178, U0176, U0175, U0174]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -7919,6 +8034,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U017B, U017D, U017A, U0178, U0176, U0175, U0174]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -7952,6 +8068,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U017C, U017B, U017A, U0178, U0176, U0175, U0174]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -7985,6 +8102,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U017F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -8018,6 +8136,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U017E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -8350,6 +8469,7 @@
     mil: false
   references:
     - sae:J2012
+  related_codes: [U0166]
   sources:
     - https://en.wikipedia.org/wiki/Auxiliary_heater
 
@@ -8779,6 +8899,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U01BB, U027A, U027B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -8944,6 +9065,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U01A1, U01A2, U01A3, U01A4, U01A5, U01A6, U01A7, U01A8, U01A9, U01AA, U01AB, U01AC]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -8977,6 +9099,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U01A0, U01A2, U01A3, U01A4, U01A5, U01A6, U01A7, U01A8, U01A9, U01AA, U01AB, U01AC]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -9010,6 +9133,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U01A1, U01A3, U01A0, U01A4, U01A5, U01A6, U01A7, U01A8, U01A9, U01AA, U01AB, U01AC]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -9043,6 +9167,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U01A2, U01A4, U01A1, U01A5, U01A0, U01A6, U01A7, U01A8, U01A9, U01AA, U01AB, U01AC]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -9076,6 +9201,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U01A3, U01A5, U01A2, U01A6, U01A1, U01A7, U01A0, U01A8, U01A9, U01AA, U01AB, U01AC]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -9109,6 +9235,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U01A4, U01A6, U01A3, U01A7, U01A2, U01A8, U01A1, U01A9, U01A0, U01AA, U01AB, U01AC]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -9142,6 +9269,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U01A5, U01A7, U01A4, U01A8, U01A3, U01A9, U01A2, U01AA, U01A1, U01AB, U01A0, U01AC]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -9175,6 +9303,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U01A6, U01A8, U01A5, U01A9, U01A4, U01AA, U01A3, U01AB, U01A2, U01AC, U01A1, U01AD]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -9208,6 +9337,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U01A7, U01A9, U01A6, U01AA, U01A5, U01AB, U01A4, U01AC, U01A3, U01AD, U01A2, U01AE]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -9241,6 +9371,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U01A8, U01AA, U01A7, U01AB, U01A6, U01AC, U01A5, U01AD, U01A4, U01AE, U01A3, U01AF]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -9274,6 +9405,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U01A9, U01AB, U01A8, U01AC, U01A7, U01AD, U01A6, U01AE, U01A5, U01AF, U01A4, U01A3]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -9307,6 +9439,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U01AA, U01AC, U01A9, U01AD, U01A8, U01AE, U01A7, U01AF, U01A6, U01A5, U01A4, U01A3]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -9340,6 +9473,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U01AB, U01AD, U01AA, U01AE, U01A9, U01AF, U01A8, U01A7, U01A6, U01A5, U01A4, U01A3]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -9373,6 +9507,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U01AC, U01AE, U01AB, U01AF, U01AA, U01A9, U01A8, U01A7, U01A6, U01A5, U01A4, U01A3]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -9406,6 +9541,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U01AD, U01AF, U01AC, U01AB, U01AA, U01A9, U01A8, U01A7, U01A6, U01A5, U01A4, U01A3]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -9439,6 +9575,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U01AE, U01AD, U01AC, U01AB, U01AA, U01A9, U01A8, U01A7, U01A6, U01A5, U01A4, U01A3]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -9703,6 +9840,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U01B8, U01B9]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -9736,6 +9874,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U01B7, U01B9]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -9769,6 +9908,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U01B8, U01B7]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -9835,6 +9975,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U019B, U027A, U027B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -9868,6 +10009,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U02A9]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Intercooler
@@ -9901,6 +10043,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0298, U0299]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -10000,6 +10143,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0201, U0202, U0203, U0204, U0205, U020B, U0220, U0221, U0222]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -10033,6 +10177,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0200, U0202, U0203, U0204, U0205, U020B, U0220, U0221, U0222]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -10066,6 +10211,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0201, U0203, U0200, U0204, U0205, U020B, U0220, U0221, U0222]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -10099,6 +10245,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0202, U0204, U0201, U0205, U0200, U020B, U0220, U0221, U0222]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -10132,6 +10279,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0203, U0205, U0202, U0201, U0200, U020B, U0220, U0221, U0222]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -10165,6 +10313,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0204, U0203, U0202, U0201, U0200, U020B, U0220, U0221, U0222]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -10231,6 +10380,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U020A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -10264,6 +10414,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0209, U0210, U0211, U0246, U0247, U024B, U024C, U024D, U0277, U0278]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -10297,6 +10448,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0208, U0210, U0211, U0246, U0247, U024B, U024C, U024D, U0277, U0278]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -10330,6 +10482,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0207]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -10363,6 +10516,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0205, U0204, U0203, U0202, U0201, U0200, U0220, U0221, U0222]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -10396,6 +10550,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U020D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -10429,6 +10584,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U020C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -10462,6 +10618,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0211, U0209, U0208, U0246, U0247, U024B, U024C, U024D, U0277, U0278]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -10495,6 +10652,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0210, U0209, U0208, U0246, U0247, U024B, U024C, U024D, U0277, U0278]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -10531,6 +10689,7 @@
     mil: true
   references:
     - sae:J2012
+  related_codes: [U0119]
   sources:
     - https://en.wikipedia.org/wiki/Clock_spring
 
@@ -10768,6 +10927,7 @@
     mil: false
   references:
     - sae:J2012
+  related_codes: [U0221, U0222, U020B, U0205, U0204, U0203, U0202, U0201, U0200]
   sources:
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
 
@@ -10797,6 +10957,7 @@
     mil: false
   references:
     - sae:J2012
+  related_codes: [U0220, U0222, U020B, U0205, U0204, U0203, U0202, U0201, U0200]
   sources:
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
 
@@ -10826,6 +10987,7 @@
     mil: false
   references:
     - sae:J2012
+  related_codes: [U0221, U0220, U020B, U0205, U0204, U0203, U0202, U0201, U0200]
   sources:
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
 
@@ -10858,6 +11020,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0224, U0225, U0226, U0227, U0228]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -10891,6 +11054,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0223, U0225, U0226, U0227, U0228]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -10924,6 +11088,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0224, U0226, U0223, U0227, U0228]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -10957,6 +11122,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0225, U0227, U0224, U0228, U0223]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -10990,6 +11156,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0226, U0228, U0225, U0224, U0223]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -11023,6 +11190,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0227, U0226, U0225, U0224, U0223]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -11089,6 +11257,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U022F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -11122,6 +11291,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U022E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -11356,6 +11526,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0126]
   sources:
     - https://en.wikipedia.org/wiki/Electronic_stability_control
 
@@ -11450,6 +11621,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0240]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -11483,6 +11655,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U023B, U023C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -11516,6 +11689,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U023A, U023C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -11549,6 +11723,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U023B, U023A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -11648,6 +11823,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0239]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -11681,6 +11857,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0242]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -11714,6 +11891,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0241]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -11780,6 +11958,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0251]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -11846,6 +12025,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0247, U024B, U024C, U024D, U0277, U0278, U0211, U0210, U0209, U0208]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -11879,6 +12059,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0246, U024B, U024C, U024D, U0277, U0278, U0211, U0210, U0209, U0208]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -11978,6 +12159,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U02BF]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -12021,6 +12203,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U024C, U024D, U0247, U0246, U0277, U0278, U0211, U0210, U0209, U0208]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -12064,6 +12247,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U024B, U024D, U0247, U0246, U0277, U0278, U0211, U0210, U0209, U0208]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -12107,6 +12291,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U024C, U024B, U0247, U0246, U0277, U0278, U0211, U0210, U0209, U0208]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -12150,6 +12335,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U024F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Blind_spot_monitor
@@ -12193,6 +12379,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U024E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Blind_spot_monitor
@@ -12279,6 +12466,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0244]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -12494,6 +12682,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U025D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle_audio
@@ -12623,6 +12812,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U025A, U025B, U025C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -12666,6 +12856,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0259, U025B, U025C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -12709,6 +12900,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U025A, U025C, U0259]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -12752,6 +12944,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U025B, U025A, U0259]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -12795,6 +12988,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0256]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle_audio
@@ -12838,6 +13032,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U025F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -12881,6 +13076,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U025E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -12924,6 +13120,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0261, U0271, U0272]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -12967,6 +13164,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0260, U0271, U0272]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -13139,6 +13337,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0266, U0267, U0268, U0269, U026A, U026B, U026C, U026D, U026E, U026F, U0270]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -13182,6 +13381,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0265, U0267, U0268, U0269, U026A, U026B, U026C, U026D, U026E, U026F, U0270]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -13225,6 +13425,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0266, U0268, U0265, U0269, U026A, U026B, U026C, U026D, U026E, U026F, U0270]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -13268,6 +13469,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0267, U0269, U0266, U026A, U0265, U026B, U026C, U026D, U026E, U026F, U0270]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -13311,6 +13513,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0268, U026A, U0267, U026B, U0266, U026C, U0265, U026D, U026E, U026F, U0270]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -13354,6 +13557,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0269, U026B, U0268, U026C, U0267, U026D, U0266, U026E, U0265, U026F, U0270]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -13397,6 +13601,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U026A, U026C, U0269, U026D, U0268, U026E, U0267, U026F, U0266, U0270, U0265]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -13440,6 +13645,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U026B, U026D, U026A, U026E, U0269, U026F, U0268, U0270, U0267, U0266, U0265]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -13483,6 +13689,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U026C, U026E, U026B, U026F, U026A, U0270, U0269, U0268, U0267, U0266, U0265]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -13526,6 +13733,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U026D, U026F, U026C, U0270, U026B, U026A, U0269, U0268, U0267, U0266, U0265]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -13569,6 +13777,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U026E, U0270, U026D, U026C, U026B, U026A, U0269, U0268, U0267, U0266, U0265]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -13612,6 +13821,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U026F, U026E, U026D, U026C, U026B, U026A, U0269, U0268, U0267, U0266, U0265]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -13655,6 +13865,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0272, U0261, U0260]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -13698,6 +13909,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0271, U0261, U0260]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -13741,6 +13953,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0274, U0275, U0276]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_lighting
@@ -13784,6 +13997,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0273, U0275, U0276]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_lighting
@@ -13827,6 +14041,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0274, U0276, U0273]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_lighting
@@ -13870,6 +14085,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0275, U0274, U0273]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_lighting
@@ -13913,6 +14129,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0278, U024D, U024C, U024B, U0247, U0246, U0211, U0210, U0209, U0208]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -13956,6 +14173,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0277, U024D, U024C, U024B, U0247, U0246, U0211, U0210, U0209, U0208]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -14042,6 +14260,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U027B, U01BB, U019B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Charging_station
@@ -14085,6 +14304,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U027A, U01BB, U019B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Charging_station
@@ -14171,6 +14391,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0285, U028B, U028C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Active_grille_shutter
@@ -14214,6 +14435,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0284, U028B, U028C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Active_grille_shutter
@@ -14300,6 +14522,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U028A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automatic_transmission
@@ -14343,6 +14566,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0289]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_inverter
@@ -14386,6 +14610,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0288]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_inverter
@@ -14429,6 +14654,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0287]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automatic_transmission
@@ -14472,6 +14698,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U028C, U0285, U0284]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Active_grille_shutter
@@ -14515,6 +14742,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U028B, U0285, U0284]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Active_grille_shutter
@@ -14558,6 +14786,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U028E, U028F, U0290]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_aerodynamics
@@ -14601,6 +14830,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U028D, U028F, U0290]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_aerodynamics
@@ -14644,6 +14874,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U028E, U0290, U028D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_aerodynamics
@@ -14687,6 +14918,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U028F, U028E, U028D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_aerodynamics
@@ -14773,6 +15005,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U029B, U029C, U0117]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Electric_motor
@@ -14874,6 +15107,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0131]
   sources:
     - https://en.wikipedia.org/wiki/Power_steering
 
@@ -14989,6 +15223,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0299, U01BD]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/DC-to-DC_converter
@@ -15032,6 +15267,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0298, U01BD]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/DC-to-DC_converter
@@ -15118,6 +15354,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U029C, U0292, U0117]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Electric_motor
@@ -15161,6 +15398,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U029B, U0292, U0117]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Electric_motor
@@ -15204,6 +15442,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U029E, U02A1]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/NOx_sensor
@@ -15247,6 +15486,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U029D, U02A1]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/NOx_sensor
@@ -15327,6 +15567,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U04A1, U04A2, U04A3, U04A5, U04A6, U04A7, U04A8, U04A9, U04AA, U04AB, U04AC, U04AD]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -15370,6 +15611,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U029E, U029D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/NOx_sensor
@@ -15714,6 +15956,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U01BC]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Intercooler
@@ -15843,6 +16086,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U02AD]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Turbocharger
@@ -15886,6 +16130,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U02AC]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Turbocharger
@@ -16015,6 +16260,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0656]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Turbocharger
@@ -16058,6 +16304,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U02B2]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle_audio
@@ -16101,6 +16348,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U02B1]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle_audio
@@ -16187,6 +16435,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U02B5]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Adaptive_cruise_control
@@ -16230,6 +16479,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U02B4]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Adaptive_cruise_control
@@ -16273,6 +16523,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U02B7, U02B8, U02B9]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Blind_spot_monitor
@@ -16316,6 +16567,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U02B6, U02B8, U02B9]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Blind_spot_monitor
@@ -16359,6 +16611,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U02B7, U02B9, U02B6]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Blind_spot_monitor
@@ -16402,6 +16655,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U02B8, U02B7, U02B6]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Blind_spot_monitor
@@ -16445,6 +16699,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U02C1, U063D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_inverter
@@ -16660,6 +16915,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U024A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_lighting
@@ -16746,6 +17002,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U02BA, U063D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_inverter
@@ -16786,6 +17043,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [U0601]
   sources:
     - https://en.wikipedia.org/wiki/CAN_bus
 
@@ -17232,6 +17490,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U030E, U0352]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/NOx_sensor
@@ -17269,6 +17528,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U030D, U0352]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/NOx_sensor
@@ -17417,6 +17677,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0313, U034C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -17454,6 +17715,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0312, U034C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -17632,6 +17894,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [U0320]
   sources:
     - https://en.wikipedia.org/wiki/Power_steering
 
@@ -17808,6 +18071,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U031E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Parking_sensor
@@ -17845,6 +18109,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U031D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Parking_sensor
@@ -17919,6 +18184,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0318]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_steering
@@ -17985,6 +18251,7 @@
     mil: false
   references:
     - sae:J2012
+  related_codes: [U0331, U0339]
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
 
@@ -18335,6 +18602,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0339, U0322]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -18631,6 +18899,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0331, U0322]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -18668,6 +18937,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U033B, U033C, U033D, U033E, U033F, U0340, U0341, U0342, U0343, U0344, U0345, U0346]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -18705,6 +18975,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U033A, U033C, U033D, U033E, U033F, U0340, U0341, U0342, U0343, U0344, U0345, U0346]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -18742,6 +19013,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U033B, U033D, U033A, U033E, U033F, U0340, U0341, U0342, U0343, U0344, U0345, U0346]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -18779,6 +19051,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U033C, U033E, U033B, U033F, U033A, U0340, U0341, U0342, U0343, U0344, U0345, U0346]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -18816,6 +19089,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U033D, U033F, U033C, U0340, U033B, U0341, U033A, U0342, U0343, U0344, U0345, U0346]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -18853,6 +19127,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U033E, U0340, U033D, U0341, U033C, U0342, U033B, U0343, U033A, U0344, U0345, U0346]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -18890,6 +19165,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U033F, U0341, U033E, U0342, U033D, U0343, U033C, U0344, U033B, U0345, U033A, U0346]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -18927,6 +19203,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0340, U0342, U033F, U0343, U033E, U0344, U033D, U0345, U033C, U0346, U033B, U0347]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -18964,6 +19241,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0341, U0343, U0340, U0344, U033F, U0345, U033E, U0346, U033D, U0347, U033C, U0348]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -19001,6 +19279,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0342, U0344, U0341, U0345, U0340, U0346, U033F, U0347, U033E, U0348, U033D, U0349]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -19038,6 +19317,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0343, U0345, U0342, U0346, U0341, U0347, U0340, U0348, U033F, U0349, U033E, U033D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -19075,6 +19355,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0344, U0346, U0343, U0347, U0342, U0348, U0341, U0349, U0340, U033F, U033E, U033D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -19112,6 +19393,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0345, U0347, U0344, U0348, U0343, U0349, U0342, U0341, U0340, U033F, U033E, U033D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -19149,6 +19431,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0346, U0348, U0345, U0349, U0344, U0343, U0342, U0341, U0340, U033F, U033E, U033D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -19186,6 +19469,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0347, U0349, U0346, U0345, U0344, U0343, U0342, U0341, U0340, U033F, U033E, U033D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -19223,6 +19507,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0348, U0347, U0346, U0345, U0344, U0343, U0342, U0341, U0340, U033F, U033E, U033D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -19334,6 +19619,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0313, U0312]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -19408,6 +19694,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U034F, U0350, U0351]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Active_grille_shutter
@@ -19445,6 +19732,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U034E, U0350, U0351]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Active_grille_shutter
@@ -19482,6 +19770,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U034F, U0351, U034E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Active_grille_shutter
@@ -19519,6 +19808,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0350, U034F, U034E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Active_grille_shutter
@@ -19556,6 +19846,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U030E, U030D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/NOx_sensor
@@ -19910,6 +20201,7 @@
     mil: true
   references:
     - sae:J2012
+  related_codes: [U0428]
   sources:
     - https://en.wikipedia.org/wiki/Electronic_stability_control
 
@@ -19944,6 +20236,7 @@
     mil: true
   references:
     - sae:J2012
+  related_codes: [U0425]
   sources:
     - https://en.wikipedia.org/wiki/Immobiliser
 
@@ -19972,6 +20265,7 @@
     mil: false
   references:
     - sae:J2012
+  related_codes: [U0427]
   sources:
     - https://en.wikipedia.org/wiki/Vehicle_anti-theft_system
 
@@ -20045,6 +20339,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U040C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Exhaust_gas_recirculation
@@ -20082,6 +20377,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U040B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Exhaust_gas_recirculation
@@ -20119,6 +20415,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U040E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Turbocharger
@@ -20156,6 +20453,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U040D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Turbocharger
@@ -20482,6 +20780,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0419]
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
 
@@ -20517,6 +20816,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [U0418]
   sources:
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
 
@@ -20590,6 +20890,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U046E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Oxygen_sensor
@@ -20627,6 +20928,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U041D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Variable_valve_lift
@@ -20664,6 +20966,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U041C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Variable_valve_lift
@@ -20774,6 +21077,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [U0521]
   sources:
     - https://en.wikipedia.org/wiki/Power_steering
 
@@ -20839,6 +21143,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [U0431]
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
 
@@ -20937,6 +21242,7 @@
     mil: true
   references:
     - sae:J2012
+  related_codes: [U0408]
   sources:
     - https://en.wikipedia.org/wiki/Immobiliser
 
@@ -21000,6 +21306,7 @@
     mil: false
   references:
     - sae:J2012
+  related_codes: [U0409]
   sources:
     - https://en.wikipedia.org/wiki/Vehicle_anti-theft_system
 
@@ -21035,6 +21342,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [U0407]
   sources:
     - https://en.wikipedia.org/wiki/Power_steering
 
@@ -21143,6 +21451,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U042C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Active_suspension
@@ -21180,6 +21489,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U042B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Active_suspension
@@ -21254,6 +21564,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U044D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Alternator
@@ -21355,6 +21666,7 @@
     mil: false
   references:
     - sae:J2012
+  related_codes: [U0422]
   sources:
     - https://en.wikipedia.org/wiki/Body_control_module
 
@@ -21824,6 +22136,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U043F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vacuum_servo
@@ -21861,6 +22174,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U043E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vacuum_servo
@@ -22008,6 +22322,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0444, U0445, U0446]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -22045,6 +22360,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0443, U0445, U0446]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -22082,6 +22398,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0444, U0446, U0443]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -22119,6 +22436,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0445, U0444, U0443]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -22154,6 +22472,7 @@
     mil: true
   references:
     - sae:J2012
+  related_codes: [U0448]
   sources:
     - https://en.wikipedia.org/wiki/Gateway_(telecommunications)
 
@@ -22182,6 +22501,7 @@
     mil: true
   references:
     - sae:J2012
+  related_codes: [U0447]
   sources:
     - https://en.wikipedia.org/wiki/Gateway_(telecommunications)
 
@@ -22218,6 +22538,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U044A, U0451]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -22255,6 +22576,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0449, U0451]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -22366,6 +22688,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U042E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Alternator
@@ -22403,6 +22726,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0514]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -22440,6 +22764,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U044A, U0449]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/CAN_bus
@@ -22662,6 +22987,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0458]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Instrument_cluster
@@ -22699,6 +23025,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0457]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Instrument_cluster
@@ -22773,6 +23100,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0544]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Parking_sensor
@@ -22884,6 +23212,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U045E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Self-driving_car
@@ -22921,6 +23250,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U045D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Self-driving_car
@@ -22958,6 +23288,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0460]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Self-driving_car
@@ -22995,6 +23326,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U045F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Self-driving_car
@@ -23106,6 +23438,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0586]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_navigation_system
@@ -23143,6 +23476,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0588]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_navigation_system
@@ -23513,6 +23847,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U041B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Oxygen_sensor
@@ -23550,6 +23885,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0472, U0473, U0474, U0475, U0477, U0478, U0479, U047A, U047B, U047C, U047D, U047E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -23587,6 +23923,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0471, U0473, U0474, U0475, U0477, U0478, U0479, U047A, U047B, U047C, U047D, U047E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -23624,6 +23961,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0472, U0474, U0471, U0475, U0477, U0478, U0479, U047A, U047B, U047C, U047D, U047E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -23661,6 +23999,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0473, U0475, U0472, U0471, U0477, U0478, U0479, U047A, U047B, U047C, U047D, U047E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -23698,6 +24037,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0474, U0473, U0477, U0472, U0478, U0471, U0479, U047A, U047B, U047C, U047D, U047E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -23770,6 +24110,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0478, U0475, U0479, U0474, U047A, U0473, U047B, U0472, U047C, U0471, U047D, U047E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -23807,6 +24148,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0477, U0479, U047A, U0475, U047B, U0474, U047C, U0473, U047D, U0472, U047E, U0471]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -23844,6 +24186,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0478, U047A, U0477, U047B, U047C, U0475, U047D, U0474, U047E, U0473, U0472, U0471]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -23881,6 +24224,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0479, U047B, U0478, U047C, U0477, U047D, U047E, U0475, U0474, U0473, U0472, U0471]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -23918,6 +24262,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U047A, U047C, U0479, U047D, U0478, U047E, U0477, U0475, U0474, U0473, U0472, U0471]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -23955,6 +24300,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U047B, U047D, U047A, U047E, U0479, U0478, U0477, U0475, U0474, U0473, U0472, U0471]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -23992,6 +24338,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U047C, U047E, U047B, U047A, U0479, U0478, U0477, U0475, U0474, U0473, U0472, U0471]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -24029,6 +24376,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U047D, U047C, U047B, U047A, U0479, U0478, U0477, U0475, U0474, U0473, U0472, U0471]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Airbag
@@ -24066,6 +24414,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0480]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Seat_belt
@@ -24103,6 +24452,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U047F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Seat_belt
@@ -24177,6 +24527,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U048B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Headlamp
@@ -24251,6 +24602,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0553]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_lighting
@@ -24362,6 +24714,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0563]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle_audio
@@ -24399,6 +24752,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0489, U048A, U0491]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle_audio
@@ -24436,6 +24790,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0488, U048A, U0491]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle_audio
@@ -24473,6 +24828,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0489, U0488, U0491]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle_audio
@@ -24510,6 +24866,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0482]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Headlamp
@@ -24547,6 +24904,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U048A, U0489, U0488]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle_audio
@@ -24658,6 +25016,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0495, U0538, U0539]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle_audio
@@ -24695,6 +25054,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0494, U0538, U0539]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle_audio
@@ -24769,6 +25129,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U054A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle_audio
@@ -24880,6 +25241,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0501, U0502, U0503, U0504, U0505, U0506, U050C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -24954,6 +25316,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U04BE, U057B, U057C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Charging_station
@@ -25139,6 +25502,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U04A2, U04A3, U04A5, U04A6, U04A7, U04A8, U04A9, U04AA, U04AB, U04AC, U04AD, U04AE]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -25176,6 +25540,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U04A1, U04A3, U04A5, U04A6, U04A7, U04A8, U04A9, U04AA, U04AB, U04AC, U04AD, U04AE]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -25213,6 +25578,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U04A2, U04A1, U04A5, U04A6, U04A7, U04A8, U04A9, U04AA, U04AB, U04AC, U04AD, U04AE]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -25250,6 +25616,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U04B2]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Diesel_particulate_filter
@@ -25287,6 +25654,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U04A6, U04A3, U04A7, U04A2, U04A8, U04A1, U04A9, U04AA, U04AB, U04AC, U04AD, U04AE]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -25324,6 +25692,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U04A5, U04A7, U04A8, U04A3, U04A9, U04A2, U04AA, U04A1, U04AB, U04AC, U04AD, U04AE]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -25361,6 +25730,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U04A6, U04A8, U04A5, U04A9, U04AA, U04A3, U04AB, U04A2, U04AC, U04A1, U04AD, U04AE]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -25398,6 +25768,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U04A7, U04A9, U04A6, U04AA, U04A5, U04AB, U04AC, U04A3, U04AD, U04A2, U04AE, U04A1]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -25435,6 +25806,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U04A8, U04AA, U04A7, U04AB, U04A6, U04AC, U04A5, U04AD, U04AE, U04A3, U04AF, U04A2]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -25472,6 +25844,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U04A9, U04AB, U04A8, U04AC, U04A7, U04AD, U04A6, U04AE, U04A5, U04AF, U04B0, U04A3]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -25509,6 +25882,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U04AA, U04AC, U04A9, U04AD, U04A8, U04AE, U04A7, U04AF, U04A6, U04B0, U04A5, U04A3]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -25546,6 +25920,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U04AB, U04AD, U04AA, U04AE, U04A9, U04AF, U04A8, U04B0, U04A7, U04A6, U04A5, U04A3]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -25583,6 +25958,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U04AC, U04AE, U04AB, U04AF, U04AA, U04B0, U04A9, U04A8, U04A7, U04A6, U04A5, U04A3]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -25620,6 +25996,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U04AD, U04AF, U04AC, U04B0, U04AB, U04AA, U04A9, U04A8, U04A7, U04A6, U04A5, U04A3]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -25657,6 +26034,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U04AE, U04B0, U04AD, U04AC, U04AB, U04AA, U04A9, U04A8, U04A7, U04A6, U04A5, U04A3]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -25694,6 +26072,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U04AF, U04AE, U04AD, U04AC, U04AB, U04AA, U04A9, U04A8, U04A7, U04A6, U04A5, U04A3]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -25768,6 +26147,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U04A4]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Diesel_particulate_filter
@@ -25953,6 +26333,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U04BB, U04BC]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -25990,6 +26371,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U04BA, U04BC]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -26027,6 +26409,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U04BB, U04BA]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -26101,6 +26484,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U049C, U057B, U057C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Charging_station
@@ -26247,6 +26631,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0502, U0503, U0504, U0505, U0506, U050C, U049A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -26284,6 +26669,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0501, U0503, U0504, U0505, U0506, U050C, U049A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -26321,6 +26707,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0502, U0504, U0501, U0505, U0506, U050C, U049A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -26358,6 +26745,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0503, U0505, U0502, U0506, U0501, U050C, U049A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -26395,6 +26783,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0504, U0506, U0503, U0502, U0501, U050C, U049A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -26432,6 +26821,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0505, U0504, U0503, U0502, U0501, U050C, U049A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -26506,6 +26896,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U050B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Sunroof
@@ -26543,6 +26934,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U050A, U0511, U0512, U0547, U0548, U054C, U054D, U054E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -26580,6 +26972,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0509, U0511, U0512, U0547, U0548, U054C, U054D, U054E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -26617,6 +27010,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0508]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Sunroof
@@ -26654,6 +27048,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0506, U0505, U0504, U0503, U0502, U0501, U049A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -26691,6 +27086,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U050E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Inductive_charging
@@ -26728,6 +27124,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U050D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Inductive_charging
@@ -26765,6 +27162,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0512, U050A, U0509, U0547, U0548, U054C, U054D, U054E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -26802,6 +27200,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0511, U050A, U0509, U0547, U0548, U054C, U054D, U054E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -26876,6 +27275,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U044F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -26950,6 +27350,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0517, U0518, U0519, U051A, U0522]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -26987,6 +27388,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0516, U0518, U0519, U051A, U0522]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -27024,6 +27426,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0517, U0519, U0516, U051A, U0522]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -27061,6 +27464,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0518, U051A, U0517, U0516, U0522]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -27098,6 +27502,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0519, U0518, U0517, U0516, U0522]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -27128,6 +27533,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0420]
   sources:
     - https://en.wikipedia.org/wiki/Power_steering
 
@@ -27164,6 +27570,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U051A, U0519, U0518, U0517, U0516]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -27201,6 +27608,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0524, U0525, U0526, U0527, U0528, U0529]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -27238,6 +27646,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0523, U0525, U0526, U0527, U0528, U0529]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -27275,6 +27684,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0524, U0526, U0523, U0527, U0528, U0529]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -27312,6 +27722,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0525, U0527, U0524, U0528, U0523, U0529]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -27349,6 +27760,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0526, U0528, U0525, U0529, U0524, U0523]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -27386,6 +27798,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0527, U0529, U0526, U0525, U0524, U0523]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -27423,6 +27836,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0528, U0527, U0526, U0525, U0524, U0523]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -27497,6 +27911,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0530]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -27534,6 +27949,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U052F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -27645,6 +28061,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0534, U054F, U0550]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Blind_spot_monitor
@@ -27682,6 +28099,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0533, U054F, U0550]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Blind_spot_monitor
@@ -27830,6 +28248,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0539, U0495, U0494]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle_audio
@@ -27867,6 +28286,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0538, U0495, U0494]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle_audio
@@ -27904,6 +28324,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0541]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -27941,6 +28362,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U053C, U053D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -27978,6 +28400,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U053B, U053D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -28015,6 +28438,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U053C, U053B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -28052,6 +28476,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U053A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -28089,6 +28514,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0543]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Headlamp
@@ -28126,6 +28552,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0542]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Headlamp
@@ -28163,6 +28590,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U045A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Parking_sensor
@@ -28200,6 +28628,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0552]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -28274,6 +28703,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0548, U054C, U054D, U054E, U0512, U0511, U050A, U0509]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -28311,6 +28741,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0547, U054C, U054D, U054E, U0512, U0511, U050A, U0509]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -28385,6 +28816,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0497]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle_audio
@@ -28422,6 +28854,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U05C0]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_lighting
@@ -28459,6 +28892,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U054D, U054E, U0548, U0547, U0512, U0511, U050A, U0509]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -28496,6 +28930,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U054C, U054E, U0548, U0547, U0512, U0511, U050A, U0509]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -28533,6 +28968,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U054D, U054C, U0548, U0547, U0512, U0511, U050A, U0509]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -28570,6 +29006,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0550, U0534, U0533]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Blind_spot_monitor
@@ -28607,6 +29044,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U054F, U0534, U0533]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Blind_spot_monitor
@@ -28681,6 +29119,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0545]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -28718,6 +29157,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0484]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_lighting
@@ -28866,6 +29306,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U055E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle_audio
@@ -28977,6 +29418,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U055B, U055C, U055D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -29014,6 +29456,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U055A, U055C, U055D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -29051,6 +29494,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U055B, U055D, U055A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -29088,6 +29532,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U055C, U055B, U055A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Body_control_module
@@ -29125,6 +29570,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0557]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle_audio
@@ -29162,6 +29608,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0560]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -29199,6 +29646,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U055F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
@@ -29236,6 +29684,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0562]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -29273,6 +29722,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0561]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -29310,6 +29760,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0487]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle_audio
@@ -29421,6 +29872,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0567, U0568, U0569, U056A, U056B, U056C, U056D, U056E, U056F, U0570, U0571]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -29458,6 +29910,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0566, U0568, U0569, U056A, U056B, U056C, U056D, U056E, U056F, U0570, U0571]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -29495,6 +29948,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0567, U0569, U0566, U056A, U056B, U056C, U056D, U056E, U056F, U0570, U0571]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -29532,6 +29986,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0568, U056A, U0567, U056B, U0566, U056C, U056D, U056E, U056F, U0570, U0571]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -29569,6 +30024,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0569, U056B, U0568, U056C, U0567, U056D, U0566, U056E, U056F, U0570, U0571]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -29606,6 +30062,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U056A, U056C, U0569, U056D, U0568, U056E, U0567, U056F, U0566, U0570, U0571]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -29643,6 +30100,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U056B, U056D, U056A, U056E, U0569, U056F, U0568, U0570, U0567, U0571, U0566]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -29680,6 +30138,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U056C, U056E, U056B, U056F, U056A, U0570, U0569, U0571, U0568, U0567, U0566]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -29717,6 +30176,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U056D, U056F, U056C, U0570, U056B, U0571, U056A, U0569, U0568, U0567, U0566]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -29754,6 +30214,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U056E, U0570, U056D, U0571, U056C, U056B, U056A, U0569, U0568, U0567, U0566]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -29791,6 +30252,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U056F, U0571, U056E, U056D, U056C, U056B, U056A, U0569, U0568, U0567, U0566]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -29828,6 +30290,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0570, U056F, U056E, U056D, U056C, U056B, U056A, U0569, U0568, U0567, U0566]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
@@ -29865,6 +30328,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0573]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Electronic_stability_control
@@ -29902,6 +30366,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0572]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Electronic_stability_control
@@ -29939,6 +30404,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0575, U0576, U0577]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_lighting
@@ -29976,6 +30442,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0574, U0576, U0577]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_lighting
@@ -30013,6 +30480,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0575, U0577, U0574]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_lighting
@@ -30050,6 +30518,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0576, U0575, U0574]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_lighting
@@ -30087,6 +30556,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0579]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -30124,6 +30594,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0578]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_seat
@@ -30161,6 +30632,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U057C, U04BE, U049C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Charging_station
@@ -30198,6 +30670,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U057B, U04BE, U049C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Charging_station
@@ -30309,6 +30782,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U058C, U058D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Active_grille_shutter
@@ -30338,6 +30812,7 @@
     mil: false
   references:
     - sae:J2012
+  related_codes: [U0463]
   sources:
     - https://en.wikipedia.org/wiki/Automotive_navigation_system
 
@@ -30403,6 +30878,7 @@
     mil: false
   references:
     - sae:J2012
+  related_codes: [U0464]
   sources:
     - https://en.wikipedia.org/wiki/Automotive_navigation_system
 
@@ -30439,6 +30915,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U058A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_inverter
@@ -30476,6 +30953,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0589]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_inverter
@@ -30550,6 +31028,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U058D, U0585]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Active_grille_shutter
@@ -30587,6 +31066,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U058C, U0585]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Active_grille_shutter
@@ -30661,6 +31141,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U059C, U059D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Electric_motor
@@ -30809,6 +31290,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0598]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Charging_station
@@ -30846,6 +31328,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0597]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Charging_station
@@ -30883,6 +31366,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U059A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/DC-to-DC_converter
@@ -30920,6 +31404,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0599]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/DC-to-DC_converter
@@ -30994,6 +31479,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U059D, U0593]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Electric_motor
@@ -31031,6 +31517,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U059C, U0593]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Electric_motor
@@ -31068,6 +31555,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U059F, U05A8]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/NOx_sensor
@@ -31105,6 +31593,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U059E, U05A8]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/NOx_sensor
@@ -31180,6 +31669,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U05A2, U05A9]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/NOx_sensor
@@ -31218,6 +31708,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U05A1, U05A9]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/NOx_sensor
@@ -31441,6 +31932,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U059F, U059E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/NOx_sensor
@@ -31479,6 +31971,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U05A2, U05A1]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/NOx_sensor
@@ -31627,6 +32120,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U05B3]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle_audio
@@ -31664,6 +32158,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U05B2]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Vehicle_audio
@@ -31738,6 +32233,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U05B6]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Adaptive_cruise_control
@@ -31775,6 +32271,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U05B5]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Adaptive_cruise_control
@@ -31812,6 +32309,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U05B8, U05B9, U05BA]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Blind_spot_monitor
@@ -31849,6 +32347,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U05B7, U05B9, U05BA]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Blind_spot_monitor
@@ -31886,6 +32385,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U05B8, U05BA, U05B7]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Blind_spot_monitor
@@ -31923,6 +32423,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U05B9, U05B8, U05B7]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Blind_spot_monitor
@@ -32071,6 +32572,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U054B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automotive_lighting
@@ -32177,6 +32679,7 @@
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [U0300]
   sources:
     - https://en.wikipedia.org/wiki/CAN_bus
 
@@ -32219,6 +32722,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0696, U0697]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Diesel_particulate_filter
@@ -32262,6 +32766,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0604]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Common_rail
@@ -32305,6 +32810,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0603]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Common_rail
@@ -32391,6 +32897,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0607, U0608, U0681, U0682, U0683]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Drive_by_wire
@@ -32434,6 +32941,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0606, U0608, U0681, U0682, U0683]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Drive_by_wire
@@ -32477,6 +32985,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0607, U0606, U0681, U0682, U0683]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Drive_by_wire
@@ -32606,6 +33115,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U060C, U060D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Turbocharger
@@ -32649,6 +33159,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U060B, U060D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Turbocharger
@@ -32692,6 +33203,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U060C, U060B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Turbocharger
@@ -32778,6 +33290,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0610]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Mass_flow_sensor
@@ -32821,6 +33334,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U060F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Mass_flow_sensor
@@ -32864,6 +33378,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0612, U0613, U0614]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Intake_air_temperature_sensor
@@ -32907,6 +33422,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0611, U0613, U0614]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Intake_air_temperature_sensor
@@ -32950,6 +33466,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0612, U0614, U0611]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Intake_air_temperature_sensor
@@ -32993,6 +33510,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0613, U0612, U0611]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Intake_air_temperature_sensor
@@ -33036,6 +33554,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0616, U0617, U0618]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Engine_cooling
@@ -33079,6 +33598,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0615, U0617, U0618]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Engine_cooling
@@ -33122,6 +33642,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0616, U0618, U0615]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Engine_cooling
@@ -33165,6 +33686,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0617, U0616, U0615]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Engine_cooling
@@ -33208,6 +33730,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U061A, U061B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
@@ -33251,6 +33774,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0619, U061B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
@@ -33294,6 +33818,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U061A, U0619]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
@@ -33337,6 +33862,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U061D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
@@ -33380,6 +33906,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U061C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
@@ -33466,6 +33993,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0620, U0621, U0622, U069A, U069B, U069C, U069D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Catalytic_converter
@@ -33509,6 +34037,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U061F, U0621, U0622, U069A, U069B, U069C, U069D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Catalytic_converter
@@ -33552,6 +34081,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0620, U0622, U061F, U069A, U069B, U069C, U069D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Catalytic_converter
@@ -33595,6 +34125,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0621, U0620, U061F, U069A, U069B, U069C, U069D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Catalytic_converter
@@ -33638,6 +34169,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0624, U062F, U0649, U0698, U0699]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Engine_cooling
@@ -33681,6 +34213,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0623, U062F, U0649, U0698, U0699]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Engine_cooling
@@ -33724,6 +34257,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0665]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Common_rail
@@ -33767,6 +34301,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0628]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automobile_air_conditioning
@@ -33810,6 +34345,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0629]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automobile_air_conditioning
@@ -33853,6 +34389,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0626]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automobile_air_conditioning
@@ -33896,6 +34433,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0627]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automobile_air_conditioning
@@ -33939,6 +34477,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U062B, U062C, U062D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automobile_air_conditioning
@@ -33982,6 +34521,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U062A, U062C, U062D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automobile_air_conditioning
@@ -34025,6 +34565,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U062B, U062D, U062A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automobile_air_conditioning
@@ -34068,6 +34609,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U062C, U062B, U062A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automobile_air_conditioning
@@ -34154,6 +34696,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0624, U0623, U0649, U0698, U0699]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Engine_cooling
@@ -34197,6 +34740,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0631]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Engine_coolant_temperature_sensor
@@ -34240,6 +34784,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0630]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Engine_coolant_temperature_sensor
@@ -34369,6 +34914,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0635]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -34412,6 +34958,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0634]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -34455,6 +35002,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0637]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -34498,6 +35046,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0636]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -34541,6 +35090,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0639, U063A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_inverter
@@ -34584,6 +35134,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0638, U063A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_inverter
@@ -34627,6 +35178,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0639, U0638]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_inverter
@@ -34670,6 +35222,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U063C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Engine_cooling
@@ -34713,6 +35266,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U063B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Engine_cooling
@@ -34756,6 +35310,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U02C1, U02BA]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_inverter
@@ -34799,6 +35354,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U066C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Heat_recovery_ventilation
@@ -34928,6 +35484,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0642]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Onboard_refueling_vapor_recovery
@@ -34971,6 +35528,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0641]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Onboard_refueling_vapor_recovery
@@ -35014,6 +35572,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0689]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Turbocharger
@@ -35057,6 +35616,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0674]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Turbocharger
@@ -35143,6 +35703,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0647, U0648]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_inverter
@@ -35186,6 +35747,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0646, U0648]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_inverter
@@ -35229,6 +35791,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0647, U0646]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_inverter
@@ -35272,6 +35835,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U062F, U0624, U0623, U0698, U0699]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Engine_cooling
@@ -35315,6 +35879,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U064B, U064C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -35358,6 +35923,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U064A, U064C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -35401,6 +35967,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U064B, U064A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -35573,6 +36140,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U067E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Diesel_particulate_filter
@@ -35616,6 +36184,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0652, U0653, U0669, U066A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Exhaust_gas_recirculation
@@ -35659,6 +36228,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0651, U0653, U0669, U066A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Exhaust_gas_recirculation
@@ -35702,6 +36272,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0652, U0651, U0669, U066A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Exhaust_gas_recirculation
@@ -35745,6 +36316,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0655]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Inlet_manifold
@@ -35788,6 +36360,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0654]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Inlet_manifold
@@ -35831,6 +36404,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U02B0]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Turbocharger
@@ -35874,6 +36448,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U066B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Turbocharger
@@ -36218,6 +36793,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0660]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automobile_air_conditioning
@@ -36261,6 +36837,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U065F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automobile_air_conditioning
@@ -36304,6 +36881,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0662]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automobile_air_conditioning
@@ -36347,6 +36925,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0661]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automobile_air_conditioning
@@ -36476,6 +37055,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0625]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Common_rail
@@ -36648,6 +37228,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U066A, U0653, U0652, U0651]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Exhaust_gas_recirculation
@@ -36691,6 +37272,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0669, U0653, U0652, U0651]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Exhaust_gas_recirculation
@@ -36734,6 +37316,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0657]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Turbocharger
@@ -36777,6 +37360,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U063E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Heat_recovery_ventilation
@@ -36820,6 +37404,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U066E]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Intercooler
@@ -36863,6 +37448,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U066D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Intercooler
@@ -36949,6 +37535,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0671]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Fuel_injection
@@ -36992,6 +37579,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0670]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Fuel_injection
@@ -37121,6 +37709,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0644]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Turbocharger
@@ -37207,6 +37796,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0677, U0678]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Fuel_gauge
@@ -37250,6 +37840,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0676, U0678]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Fuel_gauge
@@ -37293,6 +37884,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0677, U0676]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Fuel_gauge
@@ -37336,6 +37928,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U067A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automatic_transmission
@@ -37379,6 +37972,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0679]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Automatic_transmission
@@ -37551,6 +38145,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0650]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Diesel_particulate_filter
@@ -37594,6 +38189,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0680, U068A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/MAP_sensor
@@ -37637,6 +38233,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U067F, U068A]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/MAP_sensor
@@ -37680,6 +38277,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0682, U0683, U0608, U0607, U0606]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Drive_by_wire
@@ -37723,6 +38321,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0681, U0683, U0608, U0607, U0606]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Drive_by_wire
@@ -37766,6 +38365,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0682, U0681, U0608, U0607, U0606]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Drive_by_wire
@@ -37809,6 +38409,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0685, U0686, U0687]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Catalytic_converter
@@ -37852,6 +38453,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0684, U0686, U0687]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Catalytic_converter
@@ -37895,6 +38497,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0685, U0687, U0684]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Catalytic_converter
@@ -37938,6 +38541,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0686, U0685, U0684]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Catalytic_converter
@@ -38024,6 +38628,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0643]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Turbocharger
@@ -38067,6 +38672,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0680, U067F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/MAP_sensor
@@ -38110,6 +38716,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U068C]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Turbocharger
@@ -38153,6 +38760,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U068B]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Turbocharger
@@ -38196,6 +38804,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U068E, U068F, U0690]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Exhaust_gas_recirculation
@@ -38239,6 +38848,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U068D, U068F, U0690]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Exhaust_gas_recirculation
@@ -38282,6 +38892,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U068E, U0690, U068D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Exhaust_gas_recirculation
@@ -38325,6 +38936,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U068F, U068E, U068D]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Exhaust_gas_recirculation
@@ -38368,6 +38980,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0692, U069F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Diesel_particulate_filter
@@ -38411,6 +39024,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0691, U069F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Diesel_particulate_filter
@@ -38497,6 +39111,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0695]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -38540,6 +39155,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0694]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Battery_management_system
@@ -38583,6 +39199,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0697, U0602]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Diesel_particulate_filter
@@ -38626,6 +39243,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0696, U0602]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Diesel_particulate_filter
@@ -38669,6 +39287,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0699, U0649, U062F, U0624, U0623]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Engine_cooling
@@ -38712,6 +39331,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0698, U0649, U062F, U0624, U0623]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Engine_cooling
@@ -38755,6 +39375,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U069B, U069C, U069D, U0622, U0621, U0620, U061F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Catalytic_converter
@@ -38798,6 +39419,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U069A, U069C, U069D, U0622, U0621, U0620, U061F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Catalytic_converter
@@ -38841,6 +39463,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U069B, U069D, U069A, U0622, U0621, U0620, U061F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Catalytic_converter
@@ -38884,6 +39507,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U069C, U069B, U069A, U0622, U0621, U0620, U061F]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Catalytic_converter
@@ -38970,6 +39594,7 @@
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0692, U0691]
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Diesel_particulate_filter
