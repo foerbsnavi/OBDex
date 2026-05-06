@@ -54,6 +54,10 @@ const totalCodes = generic.length;
 const totalPids = Object.values(pidsByMode).reduce((a, b) => a + b.length, 0);
 const totalEnriched = Object.values(coverage).reduce((a, b) => a + b.enriched, 0);
 const totalIndexed = totalCodes - totalEnriched;
+const totalSymptoms = generic.reduce((s, c) => s + (Array.isArray(c.symptoms) ? c.symptoms.length : 0), 0);
+const totalCauses = generic.reduce((s, c) => s + (Array.isArray(c.common_causes) ? c.common_causes.length : 0), 0);
+const totalSources = generic.reduce((s, c) => s + (Array.isArray(c.sources) ? c.sources.length : 0), 0);
+const totalRelated = generic.reduce((s, c) => s + (Array.isArray(c.related_codes) ? c.related_codes.length : 0), 0);
 
 const meta = {
   generated_at: new Date().toISOString(),
@@ -62,6 +66,10 @@ const meta = {
       total: totalCodes,
       enriched: totalEnriched,
       indexed: totalIndexed,
+      symptoms: totalSymptoms,
+      causes: totalCauses,
+      sources: totalSources,
+      related_codes: totalRelated,
       by_family: Object.fromEntries(
         families
           .filter(f => coverage[f].total > 0)
@@ -89,13 +97,17 @@ const pidLinks = Object.keys(pidsByMode).sort()
   .map(mode => `      <li><a href="pids/${mode}.json"><code>pids/${mode}.json</code></a> <span class="count">${pidsByMode[mode].length}</span></li>`)
   .join("\n");
 
+const FAMILY_LABELS = {
+  P0: "Powertrain", P2: "Powertrain (SAE)", P3: "Powertrain (mixed)",
+  U0: "Network", U3: "Network (HV / FCEV)", B0: "Body", C0: "Chassis"
+};
 const coverageRows = families
   .filter(f => coverage[f].total > 0)
   .map(f => {
     const e = coverage[f].enriched;
     const t = coverage[f].total;
     const pct = t === 0 ? 0 : Math.round((e / t) * 100);
-    return `      <tr><td><code>${f}</code></td><td class="num">${t.toLocaleString("en-US")}</td><td class="num">${e.toLocaleString("en-US")}</td><td class="bar"><div class="bar-row"><div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div></div><span class="bar-pct">${pct}%</span></div></td></tr>`;
+    return `      <tr><td><code>${f}</code> <span class="count">${FAMILY_LABELS[f] || ""}</span></td><td class="num">${t.toLocaleString("en-US")}</td><td class="bar"><div class="bar-row"><div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div></div><span class="bar-pct">${pct} %</span></div></td></tr>`;
   })
   .join("\n");
 
@@ -129,9 +141,18 @@ const indexHtml = `<!doctype html>
     li { padding: .35rem 0; display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; border-bottom: 1px solid var(--border); }
     li:last-child { border-bottom: none; }
     .count { color: var(--muted); font: 0.85em ui-monospace, "SF Mono", Consolas, monospace; }
-    .stats { display: flex; gap: 2rem; margin: 1rem 0 0; flex-wrap: wrap; }
-    .stat { color: var(--muted); }
-    .stat strong { color: var(--fg); font-size: 1.4em; font-weight: 600; display: block; line-height: 1.1; }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem 1.5rem; margin: 1.5rem 0 0; padding: 1.25rem 1.5rem; background: var(--card); border: 1px solid var(--border); border-radius: 10px; }
+    .stat { color: var(--muted); font-size: .82rem; text-transform: uppercase; letter-spacing: .04em; }
+    .stat strong { color: var(--fg); font-size: 1.7em; font-weight: 700; display: block; line-height: 1.05; letter-spacing: -.02em; font-variant-numeric: tabular-nums; margin-bottom: .15rem; text-transform: none; }
+    .stat strong.accent { color: var(--accent); }
+    .complete-badge { display: inline-flex; align-items: center; gap: .4rem; background: linear-gradient(135deg, #1ea66c, #0f7a4e); color: white; padding: .35rem .9rem; border-radius: 999px; font-size: .8rem; font-weight: 600; letter-spacing: .02em; margin-top: .75rem; }
+    .complete-badge::before { content: "✓"; font-weight: 900; }
+    .demo-cta { display: flex; align-items: center; gap: 1rem; padding: 1.25rem 1.5rem; margin: 1.5rem 0 0; background: linear-gradient(135deg, var(--pill-bg), transparent); border: 1px solid var(--accent); border-radius: 10px; }
+    .demo-cta-text { flex: 1; }
+    .demo-cta strong { display: block; font-size: 1rem; color: var(--fg); margin-bottom: .15rem; }
+    .demo-cta span { color: var(--muted); font-size: .9rem; }
+    .demo-cta a.btn { background: var(--accent); color: white; padding: .6rem 1.1rem; border-radius: 8px; font-weight: 600; white-space: nowrap; text-decoration: none; }
+    .demo-cta a.btn:hover { opacity: .9; text-decoration: none; }
     footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.92em; }
     footer a { color: var(--muted); text-decoration: underline; }
 
@@ -204,13 +225,28 @@ const indexHtml = `<!doctype html>
 <body>
 <main>
   <h1>obdex</h1>
-  <p class="tagline">Open, machine-readable database of OBD-II diagnostic trouble codes and PIDs.</p>
+  <p class="tagline">The complete open database of OBD-II diagnostic trouble codes and PIDs.</p>
+  <div class="complete-badge">100 % complete · all 7 families</div>
 
-  <div class="stats">
-    <div class="stat"><strong>${totalCodes}</strong> codes</div>
-    <div class="stat"><strong>${totalPids}</strong> PIDs</div>
+  <div class="stats" aria-label="Database statistics">
+    <div class="stat"><strong class="accent">${totalCodes.toLocaleString("en-US")}</strong>codes</div>
+    <div class="stat"><strong>${totalPids}</strong>PIDs</div>
+    <div class="stat"><strong>${totalCauses.toLocaleString("en-US")}</strong>causes</div>
+    <div class="stat"><strong>${totalSymptoms.toLocaleString("en-US")}</strong>symptoms</div>
+    <div class="stat"><strong>${totalRelated.toLocaleString("en-US")}</strong>cross-refs</div>
+    <div class="stat"><strong>${totalSources.toLocaleString("en-US")}</strong>sources</div>
   </div>
 
+  <div class="demo-cta">
+    <div class="demo-cta-text">
+      <strong>Need a friendly UI?</strong>
+      <span>Search, filter and read every code in DE/EN at obd.signalwelt.de</span>
+    </div>
+    <a class="btn" href="https://obd.signalwelt.de/" target="_blank" rel="noopener">Open search app →</a>
+  </div>
+
+  <h2>Quick search</h2>
+  <p class="hint">Look up any code, keyword or PID right here — the full database is loaded into your browser.</p>
   <div class="search">
     <input id="q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Loading database…" disabled>
   </div>
@@ -218,36 +254,28 @@ const indexHtml = `<!doctype html>
   <div id="result"></div>
 
   <h2>Coverage</h2>
-  <p class="hint">Each code is at one of two depths: <span class="depth enriched">enriched</span> with full description, causes, repair estimate; or <span class="depth indexed">indexed</span> with code + title only, awaiting enrichment.</p>
+  <p class="hint">Every code carries the full schema: bilingual title and description, affected components, common causes with likelihood, repair difficulty / cost / hours, MIL / emissions / limp-mode flags, related codes, and at least one public source.</p>
   <table class="coverage">
-    <thead><tr><th>Family</th><th class="num">Total</th><th class="num">Enriched</th><th class="bar-h">Coverage</th></tr></thead>
+    <thead><tr><th>Family</th><th class="num">Codes</th><th class="bar-h">Coverage</th></tr></thead>
     <tbody>
 ${coverageRows}
     </tbody>
-    <tfoot><tr><td><strong>All generic</strong></td><td class="num">${totalCodes.toLocaleString("en-US")}</td><td class="num">${totalEnriched.toLocaleString("en-US")}</td><td class="bar"><div class="bar-row"><div class="bar-track"><div class="bar-fill" style="width:${Math.round((totalEnriched / totalCodes) * 100)}%"></div></div><span class="bar-pct">${Math.round((totalEnriched / totalCodes) * 100)}%</span></div></td></tr></tfoot>
+    <tfoot><tr><td><strong>All generic</strong></td><td class="num">${totalCodes.toLocaleString("en-US")}</td><td class="bar"><div class="bar-row"><div class="bar-track"><div class="bar-fill" style="width:${Math.round((totalEnriched / totalCodes) * 100)}%"></div></div><span class="bar-pct">${Math.round((totalEnriched / totalCodes) * 100)} %</span></div></td></tr></tfoot>
   </table>
 
-  <h2>Bundle</h2>
+  <h2>Use the data</h2>
+  <p class="hint">All endpoints are static JSON over GitHub Pages. No auth, no rate limit. Each has a minified <code>.min.json</code> sibling for production.</p>
   <ul>
-    <li><a href="all.json"><code>all.json</code></a> <span class="count">everything</span></li>
-    <li><a href="all.min.json"><code>all.min.json</code></a> <span class="count">minified</span></li>
+    <li><a href="all.json"><code>all.json</code></a> <span class="count">codes + PIDs combined</span></li>
+    <li><a href="generic.json"><code>generic.json</code></a> <span class="count">${generic.length.toLocaleString("en-US")} codes</span></li>
     <li><a href="meta.json"><code>meta.json</code></a> <span class="count">counts &amp; build time</span></li>
-  </ul>
-
-  <h2>Codes</h2>
-  <ul>
-    <li><a href="generic.json"><code>generic.json</code></a> <span class="count">${generic.length}</span></li>
-  </ul>
-
-  <h2>PIDs</h2>
-  <ul>
 ${pidLinks}
   </ul>
 
   <footer>
-    <p>Source on <a href="https://github.com/foerbsnavi/obdex">GitHub</a> · <a href="https://github.com/foerbsnavi/obdex/blob/main/CONTRIBUTING.md">contributing</a> · <a href="https://github.com/foerbsnavi/obdex/issues">report a wrong code or description</a></p>
-    <p>Identifiers follow SAE J2012. Descriptions are independently authored, with Wikipedia and source references on each enriched code.</p>
-    <p>Data <a href="https://github.com/foerbsnavi/obdex/blob/main/LICENSE-DATA">CC0-1.0</a> · code <a href="https://github.com/foerbsnavi/obdex/blob/main/LICENSE-CODE">MIT</a> · each endpoint has a <code>.min.json</code> variant.</p>
+    <p>Source on <a href="https://github.com/foerbsnavi/obdex">GitHub</a> · <a href="https://github.com/foerbsnavi/obdex/blob/main/CONTRIBUTING.md">contributing</a> · <a href="https://github.com/foerbsnavi/obdex/issues">report a wrong description</a> · <a href="https://obd.signalwelt.de/">live search</a></p>
+    <p>Identifiers follow SAE J2012. Descriptions are independently authored, with Wikipedia and source references on each code.</p>
+    <p>Data <a href="https://github.com/foerbsnavi/obdex/blob/main/LICENSE-DATA">CC0-1.0</a> · code <a href="https://github.com/foerbsnavi/obdex/blob/main/LICENSE-CODE">MIT</a></p>
   </footer>
 </main>
 
@@ -306,9 +334,6 @@ ${pidLinks}
 
   function renderDtcCard(c) {
     const cat = c.category ? esc(c.category) : '';
-    const depth = c.description?.en
-      ? '<span class="depth enriched">enriched</span>'
-      : '<span class="depth indexed">indexed</span>';
     const titleEn = c.title?.en ? '<p class="card-title">' + esc(c.title.en) + '</p>' : '';
     const titleDe = c.title?.de ? '<p class="card-title-de">' + esc(c.title.de) + '</p>' : '';
     const descEn = c.description?.en ? '<p class="desc">' + esc(c.description.en) + '</p>' : '';
@@ -350,7 +375,7 @@ ${pidLinks}
     }
 
     return '<div class="card">' +
-      '<div class="card-head"><span class="card-code">' + esc(c.code) + '</span><span class="card-cat">' + cat + '</span>' + depth + '</div>' +
+      '<div class="card-head"><span class="card-code">' + esc(c.code) + '</span><span class="card-cat">' + cat + '</span></div>' +
       titleEn + titleDe + descEn + descDe + flags + causes + repair + renderSources(c.sources) +
       '</div>';
   }
