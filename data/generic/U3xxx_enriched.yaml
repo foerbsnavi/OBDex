@@ -18,6 +18,15 @@
       label:
         en: Module internal fault
         de: Interner Modulfehler
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -56,6 +65,15 @@
       label:
         en: Bad ground connection
         de: Schlechte Masseverbindung
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -94,6 +112,15 @@
       label:
         en: VIN not programmed in replacement module
         de: VIN im Ersatzmodul nicht einprogrammiert
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: false
@@ -133,6 +160,15 @@
       label:
         en: Alternator regulator fault (over- or undervoltage)
         de: Lichtmaschinenregler defekt (Über- oder Unterspannung)
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: easy
     diy_possible: true
@@ -166,6 +202,15 @@
       label:
         en: Relay contacts failed or coil open
         de: Relaiskontakte defekt oder Spule unterbrochen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: easy
     diy_possible: true
@@ -199,6 +244,15 @@
       label:
         en: RAP relay or BCM logic failed
         de: RAP-Relais oder BCM-Logik defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -238,6 +292,15 @@
       label:
         en: Power wiring break
         de: Versorgungsleitung unterbrochen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -273,6 +336,15 @@
       label:
         en: Supply fuse blown
         de: Versorgungssicherung defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -312,6 +384,15 @@
       label:
         en: Ground connection loose
         de: Masseanschluss locker
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: easy
     diy_possible: true
@@ -346,6 +427,15 @@
       label:
         en: Ground stud corroded
         de: Massepunkt korrodiert
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: easy
     diy_possible: true
@@ -380,6 +470,15 @@
       label:
         en: Ignition switch contacts worn
         de: Zündschalterkontakte verschlissen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -413,6 +512,15 @@
       label:
         en: Wiring or connector fault
         de: Verkabelung oder Stecker fehlerhaft
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -446,6 +554,15 @@
       label:
         en: Wiring or connector fault
         de: Verkabelung oder Stecker fehlerhaft
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -479,6 +596,15 @@
       label:
         en: Wiring or connector fault
         de: Verkabelung oder Stecker fehlerhaft
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -512,6 +638,15 @@
       label:
         en: Ignition switch contacts worn
         de: Zündschalterkontakte verschlissen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -545,6 +680,15 @@
       label:
         en: Ignition switch contacts worn
         de: Zündschalterkontakte verschlissen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -578,6 +722,15 @@
       label:
         en: Start position contacts worn
         de: Startkontakte verschlissen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -611,6 +764,15 @@
       label:
         en: Ignition switch contacts worn
         de: Zündschalterkontakte verschlissen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -649,6 +811,15 @@
       label:
         en: Wake signal noise or glitch
         de: Wake-Signal mit Störungen oder Glitches
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: false
@@ -682,6 +853,15 @@
       label:
         en: Supply fuse blown
         de: Versorgungssicherung defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -716,6 +896,15 @@
       label:
         en: Supply fuse blown
         de: Versorgungssicherung defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -749,6 +938,15 @@
       label:
         en: Ground stud corroded
         de: Massepunkt korrodiert
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: easy
     diy_possible: true
@@ -782,6 +980,15 @@
       label:
         en: Ground stud corroded
         de: Massepunkt korrodiert
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: easy
     diy_possible: true
@@ -816,6 +1023,15 @@
       label:
         en: Internal oscillator drifted
         de: Interner Oszillator gedriftet
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -849,6 +1065,15 @@
       label:
         en: One supply line has high resistance
         de: Eine Versorgung mit hohem Übergangswiderstand
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -883,6 +1108,15 @@
       label:
         en: One supply line has high resistance
         de: Eine Versorgung mit hohem Übergangswiderstand
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -917,6 +1151,15 @@
       label:
         en: Wake-up wire broken
         de: Wake-up-Leitung unterbrochen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -951,6 +1194,15 @@
       label:
         en: Wiring shorted to ground
         de: Verkabelung mit Masseschluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -985,6 +1237,15 @@
       label:
         en: Wiring shorted to battery
         de: Verkabelung mit Plus-Schluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1018,6 +1279,15 @@
       label:
         en: Wake signal noise or glitch
         de: Wake-Signal mit Störungen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1052,6 +1322,15 @@
       label:
         en: Wake-up wire broken
         de: Wake-up-Leitung unterbrochen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1086,6 +1365,15 @@
       label:
         en: Wiring shorted to ground
         de: Verkabelung mit Masseschluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1120,6 +1408,15 @@
       label:
         en: Wiring shorted to battery
         de: Verkabelung mit Plus-Schluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1153,6 +1450,15 @@
       label:
         en: Wake signal noise or glitch
         de: Wake-Signal mit Störungen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1187,6 +1493,15 @@
       label:
         en: Ignition switch contacts worn
         de: Zündschalterkontakte verschlissen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1220,6 +1535,15 @@
       label:
         en: Wiring or relay fault between supply and ignition path
         de: Verkabelungs- oder Relaisfehler zwischen Versorgung und Zündpfad
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1254,6 +1578,15 @@
       label:
         en: Wiring or relay fault
         de: Verkabelungs- oder Relaisfehler
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1288,6 +1621,15 @@
       label:
         en: Disable wire broken
         de: Disable-Leitung unterbrochen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1321,6 +1663,15 @@
       label:
         en: Wiring shorted to ground
         de: Verkabelung mit Masseschluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1354,6 +1705,15 @@
       label:
         en: Wiring shorted to battery
         de: Verkabelung mit Plus-Schluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1387,6 +1747,15 @@
       label:
         en: Feedback wire fault
         de: Rückmeldeleitung fehlerhaft
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1420,6 +1789,15 @@
       label:
         en: Wiring shorted to ground
         de: Verkabelung mit Masseschluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1453,6 +1831,15 @@
       label:
         en: Wiring shorted to battery
         de: Verkabelung mit Plus-Schluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1486,6 +1873,15 @@
       label:
         en: Wiring or relay fault
         de: Verkabelungs- oder Relaisfehler
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1519,6 +1915,15 @@
       label:
         en: Wiring or relay fault
         de: Verkabelungs- oder Relaisfehler
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1552,6 +1957,15 @@
       label:
         en: Wiring or relay fault
         de: Verkabelungs- oder Relaisfehler
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1585,6 +1999,15 @@
       label:
         en: Wiring or relay fault
         de: Verkabelungs- oder Relaisfehler
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1618,6 +2041,15 @@
       label:
         en: Wiring or relay fault
         de: Verkabelungs- oder Relaisfehler
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1651,6 +2083,15 @@
       label:
         en: Wiring or starter relay fault
         de: Verkabelung oder Anlasserrelais defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1684,6 +2125,15 @@
       label:
         en: Wiring or relay fault
         de: Verkabelungs- oder Relaisfehler
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1717,6 +2167,15 @@
       label:
         en: Wiring or relay fault
         de: Verkabelungs- oder Relaisfehler
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1755,6 +2214,15 @@
       label:
         en: Certificate expired or revoked
         de: Zertifikat abgelaufen oder widerrufen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -1788,6 +2256,15 @@
       label:
         en: Key not provisioned
         de: Schlüssel nicht eingespielt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -1821,6 +2298,15 @@
       label:
         en: Authentication code mismatch
         de: Authentifizierungs-Code stimmt nicht überein
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -1854,6 +2340,15 @@
       label:
         en: Authentication timing drift
         de: Timing der Authentifizierung gedriftet
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -1887,6 +2382,15 @@
       label:
         en: High resistance in supply path
         de: Hoher Übergangswiderstand im Versorgungspfad
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1921,6 +2425,15 @@
       label:
         en: Weak battery or high supply resistance
         de: Schwache Batterie oder hoher Versorgungswiderstand
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: easy
     diy_possible: true
@@ -1955,6 +2468,15 @@
       label:
         en: Alternator regulator failed (overvoltage)
         de: Lichtmaschinenregler defekt (Überspannung)
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -1989,6 +2511,15 @@
       label:
         en: Connector loose or corroded
         de: Stecker locker oder korrodiert
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -2023,6 +2554,15 @@
       label:
         en: High resistance in supply path
         de: Hoher Übergangswiderstand im Versorgungspfad
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -2057,6 +2597,15 @@
       label:
         en: Weak battery or high supply resistance
         de: Schwache Batterie oder hoher Versorgungswiderstand
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: easy
     diy_possible: true
@@ -2091,6 +2640,15 @@
       label:
         en: Alternator regulator failed
         de: Lichtmaschinenregler defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -2125,6 +2683,15 @@
       label:
         en: Connector loose or corroded
         de: Stecker locker oder korrodiert
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -2159,6 +2726,15 @@
       label:
         en: High resistance in supply path
         de: Hoher Übergangswiderstand im Versorgungspfad
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -2193,6 +2769,15 @@
       label:
         en: Weak battery or high supply resistance
         de: Schwache Batterie oder hoher Versorgungswiderstand
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: easy
     diy_possible: true
@@ -2227,6 +2812,15 @@
       label:
         en: Alternator regulator failed
         de: Lichtmaschinenregler defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -2261,6 +2855,15 @@
       label:
         en: Connector loose or corroded
         de: Stecker locker oder korrodiert
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -2295,6 +2898,15 @@
       label:
         en: Fan motor open
         de: Lüftermotor unterbrochen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -2328,6 +2940,15 @@
       label:
         en: Wiring shorted to ground
         de: Verkabelung mit Masseschluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -2361,6 +2982,15 @@
       label:
         en: Wiring shorted to battery
         de: Verkabelung mit Plus-Schluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -2393,6 +3023,15 @@
       label:
         en: Fan motor seized
         de: Lüftermotor festgefressen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: true
@@ -2426,6 +3065,15 @@
       label:
         en: Module not programmed after replacement
         de: Modul nach Tausch nicht programmiert
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -2464,6 +3112,15 @@
       label:
         en: Interlock pilot pin damaged
         de: Interlock-Pilotpin beschädigt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -2497,6 +3154,15 @@
       label:
         en: Intermittent contact in HV connector
         de: Sporadischer Kontakt im HV-Stecker
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -2531,6 +3197,15 @@
       label:
         en: Interlock wire shorted to ground
         de: Interlock-Leitung mit Masseschluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -2565,6 +3240,15 @@
       label:
         en: Interlock loop open (connector unmated)
         de: Interlock-Loop offen (Stecker abgezogen)
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -2599,6 +3283,15 @@
       label:
         en: HV connector not fully mated
         de: HV-Stecker nicht vollständig gesteckt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -2632,6 +3325,15 @@
       label:
         en: Intermittent contact in HV connector
         de: Sporadischer Kontakt im HV-Stecker
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -2666,6 +3368,15 @@
       label:
         en: Interlock wire shorted to ground
         de: Interlock-Leitung mit Masseschluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -2700,6 +3411,15 @@
       label:
         en: Interlock loop open (connector unmated)
         de: Interlock-Loop offen (Stecker abgezogen)
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -2734,6 +3454,15 @@
       label:
         en: HV connector not fully mated
         de: HV-Stecker nicht vollständig gesteckt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -2767,6 +3496,15 @@
       label:
         en: Intermittent contact in HV connector
         de: Sporadischer Kontakt im HV-Stecker
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -2801,6 +3539,15 @@
       label:
         en: Interlock wire shorted to ground
         de: Interlock-Leitung mit Masseschluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -2835,6 +3582,15 @@
       label:
         en: Interlock loop open (connector unmated)
         de: Interlock-Loop offen (Stecker abgezogen)
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -2869,6 +3625,15 @@
       label:
         en: HV connector not fully mated
         de: HV-Stecker nicht vollständig gesteckt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -2902,6 +3667,15 @@
       label:
         en: Intermittent contact in HV connector
         de: Sporadischer Kontakt im HV-Stecker
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -2936,6 +3710,15 @@
       label:
         en: Interlock wire shorted to ground
         de: Interlock-Leitung mit Masseschluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -2970,6 +3753,15 @@
       label:
         en: Interlock loop open
         de: Interlock-Loop offen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3004,6 +3796,15 @@
       label:
         en: HV connector not fully mated
         de: HV-Stecker nicht vollständig gesteckt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3037,6 +3838,15 @@
       label:
         en: Intermittent contact in HV connector
         de: Sporadischer Kontakt im HV-Stecker
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3071,6 +3881,15 @@
       label:
         en: Interlock wire shorted to ground
         de: Interlock-Leitung mit Masseschluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3105,6 +3924,15 @@
       label:
         en: Interlock loop open
         de: Interlock-Loop offen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3139,6 +3967,15 @@
       label:
         en: HV connector not fully mated
         de: HV-Stecker nicht vollständig gesteckt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3172,6 +4009,15 @@
       label:
         en: Intermittent contact in HV connector
         de: Sporadischer Kontakt im HV-Stecker
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3206,6 +4052,15 @@
       label:
         en: Interlock wire shorted to ground
         de: Interlock-Leitung mit Masseschluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3240,6 +4095,15 @@
       label:
         en: Interlock loop open
         de: Interlock-Loop offen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3274,6 +4138,15 @@
       label:
         en: HV connector not fully mated
         de: HV-Stecker nicht vollständig gesteckt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3307,6 +4180,15 @@
       label:
         en: Intermittent contact in HV connector
         de: Sporadischer Kontakt im HV-Stecker
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3341,6 +4223,15 @@
       label:
         en: Interlock wire shorted to ground
         de: Interlock-Leitung mit Masseschluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3375,6 +4266,15 @@
       label:
         en: Interlock loop open
         de: Interlock-Loop offen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3409,6 +4309,15 @@
       label:
         en: HV connector not fully mated
         de: HV-Stecker nicht vollständig gesteckt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3442,6 +4351,15 @@
       label:
         en: Intermittent contact in HV connector
         de: Sporadischer Kontakt im HV-Stecker
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3476,6 +4394,15 @@
       label:
         en: Interlock wire shorted to ground
         de: Interlock-Leitung mit Masseschluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3510,6 +4437,15 @@
       label:
         en: Interlock loop open
         de: Interlock-Loop offen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3544,6 +4480,15 @@
       label:
         en: HV connector not fully mated
         de: HV-Stecker nicht vollständig gesteckt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3577,6 +4522,15 @@
       label:
         en: Intermittent contact in HV connector
         de: Sporadischer Kontakt im HV-Stecker
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3611,6 +4565,15 @@
       label:
         en: Interlock wire shorted to ground
         de: Interlock-Leitung mit Masseschluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3645,6 +4608,15 @@
       label:
         en: Interlock loop open
         de: Interlock-Loop offen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3679,6 +4651,15 @@
       label:
         en: HV connector not fully mated
         de: HV-Stecker nicht vollständig gesteckt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3712,6 +4693,15 @@
       label:
         en: Intermittent contact in HV connector
         de: Sporadischer Kontakt im HV-Stecker
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3746,6 +4736,15 @@
       label:
         en: Interlock wire shorted to ground
         de: Interlock-Leitung mit Masseschluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3780,6 +4779,15 @@
       label:
         en: Interlock loop open
         de: Interlock-Loop offen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3814,6 +4822,15 @@
       label:
         en: HV connector not fully mated
         de: HV-Stecker nicht vollständig gesteckt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3847,6 +4864,15 @@
       label:
         en: Intermittent contact in HV connector
         de: Sporadischer Kontakt im HV-Stecker
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3881,6 +4907,15 @@
       label:
         en: Interlock wire shorted to ground
         de: Interlock-Leitung mit Masseschluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3915,6 +4950,15 @@
       label:
         en: Interlock loop open
         de: Interlock-Loop offen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3949,6 +4993,15 @@
       label:
         en: HV connector not fully mated
         de: HV-Stecker nicht vollständig gesteckt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -3982,6 +5035,15 @@
       label:
         en: Intermittent contact in HV connector
         de: Sporadischer Kontakt im HV-Stecker
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4016,6 +5078,15 @@
       label:
         en: Interlock wire shorted to ground
         de: Interlock-Leitung mit Masseschluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4050,6 +5121,15 @@
       label:
         en: Interlock loop open
         de: Interlock-Loop offen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4084,6 +5164,15 @@
       label:
         en: HV connector not fully mated
         de: HV-Stecker nicht vollständig gesteckt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4117,6 +5206,15 @@
       label:
         en: Intermittent contact in HV connector
         de: Sporadischer Kontakt im HV-Stecker
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4151,6 +5249,15 @@
       label:
         en: Interlock wire shorted to ground
         de: Interlock-Leitung mit Masseschluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4185,6 +5292,15 @@
       label:
         en: Interlock loop open
         de: Interlock-Loop offen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4219,6 +5335,15 @@
       label:
         en: HV connector not fully mated
         de: HV-Stecker nicht vollständig gesteckt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4252,6 +5377,15 @@
       label:
         en: Intermittent contact in HV connector
         de: Sporadischer Kontakt im HV-Stecker
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4286,6 +5420,15 @@
       label:
         en: Interlock wire shorted to ground
         de: Interlock-Leitung mit Masseschluss
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4320,6 +5463,15 @@
       label:
         en: Interlock loop open
         de: Interlock-Loop offen
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4354,6 +5506,15 @@
       label:
         en: Pressure sensor failed
         de: Drucksensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4387,6 +5548,15 @@
       label:
         en: Temperature sensor failed
         de: Temperatursensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4421,6 +5591,15 @@
       label:
         en: Temperature sensor failed
         de: Temperatursensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4455,6 +5634,15 @@
       label:
         en: Temperature sensor failed
         de: Temperatursensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4489,6 +5677,15 @@
       label:
         en: Temperature sensor failed
         de: Temperatursensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4523,6 +5720,15 @@
       label:
         en: Temperature sensor failed
         de: Temperatursensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4557,6 +5763,15 @@
       label:
         en: Temperature sensor failed
         de: Temperatursensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4591,6 +5806,15 @@
       label:
         en: Valve solenoid failed
         de: Ventil-Magnetspule defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4625,6 +5849,15 @@
       label:
         en: Enable wire open or relay failed
         de: Freigabeleitung unterbrochen oder Relais defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4658,6 +5891,15 @@
       label:
         en: Valve stuck mechanically
         de: Ventil mechanisch klemmend
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4692,6 +5934,15 @@
       label:
         en: Valve solenoid failed
         de: Ventil-Magnetspule defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4726,6 +5977,15 @@
       label:
         en: Enable wire open or relay failed
         de: Freigabeleitung unterbrochen oder Relais defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4759,6 +6019,15 @@
       label:
         en: Valve stuck mechanically
         de: Ventil mechanisch klemmend
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4793,6 +6062,15 @@
       label:
         en: Valve solenoid failed
         de: Ventil-Magnetspule defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4827,6 +6105,15 @@
       label:
         en: Enable wire open or relay failed
         de: Freigabeleitung unterbrochen oder Relais defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4860,6 +6147,15 @@
       label:
         en: Valve electrical or mechanical failure
         de: Ventil elektrisch oder mechanisch defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4893,6 +6189,15 @@
       label:
         en: Sensor failed
         de: Sensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4926,6 +6231,15 @@
       label:
         en: Sensor failed
         de: Sensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4960,6 +6274,15 @@
       label:
         en: Sensor failed
         de: Sensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4994,6 +6317,15 @@
       label:
         en: Sensor failed
         de: Sensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5027,6 +6359,15 @@
       label:
         en: Sensor failed
         de: Sensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5061,6 +6402,15 @@
       label:
         en: Sensor failed
         de: Sensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5095,6 +6445,15 @@
       label:
         en: Valve actuator failed
         de: Ventil-Aktuator defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5128,6 +6487,15 @@
       label:
         en: Position sensor failed
         de: Positionssensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5161,6 +6529,15 @@
       label:
         en: Valve actuator failed
         de: Ventil-Aktuator defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5193,6 +6570,15 @@
       label:
         en: Valve electrical or mechanical failure
         de: Ventil elektrisch oder mechanisch defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5226,6 +6612,15 @@
       label:
         en: Position sensor failed
         de: Positionssensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5259,6 +6654,15 @@
       label:
         en: Sensor failed
         de: Sensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5293,6 +6697,15 @@
       label:
         en: Sensor failed
         de: Sensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5327,6 +6740,15 @@
       label:
         en: Sensor failed
         de: Sensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5361,6 +6783,15 @@
       label:
         en: Sensor failed
         de: Sensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5395,6 +6826,15 @@
       label:
         en: Valve actuator failed
         de: Ventil-Aktuator defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5427,6 +6867,15 @@
       label:
         en: Valve electrical or mechanical failure
         de: Ventil elektrisch oder mechanisch defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5460,6 +6909,15 @@
       label:
         en: Valve actuator failed
         de: Ventil-Aktuator defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5492,6 +6950,15 @@
       label:
         en: Valve electrical or mechanical failure
         de: Ventil elektrisch oder mechanisch defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5525,6 +6992,15 @@
       label:
         en: Valve actuator failed
         de: Ventil-Aktuator defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5557,6 +7033,15 @@
       label:
         en: Valve electrical or mechanical failure
         de: Ventil elektrisch oder mechanisch defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5590,6 +7075,15 @@
       label:
         en: Heater relay failed
         de: Heizungsrelais defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: false
@@ -5623,6 +7117,15 @@
       label:
         en: Heater relay failed
         de: Heizungsrelais defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: medium
     diy_possible: false
@@ -5656,6 +7159,15 @@
       label:
         en: Sensor failed
         de: Sensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5689,6 +7201,15 @@
       label:
         en: Sensor failed
         de: Sensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5723,6 +7244,15 @@
       label:
         en: Sensor failed
         de: Sensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5757,6 +7287,15 @@
       label:
         en: Valve actuator failed
         de: Ventil-Aktuator defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5789,6 +7328,15 @@
       label:
         en: Valve electrical or mechanical failure
         de: Ventil elektrisch oder mechanisch defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5822,6 +7370,15 @@
       label:
         en: Position sensor failed
         de: Positionssensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5855,6 +7412,15 @@
       label:
         en: Sensor failed
         de: Sensor defekt
+  symptoms:
+    - en: 'Multiple warning lights may illuminate'
+      de: 'Mehrere Warnleuchten können aufleuchten'
+    - en: 'Affected modules may go into limp mode or shut down'
+      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
+    - en: 'Specific functions inoperative depending on module'
+      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
+    - en: 'Diagnostic tools may show communication faults'
+      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
   repair:
     difficulty: hard
     diy_possible: false

@@ -4638,6 +4638,15 @@
       label:
         en: Temperature sensor failed
         de: Temperatursensor defekt
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4671,6 +4680,15 @@
       label:
         en: Sensor reading drifted
         de: Sensorwert verschoben
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4705,6 +4723,15 @@
       label:
         en: Signal wire shorted to ground
         de: Signalleitung mit Masseschluss
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: medium
     diy_possible: true
@@ -4739,6 +4766,15 @@
       label:
         en: Signal wire open
         de: Signalleitung unterbrochen
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: medium
     diy_possible: true
@@ -4773,6 +4809,15 @@
       label:
         en: Temperature sensor failed
         de: Temperatursensor defekt
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4806,6 +4851,15 @@
       label:
         en: Sensor reading drifted
         de: Sensorwert verschoben
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4840,6 +4894,15 @@
       label:
         en: Signal wire shorted to ground
         de: Signalleitung mit Masseschluss
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: medium
     diy_possible: true
@@ -4874,6 +4937,15 @@
       label:
         en: Signal wire open
         de: Signalleitung unterbrochen
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: medium
     diy_possible: true
@@ -4908,6 +4980,15 @@
       label:
         en: Position sensor failed
         de: Positionssensor defekt
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4941,6 +5022,15 @@
       label:
         en: Sensor reading drifted
         de: Sensorwert verschoben
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: hard
     diy_possible: false
@@ -4975,6 +5065,15 @@
       label:
         en: Signal wire shorted to ground
         de: Signalleitung mit Masseschluss
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: medium
     diy_possible: true
@@ -5009,6 +5108,15 @@
       label:
         en: Signal wire open
         de: Signalleitung unterbrochen
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: medium
     diy_possible: true
@@ -5043,6 +5151,15 @@
       label:
         en: Position sensor failed
         de: Positionssensor defekt
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5076,6 +5193,15 @@
       label:
         en: Sensor reading drifted
         de: Sensorwert verschoben
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5110,6 +5236,15 @@
       label:
         en: Signal wire shorted to ground
         de: Signalleitung mit Masseschluss
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: medium
     diy_possible: true
@@ -5144,6 +5279,15 @@
       label:
         en: Signal wire open
         de: Signalleitung unterbrochen
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: medium
     diy_possible: true
@@ -5178,6 +5322,15 @@
       label:
         en: Temperature sensor failed
         de: Temperatursensor defekt
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5211,6 +5364,15 @@
       label:
         en: Sensor reading drifted
         de: Sensorwert verschoben
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5245,6 +5407,15 @@
       label:
         en: Signal wire shorted to ground
         de: Signalleitung mit Masseschluss
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: medium
     diy_possible: true
@@ -5279,6 +5450,15 @@
       label:
         en: Signal wire open
         de: Signalleitung unterbrochen
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: medium
     diy_possible: true
@@ -5313,6 +5493,15 @@
       label:
         en: Temperature sensor failed
         de: Temperatursensor defekt
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5346,6 +5535,15 @@
       label:
         en: Sensor reading drifted
         de: Sensorwert verschoben
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5380,6 +5578,15 @@
       label:
         en: Signal wire shorted to ground
         de: Signalleitung mit Masseschluss
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: medium
     diy_possible: true
@@ -5414,6 +5621,15 @@
       label:
         en: Signal wire open
         de: Signalleitung unterbrochen
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: medium
     diy_possible: true
@@ -5448,6 +5664,15 @@
       label:
         en: Position sensor failed
         de: Positionssensor defekt
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5481,6 +5706,15 @@
       label:
         en: Sensor reading drifted
         de: Sensorwert verschoben
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5515,6 +5749,15 @@
       label:
         en: Signal wire shorted to ground
         de: Signalleitung mit Masseschluss
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: medium
     diy_possible: true
@@ -5549,6 +5792,15 @@
       label:
         en: Signal wire open
         de: Signalleitung unterbrochen
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: medium
     diy_possible: true
@@ -5583,6 +5835,15 @@
       label:
         en: Position sensor failed
         de: Positionssensor defekt
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5616,6 +5877,15 @@
       label:
         en: Sensor reading drifted
         de: Sensorwert verschoben
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5650,6 +5920,15 @@
       label:
         en: Signal wire shorted to ground
         de: Signalleitung mit Masseschluss
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: medium
     diy_possible: true
@@ -5684,6 +5963,15 @@
       label:
         en: Signal wire open
         de: Signalleitung unterbrochen
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: medium
     diy_possible: true
@@ -5723,6 +6011,15 @@
       label:
         en: Actuator mechanically seized, drawing high current
         de: Aktuator mechanisch festgefressen, hoher Strom
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5757,6 +6054,15 @@
       label:
         en: Short circuit in actuator wiring or coil
         de: Kurzschluss in Aktuator-Verkabelung oder Spule
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5791,6 +6097,15 @@
       label:
         en: Short circuit in actuator wiring or coil
         de: Kurzschluss in Aktuator-Verkabelung oder Spule
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5825,6 +6140,15 @@
       label:
         en: Short circuit in actuator wiring or coil
         de: Kurzschluss in Aktuator-Verkabelung oder Spule
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: hard
     diy_possible: false
@@ -5858,6 +6182,15 @@
       label:
         en: Module internal fault
         de: Interner Modulfehler
+  symptoms:
+    - en: 'Check engine light on'
+      de: 'Motorkontrollleuchte an'
+    - en: 'Power loss especially in mid-rpm range'
+      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
+    - en: 'Possible rough idle or stalling'
+      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
+    - en: 'Increased fuel consumption'
+      de: 'Erhöhter Kraftstoffverbrauch'
   repair:
     difficulty: hard
     diy_possible: false

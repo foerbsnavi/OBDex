@@ -103,6 +103,17 @@
       "items": { "type": "string", "pattern": "^[PBCU][0-3][0-9A-F]{3}$" },
       "uniqueItems": true
     },
+    "symptoms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["en"],
+        "patternProperties": {
+          "^[a-z]{2}$": { "type": "string", "minLength": 3, "maxLength": 200 }
+        },
+        "additionalProperties": false
+      }
+    },
     "references": {
       "type": "array",
       "items": { "type": "string" }
