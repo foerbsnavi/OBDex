@@ -8,12 +8,13 @@
 
 If you are looking up a P-, B-, C- or U-code from your scan tool, this is a single source you can read, fork, and embed without paywalls or per-API fees.
 
+> **Status: 9,533 / 9,533 codes fully described — 100 % across all seven families (P0, P2, P3, U0, U3, B0, C0).** No stubs left; the dataset is complete.
+
 ## What you get
 
-- **All 9,533 generic codes** of the SAE J2012 / ISO 15031-6 standard in one repository.
-- **Plain English and German descriptions**, written from public sources, on every enriched code — **9,533 / 9,533 = 100% complete across all seven families.**
-- **Per code:** title, description, affected components, common causes with likelihood, repair difficulty + cost + hours, MIL/emissions/limp-mode flags, sources.
-- **132 OBD-II PIDs** (Mode 01 + Mode 09) with formulas and units.
+- **All 9,533 generic codes** of the SAE J2012 / ISO 15031-6 standard in one repository, every one with the full schema.
+- **Plain English and German** title, description, affected components, common causes with likelihood, repair difficulty + cost + hours, MIL / emissions / limp-mode flags, and sources — for every single code.
+- **132 OBD-II PIDs** (Mode 01 + Mode 09) with formulas, units, and ranges.
 - **CC0 data, MIT tooling.** Use it in your scan-tool app, garage software, training material — no attribution required, no licence fee.
 - **Static JSON over CDN.** No API key, no rate limit, no account.
 
@@ -82,8 +83,6 @@ Two ways to explore the dataset:
     - https://en.wikipedia.org/wiki/Catalytic_converter
 ```
 
-Stub entries are minimal: `code`, `category`, `title.en`, `sources`. Always schema-valid; enriched progressively.
-
 ## Develop locally
 
 ```bash
@@ -101,26 +100,33 @@ Requires Node.js ≥ 20.
 ```
 data/
 ├── generic/                          SAE J2012 codes, valid for all OBD-II vehicles
-│   ├── <family>xxx_enriched.yaml     full schema (P0/P2/P3/U0/U3/B0/C0)
-│   └── <family>xxx_stub.yaml         minimum schema, awaiting enrichment
+│   └── <family>xxx_enriched.yaml     full schema, one file per family (P0/P2/P3/U0/U3/B0/C0)
 └── pids/                             Live data parameter IDs (Mode 01, 09, …)
 
 schema/                               JSON Schema (Draft 2020-12)
 tools/                                Node.js validation + build scripts
 ```
 
-Each generic-DTC family has at most two files — `_enriched.yaml` for fully described codes, `_stub.yaml` for minimum-schema entries. The build reads both recursively, so consumers see one merged dataset in `dist/`.
+Each generic-DTC family lives in a single `_enriched.yaml` file. The build reads them all and emits one merged dataset in `dist/`.
 
 ## Coverage
 
-Each code is at one of two depths:
+| Family | Codes | Enriched |
+|--------|------:|---------:|
+| P0 — Powertrain | 3,705 | 100 % |
+| P2 — Powertrain (SAE) | 3,495 | 100 % |
+| P3 — Powertrain (mixed) | 155 | 100 % |
+| B0 — Body | 323 | 100 % |
+| C0 — Chassis | 626 | 100 % |
+| U0 — Network | 1,055 | 100 % |
+| U3 — Network (HV / FCEV) | 174 | 100 % |
+| **Total** | **9,533** | **100 %** |
 
-- **enriched** — full schema: English+German title, description, affected components, common causes (with likelihood), repair difficulty/cost/hours, flags, references, sources.
-- **indexed** — minimum schema: code, category, English title, source. Always passes validation, but no diagnostic detail yet. Indexed entries are progressively converted to enriched in subsequent waves.
+Every code carries the full schema: English + German title and description, affected components, common causes with likelihood, repair difficulty / cost / hours, MIL / emissions / limp-mode flags, and at least one public source.
 
-Live counts per family are in [`meta.json`](https://foerbsnavi.github.io/obdex/meta.json) and visualised on the [landing page](https://foerbsnavi.github.io/obdex/). **All seven families (P0, P2, P3, U0, U3, B0, C0) are at 100% enriched** — the dataset is complete.
+The 132 PIDs (Mode 01 + Mode 09) are all complete with formula, unit, and range where applicable.
 
-PIDs (Mode 01 + Mode 09) are all extensive — formula, unit, range where applicable.
+Live counts are also in [`meta.json`](https://foerbsnavi.github.io/obdex/meta.json) and visualised on the [landing page](https://foerbsnavi.github.io/obdex/).
 
 ## Maintainer notes
 
