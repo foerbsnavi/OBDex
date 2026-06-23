@@ -428,8 +428,8 @@
     en: Control Module Ground A
     de: Steuermodul Masse A
   description:
-    en: The control module detects a problem on its ground reference A — open ground, high resistance to chassis, or floating ground potential.
-    de: Das Steuermodul erkennt ein Problem an seiner Masse-Referenz A — offene Masse, hoher Übergangswiderstand zur Karosserie oder schwebendes Massepotential.
+    en: 'Control Module Ground A: the control module has detected this fault condition.'
+    de: 'Steuermodul Masse A: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - module_ground_a
     - ground_strap
@@ -481,8 +481,8 @@
     en: Control Module Ground B
     de: Steuermodul Masse B
   description:
-    en: 'The control module detects a problem on its ground reference A — open ground, high resistance to chassis, or floating ground potential.'
-    de: 'Das Steuermodul erkennt ein Problem an seiner Masse-Referenz A — offene Masse, hoher Übergangswiderstand zur Karosserie oder schwebendes Massepotential.'
+    en: 'Control Module Ground B: the control module has detected this fault condition.'
+    de: 'Steuermodul Masse B: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - module_ground_b
     - ground_strap
@@ -1844,8 +1844,8 @@
     en: Control Module Input Power Circuit A - Ignition Input On/Start Circuit Correlation
     de: Steuermodul Versorgung A zu Zündung Ein/Start Korrelation
   description:
-    en: Implausible relationship between input power line A and the ON/START ignition signal — power present without ignition active, or vice versa.
-    de: Unplausible Beziehung zwischen Versorgungsspannung A und dem EIN/START-Zündungssignal — Spannung anliegend ohne aktive Zündung oder umgekehrt.
+    en: 'Control Module Input Power Circuit A - Ignition Input On/Start Circuit Correlation: the value does not correlate with the related sensor or expected pattern.'
+    de: 'Steuermodul Versorgung A zu Zündung Ein/Start Korrelation: der Wert stimmt nicht mit dem zugehörigen Sensor oder dem erwarteten Muster überein.'
   affected_components:
     - module_power_a
     - ignition_input
@@ -1897,8 +1897,8 @@
     en: Control Module Input Power Circuit B - Ignition Input On/Start Circuit Correlation
     de: Steuermodul Versorgung B zu Zündung Ein/Start Korrelation
   description:
-    en: 'Implausible relationship between input power line A and the ON/START ignition signal — power present without ignition active, or vice versa.'
-    de: 'Unplausible Beziehung zwischen Versorgungsspannung A und dem EIN/START-Zündungssignal — Spannung anliegend ohne aktive Zündung oder umgekehrt.'
+    en: 'Control Module Input Power Circuit B - Ignition Input On/Start Circuit Correlation: the value does not correlate with the related sensor or expected pattern.'
+    de: 'Steuermodul Versorgung B zu Zündung Ein/Start Korrelation: der Wert stimmt nicht mit dem zugehörigen Sensor oder dem erwarteten Muster überein.'
   affected_components:
     - module_power_b
     - ignition_input
@@ -2886,8 +2886,8 @@
     en: Control Module Input Power A Circuit Range/Performance
     de: Steuermodul Versorgungsspannung A Bereich/Leistung
   description:
-    en: Input power line A voltage is electrically within range but does not match expected behavior — drift, slow rise/fall, or instability.
-    de: Spannung der Versorgungsleitung A liegt im elektrischen Bereich, entspricht aber nicht dem Sollverhalten — Drift, langsamer Anstieg/Abfall oder instabil.
+    en: 'Control Module Input Power A Circuit Range/Performance: the signal is implausible or outside the valid range.'
+    de: 'Steuermodul Versorgungsspannung A Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs.'
   affected_components:
     - module_power_a
     - power_wiring
@@ -3098,8 +3098,8 @@
     en: Control Module Input Power B Circuit Range/Performance
     de: Steuermodul Versorgungsspannung B Bereich/Leistung
   description:
-    en: 'Input power line A voltage is electrically within range but does not match expected behavior — drift, slow rise/fall, or instability.'
-    de: 'Spannung der Versorgungsleitung A liegt im elektrischen Bereich, entspricht aber nicht dem Sollverhalten — Drift, langsamer Anstieg/Abfall oder instabil.'
+    en: 'Control Module Input Power B Circuit Range/Performance: the signal is implausible or outside the valid range.'
+    de: 'Steuermodul Versorgungsspannung B Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs.'
   affected_components:
     - module_power_b
     - power_wiring
@@ -3310,8 +3310,8 @@
     en: Control Module Input Power C Circuit Range/Performance
     de: Steuermodul Versorgungsspannung C Bereich/Leistung
   description:
-    en: 'Input power line A voltage is electrically within range but does not match expected behavior — drift, slow rise/fall, or instability.'
-    de: 'Spannung der Versorgungsleitung A liegt im elektrischen Bereich, entspricht aber nicht dem Sollverhalten — Drift, langsamer Anstieg/Abfall oder instabil.'
+    en: 'Control Module Input Power C Circuit Range/Performance: the signal is implausible or outside the valid range.'
+    de: 'Steuermodul Versorgungsspannung C Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs.'
   affected_components:
     - module_power_c
     - power_wiring
@@ -6787,8 +6787,8 @@
     en: Hydrogen Tank A Temperature Sensor 1 Circuit
     de: Wasserstofftank A Temperatursensor 1 Schaltkreis
   description:
-    en: Generic electrical fault on temperature sensor 1 of hydrogen tank A. Temperature is needed to compute mass from pressure (PV=nRT).
-    de: Allgemeiner elektrischer Fehler am Temperatursensor 1 des Wasserstofftanks A. Die Temperatur wird zur Berechnung der Masse aus dem Druck benötigt (PV=nRT).
+    en: 'Hydrogen Tank A Temperature Sensor 1 Circuit: an electrical fault is present in the circuit.'
+    de: 'Wasserstofftank A Temperatursensor 1 Schaltkreis: im Stromkreis liegt ein elektrischer Fehler vor.'
   affected_components:
     - h2_tank_a_temp_sensor_1
     - sensor_wiring
@@ -6840,8 +6840,8 @@
     en: Hydrogen Tank A Temperature Sensor 2 Circuit
     de: Wasserstofftank A Temperatursensor 2 Schaltkreis
   description:
-    en: 'Generic electrical fault on temperature sensor 2 of hydrogen tank A. Temperature is needed to compute mass from pressure (PV=nRT).'
-    de: 'Allgemeiner elektrischer Fehler am Temperatursensor 2 des Wasserstofftanks A. Die Temperatur wird zur Berechnung der Masse aus dem Druck benötigt (PV=nRT).'
+    en: 'Hydrogen Tank A Temperature Sensor 2 Circuit: an electrical fault is present in the circuit.'
+    de: 'Wasserstofftank A Temperatursensor 2 Schaltkreis: im Stromkreis liegt ein elektrischer Fehler vor.'
   affected_components:
     - h2_tank_a_temp_sensor_2
     - sensor_wiring
@@ -6893,8 +6893,8 @@
     en: Hydrogen Tank B Temperature Sensor 1 Circuit
     de: Wasserstofftank B Temperatursensor 1 Schaltkreis
   description:
-    en: 'Generic electrical fault on temperature sensor 1 of hydrogen tank A. Temperature is needed to compute mass from pressure (PV=nRT).'
-    de: 'Allgemeiner elektrischer Fehler am Temperatursensor 1 des Wasserstofftanks A. Die Temperatur wird zur Berechnung der Masse aus dem Druck benötigt (PV=nRT).'
+    en: 'Hydrogen Tank B Temperature Sensor 1 Circuit: an electrical fault is present in the circuit.'
+    de: 'Wasserstofftank B Temperatursensor 1 Schaltkreis: im Stromkreis liegt ein elektrischer Fehler vor.'
   affected_components:
     - h2_tank_b_temp_sensor_1
     - sensor_wiring
@@ -6946,8 +6946,8 @@
     en: Hydrogen Tank B Temperature Sensor 2 Circuit
     de: Wasserstofftank B Temperatursensor 2 Schaltkreis
   description:
-    en: 'Generic electrical fault on temperature sensor 2 of hydrogen tank A. Temperature is needed to compute mass from pressure (PV=nRT).'
-    de: 'Allgemeiner elektrischer Fehler am Temperatursensor 2 des Wasserstofftanks A. Die Temperatur wird zur Berechnung der Masse aus dem Druck benötigt (PV=nRT).'
+    en: 'Hydrogen Tank B Temperature Sensor 2 Circuit: an electrical fault is present in the circuit.'
+    de: 'Wasserstofftank B Temperatursensor 2 Schaltkreis: im Stromkreis liegt ein elektrischer Fehler vor.'
   affected_components:
     - h2_tank_b_temp_sensor_2
     - sensor_wiring
@@ -6999,8 +6999,8 @@
     en: Hydrogen Tank C Temperature Sensor 1 Circuit
     de: Wasserstofftank C Temperatursensor 1 Schaltkreis
   description:
-    en: 'Generic electrical fault on temperature sensor 1 of hydrogen tank A. Temperature is needed to compute mass from pressure (PV=nRT).'
-    de: 'Allgemeiner elektrischer Fehler am Temperatursensor 1 des Wasserstofftanks A. Die Temperatur wird zur Berechnung der Masse aus dem Druck benötigt (PV=nRT).'
+    en: 'Hydrogen Tank C Temperature Sensor 1 Circuit: an electrical fault is present in the circuit.'
+    de: 'Wasserstofftank C Temperatursensor 1 Schaltkreis: im Stromkreis liegt ein elektrischer Fehler vor.'
   affected_components:
     - h2_tank_c_temp_sensor_1
     - sensor_wiring
@@ -7052,8 +7052,8 @@
     en: Hydrogen Tank C Temperature Sensor 2 Circuit
     de: Wasserstofftank C Temperatursensor 2 Schaltkreis
   description:
-    en: 'Generic electrical fault on temperature sensor 2 of hydrogen tank A. Temperature is needed to compute mass from pressure (PV=nRT).'
-    de: 'Allgemeiner elektrischer Fehler am Temperatursensor 2 des Wasserstofftanks A. Die Temperatur wird zur Berechnung der Masse aus dem Druck benötigt (PV=nRT).'
+    en: 'Hydrogen Tank C Temperature Sensor 2 Circuit: an electrical fault is present in the circuit.'
+    de: 'Wasserstofftank C Temperatursensor 2 Schaltkreis: im Stromkreis liegt ein elektrischer Fehler vor.'
   affected_components:
     - h2_tank_c_temp_sensor_2
     - sensor_wiring
@@ -7105,8 +7105,8 @@
     en: Hydrogen Tank A Valve Control Circuit
     de: Wasserstofftank A Ventilsteuerung Schaltkreis
   description:
-    en: 'Generic electrical fault on the control circuit of the hydrogen tank A shut-off valve. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Allgemeiner elektrischer Fehler am Steuerschaltkreis des Absperrventils von Wasserstofftank A. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: 'Hydrogen Tank A Valve Control Circuit: the control circuit has an electrical fault.'
+    de: 'Wasserstofftank A Ventilsteuerung Schaltkreis: im Steuerkreis liegt ein elektrischer Fehler vor.'
   affected_components:
     - h2_tank_a_valve
     - valve_wiring
@@ -7158,8 +7158,8 @@
     en: Hydrogen Tank A Valve Enable Circuit
     de: Wasserstofftank A Ventil-Freigabeschaltkreis
   description:
-    en: Fault on the enable line that authorises the hydrogen tank A valve to open. Used as redundant safety release.
-    de: Fehler an der Freigabeleitung, die das Öffnen des Tank-A-Ventils freigibt. Wird als redundante Sicherheitsfreigabe genutzt.
+    en: 'Hydrogen Tank A Valve Enable Circuit: an electrical fault is present in the circuit.'
+    de: 'Wasserstofftank A Ventil-Freigabeschaltkreis: im Stromkreis liegt ein elektrischer Fehler vor.'
   affected_components:
     - h2_tank_a_valve_enable
     - safety_circuit
@@ -7211,8 +7211,8 @@
     en: Hydrogen Tank A Valve Performance
     de: Wasserstofftank A Ventil Leistung
   description:
-    en: Hydrogen tank A valve does not open or close as commanded — mechanical failure detected via downstream pressure feedback.
-    de: Tank-A-Ventil öffnet oder schließt nicht erwartungsgemäß — mechanischer Fehler durch nachgelagerte Druckrückmeldung erkannt.
+    en: 'Hydrogen Tank A Valve Performance: the component is electrically intact but its response does not match the command.'
+    de: 'Wasserstofftank A Ventil Leistung: das Bauteil ist elektrisch in Ordnung, reagiert aber nicht wie vorgegeben.'
   affected_components:
     - h2_tank_a_valve
   common_causes:
@@ -7263,8 +7263,8 @@
     en: Hydrogen Tank B Valve Control Circuit
     de: Wasserstofftank B Ventilsteuerung Schaltkreis
   description:
-    en: 'Generic electrical fault on the control circuit of the hydrogen tank A shut-off valve. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Allgemeiner elektrischer Fehler am Steuerschaltkreis des Absperrventils von Wasserstofftank A. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: 'Hydrogen Tank B Valve Control Circuit: the control circuit has an electrical fault.'
+    de: 'Wasserstofftank B Ventilsteuerung Schaltkreis: im Steuerkreis liegt ein elektrischer Fehler vor.'
   affected_components:
     - h2_tank_b_valve
     - valve_wiring
@@ -7316,8 +7316,8 @@
     en: Hydrogen Tank B Valve Enable Circuit
     de: Wasserstofftank B Ventil-Freigabeschaltkreis
   description:
-    en: 'Fault on the enable line that authorises the hydrogen tank A valve to open. Used as redundant safety release.'
-    de: 'Fehler an der Freigabeleitung, die das Öffnen des Tank-A-Ventils freigibt. Wird als redundante Sicherheitsfreigabe genutzt.'
+    en: 'Hydrogen Tank B Valve Enable Circuit: an electrical fault is present in the circuit.'
+    de: 'Wasserstofftank B Ventil-Freigabeschaltkreis: im Stromkreis liegt ein elektrischer Fehler vor.'
   affected_components:
     - h2_tank_b_valve_enable
     - safety_circuit
@@ -7369,8 +7369,8 @@
     en: Hydrogen Tank B Valve Performance
     de: Wasserstofftank B Ventil Leistung
   description:
-    en: 'Hydrogen tank A valve does not open or close as commanded — mechanical failure detected via downstream pressure feedback.'
-    de: 'Tank-A-Ventil öffnet oder schließt nicht erwartungsgemäß — mechanischer Fehler durch nachgelagerte Druckrückmeldung erkannt.'
+    en: 'Hydrogen Tank B Valve Performance: the component is electrically intact but its response does not match the command.'
+    de: 'Wasserstofftank B Ventil Leistung: das Bauteil ist elektrisch in Ordnung, reagiert aber nicht wie vorgegeben.'
   affected_components:
     - h2_tank_b_valve
   common_causes:
@@ -7421,8 +7421,8 @@
     en: Hydrogen Tank C Valve Control Circuit
     de: Wasserstofftank C Ventilsteuerung Schaltkreis
   description:
-    en: 'Generic electrical fault on the control circuit of the hydrogen tank A shut-off valve. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Allgemeiner elektrischer Fehler am Steuerschaltkreis des Absperrventils von Wasserstofftank A. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: 'Hydrogen Tank C Valve Control Circuit: the control circuit has an electrical fault.'
+    de: 'Wasserstofftank C Ventilsteuerung Schaltkreis: im Steuerkreis liegt ein elektrischer Fehler vor.'
   affected_components:
     - h2_tank_c_valve
     - valve_wiring
@@ -7474,8 +7474,8 @@
     en: Hydrogen Tank C Valve Enable Circuit
     de: Wasserstofftank C Ventil-Freigabeschaltkreis
   description:
-    en: 'Fault on the enable line that authorises the hydrogen tank A valve to open. Used as redundant safety release.'
-    de: 'Fehler an der Freigabeleitung, die das Öffnen des Tank-A-Ventils freigibt. Wird als redundante Sicherheitsfreigabe genutzt.'
+    en: 'Hydrogen Tank C Valve Enable Circuit: an electrical fault is present in the circuit.'
+    de: 'Wasserstofftank C Ventil-Freigabeschaltkreis: im Stromkreis liegt ein elektrischer Fehler vor.'
   affected_components:
     - h2_tank_c_valve_enable
     - safety_circuit
@@ -8674,8 +8674,8 @@
     en: Anode Drain Valve Heater Relay Control Circuit
     de: Anoden-Ablassventil-Heizung Relais-Steuerschaltkreis
   description:
-    en: Generic electrical fault on the heater relay for the anode drain valve. The heater prevents drain water from freezing in cold weather.
-    de: Allgemeiner elektrischer Fehler am Heizungsrelais des Anoden-Ablassventils. Die Heizung verhindert das Einfrieren des Ablasswassers bei Kälte.
+    en: 'Anode Drain Valve Heater Relay Control Circuit: the control circuit has an electrical fault.'
+    de: 'Anoden-Ablassventil-Heizung Relais-Steuerschaltkreis: im Steuerkreis liegt ein elektrischer Fehler vor.'
   affected_components:
     - anode_drain_heater_relay
     - relay_wiring
@@ -8726,8 +8726,8 @@
     en: Anode Header Drain Valve Heater Relay Control Circuit
     de: Anoden-Sammler-Ablassventil-Heizung Relais-Steuerschaltkreis
   description:
-    en: 'Generic electrical fault on the heater relay for the anode drain valve. The heater prevents drain water from freezing in cold weather.'
-    de: 'Allgemeiner elektrischer Fehler am Heizungsrelais des Anoden-Ablassventils. Die Heizung verhindert das Einfrieren des Ablasswassers bei Kälte.'
+    en: 'Anode Header Drain Valve Heater Relay Control Circuit: the control circuit has an electrical fault.'
+    de: 'Anoden-Sammler-Ablassventil-Heizung Relais-Steuerschaltkreis: im Steuerkreis liegt ein elektrischer Fehler vor.'
   affected_components:
     - anode_header_drain_heater_relay
     - relay_wiring

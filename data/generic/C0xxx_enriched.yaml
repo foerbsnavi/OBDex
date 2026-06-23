@@ -5789,8 +5789,8 @@
     en: Left Front ABS Inlet Solenoid Circuit
     de: ABS-Einlassventil vorne links Schaltung
   description:
-    en: The ABS control module has detected an electrical fault in the inlet solenoid for the left front brake circuit. The solenoid isolates the wheel circuit from master cylinder pressure during ABS regulation.
-    de: Das ABS-Steuergerät hat einen elektrischen Fehler am Einlassventil des linken vorderen Bremskreises erkannt. Das Ventil trennt während der ABS-Regelung den Radkreis vom Hauptbremszylinderdruck.
+    en: 'Left Front ABS Inlet Solenoid Circuit: an electrical fault is present in the circuit.'
+    de: 'ABS-Einlassventil vorne links Schaltung: im Stromkreis liegt ein elektrischer Fehler vor.'
   affected_components:
     - abs_inlet_solenoid
     - abs_hydraulic_unit
@@ -5837,8 +5837,8 @@
     en: Left Front ABS Outlet Solenoid Circuit
     de: ABS-Auslassventil vorne links Schaltung
   description:
-    en: The ABS control module has detected an electrical fault in the outlet solenoid for the left front brake circuit. The outlet valve releases brake pressure to the low-pressure accumulator during ABS regulation.
-    de: Das ABS-Steuergerät hat einen elektrischen Fehler am Auslassventil des linken vorderen Bremskreises erkannt. Das Auslassventil baut während der ABS-Regelung Bremsdruck zum Niederdruckspeicher ab.
+    en: 'Left Front ABS Outlet Solenoid Circuit: an electrical fault is present in the circuit.'
+    de: 'ABS-Auslassventil vorne links Schaltung: im Stromkreis liegt ein elektrischer Fehler vor.'
   affected_components:
     - abs_outlet_solenoid
     - abs_hydraulic_unit
@@ -5933,8 +5933,8 @@
     en: Right Front ABS Inlet Solenoid Circuit
     de: ABS-Einlassventil vorne rechts Schaltung
   description:
-    en: The ABS control module has detected an electrical fault in the inlet solenoid for the left front brake circuit. The solenoid isolates the wheel circuit from master cylinder pressure during ABS regulation.
-    de: Das ABS-Steuergerät hat einen elektrischen Fehler am Einlassventil des linken vorderen Bremskreises erkannt. Das Ventil trennt während der ABS-Regelung den Radkreis vom Hauptbremszylinderdruck.
+    en: 'Right Front ABS Inlet Solenoid Circuit: an electrical fault is present in the circuit.'
+    de: 'ABS-Einlassventil vorne rechts Schaltung: im Stromkreis liegt ein elektrischer Fehler vor.'
   affected_components:
     - abs_inlet_solenoid
     - abs_hydraulic_unit
@@ -6029,8 +6029,8 @@
     en: Right Front ABS Outlet Solenoid Circuit
     de: ABS-Auslassventil vorne rechts Schaltung
   description:
-    en: The ABS control module has detected an electrical fault in the outlet solenoid for the left front brake circuit. The outlet valve releases brake pressure to the low-pressure accumulator during ABS regulation.
-    de: Das ABS-Steuergerät hat einen elektrischen Fehler am Auslassventil des linken vorderen Bremskreises erkannt. Das Auslassventil baut während der ABS-Regelung Bremsdruck zum Niederdruckspeicher ab.
+    en: 'Right Front ABS Outlet Solenoid Circuit: an electrical fault is present in the circuit.'
+    de: 'ABS-Auslassventil vorne rechts Schaltung: im Stromkreis liegt ein elektrischer Fehler vor.'
   affected_components:
     - abs_outlet_solenoid
     - abs_hydraulic_unit
@@ -8561,8 +8561,8 @@
     en: Ride Height Sensor Front Left
     de: Niveausensor vorne links
   description:
-    en: The air suspension control module has detected a fault in the front left ride height sensor circuit. Without this signal the module cannot regulate suspension height and self-levelling is disabled.
-    de: Das Luftfederungs-Steuergerät hat einen Fehler im Stromkreis des Niveausensors vorne links erkannt. Ohne dieses Signal kann das Modul die Federungsniveaus nicht regeln und die Niveauregulierung wird deaktiviert.
+    en: 'Ride Height Sensor Front Left: the control module has detected this fault condition. Without this signal the suspension control module cannot self-level the vehicle.'
+    de: 'Niveausensor vorne links: das Steuergerät hat diesen Fehlerzustand erkannt. Ohne dieses Signal kann das Fahrwerks-Steuergerät das Fahrzeug nicht nivellieren.'
   affected_components:
     - ride_height_sensor
     - air_suspension_module
@@ -8660,8 +8660,8 @@
     en: Ride Height Sensor Front Right
     de: Niveausensor vorne rechts
   description:
-    en: The air suspension control module has detected a fault in the front left ride height sensor circuit. Without this signal the module cannot regulate suspension height and self-levelling is disabled.
-    de: Das Luftfederungs-Steuergerät hat einen Fehler im Stromkreis des Niveausensors vorne links erkannt. Ohne dieses Signal kann das Modul die Federungsniveaus nicht regeln und die Niveauregulierung wird deaktiviert.
+    en: 'Ride Height Sensor Front Right: the control module has detected this fault condition. Without this signal the suspension control module cannot self-level the vehicle.'
+    de: 'Niveausensor vorne rechts: das Steuergerät hat diesen Fehlerzustand erkannt. Ohne dieses Signal kann das Fahrwerks-Steuergerät das Fahrzeug nicht nivellieren.'
   affected_components:
     - ride_height_sensor
     - air_suspension_module
@@ -8759,8 +8759,8 @@
     en: Ride Height Sensor Rear Left
     de: Niveausensor hinten links
   description:
-    en: The air suspension control module has detected a fault in the front left ride height sensor circuit. Without this signal the module cannot regulate suspension height and self-levelling is disabled.
-    de: Das Luftfederungs-Steuergerät hat einen Fehler im Stromkreis des Niveausensors vorne links erkannt. Ohne dieses Signal kann das Modul die Federungsniveaus nicht regeln und die Niveauregulierung wird deaktiviert.
+    en: 'Ride Height Sensor Rear Left: the control module has detected this fault condition. Without this signal the suspension control module cannot self-level the vehicle.'
+    de: 'Niveausensor hinten links: das Steuergerät hat diesen Fehlerzustand erkannt. Ohne dieses Signal kann das Fahrwerks-Steuergerät das Fahrzeug nicht nivellieren.'
   affected_components:
     - ride_height_sensor
     - air_suspension_module
@@ -8812,8 +8812,8 @@
     en: Ride Height Sensor Rear Right
     de: Niveausensor hinten rechts
   description:
-    en: The air suspension control module has detected a fault in the front left ride height sensor circuit. Without this signal the module cannot regulate suspension height and self-levelling is disabled.
-    de: Das Luftfederungs-Steuergerät hat einen Fehler im Stromkreis des Niveausensors vorne links erkannt. Ohne dieses Signal kann das Modul die Federungsniveaus nicht regeln und die Niveauregulierung wird deaktiviert.
+    en: 'Ride Height Sensor Rear Right: the control module has detected this fault condition. Without this signal the suspension control module cannot self-level the vehicle.'
+    de: 'Niveausensor hinten rechts: das Steuergerät hat diesen Fehlerzustand erkannt. Ohne dieses Signal kann das Fahrwerks-Steuergerät das Fahrzeug nicht nivellieren.'
   affected_components:
     - ride_height_sensor
     - air_suspension_module
@@ -11274,8 +11274,8 @@
     en: Left Front Wheel Speed Sensor - Mechanical
     de: Links vorne Raddrehzahlsensor - mechanisch
   description:
-    en: Mechanical fault at left-front wheel speed sensor — typically damaged tone ring, excessive air gap or loose sensor mount.
-    de: Mechanischer Fehler am Raddrehzahlsensor links vorne — meist beschädigtes Polrad, zu großer Luftspalt oder loses Sensorgehäuse.
+    en: 'Left Front Wheel Speed Sensor - Mechanical: a mechanical fault is present — typically a damaged tone ring, excessive air gap, or loose mounting. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Links vorne Raddrehzahlsensor - mechanisch: es liegt ein mechanischer Fehler vor — meist beschädigtes Polrad, zu großer Luftspalt oder lose Befestigung. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - wss_lf
     - tone_ring_lf
@@ -11319,8 +11319,8 @@
     en: Right Front Wheel Speed Sensor - Mechanical
     de: Rechts vorne Raddrehzahlsensor - mechanisch
   description:
-    en: 'Mechanical fault at left-front wheel speed sensor — typically damaged tone ring, excessive air gap or loose sensor mount.'
-    de: 'Mechanischer Fehler am Raddrehzahlsensor links vorne — meist beschädigtes Polrad, zu großer Luftspalt oder loses Sensorgehäuse.'
+    en: 'Right Front Wheel Speed Sensor - Mechanical: a mechanical fault is present — typically a damaged tone ring, excessive air gap, or loose mounting. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Rechts vorne Raddrehzahlsensor - mechanisch: es liegt ein mechanischer Fehler vor — meist beschädigtes Polrad, zu großer Luftspalt oder lose Befestigung. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - wss_rf
     - tone_ring_rf
@@ -11364,8 +11364,8 @@
     en: Left Rear Wheel Speed Sensor - Mechanical
     de: Links hinten Raddrehzahlsensor - mechanisch
   description:
-    en: 'Mechanical fault at left-front wheel speed sensor — typically damaged tone ring, excessive air gap or loose sensor mount.'
-    de: 'Mechanischer Fehler am Raddrehzahlsensor links vorne — meist beschädigtes Polrad, zu großer Luftspalt oder loses Sensorgehäuse.'
+    en: 'Left Rear Wheel Speed Sensor - Mechanical: a mechanical fault is present — typically a damaged tone ring, excessive air gap, or loose mounting. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Links hinten Raddrehzahlsensor - mechanisch: es liegt ein mechanischer Fehler vor — meist beschädigtes Polrad, zu großer Luftspalt oder lose Befestigung. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - wss_lr
     - tone_ring_lr
@@ -11409,8 +11409,8 @@
     en: Right Rear Wheel Speed Sensor - Mechanical
     de: Rechts hinten Raddrehzahlsensor - mechanisch
   description:
-    en: 'Mechanical fault at left-front wheel speed sensor — typically damaged tone ring, excessive air gap or loose sensor mount.'
-    de: 'Mechanischer Fehler am Raddrehzahlsensor links vorne — meist beschädigtes Polrad, zu großer Luftspalt oder loses Sensorgehäuse.'
+    en: 'Right Rear Wheel Speed Sensor - Mechanical: a mechanical fault is present — typically a damaged tone ring, excessive air gap, or loose mounting. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Rechts hinten Raddrehzahlsensor - mechanisch: es liegt ein mechanischer Fehler vor — meist beschädigtes Polrad, zu großer Luftspalt oder lose Befestigung. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - wss_rr
     - tone_ring_rr
@@ -11454,8 +11454,8 @@
     en: Multi-axis Acceleration Sensor Module A Range/Performance
     de: Mehrachs-Beschleunigungssensor-Modul A Bereich/Leistung
   description:
-    en: Multi-axis acceleration sensor module A reading implausible.
-    de: Wert des Mehrachs-Beschleunigungssensor-Moduls A unstimmig.
+    en: 'Multi-axis Acceleration Sensor Module A Range/Performance: the signal is implausible or outside the valid range.'
+    de: 'Mehrachs-Beschleunigungssensor-Modul A Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs.'
   affected_components:
     - multi_axis_accel_module_a
   common_causes:
@@ -11700,8 +11700,8 @@
     en: Multi-axis Acceleration Sensor Module B Range/Performance
     de: Mehrachs-Beschleunigungssensor-Modul B Bereich/Leistung
   description:
-    en: 'Multi-axis acceleration sensor module B reading implausible.'
-    de: 'Wert des Mehrachs-Beschleunigungssensor-Moduls A unstimmig.'
+    en: 'Multi-axis Acceleration Sensor Module B Range/Performance: the signal is implausible or outside the valid range.'
+    de: 'Mehrachs-Beschleunigungssensor-Modul B Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs.'
   affected_components:
     - multi_axis_accel_module_b
   common_causes:
@@ -12448,8 +12448,8 @@
     en: Motor Control A Range/Performance
     de: Motorsteuerung A Bereich/Leistung
   description:
-    en: Motor control A (chassis actuator motor) does not respond as expected.
-    de: Motorsteuerung A (Chassis-Aktuator-Motor) reagiert nicht erwartungsgemäß.
+    en: 'Motor Control A Range/Performance: the signal is implausible or outside the valid range.'
+    de: 'Motorsteuerung A Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs.'
   affected_components:
     - chassis_motor_a
   common_causes:
@@ -12503,8 +12503,8 @@
     en: Motor Control A Circuit/Open
     de: Motorsteuerung A Schaltkreis unterbrochen
   description:
-    en: Open circuit on chassis motor A control line.
-    de: Unterbrochener Schaltkreis an der Steuerleitung von Chassis-Motor A.
+    en: 'Motor Control A Circuit/Open: the circuit is open. Likely a broken wire, disconnected connector, or failed component.'
+    de: 'Motorsteuerung A Schaltkreis unterbrochen: der Stromkreis ist unterbrochen. Wahrscheinlich unterbrochene Leitung, abgezogener Stecker oder defektes Bauteil.'
   affected_components:
     - chassis_motor_a
     - motor_wiring
@@ -12559,8 +12559,8 @@
     en: Motor Control A Circuit High
     de: Motorsteuerung A Schaltkreis hoch
   description:
-    en: 'Chassis motor A control voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'Steuerspannung Chassis-Motor A über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: 'Motor Control A Circuit High: the signal voltage is above the expected range. Often an open circuit or a short to supply voltage.'
+    de: 'Motorsteuerung A Schaltkreis hoch: die Signalspannung liegt über dem erwarteten Bereich. Oft Unterbrechung oder Kurzschluss gegen die Versorgungsspannung.'
   affected_components:
     - chassis_motor_a
     - motor_wiring
@@ -12615,8 +12615,8 @@
     en: Motor Control A Circuit Low
     de: Motorsteuerung A Schaltkreis niedrig
   description:
-    en: 'Chassis motor A control voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'Steuerspannung Chassis-Motor A unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: 'Motor Control A Circuit Low: the signal voltage is below the expected range. Often a short to ground or high resistance in the wiring.'
+    de: 'Motorsteuerung A Schaltkreis niedrig: die Signalspannung liegt unter dem erwarteten Bereich. Oft Masseschluss oder hoher Übergangswiderstand in der Verkabelung.'
   affected_components:
     - chassis_motor_a
     - motor_wiring
@@ -12671,8 +12671,8 @@
     en: Motor Control A Supply Voltage Circuit/Open
     de: Motorsteuerung A Versorgungsspannung Schaltkreis unterbrochen
   description:
-    en: Open circuit on motor A supply voltage line.
-    de: Unterbrochener Schaltkreis an der Versorgung von Motor A.
+    en: 'Motor Control A Supply Voltage Circuit/Open: the circuit is open. Likely a broken wire, disconnected connector, or failed component.'
+    de: 'Motorsteuerung A Versorgungsspannung Schaltkreis unterbrochen: der Stromkreis ist unterbrochen. Wahrscheinlich unterbrochene Leitung, abgezogener Stecker oder defektes Bauteil.'
   affected_components:
     - chassis_motor_a
     - fuse
@@ -12727,8 +12727,8 @@
     en: Motor Control B Range/Performance
     de: Motorsteuerung B Bereich/Leistung
   description:
-    en: 'Motor control A (chassis actuator motor) does not respond as expected.'
-    de: 'Motorsteuerung A (Chassis-Aktuator-Motor) reagiert nicht erwartungsgemäß.'
+    en: 'Motor Control B Range/Performance: the signal is implausible or outside the valid range.'
+    de: 'Motorsteuerung B Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs.'
   affected_components:
     - chassis_motor_b
   common_causes:
@@ -12782,8 +12782,8 @@
     en: Motor Control B Circuit/Open
     de: Motorsteuerung B Schaltkreis unterbrochen
   description:
-    en: 'Open circuit on chassis motor A control line.'
-    de: 'Unterbrochener Schaltkreis an der Steuerleitung von Chassis-Motor A.'
+    en: 'Motor Control B Circuit/Open: the circuit is open. Likely a broken wire, disconnected connector, or failed component.'
+    de: 'Motorsteuerung B Schaltkreis unterbrochen: der Stromkreis ist unterbrochen. Wahrscheinlich unterbrochene Leitung, abgezogener Stecker oder defektes Bauteil.'
   affected_components:
     - chassis_motor_b
     - motor_wiring
@@ -12838,8 +12838,8 @@
     en: Motor Control B Circuit High
     de: Motorsteuerung B Schaltkreis hoch
   description:
-    en: 'Chassis motor A control voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'Steuerspannung Chassis-Motor A über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: 'Motor Control B Circuit High: the signal voltage is above the expected range. Often an open circuit or a short to supply voltage.'
+    de: 'Motorsteuerung B Schaltkreis hoch: die Signalspannung liegt über dem erwarteten Bereich. Oft Unterbrechung oder Kurzschluss gegen die Versorgungsspannung.'
   affected_components:
     - chassis_motor_b
     - motor_wiring
@@ -12894,8 +12894,8 @@
     en: Motor Control B Circuit Low
     de: Motorsteuerung B Schaltkreis niedrig
   description:
-    en: 'Chassis motor A control voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'Steuerspannung Chassis-Motor A unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: 'Motor Control B Circuit Low: the signal voltage is below the expected range. Often a short to ground or high resistance in the wiring.'
+    de: 'Motorsteuerung B Schaltkreis niedrig: die Signalspannung liegt unter dem erwarteten Bereich. Oft Masseschluss oder hoher Übergangswiderstand in der Verkabelung.'
   affected_components:
     - chassis_motor_b
     - motor_wiring
@@ -12950,8 +12950,8 @@
     en: Motor Control B Supply Voltage Circuit/Open
     de: Motorsteuerung B Versorgungsspannung Schaltkreis unterbrochen
   description:
-    en: 'Open circuit on motor A supply voltage line.'
-    de: 'Unterbrochener Schaltkreis an der Versorgung von Motor A.'
+    en: 'Motor Control B Supply Voltage Circuit/Open: the circuit is open. Likely a broken wire, disconnected connector, or failed component.'
+    de: 'Motorsteuerung B Versorgungsspannung Schaltkreis unterbrochen: der Stromkreis ist unterbrochen. Wahrscheinlich unterbrochene Leitung, abgezogener Stecker oder defektes Bauteil.'
   affected_components:
     - chassis_motor_b
     - fuse
@@ -13159,8 +13159,8 @@
     en: Brake Pressure Sensor A Range/Performance
     de: Bremsdrucksensor A Bereich/Leistung
   description:
-    en: Brake pressure sensor A reading implausible.
-    de: Wert des Bremsdrucksensors A unstimmig.
+    en: 'Brake Pressure Sensor A Range/Performance: the signal is implausible or outside the valid range.'
+    de: 'Bremsdrucksensor A Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs.'
   affected_components:
     - brake_pressure_sensor_a
   common_causes:
@@ -13373,8 +13373,8 @@
     en: Brake Pressure Sensor B Range/Performance
     de: Bremsdrucksensor B Bereich/Leistung
   description:
-    en: 'Brake pressure sensor B reading implausible.'
-    de: 'Wert des Bremsdrucksensors A unstimmig.'
+    en: 'Brake Pressure Sensor B Range/Performance: the signal is implausible or outside the valid range.'
+    de: 'Bremsdrucksensor B Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs.'
   affected_components:
     - brake_pressure_sensor_b
   common_causes:
@@ -13840,8 +13840,8 @@
     en: Vacuum Sensor A Range/Performance
     de: Unterdrucksensor A Bereich/Leistung
   description:
-    en: Vacuum sensor A reading implausible.
-    de: Wert des Unterdrucksensors A unstimmig.
+    en: 'Vacuum Sensor A Range/Performance: the signal is implausible or outside the valid range.'
+    de: 'Unterdrucksensor A Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs.'
   affected_components:
     - vacuum_sensor_a
   common_causes:
@@ -14062,8 +14062,8 @@
     en: Vacuum Sensor B Range/Performance
     de: Unterdrucksensor B Bereich/Leistung
   description:
-    en: 'Vacuum sensor B reading implausible.'
-    de: 'Wert des Unterdrucksensors A unstimmig.'
+    en: 'Vacuum Sensor B Range/Performance: the signal is implausible or outside the valid range.'
+    de: 'Unterdrucksensor B Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs.'
   affected_components:
     - vacuum_sensor_b
   common_causes:
@@ -14542,8 +14542,8 @@
     en: Left Rear Wheel Speed Sensor A Incorrect Component Installed
     de: Links hinten Raddrehzahlsensor A falsche Komponente verbaut
   description:
-    en: Left-rear wheel speed sensor A reports an incorrect component installed (wrong sensor type or wrong tone ring count).
-    de: Links-hinten-Raddrehzahlsensor A meldet eine falsche Komponente (falscher Sensortyp oder falsche Polrad-Zähnezahl).
+    en: 'Left Rear Wheel Speed Sensor A Incorrect Component Installed: the installed component does not match the type the vehicle expects. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Links hinten Raddrehzahlsensor A falsche Komponente verbaut: das verbaute Bauteil entspricht nicht dem vom Fahrzeug erwarteten Typ. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - wss_lr
   common_causes:
@@ -14587,8 +14587,8 @@
     en: Right Rear Wheel Speed Sensor A Incorrect Component Installed
     de: Rechts hinten Raddrehzahlsensor A falsche Komponente verbaut
   description:
-    en: 'Left-rear wheel speed sensor A reports an incorrect component installed (wrong sensor type or wrong tone ring count).'
-    de: 'Links-hinten-Raddrehzahlsensor A meldet eine falsche Komponente (falscher Sensortyp oder falsche Polrad-Zähnezahl).'
+    en: 'Right Rear Wheel Speed Sensor A Incorrect Component Installed: the installed component does not match the type the vehicle expects. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Rechts hinten Raddrehzahlsensor A falsche Komponente verbaut: das verbaute Bauteil entspricht nicht dem vom Fahrzeug erwarteten Typ. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - wss_rr
   common_causes:
@@ -14828,8 +14828,8 @@
     en: Brake Hydraulic Circuit B Leak
     de: Bremshydraulikkreis B Leck
   description:
-    en: Pressure loss in brake hydraulic circuit B detected — fluid leak somewhere in this circuit (caliper, hose, line, master cylinder).
-    de: Druckverlust im Bremshydraulikkreis B erkannt — Flüssigkeitsleck irgendwo in diesem Kreis (Sattel, Schlauch, Leitung, Hauptzylinder).
+    en: 'Brake Hydraulic Circuit B Leak: a leak has been detected in this brake-hydraulic circuit, which reduces braking pressure. Safety-critical.'
+    de: 'Bremshydraulikkreis B Leck: in diesem Brems-Hydraulikkreis wurde ein Leck erkannt, das den Bremsdruck verringert. Sicherheitskritisch.'
   affected_components:
     - brake_circuit_b
   common_causes:
@@ -14873,8 +14873,8 @@
     en: Brake Hydraulic Circuit A Leak
     de: Bremshydraulikkreis A Leck
   description:
-    en: 'Pressure loss in brake hydraulic circuit B detected — fluid leak somewhere in this circuit (caliper, hose, line, master cylinder).'
-    de: 'Druckverlust im Bremshydraulikkreis B erkannt — Flüssigkeitsleck irgendwo in diesem Kreis (Sattel, Schlauch, Leitung, Hauptzylinder).'
+    en: 'Brake Hydraulic Circuit A Leak: a leak has been detected in this brake-hydraulic circuit, which reduces braking pressure. Safety-critical.'
+    de: 'Bremshydraulikkreis A Leck: in diesem Brems-Hydraulikkreis wurde ein Leck erkannt, das den Bremsdruck verringert. Sicherheitskritisch.'
   affected_components:
     - brake_circuit_a
   common_causes:
@@ -16620,8 +16620,8 @@
     en: Brake Booster Motor A Phase U-V-W Circuit Low
     de: Bremskraftverstärker Motor A Phase U-V-W niedrig
   description:
-    en: 'Brake booster motor A phase U/V/W voltage below expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Phasenspannung U/V/W am Booster-Motor A unter Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor A Phase U-V-W Circuit Low: the signal voltage is below the expected range. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor A Phase U-V-W niedrig: die Signalspannung liegt unter dem erwarteten Bereich. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - brake_booster_motor_a
     - motor_phase_wiring
@@ -16730,8 +16730,8 @@
     en: Brake Booster Motor A Phase U-V-W Circuit Range/Performance
     de: Bremskraftverstärker Motor A Phase U-V-W Bereich/Leistung
   description:
-    en: 'Booster motor A phase voltage drifts or fluctuates outside spec. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Phasenspannung am Booster-Motor A driftet oder schwankt außerhalb der Spezifikation. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor A Phase U-V-W Circuit Range/Performance: the signal is implausible or outside the valid range. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor A Phase U-V-W Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - brake_booster_motor_a
   common_causes:
@@ -16839,8 +16839,8 @@
     en: Brake Booster Motor B Phase U-V-W Circuit Low
     de: Bremskraftverstärker Motor B Phase U-V-W niedrig
   description:
-    en: 'Brake booster motor A phase U/V/W voltage below expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Phasenspannung U/V/W am Booster-Motor A unter Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor B Phase U-V-W Circuit Low: the signal voltage is below the expected range. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor B Phase U-V-W niedrig: die Signalspannung liegt unter dem erwarteten Bereich. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - brake_booster_motor_b
     - motor_phase_wiring
@@ -16950,8 +16950,8 @@
     en: Brake Booster Motor B Phase U-V-W Circuit Range/Performance
     de: Bremskraftverstärker Motor B Phase U-V-W Bereich/Leistung
   description:
-    en: 'Booster motor A phase voltage drifts or fluctuates outside spec. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Phasenspannung am Booster-Motor A driftet oder schwankt außerhalb der Spezifikation. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor B Phase U-V-W Circuit Range/Performance: the signal is implausible or outside the valid range. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor B Phase U-V-W Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - brake_booster_motor_b
   common_causes:
@@ -17005,8 +17005,8 @@
     en: Brake Booster Motor A Position Sensor Circuit/Open
     de: Bremskraftverstärker Motor A Positionssensor unterbrochen
   description:
-    en: Open circuit on brake booster motor A position sensor (resolver/encoder feedback for closed-loop motor control).
-    de: Unterbrochener Schaltkreis am Positionssensor des Booster-Motors A (Resolver/Encoder-Rückmeldung für Regelung).
+    en: 'Brake Booster Motor A Position Sensor Circuit/Open: the circuit is open. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor A Positionssensor unterbrochen: der Stromkreis ist unterbrochen. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - booster_motor_a_pos_sensor
   common_causes:
@@ -17060,8 +17060,8 @@
     en: Brake Booster Motor A Position Sensor Circuit Low
     de: Bremskraftverstärker Motor A Positionssensor niedrig
   description:
-    en: 'Booster motor A position sensor signal voltage below expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Signalspannung Positionssensor unter Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor A Position Sensor Circuit Low: the signal voltage is below the expected range. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor A Positionssensor niedrig: die Signalspannung liegt unter dem erwarteten Bereich. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - booster_motor_a_pos_sensor
   common_causes:
@@ -17115,8 +17115,8 @@
     en: Brake Booster Motor A Position Sensor Circuit High
     de: Bremskraftverstärker Motor A Positionssensor hoch
   description:
-    en: 'Booster motor A position sensor signal voltage above expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Signalspannung Positionssensor über Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor A Position Sensor Circuit High: the signal voltage is above the expected range. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor A Positionssensor hoch: die Signalspannung liegt über dem erwarteten Bereich. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - booster_motor_a_pos_sensor
   common_causes:
@@ -17170,8 +17170,8 @@
     en: Brake Booster Motor A Position Sensor Circuit Range/Performance
     de: Bremskraftverstärker Motor A Positionssensor Bereich/Leistung
   description:
-    en: 'Booster motor A position sensor reading implausible. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Wert des Booster-Motor-A-Positionssensors unstimmig. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor A Position Sensor Circuit Range/Performance: the signal is implausible or outside the valid range. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor A Positionssensor Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - booster_motor_a_pos_sensor
   common_causes:
@@ -17225,8 +17225,8 @@
     en: Brake Booster Motor B Position Sensor Circuit/Open
     de: Bremskraftverstärker Motor B Positionssensor unterbrochen
   description:
-    en: 'Open circuit on brake booster motor A position sensor (resolver/encoder feedback for closed-loop motor control).'
-    de: 'Unterbrochener Schaltkreis am Positionssensor des Booster-Motors A (Resolver/Encoder-Rückmeldung für Regelung).'
+    en: 'Brake Booster Motor B Position Sensor Circuit/Open: the circuit is open. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor B Positionssensor unterbrochen: der Stromkreis ist unterbrochen. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - booster_motor_b_pos_sensor
   common_causes:
@@ -17280,8 +17280,8 @@
     en: Brake Booster Motor B Position Sensor Circuit Low
     de: Bremskraftverstärker Motor B Positionssensor niedrig
   description:
-    en: 'Booster motor A position sensor signal voltage below expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Signalspannung Positionssensor unter Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor B Position Sensor Circuit Low: the signal voltage is below the expected range. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor B Positionssensor niedrig: die Signalspannung liegt unter dem erwarteten Bereich. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - booster_motor_b_pos_sensor
   common_causes:
@@ -17335,8 +17335,8 @@
     en: Brake Booster Motor B Position Sensor Circuit High
     de: Bremskraftverstärker Motor B Positionssensor hoch
   description:
-    en: 'Booster motor A position sensor signal voltage above expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Signalspannung Positionssensor über Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor B Position Sensor Circuit High: the signal voltage is above the expected range. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor B Positionssensor hoch: die Signalspannung liegt über dem erwarteten Bereich. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - booster_motor_b_pos_sensor
   common_causes:
@@ -17390,8 +17390,8 @@
     en: Brake Booster Motor B Position Sensor Circuit Range/Performance
     de: Bremskraftverstärker Motor B Positionssensor Bereich/Leistung
   description:
-    en: 'Booster motor A position sensor reading implausible. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Wert des Booster-Motor-A-Positionssensors unstimmig. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor B Position Sensor Circuit Range/Performance: the signal is implausible or outside the valid range. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor B Positionssensor Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - booster_motor_b_pos_sensor
   common_causes:
@@ -17489,8 +17489,8 @@
     en: Brake Booster Motor A Phase U-V-W Current High
     de: Bremskraftverstärker Motor A Phasenstrom hoch
   description:
-    en: 'Brake booster motor A phase current above safe limit — overcurrent protection triggered. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Phasenstrom Booster-Motor A über Sicherheitsgrenze — Überstrom-Schutz ausgelöst. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor A Phase U-V-W Current High: the control module has detected this fault condition. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor A Phasenstrom hoch: das Steuergerät hat diesen Fehlerzustand erkannt. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - brake_booster_motor_a
   common_causes:
@@ -17534,8 +17534,8 @@
     en: Brake Booster Motor A Phase U-V-W Current Low
     de: Bremskraftverstärker Motor A Phasenstrom niedrig
   description:
-    en: Brake booster motor A phase current below expected range — possibly motor not running, or load disconnected.
-    de: Phasenstrom Booster-Motor A unter Sollbereich — möglicherweise Motor läuft nicht oder Last unterbrochen.
+    en: 'Brake Booster Motor A Phase U-V-W Current Low: the control module has detected this fault condition. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor A Phasenstrom niedrig: das Steuergerät hat diesen Fehlerzustand erkannt. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - brake_booster_motor_a
   common_causes:
@@ -17579,8 +17579,8 @@
     en: Brake Booster Motor B Phase U-V-W Current High
     de: Bremskraftverstärker Motor B Phasenstrom hoch
   description:
-    en: 'Brake booster motor A phase current above safe limit — overcurrent protection triggered. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Phasenstrom Booster-Motor A über Sicherheitsgrenze — Überstrom-Schutz ausgelöst. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor B Phase U-V-W Current High: the control module has detected this fault condition. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor B Phasenstrom hoch: das Steuergerät hat diesen Fehlerzustand erkannt. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - brake_booster_motor_b
   common_causes:
@@ -17624,8 +17624,8 @@
     en: Brake Booster Motor B Phase U-V-W Current Low
     de: Bremskraftverstärker Motor B Phasenstrom niedrig
   description:
-    en: 'Brake booster motor A phase current below expected range — possibly motor not running, or load disconnected.'
-    de: 'Phasenstrom Booster-Motor A unter Sollbereich — möglicherweise Motor läuft nicht oder Last unterbrochen.'
+    en: 'Brake Booster Motor B Phase U-V-W Current Low: the control module has detected this fault condition. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor B Phasenstrom niedrig: das Steuergerät hat diesen Fehlerzustand erkannt. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - brake_booster_motor_b
   common_causes:
@@ -17776,8 +17776,8 @@
     en: Brake Booster Motor A Current Sensor Circuit Range/Performance
     de: Bremskraftverstärker Motor A Stromsensor Bereich/Leistung
   description:
-    en: 'Brake booster motor A current sensor reading implausible. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Wert des Stromsensors am Booster-Motor A unstimmig. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor A Current Sensor Circuit Range/Performance: the signal is implausible or outside the valid range. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor A Stromsensor Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - booster_motor_a_current_sensor
   common_causes:
@@ -19012,8 +19012,8 @@
     en: Brake Booster Motor B Current Sensor Circuit Range/Performance
     de: Bremskraftverstärker Motor B Stromsensor Bereich/Leistung
   description:
-    en: 'Brake booster motor A current sensor reading implausible. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Wert des Stromsensors am Booster-Motor A unstimmig. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor B Current Sensor Circuit Range/Performance: the signal is implausible or outside the valid range. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor B Stromsensor Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - booster_motor_b_current_sensor
   common_causes:
@@ -19477,8 +19477,8 @@
     en: Brake Booster Motor A Position Sensor Supply Circuit/Open
     de: Bremskraftverstärker Motor A Positionssensor Versorgung unterbrochen
   description:
-    en: 'Open circuit on brake booster motor A position sensor supply line. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Unterbrochener Schaltkreis an der Versorgung des Positionssensors am Booster-Motor A. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor A Position Sensor Supply Circuit/Open: the circuit is open. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor A Positionssensor Versorgung unterbrochen: der Stromkreis ist unterbrochen. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - booster_motor_a_pos_sensor_supply
   common_causes:
@@ -19532,8 +19532,8 @@
     en: Brake Booster Motor A Position Sensor Supply Circuit Low
     de: Bremskraftverstärker Motor A Positionssensor Versorgung niedrig
   description:
-    en: 'Booster motor A position sensor supply voltage below expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Versorgungsspannung Positionssensor unter Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor A Position Sensor Supply Circuit Low: the signal voltage is below the expected range. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor A Positionssensor Versorgung niedrig: die Signalspannung liegt unter dem erwarteten Bereich. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - booster_motor_a_pos_sensor_supply
   common_causes:
@@ -19587,8 +19587,8 @@
     en: Brake Booster Motor A Position Sensor Supply Circuit High
     de: Bremskraftverstärker Motor A Positionssensor Versorgung hoch
   description:
-    en: 'Booster motor A position sensor supply voltage above expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Versorgungsspannung Positionssensor über Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor A Position Sensor Supply Circuit High: the signal voltage is above the expected range. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor A Positionssensor Versorgung hoch: die Signalspannung liegt über dem erwarteten Bereich. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - booster_motor_a_pos_sensor_supply
   common_causes:
@@ -19642,8 +19642,8 @@
     en: Brake Booster Motor A Position Sensor Supply Circuit Range/Performance
     de: Bremskraftverstärker Motor A Positionssensor Versorgung Bereich/Leistung
   description:
-    en: 'Booster motor A position sensor supply drifts or fluctuates. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Versorgung des Positionssensors driftet oder schwankt. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor A Position Sensor Supply Circuit Range/Performance: the signal is implausible or outside the valid range. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor A Positionssensor Versorgung Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - booster_motor_a_pos_sensor_supply
   common_causes:
@@ -19697,8 +19697,8 @@
     en: Brake Booster Motor B Position Sensor Supply Circuit/Open
     de: Bremskraftverstärker Motor B Positionssensor Versorgung unterbrochen
   description:
-    en: 'Open circuit on brake booster motor A position sensor supply line. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Unterbrochener Schaltkreis an der Versorgung des Positionssensors am Booster-Motor A. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor B Position Sensor Supply Circuit/Open: the circuit is open. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor B Positionssensor Versorgung unterbrochen: der Stromkreis ist unterbrochen. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - booster_motor_b_pos_sensor_supply
   common_causes:
@@ -19752,8 +19752,8 @@
     en: Brake Booster Motor B Position Sensor Supply Circuit Low
     de: Bremskraftverstärker Motor B Positionssensor Versorgung niedrig
   description:
-    en: 'Booster motor A position sensor supply voltage below expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Versorgungsspannung Positionssensor unter Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor B Position Sensor Supply Circuit Low: the signal voltage is below the expected range. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor B Positionssensor Versorgung niedrig: die Signalspannung liegt unter dem erwarteten Bereich. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - booster_motor_b_pos_sensor_supply
   common_causes:
@@ -19807,8 +19807,8 @@
     en: Brake Booster Motor B Position Sensor Supply Circuit High
     de: Bremskraftverstärker Motor B Positionssensor Versorgung hoch
   description:
-    en: 'Booster motor A position sensor supply voltage above expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Versorgungsspannung Positionssensor über Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor B Position Sensor Supply Circuit High: the signal voltage is above the expected range. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor B Positionssensor Versorgung hoch: die Signalspannung liegt über dem erwarteten Bereich. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - booster_motor_b_pos_sensor_supply
   common_causes:
@@ -19862,8 +19862,8 @@
     en: Brake Booster Motor B Position Sensor Supply Circuit Range/Performance
     de: Bremskraftverstärker Motor B Positionssensor Versorgung Bereich/Leistung
   description:
-    en: 'Booster motor A position sensor supply drifts or fluctuates. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Versorgung des Positionssensors driftet oder schwankt. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Brake Booster Motor B Position Sensor Supply Circuit Range/Performance: the signal is implausible or outside the valid range. The electric brake booster generates the braking assist; a motor or sensor fault can reduce or disable power-assisted braking. Safety-relevant.'
+    de: 'Bremskraftverstärker Motor B Positionssensor Versorgung Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs. Der elektrische Bremskraftverstärker erzeugt die Bremsunterstützung; ein Motor- oder Sensorfehler kann die Bremskraftunterstützung verringern oder ausschalten. Sicherheitsrelevant.'
   affected_components:
     - booster_motor_b_pos_sensor_supply
   common_causes:
@@ -20498,8 +20498,8 @@
     en: Brake Master Cylinder Piston Position Sensor A Circuit Range/Performance
     de: Bremshauptzylinder Kolben-Positionssensor A Bereich/Leistung
   description:
-    en: 'Master cylinder piston position sensor A reading implausible. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'Wert des Hauptzylinder-Kolben-Positionssensors A unstimmig. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: 'Brake Master Cylinder Piston Position Sensor A Circuit Range/Performance: the signal is implausible or outside the valid range.'
+    de: 'Bremshauptzylinder Kolben-Positionssensor A Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs.'
   affected_components:
     - master_cylinder_pos_sensor_a
   common_causes:
@@ -20643,8 +20643,8 @@
     en: Brake Master Cylinder Piston Position Sensor B Circuit Range/Performance
     de: Bremshauptzylinder Kolben-Positionssensor B Bereich/Leistung
   description:
-    en: 'Master cylinder piston position sensor B reading implausible. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'Wert des Hauptzylinder-Kolben-Positionssensors A unstimmig. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: 'Brake Master Cylinder Piston Position Sensor B Circuit Range/Performance: the signal is implausible or outside the valid range.'
+    de: 'Bremshauptzylinder Kolben-Positionssensor B Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs.'
   affected_components:
     - master_cylinder_pos_sensor_b
   common_causes:
@@ -21062,8 +21062,8 @@
     en: 4WD/AWD Clutch A Actuator Control Circuit/Open
     de: 4WD/AWD Kupplung A Aktuator-Steuerschaltkreis unterbrochen
   description:
-    en: Open circuit on 4WD/AWD clutch A actuator control. The clutch engages drive to a secondary axle or transfer case.
-    de: Unterbrochener Schaltkreis am Aktuator der 4WD/AWD-Kupplung A. Die Kupplung schaltet Antrieb zur Zweitachse oder zum Verteilergetriebe.
+    en: '4WD/AWD Clutch A Actuator Control Circuit/Open: the control circuit is open. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Kupplung A Aktuator-Steuerschaltkreis unterbrochen: der Steuerkreis ist unterbrochen. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - awd_clutch_a_actuator
   common_causes:
@@ -21117,8 +21117,8 @@
     en: 4WD/AWD Clutch A Actuator Control Circuit Performance
     de: 4WD/AWD Kupplung A Aktuator-Steuerschaltkreis Leistung
   description:
-    en: AWD clutch A actuator does not respond as expected.
-    de: AWD-Kupplungsaktuator A reagiert nicht erwartungsgemäß.
+    en: '4WD/AWD Clutch A Actuator Control Circuit Performance: the control circuit has an electrical fault. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Kupplung A Aktuator-Steuerschaltkreis Leistung: im Steuerkreis liegt ein elektrischer Fehler vor. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - awd_clutch_a_actuator
   common_causes:
@@ -21162,8 +21162,8 @@
     en: 4WD/AWD Clutch A Actuator Control Circuit Low
     de: 4WD/AWD Kupplung A Aktuator-Steuerschaltkreis niedrig
   description:
-    en: 'AWD clutch A actuator control voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'Steuerspannung Aktuator unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: '4WD/AWD Clutch A Actuator Control Circuit Low: the control-circuit voltage is below the expected range. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Kupplung A Aktuator-Steuerschaltkreis niedrig: die Spannung im Steuerkreis liegt unter dem erwarteten Bereich. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - awd_clutch_a_actuator
   common_causes:
@@ -21217,8 +21217,8 @@
     en: 4WD/AWD Clutch A Actuator Control Circuit High
     de: 4WD/AWD Kupplung A Aktuator-Steuerschaltkreis hoch
   description:
-    en: 'AWD clutch A actuator control voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'Steuerspannung Aktuator über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: '4WD/AWD Clutch A Actuator Control Circuit High: the control-circuit voltage is above the expected range. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Kupplung A Aktuator-Steuerschaltkreis hoch: die Spannung im Steuerkreis liegt über dem erwarteten Bereich. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - awd_clutch_a_actuator
   common_causes:
@@ -21272,8 +21272,8 @@
     en: 4WD/AWD Clutch A Temperature Too High
     de: 4WD/AWD Kupplung A Temperatur zu hoch
   description:
-    en: AWD clutch A overheated — typically from extended slip during off-road driving or repeated traction events.
-    de: AWD-Kupplung A überhitzt — meist nach längerem Schlupf im Gelände oder wiederholten Eingriffen.
+    en: '4WD/AWD Clutch A Temperature Too High: the component is overheating, typically from extended load or slip. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Kupplung A Temperatur zu hoch: das Bauteil überhitzt, meist durch andauernde Last oder Schlupf. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - awd_clutch_a
   common_causes:
@@ -21317,8 +21317,8 @@
     en: 4WD/AWD Clutch A Performance/Stuck Disengaged
     de: 4WD/AWD Kupplung A Leistung/klemmt offen
   description:
-    en: AWD clutch A does not engage when commanded — stuck disengaged.
-    de: AWD-Kupplung A schließt bei Anforderung nicht — bleibt geöffnet.
+    en: '4WD/AWD Clutch A Performance/Stuck Disengaged: the actuator will not engage when commanded. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Kupplung A Leistung/klemmt offen: das Stellglied rückt auf Befehl nicht ein. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - awd_clutch_a
   common_causes:
@@ -21362,8 +21362,8 @@
     en: 4WD/AWD Clutch A Stuck Engaged
     de: 4WD/AWD Kupplung A klemmt geschlossen
   description:
-    en: AWD clutch A stays engaged when commanded off — drivetrain not disconnected, may cause transmission wind-up on tight turns.
-    de: AWD-Kupplung A bleibt geschlossen, obwohl auf "auf" gestellt — Antriebsstrang nicht getrennt, kann zu Verspannungen bei engen Kurven führen.
+    en: '4WD/AWD Clutch A Stuck Engaged: the actuator stays engaged even when commanded off. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Kupplung A klemmt geschlossen: das Stellglied bleibt trotz Abschaltbefehl eingerückt. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - awd_clutch_a
   common_causes:
@@ -21407,8 +21407,8 @@
     en: 4WD/AWD Clutch A Engagement Fault
     de: 4WD/AWD Kupplung A Schaltfehler
   description:
-    en: AWD clutch A engagement fault — sluggish or partial engagement detected.
-    de: AWD-Kupplung A schaltet zögerlich oder unvollständig.
+    en: '4WD/AWD Clutch A Engagement Fault: engagement is sluggish, partial, or incomplete. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Kupplung A Schaltfehler: das Einrücken ist träge, teilweise oder unvollständig. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - awd_clutch_a
   common_causes:
@@ -21550,8 +21550,8 @@
     en: 4WD/AWD Clutch A Position Sensor Circuit Low
     de: 4WD/AWD Kupplung A Positionssensor niedrig
   description:
-    en: 'Position sensor signal voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'Signalspannung Positionssensor unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: '4WD/AWD Clutch A Position Sensor Circuit Low: the signal voltage is below the expected range. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Kupplung A Positionssensor niedrig: die Signalspannung liegt unter dem erwarteten Bereich. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - awd_clutch_a_pos_sensor
   common_causes:
@@ -21604,8 +21604,8 @@
     en: 4WD/AWD Clutch A Position Sensor Circuit High
     de: 4WD/AWD Kupplung A Positionssensor hoch
   description:
-    en: 'Position sensor signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'Signalspannung Positionssensor über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: '4WD/AWD Clutch A Position Sensor Circuit High: the signal voltage is above the expected range. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Kupplung A Positionssensor hoch: die Signalspannung liegt über dem erwarteten Bereich. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - awd_clutch_a_pos_sensor
   common_causes:
@@ -21756,8 +21756,8 @@
     en: 4WD/AWD Clutch A Position Control Error
     de: 4WD/AWD Kupplung A Positionsregelfehler
   description:
-    en: AWD clutch A position control deviates from commanded position beyond tolerance.
-    de: Lageregelung der AWD-Kupplung A weicht über Toleranz vom Sollwert ab.
+    en: '4WD/AWD Clutch A Position Control Error: the actual position deviates from the commanded position. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Kupplung A Positionsregelfehler: die Ist-Position weicht von der Soll-Position ab. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - awd_clutch_a
   common_causes:
@@ -21801,8 +21801,8 @@
     en: 4WD/AWD Clutch B Actuator Control Circuit/Open
     de: 4WD/AWD Kupplung B Aktuator-Steuerschaltkreis unterbrochen
   description:
-    en: 'Open circuit on 4WD/AWD clutch A actuator control. The clutch engages drive to a secondary axle or transfer case.'
-    de: 'Unterbrochener Schaltkreis am Aktuator der 4WD/AWD-Kupplung A. Die Kupplung schaltet Antrieb zur Zweitachse oder zum Verteilergetriebe.'
+    en: '4WD/AWD Clutch B Actuator Control Circuit/Open: the control circuit is open. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Kupplung B Aktuator-Steuerschaltkreis unterbrochen: der Steuerkreis ist unterbrochen. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - awd_clutch_b_actuator
   common_causes:
@@ -21856,8 +21856,8 @@
     en: 4WD/AWD Clutch B Actuator Control Circuit Performance
     de: 4WD/AWD Kupplung B Aktuator-Steuerschaltkreis Leistung
   description:
-    en: 'AWD clutch A actuator does not respond as expected.'
-    de: 'AWD-Kupplungsaktuator A reagiert nicht erwartungsgemäß.'
+    en: '4WD/AWD Clutch B Actuator Control Circuit Performance: the control circuit has an electrical fault. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Kupplung B Aktuator-Steuerschaltkreis Leistung: im Steuerkreis liegt ein elektrischer Fehler vor. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - awd_clutch_b_actuator
   common_causes:
@@ -21901,8 +21901,8 @@
     en: 4WD/AWD Clutch B Actuator Control Circuit Low
     de: 4WD/AWD Kupplung B Aktuator-Steuerschaltkreis niedrig
   description:
-    en: 'AWD clutch A actuator control voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'Steuerspannung Aktuator unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: '4WD/AWD Clutch B Actuator Control Circuit Low: the control-circuit voltage is below the expected range. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Kupplung B Aktuator-Steuerschaltkreis niedrig: die Spannung im Steuerkreis liegt unter dem erwarteten Bereich. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - awd_clutch_b_actuator
   common_causes:
@@ -21956,8 +21956,8 @@
     en: 4WD/AWD Clutch B Actuator Control Circuit High
     de: 4WD/AWD Kupplung B Aktuator-Steuerschaltkreis hoch
   description:
-    en: 'AWD clutch A actuator control voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'Steuerspannung Aktuator über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: '4WD/AWD Clutch B Actuator Control Circuit High: the control-circuit voltage is above the expected range. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Kupplung B Aktuator-Steuerschaltkreis hoch: die Spannung im Steuerkreis liegt über dem erwarteten Bereich. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - awd_clutch_b_actuator
   common_causes:
@@ -22011,8 +22011,8 @@
     en: 4WD/AWD Clutch B Temperature Too High
     de: 4WD/AWD Kupplung B Temperatur zu hoch
   description:
-    en: 'AWD clutch A overheated — typically from extended slip during off-road driving or repeated traction events.'
-    de: 'AWD-Kupplung A überhitzt — meist nach längerem Schlupf im Gelände oder wiederholten Eingriffen.'
+    en: '4WD/AWD Clutch B Temperature Too High: the component is overheating, typically from extended load or slip. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Kupplung B Temperatur zu hoch: das Bauteil überhitzt, meist durch andauernde Last oder Schlupf. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - awd_clutch_b
   common_causes:
@@ -22056,8 +22056,8 @@
     en: 4WD/AWD Clutch B Performance/Stuck Disengaged
     de: 4WD/AWD Kupplung B Leistung/klemmt offen
   description:
-    en: 'AWD clutch A does not engage when commanded — stuck disengaged.'
-    de: 'AWD-Kupplung A schließt bei Anforderung nicht — bleibt geöffnet.'
+    en: '4WD/AWD Clutch B Performance/Stuck Disengaged: the actuator will not engage when commanded. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Kupplung B Leistung/klemmt offen: das Stellglied rückt auf Befehl nicht ein. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - awd_clutch_b
   common_causes:
@@ -22101,8 +22101,8 @@
     en: 4WD/AWD Clutch B Stuck Engaged
     de: 4WD/AWD Kupplung B klemmt geschlossen
   description:
-    en: 'AWD clutch A stays engaged when commanded off — drivetrain not disconnected, may cause transmission wind-up on tight turns.'
-    de: 'AWD-Kupplung A bleibt geschlossen, obwohl auf "auf" gestellt — Antriebsstrang nicht getrennt, kann zu Verspannungen bei engen Kurven führen.'
+    en: '4WD/AWD Clutch B Stuck Engaged: the actuator stays engaged even when commanded off. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Kupplung B klemmt geschlossen: das Stellglied bleibt trotz Abschaltbefehl eingerückt. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - awd_clutch_b
   common_causes:
@@ -22146,8 +22146,8 @@
     en: 4WD/AWD Clutch B Engagement Fault
     de: 4WD/AWD Kupplung B Schaltfehler
   description:
-    en: 'AWD clutch A engagement fault — sluggish or partial engagement detected.'
-    de: 'AWD-Kupplung A schaltet zögerlich oder unvollständig.'
+    en: '4WD/AWD Clutch B Engagement Fault: engagement is sluggish, partial, or incomplete. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Kupplung B Schaltfehler: das Einrücken ist träge, teilweise oder unvollständig. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - awd_clutch_b
   common_causes:
@@ -22191,8 +22191,8 @@
     en: 4WD/AWD Clutch B Position Control Error
     de: 4WD/AWD Kupplung B Positionsregelfehler
   description:
-    en: 'AWD clutch A position control deviates from commanded position beyond tolerance.'
-    de: 'Lageregelung der AWD-Kupplung A weicht über Toleranz vom Sollwert ab.'
+    en: '4WD/AWD Clutch B Position Control Error: the actual position deviates from the commanded position. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Kupplung B Positionsregelfehler: die Ist-Position weicht von der Soll-Position ab. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - awd_clutch_b
   common_causes:
@@ -22889,8 +22889,8 @@
     en: 4WD/AWD Range Actuator Position Sensor Circuit Low
     de: 4WD/AWD Bereichswähler-Positionssensor niedrig
   description:
-    en: 'Range actuator position sensor signal voltage below expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'Signalspannung Positionssensor unter Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: '4WD/AWD Range Actuator Position Sensor Circuit Low: the signal voltage is below the expected range. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Bereichswähler-Positionssensor niedrig: die Signalspannung liegt unter dem erwarteten Bereich. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - range_pos_sensor
   common_causes:
@@ -22943,8 +22943,8 @@
     en: 4WD/AWD Range Actuator Position Sensor Circuit High
     de: 4WD/AWD Bereichswähler-Positionssensor hoch
   description:
-    en: 'Range actuator position sensor signal voltage above expected range. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'Signalspannung Positionssensor über Sollbereich. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: '4WD/AWD Range Actuator Position Sensor Circuit High: the signal voltage is above the expected range. This affects engagement of the all-wheel-drive clutch.'
+    de: '4WD/AWD Bereichswähler-Positionssensor hoch: die Signalspannung liegt über dem erwarteten Bereich. Dies betrifft das Einrücken der Allrad-Kupplung.'
   affected_components:
     - range_pos_sensor
   common_causes:
@@ -24310,8 +24310,8 @@
     en: Brake Pedal Position Sensor A Offset Exceeded Learning Limit
     de: Bremspedal-Positionssensor A Lerngrenze überschritten
   description:
-    en: Brake pedal position sensor A learned offset exceeded the allowed learning range.
-    de: Gelernter Offset des Bremspedal-Sensors A überschreitet zulässigen Lernbereich.
+    en: 'Brake Pedal Position Sensor A Offset Exceeded Learning Limit: the control module has detected this fault condition.'
+    de: 'Bremspedal-Positionssensor A Lerngrenze überschritten: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - brake_pedal_sensor_a
   common_causes:
@@ -24355,8 +24355,8 @@
     en: Brake Pedal Position Sensor B Offset Exceeded Learning Limit
     de: Bremspedal-Positionssensor B Lerngrenze überschritten
   description:
-    en: 'Brake pedal position sensor B learned offset exceeded the allowed learning range.'
-    de: 'Gelernter Offset des Bremspedal-Sensors A überschreitet zulässigen Lernbereich.'
+    en: 'Brake Pedal Position Sensor B Offset Exceeded Learning Limit: the control module has detected this fault condition.'
+    de: 'Bremspedal-Positionssensor B Lerngrenze überschritten: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - brake_pedal_sensor_b
   common_causes:
@@ -27218,8 +27218,8 @@
     en: Left Front Wheel Speed Sensor B Circuit/Open
     de: Vorne links Radgeschwindigkeitssensor B unterbrochen
   description:
-    en: 'Open circuit on left front wheel speed sensor B (secondary sensor). Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Unterbrochener Schaltkreis am Radgeschwindigkeitssensor B vorne links (Zweitsensor). Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Left Front Wheel Speed Sensor B Circuit/Open: the circuit is open. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Vorne links Radgeschwindigkeitssensor B unterbrochen: der Stromkreis ist unterbrochen. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - lf_wss_b
   common_causes:
@@ -27272,8 +27272,8 @@
     en: Left Front Wheel Speed Sensor B Range/Performance
     de: Vorne links Radgeschwindigkeitssensor B Bereich/Leistung
   description:
-    en: 'LF wheel speed sensor B reading implausible. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Wert vom Radgeschwindigkeitssensor B vorne links unstimmig. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Left Front Wheel Speed Sensor B Range/Performance: the signal is implausible or outside the valid range. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Vorne links Radgeschwindigkeitssensor B Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - lf_wss_b
   common_causes:
@@ -27326,8 +27326,8 @@
     en: Left Front Wheel Speed Sensor B Circuit Low
     de: Vorne links Radgeschwindigkeitssensor B niedrig
   description:
-    en: 'LF wheel speed sensor B signal voltage below expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Signalspannung Sensor B vorne links unter Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Left Front Wheel Speed Sensor B Circuit Low: the signal voltage is below the expected range. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Vorne links Radgeschwindigkeitssensor B niedrig: die Signalspannung liegt unter dem erwarteten Bereich. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - lf_wss_b
   common_causes:
@@ -27381,8 +27381,8 @@
     en: Left Front Wheel Speed Sensor B Circuit High
     de: Vorne links Radgeschwindigkeitssensor B hoch
   description:
-    en: 'LF wheel speed sensor B signal voltage above expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Signalspannung Sensor B vorne links über Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Left Front Wheel Speed Sensor B Circuit High: the signal voltage is above the expected range. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Vorne links Radgeschwindigkeitssensor B hoch: die Signalspannung liegt über dem erwarteten Bereich. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - lf_wss_b
   common_causes:
@@ -27436,8 +27436,8 @@
     en: Left Front Wheel Speed Sensor B Intermittent/Erratic
     de: Vorne links Radgeschwindigkeitssensor B sporadisch/unstetig
   description:
-    en: 'Intermittent signal from LF wheel speed sensor B. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Sporadisches Signal vom Sensor B vorne links. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Left Front Wheel Speed Sensor B Intermittent/Erratic: the signal is intermittent or erratic. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Vorne links Radgeschwindigkeitssensor B sporadisch/unstetig: das Signal ist sporadisch oder unsauber. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - lf_wss_b
   common_causes:
@@ -27491,8 +27491,8 @@
     en: Left Front Wheel Speed Sensor B Correlation
     de: Vorne links Radgeschwindigkeitssensor B Korrelation
   description:
-    en: 'LF wheel speed sensor B does not correlate with the primary LF sensor or other wheels. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Sensor B vorne links korreliert nicht mit dem Primärsensor oder den anderen Rädern. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Left Front Wheel Speed Sensor B Correlation: the value does not correlate with the related sensor or expected pattern. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Vorne links Radgeschwindigkeitssensor B Korrelation: der Wert stimmt nicht mit dem zugehörigen Sensor oder dem erwarteten Muster überein. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - lf_wss_b
     - lf_wss
@@ -27536,8 +27536,8 @@
     en: Left Front Wheel Speed Sensor B Incorrect Component Installed
     de: Vorne links Radgeschwindigkeitssensor B falsche Komponente verbaut
   description:
-    en: 'LF wheel speed sensor B identifier mismatched — wrong sensor type for the vehicle. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Sensor-Kennung passt nicht zum Fahrzeug — falscher Sensortyp verbaut. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Left Front Wheel Speed Sensor B Incorrect Component Installed: the installed component does not match the type the vehicle expects. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Vorne links Radgeschwindigkeitssensor B falsche Komponente verbaut: das verbaute Bauteil entspricht nicht dem vom Fahrzeug erwarteten Typ. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - lf_wss_b
   common_causes:
@@ -27580,8 +27580,8 @@
     en: Right Front Wheel Speed Sensor B Circuit/Open
     de: Vorne rechts Radgeschwindigkeitssensor B unterbrochen
   description:
-    en: 'Open circuit on left front wheel speed sensor B (secondary sensor). Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Unterbrochener Schaltkreis am Radgeschwindigkeitssensor B vorne links (Zweitsensor). Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Right Front Wheel Speed Sensor B Circuit/Open: the circuit is open. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Vorne rechts Radgeschwindigkeitssensor B unterbrochen: der Stromkreis ist unterbrochen. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - rf_wss_b
   common_causes:
@@ -27635,8 +27635,8 @@
     en: Right Front Wheel Speed Sensor B Range/Performance
     de: Vorne rechts Radgeschwindigkeitssensor B Bereich/Leistung
   description:
-    en: 'LF wheel speed sensor B reading implausible. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Wert vom Radgeschwindigkeitssensor B vorne links unstimmig. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Right Front Wheel Speed Sensor B Range/Performance: the signal is implausible or outside the valid range. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Vorne rechts Radgeschwindigkeitssensor B Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - rf_wss_b
   common_causes:
@@ -27690,8 +27690,8 @@
     en: Right Front Wheel Speed Sensor B Circuit Low
     de: Vorne rechts Radgeschwindigkeitssensor B niedrig
   description:
-    en: 'LF wheel speed sensor B signal voltage below expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Signalspannung Sensor B vorne links unter Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Right Front Wheel Speed Sensor B Circuit Low: the signal voltage is below the expected range. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Vorne rechts Radgeschwindigkeitssensor B niedrig: die Signalspannung liegt unter dem erwarteten Bereich. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - rf_wss_b
   common_causes:
@@ -27745,8 +27745,8 @@
     en: Right Front Wheel Speed Sensor B Circuit High
     de: Vorne rechts Radgeschwindigkeitssensor B hoch
   description:
-    en: 'LF wheel speed sensor B signal voltage above expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Signalspannung Sensor B vorne links über Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Right Front Wheel Speed Sensor B Circuit High: the signal voltage is above the expected range. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Vorne rechts Radgeschwindigkeitssensor B hoch: die Signalspannung liegt über dem erwarteten Bereich. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - rf_wss_b
   common_causes:
@@ -27800,8 +27800,8 @@
     en: Right Front Wheel Speed Sensor B Intermittent/Erratic
     de: Vorne rechts Radgeschwindigkeitssensor B sporadisch/unstetig
   description:
-    en: 'Intermittent signal from LF wheel speed sensor B. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Sporadisches Signal vom Sensor B vorne links. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Right Front Wheel Speed Sensor B Intermittent/Erratic: the signal is intermittent or erratic. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Vorne rechts Radgeschwindigkeitssensor B sporadisch/unstetig: das Signal ist sporadisch oder unsauber. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - rf_wss_b
   common_causes:
@@ -27855,8 +27855,8 @@
     en: Right Front Wheel Speed Sensor B Correlation
     de: Vorne rechts Radgeschwindigkeitssensor B Korrelation
   description:
-    en: 'LF wheel speed sensor B does not correlate with the primary LF sensor or other wheels. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Sensor B vorne links korreliert nicht mit dem Primärsensor oder den anderen Rädern. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Right Front Wheel Speed Sensor B Correlation: the value does not correlate with the related sensor or expected pattern. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Vorne rechts Radgeschwindigkeitssensor B Korrelation: der Wert stimmt nicht mit dem zugehörigen Sensor oder dem erwarteten Muster überein. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - rf_wss_b
     - rf_wss
@@ -27901,8 +27901,8 @@
     en: Right Front Wheel Speed Sensor B Incorrect Component Installed
     de: Vorne rechts Radgeschwindigkeitssensor B falsche Komponente verbaut
   description:
-    en: 'LF wheel speed sensor B identifier mismatched — wrong sensor type for the vehicle. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Sensor-Kennung passt nicht zum Fahrzeug — falscher Sensortyp verbaut. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Right Front Wheel Speed Sensor B Incorrect Component Installed: the installed component does not match the type the vehicle expects. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Vorne rechts Radgeschwindigkeitssensor B falsche Komponente verbaut: das verbaute Bauteil entspricht nicht dem vom Fahrzeug erwarteten Typ. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - rf_wss_b
   common_causes:
@@ -27945,8 +27945,8 @@
     en: Left Rear Wheel Speed Sensor B Circuit/Open
     de: Hinten links Radgeschwindigkeitssensor B unterbrochen
   description:
-    en: 'Open circuit on left front wheel speed sensor B (secondary sensor). Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Unterbrochener Schaltkreis am Radgeschwindigkeitssensor B vorne links (Zweitsensor). Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Left Rear Wheel Speed Sensor B Circuit/Open: the circuit is open. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Hinten links Radgeschwindigkeitssensor B unterbrochen: der Stromkreis ist unterbrochen. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - lr_wss_b
   common_causes:
@@ -28047,8 +28047,8 @@
     en: Left Rear Wheel Speed Sensor B Circuit Low
     de: Hinten links Radgeschwindigkeitssensor B niedrig
   description:
-    en: 'LF wheel speed sensor B signal voltage below expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Signalspannung Sensor B vorne links unter Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Left Rear Wheel Speed Sensor B Circuit Low: the signal voltage is below the expected range. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Hinten links Radgeschwindigkeitssensor B niedrig: die Signalspannung liegt unter dem erwarteten Bereich. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - lr_wss_b
   common_causes:
@@ -28102,8 +28102,8 @@
     en: Left Rear Wheel Speed Sensor B Circuit High
     de: Hinten links Radgeschwindigkeitssensor B hoch
   description:
-    en: 'LF wheel speed sensor B signal voltage above expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Signalspannung Sensor B vorne links über Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Left Rear Wheel Speed Sensor B Circuit High: the signal voltage is above the expected range. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Hinten links Radgeschwindigkeitssensor B hoch: die Signalspannung liegt über dem erwarteten Bereich. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - lr_wss_b
   common_causes:
@@ -28157,8 +28157,8 @@
     en: Left Rear Wheel Speed Sensor B Intermittent/Erratic
     de: Hinten links Radgeschwindigkeitssensor B sporadisch/unstetig
   description:
-    en: 'Intermittent signal from LF wheel speed sensor B. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Sporadisches Signal vom Sensor B vorne links. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Left Rear Wheel Speed Sensor B Intermittent/Erratic: the signal is intermittent or erratic. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Hinten links Radgeschwindigkeitssensor B sporadisch/unstetig: das Signal ist sporadisch oder unsauber. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - lr_wss_b
   common_causes:
@@ -28211,8 +28211,8 @@
     en: Left Rear Wheel Speed Sensor B Correlation
     de: Hinten links Radgeschwindigkeitssensor B Korrelation
   description:
-    en: 'LF wheel speed sensor B does not correlate with the primary LF sensor or other wheels. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Sensor B vorne links korreliert nicht mit dem Primärsensor oder den anderen Rädern. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Left Rear Wheel Speed Sensor B Correlation: the value does not correlate with the related sensor or expected pattern. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Hinten links Radgeschwindigkeitssensor B Korrelation: der Wert stimmt nicht mit dem zugehörigen Sensor oder dem erwarteten Muster überein. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - lr_wss_b
     - lr_wss
@@ -28257,8 +28257,8 @@
     en: Left Rear Wheel Speed Sensor B Incorrect Component Installed
     de: Hinten links Radgeschwindigkeitssensor B falsche Komponente verbaut
   description:
-    en: 'LF wheel speed sensor B identifier mismatched — wrong sensor type for the vehicle. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Sensor-Kennung passt nicht zum Fahrzeug — falscher Sensortyp verbaut. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Left Rear Wheel Speed Sensor B Incorrect Component Installed: the installed component does not match the type the vehicle expects. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Hinten links Radgeschwindigkeitssensor B falsche Komponente verbaut: das verbaute Bauteil entspricht nicht dem vom Fahrzeug erwarteten Typ. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - lr_wss_b
   common_causes:
@@ -28302,8 +28302,8 @@
     en: Right Rear Wheel Speed Sensor B Circuit/Open
     de: Hinten rechts Radgeschwindigkeitssensor B unterbrochen
   description:
-    en: 'Open circuit on left front wheel speed sensor B (secondary sensor). Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Unterbrochener Schaltkreis am Radgeschwindigkeitssensor B vorne links (Zweitsensor). Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Right Rear Wheel Speed Sensor B Circuit/Open: the circuit is open. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Hinten rechts Radgeschwindigkeitssensor B unterbrochen: der Stromkreis ist unterbrochen. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - rr_wss_b
   common_causes:
@@ -28357,8 +28357,8 @@
     en: Right Rear Wheel Speed Sensor B Range/Performance
     de: Hinten rechts Radgeschwindigkeitssensor B Bereich/Leistung
   description:
-    en: 'LF wheel speed sensor B reading implausible. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Wert vom Radgeschwindigkeitssensor B vorne links unstimmig. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Right Rear Wheel Speed Sensor B Range/Performance: the signal is implausible or outside the valid range. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Hinten rechts Radgeschwindigkeitssensor B Bereich/Leistung: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - rr_wss_b
   common_causes:
@@ -28412,8 +28412,8 @@
     en: Right Rear Wheel Speed Sensor B Circuit Low
     de: Hinten rechts Radgeschwindigkeitssensor B niedrig
   description:
-    en: 'LF wheel speed sensor B signal voltage below expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Signalspannung Sensor B vorne links unter Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Right Rear Wheel Speed Sensor B Circuit Low: the signal voltage is below the expected range. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Hinten rechts Radgeschwindigkeitssensor B niedrig: die Signalspannung liegt unter dem erwarteten Bereich. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - rr_wss_b
   common_causes:
@@ -28467,8 +28467,8 @@
     en: Right Rear Wheel Speed Sensor B Circuit High
     de: Hinten rechts Radgeschwindigkeitssensor B hoch
   description:
-    en: 'LF wheel speed sensor B signal voltage above expected range. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Signalspannung Sensor B vorne links über Sollbereich. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Right Rear Wheel Speed Sensor B Circuit High: the signal voltage is above the expected range. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Hinten rechts Radgeschwindigkeitssensor B hoch: die Signalspannung liegt über dem erwarteten Bereich. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - rr_wss_b
   common_causes:
@@ -28522,8 +28522,8 @@
     en: Right Rear Wheel Speed Sensor B Intermittent/Erratic
     de: Hinten rechts Radgeschwindigkeitssensor B sporadisch/unstetig
   description:
-    en: 'Intermittent signal from LF wheel speed sensor B. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Sporadisches Signal vom Sensor B vorne links. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Right Rear Wheel Speed Sensor B Intermittent/Erratic: the signal is intermittent or erratic. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Hinten rechts Radgeschwindigkeitssensor B sporadisch/unstetig: das Signal ist sporadisch oder unsauber. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - rr_wss_b
   common_causes:
@@ -28577,8 +28577,8 @@
     en: Right Rear Wheel Speed Sensor B Correlation
     de: Hinten rechts Radgeschwindigkeitssensor B Korrelation
   description:
-    en: 'LF wheel speed sensor B does not correlate with the primary LF sensor or other wheels. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Sensor B vorne links korreliert nicht mit dem Primärsensor oder den anderen Rädern. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Right Rear Wheel Speed Sensor B Correlation: the value does not correlate with the related sensor or expected pattern. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Hinten rechts Radgeschwindigkeitssensor B Korrelation: der Wert stimmt nicht mit dem zugehörigen Sensor oder dem erwarteten Muster überein. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - rr_wss_b
     - rr_wss
@@ -28623,8 +28623,8 @@
     en: Right Rear Wheel Speed Sensor B Incorrect Component Installed
     de: Hinten rechts Radgeschwindigkeitssensor B falsche Komponente verbaut
   description:
-    en: 'LF wheel speed sensor B identifier mismatched — wrong sensor type for the vehicle. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Sensor-Kennung passt nicht zum Fahrzeug — falscher Sensortyp verbaut. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: 'Right Rear Wheel Speed Sensor B Incorrect Component Installed: the installed component does not match the type the vehicle expects. Wheel-speed signals feed ABS, ESC, traction control and the speedometer.'
+    de: 'Hinten rechts Radgeschwindigkeitssensor B falsche Komponente verbaut: das verbaute Bauteil entspricht nicht dem vom Fahrzeug erwarteten Typ. Raddrehzahlsignale speisen ABS, ESP, Traktionskontrolle und den Tacho.'
   affected_components:
     - rr_wss_b
   common_causes:
@@ -30438,8 +30438,8 @@
     en: TPMS Sensor 1 Battery
     de: Reifendrucksensor 1 Batterie
   description:
-    en: The tyre pressure monitoring system has detected that the battery in tyre pressure sensor 1 is low or depleted. TPMS sensors are battery-powered with a typical life of 5 to 10 years and must be replaced as a unit when the battery fails.
-    de: Das Reifendruckkontrollsystem hat erkannt, dass die Batterie des Reifendrucksensors 1 schwach oder leer ist. RDKS-Sensoren sind batteriebetrieben mit einer Lebensdauer von 5 bis 10 Jahren und müssen bei leerer Batterie als Einheit getauscht werden.
+    en: 'TPMS Sensor 1 Battery: the control module has detected this fault condition.'
+    de: 'Reifendrucksensor 1 Batterie: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - tpms_sensor
     - tpms_control_module
@@ -30534,8 +30534,8 @@
     en: TPMS Sensor 2 Battery
     de: Reifendrucksensor 2 Batterie
   description:
-    en: The tyre pressure monitoring system has detected that the battery in tyre pressure sensor 2 is low or depleted. TPMS sensors are battery-powered with a typical life of 5 to 10 years and must be replaced as a unit when the battery fails.
-    de: Das Reifendruckkontrollsystem hat erkannt, dass die Batterie des Reifendrucksensors 1 schwach oder leer ist. RDKS-Sensoren sind batteriebetrieben mit einer Lebensdauer von 5 bis 10 Jahren und müssen bei leerer Batterie als Einheit getauscht werden.
+    en: 'TPMS Sensor 2 Battery: the control module has detected this fault condition.'
+    de: 'Reifendrucksensor 2 Batterie: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - tpms_sensor
     - tpms_control_module

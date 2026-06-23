@@ -8238,8 +8238,8 @@
     en: Lost Communication With Generator A Control Module
     de: Kommunikationsverlust mit Generator-A-Steuermodul
   description:
-    en: 'ECU lost CAN communication with generator (alternator) A control module. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Steuergerät hat die CAN-Kommunikation zum Generator-A-Modul (Lichtmaschine) verloren. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: 'Lost Communication With Generator A Control Module: the control module has detected this fault condition.'
+    de: 'Kommunikationsverlust mit Generator-A-Steuermodul: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - generator_a_module
     - can_bus
@@ -8343,8 +8343,8 @@
     en: Lost Communication With Generator B Control Module
     de: Kommunikationsverlust mit Generator-B-Steuermodul
   description:
-    en: 'ECU lost CAN communication with generator (alternator) A control module. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Steuergerät hat die CAN-Kommunikation zum Generator-A-Modul (Lichtmaschine) verloren. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: 'Lost Communication With Generator B Control Module: the control module has detected this fault condition.'
+    de: 'Kommunikationsverlust mit Generator-B-Steuermodul: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - generator_b_module
     - can_bus
@@ -9404,8 +9404,8 @@
     en: Lost Communication with Gateway "A"
     de: Kommunikation mit Gateway "A" verloren
   description:
-    en: A control module has lost communication with the central gateway. The gateway routes messages between separate CAN/Ethernet segments — when it falls silent, large parts of the vehicle simultaneously go offline and many secondary DTCs are stored.
-    de: Ein Steuergerät hat die Kommunikation mit dem zentralen Gateway verloren. Das Gateway leitet Botschaften zwischen separaten CAN-/Ethernet-Segmenten weiter — fällt es aus, gehen große Teile des Fahrzeugs gleichzeitig offline und viele Folgefehler werden abgelegt.
+    en: 'Lost Communication with Gateway "A": the control module has detected this fault condition.'
+    de: 'Kommunikation mit Gateway "A" verloren: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - gateway_module
     - can_bus_wiring
@@ -9455,8 +9455,8 @@
     en: Lost Communication with Gateway "B"
     de: Kommunikation mit Gateway "B" verloren
   description:
-    en: 'A control module has lost communication with the central gateway. The gateway routes messages between separate CAN/Ethernet segments — when it falls silent, large parts of the vehicle simultaneously go offline and many secondary DTCs are stored.'
-    de: 'Ein Steuergerät hat die Kommunikation mit dem zentralen Gateway verloren. Das Gateway leitet Botschaften zwischen separaten CAN-/Ethernet-Segmenten weiter — fällt es aus, gehen große Teile des Fahrzeugs gleichzeitig offline und viele Folgefehler werden abgelegt.'
+    en: 'Lost Communication with Gateway "B": the control module has detected this fault condition.'
+    de: 'Kommunikation mit Gateway "B" verloren: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - gateway_module
     - can_bus_wiring
@@ -10465,8 +10465,8 @@
     en: Lost Communication With Automated Driving System Control Module A
     de: Kommunikationsverlust mit Automatisiertes-Fahren-Steuermodul A
   description:
-    en: ECU lost CAN communication with automated driving system control module A (autonomous driving compute platform).
-    de: Steuergerät hat die CAN-Kommunikation zum Steuermodul des automatisierten Fahrens A verloren (Autonomous-Driving-Compute).
+    en: 'Lost Communication With Automated Driving System Control Module A: the control module has detected this fault condition.'
+    de: 'Kommunikationsverlust mit Automatisiertes-Fahren-Steuermodul A: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - ads_module_a
     - can_bus
@@ -10518,8 +10518,8 @@
     en: Lost Communication With Automated Driving System Control Module B
     de: Kommunikationsverlust mit Automatisiertes-Fahren-Steuermodul B
   description:
-    en: 'ECU lost CAN communication with automated driving system control module B (autonomous driving compute platform).'
-    de: 'Steuergerät hat die CAN-Kommunikation zum Steuermodul des automatisierten Fahrens A verloren (Autonomous-Driving-Compute).'
+    en: 'Lost Communication With Automated Driving System Control Module B: the control module has detected this fault condition.'
+    de: 'Kommunikationsverlust mit Automatisiertes-Fahren-Steuermodul B: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - ads_module_b
     - can_bus
@@ -15622,8 +15622,8 @@
     en: Lost Communication With Moveable Roof Control Module A
     de: Kommunikationsverlust mit Bewegliches-Dach-Steuermodul A
   description:
-    en: 'ECU lost communication with moveable roof control module A (panoramic sunroof, hardtop). A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Steuergerät hat die Kommunikation zum Modul für bewegliches Dach A verloren (Panoramadach, Hardtop). Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: 'Lost Communication With Moveable Roof Control Module A: the control module has detected this fault condition.'
+    de: 'Kommunikationsverlust mit Bewegliches-Dach-Steuermodul A: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - moveable_roof_module_a
     - can_bus
@@ -15781,8 +15781,8 @@
     en: Lost Communication With Moveable Roof Control Module B
     de: Kommunikationsverlust mit Bewegliches-Dach-Steuermodul B
   description:
-    en: 'ECU lost communication with moveable roof control module B (panoramic sunroof, hardtop). A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Steuergerät hat die Kommunikation zum Modul für bewegliches Dach A verloren (Panoramadach, Hardtop). Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: 'Lost Communication With Moveable Roof Control Module B: the control module has detected this fault condition.'
+    de: 'Kommunikationsverlust mit Bewegliches-Dach-Steuermodul B: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - moveable_roof_module_b
     - can_bus
@@ -17784,8 +17784,8 @@
     en: Lost Communication With Front Distance Range Sensor - Left
     de: Kommunikationsverlust mit Front-Abstandssensor links
   description:
-    en: 'ECU lost communication with the front distance range sensor (radar/lidar) on the left. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Steuergerät hat die Kommunikation zum vorderen linken Abstandssensor (Radar/Lidar) verloren. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: 'Lost Communication With Front Distance Range Sensor - Left: the control module has detected this fault condition.'
+    de: 'Kommunikationsverlust mit Front-Abstandssensor links: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - front_distance_sensor_l
     - can_bus
@@ -17836,8 +17836,8 @@
     en: Lost Communication With Front Distance Range Sensor - Right
     de: Kommunikationsverlust mit Front-Abstandssensor rechts
   description:
-    en: 'ECU lost communication with the front distance range sensor (radar/lidar) on the left. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Steuergerät hat die Kommunikation zum vorderen linken Abstandssensor (Radar/Lidar) verloren. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: 'Lost Communication With Front Distance Range Sensor - Right: the control module has detected this fault condition.'
+    de: 'Kommunikationsverlust mit Front-Abstandssensor rechts: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - front_distance_sensor_r
     - can_bus

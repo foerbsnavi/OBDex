@@ -107,8 +107,8 @@
     en: Diesel Particulate Filter Efficiency Below Threshold (Bank 1)
     de: Dieselpartikelfilter Wirkungsgrad unter Schwellwert (Bank 1)
   description:
-    en: The differential pressure sensor or temperature monitor across the diesel particulate filter (DPF) reports that filtration efficiency has dropped below the legal threshold. Common after a damaged filter substrate, blocked passages from failed regenerations, or a leak around the housing.
-    de: Der Differenzdrucksensor oder die Temperaturüberwachung am Dieselpartikelfilter (DPF) meldet, dass die Filtrationswirkung unter den gesetzlichen Schwellwert gefallen ist. Häufig nach beschädigtem Filtermaterial, durch fehlgeschlagene Regenerationen verstopft oder bei einer Undichtigkeit am Gehäuse.
+    en: 'Diesel Particulate Filter Efficiency Below Threshold (Bank 1): the control module has detected this fault condition.'
+    de: 'Dieselpartikelfilter Wirkungsgrad unter Schwellwert (Bank 1): das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - diesel_particulate_filter
     - dpf_differential_pressure_sensor
@@ -165,8 +165,8 @@
     en: Diesel Particulate Filter Efficiency Below Threshold (Bank 2)
     de: Dieselpartikelfilter Wirkungsgrad unter Schwellwert (Bank 2)
   description:
-    en: 'The differential pressure sensor or temperature monitor across the diesel particulate filter (DPF) reports that filtration efficiency has dropped below the legal threshold. Common after a damaged filter substrate, blocked passages from failed regenerations, or a leak around the housing.'
-    de: 'Der Differenzdrucksensor oder die Temperaturüberwachung am Dieselpartikelfilter (DPF) meldet, dass die Filtrationswirkung unter den gesetzlichen Schwellwert gefallen ist. Häufig nach beschädigtem Filtermaterial, durch fehlgeschlagene Regenerationen verstopft oder bei einer Undichtigkeit am Gehäuse.'
+    en: 'Diesel Particulate Filter Efficiency Below Threshold (Bank 2): the control module has detected this fault condition.'
+    de: 'Dieselpartikelfilter Wirkungsgrad unter Schwellwert (Bank 2): das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - diesel_particulate_filter
     - dpf_differential_pressure_sensor
@@ -1149,8 +1149,8 @@
     en: Reductant Injection Valve Circuit Range/Performance (Bank 2 Unit 1)
     de: Reduktionsmittel-Einspritzventil Bereich/Leistung (Bank 2 Einheit 1)
   description:
-    en: The DEF (urea) injection valve on bank 2, unit 1 does not respond to commands within the expected range — flow or response time off-spec, no obvious electrical fault.
-    de: Das DEF-Einspritzventil (Harnstoff) an Bank 2 Einheit 1 reagiert nicht im erwarteten Bereich — Durchflussmenge oder Ansprechzeit ausserhalb der Toleranz, ohne eindeutigen elektrischen Fehler.
+    en: 'Reductant Injection Valve Circuit Range/Performance (Bank 2 Unit 1): the signal is implausible or outside the valid range. This valve doses reductant (DEF/AdBlue) into the exhaust for SCR NOx reduction.'
+    de: 'Reduktionsmittel-Einspritzventil Bereich/Leistung (Bank 2 Einheit 1): das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs. Dieses Ventil dosiert Reduktionsmittel (AdBlue) in den Abgasstrang zur SCR-NOx-Minderung.'
   affected_components:
     - reductant_injection_valve
     - reductant_metering_unit
@@ -1344,8 +1344,8 @@
     en: Reductant Pump A Stuck On
     de: Reduktionsmittelpumpe A bleibt eingeschaltet
   description:
-    en: The DEF (urea) pump A keeps running when commanded off, or its drive current does not drop to zero. Continuous pumping over-pressurises the dosing line and can crystallise DEF at the injector.
-    de: Die AdBlue-Pumpe A läuft trotz Abschaltbefehl weiter oder der Stromfluss fällt nicht auf null. Dauerlauf erhöht den Leitungsdruck und lässt AdBlue am Injektor auskristallisieren.
+    en: 'Reductant Pump A Stuck On: the actuator is stuck in the on position.'
+    de: 'Reduktionsmittelpumpe A bleibt eingeschaltet: das Stellglied hängt in der Ein-Stellung.'
   affected_components:
     - reductant_pump
     - reductant_pump_relay
@@ -2052,8 +2052,8 @@
     en: Reductant Injection Valve Circuit Range/Performance (Bank 1 Unit 1)
     de: Reduktionsmittel-Einspritzventil Bereich/Leistung (Bank 1 Einheit 1)
   description:
-    en: 'The DEF (urea) injection valve on bank 2, unit 1 does not respond to commands within the expected range — flow or response time off-spec, no obvious electrical fault.'
-    de: 'Das DEF-Einspritzventil (Harnstoff) an Bank 2 Einheit 1 reagiert nicht im erwarteten Bereich — Durchflussmenge oder Ansprechzeit ausserhalb der Toleranz, ohne eindeutigen elektrischen Fehler.'
+    en: 'Reductant Injection Valve Circuit Range/Performance (Bank 1 Unit 1): the signal is implausible or outside the valid range. This valve doses reductant (DEF/AdBlue) into the exhaust for SCR NOx reduction.'
+    de: 'Reduktionsmittel-Einspritzventil Bereich/Leistung (Bank 1 Einheit 1): das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs. Dieses Ventil dosiert Reduktionsmittel (AdBlue) in den Abgasstrang zur SCR-NOx-Minderung.'
   affected_components:
     - reductant_injection_valve
     - reductant_metering_unit
@@ -2776,8 +2776,8 @@
     en: Reductant Level Sensor A Circuit Intermittent/Erratic
     de: Reduktionsmittel-Füllstandsensor A Schaltkreis sporadisch/erratisch
   description:
-    en: DEF level sensor A signal jumps or drops out intermittently — typically a corroded sender contact or wiring issue.
-    de: Das Signal des AdBlue-Füllstandsensors A springt oder fällt sporadisch aus — meist korrodierter Geberkontakt oder Verkabelungsproblem.
+    en: 'Reductant Level Sensor A Circuit Intermittent/Erratic: the signal is intermittent or erratic. Often a loose connector or chafed wiring; a wiggle test often locates it.'
+    de: 'Reduktionsmittel-Füllstandsensor A Schaltkreis sporadisch/erratisch: das Signal ist sporadisch oder unsauber. Oft loser Stecker oder gescheuerte Leitung; ein Wackeltest lokalisiert ihn oft.'
   affected_components:
     - reductant_level_sensor
   common_causes:
@@ -3219,8 +3219,8 @@
     en: Reductant Injection Valve Circuit/Open (Bank 1 Unit 1)
     de: Reduktionsmittel-Einspritzventil Schaltkreis/offen (Bank 1 Einheit 1)
   description:
-    en: The DEF (urea) injection valve drive circuit at bank 1 unit 1 is open — no continuity through the solenoid winding or harness.
-    de: Der Treiberkreis des AdBlue-Einspritzventils an Bank 1 Einheit 1 ist offen — kein Durchgang durch Magnetventilwicklung oder Kabelbaum.
+    en: 'Reductant Injection Valve Circuit/Open (Bank 1 Unit 1): the circuit is open. This valve doses reductant (DEF/AdBlue) into the exhaust for SCR NOx reduction.'
+    de: 'Reduktionsmittel-Einspritzventil Schaltkreis/offen (Bank 1 Einheit 1): der Stromkreis ist unterbrochen. Dieses Ventil dosiert Reduktionsmittel (AdBlue) in den Abgasstrang zur SCR-NOx-Minderung.'
   affected_components:
     - reductant_injection_valve
     - reductant_injection_harness
@@ -3269,8 +3269,8 @@
     en: Reductant Injection Valve Circuit Low (Bank 1 Unit 1)
     de: Reduktionsmittel-Einspritzventil Schaltkreis niedrig (Bank 1 Einheit 1)
   description:
-    en: The DEF injection valve drive line at bank 1 unit 1 reads below the expected voltage — short to ground or stuck-low driver.
-    de: Die Treiberleitung des AdBlue-Einspritzventils an Bank 1 Einheit 1 liegt unter der erwarteten Spannung — Kurzschluss nach Masse oder fehlerhafter Treiber.
+    en: 'Reductant Injection Valve Circuit Low (Bank 1 Unit 1): the signal voltage is below the expected range. This valve doses reductant (DEF/AdBlue) into the exhaust for SCR NOx reduction.'
+    de: 'Reduktionsmittel-Einspritzventil Schaltkreis niedrig (Bank 1 Einheit 1): die Signalspannung liegt unter dem erwarteten Bereich. Dieses Ventil dosiert Reduktionsmittel (AdBlue) in den Abgasstrang zur SCR-NOx-Minderung.'
   affected_components:
     - reductant_injection_valve
   common_causes:
@@ -3318,8 +3318,8 @@
     en: Reductant Injection Valve Circuit High (Bank 1 Unit 1)
     de: Reduktionsmittel-Einspritzventil Schaltkreis hoch (Bank 1 Einheit 1)
   description:
-    en: The DEF injection valve drive line at bank 1 unit 1 reads above the expected voltage — short to B+ or open ground.
-    de: Die Treiberleitung des AdBlue-Einspritzventils an Bank 1 Einheit 1 liegt über der erwarteten Spannung — Kurzschluss nach Plus oder offene Masse.
+    en: 'Reductant Injection Valve Circuit High (Bank 1 Unit 1): the signal voltage is above the expected range. This valve doses reductant (DEF/AdBlue) into the exhaust for SCR NOx reduction.'
+    de: 'Reduktionsmittel-Einspritzventil Schaltkreis hoch (Bank 1 Einheit 1): die Signalspannung liegt über dem erwarteten Bereich. Dieses Ventil dosiert Reduktionsmittel (AdBlue) in den Abgasstrang zur SCR-NOx-Minderung.'
   affected_components:
     - reductant_injection_valve
   common_causes:
@@ -3661,8 +3661,8 @@
     en: Reductant Injection Valve Circuit/Open (Bank 2 Unit 1)
     de: Reduktionsmittel-Einspritzventil Schaltkreis/offen (Bank 2 Einheit 1)
   description:
-    en: 'The DEF (urea) injection valve drive circuit at bank 2 unit 1 is open — no continuity through the solenoid winding or harness.'
-    de: 'Der Treiberkreis des AdBlue-Einspritzventils an Bank 2 Einheit 1 ist offen — kein Durchgang durch Magnetventilwicklung oder Kabelbaum.'
+    en: 'Reductant Injection Valve Circuit/Open (Bank 2 Unit 1): the circuit is open. This valve doses reductant (DEF/AdBlue) into the exhaust for SCR NOx reduction.'
+    de: 'Reduktionsmittel-Einspritzventil Schaltkreis/offen (Bank 2 Einheit 1): der Stromkreis ist unterbrochen. Dieses Ventil dosiert Reduktionsmittel (AdBlue) in den Abgasstrang zur SCR-NOx-Minderung.'
   affected_components:
     - reductant_injection_valve
   common_causes:
@@ -3710,8 +3710,8 @@
     en: Reductant Injection Valve Circuit Low (Bank 2 Unit 1)
     de: Reduktionsmittel-Einspritzventil Schaltkreis niedrig (Bank 2 Einheit 1)
   description:
-    en: 'The DEF injection valve drive line at bank 2 unit 1 reads below the expected voltage — short to ground or stuck-low driver.'
-    de: 'Die Treiberleitung des AdBlue-Einspritzventils an Bank 2 Einheit 1 liegt unter der erwarteten Spannung — Kurzschluss nach Masse oder fehlerhafter Treiber.'
+    en: 'Reductant Injection Valve Circuit Low (Bank 2 Unit 1): the signal voltage is below the expected range. This valve doses reductant (DEF/AdBlue) into the exhaust for SCR NOx reduction.'
+    de: 'Reduktionsmittel-Einspritzventil Schaltkreis niedrig (Bank 2 Einheit 1): die Signalspannung liegt unter dem erwarteten Bereich. Dieses Ventil dosiert Reduktionsmittel (AdBlue) in den Abgasstrang zur SCR-NOx-Minderung.'
   affected_components:
     - reductant_injection_valve
   common_causes:
@@ -3759,8 +3759,8 @@
     en: Reductant Injection Valve Circuit High (Bank 2 Unit 1)
     de: Reduktionsmittel-Einspritzventil Schaltkreis hoch (Bank 2 Einheit 1)
   description:
-    en: 'The DEF injection valve drive line at bank 2 unit 1 reads above the expected voltage — short to B+ or open ground.'
-    de: 'Die Treiberleitung des AdBlue-Einspritzventils an Bank 2 Einheit 1 liegt über der erwarteten Spannung — Kurzschluss nach Plus oder offene Masse.'
+    en: 'Reductant Injection Valve Circuit High (Bank 2 Unit 1): the signal voltage is above the expected range. This valve doses reductant (DEF/AdBlue) into the exhaust for SCR NOx reduction.'
+    de: 'Reduktionsmittel-Einspritzventil Schaltkreis hoch (Bank 2 Einheit 1): die Signalspannung liegt über dem erwarteten Bereich. Dieses Ventil dosiert Reduktionsmittel (AdBlue) in den Abgasstrang zur SCR-NOx-Minderung.'
   affected_components:
     - reductant_injection_valve
   common_causes:
@@ -3808,8 +3808,8 @@
     en: Reductant Injection Valve Circuit/Open (Bank 1 Unit 2)
     de: Reduktionsmittel-Einspritzventil Schaltkreis/offen (Bank 1 Einheit 2)
   description:
-    en: 'The DEF (urea) injection valve drive circuit at bank 1 unit 1 is open — no continuity through the solenoid winding or harness.'
-    de: 'Der Treiberkreis des AdBlue-Einspritzventils an Bank 1 Einheit 1 ist offen — kein Durchgang durch Magnetventilwicklung oder Kabelbaum.'
+    en: 'Reductant Injection Valve Circuit/Open (Bank 1 Unit 2): the circuit is open. This valve doses reductant (DEF/AdBlue) into the exhaust for SCR NOx reduction.'
+    de: 'Reduktionsmittel-Einspritzventil Schaltkreis/offen (Bank 1 Einheit 2): der Stromkreis ist unterbrochen. Dieses Ventil dosiert Reduktionsmittel (AdBlue) in den Abgasstrang zur SCR-NOx-Minderung.'
   affected_components:
     - reductant_injection_valve
   common_causes:
@@ -3857,8 +3857,8 @@
     en: Reductant Injection Valve Circuit Low (Bank 1 Unit 2)
     de: Reduktionsmittel-Einspritzventil Schaltkreis niedrig (Bank 1 Einheit 2)
   description:
-    en: 'The DEF injection valve drive line at bank 1 unit 1 reads below the expected voltage — short to ground or stuck-low driver.'
-    de: 'Die Treiberleitung des AdBlue-Einspritzventils an Bank 1 Einheit 1 liegt unter der erwarteten Spannung — Kurzschluss nach Masse oder fehlerhafter Treiber.'
+    en: 'Reductant Injection Valve Circuit Low (Bank 1 Unit 2): the signal voltage is below the expected range. This valve doses reductant (DEF/AdBlue) into the exhaust for SCR NOx reduction.'
+    de: 'Reduktionsmittel-Einspritzventil Schaltkreis niedrig (Bank 1 Einheit 2): die Signalspannung liegt unter dem erwarteten Bereich. Dieses Ventil dosiert Reduktionsmittel (AdBlue) in den Abgasstrang zur SCR-NOx-Minderung.'
   affected_components:
     - reductant_injection_valve
   common_causes:
@@ -3906,8 +3906,8 @@
     en: Reductant Injection Valve Circuit High (Bank 1 Unit 2)
     de: Reduktionsmittel-Einspritzventil Schaltkreis hoch (Bank 1 Einheit 2)
   description:
-    en: 'The DEF injection valve drive line at bank 1 unit 1 reads above the expected voltage — short to B+ or open ground.'
-    de: 'Die Treiberleitung des AdBlue-Einspritzventils an Bank 1 Einheit 1 liegt über der erwarteten Spannung — Kurzschluss nach Plus oder offene Masse.'
+    en: 'Reductant Injection Valve Circuit High (Bank 1 Unit 2): the signal voltage is above the expected range. This valve doses reductant (DEF/AdBlue) into the exhaust for SCR NOx reduction.'
+    de: 'Reduktionsmittel-Einspritzventil Schaltkreis hoch (Bank 1 Einheit 2): die Signalspannung liegt über dem erwarteten Bereich. Dieses Ventil dosiert Reduktionsmittel (AdBlue) in den Abgasstrang zur SCR-NOx-Minderung.'
   affected_components:
     - reductant_injection_valve
   common_causes:
@@ -3955,8 +3955,8 @@
     en: Reductant Injection Valve Circuit/Open (Bank 2 Unit 2)
     de: Reduktionsmittel-Einspritzventil Schaltkreis/offen (Bank 2 Einheit 2)
   description:
-    en: 'The DEF (urea) injection valve drive circuit at bank 2 unit 1 is open — no continuity through the solenoid winding or harness.'
-    de: 'Der Treiberkreis des AdBlue-Einspritzventils an Bank 2 Einheit 1 ist offen — kein Durchgang durch Magnetventilwicklung oder Kabelbaum.'
+    en: 'Reductant Injection Valve Circuit/Open (Bank 2 Unit 2): the circuit is open. This valve doses reductant (DEF/AdBlue) into the exhaust for SCR NOx reduction.'
+    de: 'Reduktionsmittel-Einspritzventil Schaltkreis/offen (Bank 2 Einheit 2): der Stromkreis ist unterbrochen. Dieses Ventil dosiert Reduktionsmittel (AdBlue) in den Abgasstrang zur SCR-NOx-Minderung.'
   affected_components:
     - reductant_injection_valve
   common_causes:
@@ -4004,8 +4004,8 @@
     en: Reductant Injection Valve Circuit Low (Bank 2 Unit 2)
     de: Reduktionsmittel-Einspritzventil Schaltkreis niedrig (Bank 2 Einheit 2)
   description:
-    en: 'The DEF injection valve drive line at bank 2 unit 1 reads below the expected voltage — short to ground or stuck-low driver.'
-    de: 'Die Treiberleitung des AdBlue-Einspritzventils an Bank 2 Einheit 1 liegt unter der erwarteten Spannung — Kurzschluss nach Masse oder fehlerhafter Treiber.'
+    en: 'Reductant Injection Valve Circuit Low (Bank 2 Unit 2): the signal voltage is below the expected range. This valve doses reductant (DEF/AdBlue) into the exhaust for SCR NOx reduction.'
+    de: 'Reduktionsmittel-Einspritzventil Schaltkreis niedrig (Bank 2 Einheit 2): die Signalspannung liegt unter dem erwarteten Bereich. Dieses Ventil dosiert Reduktionsmittel (AdBlue) in den Abgasstrang zur SCR-NOx-Minderung.'
   affected_components:
     - reductant_injection_valve
   common_causes:
@@ -4053,8 +4053,8 @@
     en: Reductant Injection Valve Circuit High (Bank 2 Unit 2)
     de: Reduktionsmittel-Einspritzventil Schaltkreis hoch (Bank 2 Einheit 2)
   description:
-    en: 'The DEF injection valve drive line at bank 2 unit 1 reads above the expected voltage — short to B+ or open ground.'
-    de: 'Die Treiberleitung des AdBlue-Einspritzventils an Bank 2 Einheit 1 liegt über der erwarteten Spannung — Kurzschluss nach Plus oder offene Masse.'
+    en: 'Reductant Injection Valve Circuit High (Bank 2 Unit 2): the signal voltage is above the expected range. This valve doses reductant (DEF/AdBlue) into the exhaust for SCR NOx reduction.'
+    de: 'Reduktionsmittel-Einspritzventil Schaltkreis hoch (Bank 2 Einheit 2): die Signalspannung liegt über dem erwarteten Bereich. Dieses Ventil dosiert Reduktionsmittel (AdBlue) in den Abgasstrang zur SCR-NOx-Minderung.'
   affected_components:
     - reductant_injection_valve
   common_causes:
@@ -4102,8 +4102,8 @@
     en: Reductant Injection Air Pump Control Circuit/Open
     de: Reduktionsmittel-Einspritzluft-Pumpe Steuerkreis/offen
   description:
-    en: The control circuit driving the air-assist pump for DEF injection is open — atomisation air will not be available, dosing accuracy degrades.
-    de: Der Steuerkreis der luftunterstützten AdBlue-Pumpe ist offen — die Zerstäubungsluft fehlt, die Dosiergenauigkeit verschlechtert sich.
+    en: 'Reductant Injection Air Pump Control Circuit/Open: the control circuit is open. This valve doses reductant (DEF/AdBlue) into the exhaust for SCR NOx reduction.'
+    de: 'Reduktionsmittel-Einspritzluft-Pumpe Steuerkreis/offen: der Steuerkreis ist unterbrochen. Dieses Ventil dosiert Reduktionsmittel (AdBlue) in den Abgasstrang zur SCR-NOx-Minderung.'
   affected_components:
     - reductant_air_pump
     - reductant_air_pump_relay
@@ -4450,8 +4450,8 @@
     en: Reductant Injection Air Pump Control Circuit Low
     de: Reduktionsmittel-Einspritzluft-Pumpe Steuerkreis niedrig
   description:
-    en: 'The control circuit driving the air-assist pump for DEF injection is open — atomisation air will not be available, dosing accuracy degrades.'
-    de: 'Der Steuerkreis der luftunterstützten AdBlue-Pumpe ist offen — die Zerstäubungsluft fehlt, die Dosiergenauigkeit verschlechtert sich.'
+    en: 'Reductant Injection Air Pump Control Circuit Low: the control-circuit voltage is below the expected range. This valve doses reductant (DEF/AdBlue) into the exhaust for SCR NOx reduction.'
+    de: 'Reduktionsmittel-Einspritzluft-Pumpe Steuerkreis niedrig: die Spannung im Steuerkreis liegt unter dem erwarteten Bereich. Dieses Ventil dosiert Reduktionsmittel (AdBlue) in den Abgasstrang zur SCR-NOx-Minderung.'
   affected_components:
     - reductant_air_pump
   common_causes:
@@ -4499,8 +4499,8 @@
     en: Reductant Injection Air Pump Control Circuit High
     de: Reduktionsmittel-Einspritzluft-Pumpe Steuerkreis hoch
   description:
-    en: 'The control circuit driving the air-assist pump for DEF injection is open — atomisation air will not be available, dosing accuracy degrades.'
-    de: 'Der Steuerkreis der luftunterstützten AdBlue-Pumpe ist offen — die Zerstäubungsluft fehlt, die Dosiergenauigkeit verschlechtert sich.'
+    en: 'Reductant Injection Air Pump Control Circuit High: the control-circuit voltage is above the expected range. This valve doses reductant (DEF/AdBlue) into the exhaust for SCR NOx reduction.'
+    de: 'Reduktionsmittel-Einspritzluft-Pumpe Steuerkreis hoch: die Spannung im Steuerkreis liegt über dem erwarteten Bereich. Dieses Ventil dosiert Reduktionsmittel (AdBlue) in den Abgasstrang zur SCR-NOx-Minderung.'
   affected_components:
     - reductant_air_pump
   common_causes:
@@ -5076,8 +5076,8 @@
     en: Intake Manifold Tuning (IMT) Valve Stuck Open (Bank 2)
     de: Saugrohr-Tuning-Klappe (IMT) hängt offen (Bank 2)
   description:
-    en: The intake-manifold tuning (IMT) valve on bank 2 is mechanically stuck open — long-runner mode is unavailable, breathing characteristic is wrong at low rpm.
-    de: Die Saugrohr-Tuning-Klappe (IMT) an Bank 2 hängt mechanisch offen — Lang-Saugrohrbetrieb fehlt, das Strömungsverhalten bei niedriger Drehzahl stimmt nicht.
+    en: 'Intake Manifold Tuning (IMT) Valve Stuck Open (Bank 2): the control module has detected this fault condition.'
+    de: 'Saugrohr-Tuning-Klappe (IMT) hängt offen (Bank 2): das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - imt_valve
     - imt_actuator
@@ -5118,8 +5118,8 @@
     en: Intake Manifold Tuning (IMT) Valve Stuck Closed (Bank 2)
     de: Saugrohr-Tuning-Klappe (IMT) hängt geschlossen (Bank 2)
   description:
-    en: The IMT valve on bank 2 is mechanically stuck closed — short-runner mode is unavailable, top-end power suffers.
-    de: Die IMT-Klappe an Bank 2 hängt mechanisch geschlossen — Kurz-Saugrohrbetrieb fehlt, Spitzenleistung leidet.
+    en: 'Intake Manifold Tuning (IMT) Valve Stuck Closed (Bank 2): the control module has detected this fault condition.'
+    de: 'Saugrohr-Tuning-Klappe (IMT) hängt geschlossen (Bank 2): das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - imt_valve
     - imt_actuator
@@ -5160,8 +5160,8 @@
     en: Intake Manifold Tuning (IMT) Valve Stuck Open (Bank 1)
     de: Saugrohr-Tuning-Klappe (IMT) hängt offen (Bank 1)
   description:
-    en: 'The intake-manifold tuning (IMT) valve on bank 2 is mechanically stuck open — long-runner mode is unavailable, breathing characteristic is wrong at low rpm.'
-    de: 'Die Saugrohr-Tuning-Klappe (IMT) an Bank 2 hängt mechanisch offen — Lang-Saugrohrbetrieb fehlt, das Strömungsverhalten bei niedriger Drehzahl stimmt nicht.'
+    en: 'Intake Manifold Tuning (IMT) Valve Stuck Open (Bank 1): the control module has detected this fault condition.'
+    de: 'Saugrohr-Tuning-Klappe (IMT) hängt offen (Bank 1): das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - imt_valve
     - imt_actuator
@@ -5202,8 +5202,8 @@
     en: Intake Manifold Tuning (IMT) Valve Stuck Closed (Bank 1)
     de: Saugrohr-Tuning-Klappe (IMT) hängt geschlossen (Bank 1)
   description:
-    en: 'The IMT valve on bank 2 is mechanically stuck closed — short-runner mode is unavailable, top-end power suffers.'
-    de: 'Die IMT-Klappe an Bank 2 hängt mechanisch geschlossen — Kurz-Saugrohrbetrieb fehlt, Spitzenleistung leidet.'
+    en: 'Intake Manifold Tuning (IMT) Valve Stuck Closed (Bank 1): the control module has detected this fault condition.'
+    de: 'Saugrohr-Tuning-Klappe (IMT) hängt geschlossen (Bank 1): das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - imt_valve
     - imt_actuator
@@ -9406,8 +9406,8 @@
     en: Exhaust Aftertreatment Fuel Injector A Control Circuit/Open
     de: Abgasnachbehandlung Kraftstoffinjektor A Steuerkreis/offen
   description:
-    en: The 7th-injector (HC dosing into exhaust upstream of DOC/DPF) for aftertreatment regeneration on circuit A is open — DPF/SCR regeneration cannot raise exhaust temperature.
-    de: Der 7. Injektor (HC-Dosierung ins Abgas vor DOC/DPF) zur Abgasnachbehandlungs-Regeneration auf Kreis A ist offen — DPF/SCR-Regeneration kann die Abgastemperatur nicht anheben.
+    en: 'Exhaust Aftertreatment Fuel Injector A Control Circuit/Open: the control circuit is open. This injector doses fuel into the exhaust to raise temperature for diesel particulate-filter regeneration; it does not fuel the engine.'
+    de: 'Abgasnachbehandlung Kraftstoffinjektor A Steuerkreis/offen: der Steuerkreis ist unterbrochen. Dieser Injektor dosiert Kraftstoff in den Abgasstrang, um die Temperatur für die Dieselpartikelfilter-Regeneration anzuheben; er versorgt nicht den Motor.'
   affected_components:
     - aftertreatment_fuel_injector
     - aftertreatment_fuel_pump
@@ -9457,8 +9457,8 @@
     en: Exhaust Aftertreatment Fuel Injector A Control Performance
     de: Abgasnachbehandlung Kraftstoffinjektor A Steuerung Leistung
   description:
-    en: The aftertreatment HC injector A is electrically OK but does not deliver the commanded fuel mass during regeneration — partial blockage or worn nozzle.
-    de: Der HC-Injektor A der Abgasnachbehandlung ist elektrisch in Ordnung, liefert aber bei Regeneration nicht die geforderte Kraftstoffmasse — Teilblockade oder verschlissene Düse.
+    en: 'Exhaust Aftertreatment Fuel Injector A Control Performance: the component is electrically intact but its response does not match the command. This injector doses fuel into the exhaust to raise temperature for diesel particulate-filter regeneration; it does not fuel the engine.'
+    de: 'Abgasnachbehandlung Kraftstoffinjektor A Steuerung Leistung: das Bauteil ist elektrisch in Ordnung, reagiert aber nicht wie vorgegeben. Dieser Injektor dosiert Kraftstoff in den Abgasstrang, um die Temperatur für die Dieselpartikelfilter-Regeneration anzuheben; er versorgt nicht den Motor.'
   affected_components:
     - aftertreatment_fuel_injector
   common_causes:
@@ -9502,8 +9502,8 @@
     en: Exhaust Aftertreatment Fuel Injector A Control Circuit Low
     de: Abgasnachbehandlung Kraftstoffinjektor A Steuerkreis niedrig
   description:
-    en: 'HC injector A drive line stuck low — short to ground. A flow-deviating injector throws off cylinder balance — adjacent cylinders run leaner/richer to compensate, often masking the root cause until the trim limit is hit.'
-    de: 'Treiberleitung des HC-Injektors A niedrig — Kurzschluss nach Masse. Ein abweichender Injektor stört die Zylinderbalance — Nachbarzylinder laufen kompensatorisch magerer/fetter, was die Ursache oft maskiert, bis das Trim-Limit erreicht ist.'
+    en: 'Exhaust Aftertreatment Fuel Injector A Control Circuit Low: the control-circuit voltage is below the expected range. This injector doses fuel into the exhaust to raise temperature for diesel particulate-filter regeneration; it does not fuel the engine.'
+    de: 'Abgasnachbehandlung Kraftstoffinjektor A Steuerkreis niedrig: die Spannung im Steuerkreis liegt unter dem erwarteten Bereich. Dieser Injektor dosiert Kraftstoff in den Abgasstrang, um die Temperatur für die Dieselpartikelfilter-Regeneration anzuheben; er versorgt nicht den Motor.'
   affected_components:
     - aftertreatment_fuel_injector
   common_causes:
@@ -9552,8 +9552,8 @@
     en: Exhaust Aftertreatment Fuel Injector A Control Circuit High
     de: Abgasnachbehandlung Kraftstoffinjektor A Steuerkreis hoch
   description:
-    en: 'HC injector A drive line stuck high — short to B+. A flow-deviating injector throws off cylinder balance — adjacent cylinders run leaner/richer to compensate, often masking the root cause until the trim limit is hit.'
-    de: 'Treiberleitung des HC-Injektors A hoch — Kurzschluss nach Plus. Ein abweichender Injektor stört die Zylinderbalance — Nachbarzylinder laufen kompensatorisch magerer/fetter, was die Ursache oft maskiert, bis das Trim-Limit erreicht ist.'
+    en: 'Exhaust Aftertreatment Fuel Injector A Control Circuit High: the control-circuit voltage is above the expected range. This injector doses fuel into the exhaust to raise temperature for diesel particulate-filter regeneration; it does not fuel the engine.'
+    de: 'Abgasnachbehandlung Kraftstoffinjektor A Steuerkreis hoch: die Spannung im Steuerkreis liegt über dem erwarteten Bereich. Dieser Injektor dosiert Kraftstoff in den Abgasstrang, um die Temperatur für die Dieselpartikelfilter-Regeneration anzuheben; er versorgt nicht den Motor.'
   affected_components:
     - aftertreatment_fuel_injector
   common_causes:
@@ -9602,8 +9602,8 @@
     en: Exhaust Aftertreatment Fuel Injector A Stuck Open
     de: Abgasnachbehandlung Kraftstoffinjektor A hängt offen
   description:
-    en: HC injector A is mechanically stuck open — fuel leaks continuously into the exhaust, can ignite uncontrolled regeneration.
-    de: HC-Injektor A hängt mechanisch offen — Kraftstoff tritt fortlaufend ins Abgas, kann unkontrollierte Regeneration auslösen.
+    en: 'Exhaust Aftertreatment Fuel Injector A Stuck Open: the control module has detected this fault condition. This injector doses fuel into the exhaust to raise temperature for diesel particulate-filter regeneration; it does not fuel the engine.'
+    de: 'Abgasnachbehandlung Kraftstoffinjektor A hängt offen: das Steuergerät hat diesen Fehlerzustand erkannt. Dieser Injektor dosiert Kraftstoff in den Abgasstrang, um die Temperatur für die Dieselpartikelfilter-Regeneration anzuheben; er versorgt nicht den Motor.'
   affected_components:
     - aftertreatment_fuel_injector
   common_causes:
@@ -9653,8 +9653,8 @@
     en: Exhaust Aftertreatment Fuel Injector A Stuck Closed
     de: Abgasnachbehandlung Kraftstoffinjektor A hängt geschlossen
   description:
-    en: 'HC injector A is mechanically stuck closed — DPF regeneration cannot reach burn-off temperature. A flow-deviating injector throws off cylinder balance — adjacent cylinders run leaner/richer to compensate, often masking the root cause until the trim limit is hit.'
-    de: 'HC-Injektor A hängt mechanisch geschlossen — DPF-Regeneration erreicht die Abbrenntemperatur nicht. Ein abweichender Injektor stört die Zylinderbalance — Nachbarzylinder laufen kompensatorisch magerer/fetter, was die Ursache oft maskiert, bis das Trim-Limit erreicht ist.'
+    en: 'Exhaust Aftertreatment Fuel Injector A Stuck Closed: the control module has detected this fault condition. This injector doses fuel into the exhaust to raise temperature for diesel particulate-filter regeneration; it does not fuel the engine.'
+    de: 'Abgasnachbehandlung Kraftstoffinjektor A hängt geschlossen: das Steuergerät hat diesen Fehlerzustand erkannt. Dieser Injektor dosiert Kraftstoff in den Abgasstrang, um die Temperatur für die Dieselpartikelfilter-Regeneration anzuheben; er versorgt nicht den Motor.'
   affected_components:
     - aftertreatment_fuel_injector
   common_causes:
@@ -9703,8 +9703,8 @@
     en: Exhaust Aftertreatment Fuel Injector B Control Circuit/Open
     de: Abgasnachbehandlung Kraftstoffinjektor B Steuerkreis/offen
   description:
-    en: 'The 7th-injector (HC dosing into exhaust upstream of DOC/DPF) for aftertreatment regeneration on circuit A is open — DPF/SCR regeneration cannot raise exhaust temperature.'
-    de: 'Der 7. Injektor (HC-Dosierung ins Abgas vor DOC/DPF) zur Abgasnachbehandlungs-Regeneration auf Kreis A ist offen — DPF/SCR-Regeneration kann die Abgastemperatur nicht anheben.'
+    en: 'Exhaust Aftertreatment Fuel Injector B Control Circuit/Open: the control circuit is open. This injector doses fuel into the exhaust to raise temperature for diesel particulate-filter regeneration; it does not fuel the engine.'
+    de: 'Abgasnachbehandlung Kraftstoffinjektor B Steuerkreis/offen: der Steuerkreis ist unterbrochen. Dieser Injektor dosiert Kraftstoff in den Abgasstrang, um die Temperatur für die Dieselpartikelfilter-Regeneration anzuheben; er versorgt nicht den Motor.'
   affected_components:
     - aftertreatment_fuel_injector
   common_causes:
@@ -9753,8 +9753,8 @@
     en: Exhaust Aftertreatment Fuel Injector B Control Performance
     de: Abgasnachbehandlung Kraftstoffinjektor B Steuerung Leistung
   description:
-    en: 'The aftertreatment HC injector A is electrically OK but does not deliver the commanded fuel mass during regeneration — partial blockage or worn nozzle.'
-    de: 'Der HC-Injektor A der Abgasnachbehandlung ist elektrisch in Ordnung, liefert aber bei Regeneration nicht die geforderte Kraftstoffmasse — Teilblockade oder verschlissene Düse.'
+    en: 'Exhaust Aftertreatment Fuel Injector B Control Performance: the component is electrically intact but its response does not match the command. This injector doses fuel into the exhaust to raise temperature for diesel particulate-filter regeneration; it does not fuel the engine.'
+    de: 'Abgasnachbehandlung Kraftstoffinjektor B Steuerung Leistung: das Bauteil ist elektrisch in Ordnung, reagiert aber nicht wie vorgegeben. Dieser Injektor dosiert Kraftstoff in den Abgasstrang, um die Temperatur für die Dieselpartikelfilter-Regeneration anzuheben; er versorgt nicht den Motor.'
   affected_components:
     - aftertreatment_fuel_injector
   common_causes:
@@ -9793,8 +9793,8 @@
     en: Exhaust Aftertreatment Fuel Injector B Control Circuit Low
     de: Abgasnachbehandlung Kraftstoffinjektor B Steuerkreis niedrig
   description:
-    en: 'HC injector A drive line stuck low — short to ground. A flow-deviating injector throws off cylinder balance — adjacent cylinders run leaner/richer to compensate, often masking the root cause until the trim limit is hit.'
-    de: 'Treiberleitung des HC-Injektors A niedrig — Kurzschluss nach Masse. Ein abweichender Injektor stört die Zylinderbalance — Nachbarzylinder laufen kompensatorisch magerer/fetter, was die Ursache oft maskiert, bis das Trim-Limit erreicht ist.'
+    en: 'Exhaust Aftertreatment Fuel Injector B Control Circuit Low: the control-circuit voltage is below the expected range. This injector doses fuel into the exhaust to raise temperature for diesel particulate-filter regeneration; it does not fuel the engine.'
+    de: 'Abgasnachbehandlung Kraftstoffinjektor B Steuerkreis niedrig: die Spannung im Steuerkreis liegt unter dem erwarteten Bereich. Dieser Injektor dosiert Kraftstoff in den Abgasstrang, um die Temperatur für die Dieselpartikelfilter-Regeneration anzuheben; er versorgt nicht den Motor.'
   affected_components:
     - aftertreatment_fuel_injector
   common_causes:
@@ -9843,8 +9843,8 @@
     en: Exhaust Aftertreatment Fuel Injector B Control Circuit High
     de: Abgasnachbehandlung Kraftstoffinjektor B Steuerkreis hoch
   description:
-    en: 'HC injector A drive line stuck high — short to B+. A flow-deviating injector throws off cylinder balance — adjacent cylinders run leaner/richer to compensate, often masking the root cause until the trim limit is hit.'
-    de: 'Treiberleitung des HC-Injektors A hoch — Kurzschluss nach Plus. Ein abweichender Injektor stört die Zylinderbalance — Nachbarzylinder laufen kompensatorisch magerer/fetter, was die Ursache oft maskiert, bis das Trim-Limit erreicht ist.'
+    en: 'Exhaust Aftertreatment Fuel Injector B Control Circuit High: the control-circuit voltage is above the expected range. This injector doses fuel into the exhaust to raise temperature for diesel particulate-filter regeneration; it does not fuel the engine.'
+    de: 'Abgasnachbehandlung Kraftstoffinjektor B Steuerkreis hoch: die Spannung im Steuerkreis liegt über dem erwarteten Bereich. Dieser Injektor dosiert Kraftstoff in den Abgasstrang, um die Temperatur für die Dieselpartikelfilter-Regeneration anzuheben; er versorgt nicht den Motor.'
   affected_components:
     - aftertreatment_fuel_injector
   common_causes:
@@ -9893,8 +9893,8 @@
     en: Exhaust Aftertreatment Fuel Injector B Stuck Open
     de: Abgasnachbehandlung Kraftstoffinjektor B hängt offen
   description:
-    en: 'HC injector A is mechanically stuck open — fuel leaks continuously into the exhaust, can ignite uncontrolled regeneration.'
-    de: 'HC-Injektor A hängt mechanisch offen — Kraftstoff tritt fortlaufend ins Abgas, kann unkontrollierte Regeneration auslösen.'
+    en: 'Exhaust Aftertreatment Fuel Injector B Stuck Open: the control module has detected this fault condition. This injector doses fuel into the exhaust to raise temperature for diesel particulate-filter regeneration; it does not fuel the engine.'
+    de: 'Abgasnachbehandlung Kraftstoffinjektor B hängt offen: das Steuergerät hat diesen Fehlerzustand erkannt. Dieser Injektor dosiert Kraftstoff in den Abgasstrang, um die Temperatur für die Dieselpartikelfilter-Regeneration anzuheben; er versorgt nicht den Motor.'
   affected_components:
     - aftertreatment_fuel_injector
   common_causes:
@@ -9943,8 +9943,8 @@
     en: Exhaust Aftertreatment Fuel Injector B Stuck Closed
     de: Abgasnachbehandlung Kraftstoffinjektor B hängt geschlossen
   description:
-    en: 'HC injector A is mechanically stuck closed — DPF regeneration cannot reach burn-off temperature. A flow-deviating injector throws off cylinder balance — adjacent cylinders run leaner/richer to compensate, often masking the root cause until the trim limit is hit.'
-    de: 'HC-Injektor A hängt mechanisch geschlossen — DPF-Regeneration erreicht die Abbrenntemperatur nicht. Ein abweichender Injektor stört die Zylinderbalance — Nachbarzylinder laufen kompensatorisch magerer/fetter, was die Ursache oft maskiert, bis das Trim-Limit erreicht ist.'
+    en: 'Exhaust Aftertreatment Fuel Injector B Stuck Closed: the control module has detected this fault condition. This injector doses fuel into the exhaust to raise temperature for diesel particulate-filter regeneration; it does not fuel the engine.'
+    de: 'Abgasnachbehandlung Kraftstoffinjektor B hängt geschlossen: das Steuergerät hat diesen Fehlerzustand erkannt. Dieser Injektor dosiert Kraftstoff in den Abgasstrang, um die Temperatur für die Dieselpartikelfilter-Regeneration anzuheben; er versorgt nicht den Motor.'
   affected_components:
     - aftertreatment_fuel_injector
   common_causes:
@@ -10534,8 +10534,8 @@
     en: Exhaust Gas Temperature Sensor 1/3 Correlation (Bank 1)
     de: Abgastemperatursensor 1/3 Korrelation (Bank 1)
   description:
-    en: EGT sensors 1 and 3 on bank 1 disagree by more than the allowed tolerance — one is reading off, or there is a real temperature gradient that exceeds the calibrated map (e.g. from a leaking exhaust joint between the two locations).
-    de: Die EGT-Sensoren 1 und 3 an Bank 1 weichen über die zulässige Toleranz hinaus voneinander ab — einer driftet, oder es liegt ein realer Temperaturgradient vor, der die Kalibrierung überschreitet (z. B. durch eine undichte Abgasverbindung zwischen den Messpunkten).
+    en: 'Exhaust Gas Temperature Sensor 1/3 Correlation (Bank 1): the value does not correlate with the related sensor or expected pattern. The ECU uses this temperature to protect the catalyst and diesel particulate filter.'
+    de: 'Abgastemperatursensor 1/3 Korrelation (Bank 1): der Wert stimmt nicht mit dem zugehörigen Sensor oder dem erwarteten Muster überein. Das Steuergerät nutzt diese Temperatur zum Schutz von Katalysator und Dieselpartikelfilter.'
   affected_components:
     - exhaust_gas_temperature_sensor
     - exhaust_pipe
@@ -10571,8 +10571,8 @@
     en: Exhaust Gas Temperature Sensor 2/3 Correlation (Bank 1)
     de: Abgastemperatursensor 2/3 Korrelation (Bank 1)
   description:
-    en: 'EGT sensors 1 and 3 on bank 1 disagree by more than the allowed tolerance — one is reading off, or there is a real temperature gradient that exceeds the calibrated map (e.g. from a leaking exhaust joint between the two locations).'
-    de: 'Die EGT-Sensoren 1 und 3 an Bank 1 weichen über die zulässige Toleranz hinaus voneinander ab — einer driftet, oder es liegt ein realer Temperaturgradient vor, der die Kalibrierung überschreitet (z. B. durch eine undichte Abgasverbindung zwischen den Messpunkten).'
+    en: 'Exhaust Gas Temperature Sensor 2/3 Correlation (Bank 1): the value does not correlate with the related sensor or expected pattern. The ECU uses this temperature to protect the catalyst and diesel particulate filter.'
+    de: 'Abgastemperatursensor 2/3 Korrelation (Bank 1): der Wert stimmt nicht mit dem zugehörigen Sensor oder dem erwarteten Muster überein. Das Steuergerät nutzt diese Temperatur zum Schutz von Katalysator und Dieselpartikelfilter.'
   affected_components:
     - exhaust_gas_temperature_sensor
   common_causes:
@@ -11121,8 +11121,8 @@
     en: SCR NOx Catalyst Over Temperature (Bank 2)
     de: SCR NOx-Katalysator Übertemperatur (Bank 2)
   description:
-    en: A temperature sensor at the SCR catalyst on bank 2 reports a value above the safe limit — sustained over-temperature can sinter the SCR washcoat and destroy NOx conversion.
-    de: Ein Temperatursensor am SCR-Katalysator an Bank 2 meldet einen Wert über dem zulässigen Grenzwert — anhaltende Übertemperatur sintert den SCR-Washcoat und zerstört die NOx-Konvertierung.
+    en: 'SCR NOx Catalyst Over Temperature (Bank 2): the component is overheating, typically from extended load or slip.'
+    de: 'SCR NOx-Katalysator Übertemperatur (Bank 2): das Bauteil überhitzt, meist durch andauernde Last oder Schlupf.'
   affected_components:
     - scr_catalyst
     - exhaust_temperature_sensor
@@ -11167,8 +11167,8 @@
     en: SCR NOx Pre-Catalyst Over Temperature (Bank 2)
     de: SCR NOx-Vorkatalysator Übertemperatur (Bank 2)
   description:
-    en: 'A temperature sensor at the SCR catalyst on bank 2 reports a value above the safe limit — sustained over-temperature can sinter the SCR washcoat and destroy NOx conversion.'
-    de: 'Ein Temperatursensor am SCR-Katalysator an Bank 2 meldet einen Wert über dem zulässigen Grenzwert — anhaltende Übertemperatur sintert den SCR-Washcoat und zerstört die NOx-Konvertierung.'
+    en: 'SCR NOx Pre-Catalyst Over Temperature (Bank 2): the component is overheating, typically from extended load or slip.'
+    de: 'SCR NOx-Vorkatalysator Übertemperatur (Bank 2): das Bauteil überhitzt, meist durch andauernde Last oder Schlupf.'
   affected_components:
     - scr_pre_catalyst
     - exhaust_temperature_sensor
@@ -11208,8 +11208,8 @@
     en: SCR NOx Catalyst Efficiency Below Threshold (Bank 2)
     de: SCR NOx-Katalysator Wirkungsgrad unter Schwellwert (Bank 2)
   description:
-    en: The SCR catalyst on bank 2 is no longer reducing NOx within the required efficiency — downstream NOx remains too high relative to commanded dosing across a drive cycle.
-    de: Der SCR-Katalysator an Bank 2 reduziert NOx nicht mehr im geforderten Wirkungsgrad — der nachgelagerte NOx-Wert bleibt über einen Fahrzyklus zu hoch im Verhältnis zur Dosieranforderung.
+    en: 'SCR NOx Catalyst Efficiency Below Threshold (Bank 2): the control module has detected this fault condition.'
+    de: 'SCR NOx-Katalysator Wirkungsgrad unter Schwellwert (Bank 2): das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - scr_catalyst
     - nox_sensor_downstream
@@ -11255,8 +11255,8 @@
     en: SCR NOx Pre-Catalyst Efficiency Below Threshold (Bank 2)
     de: SCR NOx-Vorkatalysator Wirkungsgrad unter Schwellwert (Bank 2)
   description:
-    en: 'The SCR catalyst on bank 2 is no longer reducing NOx within the required efficiency — downstream NOx remains too high relative to commanded dosing across a drive cycle.'
-    de: 'Der SCR-Katalysator an Bank 2 reduziert NOx nicht mehr im geforderten Wirkungsgrad — der nachgelagerte NOx-Wert bleibt über einen Fahrzyklus zu hoch im Verhältnis zur Dosieranforderung.'
+    en: 'SCR NOx Pre-Catalyst Efficiency Below Threshold (Bank 2): the control module has detected this fault condition.'
+    de: 'SCR NOx-Vorkatalysator Wirkungsgrad unter Schwellwert (Bank 2): das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - scr_pre_catalyst
   common_causes:
@@ -13533,8 +13533,8 @@
     en: Throttle/Pedal Position Sensor "D" Circuit Low
     de: Drosselklappen-/Pedalstellungssensor "D" Stromkreis Signal zu niedrig
   description:
-    en: Sensor "D" of the redundant accelerator-pedal pair reports a voltage below the valid window. The ECU rejects the signal and falls back on the second sensor or limp-home.
-    de: Sensor "D" des redundanten Pedalsensorpaars meldet eine Spannung unter dem zulässigen Fenster. Die Motorsteuerung verwirft das Signal und greift auf den zweiten Sensor zurück oder geht in Notlauf.
+    en: 'Throttle/Pedal Position Sensor "D" Circuit Low: the signal voltage is below the expected range. Often a short to ground or high resistance in the wiring.'
+    de: 'Drosselklappen-/Pedalstellungssensor "D" Stromkreis Signal zu niedrig: die Signalspannung liegt unter dem erwarteten Bereich. Oft Masseschluss oder hoher Übergangswiderstand in der Verkabelung.'
   affected_components:
     - accelerator_pedal_sensor
     - accelerator_pedal_wiring
@@ -13586,8 +13586,8 @@
     en: Throttle/Pedal Position Sensor "D" Circuit High
     de: Drosselklappen-/Pedalstellungssensor "D" Stromkreis Signal zu hoch
   description:
-    en: Sensor "D" of the pedal pair reports a voltage above the valid window. Often a short to supply or an open ground at the connector.
-    de: Sensor "D" des Pedalsensorpaars meldet eine Spannung über dem zulässigen Fenster. Häufig ein Kurzschluss nach Plus oder eine unterbrochene Masse am Stecker.
+    en: 'Throttle/Pedal Position Sensor "D" Circuit High: the signal voltage is above the expected range. Often an open circuit or a short to supply voltage.'
+    de: 'Drosselklappen-/Pedalstellungssensor "D" Stromkreis Signal zu hoch: die Signalspannung liegt über dem erwarteten Bereich. Oft Unterbrechung oder Kurzschluss gegen die Versorgungsspannung.'
   affected_components:
     - accelerator_pedal_sensor
     - accelerator_pedal_wiring
@@ -13795,8 +13795,8 @@
     en: Throttle/Pedal Position Sensor "E" Circuit Low
     de: Drosselklappen-/Pedalstellungssensor "E" Stromkreis Signal zu niedrig
   description:
-    en: 'Sensor "D" of the redundant accelerator-pedal pair reports a voltage below the valid window. The ECU rejects the signal and falls back on the second sensor or limp-home.'
-    de: 'Sensor "D" des redundanten Pedalsensorpaars meldet eine Spannung unter dem zulässigen Fenster. Die Motorsteuerung verwirft das Signal und greift auf den zweiten Sensor zurück oder geht in Notlauf.'
+    en: 'Throttle/Pedal Position Sensor "E" Circuit Low: the signal voltage is below the expected range. Often a short to ground or high resistance in the wiring.'
+    de: 'Drosselklappen-/Pedalstellungssensor "E" Stromkreis Signal zu niedrig: die Signalspannung liegt unter dem erwarteten Bereich. Oft Masseschluss oder hoher Übergangswiderstand in der Verkabelung.'
   affected_components:
     - accelerator_pedal_sensor
     - accelerator_pedal_wiring
@@ -13848,8 +13848,8 @@
     en: Throttle/Pedal Position Sensor "E" Circuit High
     de: Drosselklappen-/Pedalstellungssensor "E" Stromkreis Signal zu hoch
   description:
-    en: 'Sensor "D" of the pedal pair reports a voltage above the valid window. Often a short to supply or an open ground at the connector.'
-    de: 'Sensor "D" des Pedalsensorpaars meldet eine Spannung über dem zulässigen Fenster. Häufig ein Kurzschluss nach Plus oder eine unterbrochene Masse am Stecker.'
+    en: 'Throttle/Pedal Position Sensor "E" Circuit High: the signal voltage is above the expected range. Often an open circuit or a short to supply voltage.'
+    de: 'Drosselklappen-/Pedalstellungssensor "E" Stromkreis Signal zu hoch: die Signalspannung liegt über dem erwarteten Bereich. Oft Unterbrechung oder Kurzschluss gegen die Versorgungsspannung.'
   affected_components:
     - accelerator_pedal_sensor
     - accelerator_pedal_wiring
@@ -15464,8 +15464,8 @@
     en: SCR NOx Catalyst Inlet Temperature Too High
     de: SCR NOx-Katalysator Eingangstemperatur zu hoch
   description:
-    en: The temperature sensor at the SCR inlet reports a value above the safe limit. The SCR catalyst loses NH3 storage capacity above ~550 °C and can be permanently damaged.
-    de: Der Temperatursensor am SCR-Eingang meldet einen Wert über dem zulässigen Grenzwert. Der SCR-Katalysator verliert oberhalb ca. 550 °C die NH3-Speicherfähigkeit und kann dauerhaft geschädigt werden.
+    en: 'SCR NOx Catalyst Inlet Temperature Too High: the component is overheating, typically from extended load or slip.'
+    de: 'SCR NOx-Katalysator Eingangstemperatur zu hoch: das Bauteil überhitzt, meist durch andauernde Last oder Schlupf.'
   affected_components:
     - scr_catalyst
     - exhaust_temperature_sensor
@@ -15505,8 +15505,8 @@
     en: SCR NOx Catalyst Inlet Temperature Too High During Particulate Filter Regeneration
     de: SCR NOx-Katalysator Eingangstemperatur zu hoch während Partikelfilter-Regeneration
   description:
-    en: Specifically during DPF regeneration, the SCR inlet temperature exceeded the safe limit — typically because too much HC was injected upstream or because the regeneration ran too long.
-    de: Spezifisch während der DPF-Regeneration hat die SCR-Eingangstemperatur den Grenzwert überschritten — meist zu viel HC vor dem DOC eingespritzt oder Regeneration zu lang gefahren.
+    en: 'SCR NOx Catalyst Inlet Temperature Too High During Particulate Filter Regeneration: the component is overheating, typically from extended load or slip.'
+    de: 'SCR NOx-Katalysator Eingangstemperatur zu hoch während Partikelfilter-Regeneration: das Bauteil überhitzt, meist durch andauernde Last oder Schlupf.'
   affected_components:
     - scr_catalyst
     - aftertreatment_fuel_injector
@@ -15546,8 +15546,8 @@
     en: SCR NOx Catalyst Outlet Temperature Too High
     de: SCR NOx-Katalysator Ausgangstemperatur zu hoch
   description:
-    en: 'The temperature sensor at the SCR inlet reports a value above the safe limit. The SCR catalyst loses NH3 storage capacity above ~550 °C and can be permanently damaged.'
-    de: 'Der Temperatursensor am SCR-Eingang meldet einen Wert über dem zulässigen Grenzwert. Der SCR-Katalysator verliert oberhalb ca. 550 °C die NH3-Speicherfähigkeit und kann dauerhaft geschädigt werden.'
+    en: 'SCR NOx Catalyst Outlet Temperature Too High: the component is overheating, typically from extended load or slip.'
+    de: 'SCR NOx-Katalysator Ausgangstemperatur zu hoch: das Bauteil überhitzt, meist durch andauernde Last oder Schlupf.'
   affected_components:
     - scr_catalyst
     - exhaust_temperature_sensor
@@ -15587,8 +15587,8 @@
     en: SCR NOx Catalyst Outlet Temperature Too High During Particulate Filter Regeneration
     de: SCR NOx-Katalysator Ausgangstemperatur zu hoch während Partikelfilter-Regeneration
   description:
-    en: 'Specifically during DPF regeneration, the SCR inlet temperature exceeded the safe limit — typically because too much HC was injected upstream or because the regeneration ran too long.'
-    de: 'Spezifisch während der DPF-Regeneration hat die SCR-Eingangstemperatur den Grenzwert überschritten — meist zu viel HC vor dem DOC eingespritzt oder Regeneration zu lang gefahren.'
+    en: 'SCR NOx Catalyst Outlet Temperature Too High During Particulate Filter Regeneration: the component is overheating, typically from extended load or slip.'
+    de: 'SCR NOx-Katalysator Ausgangstemperatur zu hoch während Partikelfilter-Regeneration: das Bauteil überhitzt, meist durch andauernde Last oder Schlupf.'
   affected_components:
     - scr_catalyst
   common_causes:
@@ -16279,8 +16279,8 @@
     en: Reductant Pump B Stuck On
     de: Reduktionsmittelpumpe B bleibt eingeschaltet
   description:
-    en: 'The DEF (urea) pump A keeps running when commanded off, or its drive current does not drop to zero. Continuous pumping over-pressurises the dosing line and can crystallise DEF at the injector.'
-    de: 'Die AdBlue-Pumpe A läuft trotz Abschaltbefehl weiter oder der Stromfluss fällt nicht auf null. Dauerlauf erhöht den Leitungsdruck und lässt AdBlue am Injektor auskristallisieren.'
+    en: 'Reductant Pump B Stuck On: the actuator is stuck in the on position.'
+    de: 'Reduktionsmittelpumpe B bleibt eingeschaltet: das Stellglied hängt in der Ein-Stellung.'
   affected_components:
     - reductant_pump
     - reductant_pump_relay
@@ -17359,8 +17359,8 @@
     en: Throttle Actuator A Control System - Idle Position Not Learned
     de: Drosselklappensteuerung A - Leerlaufposition nicht gelernt
   description:
-    en: After a battery disconnect or PCM reset, throttle A has not completed the idle-position learn procedure. Adaption is required after throttle body cleaning, replacement, or PCM relearn.
-    de: Nach Batterieabklemmen oder Steuergerät-Reset hat Drosselklappe A die Leerlaufpositions-Anlernung nicht abgeschlossen. Anpassung ist nach Drosselkörperreinigung, Tausch oder Steuergerät-Anlernung nötig.
+    en: 'Throttle Actuator A Control System - Idle Position Not Learned: the control module has detected this fault condition.'
+    de: 'Drosselklappensteuerung A - Leerlaufposition nicht gelernt: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - electronic_throttle_body
     - powertrain_control_module
@@ -18338,8 +18338,8 @@
     en: Throttle Actuator B Control System - Idle Position Not Learned
     de: Drosselklappensteuerung B - Leerlaufposition nicht gelernt
   description:
-    en: 'After a battery disconnect or PCM reset, throttle A has not completed the idle-position learn procedure. Adaption is required after throttle body cleaning, replacement, or PCM relearn.'
-    de: 'Nach Batterieabklemmen oder Steuergerät-Reset hat Drosselklappe A die Leerlaufpositions-Anlernung nicht abgeschlossen. Anpassung ist nach Drosselkörperreinigung, Tausch oder Steuergerät-Anlernung nötig.'
+    en: 'Throttle Actuator B Control System - Idle Position Not Learned: the control module has detected this fault condition.'
+    de: 'Drosselklappensteuerung B - Leerlaufposition nicht gelernt: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - throttle_actuator_b
   common_causes:
@@ -19682,8 +19682,8 @@
     en: Reductant Level Sensor B Circuit Intermittent/Erratic
     de: Reduktionsmittel-Füllstandsensor B Schaltkreis sporadisch/erratisch
   description:
-    en: 'DEF level sensor B signal jumps or drops out intermittently — typically a corroded sender contact or wiring issue.'
-    de: 'Das Signal des AdBlue-Füllstandsensors A springt oder fällt sporadisch aus — meist korrodierter Geberkontakt oder Verkabelungsproblem.'
+    en: 'Reductant Level Sensor B Circuit Intermittent/Erratic: the signal is intermittent or erratic. Often a loose connector or chafed wiring; a wiggle test often locates it.'
+    de: 'Reduktionsmittel-Füllstandsensor B Schaltkreis sporadisch/erratisch: das Signal ist sporadisch oder unsauber. Oft loser Stecker oder gescheuerte Leitung; ein Wackeltest lokalisiert ihn oft.'
   affected_components:
     - reductant_level_sensor
   common_causes:
@@ -19922,8 +19922,8 @@
     en: Reductant Level Sensor C Circuit Intermittent/Erratic
     de: Reduktionsmittel-Füllstandsensor C Schaltkreis sporadisch/erratisch
   description:
-    en: 'DEF level sensor C signal jumps or drops out intermittently — typically a corroded sender contact or wiring issue.'
-    de: 'Das Signal des AdBlue-Füllstandsensors A springt oder fällt sporadisch aus — meist korrodierter Geberkontakt oder Verkabelungsproblem.'
+    en: 'Reductant Level Sensor C Circuit Intermittent/Erratic: the signal is intermittent or erratic. Often a loose connector or chafed wiring; a wiggle test often locates it.'
+    de: 'Reduktionsmittel-Füllstandsensor C Schaltkreis sporadisch/erratisch: das Signal ist sporadisch oder unsauber. Oft loser Stecker oder gescheuerte Leitung; ein Wackeltest lokalisiert ihn oft.'
   affected_components:
     - reductant_level_sensor
   common_causes:
@@ -22663,8 +22663,8 @@
     en: Fuel Control System B Too Rich Off Idle (Bank 1)
     de: Kraftstoffregelsystem B zu fett ausserhalb Leerlauf (Bank 1)
   description:
-    en: The secondary fuel control loop B on bank 1 reports a rich condition outside idle.
-    de: Der zweite Kraftstoffregelkreis B an Bank 1 meldet ausserhalb des Leerlaufs ein fettes Gemisch.
+    en: 'Fuel Control System B Too Rich Off Idle (Bank 1): the fuel-trim control is correcting for an over-rich mixture in this operating range.'
+    de: 'Kraftstoffregelsystem B zu fett ausserhalb Leerlauf (Bank 1): die Gemischregelung korrigiert ein zu fettes Gemisch in diesem Betriebsbereich.'
   affected_components:
     - fuel_injector
     - fuel_pressure_regulator
@@ -22833,8 +22833,8 @@
     en: Fuel Control System B Too Rich at Idle (Bank 1)
     de: Kraftstoffregelsystem B zu fett im Leerlauf (Bank 1)
   description:
-    en: 'The secondary fuel control loop B on bank 1 reports a rich condition outside idle.'
-    de: 'Der zweite Kraftstoffregelkreis B an Bank 1 meldet ausserhalb des Leerlaufs ein fettes Gemisch.'
+    en: 'Fuel Control System B Too Rich at Idle (Bank 1): the fuel-trim control is correcting for an over-rich mixture in this operating range.'
+    de: 'Kraftstoffregelsystem B zu fett im Leerlauf (Bank 1): die Gemischregelung korrigiert ein zu fettes Gemisch in diesem Betriebsbereich.'
   affected_components:
     - fuel_injector
     - fuel_pressure_regulator
@@ -23001,8 +23001,8 @@
     en: Fuel Control System B Too Rich at Higher Load (Bank 1)
     de: Kraftstoffregelsystem B zu fett bei höherer Last (Bank 1)
   description:
-    en: 'The secondary fuel control loop B on bank 1 reports a rich condition outside idle.'
-    de: 'Der zweite Kraftstoffregelkreis B an Bank 1 meldet ausserhalb des Leerlaufs ein fettes Gemisch.'
+    en: 'Fuel Control System B Too Rich at Higher Load (Bank 1): the fuel-trim control is correcting for an over-rich mixture in this operating range.'
+    de: 'Kraftstoffregelsystem B zu fett bei höherer Last (Bank 1): die Gemischregelung korrigiert ein zu fettes Gemisch in diesem Betriebsbereich.'
   affected_components:
     - fuel_injector
     - fuel_pressure_regulator
@@ -24024,8 +24024,8 @@
     en: NOx Sensor Circuit (Bank 2)
     de: NOx-Sensor Schaltkreis (Bank 2)
   description:
-    en: A general electrical fault on the NOx sensor on bank 2 — open, shorted, or out of plausibility. Used by SCR control and OBD NOx monitoring.
-    de: Allgemeiner elektrischer Fehler am NOx-Sensor an Bank 2 — offen, kurzgeschlossen oder unplausibel. Wird von der SCR-Regelung und der OBD-NOx-Überwachung genutzt.
+    en: 'NOx Sensor Circuit (Bank 2): an electrical fault is present in the circuit.'
+    de: 'NOx-Sensor Schaltkreis (Bank 2): im Stromkreis liegt ein elektrischer Fehler vor.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -24114,8 +24114,8 @@
     en: NOx Sensor Circuit Low (Bank 2)
     de: NOx-Sensor Schaltkreis niedrig (Bank 2)
   description:
-    en: 'NOx sensor on bank 2 reads below lower plausibility — short to ground. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'NOx-Sensor an Bank 2 unter unterer Plausibilität — Kurzschluss nach Masse. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: 'NOx Sensor Circuit Low (Bank 2): the signal voltage is below the expected range. Often a short to ground or high resistance in the wiring.'
+    de: 'NOx-Sensor Schaltkreis niedrig (Bank 2): die Signalspannung liegt unter dem erwarteten Bereich. Oft Masseschluss oder hoher Übergangswiderstand in der Verkabelung.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -24164,8 +24164,8 @@
     en: NOx Sensor Circuit High (Bank 2)
     de: NOx-Sensor Schaltkreis hoch (Bank 2)
   description:
-    en: 'NOx sensor on bank 2 reads above upper plausibility — open signal or short to B+. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'NOx-Sensor an Bank 2 über oberer Plausibilität — offenes Signal oder Kurzschluss nach Plus. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: 'NOx Sensor Circuit High (Bank 2): the signal voltage is above the expected range. Often an open circuit or a short to supply voltage.'
+    de: 'NOx-Sensor Schaltkreis hoch (Bank 2): die Signalspannung liegt über dem erwarteten Bereich. Oft Unterbrechung oder Kurzschluss gegen die Versorgungsspannung.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -24214,8 +24214,8 @@
     en: NOx Sensor Circuit Intermittent (Bank 2)
     de: NOx-Sensor Schaltkreis sporadisch (Bank 2)
   description:
-    en: 'NOx sensor on bank 2 signal jumps or drops out intermittently. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'NOx-Sensor an Bank 2 - Signal springt oder fällt sporadisch aus. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: 'NOx Sensor Circuit Intermittent (Bank 2): the signal is intermittent or erratic. Often a loose connector or chafed wiring; a wiggle test often locates it.'
+    de: 'NOx-Sensor Schaltkreis sporadisch (Bank 2): das Signal ist sporadisch oder unsauber. Oft loser Stecker oder gescheuerte Leitung; ein Wackeltest lokalisiert ihn oft.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -24264,8 +24264,8 @@
     en: NOx Sensor Heater Control Circuit/Open (Bank 2)
     de: NOx-Sensor Heizungs-Steuerkreis/offen (Bank 2)
   description:
-    en: The drive circuit for the NOx sensor heater on bank 2 is open. The sensor cannot reach operating temperature.
-    de: Der Treiberkreis der NOx-Sensorheizung an Bank 2 ist offen. Der Sensor erreicht die Betriebstemperatur nicht.
+    en: 'NOx Sensor Heater Control Circuit/Open (Bank 2): the control circuit is open. The NOx sensor heater brings the sensor to operating temperature; a fault delays accurate NOx readings used for SCR control.'
+    de: 'NOx-Sensor Heizungs-Steuerkreis/offen (Bank 2): der Steuerkreis ist unterbrochen. Die NOx-Sensorheizung bringt den Sensor auf Betriebstemperatur; ein Fehler verzögert genaue NOx-Messwerte für die SCR-Regelung.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -24313,8 +24313,8 @@
     en: NOx Sensor Heater Control Circuit Low (Bank 2)
     de: NOx-Sensor Heizungs-Steuerkreis niedrig (Bank 2)
   description:
-    en: 'NOx heater drive line on bank 2 stuck low — short to ground. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Treiberleitung der NOx-Heizung an Bank 2 niedrig — Kurzschluss nach Masse. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: 'NOx Sensor Heater Control Circuit Low (Bank 2): the control-circuit voltage is below the expected range. The NOx sensor heater brings the sensor to operating temperature; a fault delays accurate NOx readings used for SCR control.'
+    de: 'NOx-Sensor Heizungs-Steuerkreis niedrig (Bank 2): die Spannung im Steuerkreis liegt unter dem erwarteten Bereich. Die NOx-Sensorheizung bringt den Sensor auf Betriebstemperatur; ein Fehler verzögert genaue NOx-Messwerte für die SCR-Regelung.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -24443,8 +24443,8 @@
     en: Reductant Heater B Current Too Low
     de: Reduktionsmittelheizung B Stromaufnahme zu niedrig
   description:
-    en: DEF heater B current draw is below threshold — partially-open winding.
-    de: Stromaufnahme des AdBlue-Heizers B unter Schwellwert — teilweise unterbrochene Wicklung.
+    en: 'Reductant Heater B Current Too Low: the control module has detected this fault condition. The reductant (DEF/AdBlue) heater keeps the urea fluid from freezing; a fault can impair SCR dosing in cold conditions.'
+    de: 'Reduktionsmittelheizung B Stromaufnahme zu niedrig: das Steuergerät hat diesen Fehlerzustand erkannt. Die Reduktionsmittel-Heizung (AdBlue) verhindert das Einfrieren der Harnstofflösung; ein Fehler kann die SCR-Dosierung bei Kälte beeinträchtigen.'
   affected_components:
     - reductant_line_heater_b
   common_causes:
@@ -24483,8 +24483,8 @@
     en: Reductant Heater B Current Too High
     de: Reduktionsmittelheizung B Stromaufnahme zu hoch
   description:
-    en: DEF heater B current draw exceeds threshold — element partially shorted.
-    de: Stromaufnahme des AdBlue-Heizers B übersteigt Schwellwert — Element teilweise kurzgeschlossen.
+    en: 'Reductant Heater B Current Too High: the control module has detected this fault condition. The reductant (DEF/AdBlue) heater keeps the urea fluid from freezing; a fault can impair SCR dosing in cold conditions.'
+    de: 'Reduktionsmittelheizung B Stromaufnahme zu hoch: das Steuergerät hat diesen Fehlerzustand erkannt. Die Reduktionsmittel-Heizung (AdBlue) verhindert das Einfrieren der Harnstofflösung; ein Fehler kann die SCR-Dosierung bei Kälte beeinträchtigen.'
   affected_components:
     - reductant_line_heater_b
   common_causes:
@@ -24523,8 +24523,8 @@
     en: Reductant Heater C Current Too Low
     de: Reduktionsmittelheizung C Stromaufnahme zu niedrig
   description:
-    en: 'DEF heater B current draw is below threshold — partially-open winding.'
-    de: 'Stromaufnahme des AdBlue-Heizers B unter Schwellwert — teilweise unterbrochene Wicklung.'
+    en: 'Reductant Heater C Current Too Low: the control module has detected this fault condition. The reductant (DEF/AdBlue) heater keeps the urea fluid from freezing; a fault can impair SCR dosing in cold conditions.'
+    de: 'Reduktionsmittelheizung C Stromaufnahme zu niedrig: das Steuergerät hat diesen Fehlerzustand erkannt. Die Reduktionsmittel-Heizung (AdBlue) verhindert das Einfrieren der Harnstofflösung; ein Fehler kann die SCR-Dosierung bei Kälte beeinträchtigen.'
   affected_components:
     - reductant_line_heater_c
   common_causes:
@@ -24563,8 +24563,8 @@
     en: Reductant Heater C Current Too High
     de: Reduktionsmittelheizung C Stromaufnahme zu hoch
   description:
-    en: 'DEF heater B current draw exceeds threshold — element partially shorted.'
-    de: 'Stromaufnahme des AdBlue-Heizers B übersteigt Schwellwert — Element teilweise kurzgeschlossen.'
+    en: 'Reductant Heater C Current Too High: the control module has detected this fault condition. The reductant (DEF/AdBlue) heater keeps the urea fluid from freezing; a fault can impair SCR dosing in cold conditions.'
+    de: 'Reduktionsmittelheizung C Stromaufnahme zu hoch: das Steuergerät hat diesen Fehlerzustand erkannt. Die Reduktionsmittel-Heizung (AdBlue) verhindert das Einfrieren der Harnstofflösung; ein Fehler kann die SCR-Dosierung bei Kälte beeinträchtigen.'
   affected_components:
     - reductant_line_heater_c
   common_causes:
@@ -24603,8 +24603,8 @@
     en: NOx Sensor Heater Control Circuit High (Bank 2)
     de: NOx-Sensor Heizungs-Steuerkreis hoch (Bank 2)
   description:
-    en: 'NOx heater drive line on bank 2 stuck high — short to B+. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Treiberleitung der NOx-Heizung an Bank 2 hoch — Kurzschluss nach Plus. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: 'NOx Sensor Heater Control Circuit High (Bank 2): the control-circuit voltage is above the expected range. The NOx sensor heater brings the sensor to operating temperature; a fault delays accurate NOx readings used for SCR control.'
+    de: 'NOx-Sensor Heizungs-Steuerkreis hoch (Bank 2): die Spannung im Steuerkreis liegt über dem erwarteten Bereich. Die NOx-Sensorheizung bringt den Sensor auf Betriebstemperatur; ein Fehler verzögert genaue NOx-Messwerte für die SCR-Regelung.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -24653,8 +24653,8 @@
     en: NOx Sensor Heater Sense Circuit (Bank 2)
     de: NOx-Sensor Heizungs-Erkennungs-Schaltkreis (Bank 2)
   description:
-    en: The feedback line that monitors NOx sensor heater current draw on bank 2 is faulty — open, shorted, or out of plausibility.
-    de: Die Rückmeldeleitung zur Stromüberwachung der NOx-Sensorheizung an Bank 2 ist gestört — offen, kurzgeschlossen oder unplausibel.
+    en: 'NOx Sensor Heater Sense Circuit (Bank 2): an electrical fault is present in the circuit. The NOx sensor heater brings the sensor to operating temperature; a fault delays accurate NOx readings used for SCR control.'
+    de: 'NOx-Sensor Heizungs-Erkennungs-Schaltkreis (Bank 2): im Stromkreis liegt ein elektrischer Fehler vor. Die NOx-Sensorheizung bringt den Sensor auf Betriebstemperatur; ein Fehler verzögert genaue NOx-Messwerte für die SCR-Regelung.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -24692,8 +24692,8 @@
     en: NOx Sensor Heater Sense Circuit Range/Performance (Bank 2)
     de: NOx-Sensor Heizungs-Erkennungs-Schaltkreis Bereich/Leistung (Bank 2)
   description:
-    en: 'NOx sensor heater sense feedback on bank 2 reads in range but plausibility check fails. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'NOx-Heizungs-Erkennungs-Rückmeldung an Bank 2 liegt im Bereich, scheitert aber an Plausibilität. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: 'NOx Sensor Heater Sense Circuit Range/Performance (Bank 2): the signal is implausible or outside the valid range. The NOx sensor heater brings the sensor to operating temperature; a fault delays accurate NOx readings used for SCR control.'
+    de: 'NOx-Sensor Heizungs-Erkennungs-Schaltkreis Bereich/Leistung (Bank 2): das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs. Die NOx-Sensorheizung bringt den Sensor auf Betriebstemperatur; ein Fehler verzögert genaue NOx-Messwerte für die SCR-Regelung.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -24742,8 +24742,8 @@
     en: NOx Sensor Heater Sense Circuit Low (Bank 2)
     de: NOx-Sensor Heizungs-Erkennungs-Schaltkreis niedrig (Bank 2)
   description:
-    en: 'NOx heater sense line on bank 2 below lower plausibility — short to ground. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'NOx-Heizungs-Erkennungs-Leitung an Bank 2 unter unterer Plausibilität — Kurzschluss nach Masse. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: 'NOx Sensor Heater Sense Circuit Low (Bank 2): the signal voltage is below the expected range. The NOx sensor heater brings the sensor to operating temperature; a fault delays accurate NOx readings used for SCR control.'
+    de: 'NOx-Sensor Heizungs-Erkennungs-Schaltkreis niedrig (Bank 2): die Signalspannung liegt unter dem erwarteten Bereich. Die NOx-Sensorheizung bringt den Sensor auf Betriebstemperatur; ein Fehler verzögert genaue NOx-Messwerte für die SCR-Regelung.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -24792,8 +24792,8 @@
     en: NOx Sensor Heater Sense Circuit High (Bank 2)
     de: NOx-Sensor Heizungs-Erkennungs-Schaltkreis hoch (Bank 2)
   description:
-    en: 'NOx heater sense line on bank 2 above upper plausibility — open signal or short to B+. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'NOx-Heizungs-Erkennungs-Leitung an Bank 2 über oberer Plausibilität — offenes Signal oder Kurzschluss nach Plus. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: 'NOx Sensor Heater Sense Circuit High (Bank 2): the signal voltage is above the expected range. The NOx sensor heater brings the sensor to operating temperature; a fault delays accurate NOx readings used for SCR control.'
+    de: 'NOx-Sensor Heizungs-Erkennungs-Schaltkreis hoch (Bank 2): die Signalspannung liegt über dem erwarteten Bereich. Die NOx-Sensorheizung bringt den Sensor auf Betriebstemperatur; ein Fehler verzögert genaue NOx-Messwerte für die SCR-Regelung.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -25707,8 +25707,8 @@
     en: Reductant Heater E Control Circuit
     de: Reduktionsmittelheizung E Steuerkreis
   description:
-    en: A general electrical fault on the DEF heater E control circuit. On heavy-duty trucks the DEF system can have multiple heaters along the supply path; E is the fifth.
-    de: Allgemeiner elektrischer Fehler am Steuerkreis der AdBlue-Heizung E. Bei Nutzfahrzeugen kann das AdBlue-System mehrere Heizungen entlang der Versorgungsleitung haben; E ist die fünfte.
+    en: 'Reductant Heater E Control Circuit: the control circuit has an electrical fault. The reductant (DEF/AdBlue) heater keeps the urea fluid from freezing; a fault can impair SCR dosing in cold conditions.'
+    de: 'Reduktionsmittelheizung E Steuerkreis: im Steuerkreis liegt ein elektrischer Fehler vor. Die Reduktionsmittel-Heizung (AdBlue) verhindert das Einfrieren der Harnstofflösung; ein Fehler kann die SCR-Dosierung bei Kälte beeinträchtigen.'
   affected_components:
     - reductant_line_heater_e
   common_causes:
@@ -25747,8 +25747,8 @@
     en: Reductant Heater F Control Circuit
     de: Reduktionsmittelheizung F Steuerkreis
   description:
-    en: 'A general electrical fault on the DEF heater E control circuit. On heavy-duty trucks the DEF system can have multiple heaters along the supply path; E is the fifth.'
-    de: 'Allgemeiner elektrischer Fehler am Steuerkreis der AdBlue-Heizung E. Bei Nutzfahrzeugen kann das AdBlue-System mehrere Heizungen entlang der Versorgungsleitung haben; E ist die fünfte.'
+    en: 'Reductant Heater F Control Circuit: the control circuit has an electrical fault. The reductant (DEF/AdBlue) heater keeps the urea fluid from freezing; a fault can impair SCR dosing in cold conditions.'
+    de: 'Reduktionsmittelheizung F Steuerkreis: im Steuerkreis liegt ein elektrischer Fehler vor. Die Reduktionsmittel-Heizung (AdBlue) verhindert das Einfrieren der Harnstofflösung; ein Fehler kann die SCR-Dosierung bei Kälte beeinträchtigen.'
   affected_components:
     - reductant_line_heater_f
   common_causes:
@@ -27287,8 +27287,8 @@
     en: NOx Sensor Performance - Signal Biased/Stuck High (Bank 1 Sensor 1)
     de: NOx-Sensor Leistung - Signal verschoben/hoch festgesetzt (Bank 1 Sensor 1)
   description:
-    en: The NOx sensor on bank 1 sensor 1 reads suspiciously high for too long — biased upward or stuck. Common after sensor poisoning by silicon, sulphur, or oil ash.
-    de: Der NOx-Sensor an Bank 1 Sensor 1 liest verdächtig lange zu hoch — verschoben oder eingefroren. Häufig nach Sensorvergiftung durch Silizium, Schwefel oder Ölasche.
+    en: 'NOx Sensor Performance - Signal Biased/Stuck High (Bank 1 Sensor 1): the component is electrically intact but its response does not match the command.'
+    de: 'NOx-Sensor Leistung - Signal verschoben/hoch festgesetzt (Bank 1 Sensor 1): das Bauteil ist elektrisch in Ordnung, reagiert aber nicht wie vorgegeben.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -27337,8 +27337,8 @@
     en: NOx Sensor Performance - Signal Biased/Stuck Low (Bank 1 Sensor 1)
     de: NOx-Sensor Leistung - Signal verschoben/niedrig festgesetzt (Bank 1 Sensor 1)
   description:
-    en: 'The NOx sensor on bank 1 sensor 1 reads suspiciously high for too long — biased upward or stuck. Common after sensor poisoning by silicon, sulphur, or oil ash.'
-    de: 'Der NOx-Sensor an Bank 1 Sensor 1 liest verdächtig lange zu hoch — verschoben oder eingefroren. Häufig nach Sensorvergiftung durch Silizium, Schwefel oder Ölasche.'
+    en: 'NOx Sensor Performance - Signal Biased/Stuck Low (Bank 1 Sensor 1): the component is electrically intact but its response does not match the command.'
+    de: 'NOx-Sensor Leistung - Signal verschoben/niedrig festgesetzt (Bank 1 Sensor 1): das Bauteil ist elektrisch in Ordnung, reagiert aber nicht wie vorgegeben.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -27982,8 +27982,8 @@
     en: Turbocharger Boost Control A Slow Response
     de: Turbolader Ladedruckregelung A langsame Reaktion
   description:
-    en: Turbocharger boost control A reaches the commanded boost pressure too slowly. Common with worn VGT vanes, sticking wastegate, or boost-control solenoid lag.
-    de: Die Ladedruckregelung des Turboladers A erreicht den Soll-Ladedruck zu langsam. Häufig bei verschlissenen VTG-Schaufeln, schwergängigem Wastegate oder trägem Ladedruck-Magnetventil.
+    en: 'Turbocharger Boost Control A Slow Response: the control module has detected this fault condition. This affects turbo/supercharger boost-pressure control.'
+    de: 'Turbolader Ladedruckregelung A langsame Reaktion: das Steuergerät hat diesen Fehlerzustand erkannt. Dies betrifft die Ladedruckregelung des Turbo-/Kompressors.'
   affected_components:
     - turbocharger
     - boost_control_solenoid
@@ -28105,8 +28105,8 @@
     en: Turbocharger Boost Control B Slow Response
     de: Turbolader Ladedruckregelung B langsame Reaktion
   description:
-    en: 'Turbocharger boost control A reaches the commanded boost pressure too slowly. Common with worn VGT vanes, sticking wastegate, or boost-control solenoid lag.'
-    de: 'Die Ladedruckregelung des Turboladers A erreicht den Soll-Ladedruck zu langsam. Häufig bei verschlissenen VTG-Schaufeln, schwergängigem Wastegate oder trägem Ladedruck-Magnetventil.'
+    en: 'Turbocharger Boost Control B Slow Response: the control module has detected this fault condition. This affects turbo/supercharger boost-pressure control.'
+    de: 'Turbolader Ladedruckregelung B langsame Reaktion: das Steuergerät hat diesen Fehlerzustand erkannt. Dies betrifft die Ladedruckregelung des Turbo-/Kompressors.'
   affected_components:
     - turbocharger
   common_causes:
@@ -28319,8 +28319,8 @@
     en: O2 Sensor Signal Biased/Stuck Lean (Bank 1 Sensor 3)
     de: Lambdasonden-Signal verschoben/mager festgesetzt (Bank 1 Sensor 3)
   description:
-    en: O2 sensor at bank 1 sensor 3 reports a lean reading suspiciously stable for too long. Sensor 3 is typically downstream of the second catalyst on systems with three-stage aftertreatment.
-    de: Lambdasonde an Bank 1 Sensor 3 meldet einen mageren Wert verdächtig stabil für zu lange. Sensor 3 sitzt meist hinter dem zweiten Katalysator bei dreistufiger Abgasnachbehandlung.
+    en: 'O2 Sensor Signal Biased/Stuck Lean (Bank 1 Sensor 3): the control module has detected this fault condition.'
+    de: 'Lambdasonden-Signal verschoben/mager festgesetzt (Bank 1 Sensor 3): das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - oxygen_sensor
   common_causes:
@@ -28358,8 +28358,8 @@
     en: O2 Sensor Signal Biased/Stuck Rich (Bank 1 Sensor 3)
     de: Lambdasonden-Signal verschoben/fett festgesetzt (Bank 1 Sensor 3)
   description:
-    en: 'O2 sensor at bank 1 sensor 3 reports a lean reading suspiciously stable for too long. Sensor 3 is typically downstream of the second catalyst on systems with three-stage aftertreatment.'
-    de: 'Lambdasonde an Bank 1 Sensor 3 meldet einen mageren Wert verdächtig stabil für zu lange. Sensor 3 sitzt meist hinter dem zweiten Katalysator bei dreistufiger Abgasnachbehandlung.'
+    en: 'O2 Sensor Signal Biased/Stuck Rich (Bank 1 Sensor 3): the control module has detected this fault condition.'
+    de: 'Lambdasonden-Signal verschoben/fett festgesetzt (Bank 1 Sensor 3): das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - oxygen_sensor
   common_causes:
@@ -29181,8 +29181,8 @@
     en: Fuel Pressure Regulator A - Forced Engine Shutdown
     de: Kraftstoffdruckregler A - erzwungene Motorabschaltung
   description:
-    en: Fuel pressure regulator A has been detected in a state that the PCM considers unsafe and the engine has been shut down. Typical for runaway pressure on the rail or stuck-open regulator.
-    de: Der Kraftstoffdruckregler A wurde in einem als unsicher bewerteten Zustand erkannt und der Motor wurde abgeschaltet. Typisch bei ausser Kontrolle geratenem Schienendruck oder offen festsitzendem Regler.
+    en: 'Fuel Pressure Regulator A - Forced Engine Shutdown: the control module has detected this fault condition. This controls fuel-rail pressure.'
+    de: 'Kraftstoffdruckregler A - erzwungene Motorabschaltung: das Steuergerät hat diesen Fehlerzustand erkannt. Dies regelt den Kraftstoff-Raildruck.'
   affected_components:
     - fuel_pressure_regulator
   common_causes:
@@ -29222,8 +29222,8 @@
     en: Fuel Pressure Regulator B - Forced Engine Shutdown
     de: Kraftstoffdruckregler B - erzwungene Motorabschaltung
   description:
-    en: 'Fuel pressure regulator A has been detected in a state that the PCM considers unsafe and the engine has been shut down. Typical for runaway pressure on the rail or stuck-open regulator.'
-    de: 'Der Kraftstoffdruckregler A wurde in einem als unsicher bewerteten Zustand erkannt und der Motor wurde abgeschaltet. Typisch bei ausser Kontrolle geratenem Schienendruck oder offen festsitzendem Regler.'
+    en: 'Fuel Pressure Regulator B - Forced Engine Shutdown: the control module has detected this fault condition. This controls fuel-rail pressure.'
+    de: 'Kraftstoffdruckregler B - erzwungene Motorabschaltung: das Steuergerät hat diesen Fehlerzustand erkannt. Dies regelt den Kraftstoff-Raildruck.'
   affected_components:
     - fuel_pressure_regulator
   common_causes:
@@ -29262,8 +29262,8 @@
     en: Fuel Pressure Regulator A Exceeded Control Limits - Pressure Too Low
     de: Kraftstoffdruckregler A überschreitet Regelgrenzen - Druck zu niedrig
   description:
-    en: Fuel pressure regulator A cannot maintain target pressure — measured pressure stays below the lower control limit despite full closed-loop authority. Typical for a leaking regulator, weak high-pressure pump, or restricted suction line.
-    de: Kraftstoffdruckregler A kann den Solldruck nicht halten — der Istdruck bleibt unter der unteren Regelgrenze trotz voller Reglerautorität. Typisch bei undichtem Regler, schwacher Hochdruckpumpe oder verengter Saugleitung.
+    en: 'Fuel Pressure Regulator A Exceeded Control Limits - Pressure Too Low: the control module has detected this fault condition. This controls fuel-rail pressure.'
+    de: 'Kraftstoffdruckregler A überschreitet Regelgrenzen - Druck zu niedrig: das Steuergerät hat diesen Fehlerzustand erkannt. Dies regelt den Kraftstoff-Raildruck.'
   affected_components:
     - fuel_pressure_regulator
     - high_pressure_fuel_pump
@@ -29303,8 +29303,8 @@
     en: Fuel Pressure Regulator A Exceeded Control Limits - Pressure Too High
     de: Kraftstoffdruckregler A überschreitet Regelgrenzen - Druck zu hoch
   description:
-    en: Fuel pressure regulator A cannot reduce pressure below the upper control limit — typically a stuck-closed return path or runaway high-pressure pump.
-    de: Kraftstoffdruckregler A kann den Druck nicht unter die obere Regelgrenze absenken — meist verstopfte Rücklaufleitung oder ausser Kontrolle geratene Hochdruckpumpe.
+    en: 'Fuel Pressure Regulator A Exceeded Control Limits - Pressure Too High: the control module has detected this fault condition. This controls fuel-rail pressure.'
+    de: 'Kraftstoffdruckregler A überschreitet Regelgrenzen - Druck zu hoch: das Steuergerät hat diesen Fehlerzustand erkannt. Dies regelt den Kraftstoff-Raildruck.'
   affected_components:
     - fuel_pressure_regulator
     - high_pressure_fuel_pump
@@ -29344,8 +29344,8 @@
     en: Fuel Pressure Regulator A Exceeded Learning Limits - Too Low
     de: Kraftstoffdruckregler A überschreitet Lerngrenzen - zu niedrig
   description:
-    en: The adaptive learning offset for fuel pressure regulator A has reached the lower limit. Long-term drift indicates progressive wear of the regulator or pump.
-    de: Der adaptive Lern-Offset für Kraftstoffdruckregler A hat die untere Lerngrenze erreicht. Langzeitdrift weist auf zunehmenden Verschleiss von Regler oder Pumpe hin.
+    en: 'Fuel Pressure Regulator A Exceeded Learning Limits - Too Low: the adaptive learning value has reached its lower limit, so the ECU can no longer compensate. This controls fuel-rail pressure.'
+    de: 'Kraftstoffdruckregler A überschreitet Lerngrenzen - zu niedrig: der Adaptionswert hat seine untere Grenze erreicht, das Steuergerät kann nicht weiter kompensieren. Dies regelt den Kraftstoff-Raildruck.'
   affected_components:
     - fuel_pressure_regulator
   common_causes:
@@ -29384,8 +29384,8 @@
     en: Fuel Pressure Regulator A Exceeded Learning Limits - Too High
     de: Kraftstoffdruckregler A überschreitet Lerngrenzen - zu hoch
   description:
-    en: 'The adaptive learning offset for fuel pressure regulator A has reached the lower limit. Long-term drift indicates progressive wear of the regulator or pump.'
-    de: 'Der adaptive Lern-Offset für Kraftstoffdruckregler A hat die untere Lerngrenze erreicht. Langzeitdrift weist auf zunehmenden Verschleiss von Regler oder Pumpe hin.'
+    en: 'Fuel Pressure Regulator A Exceeded Learning Limits - Too High: the adaptive learning value has reached its upper limit, so the ECU can no longer compensate. This controls fuel-rail pressure.'
+    de: 'Kraftstoffdruckregler A überschreitet Lerngrenzen - zu hoch: der Adaptionswert hat seine obere Grenze erreicht, das Steuergerät kann nicht weiter kompensieren. Dies regelt den Kraftstoff-Raildruck.'
   affected_components:
     - fuel_pressure_regulator
   common_causes:
@@ -29857,8 +29857,8 @@
     en: Fuel Pressure Regulator B Exceeded Control Limits - Pressure Too Low
     de: Kraftstoffdruckregler B überschreitet Regelgrenzen - Druck zu niedrig
   description:
-    en: 'Fuel pressure regulator A cannot maintain target pressure — measured pressure stays below the lower control limit despite full closed-loop authority. Typical for a leaking regulator, weak high-pressure pump, or restricted suction line.'
-    de: 'Kraftstoffdruckregler A kann den Solldruck nicht halten — der Istdruck bleibt unter der unteren Regelgrenze trotz voller Reglerautorität. Typisch bei undichtem Regler, schwacher Hochdruckpumpe oder verengter Saugleitung.'
+    en: 'Fuel Pressure Regulator B Exceeded Control Limits - Pressure Too Low: the control module has detected this fault condition. This controls fuel-rail pressure.'
+    de: 'Kraftstoffdruckregler B überschreitet Regelgrenzen - Druck zu niedrig: das Steuergerät hat diesen Fehlerzustand erkannt. Dies regelt den Kraftstoff-Raildruck.'
   affected_components:
     - fuel_pressure_regulator
   common_causes:
@@ -29897,8 +29897,8 @@
     en: Fuel Pressure Regulator B Exceeded Control Limits - Pressure Too High
     de: Kraftstoffdruckregler B überschreitet Regelgrenzen - Druck zu hoch
   description:
-    en: 'Fuel pressure regulator A cannot reduce pressure below the upper control limit — typically a stuck-closed return path or runaway high-pressure pump.'
-    de: 'Kraftstoffdruckregler A kann den Druck nicht unter die obere Regelgrenze absenken — meist verstopfte Rücklaufleitung oder ausser Kontrolle geratene Hochdruckpumpe.'
+    en: 'Fuel Pressure Regulator B Exceeded Control Limits - Pressure Too High: the control module has detected this fault condition. This controls fuel-rail pressure.'
+    de: 'Kraftstoffdruckregler B überschreitet Regelgrenzen - Druck zu hoch: das Steuergerät hat diesen Fehlerzustand erkannt. Dies regelt den Kraftstoff-Raildruck.'
   affected_components:
     - fuel_pressure_regulator
   common_causes:
@@ -29937,8 +29937,8 @@
     en: Fuel Pressure Regulator B Exceeded Learning Limits - Too Low
     de: Kraftstoffdruckregler B überschreitet Lerngrenzen - zu niedrig
   description:
-    en: 'The adaptive learning offset for fuel pressure regulator A has reached the lower limit. Long-term drift indicates progressive wear of the regulator or pump.'
-    de: 'Der adaptive Lern-Offset für Kraftstoffdruckregler A hat die untere Lerngrenze erreicht. Langzeitdrift weist auf zunehmenden Verschleiss von Regler oder Pumpe hin.'
+    en: 'Fuel Pressure Regulator B Exceeded Learning Limits - Too Low: the adaptive learning value has reached its lower limit, so the ECU can no longer compensate. This controls fuel-rail pressure.'
+    de: 'Kraftstoffdruckregler B überschreitet Lerngrenzen - zu niedrig: der Adaptionswert hat seine untere Grenze erreicht, das Steuergerät kann nicht weiter kompensieren. Dies regelt den Kraftstoff-Raildruck.'
   affected_components:
     - fuel_pressure_regulator
   common_causes:
@@ -30017,8 +30017,8 @@
     en: NOx Sensor Circuit (Bank 1 Sensor 2)
     de: NOx-Sensor Schaltkreis (Bank 1 Sensor 2)
   description:
-    en: 'A general electrical fault on the NOx sensor on bank 2 — open, shorted, or out of plausibility. Used by SCR control and OBD NOx monitoring.'
-    de: 'Allgemeiner elektrischer Fehler am NOx-Sensor an Bank 2 — offen, kurzgeschlossen oder unplausibel. Wird von der SCR-Regelung und der OBD-NOx-Überwachung genutzt.'
+    en: 'NOx Sensor Circuit (Bank 1 Sensor 2): an electrical fault is present in the circuit.'
+    de: 'NOx-Sensor Schaltkreis (Bank 1 Sensor 2): im Stromkreis liegt ein elektrischer Fehler vor.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -30109,8 +30109,8 @@
     en: NOx Sensor Circuit Low (Bank 1 Sensor 2)
     de: NOx-Sensor Schaltkreis niedrig (Bank 1 Sensor 2)
   description:
-    en: 'NOx sensor on bank 2 reads below lower plausibility — short to ground. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'NOx-Sensor an Bank 2 unter unterer Plausibilität — Kurzschluss nach Masse. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: 'NOx Sensor Circuit Low (Bank 1 Sensor 2): the signal voltage is below the expected range. Often a short to ground or high resistance in the wiring.'
+    de: 'NOx-Sensor Schaltkreis niedrig (Bank 1 Sensor 2): die Signalspannung liegt unter dem erwarteten Bereich. Oft Masseschluss oder hoher Übergangswiderstand in der Verkabelung.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -30159,8 +30159,8 @@
     en: NOx Sensor Circuit High (Bank 1 Sensor 2)
     de: NOx-Sensor Schaltkreis hoch (Bank 1 Sensor 2)
   description:
-    en: 'NOx sensor on bank 2 reads above upper plausibility — open signal or short to B+. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'NOx-Sensor an Bank 2 über oberer Plausibilität — offenes Signal oder Kurzschluss nach Plus. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: 'NOx Sensor Circuit High (Bank 1 Sensor 2): the signal voltage is above the expected range. Often an open circuit or a short to supply voltage.'
+    de: 'NOx-Sensor Schaltkreis hoch (Bank 1 Sensor 2): die Signalspannung liegt über dem erwarteten Bereich. Oft Unterbrechung oder Kurzschluss gegen die Versorgungsspannung.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -30209,8 +30209,8 @@
     en: NOx Sensor Circuit Intermittent (Bank 1 Sensor 2)
     de: NOx-Sensor Schaltkreis sporadisch (Bank 1 Sensor 2)
   description:
-    en: 'NOx sensor on bank 2 signal jumps or drops out intermittently. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'NOx-Sensor an Bank 2 - Signal springt oder fällt sporadisch aus. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: 'NOx Sensor Circuit Intermittent (Bank 1 Sensor 2): the signal is intermittent or erratic. Often a loose connector or chafed wiring; a wiggle test often locates it.'
+    de: 'NOx-Sensor Schaltkreis sporadisch (Bank 1 Sensor 2): das Signal ist sporadisch oder unsauber. Oft loser Stecker oder gescheuerte Leitung; ein Wackeltest lokalisiert ihn oft.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -30259,8 +30259,8 @@
     en: NOx Sensor Heater Control Circuit/Open (Bank 1 Sensor 2)
     de: NOx-Sensor Heizungs-Steuerkreis/offen (Bank 1 Sensor 2)
   description:
-    en: 'The drive circuit for the NOx sensor heater on bank 2 is open. The sensor cannot reach operating temperature.'
-    de: 'Der Treiberkreis der NOx-Sensorheizung an Bank 2 ist offen. Der Sensor erreicht die Betriebstemperatur nicht.'
+    en: 'NOx Sensor Heater Control Circuit/Open (Bank 1 Sensor 2): the control circuit is open. The NOx sensor heater brings the sensor to operating temperature; a fault delays accurate NOx readings used for SCR control.'
+    de: 'NOx-Sensor Heizungs-Steuerkreis/offen (Bank 1 Sensor 2): der Steuerkreis ist unterbrochen. Die NOx-Sensorheizung bringt den Sensor auf Betriebstemperatur; ein Fehler verzögert genaue NOx-Messwerte für die SCR-Regelung.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -30309,8 +30309,8 @@
     en: NOx Sensor Heater Control Circuit Low (Bank 1 Sensor 2)
     de: NOx-Sensor Heizungs-Steuerkreis niedrig (Bank 1 Sensor 2)
   description:
-    en: 'NOx heater drive line on bank 2 stuck low — short to ground. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Treiberleitung der NOx-Heizung an Bank 2 niedrig — Kurzschluss nach Masse. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: 'NOx Sensor Heater Control Circuit Low (Bank 1 Sensor 2): the control-circuit voltage is below the expected range. The NOx sensor heater brings the sensor to operating temperature; a fault delays accurate NOx readings used for SCR control.'
+    de: 'NOx-Sensor Heizungs-Steuerkreis niedrig (Bank 1 Sensor 2): die Spannung im Steuerkreis liegt unter dem erwarteten Bereich. Die NOx-Sensorheizung bringt den Sensor auf Betriebstemperatur; ein Fehler verzögert genaue NOx-Messwerte für die SCR-Regelung.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -30359,8 +30359,8 @@
     en: NOx Sensor Heater Control Circuit High (Bank 1 Sensor 2)
     de: NOx-Sensor Heizungs-Steuerkreis hoch (Bank 1 Sensor 2)
   description:
-    en: 'NOx heater drive line on bank 2 stuck high — short to B+. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Treiberleitung der NOx-Heizung an Bank 2 hoch — Kurzschluss nach Plus. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: 'NOx Sensor Heater Control Circuit High (Bank 1 Sensor 2): the control-circuit voltage is above the expected range. The NOx sensor heater brings the sensor to operating temperature; a fault delays accurate NOx readings used for SCR control.'
+    de: 'NOx-Sensor Heizungs-Steuerkreis hoch (Bank 1 Sensor 2): die Spannung im Steuerkreis liegt über dem erwarteten Bereich. Die NOx-Sensorheizung bringt den Sensor auf Betriebstemperatur; ein Fehler verzögert genaue NOx-Messwerte für die SCR-Regelung.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -30409,8 +30409,8 @@
     en: NOx Sensor Heater Sense Circuit (Bank 1 Sensor 2)
     de: NOx-Sensor Heizungs-Erkennungs-Schaltkreis (Bank 1 Sensor 2)
   description:
-    en: 'The feedback line that monitors NOx sensor heater current draw on bank 2 is faulty — open, shorted, or out of plausibility.'
-    de: 'Die Rückmeldeleitung zur Stromüberwachung der NOx-Sensorheizung an Bank 2 ist gestört — offen, kurzgeschlossen oder unplausibel.'
+    en: 'NOx Sensor Heater Sense Circuit (Bank 1 Sensor 2): an electrical fault is present in the circuit. The NOx sensor heater brings the sensor to operating temperature; a fault delays accurate NOx readings used for SCR control.'
+    de: 'NOx-Sensor Heizungs-Erkennungs-Schaltkreis (Bank 1 Sensor 2): im Stromkreis liegt ein elektrischer Fehler vor. Die NOx-Sensorheizung bringt den Sensor auf Betriebstemperatur; ein Fehler verzögert genaue NOx-Messwerte für die SCR-Regelung.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -30449,8 +30449,8 @@
     en: NOx Sensor Heater Sense Circuit Range/Performance (Bank 1 Sensor 2)
     de: NOx-Sensor Heizungs-Erkennungs-Schaltkreis Bereich/Leistung (Bank 1 Sensor 2)
   description:
-    en: 'NOx sensor heater sense feedback on bank 2 reads in range but plausibility check fails. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'NOx-Heizungs-Erkennungs-Rückmeldung an Bank 2 liegt im Bereich, scheitert aber an Plausibilität. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: 'NOx Sensor Heater Sense Circuit Range/Performance (Bank 1 Sensor 2): the signal is implausible or outside the valid range. The NOx sensor heater brings the sensor to operating temperature; a fault delays accurate NOx readings used for SCR control.'
+    de: 'NOx-Sensor Heizungs-Erkennungs-Schaltkreis Bereich/Leistung (Bank 1 Sensor 2): das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs. Die NOx-Sensorheizung bringt den Sensor auf Betriebstemperatur; ein Fehler verzögert genaue NOx-Messwerte für die SCR-Regelung.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -30499,8 +30499,8 @@
     en: NOx Sensor Heater Sense Circuit Low (Bank 1 Sensor 2)
     de: NOx-Sensor Heizungs-Erkennungs-Schaltkreis niedrig (Bank 1 Sensor 2)
   description:
-    en: 'NOx heater sense line on bank 2 below lower plausibility — short to ground. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'NOx-Heizungs-Erkennungs-Leitung an Bank 2 unter unterer Plausibilität — Kurzschluss nach Masse. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: 'NOx Sensor Heater Sense Circuit Low (Bank 1 Sensor 2): the signal voltage is below the expected range. The NOx sensor heater brings the sensor to operating temperature; a fault delays accurate NOx readings used for SCR control.'
+    de: 'NOx-Sensor Heizungs-Erkennungs-Schaltkreis niedrig (Bank 1 Sensor 2): die Signalspannung liegt unter dem erwarteten Bereich. Die NOx-Sensorheizung bringt den Sensor auf Betriebstemperatur; ein Fehler verzögert genaue NOx-Messwerte für die SCR-Regelung.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -30549,8 +30549,8 @@
     en: NOx Sensor Heater Sense Circuit High (Bank 1 Sensor 2)
     de: NOx-Sensor Heizungs-Erkennungs-Schaltkreis hoch (Bank 1 Sensor 2)
   description:
-    en: 'NOx heater sense line on bank 2 above upper plausibility — open signal or short to B+. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'NOx-Heizungs-Erkennungs-Leitung an Bank 2 über oberer Plausibilität — offenes Signal oder Kurzschluss nach Plus. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: 'NOx Sensor Heater Sense Circuit High (Bank 1 Sensor 2): the signal voltage is above the expected range. The NOx sensor heater brings the sensor to operating temperature; a fault delays accurate NOx readings used for SCR control.'
+    de: 'NOx-Sensor Heizungs-Erkennungs-Schaltkreis hoch (Bank 1 Sensor 2): die Signalspannung liegt über dem erwarteten Bereich. Die NOx-Sensorheizung bringt den Sensor auf Betriebstemperatur; ein Fehler verzögert genaue NOx-Messwerte für die SCR-Regelung.'
   affected_components:
     - nox_sensor
   common_causes:
@@ -34695,8 +34695,8 @@
     en: NOx Sensor Sensing Element Bank 1 Sensor 2
     de: NOx-Sensor Messelement Bank 1 Sensor 2
   description:
-    en: The downstream NOx sensor on bank 1 reports that its internal ZrO2 sensing element is no longer producing valid pumping currents - the element has lost its electrochemical response, typically because the active ceramic layer has been poisoned, cracked, or burnt out.
-    de: Der nachgeschaltete NOx-Sensor an Bank 1 meldet, dass sein internes Zirkonoxid-Messelement keine gültigen Pumpströme mehr liefert - die elektrochemische Aktivität des Elements ist weg, meist weil die Keramikschicht vergiftet, gerissen oder verbrannt ist.
+    en: 'NOx Sensor Sensing Element Bank 1 Sensor 2: the control module has detected this fault condition.'
+    de: 'NOx-Sensor Messelement Bank 1 Sensor 2: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - nox_sensor_post_scr_b1
   common_causes:
@@ -36519,8 +36519,8 @@
     en: Cylinder 11 Fuel Injector A Offset Learning At Min Limit
     de: Zylinder 11 Einspritzventil A - Offset-Lernwert an unterer Grenze
   description:
-    en: The injector-offset learning routine for fuel injector A on cylinder 11 has driven its correction value to the minimum allowed limit and cannot trim further. This indicates the injector flows significantly less than the calibrated reference - typically due to drift, partial blockage or wiring resistance.
-    de: Die Lernroutine für den Mengen-Offset des Einspritzventils A an Zylinder 11 hat ihre Korrektur an die untere Software-Grenze gefahren und kann nicht weiter nachregeln. Das Ventil liefert deutlich weniger als die Sollmenge - meist durch Drift, Teilverstopfung oder Übergangswiderstände in der Verkabelung.
+    en: 'Cylinder 11 Fuel Injector A Offset Learning At Min Limit: the control module has detected this fault condition. This affects fueling of the associated cylinders.'
+    de: 'Zylinder 11 Einspritzventil A - Offset-Lernwert an unterer Grenze: das Steuergerät hat diesen Fehlerzustand erkannt. Dies betrifft die Kraftstoffzufuhr der zugehörigen Zylinder.'
   affected_components:
     - fuel_injector_cyl_11
     - injector_wiring_cyl_11
@@ -36569,8 +36569,8 @@
     en: Cylinder 11 Fuel Injector A Offset Learning At Max Limit
     de: Zylinder 11 Einspritzventil A - Offset-Lernwert an oberer Grenze
   description:
-    en: 'The injector-offset learning routine for fuel injector A on cylinder 11 has driven its correction value to the minimum allowed limit and cannot trim further. This indicates the injector flows significantly less than the calibrated reference - typically due to drift, partial blockage or wiring resistance.'
-    de: 'Die Lernroutine für den Mengen-Offset des Einspritzventils A an Zylinder 11 hat ihre Korrektur an die untere Software-Grenze gefahren und kann nicht weiter nachregeln. Das Ventil liefert deutlich weniger als die Sollmenge - meist durch Drift, Teilverstopfung oder Übergangswiderstände in der Verkabelung.'
+    en: 'Cylinder 11 Fuel Injector A Offset Learning At Max Limit: the control module has detected this fault condition. This affects fueling of the associated cylinders.'
+    de: 'Zylinder 11 Einspritzventil A - Offset-Lernwert an oberer Grenze: das Steuergerät hat diesen Fehlerzustand erkannt. Dies betrifft die Kraftstoffzufuhr der zugehörigen Zylinder.'
   affected_components:
     - fuel_injector_cyl_11
     - injector_wiring_cyl_11
@@ -36614,8 +36614,8 @@
     en: Cylinder 12 Fuel Injector A Offset Learning At Min Limit
     de: Zylinder 12 Einspritzventil A - Offset-Lernwert an unterer Grenze
   description:
-    en: 'The injector-offset learning routine for fuel injector A on cylinder 12 has driven its correction value to the minimum allowed limit and cannot trim further. This indicates the injector flows significantly less than the calibrated reference - typically due to drift, partial blockage or wiring resistance.'
-    de: 'Die Lernroutine für den Mengen-Offset des Einspritzventils A an Zylinder 12 hat ihre Korrektur an die untere Software-Grenze gefahren und kann nicht weiter nachregeln. Das Ventil liefert deutlich weniger als die Sollmenge - meist durch Drift, Teilverstopfung oder Übergangswiderstände in der Verkabelung.'
+    en: 'Cylinder 12 Fuel Injector A Offset Learning At Min Limit: the control module has detected this fault condition. This affects fueling of the associated cylinders.'
+    de: 'Zylinder 12 Einspritzventil A - Offset-Lernwert an unterer Grenze: das Steuergerät hat diesen Fehlerzustand erkannt. Dies betrifft die Kraftstoffzufuhr der zugehörigen Zylinder.'
   affected_components:
     - fuel_injector_cyl_12
     - injector_wiring_cyl_12
@@ -36659,8 +36659,8 @@
     en: Cylinder 12 Fuel Injector A Offset Learning At Max Limit
     de: Zylinder 12 Einspritzventil A - Offset-Lernwert an oberer Grenze
   description:
-    en: 'The injector-offset learning routine for fuel injector A on cylinder 12 has driven its correction value to the minimum allowed limit and cannot trim further. This indicates the injector flows significantly less than the calibrated reference - typically due to drift, partial blockage or wiring resistance.'
-    de: 'Die Lernroutine für den Mengen-Offset des Einspritzventils A an Zylinder 12 hat ihre Korrektur an die untere Software-Grenze gefahren und kann nicht weiter nachregeln. Das Ventil liefert deutlich weniger als die Sollmenge - meist durch Drift, Teilverstopfung oder Übergangswiderstände in der Verkabelung.'
+    en: 'Cylinder 12 Fuel Injector A Offset Learning At Max Limit: the control module has detected this fault condition. This affects fueling of the associated cylinders.'
+    de: 'Zylinder 12 Einspritzventil A - Offset-Lernwert an oberer Grenze: das Steuergerät hat diesen Fehlerzustand erkannt. Dies betrifft die Kraftstoffzufuhr der zugehörigen Zylinder.'
   affected_components:
     - fuel_injector_cyl_12
     - injector_wiring_cyl_12
@@ -36704,8 +36704,8 @@
     en: O2 Sensor Out of Range During Deceleration Bank 1 Sensor 2
     de: Lambdasonde ausserhalb des Bereichs bei Schubabschaltung Bank 1 Sensor 2
   description:
-    en: During fuel cutoff on overrun the post-catalyst lambda sensor on bank 1 should drift toward a fixed lean reference voltage. If it stays outside the expected window the ECU sets this fault, indicating either a slow or stuck downstream sensor or an exhaust leak that draws unburnt gas across it.
-    de: Bei Schubabschaltung sollte die Lambdasonde nach Katalysator an Bank 1 in ein definiertes Magerfenster zurückwandern. Bleibt sie ausserhalb dieses Bereichs, setzt das Steuergerät den Fehler - typischerweise ist die Sonde träge oder hängt, oder ein Abgasleck saugt Frischluft an ihr vorbei.
+    en: 'O2 Sensor Out of Range During Deceleration Bank 1 Sensor 2: the control module has detected this fault condition. (Code P232F)'
+    de: 'Lambdasonde ausserhalb des Bereichs bei Schubabschaltung Bank 1 Sensor 2: das Steuergerät hat diesen Fehlerzustand erkannt. (Code P232F)'
   affected_components:
     - oxygen_sensor_b1s2
     - exhaust_after_catalyst_b1
@@ -39648,8 +39648,8 @@
     en: O2 Sensor Out of Range During Deceleration Bank 2 Sensor 2
     de: Lambdasonde ausserhalb des Bereichs bei Schubabschaltung Bank 2 Sensor 2
   description:
-    en: 'During fuel cutoff on overrun the post-catalyst lambda sensor on bank 2 should drift toward a fixed lean reference voltage. If it stays outside the expected window the ECU sets this fault, indicating either a slow or stuck downstream sensor or an exhaust leak that draws unburnt gas across it.'
-    de: 'Bei Schubabschaltung sollte die Lambdasonde nach Katalysator an Bank 2 in ein definiertes Magerfenster zurückwandern. Bleibt sie ausserhalb dieses Bereichs, setzt das Steuergerät den Fehler - typischerweise ist die Sonde träge oder hängt, oder ein Abgasleck saugt Frischluft an ihr vorbei.'
+    en: 'O2 Sensor Out of Range During Deceleration Bank 2 Sensor 2: the control module has detected this fault condition. (Code P2379)'
+    de: 'Lambdasonde ausserhalb des Bereichs bei Schubabschaltung Bank 2 Sensor 2: das Steuergerät hat diesen Fehlerzustand erkannt. (Code P2379)'
   affected_components:
     - oxygen_sensor_b2s2
     - exhaust_after_catalyst_b2
@@ -39692,8 +39692,8 @@
     en: O2 Sensor Exhaust Sample Error Bank 1 Sensor 2
     de: Lambdasonde Abgas-Abtastfehler Bank 1 Sensor 2
   description:
-    en: The post-catalyst lambda sensor on bank 1 cannot acquire a valid exhaust sample - the signal does not respond to the expected exhaust composition during the diagnostic window. Typical causes are a fouled sensing element, a clogged sensor body or an installation leak that bypasses exhaust around the sensor.
-    de: Die Lambdasonde nach Katalysator an Bank 1 kann keine gültige Abgasprobe ermitteln - das Signal reagiert während des Diagnosefensters nicht auf die erwartete Abgaszusammensetzung. Typisch sind ein verrußtes Messelement, ein verstopfter Sondenkörper oder ein Einbau-Leck, das Abgas an der Sonde vorbeiführt.
+    en: 'O2 Sensor Exhaust Sample Error Bank 1 Sensor 2: the control module has detected this fault condition. (Code P237A)'
+    de: 'Lambdasonde Abgas-Abtastfehler Bank 1 Sensor 2: das Steuergerät hat diesen Fehlerzustand erkannt. (Code P237A)'
   affected_components:
     - oxygen_sensor_b1s2
     - exhaust_after_catalyst_b1
@@ -39736,8 +39736,8 @@
     en: O2 Sensor Exhaust Sample Error Bank 2 Sensor 2
     de: Lambdasonde Abgas-Abtastfehler Bank 2 Sensor 2
   description:
-    en: 'The post-catalyst lambda sensor on bank 2 cannot acquire a valid exhaust sample - the signal does not respond to the expected exhaust composition during the diagnostic window. Typical causes are a fouled sensing element, a clogged sensor body or an installation leak that bypasses exhaust around the sensor.'
-    de: 'Die Lambdasonde nach Katalysator an Bank 2 kann keine gültige Abgasprobe ermitteln - das Signal reagiert während des Diagnosefensters nicht auf die erwartete Abgaszusammensetzung. Typisch sind ein verrußtes Messelement, ein verstopfter Sondenkörper oder ein Einbau-Leck, das Abgas an der Sonde vorbeiführt.'
+    en: 'O2 Sensor Exhaust Sample Error Bank 2 Sensor 2: the control module has detected this fault condition. (Code P237B)'
+    de: 'Lambdasonde Abgas-Abtastfehler Bank 2 Sensor 2: das Steuergerät hat diesen Fehlerzustand erkannt. (Code P237B)'
   affected_components:
     - oxygen_sensor_b2s2
     - exhaust_after_catalyst_b2
@@ -39780,8 +39780,8 @@
     en: Exhaust Heat Exchanger Bypass Valve A Control Circuit Open
     de: Abgaswärmetauscher Bypassventil A Steuerkreis - offen
   description:
-    en: An open circuit is detected on the control line for the bypass flap A of the exhaust heat exchanger. This valve directs exhaust either through the heat exchanger (cold start, fast warm-up) or around it (normal operation). Without working control the warm-up strategy is impaired and emissions during cold start increase.
-    de: Auf der Steuerleitung der Bypass-Klappe A des Abgaswärmetauschers ist eine Unterbrechung erkannt worden. Diese Klappe leitet Abgas entweder durch den Wärmetauscher (Kaltstart, schnelles Aufwärmen) oder daran vorbei (Normalbetrieb). Ohne funktionierende Ansteuerung ist die Warmlaufstrategie gestört und die Kaltstartemissionen steigen.
+    en: 'Exhaust Heat Exchanger Bypass Valve A Control Circuit Open: the control circuit is open. Likely a broken wire, disconnected connector, or failed actuator.'
+    de: 'Abgaswärmetauscher Bypassventil A Steuerkreis - offen: der Steuerkreis ist unterbrochen. Wahrscheinlich unterbrochene Leitung, abgezogener Stecker oder defektes Stellglied.'
   affected_components:
     - exhaust_heat_exchanger
     - exhaust_bypass_valve_a
@@ -39904,8 +39904,8 @@
     en: Exhaust Heat Exchanger Bypass Valve A Control Performance
     de: Abgaswärmetauscher Bypassventil A - Steuerfunktion
   description:
-    en: The bypass flap A of the exhaust heat exchanger does not move as commanded - the position feedback or downstream temperature does not respond to the control demand. The flap is mechanically stuck, the actuator gearing is worn, or the position sensor is offset.
-    de: Die Bypass-Klappe A des Abgaswärmetauschers bewegt sich nicht entsprechend der Vorgabe - Lagerückmeldung oder nachgelagerte Temperatur reagieren nicht auf den Stellbefehl. Die Klappe sitzt mechanisch fest, das Stellgetriebe ist verschlissen oder der Positionssensor hat einen Offset.
+    en: 'Exhaust Heat Exchanger Bypass Valve A Control Performance: the component is electrically intact but its response does not match the command.'
+    de: 'Abgaswärmetauscher Bypassventil A - Steuerfunktion: das Bauteil ist elektrisch in Ordnung, reagiert aber nicht wie vorgegeben.'
   affected_components:
     - exhaust_bypass_valve_a
     - exhaust_bypass_position_sensor_a
@@ -39982,8 +39982,8 @@
     en: EGR Sensor D Circuit High
     de: AGR-Sensor D Stromkreis - hoch
   description:
-    en: The fourth exhaust-gas recirculation sensor (D) reports a circuit voltage above the plausible upper limit. The ECU loses one of its EGR feedback channels and falls back to a substitute value, which limits EGR rate accuracy and emissions performance.
-    de: Der vierte Abgasrückführungssensor (D) liefert eine Stromkreisspannung oberhalb des plausiblen oberen Bereichs. Damit fehlt dem Steuergerät einer der AGR-Rückführungskanäle; es greift auf einen Ersatzwert zurück, was die AGR-Regelung und die Emissionsleistung beeinträchtigt.
+    en: 'EGR Sensor D Circuit High: the signal voltage is above the expected range. Without valid EGR feedback the ECU disables exhaust gas recirculation and may set further EGR codes.'
+    de: 'AGR-Sensor D Stromkreis - hoch: die Signalspannung liegt über dem erwarteten Bereich. Ohne gültige AGR-Rückmeldung deaktiviert das Steuergerät die Abgasrückführung und setzt eventuell weitere AGR-Codes.'
   affected_components:
     - egr_sensor_d
     - egr_sensor_wiring_d
@@ -40226,8 +40226,8 @@
     en: EGR Sensor E Circuit High
     de: AGR-Sensor E Stromkreis - hoch
   description:
-    en: 'The fourth exhaust-gas recirculation sensor (D) reports a circuit voltage above the plausible upper limit. The ECU loses one of its EGR feedback channels and falls back to a substitute value, which limits EGR rate accuracy and emissions performance.'
-    de: 'Der vierte Abgasrückführungssensor (D) liefert eine Stromkreisspannung oberhalb des plausiblen oberen Bereichs. Damit fehlt dem Steuergerät einer der AGR-Rückführungskanäle; es greift auf einen Ersatzwert zurück, was die AGR-Regelung und die Emissionsleistung beeinträchtigt.'
+    en: 'EGR Sensor E Circuit High: the signal voltage is above the expected range. Without valid EGR feedback the ECU disables exhaust gas recirculation and may set further EGR codes.'
+    de: 'AGR-Sensor E Stromkreis - hoch: die Signalspannung liegt über dem erwarteten Bereich. Ohne gültige AGR-Rückmeldung deaktiviert das Steuergerät die Abgasrückführung und setzt eventuell weitere AGR-Codes.'
   affected_components:
     - egr_sensor_e
   common_causes:
@@ -40627,8 +40627,8 @@
     en: Diesel Intake Air Flow B Control Circuit Open
     de: Diesel-Ansaugluftstrom-Steller B Steuerkreis - offen
   description:
-    en: 'Long-term plausibility checks show that the front oxygen sensor on bank 1 reacts too slowly or stays too close to a fixed value. The signal does not show normal cross-counts during closed-loop operation.'
-    de: 'Langzeit-Plausibilitaetspruefungen zeigen, dass die vordere Lambdasonde auf Bank 1 zu langsam reagiert oder zu lange auf einem festen Wert verharrt. Im Lambdaregelkreis fehlen die ueblichen Wechsel.'
+    en: 'Diesel Intake Air Flow B Control Circuit Open: the control circuit is open. Likely a broken wire, disconnected connector, or failed actuator.'
+    de: 'Diesel-Ansaugluftstrom-Steller B Steuerkreis - offen: der Steuerkreis ist unterbrochen. Wahrscheinlich unterbrochene Leitung, abgezogener Stecker oder defektes Stellglied.'
   affected_components:
     - diesel_intake_air_flow_b
     - diesel_intake_actuator_b
@@ -41122,8 +41122,8 @@
     en: O2 Sensor Out of Range During Deceleration Bank 1 Sensor 2
     de: Lambdasonde ausserhalb des Bereichs bei Schubabschaltung Bank 1 Sensor 2
   description:
-    en: 'During fuel cutoff on overrun the post-catalyst lambda sensor on bank 1 should drift toward a fixed lean reference voltage. If it stays outside the expected window the ECU sets this fault, indicating either a slow or stuck downstream sensor or an exhaust leak that draws unburnt gas across it.'
-    de: 'Bei Schubabschaltung sollte die Lambdasonde nach Katalysator an Bank 1 in ein definiertes Magerfenster zurückwandern. Bleibt sie ausserhalb dieses Bereichs, setzt das Steuergerät den Fehler - typischerweise ist die Sonde träge oder hängt, oder ein Abgasleck saugt Frischluft an ihr vorbei.'
+    en: 'O2 Sensor Out of Range During Deceleration Bank 1 Sensor 2: the control module has detected this fault condition. (Code P239E)'
+    de: 'Lambdasonde ausserhalb des Bereichs bei Schubabschaltung Bank 1 Sensor 2: das Steuergerät hat diesen Fehlerzustand erkannt. (Code P239E)'
   affected_components:
     - oxygen_sensor_b1s2
   common_causes:
@@ -41160,8 +41160,8 @@
     en: O2 Sensor Out of Range During Deceleration Bank 2 Sensor 2
     de: Lambdasonde ausserhalb des Bereichs bei Schubabschaltung Bank 2 Sensor 2
   description:
-    en: 'During fuel cutoff on overrun the post-catalyst lambda sensor on bank 2 should drift toward a fixed lean reference voltage. If it stays outside the expected window the ECU sets this fault, indicating either a slow or stuck downstream sensor or an exhaust leak that draws unburnt gas across it.'
-    de: 'Bei Schubabschaltung sollte die Lambdasonde nach Katalysator an Bank 2 in ein definiertes Magerfenster zurückwandern. Bleibt sie ausserhalb dieses Bereichs, setzt das Steuergerät den Fehler - typischerweise ist die Sonde träge oder hängt, oder ein Abgasleck saugt Frischluft an ihr vorbei.'
+    en: 'O2 Sensor Out of Range During Deceleration Bank 2 Sensor 2: the control module has detected this fault condition. (Code P239F)'
+    de: 'Lambdasonde ausserhalb des Bereichs bei Schubabschaltung Bank 2 Sensor 2: das Steuergerät hat diesen Fehlerzustand erkannt. (Code P239F)'
   affected_components:
     - oxygen_sensor_b2s2
   common_causes:
@@ -41198,8 +41198,8 @@
     en: O2 Sensor Exhaust Sample Error Bank 1 Sensor 2
     de: Lambdasonde Abgas-Abtastfehler Bank 1 Sensor 2
   description:
-    en: 'The post-catalyst lambda sensor on bank 1 cannot acquire a valid exhaust sample - the signal does not respond to the expected exhaust composition during the diagnostic window. Typical causes are a fouled sensing element, a clogged sensor body or an installation leak that bypasses exhaust around the sensor.'
-    de: 'Die Lambdasonde nach Katalysator an Bank 1 kann keine gültige Abgasprobe ermitteln - das Signal reagiert während des Diagnosefensters nicht auf die erwartete Abgaszusammensetzung. Typisch sind ein verrußtes Messelement, ein verstopfter Sondenkörper oder ein Einbau-Leck, das Abgas an der Sonde vorbeiführt.'
+    en: 'O2 Sensor Exhaust Sample Error Bank 1 Sensor 2: the control module has detected this fault condition. (Code P23A0)'
+    de: 'Lambdasonde Abgas-Abtastfehler Bank 1 Sensor 2: das Steuergerät hat diesen Fehlerzustand erkannt. (Code P23A0)'
   affected_components:
     - oxygen_sensor_b1s2
   common_causes:
@@ -41236,8 +41236,8 @@
     en: O2 Sensor Exhaust Sample Error Bank 2 Sensor 2
     de: Lambdasonde Abgas-Abtastfehler Bank 2 Sensor 2
   description:
-    en: 'The post-catalyst lambda sensor on bank 2 cannot acquire a valid exhaust sample - the signal does not respond to the expected exhaust composition during the diagnostic window. Typical causes are a fouled sensing element, a clogged sensor body or an installation leak that bypasses exhaust around the sensor.'
-    de: 'Die Lambdasonde nach Katalysator an Bank 2 kann keine gültige Abgasprobe ermitteln - das Signal reagiert während des Diagnosefensters nicht auf die erwartete Abgaszusammensetzung. Typisch sind ein verrußtes Messelement, ein verstopfter Sondenkörper oder ein Einbau-Leck, das Abgas an der Sonde vorbeiführt.'
+    en: 'O2 Sensor Exhaust Sample Error Bank 2 Sensor 2: the control module has detected this fault condition. (Code P23A1)'
+    de: 'Lambdasonde Abgas-Abtastfehler Bank 2 Sensor 2: das Steuergerät hat diesen Fehlerzustand erkannt. (Code P23A1)'
   affected_components:
     - oxygen_sensor_b2s2
   common_causes:
@@ -41274,8 +41274,8 @@
     en: Exhaust Heat Exchanger Bypass Valve B Control Circuit Open
     de: Abgaswärmetauscher Bypassventil B Steuerkreis - offen
   description:
-    en: 'An open circuit is detected on the control line for the bypass flap A of the exhaust heat exchanger. This valve directs exhaust either through the heat exchanger (cold start, fast warm-up) or around it (normal operation). Without working control the warm-up strategy is impaired and emissions during cold start increase.'
-    de: 'Auf der Steuerleitung der Bypass-Klappe A des Abgaswärmetauschers ist eine Unterbrechung erkannt worden. Diese Klappe leitet Abgas entweder durch den Wärmetauscher (Kaltstart, schnelles Aufwärmen) oder daran vorbei (Normalbetrieb). Ohne funktionierende Ansteuerung ist die Warmlaufstrategie gestört und die Kaltstartemissionen steigen.'
+    en: 'Exhaust Heat Exchanger Bypass Valve B Control Circuit Open: the control circuit is open. Likely a broken wire, disconnected connector, or failed actuator.'
+    de: 'Abgaswärmetauscher Bypassventil B Steuerkreis - offen: der Steuerkreis ist unterbrochen. Wahrscheinlich unterbrochene Leitung, abgezogener Stecker oder defektes Stellglied.'
   affected_components:
     - exhaust_bypass_valve_b
   common_causes:
@@ -41394,8 +41394,8 @@
     en: Exhaust Heat Exchanger Bypass Valve B Control Performance
     de: Abgaswärmetauscher Bypassventil B - Steuerfunktion
   description:
-    en: 'The bypass flap A of the exhaust heat exchanger does not move as commanded - the position feedback or downstream temperature does not respond to the control demand. The flap is mechanically stuck, the actuator gearing is worn, or the position sensor is offset.'
-    de: 'Die Bypass-Klappe A des Abgaswärmetauschers bewegt sich nicht entsprechend der Vorgabe - Lagerückmeldung oder nachgelagerte Temperatur reagieren nicht auf den Stellbefehl. Die Klappe sitzt mechanisch fest, das Stellgetriebe ist verschlissen oder der Positionssensor hat einen Offset.'
+    en: 'Exhaust Heat Exchanger Bypass Valve B Control Performance: the component is electrically intact but its response does not match the command.'
+    de: 'Abgaswärmetauscher Bypassventil B - Steuerfunktion: das Bauteil ist elektrisch in Ordnung, reagiert aber nicht wie vorgegeben.'
   affected_components:
     - exhaust_bypass_valve_b
   common_causes:
@@ -42499,8 +42499,8 @@
     en: NOx Sensor Performance Slow Response Low to High Bank 1 Sensor 3
     de: NOx-Sensor - langsame Reaktion von niedrig nach hoch Bank 1 Sensor 3
   description:
-    en: The NOx sensor on bank 1 sensor 3 takes longer than the diagnostic threshold to follow rising NOx levels - aged element.
-    de: Der NOx-Sensor B1S3 braucht länger als die Diagnoseschwelle, um steigenden NOx-Werten zu folgen - gealtertes Element.
+    en: 'NOx Sensor Performance Slow Response Low to High Bank 1 Sensor 3: the component is electrically intact but its response does not match the command.'
+    de: 'NOx-Sensor - langsame Reaktion von niedrig nach hoch Bank 1 Sensor 3: das Bauteil ist elektrisch in Ordnung, reagiert aber nicht wie vorgegeben.'
   affected_components:
     - nox_sensor_b1s3
   common_causes:
@@ -42547,8 +42547,8 @@
     en: NOx Sensor Performance Slow Response High to Low Bank 1 Sensor 3
     de: NOx-Sensor - langsame Reaktion von hoch nach niedrig Bank 1 Sensor 3
   description:
-    en: 'The NOx sensor on bank 1 sensor 3 takes longer than the diagnostic threshold to follow rising NOx levels - aged element.'
-    de: 'Der NOx-Sensor B1S3 braucht länger als die Diagnoseschwelle, um steigenden NOx-Werten zu folgen - gealtertes Element.'
+    en: 'NOx Sensor Performance Slow Response High to Low Bank 1 Sensor 3: the component is electrically intact but its response does not match the command.'
+    de: 'NOx-Sensor - langsame Reaktion von hoch nach niedrig Bank 1 Sensor 3: das Bauteil ist elektrisch in Ordnung, reagiert aber nicht wie vorgegeben.'
   affected_components:
     - nox_sensor_b1s3
   common_causes:
@@ -42596,8 +42596,8 @@
     en: NOx Sensor Sensing Element Bank 1 Sensor 3
     de: NOx-Sensor Messelement Bank 1 Sensor 3
   description:
-    en: 'The downstream NOx sensor on bank 1 reports that its internal ZrO2 sensing element is no longer producing valid pumping currents - the element has lost its electrochemical response, typically because the active ceramic layer has been poisoned, cracked, or burnt out.'
-    de: 'Der nachgeschaltete NOx-Sensor an Bank 1 meldet, dass sein internes Zirkonoxid-Messelement keine gültigen Pumpströme mehr liefert - die elektrochemische Aktivität des Elements ist weg, meist weil die Keramikschicht vergiftet, gerissen oder verbrannt ist.'
+    en: 'NOx Sensor Sensing Element Bank 1 Sensor 3: the control module has detected this fault condition.'
+    de: 'NOx-Sensor Messelement Bank 1 Sensor 3: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - nox_sensor_b1s3
   common_causes:
@@ -44160,8 +44160,8 @@
     en: Camshaft A Position Signal Output Circuit Open Bank 2
     de: Nockenwellensensor A Ausgangssignal Stromkreis - offen Bank 2
   description:
-    en: The output line that the ECU uses to forward the bank 2 cam A position signal to other modules (e.g. dashboard, transmission, hybrid module) is open.
-    de: Die Ausgangsleitung, mit der das Steuergerät das Nockenwellen-A-Positionssignal an Bank 2 an andere Module (z. B. Cockpit, Getriebe, Hybridmodul) weitergibt, ist unterbrochen.
+    en: 'Camshaft A Position Signal Output Circuit Open Bank 2: the circuit is open. This relates to engine timing; a fault can cause rough running, a no-start, or timing errors.'
+    de: 'Nockenwellensensor A Ausgangssignal Stromkreis - offen Bank 2: der Stromkreis ist unterbrochen. Dies betrifft die Motorsteuerzeiten; ein Fehler kann unrunden Lauf, Startverweigerung oder Steuerzeitenfehler verursachen.'
   affected_components:
     - cam_position_signal_a_b2_output
   common_causes:
@@ -44307,8 +44307,8 @@
     en: Camshaft B Position Signal Output Circuit Open Bank 1
     de: Nockenwellensensor B Ausgangssignal Stromkreis - offen Bank 1
   description:
-    en: 'The output line that the ECU uses to forward the bank 2 cam A position signal to other modules (e.g. dashboard, transmission, hybrid module) is open.'
-    de: 'Die Ausgangsleitung, mit der das Steuergerät das Nockenwellen-A-Positionssignal an Bank 2 an andere Module (z. B. Cockpit, Getriebe, Hybridmodul) weitergibt, ist unterbrochen.'
+    en: 'Camshaft B Position Signal Output Circuit Open Bank 1: the circuit is open. This relates to engine timing; a fault can cause rough running, a no-start, or timing errors.'
+    de: 'Nockenwellensensor B Ausgangssignal Stromkreis - offen Bank 1: der Stromkreis ist unterbrochen. Dies betrifft die Motorsteuerzeiten; ein Fehler kann unrunden Lauf, Startverweigerung oder Steuerzeitenfehler verursachen.'
   affected_components:
     - cam_position_signal_b_b1_output
   common_causes:
@@ -44454,8 +44454,8 @@
     en: Camshaft B Position Signal Output Circuit Open Bank 2
     de: Nockenwellensensor B Ausgangssignal Stromkreis - offen Bank 2
   description:
-    en: 'The output line that the ECU uses to forward the bank 2 cam A position signal to other modules (e.g. dashboard, transmission, hybrid module) is open.'
-    de: 'Die Ausgangsleitung, mit der das Steuergerät das Nockenwellen-A-Positionssignal an Bank 2 an andere Module (z. B. Cockpit, Getriebe, Hybridmodul) weitergibt, ist unterbrochen.'
+    en: 'Camshaft B Position Signal Output Circuit Open Bank 2: the circuit is open. This relates to engine timing; a fault can cause rough running, a no-start, or timing errors.'
+    de: 'Nockenwellensensor B Ausgangssignal Stromkreis - offen Bank 2: der Stromkreis ist unterbrochen. Dies betrifft die Motorsteuerzeiten; ein Fehler kann unrunden Lauf, Startverweigerung oder Steuerzeitenfehler verursachen.'
   affected_components:
     - cam_position_signal_b_b2_output
   common_causes:
@@ -45628,8 +45628,8 @@
     en: Alternative Fuel Low Pressure System Leak
     de: Alternativkraftstoff Niederdruck-System - Leck
   description:
-    en: A leak detected in the low-pressure side of an alternative fuel system (LPG, CNG between regulator and rail, or H2 between vapouriser and rail). Risk of escape into the engine bay.
-    de: Im Niederdruckbereich eines Alternativkraftstoffsystems (LPG, CNG zwischen Regler und Rail oder H2 zwischen Verdampfer und Rail) ist ein Leck erkannt worden. Gefahr von Austritt im Motorraum.
+    en: 'Alternative Fuel Low Pressure System Leak: a leak has been detected in this brake-hydraulic circuit, which reduces braking pressure. Safety-critical.'
+    de: 'Alternativkraftstoff Niederdruck-System - Leck: in diesem Brems-Hydraulikkreis wurde ein Leck erkannt, das den Bremsdruck verringert. Sicherheitskritisch.'
   affected_components:
     - alternative_fuel_low_pressure_line
   common_causes:
@@ -45657,8 +45657,8 @@
     en: Alternative Fuel High Pressure System Leak
     de: Alternativkraftstoff Hochdruck-System - Leck
   description:
-    en: 'A leak detected in the low-pressure side of an alternative fuel system (LPG, CNG between regulator and rail, or H2 between vapouriser and rail). Risk of escape into the engine bay.'
-    de: 'Im Niederdruckbereich eines Alternativkraftstoffsystems (LPG, CNG zwischen Regler und Rail oder H2 zwischen Verdampfer und Rail) ist ein Leck erkannt worden. Gefahr von Austritt im Motorraum.'
+    en: 'Alternative Fuel High Pressure System Leak: a leak has been detected in this brake-hydraulic circuit, which reduces braking pressure. Safety-critical.'
+    de: 'Alternativkraftstoff Hochdruck-System - Leck: in diesem Brems-Hydraulikkreis wurde ein Leck erkannt, das den Bremsdruck verringert. Sicherheitskritisch.'
   affected_components:
     - alternative_fuel_high_pressure_line
   common_causes:
@@ -47251,8 +47251,8 @@
     en: AIR System Air Flow or Pressure Sensor Circuit Bank 2
     de: AIR-System Luftmengen-/Drucksensor Stromkreis Bank 2
   description:
-    en: 'A general circuit fault on the secondary air injection (AIR) system flow or pressure sensor on bank 2 - the sensor that verifies air pump flow during cold-start enrichment compensation.'
-    de: 'Allgemeiner Stromkreisfehler am Luftmengen- oder Drucksensor des Sekundärluft-Systems an Bank 2 - der Sensor prüft den Pumpenstrom während der Kaltstart-Sekundärluftbeimischung.'
+    en: 'AIR System Air Flow or Pressure Sensor Circuit Bank 2: an electrical fault is present in the circuit.'
+    de: 'AIR-System Luftmengen-/Drucksensor Stromkreis Bank 2: im Stromkreis liegt ein elektrischer Fehler vor.'
   affected_components:
     - air_system_flow_sensor_b2
   common_causes:
@@ -47310,8 +47310,8 @@
     en: AIR System Air Flow or Pressure Sensor Circuit Low Bank 2
     de: AIR-System Luftmengen-/Drucksensor Stromkreis - niedrig Bank 2
   description:
-    en: 'A general circuit fault on the secondary air injection (AIR) system flow or pressure sensor on bank 2 - the sensor that verifies air pump flow during cold-start enrichment compensation.'
-    de: 'Allgemeiner Stromkreisfehler am Luftmengen- oder Drucksensor des Sekundärluft-Systems an Bank 2 - der Sensor prüft den Pumpenstrom während der Kaltstart-Sekundärluftbeimischung.'
+    en: 'AIR System Air Flow or Pressure Sensor Circuit Low Bank 2: the signal voltage is below the expected range. Often a short to ground or high resistance in the wiring.'
+    de: 'AIR-System Luftmengen-/Drucksensor Stromkreis - niedrig Bank 2: die Signalspannung liegt unter dem erwarteten Bereich. Oft Masseschluss oder hoher Übergangswiderstand in der Verkabelung.'
   affected_components:
     - air_system_flow_sensor_b2
   common_causes:
@@ -47467,8 +47467,8 @@
     en: Particulate Filter Restriction Forced Limited Power Bank 2
     de: Partikelfilter eingeschränkt - erzwungene Leistungsbegrenzung Bank 2
   description:
-    en: DPF backpressure on bank 2 is so high that the ECU enforces limp-home power limitation to protect the engine. Regeneration must be performed (or the DPF cleaned) to clear the limit.
-    de: Der DPF-Gegendruck an Bank 2 ist so hoch, dass das Steuergerät eine Notlauf-Leistungsbegrenzung erzwingt, um den Motor zu schützen. Eine Regeneration (oder DPF-Reinigung) ist nötig, um die Begrenzung aufzuheben.
+    en: 'Particulate Filter Restriction Forced Limited Power Bank 2: the control module has detected this fault condition.'
+    de: 'Partikelfilter eingeschränkt - erzwungene Leistungsbegrenzung Bank 2: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - dpf_b2
   common_causes:
@@ -47580,8 +47580,8 @@
     en: Particulate Filter Regeneration Incomplete Bank 2
     de: Partikelfilter Regeneration unvollständig Bank 2
   description:
-    en: A regeneration cycle on bank 2 was started but did not bring the DPF backpressure down sufficiently - either the cycle was interrupted (driver stopped before completion) or thermal conditions were not met.
-    de: Ein Regenerationszyklus an Bank 2 wurde gestartet, der DPF-Gegendruck konnte aber nicht ausreichend gesenkt werden - entweder wurde der Zyklus abgebrochen (Fahrer hielt zu früh) oder die thermischen Bedingungen wurden nicht erreicht.
+    en: 'Particulate Filter Regeneration Incomplete Bank 2: the control module has detected this fault condition.'
+    de: 'Partikelfilter Regeneration unvollständig Bank 2: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - dpf_b2
   common_causes:
@@ -47618,8 +47618,8 @@
     en: Particulate Filter Restriction Soot Accumulation Too High Bank 2
     de: Partikelfilter eingeschränkt - Russansammlung zu hoch Bank 2
   description:
-    en: Soot loading on bank 2 DPF has reached a level that exceeds even the high-load regeneration capability - manual workshop regeneration or DPF cleaning required.
-    de: Die Russbeladung am DPF Bank 2 hat ein Niveau erreicht, das selbst die Hochlast-Regeneration überschreitet - Werkstatt-Regeneration oder DPF-Reinigung notwendig.
+    en: 'Particulate Filter Restriction Soot Accumulation Too High Bank 2: the control module has detected this fault condition.'
+    de: 'Partikelfilter eingeschränkt - Russansammlung zu hoch Bank 2: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - dpf_b2
   common_causes:
@@ -49556,8 +49556,8 @@
     en: Particulate Filter Restriction Forced Limited Power Bank 1
     de: Partikelfilter eingeschränkt - erzwungene Leistungsbegrenzung Bank 1
   description:
-    en: 'DPF backpressure on bank 2 is so high that the ECU enforces limp-home power limitation to protect the engine. Regeneration must be performed (or the DPF cleaned) to clear the limit.'
-    de: 'Der DPF-Gegendruck an Bank 2 ist so hoch, dass das Steuergerät eine Notlauf-Leistungsbegrenzung erzwingt, um den Motor zu schützen. Eine Regeneration (oder DPF-Reinigung) ist nötig, um die Begrenzung aufzuheben.'
+    en: 'Particulate Filter Restriction Forced Limited Power Bank 1: the control module has detected this fault condition.'
+    de: 'Partikelfilter eingeschränkt - erzwungene Leistungsbegrenzung Bank 1: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - dpf_b1
   common_causes:
@@ -50646,8 +50646,8 @@
     en: Reductant Heater A Sense Circuit Low
     de: AdBlue-Heizung A Messkreis - niedrig
   description:
-    en: The sense feedback line for the AdBlue heater A measures voltage below the plausible range - typically a short to ground or open in the heater element.
-    de: Die Mess-Rückmeldeleitung der AdBlue-Heizung A misst eine Spannung unterhalb des plausiblen Bereichs - meist Kurzschluss gegen Masse oder Unterbrechung im Heizelement.
+    en: 'Reductant Heater A Sense Circuit Low: the signal voltage is below the expected range. The reductant (DEF/AdBlue) heater keeps the urea fluid from freezing; a fault can impair SCR dosing in cold conditions.'
+    de: 'AdBlue-Heizung A Messkreis - niedrig: die Signalspannung liegt unter dem erwarteten Bereich. Die Reduktionsmittel-Heizung (AdBlue) verhindert das Einfrieren der Harnstofflösung; ein Fehler kann die SCR-Dosierung bei Kälte beeinträchtigen.'
   affected_components:
     - reductant_heater_a
   common_causes:
@@ -50742,8 +50742,8 @@
     en: Reductant Heater B Sense Circuit Low
     de: AdBlue-Heizung B Messkreis - niedrig
   description:
-    en: 'The sense feedback line for the AdBlue heater A measures voltage below the plausible range - typically a short to ground or open in the heater element.'
-    de: 'Die Mess-Rückmeldeleitung der AdBlue-Heizung A misst eine Spannung unterhalb des plausiblen Bereichs - meist Kurzschluss gegen Masse oder Unterbrechung im Heizelement.'
+    en: 'Reductant Heater B Sense Circuit Low: the signal voltage is below the expected range. The reductant (DEF/AdBlue) heater keeps the urea fluid from freezing; a fault can impair SCR dosing in cold conditions.'
+    de: 'AdBlue-Heizung B Messkreis - niedrig: die Signalspannung liegt unter dem erwarteten Bereich. Die Reduktionsmittel-Heizung (AdBlue) verhindert das Einfrieren der Harnstofflösung; ein Fehler kann die SCR-Dosierung bei Kälte beeinträchtigen.'
   affected_components:
     - reductant_heater_b
   common_causes:
@@ -51713,8 +51713,8 @@
     en: Particulate Filter Regeneration Incomplete Bank 1
     de: Partikelfilter Regeneration unvollständig Bank 1
   description:
-    en: 'A regeneration cycle on bank 2 was started but did not bring the DPF backpressure down sufficiently - either the cycle was interrupted (driver stopped before completion) or thermal conditions were not met.'
-    de: 'Ein Regenerationszyklus an Bank 2 wurde gestartet, der DPF-Gegendruck konnte aber nicht ausreichend gesenkt werden - entweder wurde der Zyklus abgebrochen (Fahrer hielt zu früh) oder die thermischen Bedingungen wurden nicht erreicht.'
+    en: 'Particulate Filter Regeneration Incomplete Bank 1: the control module has detected this fault condition.'
+    de: 'Partikelfilter Regeneration unvollständig Bank 1: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - dpf_b1
   common_causes:
@@ -51788,8 +51788,8 @@
     en: Particulate Filter Restriction Soot Accumulation Too High Bank 1
     de: Partikelfilter eingeschränkt - Russansammlung zu hoch Bank 1
   description:
-    en: 'Soot loading on bank 2 DPF has reached a level that exceeds even the high-load regeneration capability - manual workshop regeneration or DPF cleaning required.'
-    de: 'Die Russbeladung am DPF Bank 2 hat ein Niveau erreicht, das selbst die Hochlast-Regeneration überschreitet - Werkstatt-Regeneration oder DPF-Reinigung notwendig.'
+    en: 'Particulate Filter Restriction Soot Accumulation Too High Bank 1: the control module has detected this fault condition.'
+    de: 'Partikelfilter eingeschränkt - Russansammlung zu hoch Bank 1: das Steuergerät hat diesen Fehlerzustand erkannt.'
   affected_components:
     - dpf_b1
   common_causes:
@@ -53673,8 +53673,8 @@
     en: Reductant Heater A Sense Circuit
     de: AdBlue-Heizung A Messkreis
   description:
-    en: A general circuit fault on the AdBlue heater A sense feedback line.
-    de: Allgemeiner Stromkreisfehler an der Mess-Rückmeldeleitung der AdBlue-Heizung A.
+    en: 'Reductant Heater A Sense Circuit: an electrical fault is present in the circuit. The reductant (DEF/AdBlue) heater keeps the urea fluid from freezing; a fault can impair SCR dosing in cold conditions.'
+    de: 'AdBlue-Heizung A Messkreis: im Stromkreis liegt ein elektrischer Fehler vor. Die Reduktionsmittel-Heizung (AdBlue) verhindert das Einfrieren der Harnstofflösung; ein Fehler kann die SCR-Dosierung bei Kälte beeinträchtigen.'
   affected_components:
     - reductant_heater_a
   common_causes:
@@ -53711,8 +53711,8 @@
     en: Reductant Heater B Sense Circuit
     de: AdBlue-Heizung B Messkreis
   description:
-    en: 'A general circuit fault on the AdBlue heater A sense feedback line.'
-    de: 'Allgemeiner Stromkreisfehler an der Mess-Rückmeldeleitung der AdBlue-Heizung A.'
+    en: 'Reductant Heater B Sense Circuit: an electrical fault is present in the circuit. The reductant (DEF/AdBlue) heater keeps the urea fluid from freezing; a fault can impair SCR dosing in cold conditions.'
+    de: 'AdBlue-Heizung B Messkreis: im Stromkreis liegt ein elektrischer Fehler vor. Die Reduktionsmittel-Heizung (AdBlue) verhindert das Einfrieren der Harnstofflösung; ein Fehler kann die SCR-Dosierung bei Kälte beeinträchtigen.'
   affected_components:
     - reductant_heater_b
   common_causes:
@@ -62143,8 +62143,8 @@
     en: Turbocharger B Boost Control Position At Low Limit
     de: Turbolader B Ladedruck-Steuerposition am unteren Limit
   description:
-    en: 'Same condition as the turbo A low-limit saturation, applied to the second turbo. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Derselbe Sättigungs-Zustand wie bei Turbo A, am zweiten Turbo. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Turbocharger B Boost Control Position At Low Limit: the control module has detected this fault condition. This affects turbo/supercharger boost-pressure control.'
+    de: 'Turbolader B Ladedruck-Steuerposition am unteren Limit: das Steuergerät hat diesen Fehlerzustand erkannt. Dies betrifft die Ladedruckregelung des Turbo-/Kompressors.'
   affected_components:
     - turbo_actuator_b
   common_causes:
@@ -62181,8 +62181,8 @@
     en: Turbocharger B Boost Control Position At High Limit
     de: Turbolader B Ladedruck-Steuerposition am oberen Limit
   description:
-    en: 'Same condition as the turbo A high-limit saturation, applied to the second turbo. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Derselbe Sättigungs-Zustand wie bei Turbo A, am zweiten Turbo. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: 'Turbocharger B Boost Control Position At High Limit: the control module has detected this fault condition. This affects turbo/supercharger boost-pressure control.'
+    de: 'Turbolader B Ladedruck-Steuerposition am oberen Limit: das Steuergerät hat diesen Fehlerzustand erkannt. Dies betrifft die Ladedruckregelung des Turbo-/Kompressors.'
   affected_components:
     - turbo_actuator_b
     - wastegate
@@ -99426,8 +99426,8 @@
     en: O2 Sensor Circuit Range/Performance Bank 1 Sensor 1
     de: Lambdasonden-Stromkreis Bereich/Funktion Bank 1 Sonde 1
   description:
-    en: Long-term plausibility checks show that the front oxygen sensor on bank 1 reacts too slowly or stays too close to a fixed value. The signal does not show normal cross-counts during closed-loop operation.
-    de: Langzeit-Plausibilitaetspruefungen zeigen, dass die vordere Lambdasonde auf Bank 1 zu langsam reagiert oder zu lange auf einem festen Wert verharrt. Im Lambdaregelkreis fehlen die ueblichen Wechsel.
+    en: 'O2 Sensor Circuit Range/Performance Bank 1 Sensor 1: the signal is implausible or outside the valid range.'
+    de: 'Lambdasonden-Stromkreis Bereich/Funktion Bank 1 Sonde 1: das Signal ist unplausibel bzw. außerhalb des gültigen Bereichs.'
   affected_components:
     - oxygen_sensor
     - oxygen_sensor_wiring
@@ -148721,8 +148721,8 @@
     en: Drive Motor A Excitation Current Sensor Performance
     de: Antriebsmotor A Erregerstrom-Sensor Verhalten
   description:
-    en: The drive motor A excitation current sensor reports a fault. Field excitation cannot be measured or controlled reliably.
-    de: Der Erregerstrom des Antriebsmotors A Sensor meldet einen Fehler. Die Felderregung kann nicht zuverlässig gemessen oder geregelt werden.
+    en: 'Drive Motor A Excitation Current Sensor Performance: the component is electrically intact but its response does not match the command. This affects electric-drive motor control.'
+    de: 'Antriebsmotor A Erregerstrom-Sensor Verhalten: das Bauteil ist elektrisch in Ordnung, reagiert aber nicht wie vorgegeben. Dies betrifft die Regelung des Elektroantriebs.'
   affected_components:
     - drive_motor_a_excitation_circuit
     - drive_motor_a
@@ -148773,8 +148773,8 @@
     en: Drive Motor A Excitation Current Sensor Circuit Low Voltage
     de: Antriebsmotor A Erregerstrom-Sensor Stromkreis niedrige Spannung
   description:
-    en: The drive motor A excitation current sensor reports a fault. Field excitation cannot be measured or controlled reliably.
-    de: Der Erregerstrom des Antriebsmotors A Sensor meldet einen Fehler. Die Felderregung kann nicht zuverlässig gemessen oder geregelt werden.
+    en: 'Drive Motor A Excitation Current Sensor Circuit Low Voltage: the signal voltage is below the expected range. This affects electric-drive motor control.'
+    de: 'Antriebsmotor A Erregerstrom-Sensor Stromkreis niedrige Spannung: die Signalspannung liegt unter dem erwarteten Bereich. Dies betrifft die Regelung des Elektroantriebs.'
   affected_components:
     - drive_motor_a_excitation_circuit
     - drive_motor_a
@@ -148825,8 +148825,8 @@
     en: Drive Motor A Excitation Current Sensor Circuit High Voltage
     de: Antriebsmotor A Erregerstrom-Sensor Stromkreis hohe Spannung
   description:
-    en: The drive motor A excitation current sensor reports a fault. Field excitation cannot be measured or controlled reliably.
-    de: Der Erregerstrom des Antriebsmotors A Sensor meldet einen Fehler. Die Felderregung kann nicht zuverlässig gemessen oder geregelt werden.
+    en: 'Drive Motor A Excitation Current Sensor Circuit High Voltage: the signal voltage is above the expected range. This affects electric-drive motor control.'
+    de: 'Antriebsmotor A Erregerstrom-Sensor Stromkreis hohe Spannung: die Signalspannung liegt über dem erwarteten Bereich. Dies betrifft die Regelung des Elektroantriebs.'
   affected_components:
     - drive_motor_a_excitation_circuit
     - drive_motor_a
