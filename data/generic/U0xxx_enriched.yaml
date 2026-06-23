@@ -5936,8 +5936,8 @@
     en: Lost Communication with ECM/PCM "A"
     de: Kommunikation mit ECM/PCM "A" verloren
   description:
-    en: A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.
-    de: Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.
+    en: 'The ECM/PCM "A" has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. As this is the engine controller itself, the engine usually will not start or run while the message is missing. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'ECM/PCM "A" — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Da es sich um das Motorsteuergerät selbst handelt, springt der Motor meist nicht an oder läuft nicht, solange die Botschaft fehlt. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - ecm
     - can_bus_wiring
@@ -6037,8 +6037,8 @@
     en: Lost Communication with Transfer Case Control Module
     de: Kommunikation mit Verteilergetriebe-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Transfer Case Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Four-wheel-drive range selection and torque distribution become unavailable. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Verteilergetriebe-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Wahl der Verteilergetriebe-Stufe und die Momentverteilung des Allradantriebs stehen nicht mehr zur Verfügung. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - transfer_case_control_module
     - can_bus_wiring
@@ -6087,8 +6087,8 @@
     en: Lost Communication with Gear Shift Module
     de: Kommunikation mit Schaltmodul verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Gear Shift Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Shift-by-wire gear selection can fail and leave the transmission in a default position. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Schaltmodul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Shift-by-wire-Gangwahl kann ausfallen; das Getriebe verbleibt in einer Default-Stellung. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - gear_shift_module
     - can_bus_wiring
@@ -6137,8 +6137,8 @@
     en: Lost Communication with Cruise Control Module
     de: Kommunikation mit Tempomat-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Cruise Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Cruise control and speed-hold functions stop working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Tempomat-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Tempomat und Geschwindigkeitsregelung funktionieren nicht mehr. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - cruise_control_module
     - can_bus_wiring
@@ -6186,8 +6186,8 @@
     en: Lost Communication with Fuel Injector Control Module
     de: Kommunikation mit Einspritzdüsen-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Fuel Injector Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Injection-timing data is lost, which can stall the engine or prevent a start. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Einspritzdüsen-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Daten der Einspritzsteuerung fehlen; der Motor kann ausgehen oder nicht starten. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - fuel_injector_control_module
     - can_bus_wiring
@@ -6237,8 +6237,8 @@
     en: Lost Communication with Glow Plug Control Module
     de: Kommunikation mit Glühkerzen-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Glow Plug Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Cold-start pre-heating is no longer coordinated, causing hard diesel starts. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Glühkerzen-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Vorglühsteuerung wird nicht mehr koordiniert, was zu schweren Kaltstarts beim Diesel führt. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - glow_plug_control_module
     - can_bus_wiring
@@ -6288,8 +6288,8 @@
     en: Lost Communication with Throttle Actuator Control Module
     de: Kommunikation mit Drosselklappen-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Throttle Actuator Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Electronic throttle control can drop to limp mode with sharply reduced power. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Drosselklappen-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die elektronische Drosselklappensteuerung kann in den Notlauf mit stark reduzierter Leistung gehen. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - throttle_actuator_control_module
     - can_bus_wiring
@@ -6391,8 +6391,8 @@
     en: Lost Communication with Fuel Pump Control Module
     de: Kommunikation mit Kraftstoffpumpen-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Fuel Pump Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Fuel-delivery control is lost, which can starve the engine of fuel. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Kraftstoffpumpen-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Kraftstoffförderung wird nicht mehr geregelt; der Motor kann zu wenig Kraftstoff bekommen. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - fuel_pump_control_module
     - can_bus_wiring
@@ -6758,8 +6758,8 @@
     en: Lost Communication with Drive Motor Control Module
     de: Kommunikation mit Antriebsmotor-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Drive Motor Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. On a hybrid or EV the electric drive can shut down or limit power. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Antriebsmotor-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Bei Hybrid oder Elektrofahrzeug kann der elektrische Antrieb abschalten oder die Leistung begrenzen. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - drive_motor_control_module
     - can_bus_wiring
@@ -6808,8 +6808,8 @@
     en: Lost Communication with Battery Energy Control Module
     de: Kommunikation mit Hochvoltbatterie-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Battery Energy Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. High-voltage battery-management data is lost; the hybrid/EV system may disable the drive. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Hochvoltbatterie-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Daten des Hochvolt-Batteriemanagements fehlen; das Hybrid-/EV-System kann den Antrieb abschalten. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - battery_energy_control_module
     - can_bus_wiring
@@ -6858,8 +6858,8 @@
     en: Lost Communication with Battery Energy Control Module "B"
     de: Kommunikation mit Batterie-Energiesteuergerät "B" verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Battery Energy Control Module "B" has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The second battery-energy controller is silent, limiting high-voltage system availability. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Batterie-Energiesteuergerät "B" — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Das zweite Batterie-Energiesteuergerät meldet sich nicht; die Hochvolt-Verfügbarkeit ist eingeschränkt. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - battery_energy_control_module
     - can_bus_wiring
@@ -6908,8 +6908,8 @@
     en: Lost Communication with Battery Charger A Control Module
     de: Kommunikation mit Batterieladegerät A Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Battery Charger A Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Onboard charging control is lost, so the traction battery may not charge. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Batterieladegerät A Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Ladesteuerung fällt aus; die Traktionsbatterie lädt möglicherweise nicht. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - battery_charger_module
     - can_bus_wiring
@@ -6958,8 +6958,8 @@
     en: Lost Communication with 4WD Clutch Control Module
     de: Kommunikation mit 4WD-Kupplungs-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The 4WD Clutch Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Electronically controlled four-wheel-drive engagement is unavailable. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: '4WD-Kupplungs-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die elektronisch gesteuerte Allrad-Zuschaltung steht nicht zur Verfügung. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - awd_clutch_control_module
     - can_bus_wiring
@@ -7007,8 +7007,8 @@
     en: Lost Communication with ECM/PCM "B"
     de: Kommunikation mit ECM/PCM "B" verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The ECM/PCM "B" has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. A second engine/powertrain controller is unreachable, which can prevent the engine from running. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'ECM/PCM "B" — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Ein zweites Motor-/Antriebssteuergerät ist nicht erreichbar; der Motor läuft möglicherweise nicht. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - ecm
     - can_bus_wiring
@@ -7059,8 +7059,8 @@
     en: Lost Communication with Steering Effort Control Module
     de: Kommunikation mit Lenkkraft-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Steering Effort Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Speed-dependent steering assist is lost, changing the steering feel. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Lenkkraft-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die geschwindigkeitsabhängige Lenkunterstützung fällt aus; das Lenkgefühl ändert sich. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - steering_effort_module
     - can_bus_wiring
@@ -7109,8 +7109,8 @@
     en: Lost Communication with Drive Motor Control Module 2
     de: Kommunikation mit Antriebsmotor-Steuergerät 2 verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Drive Motor Control Module 2 has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The second drive-motor controller is silent, limiting electric drive on that axle. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Antriebsmotor-Steuergerät 2 — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Der zweite Antriebsmotor-Regler meldet sich nicht; der E-Antrieb dieser Achse ist eingeschränkt. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - drive_motor_control_module
     - can_bus_wiring
@@ -7160,8 +7160,8 @@
     en: Lost Communication with Cabin Air Quality Sensor Module
     de: Kommunikation mit Innenraum-Luftgütesensor-Modul verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Cabin Air Quality Sensor Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Automatic air-recirculation control loses its air-quality input. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Innenraum-Luftgütesensor-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die automatische Umluftsteuerung verliert ihr Luftgüte-Signal. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - air_quality_sensor_module
     - can_bus_wiring
@@ -7210,8 +7210,8 @@
     en: Lost Communication with Steering Column Control Module
     de: Kommunikation mit Lenksäulen-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Steering Column Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Steering-column controls and the steering-lock function can fail. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Lenksäulen-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Lenkstockschalter und die Lenkradschloss-Funktion können ausfallen. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - steering_column_module
     - can_bus_wiring
@@ -7576,8 +7576,8 @@
     en: Lost Communication with Starter/Generator Control Module
     de: Kommunikation mit Starter-/Generator-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Starter/Generator Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Stop-start and mild-hybrid generator functions stop working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Starter-/Generator-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Start-Stopp- und Mildhybrid-Generatorfunktionen arbeiten nicht mehr. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - starter_generator_module
     - can_bus_wiring
@@ -7677,8 +7677,8 @@
     en: Lost Communication with Vehicle Dynamics Control Module
     de: Kommunikation mit Fahrdynamik-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Vehicle Dynamics Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Stability control (ESC/ESP) is disabled, leaving the car without electronic stabilisation. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Fahrdynamik-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Fahrdynamikregelung (ESP) wird abgeschaltet; das Fahrzeug ist ohne elektronische Stabilisierung. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - vehicle_dynamics_module
     - can_bus_wiring
@@ -7727,8 +7727,8 @@
     en: Lost Communication with Yaw Rate Sensor Module
     de: Kommunikation mit Gierratensensor-Modul verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Yaw Rate Sensor Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Stability control loses its yaw input and typically disables ESC. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Gierratensensor-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Stabilitätsregelung verliert das Giersignal und schaltet das ESP meist ab. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - yaw_rate_sensor
     - can_bus_wiring
@@ -7778,8 +7778,8 @@
     en: Lost Communication with Lateral Acceleration Sensor Module
     de: Kommunikation mit Querbeschleunigungs-Sensor-Modul verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Lateral Acceleration Sensor Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Stability and rollover functions lose their lateral-acceleration input. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Querbeschleunigungs-Sensor-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Stabilitäts- und Überschlagfunktionen verlieren das Querbeschleunigungs-Signal. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - lateral_acceleration_sensor
     - can_bus_wiring
@@ -7828,8 +7828,8 @@
     en: Lost Communication with Multi-axis Acceleration Sensor
     de: Kommunikation mit Multiachsen-Beschleunigungssensor verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Multi-axis Acceleration Sensor has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Several stability and airbag functions lose their motion reference. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Multiachsen-Beschleunigungssensor — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Mehrere Stabilitäts- und Airbagfunktionen verlieren ihre Bewegungsreferenz. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - yaw_rate_sensor
     - can_bus_wiring
@@ -7878,8 +7878,8 @@
     en: Lost Communication with Steering Angle Sensor Module
     de: Kommunikation mit Lenkwinkelsensor-Modul verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Steering Angle Sensor Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Stability control loses the steering-angle reference and usually disables ESC. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Lenkwinkelsensor-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Fahrdynamikregelung verliert die Lenkwinkel-Referenz und schaltet das ESP meist ab. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - steering_angle_sensor
     - can_bus_wiring
@@ -7929,8 +7929,8 @@
     en: Lost Communication with Tire Pressure Monitor Module
     de: Kommunikation mit Reifendruck-Kontrollmodul verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Tire Pressure Monitor Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Tire-pressure monitoring stops and warns the driver. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Reifendruck-Kontrollmodul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Reifendrucküberwachung fällt aus und warnt den Fahrer. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - tpms_module
     - can_bus_wiring
@@ -7979,8 +7979,8 @@
     en: Lost Communication with Park Brake Control Module
     de: Kommunikation mit Feststellbrems-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Park Brake Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The electronic parking brake may not release or apply correctly. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Feststellbrems-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die elektronische Feststellbremse lässt sich eventuell nicht korrekt lösen oder anlegen. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - parking_brake_module
     - can_bus_wiring
@@ -8029,8 +8029,8 @@
     en: Lost Communication with Brake System Control Module
     de: Kommunikation mit Bremssystem-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Brake System Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. ABS and electronic brake functions are lost; base braking remains but the assists are off. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Bremssystem-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. ABS und elektronische Bremsfunktionen fallen aus; die Grundbremse bleibt, die Assistenten sind aus. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - brake_system_control_module
     - can_bus_wiring
@@ -8396,8 +8396,8 @@
     en: Lost Communication with Steering Effort Control Module B
     de: Kommunikation mit Lenkkraft-Steuergerät B verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Steering Effort Control Module B has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The secondary steering-assist controller is unreachable, affecting power steering. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Lenkkraft-Steuergerät B — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Der zweite Lenkkraft-Regler ist nicht erreichbar; die Servolenkung ist betroffen. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - steering_effort_module
     - can_bus_wiring
@@ -8446,8 +8446,8 @@
     en: Lost Communication with Power Steering Control Module
     de: Kommunikation mit Servolenkungs-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Power Steering Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Electric power steering can fail, requiring much higher steering effort. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Servolenkungs-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die elektrische Servolenkung kann ausfallen; die Lenkkräfte steigen stark an. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - power_steering_module
     - can_bus_wiring
@@ -8496,8 +8496,8 @@
     en: Lost Communication with Ride Level Control Module
     de: Kommunikation mit Niveauregulierungs-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Ride Level Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Air or electronic suspension levelling stops working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Niveauregulierungs-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Luft- oder elektronische Niveauregulierung arbeitet nicht mehr. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - air_suspension_module
     - can_bus_wiring
@@ -8697,8 +8697,8 @@
     en: Lost Communication with Park Brake Module B
     de: Kommunikation mit Feststellbrems-Modul B verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Park Brake Module B has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. A second parking-brake actuator is unreachable, affecting the electric brake. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Feststellbrems-Modul B — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Ein zweiter Feststellbrems-Aktuator ist nicht erreichbar; die elektrische Parkbremse ist betroffen. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - parking_brake_module
     - can_bus_wiring
@@ -9204,8 +9204,8 @@
     en: Lost Communication with Body Control Module B
     de: Kommunikation mit Bordnetzsteuergerät B verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Body Control Module B has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. A second body controller is silent; lighting, locks, or comfort functions can fail. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Bordnetzsteuergerät B — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Ein zweites Karosseriesteuergerät meldet sich nicht; Licht, Verriegelung oder Komfort können ausfallen. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - body_control_module
     - can_bus_wiring
@@ -9305,8 +9305,8 @@
     en: Lost Communication with Personalization Module "B"
     de: Kommunikation mit Personalisierungs-Modul "B" verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Personalization Module "B" has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Driver-profile settings (seats, mirrors, presets) are not applied. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Personalisierungs-Modul "B" — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Fahrerprofil-Einstellungen (Sitze, Spiegel, Vorwahlen) werden nicht übernommen. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - personalization_module
     - can_bus_wiring
@@ -9506,8 +9506,8 @@
     en: Lost Communication with Body Control Module "C"
     de: Kommunikation mit Bordnetzsteuergerät "C" verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Body Control Module "C" has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. A third body controller is unreachable; its assigned body functions are affected. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Bordnetzsteuergerät "C" — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Ein drittes Karosseriesteuergerät ist nicht erreichbar; die zugeordneten Funktionen sind betroffen. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - body_control_module
     - can_bus_wiring
@@ -9556,8 +9556,8 @@
     en: Lost Communication with Door Driver Module
     de: Kommunikation mit Fahrertür-Modul verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Door Driver Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The driver-door module is silent; its window, lock, and mirror controls fail. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Fahrertür-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Das Fahrertürmodul meldet sich nicht; Fensterheber, Verriegelung und Spiegel der Tür fallen aus. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - door_control_module
     - can_bus_wiring
@@ -9868,8 +9868,8 @@
     en: Lost Communication with Side Object Detection Control Module Left
     de: Kommunikation mit Seitenobjekterkennung links verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Side Object Detection Control Module Left has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Left-side blind-spot monitoring stops working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Seitenobjekterkennung links — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Totwinkelüberwachung links fällt aus. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - side_object_detection_module_left
     - can_bus_wiring
@@ -9917,8 +9917,8 @@
     en: Lost Communication with Restraints Control Module
     de: Kommunikation mit Airbag-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Restraints Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The airbag/restraints controller is unreachable — airbags and belt tensioners may not deploy. Safety-critical. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Airbag-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Das Airbag-Steuergerät ist nicht erreichbar — Airbags und Gurtstraffer lösen eventuell nicht aus. Sicherheitskritisch. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - restraints_control_module
     - can_bus_wiring
@@ -9966,8 +9966,8 @@
     en: Lost Communication with Side Restraints Control Module Left
     de: Kommunikation mit Seiten-Airbag-Steuergerät links verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Side Restraints Control Module Left has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Left-side airbags may not deploy in a crash. Safety-critical. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Seiten-Airbag-Steuergerät links — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Seitenairbags links lösen im Crash eventuell nicht aus. Sicherheitskritisch. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - side_restraints_module_left
     - can_bus_wiring
@@ -10015,8 +10015,8 @@
     en: Lost Communication with Restraints Control Module B
     de: Kommunikation mit Airbag-Steuergerät B verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Restraints Control Module B has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. A second restraints controller is unreachable, affecting airbag readiness. Safety-critical. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Airbag-Steuergerät B — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Ein zweites Airbag-Steuergerät ist nicht erreichbar; die Airbag-Bereitschaft ist betroffen. Sicherheitskritisch. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - restraints_control_module
     - can_bus_wiring
@@ -10064,8 +10064,8 @@
     en: Lost Communication with Restraints Occupant Sensing Module
     de: Kommunikation mit Insassenerkennungs-Modul verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Restraints Occupant Sensing Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Occupant detection is lost, so airbag suppression and staging may be wrong. Safety-critical. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Insassenerkennungs-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Insassenerkennung fällt aus; die Airbag-Freigabe und -Stufung kann falsch sein. Sicherheitskritisch. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - occupant_sensing_module
     - can_bus_wiring
@@ -10163,8 +10163,8 @@
     en: Lost Communication with Information Center "A"
     de: Kommunikation mit Informations-Center "A" verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Information Center "A" has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The driver-information display loses data and may go blank. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Informations-Center "A" — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Das Fahrer-Informationsdisplay verliert Daten und bleibt eventuell dunkel. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - information_display_module
     - can_bus_wiring
@@ -10212,8 +10212,8 @@
     en: Lost Communication with Personalization Control Module
     de: Kommunikation mit Personalisierungs-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Personalization Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Stored personalisation settings are not loaded. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Personalisierungs-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Gespeicherte Personalisierungs-Einstellungen werden nicht geladen. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - personalization_module
     - can_bus_wiring
@@ -10262,8 +10262,8 @@
     en: Lost Communication with Head Up Display
     de: Kommunikation mit Head-Up-Display verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Head Up Display has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The head-up display stops showing information. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Head-Up-Display — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Das Head-up-Display zeigt keine Informationen mehr an. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - head_up_display_module
     - can_bus_wiring
@@ -10312,8 +10312,8 @@
     en: Lost Communication with Parking Assist Module
     de: Kommunikation mit Einparkhilfe-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Parking Assist Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Parking sensors and park-assist functions stop working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Einparkhilfe-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Einparksensoren und Parkassistent funktionieren nicht mehr. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - parking_assist_module
     - can_bus_wiring
@@ -10677,8 +10677,8 @@
     en: Lost Communication with Audible Alert Control Module
     de: Kommunikation mit Akustiksignal-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Audible Alert Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Chimes and warning buzzers may not sound. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Akustiksignal-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Warntöne und Signalgeber ertönen möglicherweise nicht. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - audible_alert_module
     - can_bus_wiring
@@ -10727,8 +10727,8 @@
     en: Lost Communication with Compass Module
     de: Kommunikation mit Kompass-Modul verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Compass Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The compass and heading display loses its data. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Kompass-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Kompass- und Richtungsanzeige verliert ihre Daten. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - compass_module
     - can_bus_wiring
@@ -10777,8 +10777,8 @@
     en: Lost Communication with Navigation Display Module
     de: Kommunikation mit Navigations-Display-Modul verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Navigation Display Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The navigation screen loses its display feed. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Navigations-Display-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Der Navigationsbildschirm verliert seine Anzeigedaten. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - navigation_display_module
     - can_bus_wiring
@@ -10827,8 +10827,8 @@
     en: Lost Communication with Navigation Control Module
     de: Kommunikation mit Navigations-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Navigation Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Navigation and route guidance stop working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Navigations-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Navigation und Zielführung funktionieren nicht mehr. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - navigation_control_module
     - can_bus_wiring
@@ -10877,8 +10877,8 @@
     en: Lost Communication with HVAC Control Module
     de: Kommunikation mit Klima-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The HVAC Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Automatic climate control stops responding. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Klima-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die automatische Klimasteuerung reagiert nicht mehr. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - hvac_control_module
     - can_bus_wiring
@@ -10927,8 +10927,8 @@
     en: Lost Communication with Auxiliary HVAC Control Module
     de: Kommunikation mit Zusatz-Klima-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Auxiliary HVAC Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Rear or auxiliary climate control stops working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Zusatz-Klima-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die hintere bzw. Zusatz-Klimasteuerung arbeitet nicht mehr. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - hvac_control_module
     - can_bus_wiring
@@ -10977,8 +10977,8 @@
     en: Lost Communication with Auxiliary Heater Control Module
     de: Kommunikation mit Zusatzheizungs-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Auxiliary Heater Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The auxiliary or parking-heater control is lost. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Zusatzheizungs-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Steuerung der Zusatz- bzw. Standheizung fällt aus. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - auxiliary_heater_module
     - can_bus_wiring
@@ -11028,8 +11028,8 @@
     en: Lost Communication with Vehicle Immobiliser Control Module
     de: Kommunikation mit Wegfahrsperren-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Vehicle Immobiliser Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Immobiliser authorisation can fail, preventing engine start. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Wegfahrsperren-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Wegfahrsperren-Freigabe kann ausfallen und den Motorstart verhindern. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - immobiliser_module
     - can_bus_wiring
@@ -11128,8 +11128,8 @@
     en: Lost Communication with Sun Roof Control Module
     de: Kommunikation mit Schiebedach-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Sun Roof Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Powered sunroof operation stops working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Schiebedach-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die elektrische Schiebedachbetätigung funktioniert nicht mehr. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - sun_roof_module
     - can_bus_wiring
@@ -11387,8 +11387,8 @@
     en: Lost Communication with Restraints Front Sensor "B"
     de: Kommunikation mit Rückhaltesystem-Frontsensor "B" verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Restraints Front Sensor "B" has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. A front crash sensor is unreachable, affecting airbag timing. Safety-critical. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Rückhaltesystem-Frontsensor "B" — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Ein Front-Crashsensor ist nicht erreichbar; das Airbag-Timing ist betroffen. Sicherheitskritisch. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - restraints_front_sensor
     - can_bus_wiring
@@ -11436,8 +11436,8 @@
     en: Lost Communication with Restraints Rear Sensor "A"
     de: Kommunikation mit Rückhaltesystem-Hecksensor "A" verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Restraints Rear Sensor "A" has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. A rear crash sensor is unreachable, affecting rear airbag deployment. Safety-critical. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Rückhaltesystem-Hecksensor "A" — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Ein Heck-Crashsensor ist nicht erreichbar; die hintere Airbag-Auslösung ist betroffen. Sicherheitskritisch. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - restraints_rear_sensor
     - can_bus_wiring
@@ -11486,8 +11486,8 @@
     en: Lost Communication with Restraints Rear Sensor "B"
     de: Kommunikation mit Rückhaltesystem-Hecksensor "B" verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Restraints Rear Sensor "B" has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. A second rear crash sensor is unreachable, affecting airbag deployment. Safety-critical. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Rückhaltesystem-Hecksensor "B" — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Ein zweiter Heck-Crashsensor ist nicht erreichbar; die Airbag-Auslösung ist betroffen. Sicherheitskritisch. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - restraints_rear_sensor
     - can_bus_wiring
@@ -11746,8 +11746,8 @@
     en: Lost Communication with Mirror Memory Module
     de: Kommunikation mit Spiegel-Memory-Modul verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Mirror Memory Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Memory mirror positioning stops working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Spiegel-Memory-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Spiegel-Memory-Verstellung funktioniert nicht mehr. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - mirror_memory_module
     - can_bus_wiring
@@ -11849,8 +11849,8 @@
     en: Lost Communication with Power Liftgate Control Module
     de: Kommunikation mit elektrischer Heckklappen-Steuerung verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Power Liftgate Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The powered tailgate stops operating automatically. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'elektrischer Heckklappen-Steuerung — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die elektrische Heckklappe arbeitet nicht mehr automatisch. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - power_liftgate_module
     - can_bus_wiring
@@ -12217,8 +12217,8 @@
     en: Lost Communication with Automatic Lighting Control Module
     de: Kommunikation mit automatischer Lichtsteuerung verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Automatic Lighting Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Automatic exterior lighting (auto headlamps) stops working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'automatischer Lichtsteuerung — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die automatische Außenbeleuchtung (Lichtautomatik) fällt aus. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - headlamp_control_module
     - can_bus_wiring
@@ -12267,8 +12267,8 @@
     en: Lost Communication with Auto Park Brake Module
     de: Kommunikation mit elektrischer Parkbremsen-Steuerung verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Auto Park Brake Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Automatic parking-brake functions stop working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'elektrischer Parkbremsen-Steuerung — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die automatischen Feststellbrems-Funktionen fallen aus. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - park_brake_module
     - can_bus_wiring
@@ -12415,8 +12415,8 @@
     en: Lost Communication with Radio
     de: Kommunikation mit Radio verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Radio has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The radio/head unit drops off the bus and may go silent. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Radio — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Das Radio bzw. Hauptgerät fällt vom Bus ab und verstummt eventuell. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - radio_module
     - can_bus_wiring
@@ -12513,8 +12513,8 @@
     en: Lost Communication with Audio Amplifier
     de: Kommunikation mit Audio-Verstärker verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Audio Amplifier has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The external audio amplifier stops producing sound. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Audio-Verstärker — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Der externe Audioverstärker gibt keinen Ton mehr aus. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - audio_amplifier_module
     - can_bus_wiring
@@ -12562,8 +12562,8 @@
     en: Lost Communication with Disc Player Module
     de: Kommunikation mit CD-/DVD-Player-Modul verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Disc Player Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The CD/DVD player is unreachable. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'CD-/DVD-Player-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Der CD-/DVD-Player ist nicht erreichbar. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - disc_player_module
     - can_bus_wiring
@@ -12611,8 +12611,8 @@
     en: Lost Communication with Audio Rear Control Module
     de: Kommunikation mit Audio-Hecksteuerung verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Audio Rear Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Rear-seat audio controls stop working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Audio-Hecksteuerung — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die hintere Audiobedienung funktioniert nicht mehr. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - audio_rear_control_module
     - can_bus_wiring
@@ -12762,8 +12762,8 @@
     en: Lost Communication with Subwoofer Amplifier Module
     de: Kommunikation mit Subwoofer-Verstärker-Modul verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Subwoofer Amplifier Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The subwoofer amplifier drops off the bus. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Subwoofer-Verstärker-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Der Subwoofer-Verstärker fällt vom Bus ab. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - subwoofer_amplifier_module
     - can_bus_wiring
@@ -12811,8 +12811,8 @@
     en: Lost Communication with Television Tuner Module
     de: Kommunikation mit TV-Tuner-Modul verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Television Tuner Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The TV tuner is unreachable. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'TV-Tuner-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Der TV-Tuner ist nicht erreichbar. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - television_tuner_module
     - can_bus_wiring
@@ -12909,8 +12909,8 @@
     en: Lost Communication with Mobile Phone Module
     de: Kommunikation mit Mobiltelefon-Modul verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Mobile Phone Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Hands-free phone integration stops working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Mobiltelefon-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Freisprech-Telefonanbindung funktioniert nicht mehr. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - mobile_phone_module
     - can_bus_wiring
@@ -13007,8 +13007,8 @@
     en: Lost Communication with Satellite Radio Receiver Module
     de: Kommunikation mit Satellitenradio-Empfänger-Modul verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Satellite Radio Receiver Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Satellite-radio reception is lost. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Satellitenradio-Empfänger-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Der Satellitenradio-Empfang fällt aus. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - satellite_radio_module
     - can_bus_wiring
@@ -13056,8 +13056,8 @@
     en: Lost Communication with Rear Seat Entertainment Control Module
     de: Kommunikation mit Fond-Entertainment-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Rear Seat Entertainment Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Rear-seat entertainment stops working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Fond-Entertainment-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Das Fond-Entertainment funktioniert nicht mehr. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - rear_seat_entertainment_module
     - can_bus_wiring
@@ -13203,8 +13203,8 @@
     en: Lost Communication with Door Control Module
     de: Kommunikation mit Tür-Steuergerät verloren
   description:
-    en: 'A control module that expects to talk to the engine ECU has stopped receiving messages. Most commonly seen by the TCM, instrument cluster, or BCM after the ECU has been disconnected, fitted with a faulty replacement, or the CAN wiring has been damaged. Engine usually will not run while this fault is active in other modules.'
-    de: 'Ein Steuergerät, das mit dem Motorsteuergerät kommunizieren sollte, empfängt keine Botschaften mehr. Wird am häufigsten von Getriebesteuergerät, Kombiinstrument oder Bordnetzsteuergerät gemeldet, nachdem die Motorsteuerung abgesteckt, ein defektes Ersatzgerät eingebaut oder die CAN-Verkabelung beschädigt wurde. Der Motor läuft meist nicht, solange dieser Fehler in anderen Steuergeräten aktiv ist.'
+    en: 'The Door Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. A door control module is silent; its window, lock, and mirror controls fail. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
+    de: 'Tür-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Ein Türsteuergerät meldet sich nicht; Fensterheber, Verriegelung und Spiegel fallen aus. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
   affected_components:
     - door_control_module
     - can_bus_wiring
@@ -16643,8 +16643,8 @@
     en: Lost Communication With Door Window Motor B
     de: Kommunikationsverlust mit Fensterhebermotor B
   description:
-    en: 'ECU lost communication with door window motor B (smart window motor with bus interface). A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Steuergerät hat die Kommunikation zum Fensterhebermotor B verloren (Smart-Motor mit Bus-Schnittstelle). Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: 'The ECU has lost communication with door window motor B, a smart window motor with its own bus interface. One-touch and anti-pinch operation of that window stops, and it may work only manually, if at all. Causes: loss of power or ground at the motor, a broken bus or supply wire in the door harness, a damaged door connector, or a failed motor module.'
+    de: 'Die Verbindung zum Fensterhebermotor B — einem intelligenten Motor mit eigener Busanbindung — ist unterbrochen. Komfort- und Einklemmschutz-Funktionen dieses Fensters fallen aus; es lässt sich allenfalls noch manuell betätigen. Ursachen: fehlende Spannungs- oder Masseversorgung am Motor, eine unterbrochene Bus- oder Versorgungsleitung im Türkabelbaum, ein beschädigter Türstecker oder ein defektes Motormodul.'
   affected_components:
     - window_motor_b
     - can_bus
@@ -16696,8 +16696,8 @@
     en: Lost Communication With Door Window Motor C
     de: Kommunikationsverlust mit Fensterhebermotor C
   description:
-    en: 'ECU lost communication with door window motor B (smart window motor with bus interface). A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Steuergerät hat die Kommunikation zum Fensterhebermotor B verloren (Smart-Motor mit Bus-Schnittstelle). Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: 'The ECU has lost communication with door window motor C, a smart window motor with its own bus interface. One-touch and anti-pinch operation of that window stops, and it may work only manually, if at all. Causes: loss of power or ground at the motor, a broken bus or supply wire in the door harness, a damaged door connector, or a failed motor module.'
+    de: 'Die Verbindung zum Fensterhebermotor C — einem intelligenten Motor mit eigener Busanbindung — ist unterbrochen. Komfort- und Einklemmschutz-Funktionen dieses Fensters fallen aus; es lässt sich allenfalls noch manuell betätigen. Ursachen: fehlende Spannungs- oder Masseversorgung am Motor, eine unterbrochene Bus- oder Versorgungsleitung im Türkabelbaum, ein beschädigter Türstecker oder ein defektes Motormodul.'
   affected_components:
     - window_motor_c
     - can_bus
@@ -16749,8 +16749,8 @@
     en: Lost Communication With Door Window Motor D
     de: Kommunikationsverlust mit Fensterhebermotor D
   description:
-    en: 'ECU lost communication with door window motor B (smart window motor with bus interface). A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Steuergerät hat die Kommunikation zum Fensterhebermotor B verloren (Smart-Motor mit Bus-Schnittstelle). Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: 'The ECU has lost communication with door window motor D, a smart window motor with its own bus interface. One-touch and anti-pinch operation of that window stops, and it may work only manually, if at all. Causes: loss of power or ground at the motor, a broken bus or supply wire in the door harness, a damaged door connector, or a failed motor module.'
+    de: 'Die Verbindung zum Fensterhebermotor D — einem intelligenten Motor mit eigener Busanbindung — ist unterbrochen. Komfort- und Einklemmschutz-Funktionen dieses Fensters fallen aus; es lässt sich allenfalls noch manuell betätigen. Ursachen: fehlende Spannungs- oder Masseversorgung am Motor, eine unterbrochene Bus- oder Versorgungsleitung im Türkabelbaum, ein beschädigter Türstecker oder ein defektes Motormodul.'
   affected_components:
     - window_motor_d
     - can_bus
@@ -16802,8 +16802,8 @@
     en: Lost Communication With Door Window Motor E
     de: Kommunikationsverlust mit Fensterhebermotor E
   description:
-    en: 'ECU lost communication with door window motor B (smart window motor with bus interface). A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Steuergerät hat die Kommunikation zum Fensterhebermotor B verloren (Smart-Motor mit Bus-Schnittstelle). Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: 'The ECU has lost communication with door window motor E, a smart window motor with its own bus interface. One-touch and anti-pinch operation of that window stops, and it may work only manually, if at all. Causes: loss of power or ground at the motor, a broken bus or supply wire in the door harness, a damaged door connector, or a failed motor module.'
+    de: 'Die Verbindung zum Fensterhebermotor E — einem intelligenten Motor mit eigener Busanbindung — ist unterbrochen. Komfort- und Einklemmschutz-Funktionen dieses Fensters fallen aus; es lässt sich allenfalls noch manuell betätigen. Ursachen: fehlende Spannungs- oder Masseversorgung am Motor, eine unterbrochene Bus- oder Versorgungsleitung im Türkabelbaum, ein beschädigter Türstecker oder ein defektes Motormodul.'
   affected_components:
     - window_motor_e
     - can_bus
@@ -16855,8 +16855,8 @@
     en: Lost Communication With Door Window Motor F
     de: Kommunikationsverlust mit Fensterhebermotor F
   description:
-    en: 'ECU lost communication with door window motor B (smart window motor with bus interface). A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Steuergerät hat die Kommunikation zum Fensterhebermotor B verloren (Smart-Motor mit Bus-Schnittstelle). Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: 'The ECU has lost communication with door window motor F, a smart window motor with its own bus interface. One-touch and anti-pinch operation of that window stops, and it may work only manually, if at all. Causes: loss of power or ground at the motor, a broken bus or supply wire in the door harness, a damaged door connector, or a failed motor module.'
+    de: 'Die Verbindung zum Fensterhebermotor F — einem intelligenten Motor mit eigener Busanbindung — ist unterbrochen. Komfort- und Einklemmschutz-Funktionen dieses Fensters fallen aus; es lässt sich allenfalls noch manuell betätigen. Ursachen: fehlende Spannungs- oder Masseversorgung am Motor, eine unterbrochene Bus- oder Versorgungsleitung im Türkabelbaum, ein beschädigter Türstecker oder ein defektes Motormodul.'
   affected_components:
     - window_motor_f
     - can_bus
@@ -16908,8 +16908,8 @@
     en: Lost Communication With Door Window Motor G
     de: Kommunikationsverlust mit Fensterhebermotor G
   description:
-    en: 'ECU lost communication with door window motor B (smart window motor with bus interface). A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Steuergerät hat die Kommunikation zum Fensterhebermotor B verloren (Smart-Motor mit Bus-Schnittstelle). Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: 'The ECU has lost communication with door window motor G, a smart window motor with its own bus interface. One-touch and anti-pinch operation of that window stops, and it may work only manually, if at all. Causes: loss of power or ground at the motor, a broken bus or supply wire in the door harness, a damaged door connector, or a failed motor module.'
+    de: 'Die Verbindung zum Fensterhebermotor G — einem intelligenten Motor mit eigener Busanbindung — ist unterbrochen. Komfort- und Einklemmschutz-Funktionen dieses Fensters fallen aus; es lässt sich allenfalls noch manuell betätigen. Ursachen: fehlende Spannungs- oder Masseversorgung am Motor, eine unterbrochene Bus- oder Versorgungsleitung im Türkabelbaum, ein beschädigter Türstecker oder ein defektes Motormodul.'
   affected_components:
     - window_motor_g
     - can_bus
@@ -28488,8 +28488,8 @@
     en: Invalid Data Received from ECM/PCM
     de: Ungültige Daten vom ECM/PCM empfangen
   description:
-    en: A control module is communicating with the engine ECU but receives data that is implausible or out of range — wrong checksum, value frozen, or value outside expected limits. Typical effects include limp-home and incorrect dashboard readings.
-    de: Ein Steuergerät kommuniziert mit dem Motorsteuergerät, empfängt aber unplausible oder außerhalb des Bereichs liegende Daten — falsche Checksumme, eingefrorener Wert oder Wert außerhalb der erwarteten Grenzen. Typische Folgen sind Notlauf und falsche Anzeigen im Kombiinstrument.
+    en: 'The ECM/PCM is present on the data bus but the values it reports are implausible — out of range, frozen, or failing the checksum or rolling-count check. The receiving modules reject the data. Implausible engine data can force limp mode or stall the engine. Causes include a faulty sensor feeding the module, internal computation errors, a software or calibration mismatch after a repair, or bus interference corrupting the frames.'
+    de: 'ECM/PCM — diese Komponente ist zwar am Datenbus aktiv, liefert aber unplausible Werte (außerhalb des Bereichs, eingefroren oder mit fehlerhafter Prüfsumme bzw. Zählung). Die empfangenden Steuergeräte verwerfen die Daten. Unplausible Motordaten können den Notlauf erzwingen oder den Motor abstellen. Ursachen sind ein fehlerhafter Sensor am Modul, interne Rechenfehler, eine falsche Software- oder Kalibrierungsversion nach einer Reparatur oder Störungen auf dem Bus.'
   affected_components:
     - ecm
     - can_bus_wiring
@@ -28589,8 +28589,8 @@
     en: Invalid Data Received from Transfer Case Control Module
     de: Ungültige Daten vom Verteilergetriebe-Steuergerät empfangen
   description:
-    en: 'A control module is communicating with the engine ECU but receives data that is implausible or out of range — wrong checksum, value frozen, or value outside expected limits. Typical effects include limp-home and incorrect dashboard readings.'
-    de: 'Ein Steuergerät kommuniziert mit dem Motorsteuergerät, empfängt aber unplausible oder außerhalb des Bereichs liegende Daten — falsche Checksumme, eingefrorener Wert oder Wert außerhalb der erwarteten Grenzen. Typische Folgen sind Notlauf und falsche Anzeigen im Kombiinstrument.'
+    en: 'The Transfer Case Control Module is present on the data bus but the values it reports are implausible — out of range, frozen, or failing the checksum or rolling-count check. The receiving modules reject the data. Four-wheel-drive control becomes unreliable. Causes include a faulty sensor feeding the module, internal computation errors, a software or calibration mismatch after a repair, or bus interference corrupting the frames.'
+    de: 'Verteilergetriebe-Steuergerät — diese Komponente ist zwar am Datenbus aktiv, liefert aber unplausible Werte (außerhalb des Bereichs, eingefroren oder mit fehlerhafter Prüfsumme bzw. Zählung). Die empfangenden Steuergeräte verwerfen die Daten. Die Allradsteuerung arbeitet unzuverlässig. Ursachen sind ein fehlerhafter Sensor am Modul, interne Rechenfehler, eine falsche Software- oder Kalibrierungsversion nach einer Reparatur oder Störungen auf dem Bus.'
   affected_components:
     - transfer_case_control_module
     - can_bus_wiring
@@ -28638,8 +28638,8 @@
     en: Invalid Data Received from Gear Shift Control Module
     de: Ungültige Daten vom Schaltmodul empfangen
   description:
-    en: 'A control module is communicating with the engine ECU but receives data that is implausible or out of range — wrong checksum, value frozen, or value outside expected limits. Typical effects include limp-home and incorrect dashboard readings.'
-    de: 'Ein Steuergerät kommuniziert mit dem Motorsteuergerät, empfängt aber unplausible oder außerhalb des Bereichs liegende Daten — falsche Checksumme, eingefrorener Wert oder Wert außerhalb der erwarteten Grenzen. Typische Folgen sind Notlauf und falsche Anzeigen im Kombiinstrument.'
+    en: 'The Gear Shift Control Module is present on the data bus but the values it reports are implausible — out of range, frozen, or failing the checksum or rolling-count check. The receiving modules reject the data. Shift-by-wire gear selection may be wrong or blocked. Causes include a faulty sensor feeding the module, internal computation errors, a software or calibration mismatch after a repair, or bus interference corrupting the frames.'
+    de: 'Schaltmodul — diese Komponente ist zwar am Datenbus aktiv, liefert aber unplausible Werte (außerhalb des Bereichs, eingefroren oder mit fehlerhafter Prüfsumme bzw. Zählung). Die empfangenden Steuergeräte verwerfen die Daten. Die Shift-by-wire-Gangwahl kann falsch oder blockiert sein. Ursachen sind ein fehlerhafter Sensor am Modul, interne Rechenfehler, eine falsche Software- oder Kalibrierungsversion nach einer Reparatur oder Störungen auf dem Bus.'
   affected_components:
     - gear_shift_module
     - can_bus_wiring
@@ -28688,8 +28688,8 @@
     en: Invalid Data Received from Cruise Control Module
     de: Ungültige Daten vom Tempomat-Steuergerät empfangen
   description:
-    en: 'A control module is communicating with the engine ECU but receives data that is implausible or out of range — wrong checksum, value frozen, or value outside expected limits. Typical effects include limp-home and incorrect dashboard readings.'
-    de: 'Ein Steuergerät kommuniziert mit dem Motorsteuergerät, empfängt aber unplausible oder außerhalb des Bereichs liegende Daten — falsche Checksumme, eingefrorener Wert oder Wert außerhalb der erwarteten Grenzen. Typische Folgen sind Notlauf und falsche Anzeigen im Kombiinstrument.'
+    en: 'The Cruise Control Module is present on the data bus but the values it reports are implausible — out of range, frozen, or failing the checksum or rolling-count check. The receiving modules reject the data. Cruise control is disabled. Causes include a faulty sensor feeding the module, internal computation errors, a software or calibration mismatch after a repair, or bus interference corrupting the frames.'
+    de: 'Tempomat-Steuergerät — diese Komponente ist zwar am Datenbus aktiv, liefert aber unplausible Werte (außerhalb des Bereichs, eingefroren oder mit fehlerhafter Prüfsumme bzw. Zählung). Die empfangenden Steuergeräte verwerfen die Daten. Der Tempomat wird deaktiviert. Ursachen sind ein fehlerhafter Sensor am Modul, interne Rechenfehler, eine falsche Software- oder Kalibrierungsversion nach einer Reparatur oder Störungen auf dem Bus.'
   affected_components:
     - cruise_control_module
     - can_bus_wiring
@@ -29435,8 +29435,8 @@
     en: Invalid Data Received from 4WD Clutch Control Module
     de: Ungültige Daten vom 4WD-Kupplungs-Steuergerät empfangen
   description:
-    en: 'A control module is communicating with the engine ECU but receives data that is implausible or out of range — wrong checksum, value frozen, or value outside expected limits. Typical effects include limp-home and incorrect dashboard readings.'
-    de: 'Ein Steuergerät kommuniziert mit dem Motorsteuergerät, empfängt aber unplausible oder außerhalb des Bereichs liegende Daten — falsche Checksumme, eingefrorener Wert oder Wert außerhalb der erwarteten Grenzen. Typische Folgen sind Notlauf und falsche Anzeigen im Kombiinstrument.'
+    en: 'The 4WD Clutch Control Module is present on the data bus but the values it reports are implausible — out of range, frozen, or failing the checksum or rolling-count check. The receiving modules reject the data. All-wheel-drive engagement becomes unreliable. Causes include a faulty sensor feeding the module, internal computation errors, a software or calibration mismatch after a repair, or bus interference corrupting the frames.'
+    de: '4WD-Kupplungs-Steuergerät — diese Komponente ist zwar am Datenbus aktiv, liefert aber unplausible Werte (außerhalb des Bereichs, eingefroren oder mit fehlerhafter Prüfsumme bzw. Zählung). Die empfangenden Steuergeräte verwerfen die Daten. Die Allrad-Zuschaltung arbeitet unzuverlässig. Ursachen sind ein fehlerhafter Sensor am Modul, interne Rechenfehler, eine falsche Software- oder Kalibrierungsversion nach einer Reparatur oder Störungen auf dem Bus.'
   affected_components:
     - awd_clutch_control_module
     - can_bus_wiring
@@ -29535,8 +29535,8 @@
     en: Invalid Data Received from Vehicle Dynamics Control Module
     de: Ungültige Daten vom Fahrdynamik-Steuergerät empfangen
   description:
-    en: 'A control module is communicating with the engine ECU but receives data that is implausible or out of range — wrong checksum, value frozen, or value outside expected limits. Typical effects include limp-home and incorrect dashboard readings.'
-    de: 'Ein Steuergerät kommuniziert mit dem Motorsteuergerät, empfängt aber unplausible oder außerhalb des Bereichs liegende Daten — falsche Checksumme, eingefrorener Wert oder Wert außerhalb der erwarteten Grenzen. Typische Folgen sind Notlauf und falsche Anzeigen im Kombiinstrument.'
+    en: 'The Vehicle Dynamics Control Module is present on the data bus but the values it reports are implausible — out of range, frozen, or failing the checksum or rolling-count check. The receiving modules reject the data. Stability control (ESP) is disabled. Causes include a faulty sensor feeding the module, internal computation errors, a software or calibration mismatch after a repair, or bus interference corrupting the frames.'
+    de: 'Fahrdynamik-Steuergerät — diese Komponente ist zwar am Datenbus aktiv, liefert aber unplausible Werte (außerhalb des Bereichs, eingefroren oder mit fehlerhafter Prüfsumme bzw. Zählung). Die empfangenden Steuergeräte verwerfen die Daten. Die Fahrdynamikregelung (ESP) wird abgeschaltet. Ursachen sind ein fehlerhafter Sensor am Modul, interne Rechenfehler, eine falsche Software- oder Kalibrierungsversion nach einer Reparatur oder Störungen auf dem Bus.'
   affected_components:
     - vehicle_dynamics_module
     - can_bus_wiring
@@ -29634,8 +29634,8 @@
     en: Invalid Data Received from Brake System Control Module
     de: Ungültige Daten vom Bremssystem-Steuergerät empfangen
   description:
-    en: 'A control module is communicating with the engine ECU but receives data that is implausible or out of range — wrong checksum, value frozen, or value outside expected limits. Typical effects include limp-home and incorrect dashboard readings.'
-    de: 'Ein Steuergerät kommuniziert mit dem Motorsteuergerät, empfängt aber unplausible oder außerhalb des Bereichs liegende Daten — falsche Checksumme, eingefrorener Wert oder Wert außerhalb der erwarteten Grenzen. Typische Folgen sind Notlauf und falsche Anzeigen im Kombiinstrument.'
+    en: 'The Brake System Control Module is present on the data bus but the values it reports are implausible — out of range, frozen, or failing the checksum or rolling-count check. The receiving modules reject the data. ABS and ESP functions are limited. Causes include a faulty sensor feeding the module, internal computation errors, a software or calibration mismatch after a repair, or bus interference corrupting the frames.'
+    de: 'Bremssystem-Steuergerät — diese Komponente ist zwar am Datenbus aktiv, liefert aber unplausible Werte (außerhalb des Bereichs, eingefroren oder mit fehlerhafter Prüfsumme bzw. Zählung). Die empfangenden Steuergeräte verwerfen die Daten. ABS- und ESP-Funktionen sind eingeschränkt. Ursachen sind ein fehlerhafter Sensor am Modul, interne Rechenfehler, eine falsche Software- oder Kalibrierungsversion nach einer Reparatur oder Störungen auf dem Bus.'
   affected_components:
     - brake_system_control_module
     - can_bus_wiring
@@ -29686,8 +29686,8 @@
     en: Invalid Data Received from Brake System Control Module
     de: Ungültige Daten vom Bremssystem-Steuergerät empfangen
   description:
-    en: 'A control module is communicating with the engine ECU but receives data that is implausible or out of range — wrong checksum, value frozen, or value outside expected limits. Typical effects include limp-home and incorrect dashboard readings.'
-    de: 'Ein Steuergerät kommuniziert mit dem Motorsteuergerät, empfängt aber unplausible oder außerhalb des Bereichs liegende Daten — falsche Checksumme, eingefrorener Wert oder Wert außerhalb der erwarteten Grenzen. Typische Folgen sind Notlauf und falsche Anzeigen im Kombiinstrument.'
+    en: 'The Brake System Control Module is present on the data bus but the values it reports are implausible — out of range, frozen, or failing the checksum or rolling-count check. The receiving modules reject the data. The redundant brake controller''s data is rejected and the brake assists are limited. Causes include a faulty sensor feeding the module, internal computation errors, a software or calibration mismatch after a repair, or bus interference corrupting the frames.'
+    de: 'Bremssystem-Steuergerät — diese Komponente ist zwar am Datenbus aktiv, liefert aber unplausible Werte (außerhalb des Bereichs, eingefroren oder mit fehlerhafter Prüfsumme bzw. Zählung). Die empfangenden Steuergeräte verwerfen die Daten. Die Daten des redundanten Bremssteuergeräts werden verworfen; die Bremsassistenten sind eingeschränkt. Ursachen sind ein fehlerhafter Sensor am Modul, interne Rechenfehler, eine falsche Software- oder Kalibrierungsversion nach einer Reparatur oder Störungen auf dem Bus.'
   affected_components:
     - abs_control_module
     - can_bus_wiring
@@ -30046,8 +30046,8 @@
     en: Invalid Data Received from Power Steering Control Module
     de: Ungültige Daten vom Servolenkungs-Steuergerät empfangen
   description:
-    en: 'A control module is communicating with the engine ECU but receives data that is implausible or out of range — wrong checksum, value frozen, or value outside expected limits. Typical effects include limp-home and incorrect dashboard readings.'
-    de: 'Ein Steuergerät kommuniziert mit dem Motorsteuergerät, empfängt aber unplausible oder außerhalb des Bereichs liegende Daten — falsche Checksumme, eingefrorener Wert oder Wert außerhalb der erwarteten Grenzen. Typische Folgen sind Notlauf und falsche Anzeigen im Kombiinstrument.'
+    en: 'The Power Steering Control Module is present on the data bus but the values it reports are implausible — out of range, frozen, or failing the checksum or rolling-count check. The receiving modules reject the data. Power-steering assist may be reduced or disabled. Causes include a faulty sensor feeding the module, internal computation errors, a software or calibration mismatch after a repair, or bus interference corrupting the frames.'
+    de: 'Servolenkungs-Steuergerät — diese Komponente ist zwar am Datenbus aktiv, liefert aber unplausible Werte (außerhalb des Bereichs, eingefroren oder mit fehlerhafter Prüfsumme bzw. Zählung). Die empfangenden Steuergeräte verwerfen die Daten. Die Servolenkungsunterstützung kann reduziert oder abgeschaltet werden. Ursachen sind ein fehlerhafter Sensor am Modul, interne Rechenfehler, eine falsche Software- oder Kalibrierungsversion nach einer Reparatur oder Störungen auf dem Bus.'
   affected_components:
     - power_steering_module
     - can_bus_wiring
@@ -30147,8 +30147,8 @@
     en: Invalid Data Received from Body Control Module
     de: Ungültige Daten vom Bordnetzsteuergerät empfangen
   description:
-    en: 'A control module is communicating with the engine ECU but receives data that is implausible or out of range — wrong checksum, value frozen, or value outside expected limits. Typical effects include limp-home and incorrect dashboard readings.'
-    de: 'Ein Steuergerät kommuniziert mit dem Motorsteuergerät, empfängt aber unplausible oder außerhalb des Bereichs liegende Daten — falsche Checksumme, eingefrorener Wert oder Wert außerhalb der erwarteten Grenzen. Typische Folgen sind Notlauf und falsche Anzeigen im Kombiinstrument.'
+    en: 'The Body Control Module is present on the data bus but the values it reports are implausible — out of range, frozen, or failing the checksum or rolling-count check. The receiving modules reject the data. Body functions such as lighting or central locking may misbehave. Causes include a faulty sensor feeding the module, internal computation errors, a software or calibration mismatch after a repair, or bus interference corrupting the frames.'
+    de: 'Bordnetzsteuergerät — diese Komponente ist zwar am Datenbus aktiv, liefert aber unplausible Werte (außerhalb des Bereichs, eingefroren oder mit fehlerhafter Prüfsumme bzw. Zählung). Die empfangenden Steuergeräte verwerfen die Daten. Karosseriefunktionen wie Beleuchtung oder Zentralverriegelung können fehlerhaft arbeiten. Ursachen sind ein fehlerhafter Sensor am Modul, interne Rechenfehler, eine falsche Software- oder Kalibrierungsversion nach einer Reparatur oder Störungen auf dem Bus.'
   affected_components:
     - body_control_module
     - can_bus_wiring
@@ -30198,8 +30198,8 @@
     en: Invalid Data Received from Information Center
     de: Ungültige Daten vom Informations-Center empfangen
   description:
-    en: 'A control module is communicating with the engine ECU but receives data that is implausible or out of range — wrong checksum, value frozen, or value outside expected limits. Typical effects include limp-home and incorrect dashboard readings.'
-    de: 'Ein Steuergerät kommuniziert mit dem Motorsteuergerät, empfängt aber unplausible oder außerhalb des Bereichs liegende Daten — falsche Checksumme, eingefrorener Wert oder Wert außerhalb der erwarteten Grenzen. Typische Folgen sind Notlauf und falsche Anzeigen im Kombiinstrument.'
+    en: 'The Information Center is present on the data bus but the values it reports are implausible — out of range, frozen, or failing the checksum or rolling-count check. The receiving modules reject the data. Driver-display content may be wrong or missing. Causes include a faulty sensor feeding the module, internal computation errors, a software or calibration mismatch after a repair, or bus interference corrupting the frames.'
+    de: 'Informations-Center — diese Komponente ist zwar am Datenbus aktiv, liefert aber unplausible Werte (außerhalb des Bereichs, eingefroren oder mit fehlerhafter Prüfsumme bzw. Zählung). Die empfangenden Steuergeräte verwerfen die Daten. Die Anzeige im Fahrerdisplay kann falsch sein oder fehlen. Ursachen sind ein fehlerhafter Sensor am Modul, interne Rechenfehler, eine falsche Software- oder Kalibrierungsversion nach einer Reparatur oder Störungen auf dem Bus.'
   affected_components:
     - information_display_module
     - can_bus_wiring
@@ -30247,8 +30247,8 @@
     en: Invalid Data Received from HVAC Control Module
     de: Ungültige Daten vom Klima-Steuergerät empfangen
   description:
-    en: 'A control module is communicating with the engine ECU but receives data that is implausible or out of range — wrong checksum, value frozen, or value outside expected limits. Typical effects include limp-home and incorrect dashboard readings.'
-    de: 'Ein Steuergerät kommuniziert mit dem Motorsteuergerät, empfängt aber unplausible oder außerhalb des Bereichs liegende Daten — falsche Checksumme, eingefrorener Wert oder Wert außerhalb der erwarteten Grenzen. Typische Folgen sind Notlauf und falsche Anzeigen im Kombiinstrument.'
+    en: 'The HVAC Control Module is present on the data bus but the values it reports are implausible — out of range, frozen, or failing the checksum or rolling-count check. The receiving modules reject the data. Automatic climate control behaves erratically. Causes include a faulty sensor feeding the module, internal computation errors, a software or calibration mismatch after a repair, or bus interference corrupting the frames.'
+    de: 'Klima-Steuergerät — diese Komponente ist zwar am Datenbus aktiv, liefert aber unplausible Werte (außerhalb des Bereichs, eingefroren oder mit fehlerhafter Prüfsumme bzw. Zählung). Die empfangenden Steuergeräte verwerfen die Daten. Die automatische Klimasteuerung verhält sich unregelmäßig. Ursachen sind ein fehlerhafter Sensor am Modul, interne Rechenfehler, eine falsche Software- oder Kalibrierungsversion nach einer Reparatur oder Störungen auf dem Bus.'
   affected_components:
     - hvac_control_module
     - can_bus_wiring
@@ -30346,8 +30346,8 @@
     en: Invalid Data Received from Vehicle Immobiliser Control Module
     de: Ungültige Daten vom Wegfahrsperren-Steuergerät empfangen
   description:
-    en: 'A control module is communicating with the engine ECU but receives data that is implausible or out of range — wrong checksum, value frozen, or value outside expected limits. Typical effects include limp-home and incorrect dashboard readings.'
-    de: 'Ein Steuergerät kommuniziert mit dem Motorsteuergerät, empfängt aber unplausible oder außerhalb des Bereichs liegende Daten — falsche Checksumme, eingefrorener Wert oder Wert außerhalb der erwarteten Grenzen. Typische Folgen sind Notlauf und falsche Anzeigen im Kombiinstrument.'
+    en: 'The Vehicle Immobiliser Control Module is present on the data bus but the values it reports are implausible — out of range, frozen, or failing the checksum or rolling-count check. The receiving modules reject the data. Start authorisation may fail. Causes include a faulty sensor feeding the module, internal computation errors, a software or calibration mismatch after a repair, or bus interference corrupting the frames.'
+    de: 'Wegfahrsperren-Steuergerät — diese Komponente ist zwar am Datenbus aktiv, liefert aber unplausible Werte (außerhalb des Bereichs, eingefroren oder mit fehlerhafter Prüfsumme bzw. Zählung). Die empfangenden Steuergeräte verwerfen die Daten. Die Startfreigabe kann ausbleiben. Ursachen sind ein fehlerhafter Sensor am Modul, interne Rechenfehler, eine falsche Software- oder Kalibrierungsversion nach einer Reparatur oder Störungen auf dem Bus.'
   affected_components:
     - immobiliser_module
     - can_bus_wiring
@@ -30445,8 +30445,8 @@
     en: Invalid Data Received from Steering Angle Sensor Module
     de: Ungültige Daten vom Lenkwinkelsensor-Modul empfangen
   description:
-    en: 'A control module is communicating with the engine ECU but receives data that is implausible or out of range — wrong checksum, value frozen, or value outside expected limits. Typical effects include limp-home and incorrect dashboard readings.'
-    de: 'Ein Steuergerät kommuniziert mit dem Motorsteuergerät, empfängt aber unplausible oder außerhalb des Bereichs liegende Daten — falsche Checksumme, eingefrorener Wert oder Wert außerhalb der erwarteten Grenzen. Typische Folgen sind Notlauf und falsche Anzeigen im Kombiinstrument.'
+    en: 'The Steering Angle Sensor Module is present on the data bus but the values it reports are implausible — out of range, frozen, or failing the checksum or rolling-count check. The receiving modules reject the data. Stability control loses a trustworthy steering-angle value and usually disables ESC. Causes include a faulty sensor feeding the module, internal computation errors, a software or calibration mismatch after a repair, or bus interference corrupting the frames.'
+    de: 'Lenkwinkelsensor-Modul — diese Komponente ist zwar am Datenbus aktiv, liefert aber unplausible Werte (außerhalb des Bereichs, eingefroren oder mit fehlerhafter Prüfsumme bzw. Zählung). Die empfangenden Steuergeräte verwerfen die Daten. Die Stabilitätsregelung erhält keinen vertrauenswürdigen Lenkwinkel und schaltet das ESP meist ab. Ursachen sind ein fehlerhafter Sensor am Modul, interne Rechenfehler, eine falsche Software- oder Kalibrierungsversion nach einer Reparatur oder Störungen auf dem Bus.'
   affected_components:
     - power_steering_module
     - steering_angle_sensor
@@ -30496,8 +30496,8 @@
     en: Invalid Data Received from Steering Wheel Angle Sensor
     de: Ungültige Daten vom Lenkwinkelsensor empfangen
   description:
-    en: 'A control module is communicating with the engine ECU but receives data that is implausible or out of range — wrong checksum, value frozen, or value outside expected limits. Typical effects include limp-home and incorrect dashboard readings.'
-    de: 'Ein Steuergerät kommuniziert mit dem Motorsteuergerät, empfängt aber unplausible oder außerhalb des Bereichs liegende Daten — falsche Checksumme, eingefrorener Wert oder Wert außerhalb der erwarteten Grenzen. Typische Folgen sind Notlauf und falsche Anzeigen im Kombiinstrument.'
+    en: 'The Steering Wheel Angle Sensor is present on the data bus but the values it reports are implausible — out of range, frozen, or failing the checksum or rolling-count check. The receiving modules reject the data. Stability control loses a trustworthy steering-angle value. Causes include a faulty sensor feeding the module, internal computation errors, a software or calibration mismatch after a repair, or bus interference corrupting the frames.'
+    de: 'Lenkwinkelsensor — diese Komponente ist zwar am Datenbus aktiv, liefert aber unplausible Werte (außerhalb des Bereichs, eingefroren oder mit fehlerhafter Prüfsumme bzw. Zählung). Die empfangenden Steuergeräte verwerfen die Daten. Die Stabilitätsregelung erhält keinen vertrauenswürdigen Lenkwinkel. Ursachen sind ein fehlerhafter Sensor am Modul, interne Rechenfehler, eine falsche Software- oder Kalibrierungsversion nach einer Reparatur oder Störungen auf dem Bus.'
   affected_components:
     - steering_angle_sensor
     - can_bus_wiring
@@ -30855,8 +30855,8 @@
     en: Invalid Data Received from Tire Pressure Monitoring Sensor
     de: Ungültige Daten vom Reifendruckkontroll-Sensor empfangen
   description:
-    en: 'A control module is communicating with the engine ECU but receives data that is implausible or out of range — wrong checksum, value frozen, or value outside expected limits. Typical effects include limp-home and incorrect dashboard readings.'
-    de: 'Ein Steuergerät kommuniziert mit dem Motorsteuergerät, empfängt aber unplausible oder außerhalb des Bereichs liegende Daten — falsche Checksumme, eingefrorener Wert oder Wert außerhalb der erwarteten Grenzen. Typische Folgen sind Notlauf und falsche Anzeigen im Kombiinstrument.'
+    en: 'The Tire Pressure Monitoring Sensor is present on the data bus but the values it reports are implausible — out of range, frozen, or failing the checksum or rolling-count check. The receiving modules reject the data. Tire-pressure readings become unreliable. Causes include a faulty sensor feeding the module, internal computation errors, a software or calibration mismatch after a repair, or bus interference corrupting the frames.'
+    de: 'Reifendruckkontroll-Sensor — diese Komponente ist zwar am Datenbus aktiv, liefert aber unplausible Werte (außerhalb des Bereichs, eingefroren oder mit fehlerhafter Prüfsumme bzw. Zählung). Die empfangenden Steuergeräte verwerfen die Daten. Die Reifendruckwerte werden unzuverlässig. Ursachen sind ein fehlerhafter Sensor am Modul, interne Rechenfehler, eine falsche Software- oder Kalibrierungsversion nach einer Reparatur oder Störungen auf dem Bus.'
   affected_components:
     - tpms_module
     - tpms_sensor
@@ -31257,8 +31257,8 @@
     en: Invalid Data Received from Park Brake Control Module
     de: Ungültige Daten vom Parkbremsen-Steuergerät empfangen
   description:
-    en: 'A control module is communicating with the engine ECU but receives data that is implausible or out of range — wrong checksum, value frozen, or value outside expected limits. Typical effects include limp-home and incorrect dashboard readings.'
-    de: 'Ein Steuergerät kommuniziert mit dem Motorsteuergerät, empfängt aber unplausible oder außerhalb des Bereichs liegende Daten — falsche Checksumme, eingefrorener Wert oder Wert außerhalb der erwarteten Grenzen. Typische Folgen sind Notlauf und falsche Anzeigen im Kombiinstrument.'
+    en: 'The Park Brake Control Module is present on the data bus but the values it reports are implausible — out of range, frozen, or failing the checksum or rolling-count check. The receiving modules reject the data. Electronic parking-brake operation may be limited. Causes include a faulty sensor feeding the module, internal computation errors, a software or calibration mismatch after a repair, or bus interference corrupting the frames.'
+    de: 'Parkbremsen-Steuergerät — diese Komponente ist zwar am Datenbus aktiv, liefert aber unplausible Werte (außerhalb des Bereichs, eingefroren oder mit fehlerhafter Prüfsumme bzw. Zählung). Die empfangenden Steuergeräte verwerfen die Daten. Die Bedienung der elektronischen Feststellbremse kann eingeschränkt sein. Ursachen sind ein fehlerhafter Sensor am Modul, interne Rechenfehler, eine falsche Software- oder Kalibrierungsversion nach einer Reparatur oder Störungen auf dem Bus.'
   affected_components:
     - park_brake_module
     - can_bus_wiring
@@ -31666,8 +31666,8 @@
     en: Invalid Data Received from Drive Motor Control Module
     de: Ungültige Daten vom Antriebsmotor-Steuergerät empfangen
   description:
-    en: 'A control module is communicating with the engine ECU but receives data that is implausible or out of range — wrong checksum, value frozen, or value outside expected limits. Typical effects include limp-home and incorrect dashboard readings.'
-    de: 'Ein Steuergerät kommuniziert mit dem Motorsteuergerät, empfängt aber unplausible oder außerhalb des Bereichs liegende Daten — falsche Checksumme, eingefrorener Wert oder Wert außerhalb der erwarteten Grenzen. Typische Folgen sind Notlauf und falsche Anzeigen im Kombiinstrument.'
+    en: 'The Drive Motor Control Module is present on the data bus but the values it reports are implausible — out of range, frozen, or failing the checksum or rolling-count check. The receiving modules reject the data. Electric-drive torque control becomes unreliable. Causes include a faulty sensor feeding the module, internal computation errors, a software or calibration mismatch after a repair, or bus interference corrupting the frames.'
+    de: 'Antriebsmotor-Steuergerät — diese Komponente ist zwar am Datenbus aktiv, liefert aber unplausible Werte (außerhalb des Bereichs, eingefroren oder mit fehlerhafter Prüfsumme bzw. Zählung). Die empfangenden Steuergeräte verwerfen die Daten. Die Momentregelung des Elektroantriebs arbeitet unzuverlässig. Ursachen sind ein fehlerhafter Sensor am Modul, interne Rechenfehler, eine falsche Software- oder Kalibrierungsversion nach einer Reparatur oder Störungen auf dem Bus.'
   affected_components:
     - drive_motor_control_module
     - can_bus_wiring
@@ -34236,8 +34236,8 @@
     en: Invalid Data Received from Driver Assistance System
     de: Ungültige Daten vom Fahrerassistenzsystem empfangen
   description:
-    en: 'A control module is communicating with the engine ECU but receives data that is implausible or out of range — wrong checksum, value frozen, or value outside expected limits. Typical effects include limp-home and incorrect dashboard readings.'
-    de: 'Ein Steuergerät kommuniziert mit dem Motorsteuergerät, empfängt aber unplausible oder außerhalb des Bereichs liegende Daten — falsche Checksumme, eingefrorener Wert oder Wert außerhalb der erwarteten Grenzen. Typische Folgen sind Notlauf und falsche Anzeigen im Kombiinstrument.'
+    en: 'The Driver Assistance System is present on the data bus but the values it reports are implausible — out of range, frozen, or failing the checksum or rolling-count check. The receiving modules reject the data. Driver-assist features such as lane keeping or adaptive cruise are disabled. Causes include a faulty sensor feeding the module, internal computation errors, a software or calibration mismatch after a repair, or bus interference corrupting the frames.'
+    de: 'Fahrerassistenzsystem — diese Komponente ist zwar am Datenbus aktiv, liefert aber unplausible Werte (außerhalb des Bereichs, eingefroren oder mit fehlerhafter Prüfsumme bzw. Zählung). Die empfangenden Steuergeräte verwerfen die Daten. Fahrerassistenz-Funktionen wie Spurhalter oder Abstandsregeltempomat werden deaktiviert. Ursachen sind ein fehlerhafter Sensor am Modul, interne Rechenfehler, eine falsche Software- oder Kalibrierungsversion nach einer Reparatur oder Störungen auf dem Bus.'
   affected_components:
     - driver_assistance_module
     - can_bus_wiring

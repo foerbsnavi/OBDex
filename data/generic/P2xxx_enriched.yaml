@@ -15710,8 +15710,8 @@
     en: Fuel Injector Group B Supply Voltage Circuit Low
     de: Kraftstoffinjektor-Gruppe B Versorgungsspannung Kreis niedrig
   description:
-    en: The supply rail to fuel injector group B is below the lower threshold — fuse, relay, or supply harness fault.
-    de: Die Versorgungsschiene der Kraftstoffinjektor-Gruppe B liegt unter der unteren Schwelle — Sicherung, Relais oder Versorgungs-Kabelbaumfehler.
+    en: 'The supply voltage feeding injector group B has dropped below the lower limit. The injectors in this group lose drive voltage and may stop firing, so the cylinders they serve run lean or cut out. Causes: a blown fuse, a failed injector supply relay, a voltage drop in the supply harness, or a poor ground or connector on the group-B supply.'
+    de: 'Die Versorgungsspannung der Injektorgruppe B ist unter den unteren Grenzwert gefallen. Die Injektoren dieser Gruppe verlieren die Ansteuerspannung und spritzen eventuell nicht mehr ein; die zugehörigen Zylinder laufen mager oder setzen aus. Ursachen: durchgebrannte Sicherung, defektes Injektor-Versorgungsrelais, Spannungsabfall im Versorgungskabelbaum oder schlechte Masse bzw. ein Steckerfehler in der Versorgung der Gruppe B.'
   affected_components:
     - fuel_injector_group_b
     - injector_supply_relay
@@ -15760,8 +15760,8 @@
     en: Fuel Injector Group B Supply Voltage Circuit High
     de: Kraftstoffinjektor-Gruppe B Versorgungsspannung Kreis hoch
   description:
-    en: Supply rail to injector group B above the upper threshold — typically a stuck-closed regulator or alternator overshoot.
-    de: Versorgungsschiene der Injektor-Gruppe B über der oberen Schwelle — meist Spannungsregler hängt zu oder Lichtmaschine schiesst über.
+    en: 'The supply voltage on injector group B is above the upper limit. Overvoltage on the group-B supply can mis-time or damage the injectors. Causes: charging-system overvoltage, a stuck supply relay or regulator, or a wiring fault shorting the group-B supply to a higher voltage.'
+    de: 'Die Versorgungsspannung der Injektorgruppe B liegt über dem oberen Grenzwert. Überspannung auf der Versorgung der Gruppe B kann die Injektoren falsch ansteuern oder beschädigen. Ursachen: Überspannung des Ladesystems, ein hängendes Versorgungsrelais bzw. ein defekter Regler oder ein Verdrahtungsfehler, der die Versorgung der Gruppe B auf eine höhere Spannung kurzschließt.'
   affected_components:
     - fuel_injector_group_b
     - voltage_regulator
@@ -15810,8 +15810,8 @@
     en: Fuel Injector Group C Supply Voltage Circuit/Open
     de: Kraftstoffinjektor-Gruppe C Versorgungsspannung Kreis/offen
   description:
-    en: 'Supply rail to injector group C is open — group C will not fire. A flow-deviating injector throws off cylinder balance — adjacent cylinders run leaner/richer to compensate, often masking the root cause until the trim limit is hit.'
-    de: 'Versorgungsschiene der Injektor-Gruppe C ist offen — Gruppe C feuert nicht. Ein abweichender Injektor stört die Zylinderbalance — Nachbarzylinder laufen kompensatorisch magerer/fetter, was die Ursache oft maskiert, bis das Trim-Limit erreicht ist.'
+    en: 'The supply rail to injector group C is open, so none of the injectors in this group can fire. The affected cylinders produce no power and the engine runs rough or on reduced cylinders. Causes: a broken supply wire, an open relay or fuse, or a disconnected group-C supply connector.'
+    de: 'Die Versorgungsleitung der Injektorgruppe C ist unterbrochen, sodass keiner der Injektoren dieser Gruppe einspritzen kann. Die betroffenen Zylinder liefern keine Leistung; der Motor läuft unrund oder nur auf den verbleibenden Zylindern. Ursachen: unterbrochene Versorgungsleitung, offenes Relais oder offene Sicherung oder ein abgezogener Versorgungsstecker der Gruppe C.'
   affected_components:
     - fuel_injector_group_c
   common_causes:
@@ -15859,8 +15859,8 @@
     en: Fuel Injector Group C Supply Voltage Circuit Low
     de: Kraftstoffinjektor-Gruppe C Versorgungsspannung Kreis niedrig
   description:
-    en: 'The supply rail to fuel injector group B is below the lower threshold — fuse, relay, or supply harness fault.'
-    de: 'Die Versorgungsschiene der Kraftstoffinjektor-Gruppe B liegt unter der unteren Schwelle — Sicherung, Relais oder Versorgungs-Kabelbaumfehler.'
+    en: 'The supply voltage feeding injector group C has dropped below the lower limit. The injectors in this group lose drive voltage and may stop firing, so the cylinders they serve run lean or cut out. Causes: a blown fuse, a failed injector supply relay, a voltage drop in the supply harness, or a poor ground or connector on the group-C supply.'
+    de: 'Die Versorgungsspannung der Injektorgruppe C ist unter den unteren Grenzwert gefallen. Die Injektoren dieser Gruppe verlieren die Ansteuerspannung und spritzen eventuell nicht mehr ein; die zugehörigen Zylinder laufen mager oder setzen aus. Ursachen: durchgebrannte Sicherung, defektes Injektor-Versorgungsrelais, Spannungsabfall im Versorgungskabelbaum oder schlechte Masse bzw. ein Steckerfehler in der Versorgung der Gruppe C.'
   affected_components:
     - fuel_injector_group_c
   common_causes:
@@ -15908,8 +15908,8 @@
     en: Fuel Injector Group C Supply Voltage Circuit High
     de: Kraftstoffinjektor-Gruppe C Versorgungsspannung Kreis hoch
   description:
-    en: 'Supply rail to injector group B above the upper threshold — typically a stuck-closed regulator or alternator overshoot.'
-    de: 'Versorgungsschiene der Injektor-Gruppe B über der oberen Schwelle — meist Spannungsregler hängt zu oder Lichtmaschine schiesst über.'
+    en: 'The supply voltage on injector group C is above the upper limit. Overvoltage on the group-C supply can mis-time or damage the injectors. Causes: charging-system overvoltage, a stuck supply relay or regulator, or a wiring fault shorting the group-C supply to a higher voltage.'
+    de: 'Die Versorgungsspannung der Injektorgruppe C liegt über dem oberen Grenzwert. Überspannung auf der Versorgung der Gruppe C kann die Injektoren falsch ansteuern oder beschädigen. Ursachen: Überspannung des Ladesystems, ein hängendes Versorgungsrelais bzw. ein defekter Regler oder ein Verdrahtungsfehler, der die Versorgung der Gruppe C auf eine höhere Spannung kurzschließt.'
   affected_components:
     - fuel_injector_group_c
   common_causes:
@@ -15957,8 +15957,8 @@
     en: Fuel Injector Group D Supply Voltage Circuit/Open
     de: Kraftstoffinjektor-Gruppe D Versorgungsspannung Kreis/offen
   description:
-    en: 'Supply rail to injector group C is open — group C will not fire. A flow-deviating injector throws off cylinder balance — adjacent cylinders run leaner/richer to compensate, often masking the root cause until the trim limit is hit.'
-    de: 'Versorgungsschiene der Injektor-Gruppe C ist offen — Gruppe C feuert nicht. Ein abweichender Injektor stört die Zylinderbalance — Nachbarzylinder laufen kompensatorisch magerer/fetter, was die Ursache oft maskiert, bis das Trim-Limit erreicht ist.'
+    en: 'The supply rail to injector group D is open, so none of the injectors in this group can fire. The affected cylinders produce no power and the engine runs rough or on reduced cylinders. Causes: a broken supply wire, an open relay or fuse, or a disconnected group-D supply connector.'
+    de: 'Die Versorgungsleitung der Injektorgruppe D ist unterbrochen, sodass keiner der Injektoren dieser Gruppe einspritzen kann. Die betroffenen Zylinder liefern keine Leistung; der Motor läuft unrund oder nur auf den verbleibenden Zylindern. Ursachen: unterbrochene Versorgungsleitung, offenes Relais oder offene Sicherung oder ein abgezogener Versorgungsstecker der Gruppe D.'
   affected_components:
     - fuel_injector_group_d
   common_causes:
@@ -16006,8 +16006,8 @@
     en: Fuel Injector Group D Supply Voltage Circuit Low
     de: Kraftstoffinjektor-Gruppe D Versorgungsspannung Kreis niedrig
   description:
-    en: 'The supply rail to fuel injector group B is below the lower threshold — fuse, relay, or supply harness fault.'
-    de: 'Die Versorgungsschiene der Kraftstoffinjektor-Gruppe B liegt unter der unteren Schwelle — Sicherung, Relais oder Versorgungs-Kabelbaumfehler.'
+    en: 'The supply voltage feeding injector group D has dropped below the lower limit. The injectors in this group lose drive voltage and may stop firing, so the cylinders they serve run lean or cut out. Causes: a blown fuse, a failed injector supply relay, a voltage drop in the supply harness, or a poor ground or connector on the group-D supply.'
+    de: 'Die Versorgungsspannung der Injektorgruppe D ist unter den unteren Grenzwert gefallen. Die Injektoren dieser Gruppe verlieren die Ansteuerspannung und spritzen eventuell nicht mehr ein; die zugehörigen Zylinder laufen mager oder setzen aus. Ursachen: durchgebrannte Sicherung, defektes Injektor-Versorgungsrelais, Spannungsabfall im Versorgungskabelbaum oder schlechte Masse bzw. ein Steckerfehler in der Versorgung der Gruppe D.'
   affected_components:
     - fuel_injector_group_d
   common_causes:
@@ -16055,8 +16055,8 @@
     en: Fuel Injector Group D Supply Voltage Circuit High
     de: Kraftstoffinjektor-Gruppe D Versorgungsspannung Kreis hoch
   description:
-    en: 'Supply rail to injector group B above the upper threshold — typically a stuck-closed regulator or alternator overshoot.'
-    de: 'Versorgungsschiene der Injektor-Gruppe B über der oberen Schwelle — meist Spannungsregler hängt zu oder Lichtmaschine schiesst über.'
+    en: 'The supply voltage on injector group D is above the upper limit. Overvoltage on the group-D supply can mis-time or damage the injectors. Causes: charging-system overvoltage, a stuck supply relay or regulator, or a wiring fault shorting the group-D supply to a higher voltage.'
+    de: 'Die Versorgungsspannung der Injektorgruppe D liegt über dem oberen Grenzwert. Überspannung auf der Versorgung der Gruppe D kann die Injektoren falsch ansteuern oder beschädigen. Ursachen: Überspannung des Ladesystems, ein hängendes Versorgungsrelais bzw. ein defekter Regler oder ein Verdrahtungsfehler, der die Versorgung der Gruppe D auf eine höhere Spannung kurzschließt.'
   affected_components:
     - fuel_injector_group_d
   common_causes:
@@ -16808,8 +16808,8 @@
     en: Fuel Injector Group E Supply Voltage Circuit/Open
     de: Kraftstoffinjektor-Gruppe E Versorgungsspannung Kreis/offen
   description:
-    en: 'Supply rail to injector group C is open — group C will not fire. A flow-deviating injector throws off cylinder balance — adjacent cylinders run leaner/richer to compensate, often masking the root cause until the trim limit is hit.'
-    de: 'Versorgungsschiene der Injektor-Gruppe C ist offen — Gruppe C feuert nicht. Ein abweichender Injektor stört die Zylinderbalance — Nachbarzylinder laufen kompensatorisch magerer/fetter, was die Ursache oft maskiert, bis das Trim-Limit erreicht ist.'
+    en: 'The supply rail to injector group E is open, so none of the injectors in this group can fire. The affected cylinders produce no power and the engine runs rough or on reduced cylinders. Causes: a broken supply wire, an open relay or fuse, or a disconnected group-E supply connector.'
+    de: 'Die Versorgungsleitung der Injektorgruppe E ist unterbrochen, sodass keiner der Injektoren dieser Gruppe einspritzen kann. Die betroffenen Zylinder liefern keine Leistung; der Motor läuft unrund oder nur auf den verbleibenden Zylindern. Ursachen: unterbrochene Versorgungsleitung, offenes Relais oder offene Sicherung oder ein abgezogener Versorgungsstecker der Gruppe E.'
   affected_components:
     - fuel_injector_group_e
   common_causes:
@@ -16857,8 +16857,8 @@
     en: Fuel Injector Group E Supply Voltage Circuit Low
     de: Kraftstoffinjektor-Gruppe E Versorgungsspannung Kreis niedrig
   description:
-    en: 'The supply rail to fuel injector group B is below the lower threshold — fuse, relay, or supply harness fault.'
-    de: 'Die Versorgungsschiene der Kraftstoffinjektor-Gruppe B liegt unter der unteren Schwelle — Sicherung, Relais oder Versorgungs-Kabelbaumfehler.'
+    en: 'The supply voltage feeding injector group E has dropped below the lower limit. The injectors in this group lose drive voltage and may stop firing, so the cylinders they serve run lean or cut out. Causes: a blown fuse, a failed injector supply relay, a voltage drop in the supply harness, or a poor ground or connector on the group-E supply.'
+    de: 'Die Versorgungsspannung der Injektorgruppe E ist unter den unteren Grenzwert gefallen. Die Injektoren dieser Gruppe verlieren die Ansteuerspannung und spritzen eventuell nicht mehr ein; die zugehörigen Zylinder laufen mager oder setzen aus. Ursachen: durchgebrannte Sicherung, defektes Injektor-Versorgungsrelais, Spannungsabfall im Versorgungskabelbaum oder schlechte Masse bzw. ein Steckerfehler in der Versorgung der Gruppe E.'
   affected_components:
     - fuel_injector_group_e
   common_causes:
@@ -16906,8 +16906,8 @@
     en: Fuel Injector Group E Supply Voltage Circuit High
     de: Kraftstoffinjektor-Gruppe E Versorgungsspannung Kreis hoch
   description:
-    en: 'Supply rail to injector group B above the upper threshold — typically a stuck-closed regulator or alternator overshoot.'
-    de: 'Versorgungsschiene der Injektor-Gruppe B über der oberen Schwelle — meist Spannungsregler hängt zu oder Lichtmaschine schiesst über.'
+    en: 'The supply voltage on injector group E is above the upper limit. Overvoltage on the group-E supply can mis-time or damage the injectors. Causes: charging-system overvoltage, a stuck supply relay or regulator, or a wiring fault shorting the group-E supply to a higher voltage.'
+    de: 'Die Versorgungsspannung der Injektorgruppe E liegt über dem oberen Grenzwert. Überspannung auf der Versorgung der Gruppe E kann die Injektoren falsch ansteuern oder beschädigen. Ursachen: Überspannung des Ladesystems, ein hängendes Versorgungsrelais bzw. ein defekter Regler oder ein Verdrahtungsfehler, der die Versorgung der Gruppe E auf eine höhere Spannung kurzschließt.'
   affected_components:
     - fuel_injector_group_e
   common_causes:
@@ -16955,8 +16955,8 @@
     en: Fuel Injector Group F Supply Voltage Circuit/Open
     de: Kraftstoffinjektor-Gruppe F Versorgungsspannung Kreis/offen
   description:
-    en: 'Supply rail to injector group C is open — group C will not fire. A flow-deviating injector throws off cylinder balance — adjacent cylinders run leaner/richer to compensate, often masking the root cause until the trim limit is hit.'
-    de: 'Versorgungsschiene der Injektor-Gruppe C ist offen — Gruppe C feuert nicht. Ein abweichender Injektor stört die Zylinderbalance — Nachbarzylinder laufen kompensatorisch magerer/fetter, was die Ursache oft maskiert, bis das Trim-Limit erreicht ist.'
+    en: 'The supply rail to injector group F is open, so none of the injectors in this group can fire. The affected cylinders produce no power and the engine runs rough or on reduced cylinders. Causes: a broken supply wire, an open relay or fuse, or a disconnected group-F supply connector.'
+    de: 'Die Versorgungsleitung der Injektorgruppe F ist unterbrochen, sodass keiner der Injektoren dieser Gruppe einspritzen kann. Die betroffenen Zylinder liefern keine Leistung; der Motor läuft unrund oder nur auf den verbleibenden Zylindern. Ursachen: unterbrochene Versorgungsleitung, offenes Relais oder offene Sicherung oder ein abgezogener Versorgungsstecker der Gruppe F.'
   affected_components:
     - fuel_injector_group_f
   common_causes:
@@ -17004,8 +17004,8 @@
     en: Fuel Injector Group F Supply Voltage Circuit Low
     de: Kraftstoffinjektor-Gruppe F Versorgungsspannung Kreis niedrig
   description:
-    en: 'The supply rail to fuel injector group B is below the lower threshold — fuse, relay, or supply harness fault.'
-    de: 'Die Versorgungsschiene der Kraftstoffinjektor-Gruppe B liegt unter der unteren Schwelle — Sicherung, Relais oder Versorgungs-Kabelbaumfehler.'
+    en: 'The supply voltage feeding injector group F has dropped below the lower limit. The injectors in this group lose drive voltage and may stop firing, so the cylinders they serve run lean or cut out. Causes: a blown fuse, a failed injector supply relay, a voltage drop in the supply harness, or a poor ground or connector on the group-F supply.'
+    de: 'Die Versorgungsspannung der Injektorgruppe F ist unter den unteren Grenzwert gefallen. Die Injektoren dieser Gruppe verlieren die Ansteuerspannung und spritzen eventuell nicht mehr ein; die zugehörigen Zylinder laufen mager oder setzen aus. Ursachen: durchgebrannte Sicherung, defektes Injektor-Versorgungsrelais, Spannungsabfall im Versorgungskabelbaum oder schlechte Masse bzw. ein Steckerfehler in der Versorgung der Gruppe F.'
   affected_components:
     - fuel_injector_group_f
   common_causes:
@@ -17053,8 +17053,8 @@
     en: Fuel Injector Group F Supply Voltage Circuit High
     de: Kraftstoffinjektor-Gruppe F Versorgungsspannung Kreis hoch
   description:
-    en: 'Supply rail to injector group B above the upper threshold — typically a stuck-closed regulator or alternator overshoot.'
-    de: 'Versorgungsschiene der Injektor-Gruppe B über der oberen Schwelle — meist Spannungsregler hängt zu oder Lichtmaschine schiesst über.'
+    en: 'The supply voltage on injector group F is above the upper limit. Overvoltage on the group-F supply can mis-time or damage the injectors. Causes: charging-system overvoltage, a stuck supply relay or regulator, or a wiring fault shorting the group-F supply to a higher voltage.'
+    de: 'Die Versorgungsspannung der Injektorgruppe F liegt über dem oberen Grenzwert. Überspannung auf der Versorgung der Gruppe F kann die Injektoren falsch ansteuern oder beschädigen. Ursachen: Überspannung des Ladesystems, ein hängendes Versorgungsrelais bzw. ein defekter Regler oder ein Verdrahtungsfehler, der die Versorgung der Gruppe F auf eine höhere Spannung kurzschließt.'
   affected_components:
     - fuel_injector_group_f
   common_causes:
@@ -17558,8 +17558,8 @@
     en: Fuel Injector Group G Supply Voltage Circuit/Open
     de: Kraftstoffinjektor-Gruppe G Versorgungsspannung Kreis/offen
   description:
-    en: 'Supply rail to injector group C is open — group C will not fire. A flow-deviating injector throws off cylinder balance — adjacent cylinders run leaner/richer to compensate, often masking the root cause until the trim limit is hit.'
-    de: 'Versorgungsschiene der Injektor-Gruppe C ist offen — Gruppe C feuert nicht. Ein abweichender Injektor stört die Zylinderbalance — Nachbarzylinder laufen kompensatorisch magerer/fetter, was die Ursache oft maskiert, bis das Trim-Limit erreicht ist.'
+    en: 'The supply rail to injector group G is open, so none of the injectors in this group can fire. The affected cylinders produce no power and the engine runs rough or on reduced cylinders. Causes: a broken supply wire, an open relay or fuse, or a disconnected group-G supply connector.'
+    de: 'Die Versorgungsleitung der Injektorgruppe G ist unterbrochen, sodass keiner der Injektoren dieser Gruppe einspritzen kann. Die betroffenen Zylinder liefern keine Leistung; der Motor läuft unrund oder nur auf den verbleibenden Zylindern. Ursachen: unterbrochene Versorgungsleitung, offenes Relais oder offene Sicherung oder ein abgezogener Versorgungsstecker der Gruppe G.'
   affected_components:
     - fuel_injector_group_g
   common_causes:
@@ -17607,8 +17607,8 @@
     en: Fuel Injector Group G Supply Voltage Circuit Low
     de: Kraftstoffinjektor-Gruppe G Versorgungsspannung Kreis niedrig
   description:
-    en: 'The supply rail to fuel injector group B is below the lower threshold — fuse, relay, or supply harness fault.'
-    de: 'Die Versorgungsschiene der Kraftstoffinjektor-Gruppe B liegt unter der unteren Schwelle — Sicherung, Relais oder Versorgungs-Kabelbaumfehler.'
+    en: 'The supply voltage feeding injector group G has dropped below the lower limit. The injectors in this group lose drive voltage and may stop firing, so the cylinders they serve run lean or cut out. Causes: a blown fuse, a failed injector supply relay, a voltage drop in the supply harness, or a poor ground or connector on the group-G supply.'
+    de: 'Die Versorgungsspannung der Injektorgruppe G ist unter den unteren Grenzwert gefallen. Die Injektoren dieser Gruppe verlieren die Ansteuerspannung und spritzen eventuell nicht mehr ein; die zugehörigen Zylinder laufen mager oder setzen aus. Ursachen: durchgebrannte Sicherung, defektes Injektor-Versorgungsrelais, Spannungsabfall im Versorgungskabelbaum oder schlechte Masse bzw. ein Steckerfehler in der Versorgung der Gruppe G.'
   affected_components:
     - fuel_injector_group_g
   common_causes:
@@ -17656,8 +17656,8 @@
     en: Fuel Injector Group G Supply Voltage Circuit High
     de: Kraftstoffinjektor-Gruppe G Versorgungsspannung Kreis hoch
   description:
-    en: 'Supply rail to injector group B above the upper threshold — typically a stuck-closed regulator or alternator overshoot.'
-    de: 'Versorgungsschiene der Injektor-Gruppe B über der oberen Schwelle — meist Spannungsregler hängt zu oder Lichtmaschine schiesst über.'
+    en: 'The supply voltage on injector group G is above the upper limit. Overvoltage on the group-G supply can mis-time or damage the injectors. Causes: charging-system overvoltage, a stuck supply relay or regulator, or a wiring fault shorting the group-G supply to a higher voltage.'
+    de: 'Die Versorgungsspannung der Injektorgruppe G liegt über dem oberen Grenzwert. Überspannung auf der Versorgung der Gruppe G kann die Injektoren falsch ansteuern oder beschädigen. Ursachen: Überspannung des Ladesystems, ein hängendes Versorgungsrelais bzw. ein defekter Regler oder ein Verdrahtungsfehler, der die Versorgung der Gruppe G auf eine höhere Spannung kurzschließt.'
   affected_components:
     - fuel_injector_group_g
   common_causes:
@@ -17705,8 +17705,8 @@
     en: Fuel Injector Group H Supply Voltage Circuit/Open
     de: Kraftstoffinjektor-Gruppe H Versorgungsspannung Kreis/offen
   description:
-    en: 'Supply rail to injector group C is open — group C will not fire. A flow-deviating injector throws off cylinder balance — adjacent cylinders run leaner/richer to compensate, often masking the root cause until the trim limit is hit.'
-    de: 'Versorgungsschiene der Injektor-Gruppe C ist offen — Gruppe C feuert nicht. Ein abweichender Injektor stört die Zylinderbalance — Nachbarzylinder laufen kompensatorisch magerer/fetter, was die Ursache oft maskiert, bis das Trim-Limit erreicht ist.'
+    en: 'The supply rail to injector group H is open, so none of the injectors in this group can fire. The affected cylinders produce no power and the engine runs rough or on reduced cylinders. Causes: a broken supply wire, an open relay or fuse, or a disconnected group-H supply connector.'
+    de: 'Die Versorgungsleitung der Injektorgruppe H ist unterbrochen, sodass keiner der Injektoren dieser Gruppe einspritzen kann. Die betroffenen Zylinder liefern keine Leistung; der Motor läuft unrund oder nur auf den verbleibenden Zylindern. Ursachen: unterbrochene Versorgungsleitung, offenes Relais oder offene Sicherung oder ein abgezogener Versorgungsstecker der Gruppe H.'
   affected_components:
     - fuel_injector_group_h
   common_causes:
@@ -17754,8 +17754,8 @@
     en: Fuel Injector Group H Supply Voltage Circuit Low
     de: Kraftstoffinjektor-Gruppe H Versorgungsspannung Kreis niedrig
   description:
-    en: 'The supply rail to fuel injector group B is below the lower threshold — fuse, relay, or supply harness fault.'
-    de: 'Die Versorgungsschiene der Kraftstoffinjektor-Gruppe B liegt unter der unteren Schwelle — Sicherung, Relais oder Versorgungs-Kabelbaumfehler.'
+    en: 'The supply voltage feeding injector group H has dropped below the lower limit. The injectors in this group lose drive voltage and may stop firing, so the cylinders they serve run lean or cut out. Causes: a blown fuse, a failed injector supply relay, a voltage drop in the supply harness, or a poor ground or connector on the group-H supply.'
+    de: 'Die Versorgungsspannung der Injektorgruppe H ist unter den unteren Grenzwert gefallen. Die Injektoren dieser Gruppe verlieren die Ansteuerspannung und spritzen eventuell nicht mehr ein; die zugehörigen Zylinder laufen mager oder setzen aus. Ursachen: durchgebrannte Sicherung, defektes Injektor-Versorgungsrelais, Spannungsabfall im Versorgungskabelbaum oder schlechte Masse bzw. ein Steckerfehler in der Versorgung der Gruppe H.'
   affected_components:
     - fuel_injector_group_h
   common_causes:
@@ -17803,8 +17803,8 @@
     en: Fuel Injector Group H Supply Voltage Circuit High
     de: Kraftstoffinjektor-Gruppe H Versorgungsspannung Kreis hoch
   description:
-    en: 'Supply rail to injector group B above the upper threshold — typically a stuck-closed regulator or alternator overshoot.'
-    de: 'Versorgungsschiene der Injektor-Gruppe B über der oberen Schwelle — meist Spannungsregler hängt zu oder Lichtmaschine schiesst über.'
+    en: 'The supply voltage on injector group H is above the upper limit. Overvoltage on the group-H supply can mis-time or damage the injectors. Causes: charging-system overvoltage, a stuck supply relay or regulator, or a wiring fault shorting the group-H supply to a higher voltage.'
+    de: 'Die Versorgungsspannung der Injektorgruppe H liegt über dem oberen Grenzwert. Überspannung auf der Versorgung der Gruppe H kann die Injektoren falsch ansteuern oder beschädigen. Ursachen: Überspannung des Ladesystems, ein hängendes Versorgungsrelais bzw. ein defekter Regler oder ein Verdrahtungsfehler, der die Versorgung der Gruppe H auf eine höhere Spannung kurzschließt.'
   affected_components:
     - fuel_injector_group_h
   common_causes:
@@ -34794,8 +34794,8 @@
     en: Ignition Coil A Primary Control Circuit Low
     de: Zuendspule A Primaer-Steuerkreis niedrig
   description:
-    en: The ECU reads a primary-side control voltage of ignition coil A below the expected level. The coil cannot store sufficient energy to fire the spark plug; misfire on cylinder 1 typically follows.
-    de: Die Motorsteuerung liest auf der Primaerseite der Zuendspule A eine Steuerspannung unterhalb des erwarteten Werts. Die Spule kann nicht genug Energie zur Zuendung speichern; in der Folge tritt typisch ein Aussetzer an Zylinder 1 auf.
+    en: 'The primary control circuit of ignition coil A reads a voltage below the expected level — usually a short to ground on the primary driver wire or a low-resistance fault in the coil primary winding. Coil A cannot build a normal charge, so the cylinder it fires misfires, especially under load. Causes: short to ground in the primary wiring, an internal coil primary fault, or a faulty ECU/igniter driver.'
+    de: 'Der Primär-Steuerkreis der Zündspule A liegt unter dem erwarteten Spannungswert — meist Masseschluss an der Primär-Steuerleitung oder ein niederohmiger Fehler in der Primärwicklung. Spule A kann keine normale Ladung aufbauen, der zugehörige Zylinder setzt aus, besonders unter Last. Ursachen: Masseschluss in der Primärverkabelung, interner Fehler der Primärwicklung oder eine defekte Endstufe im Steuergerät/Zündmodul.'
   affected_components:
     - ignition_coil
     - coil_driver
@@ -34837,8 +34837,8 @@
     en: Ignition Coil A Primary Control Circuit High
     de: Zuendspule A Primaer-Steuerkreis hoch
   description:
-    en: Voltage on the primary control of ignition coil A is above the expected limit. Often a short to battery voltage on the primary wire or an open in the coil.
-    de: Die Spannung auf der Primaeransteuerung der Zuendspule A liegt oberhalb des Grenzwerts. Haeufig Kurzschluss gegen Batteriespannung auf der Primaerleitung oder Unterbrechung in der Spule.
+    en: 'The primary control circuit of ignition coil A reads a voltage above the expected level — typically an open primary circuit or a short to battery voltage on the primary control wire. The ECU sees no normal current flow, coil A does not fire, and the cylinder misfires. Causes: an open or disconnected primary wire, an internal open in the coil, or a faulty ECU driver.'
+    de: 'Der Primär-Steuerkreis der Zündspule A liegt über dem erwarteten Spannungswert — typischerweise eine Unterbrechung im Primärkreis oder ein Kurzschluss gegen Batteriespannung an der Primär-Steuerleitung. Das Steuergerät erkennt keinen normalen Stromfluss, Spule A zündet nicht, der Zylinder setzt aus. Ursachen: unterbrochene oder abgesteckte Primärleitung, interne Unterbrechung in der Spule oder eine defekte Endstufe im Steuergerät.'
   affected_components:
     - ignition_coil
     - coil_driver
@@ -34880,8 +34880,8 @@
     en: Ignition Coil A Secondary Circuit
     de: Zuendspule A Sekundaerkreis
   description:
-    en: The ECU detects a fault on the secondary side of ignition coil A. The high-voltage spark output is missing or insufficient, leading to misfire on the affected cylinder.
-    de: Die Motorsteuerung erkennt einen Fehler auf der Sekundaerseite der Zuendspule A. Der Hochspannungs-Zuendfunken fehlt oder ist unzureichend, was an dem betroffenen Zylinder zu Aussetzern fuehrt.
+    en: 'A fault is detected on the secondary (high-voltage) side of ignition coil A. The spark delivered to the plug is missing or too weak, causing a misfire on the cylinder served by coil A. Causes: a worn spark plug or wide gap, a cracked coil or boot, carbon tracking, or an open or leaking secondary winding.'
+    de: 'Auf der Sekundärseite (Hochspannung) der Zündspule A wird ein Fehler erkannt. Der an die Kerze gelieferte Zündfunke fehlt oder ist zu schwach, der von Spule A versorgte Zylinder setzt aus. Ursachen: verschlissene Zündkerze oder zu großer Elektrodenabstand, gerissene Spule oder gerissener Kerzenschacht, Kriechströme oder eine unterbrochene bzw. durchschlagende Sekundärwicklung.'
   affected_components:
     - ignition_coil
     - spark_plug
@@ -35541,8 +35541,8 @@
     en: Ignition Coil E Primary Control Circuit Low
     de: Zündspule E Primärsteuerkreis - niedrig
   description:
-    en: 'The ECU reads a primary-side control voltage of ignition coil A below the expected level. The coil cannot store sufficient energy to fire the spark plug; misfire on cylinder 1 typically follows.'
-    de: 'Die Motorsteuerung liest auf der Primaerseite der Zuendspule A eine Steuerspannung unterhalb des erwarteten Werts. Die Spule kann nicht genug Energie zur Zuendung speichern; in der Folge tritt typisch ein Aussetzer an Zylinder 1 auf.'
+    en: 'The primary control circuit of ignition coil E reads a voltage below the expected level — usually a short to ground on the primary driver wire or a low-resistance fault in the coil primary winding. Coil E cannot build a normal charge, so the cylinder it fires misfires, especially under load. Causes: short to ground in the primary wiring, an internal coil primary fault, or a faulty ECU/igniter driver.'
+    de: 'Der Primär-Steuerkreis der Zündspule E liegt unter dem erwarteten Spannungswert — meist Masseschluss an der Primär-Steuerleitung oder ein niederohmiger Fehler in der Primärwicklung. Spule E kann keine normale Ladung aufbauen, der zugehörige Zylinder setzt aus, besonders unter Last. Ursachen: Masseschluss in der Primärverkabelung, interner Fehler der Primärwicklung oder eine defekte Endstufe im Steuergerät/Zündmodul.'
   affected_components:
     - ignition_coil_e
     - ignition_coil_wiring_e
@@ -35582,8 +35582,8 @@
     en: Ignition Coil E Primary Control Circuit High
     de: Zündspule E Primärsteuerkreis - hoch
   description:
-    en: 'Voltage on the primary control of ignition coil A is above the expected limit. Often a short to battery voltage on the primary wire or an open in the coil.'
-    de: 'Die Spannung auf der Primaeransteuerung der Zuendspule A liegt oberhalb des Grenzwerts. Haeufig Kurzschluss gegen Batteriespannung auf der Primaerleitung oder Unterbrechung in der Spule.'
+    en: 'The primary control circuit of ignition coil E reads a voltage above the expected level — typically an open primary circuit or a short to battery voltage on the primary control wire. The ECU sees no normal current flow, coil E does not fire, and the cylinder misfires. Causes: an open or disconnected primary wire, an internal open in the coil, or a faulty ECU driver.'
+    de: 'Der Primär-Steuerkreis der Zündspule E liegt über dem erwarteten Spannungswert — typischerweise eine Unterbrechung im Primärkreis oder ein Kurzschluss gegen Batteriespannung an der Primär-Steuerleitung. Das Steuergerät erkennt keinen normalen Stromfluss, Spule E zündet nicht, der Zylinder setzt aus. Ursachen: unterbrochene oder abgesteckte Primärleitung, interne Unterbrechung in der Spule oder eine defekte Endstufe im Steuergerät.'
   affected_components:
     - ignition_coil_e
     - ignition_coil_wiring_e
@@ -35623,8 +35623,8 @@
     en: Ignition Coil E Secondary Circuit
     de: Zündspule E Sekundärkreis
   description:
-    en: 'The ECU detects a fault on the secondary side of ignition coil A. The high-voltage spark output is missing or insufficient, leading to misfire on the affected cylinder.'
-    de: 'Die Motorsteuerung erkennt einen Fehler auf der Sekundaerseite der Zuendspule A. Der Hochspannungs-Zuendfunken fehlt oder ist unzureichend, was an dem betroffenen Zylinder zu Aussetzern fuehrt.'
+    en: 'A fault is detected on the secondary (high-voltage) side of ignition coil E. The spark delivered to the plug is missing or too weak, causing a misfire on the cylinder served by coil E. Causes: a worn spark plug or wide gap, a cracked coil or boot, carbon tracking, or an open or leaking secondary winding.'
+    de: 'Auf der Sekundärseite (Hochspannung) der Zündspule E wird ein Fehler erkannt. Der an die Kerze gelieferte Zündfunke fehlt oder ist zu schwach, der von Spule E versorgte Zylinder setzt aus. Ursachen: verschlissene Zündkerze oder zu großer Elektrodenabstand, gerissene Spule oder gerissener Kerzenschacht, Kriechströme oder eine unterbrochene bzw. durchschlagende Sekundärwicklung.'
   affected_components:
     - ignition_coil_e
     - spark_plug_cyl_e
@@ -35665,8 +35665,8 @@
     en: Ignition Coil F Primary Control Circuit Low
     de: Zündspule F Primärsteuerkreis - niedrig
   description:
-    en: 'The ECU reads a primary-side control voltage of ignition coil A below the expected level. The coil cannot store sufficient energy to fire the spark plug; misfire on cylinder 1 typically follows.'
-    de: 'Die Motorsteuerung liest auf der Primaerseite der Zuendspule A eine Steuerspannung unterhalb des erwarteten Werts. Die Spule kann nicht genug Energie zur Zuendung speichern; in der Folge tritt typisch ein Aussetzer an Zylinder 1 auf.'
+    en: 'The primary control circuit of ignition coil F reads a voltage below the expected level — usually a short to ground on the primary driver wire or a low-resistance fault in the coil primary winding. Coil F cannot build a normal charge, so the cylinder it fires misfires, especially under load. Causes: short to ground in the primary wiring, an internal coil primary fault, or a faulty ECU/igniter driver.'
+    de: 'Der Primär-Steuerkreis der Zündspule F liegt unter dem erwarteten Spannungswert — meist Masseschluss an der Primär-Steuerleitung oder ein niederohmiger Fehler in der Primärwicklung. Spule F kann keine normale Ladung aufbauen, der zugehörige Zylinder setzt aus, besonders unter Last. Ursachen: Masseschluss in der Primärverkabelung, interner Fehler der Primärwicklung oder eine defekte Endstufe im Steuergerät/Zündmodul.'
   affected_components:
     - ignition_coil_f
     - ignition_coil_wiring_f
@@ -35706,8 +35706,8 @@
     en: Ignition Coil F Primary Control Circuit High
     de: Zündspule F Primärsteuerkreis - hoch
   description:
-    en: 'Voltage on the primary control of ignition coil A is above the expected limit. Often a short to battery voltage on the primary wire or an open in the coil.'
-    de: 'Die Spannung auf der Primaeransteuerung der Zuendspule A liegt oberhalb des Grenzwerts. Haeufig Kurzschluss gegen Batteriespannung auf der Primaerleitung oder Unterbrechung in der Spule.'
+    en: 'The primary control circuit of ignition coil F reads a voltage above the expected level — typically an open primary circuit or a short to battery voltage on the primary control wire. The ECU sees no normal current flow, coil F does not fire, and the cylinder misfires. Causes: an open or disconnected primary wire, an internal open in the coil, or a faulty ECU driver.'
+    de: 'Der Primär-Steuerkreis der Zündspule F liegt über dem erwarteten Spannungswert — typischerweise eine Unterbrechung im Primärkreis oder ein Kurzschluss gegen Batteriespannung an der Primär-Steuerleitung. Das Steuergerät erkennt keinen normalen Stromfluss, Spule F zündet nicht, der Zylinder setzt aus. Ursachen: unterbrochene oder abgesteckte Primärleitung, interne Unterbrechung in der Spule oder eine defekte Endstufe im Steuergerät.'
   affected_components:
     - ignition_coil_f
     - ignition_coil_wiring_f
@@ -35747,8 +35747,8 @@
     en: Ignition Coil F Secondary Circuit
     de: Zündspule F Sekundärkreis
   description:
-    en: 'The ECU detects a fault on the secondary side of ignition coil A. The high-voltage spark output is missing or insufficient, leading to misfire on the affected cylinder.'
-    de: 'Die Motorsteuerung erkennt einen Fehler auf der Sekundaerseite der Zuendspule A. Der Hochspannungs-Zuendfunken fehlt oder ist unzureichend, was an dem betroffenen Zylinder zu Aussetzern fuehrt.'
+    en: 'A fault is detected on the secondary (high-voltage) side of ignition coil F. The spark delivered to the plug is missing or too weak, causing a misfire on the cylinder served by coil F. Causes: a worn spark plug or wide gap, a cracked coil or boot, carbon tracking, or an open or leaking secondary winding.'
+    de: 'Auf der Sekundärseite (Hochspannung) der Zündspule F wird ein Fehler erkannt. Der an die Kerze gelieferte Zündfunke fehlt oder ist zu schwach, der von Spule F versorgte Zylinder setzt aus. Ursachen: verschlissene Zündkerze oder zu großer Elektrodenabstand, gerissene Spule oder gerissener Kerzenschacht, Kriechströme oder eine unterbrochene bzw. durchschlagende Sekundärwicklung.'
   affected_components:
     - ignition_coil_f
     - spark_plug_cyl_f
@@ -35783,8 +35783,8 @@
     en: Ignition Coil G Primary Control Circuit Low
     de: Zündspule G Primärsteuerkreis - niedrig
   description:
-    en: 'The ECU reads a primary-side control voltage of ignition coil A below the expected level. The coil cannot store sufficient energy to fire the spark plug; misfire on cylinder 1 typically follows.'
-    de: 'Die Motorsteuerung liest auf der Primaerseite der Zuendspule A eine Steuerspannung unterhalb des erwarteten Werts. Die Spule kann nicht genug Energie zur Zuendung speichern; in der Folge tritt typisch ein Aussetzer an Zylinder 1 auf.'
+    en: 'The primary control circuit of ignition coil G reads a voltage below the expected level — usually a short to ground on the primary driver wire or a low-resistance fault in the coil primary winding. Coil G cannot build a normal charge, so the cylinder it fires misfires, especially under load. Causes: short to ground in the primary wiring, an internal coil primary fault, or a faulty ECU/igniter driver.'
+    de: 'Der Primär-Steuerkreis der Zündspule G liegt unter dem erwarteten Spannungswert — meist Masseschluss an der Primär-Steuerleitung oder ein niederohmiger Fehler in der Primärwicklung. Spule G kann keine normale Ladung aufbauen, der zugehörige Zylinder setzt aus, besonders unter Last. Ursachen: Masseschluss in der Primärverkabelung, interner Fehler der Primärwicklung oder eine defekte Endstufe im Steuergerät/Zündmodul.'
   affected_components:
     - ignition_coil_g
     - ignition_coil_wiring_g
@@ -35824,8 +35824,8 @@
     en: Ignition Coil G Primary Control Circuit High
     de: Zündspule G Primärsteuerkreis - hoch
   description:
-    en: 'Voltage on the primary control of ignition coil A is above the expected limit. Often a short to battery voltage on the primary wire or an open in the coil.'
-    de: 'Die Spannung auf der Primaeransteuerung der Zuendspule A liegt oberhalb des Grenzwerts. Haeufig Kurzschluss gegen Batteriespannung auf der Primaerleitung oder Unterbrechung in der Spule.'
+    en: 'The primary control circuit of ignition coil G reads a voltage above the expected level — typically an open primary circuit or a short to battery voltage on the primary control wire. The ECU sees no normal current flow, coil G does not fire, and the cylinder misfires. Causes: an open or disconnected primary wire, an internal open in the coil, or a faulty ECU driver.'
+    de: 'Der Primär-Steuerkreis der Zündspule G liegt über dem erwarteten Spannungswert — typischerweise eine Unterbrechung im Primärkreis oder ein Kurzschluss gegen Batteriespannung an der Primär-Steuerleitung. Das Steuergerät erkennt keinen normalen Stromfluss, Spule G zündet nicht, der Zylinder setzt aus. Ursachen: unterbrochene oder abgesteckte Primärleitung, interne Unterbrechung in der Spule oder eine defekte Endstufe im Steuergerät.'
   affected_components:
     - ignition_coil_g
     - ignition_coil_wiring_g
@@ -36093,8 +36093,8 @@
     en: Ignition Coil G Secondary Circuit
     de: Zündspule G Sekundärkreis
   description:
-    en: 'The ECU detects a fault on the secondary side of ignition coil A. The high-voltage spark output is missing or insufficient, leading to misfire on the affected cylinder.'
-    de: 'Die Motorsteuerung erkennt einen Fehler auf der Sekundaerseite der Zuendspule A. Der Hochspannungs-Zuendfunken fehlt oder ist unzureichend, was an dem betroffenen Zylinder zu Aussetzern fuehrt.'
+    en: 'A fault is detected on the secondary (high-voltage) side of ignition coil G. The spark delivered to the plug is missing or too weak, causing a misfire on the cylinder served by coil G. Causes: a worn spark plug or wide gap, a cracked coil or boot, carbon tracking, or an open or leaking secondary winding.'
+    de: 'Auf der Sekundärseite (Hochspannung) der Zündspule G wird ein Fehler erkannt. Der an die Kerze gelieferte Zündfunke fehlt oder ist zu schwach, der von Spule G versorgte Zylinder setzt aus. Ursachen: verschlissene Zündkerze oder zu großer Elektrodenabstand, gerissene Spule oder gerissener Kerzenschacht, Kriechströme oder eine unterbrochene bzw. durchschlagende Sekundärwicklung.'
   affected_components:
     - ignition_coil_g
     - spark_plug_cyl_g
@@ -36129,8 +36129,8 @@
     en: Ignition Coil H Primary Control Circuit Low
     de: Zündspule H Primärsteuerkreis - niedrig
   description:
-    en: 'The ECU reads a primary-side control voltage of ignition coil A below the expected level. The coil cannot store sufficient energy to fire the spark plug; misfire on cylinder 1 typically follows.'
-    de: 'Die Motorsteuerung liest auf der Primaerseite der Zuendspule A eine Steuerspannung unterhalb des erwarteten Werts. Die Spule kann nicht genug Energie zur Zuendung speichern; in der Folge tritt typisch ein Aussetzer an Zylinder 1 auf.'
+    en: 'The primary control circuit of ignition coil H reads a voltage below the expected level — usually a short to ground on the primary driver wire or a low-resistance fault in the coil primary winding. Coil H cannot build a normal charge, so the cylinder it fires misfires, especially under load. Causes: short to ground in the primary wiring, an internal coil primary fault, or a faulty ECU/igniter driver.'
+    de: 'Der Primär-Steuerkreis der Zündspule H liegt unter dem erwarteten Spannungswert — meist Masseschluss an der Primär-Steuerleitung oder ein niederohmiger Fehler in der Primärwicklung. Spule H kann keine normale Ladung aufbauen, der zugehörige Zylinder setzt aus, besonders unter Last. Ursachen: Masseschluss in der Primärverkabelung, interner Fehler der Primärwicklung oder eine defekte Endstufe im Steuergerät/Zündmodul.'
   affected_components:
     - ignition_coil_h
     - ignition_coil_wiring_h
@@ -36170,8 +36170,8 @@
     en: Ignition Coil H Primary Control Circuit High
     de: Zündspule H Primärsteuerkreis - hoch
   description:
-    en: 'Voltage on the primary control of ignition coil A is above the expected limit. Often a short to battery voltage on the primary wire or an open in the coil.'
-    de: 'Die Spannung auf der Primaeransteuerung der Zuendspule A liegt oberhalb des Grenzwerts. Haeufig Kurzschluss gegen Batteriespannung auf der Primaerleitung oder Unterbrechung in der Spule.'
+    en: 'The primary control circuit of ignition coil H reads a voltage above the expected level — typically an open primary circuit or a short to battery voltage on the primary control wire. The ECU sees no normal current flow, coil H does not fire, and the cylinder misfires. Causes: an open or disconnected primary wire, an internal open in the coil, or a faulty ECU driver.'
+    de: 'Der Primär-Steuerkreis der Zündspule H liegt über dem erwarteten Spannungswert — typischerweise eine Unterbrechung im Primärkreis oder ein Kurzschluss gegen Batteriespannung an der Primär-Steuerleitung. Das Steuergerät erkennt keinen normalen Stromfluss, Spule H zündet nicht, der Zylinder setzt aus. Ursachen: unterbrochene oder abgesteckte Primärleitung, interne Unterbrechung in der Spule oder eine defekte Endstufe im Steuergerät.'
   affected_components:
     - ignition_coil_h
     - ignition_coil_wiring_h
@@ -36211,8 +36211,8 @@
     en: Ignition Coil H Secondary Circuit
     de: Zündspule H Sekundärkreis
   description:
-    en: 'The ECU detects a fault on the secondary side of ignition coil A. The high-voltage spark output is missing or insufficient, leading to misfire on the affected cylinder.'
-    de: 'Die Motorsteuerung erkennt einen Fehler auf der Sekundaerseite der Zuendspule A. Der Hochspannungs-Zuendfunken fehlt oder ist unzureichend, was an dem betroffenen Zylinder zu Aussetzern fuehrt.'
+    en: 'A fault is detected on the secondary (high-voltage) side of ignition coil H. The spark delivered to the plug is missing or too weak, causing a misfire on the cylinder served by coil H. Causes: a worn spark plug or wide gap, a cracked coil or boot, carbon tracking, or an open or leaking secondary winding.'
+    de: 'Auf der Sekundärseite (Hochspannung) der Zündspule H wird ein Fehler erkannt. Der an die Kerze gelieferte Zündfunke fehlt oder ist zu schwach, der von Spule H versorgte Zylinder setzt aus. Ursachen: verschlissene Zündkerze oder zu großer Elektrodenabstand, gerissene Spule oder gerissener Kerzenschacht, Kriechströme oder eine unterbrochene bzw. durchschlagende Sekundärwicklung.'
   affected_components:
     - ignition_coil_h
     - spark_plug_cyl_h
@@ -36247,8 +36247,8 @@
     en: Ignition Coil I Primary Control Circuit Low
     de: Zündspule I Primärsteuerkreis - niedrig
   description:
-    en: 'The ECU reads a primary-side control voltage of ignition coil A below the expected level. The coil cannot store sufficient energy to fire the spark plug; misfire on cylinder 1 typically follows.'
-    de: 'Die Motorsteuerung liest auf der Primaerseite der Zuendspule A eine Steuerspannung unterhalb des erwarteten Werts. Die Spule kann nicht genug Energie zur Zuendung speichern; in der Folge tritt typisch ein Aussetzer an Zylinder 1 auf.'
+    en: 'The primary control circuit of ignition coil I reads a voltage below the expected level — usually a short to ground on the primary driver wire or a low-resistance fault in the coil primary winding. Coil I cannot build a normal charge, so the cylinder it fires misfires, especially under load. Causes: short to ground in the primary wiring, an internal coil primary fault, or a faulty ECU/igniter driver.'
+    de: 'Der Primär-Steuerkreis der Zündspule I liegt unter dem erwarteten Spannungswert — meist Masseschluss an der Primär-Steuerleitung oder ein niederohmiger Fehler in der Primärwicklung. Spule I kann keine normale Ladung aufbauen, der zugehörige Zylinder setzt aus, besonders unter Last. Ursachen: Masseschluss in der Primärverkabelung, interner Fehler der Primärwicklung oder eine defekte Endstufe im Steuergerät/Zündmodul.'
   affected_components:
     - ignition_coil_i
     - ignition_coil_wiring_i
@@ -36288,8 +36288,8 @@
     en: Ignition Coil I Primary Control Circuit High
     de: Zündspule I Primärsteuerkreis - hoch
   description:
-    en: 'Voltage on the primary control of ignition coil A is above the expected limit. Often a short to battery voltage on the primary wire or an open in the coil.'
-    de: 'Die Spannung auf der Primaeransteuerung der Zuendspule A liegt oberhalb des Grenzwerts. Haeufig Kurzschluss gegen Batteriespannung auf der Primaerleitung oder Unterbrechung in der Spule.'
+    en: 'The primary control circuit of ignition coil I reads a voltage above the expected level — typically an open primary circuit or a short to battery voltage on the primary control wire. The ECU sees no normal current flow, coil I does not fire, and the cylinder misfires. Causes: an open or disconnected primary wire, an internal open in the coil, or a faulty ECU driver.'
+    de: 'Der Primär-Steuerkreis der Zündspule I liegt über dem erwarteten Spannungswert — typischerweise eine Unterbrechung im Primärkreis oder ein Kurzschluss gegen Batteriespannung an der Primär-Steuerleitung. Das Steuergerät erkennt keinen normalen Stromfluss, Spule I zündet nicht, der Zylinder setzt aus. Ursachen: unterbrochene oder abgesteckte Primärleitung, interne Unterbrechung in der Spule oder eine defekte Endstufe im Steuergerät.'
   affected_components:
     - ignition_coil_i
     - ignition_coil_wiring_i
@@ -36329,8 +36329,8 @@
     en: Ignition Coil I Secondary Circuit
     de: Zündspule I Sekundärkreis
   description:
-    en: 'The ECU detects a fault on the secondary side of ignition coil A. The high-voltage spark output is missing or insufficient, leading to misfire on the affected cylinder.'
-    de: 'Die Motorsteuerung erkennt einen Fehler auf der Sekundaerseite der Zuendspule A. Der Hochspannungs-Zuendfunken fehlt oder ist unzureichend, was an dem betroffenen Zylinder zu Aussetzern fuehrt.'
+    en: 'A fault is detected on the secondary (high-voltage) side of ignition coil I. The spark delivered to the plug is missing or too weak, causing a misfire on the cylinder served by coil I. Causes: a worn spark plug or wide gap, a cracked coil or boot, carbon tracking, or an open or leaking secondary winding.'
+    de: 'Auf der Sekundärseite (Hochspannung) der Zündspule I wird ein Fehler erkannt. Der an die Kerze gelieferte Zündfunke fehlt oder ist zu schwach, der von Spule I versorgte Zylinder setzt aus. Ursachen: verschlissene Zündkerze oder zu großer Elektrodenabstand, gerissene Spule oder gerissener Kerzenschacht, Kriechströme oder eine unterbrochene bzw. durchschlagende Sekundärwicklung.'
   affected_components:
     - ignition_coil_i
     - spark_plug_cyl_i
@@ -36365,8 +36365,8 @@
     en: Ignition Coil J Primary Control Circuit Low
     de: Zündspule J Primärsteuerkreis - niedrig
   description:
-    en: 'The ECU reads a primary-side control voltage of ignition coil A below the expected level. The coil cannot store sufficient energy to fire the spark plug; misfire on cylinder 1 typically follows.'
-    de: 'Die Motorsteuerung liest auf der Primaerseite der Zuendspule A eine Steuerspannung unterhalb des erwarteten Werts. Die Spule kann nicht genug Energie zur Zuendung speichern; in der Folge tritt typisch ein Aussetzer an Zylinder 1 auf.'
+    en: 'The primary control circuit of ignition coil J reads a voltage below the expected level — usually a short to ground on the primary driver wire or a low-resistance fault in the coil primary winding. Coil J cannot build a normal charge, so the cylinder it fires misfires, especially under load. Causes: short to ground in the primary wiring, an internal coil primary fault, or a faulty ECU/igniter driver.'
+    de: 'Der Primär-Steuerkreis der Zündspule J liegt unter dem erwarteten Spannungswert — meist Masseschluss an der Primär-Steuerleitung oder ein niederohmiger Fehler in der Primärwicklung. Spule J kann keine normale Ladung aufbauen, der zugehörige Zylinder setzt aus, besonders unter Last. Ursachen: Masseschluss in der Primärverkabelung, interner Fehler der Primärwicklung oder eine defekte Endstufe im Steuergerät/Zündmodul.'
   affected_components:
     - ignition_coil_j
     - ignition_coil_wiring_j
@@ -36406,8 +36406,8 @@
     en: Ignition Coil J Primary Control Circuit High
     de: Zündspule J Primärsteuerkreis - hoch
   description:
-    en: 'Voltage on the primary control of ignition coil A is above the expected limit. Often a short to battery voltage on the primary wire or an open in the coil.'
-    de: 'Die Spannung auf der Primaeransteuerung der Zuendspule A liegt oberhalb des Grenzwerts. Haeufig Kurzschluss gegen Batteriespannung auf der Primaerleitung oder Unterbrechung in der Spule.'
+    en: 'The primary control circuit of ignition coil J reads a voltage above the expected level — typically an open primary circuit or a short to battery voltage on the primary control wire. The ECU sees no normal current flow, coil J does not fire, and the cylinder misfires. Causes: an open or disconnected primary wire, an internal open in the coil, or a faulty ECU driver.'
+    de: 'Der Primär-Steuerkreis der Zündspule J liegt über dem erwarteten Spannungswert — typischerweise eine Unterbrechung im Primärkreis oder ein Kurzschluss gegen Batteriespannung an der Primär-Steuerleitung. Das Steuergerät erkennt keinen normalen Stromfluss, Spule J zündet nicht, der Zylinder setzt aus. Ursachen: unterbrochene oder abgesteckte Primärleitung, interne Unterbrechung in der Spule oder eine defekte Endstufe im Steuergerät.'
   affected_components:
     - ignition_coil_j
     - ignition_coil_wiring_j
@@ -36447,8 +36447,8 @@
     en: Ignition Coil J Secondary Circuit
     de: Zündspule J Sekundärkreis
   description:
-    en: 'The ECU detects a fault on the secondary side of ignition coil A. The high-voltage spark output is missing or insufficient, leading to misfire on the affected cylinder.'
-    de: 'Die Motorsteuerung erkennt einen Fehler auf der Sekundaerseite der Zuendspule A. Der Hochspannungs-Zuendfunken fehlt oder ist unzureichend, was an dem betroffenen Zylinder zu Aussetzern fuehrt.'
+    en: 'A fault is detected on the secondary (high-voltage) side of ignition coil J. The spark delivered to the plug is missing or too weak, causing a misfire on the cylinder served by coil J. Causes: a worn spark plug or wide gap, a cracked coil or boot, carbon tracking, or an open or leaking secondary winding.'
+    de: 'Auf der Sekundärseite (Hochspannung) der Zündspule J wird ein Fehler erkannt. Der an die Kerze gelieferte Zündfunke fehlt oder ist zu schwach, der von Spule J versorgte Zylinder setzt aus. Ursachen: verschlissene Zündkerze oder zu großer Elektrodenabstand, gerissene Spule oder gerissener Kerzenschacht, Kriechströme oder eine unterbrochene bzw. durchschlagende Sekundärwicklung.'
   affected_components:
     - ignition_coil_j
     - spark_plug_cyl_j
@@ -36753,8 +36753,8 @@
     en: Ignition Coil K Primary Control Circuit Low
     de: Zündspule K Primärsteuerkreis - niedrig
   description:
-    en: 'The ECU reads a primary-side control voltage of ignition coil A below the expected level. The coil cannot store sufficient energy to fire the spark plug; misfire on cylinder 1 typically follows.'
-    de: 'Die Motorsteuerung liest auf der Primaerseite der Zuendspule A eine Steuerspannung unterhalb des erwarteten Werts. Die Spule kann nicht genug Energie zur Zuendung speichern; in der Folge tritt typisch ein Aussetzer an Zylinder 1 auf.'
+    en: 'The primary control circuit of ignition coil K reads a voltage below the expected level — usually a short to ground on the primary driver wire or a low-resistance fault in the coil primary winding. Coil K cannot build a normal charge, so the cylinder it fires misfires, especially under load. Causes: short to ground in the primary wiring, an internal coil primary fault, or a faulty ECU/igniter driver.'
+    de: 'Der Primär-Steuerkreis der Zündspule K liegt unter dem erwarteten Spannungswert — meist Masseschluss an der Primär-Steuerleitung oder ein niederohmiger Fehler in der Primärwicklung. Spule K kann keine normale Ladung aufbauen, der zugehörige Zylinder setzt aus, besonders unter Last. Ursachen: Masseschluss in der Primärverkabelung, interner Fehler der Primärwicklung oder eine defekte Endstufe im Steuergerät/Zündmodul.'
   affected_components:
     - ignition_coil_k
     - ignition_coil_wiring_k
@@ -36794,8 +36794,8 @@
     en: Ignition Coil K Primary Control Circuit High
     de: Zündspule K Primärsteuerkreis - hoch
   description:
-    en: 'Voltage on the primary control of ignition coil A is above the expected limit. Often a short to battery voltage on the primary wire or an open in the coil.'
-    de: 'Die Spannung auf der Primaeransteuerung der Zuendspule A liegt oberhalb des Grenzwerts. Haeufig Kurzschluss gegen Batteriespannung auf der Primaerleitung oder Unterbrechung in der Spule.'
+    en: 'The primary control circuit of ignition coil K reads a voltage above the expected level — typically an open primary circuit or a short to battery voltage on the primary control wire. The ECU sees no normal current flow, coil K does not fire, and the cylinder misfires. Causes: an open or disconnected primary wire, an internal open in the coil, or a faulty ECU driver.'
+    de: 'Der Primär-Steuerkreis der Zündspule K liegt über dem erwarteten Spannungswert — typischerweise eine Unterbrechung im Primärkreis oder ein Kurzschluss gegen Batteriespannung an der Primär-Steuerleitung. Das Steuergerät erkennt keinen normalen Stromfluss, Spule K zündet nicht, der Zylinder setzt aus. Ursachen: unterbrochene oder abgesteckte Primärleitung, interne Unterbrechung in der Spule oder eine defekte Endstufe im Steuergerät.'
   affected_components:
     - ignition_coil_k
     - ignition_coil_wiring_k
@@ -36835,8 +36835,8 @@
     en: Ignition Coil K Secondary Circuit
     de: Zündspule K Sekundärkreis
   description:
-    en: 'The ECU detects a fault on the secondary side of ignition coil A. The high-voltage spark output is missing or insufficient, leading to misfire on the affected cylinder.'
-    de: 'Die Motorsteuerung erkennt einen Fehler auf der Sekundaerseite der Zuendspule A. Der Hochspannungs-Zuendfunken fehlt oder ist unzureichend, was an dem betroffenen Zylinder zu Aussetzern fuehrt.'
+    en: 'A fault is detected on the secondary (high-voltage) side of ignition coil K. The spark delivered to the plug is missing or too weak, causing a misfire on the cylinder served by coil K. Causes: a worn spark plug or wide gap, a cracked coil or boot, carbon tracking, or an open or leaking secondary winding.'
+    de: 'Auf der Sekundärseite (Hochspannung) der Zündspule K wird ein Fehler erkannt. Der an die Kerze gelieferte Zündfunke fehlt oder ist zu schwach, der von Spule K versorgte Zylinder setzt aus. Ursachen: verschlissene Zündkerze oder zu großer Elektrodenabstand, gerissene Spule oder gerissener Kerzenschacht, Kriechströme oder eine unterbrochene bzw. durchschlagende Sekundärwicklung.'
   affected_components:
     - ignition_coil_k
     - spark_plug_cyl_k
@@ -36871,8 +36871,8 @@
     en: Ignition Coil L Primary Control Circuit Low
     de: Zündspule L Primärsteuerkreis - niedrig
   description:
-    en: 'The ECU reads a primary-side control voltage of ignition coil A below the expected level. The coil cannot store sufficient energy to fire the spark plug; misfire on cylinder 1 typically follows.'
-    de: 'Die Motorsteuerung liest auf der Primaerseite der Zuendspule A eine Steuerspannung unterhalb des erwarteten Werts. Die Spule kann nicht genug Energie zur Zuendung speichern; in der Folge tritt typisch ein Aussetzer an Zylinder 1 auf.'
+    en: 'The primary control circuit of ignition coil L reads a voltage below the expected level — usually a short to ground on the primary driver wire or a low-resistance fault in the coil primary winding. Coil L cannot build a normal charge, so the cylinder it fires misfires, especially under load. Causes: short to ground in the primary wiring, an internal coil primary fault, or a faulty ECU/igniter driver.'
+    de: 'Der Primär-Steuerkreis der Zündspule L liegt unter dem erwarteten Spannungswert — meist Masseschluss an der Primär-Steuerleitung oder ein niederohmiger Fehler in der Primärwicklung. Spule L kann keine normale Ladung aufbauen, der zugehörige Zylinder setzt aus, besonders unter Last. Ursachen: Masseschluss in der Primärverkabelung, interner Fehler der Primärwicklung oder eine defekte Endstufe im Steuergerät/Zündmodul.'
   affected_components:
     - ignition_coil_l
     - ignition_coil_wiring_l
@@ -36912,8 +36912,8 @@
     en: Ignition Coil L Primary Control Circuit High
     de: Zündspule L Primärsteuerkreis - hoch
   description:
-    en: 'Voltage on the primary control of ignition coil A is above the expected limit. Often a short to battery voltage on the primary wire or an open in the coil.'
-    de: 'Die Spannung auf der Primaeransteuerung der Zuendspule A liegt oberhalb des Grenzwerts. Haeufig Kurzschluss gegen Batteriespannung auf der Primaerleitung oder Unterbrechung in der Spule.'
+    en: 'The primary control circuit of ignition coil L reads a voltage above the expected level — typically an open primary circuit or a short to battery voltage on the primary control wire. The ECU sees no normal current flow, coil L does not fire, and the cylinder misfires. Causes: an open or disconnected primary wire, an internal open in the coil, or a faulty ECU driver.'
+    de: 'Der Primär-Steuerkreis der Zündspule L liegt über dem erwarteten Spannungswert — typischerweise eine Unterbrechung im Primärkreis oder ein Kurzschluss gegen Batteriespannung an der Primär-Steuerleitung. Das Steuergerät erkennt keinen normalen Stromfluss, Spule L zündet nicht, der Zylinder setzt aus. Ursachen: unterbrochene oder abgesteckte Primärleitung, interne Unterbrechung in der Spule oder eine defekte Endstufe im Steuergerät.'
   affected_components:
     - ignition_coil_l
     - ignition_coil_wiring_l
@@ -36953,8 +36953,8 @@
     en: Ignition Coil L Secondary Circuit
     de: Zündspule L Sekundärkreis
   description:
-    en: 'The ECU detects a fault on the secondary side of ignition coil A. The high-voltage spark output is missing or insufficient, leading to misfire on the affected cylinder.'
-    de: 'Die Motorsteuerung erkennt einen Fehler auf der Sekundaerseite der Zuendspule A. Der Hochspannungs-Zuendfunken fehlt oder ist unzureichend, was an dem betroffenen Zylinder zu Aussetzern fuehrt.'
+    en: 'A fault is detected on the secondary (high-voltage) side of ignition coil L. The spark delivered to the plug is missing or too weak, causing a misfire on the cylinder served by coil L. Causes: a worn spark plug or wide gap, a cracked coil or boot, carbon tracking, or an open or leaking secondary winding.'
+    de: 'Auf der Sekundärseite (Hochspannung) der Zündspule L wird ein Fehler erkannt. Der an die Kerze gelieferte Zündfunke fehlt oder ist zu schwach, der von Spule L versorgte Zylinder setzt aus. Ursachen: verschlissene Zündkerze oder zu großer Elektrodenabstand, gerissene Spule oder gerissener Kerzenschacht, Kriechströme oder eine unterbrochene bzw. durchschlagende Sekundärwicklung.'
   affected_components:
     - ignition_coil_l
     - spark_plug_cyl_l
@@ -41608,8 +41608,8 @@
     en: NOx Sensor Processor Performance Bank 1 Sensor 3
     de: NOx-Sensor-Prozessor Bank 1 Sensor 3 - Funktion
   description:
-    en: 'The ECU has detected an internal performance fault in the processing of accelerator pedal position - the redundant signals are tracked internally and one of them shows a software-side anomaly.'
-    de: 'Das Steuergerät erkennt einen internen Funktionsfehler bei der Verarbeitung der Gaspedalposition - die redundanten Signale werden intern verfolgt und eines zeigt eine softwareseitige Anomalie.'
+    en: 'An internal self-test in the control module reports a fault in its processing of the "NOx sensor processing, bank 1 sensor 3" value. The module computes and cross-checks this value redundantly inside its own processor; when the results disagree, the code sets. It points to a hardware or software fault inside the module itself, not to a defect of the external sensor. Causes are an internal processor or memory fault, corrupted control-module software, or low or disturbed module supply voltage.'
+    de: 'Ein interner Selbsttest im Steuergerät meldet einen Fehler bei der Verarbeitung der Größe "NOx-Sensor-Auswertung Bank 1 Sensor 3". Das Steuergerät berechnet und prüft diesen Wert intern redundant; bei Abweichung wird der Code gesetzt. Er weist auf einen Hardware- oder Softwarefehler im Steuergerät selbst hin, nicht auf einen Defekt des externen Sensors. Ursachen sind ein interner Prozessor- oder Speicherfehler, eine fehlerhafte Steuergeräte-Software oder eine zu niedrige bzw. gestörte Versorgungsspannung.'
   affected_components:
     - nox_sensor_b1s3
   common_causes:

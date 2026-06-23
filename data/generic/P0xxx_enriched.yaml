@@ -35686,8 +35686,8 @@
     en: Ignition Coil "A" Primary/Secondary Circuit Malfunction (Cylinder 1)
     de: Zündspule "A" Primär-/Sekundärkreis Fehlfunktion (Zylinder 1)
   description:
-    en: An electrical fault has been detected in the ignition coil circuit for cylinder 1 — open primary winding, short to ground, or short to supply. The ECU disables the coil to protect its driver and the cylinder misfires.
-    de: Im Steuerkreis der Zündspule für Zylinder 1 wurde ein elektrischer Fehler erkannt — offene Primärwicklung, Kurzschluss gegen Masse oder gegen Versorgung. Die Motorsteuerung deaktiviert die Spule zum Schutz der Endstufe; der Zylinder hat Aussetzer.
+    en: 'An electrical fault is detected in both the primary and the secondary circuit of ignition coil A (cylinder 1). The ECU cannot drive the coil correctly, so the cylinder served by coil A misfires or does not fire at all. Causes: an open or shorted primary control wire, an internal coil winding fault, a failed igniter/driver, or wiring or connector damage at the coil.'
+    de: 'Im Primär- und im Sekundärkreis der Zündspule A (Zylinder 1) wird ein elektrischer Fehler erkannt. Das Steuergerät kann die Spule nicht korrekt ansteuern, der von Spule A versorgte Zylinder setzt aus oder zündet gar nicht. Ursachen: unterbrochene oder kurzgeschlossene Primär-Steuerleitung, interner Wicklungsfehler, defekte Endstufe/Zündmodul oder beschädigte Verkabelung bzw. Stecker an der Spule.'
   affected_components:
     - ignition_coil
     - ignition_coil_wiring
@@ -35835,8 +35835,8 @@
     en: Ignition Coil "E" Primary/Secondary Circuit
     de: Zündspule "E" Primär-/Sekundärkreis
   description:
-    en: 'An electrical fault has been detected in the ignition coil circuit for cylinder 1 — open primary winding, short to ground, or short to supply. The ECU disables the coil to protect its driver and the cylinder misfires.'
-    de: 'Im Steuerkreis der Zündspule für Zylinder 1 wurde ein elektrischer Fehler erkannt — offene Primärwicklung, Kurzschluss gegen Masse oder gegen Versorgung. Die Motorsteuerung deaktiviert die Spule zum Schutz der Endstufe; der Zylinder hat Aussetzer.'
+    en: 'An electrical fault is detected in both the primary and the secondary circuit of ignition coil E. The ECU cannot drive the coil correctly, so the cylinder served by coil E misfires or does not fire at all. Causes: an open or shorted primary control wire, an internal coil winding fault, a failed igniter/driver, or wiring or connector damage at the coil.'
+    de: 'Im Primär- und im Sekundärkreis der Zündspule E wird ein elektrischer Fehler erkannt. Das Steuergerät kann die Spule nicht korrekt ansteuern, der von Spule E versorgte Zylinder setzt aus oder zündet gar nicht. Ursachen: unterbrochene oder kurzgeschlossene Primär-Steuerleitung, interner Wicklungsfehler, defekte Endstufe/Zündmodul oder beschädigte Verkabelung bzw. Stecker an der Spule.'
   affected_components:
     - ignition_coil
     - coil_wiring
@@ -35872,8 +35872,8 @@
     en: Ignition Coil "F" Primary/Secondary Circuit
     de: Zündspule "F" Primär-/Sekundärkreis
   description:
-    en: 'An electrical fault has been detected in the ignition coil circuit for cylinder 1 — open primary winding, short to ground, or short to supply. The ECU disables the coil to protect its driver and the cylinder misfires.'
-    de: 'Im Steuerkreis der Zündspule für Zylinder 1 wurde ein elektrischer Fehler erkannt — offene Primärwicklung, Kurzschluss gegen Masse oder gegen Versorgung. Die Motorsteuerung deaktiviert die Spule zum Schutz der Endstufe; der Zylinder hat Aussetzer.'
+    en: 'An electrical fault is detected in both the primary and the secondary circuit of ignition coil F. The ECU cannot drive the coil correctly, so the cylinder served by coil F misfires or does not fire at all. Causes: an open or shorted primary control wire, an internal coil winding fault, a failed igniter/driver, or wiring or connector damage at the coil.'
+    de: 'Im Primär- und im Sekundärkreis der Zündspule F wird ein elektrischer Fehler erkannt. Das Steuergerät kann die Spule nicht korrekt ansteuern, der von Spule F versorgte Zylinder setzt aus oder zündet gar nicht. Ursachen: unterbrochene oder kurzgeschlossene Primär-Steuerleitung, interner Wicklungsfehler, defekte Endstufe/Zündmodul oder beschädigte Verkabelung bzw. Stecker an der Spule.'
   affected_components:
     - ignition_coil
     - coil_wiring
@@ -35904,8 +35904,8 @@
     en: Ignition Coil "G" Primary/Secondary Circuit
     de: Zündspule "G" Primär-/Sekundärkreis
   description:
-    en: 'An electrical fault has been detected in the ignition coil circuit for cylinder 1 — open primary winding, short to ground, or short to supply. The ECU disables the coil to protect its driver and the cylinder misfires.'
-    de: 'Im Steuerkreis der Zündspule für Zylinder 1 wurde ein elektrischer Fehler erkannt — offene Primärwicklung, Kurzschluss gegen Masse oder gegen Versorgung. Die Motorsteuerung deaktiviert die Spule zum Schutz der Endstufe; der Zylinder hat Aussetzer.'
+    en: 'An electrical fault is detected in both the primary and the secondary circuit of ignition coil G. The ECU cannot drive the coil correctly, so the cylinder served by coil G misfires or does not fire at all. Causes: an open or shorted primary control wire, an internal coil winding fault, a failed igniter/driver, or wiring or connector damage at the coil.'
+    de: 'Im Primär- und im Sekundärkreis der Zündspule G wird ein elektrischer Fehler erkannt. Das Steuergerät kann die Spule nicht korrekt ansteuern, der von Spule G versorgte Zylinder setzt aus oder zündet gar nicht. Ursachen: unterbrochene oder kurzgeschlossene Primär-Steuerleitung, interner Wicklungsfehler, defekte Endstufe/Zündmodul oder beschädigte Verkabelung bzw. Stecker an der Spule.'
   affected_components:
     - ignition_coil
     - coil_wiring
@@ -35936,8 +35936,8 @@
     en: Ignition Coil "H" Primary/Secondary Circuit
     de: Zündspule "H" Primär-/Sekundärkreis
   description:
-    en: 'An electrical fault has been detected in the ignition coil circuit for cylinder 1 — open primary winding, short to ground, or short to supply. The ECU disables the coil to protect its driver and the cylinder misfires.'
-    de: 'Im Steuerkreis der Zündspule für Zylinder 1 wurde ein elektrischer Fehler erkannt — offene Primärwicklung, Kurzschluss gegen Masse oder gegen Versorgung. Die Motorsteuerung deaktiviert die Spule zum Schutz der Endstufe; der Zylinder hat Aussetzer.'
+    en: 'An electrical fault is detected in both the primary and the secondary circuit of ignition coil H. The ECU cannot drive the coil correctly, so the cylinder served by coil H misfires or does not fire at all. Causes: an open or shorted primary control wire, an internal coil winding fault, a failed igniter/driver, or wiring or connector damage at the coil.'
+    de: 'Im Primär- und im Sekundärkreis der Zündspule H wird ein elektrischer Fehler erkannt. Das Steuergerät kann die Spule nicht korrekt ansteuern, der von Spule H versorgte Zylinder setzt aus oder zündet gar nicht. Ursachen: unterbrochene oder kurzgeschlossene Primär-Steuerleitung, interner Wicklungsfehler, defekte Endstufe/Zündmodul oder beschädigte Verkabelung bzw. Stecker an der Spule.'
   affected_components:
     - ignition_coil
     - coil_wiring
@@ -63695,8 +63695,8 @@
     en: Internal Control Module Accelerator Pedal Position Performance
     de: Internes Steuermodul - Gaspedalposition - Funktion
   description:
-    en: The ECU has detected an internal performance fault in the processing of accelerator pedal position - the redundant signals are tracked internally and one of them shows a software-side anomaly.
-    de: Das Steuergerät erkennt einen internen Funktionsfehler bei der Verarbeitung der Gaspedalposition - die redundanten Signale werden intern verfolgt und eines zeigt eine softwareseitige Anomalie.
+    en: 'An internal self-test in the control module reports a fault in its processing of the "accelerator pedal position" value. The module computes and cross-checks this value redundantly inside its own processor; when the results disagree, the code sets. It points to a hardware or software fault inside the module itself, not to a defect of the external sensor. Causes are an internal processor or memory fault, corrupted control-module software, or low or disturbed module supply voltage.'
+    de: 'Ein interner Selbsttest im Steuergerät meldet einen Fehler bei der Verarbeitung der Größe "Gaspedalposition". Das Steuergerät berechnet und prüft diesen Wert intern redundant; bei Abweichung wird der Code gesetzt. Er weist auf einen Hardware- oder Softwarefehler im Steuergerät selbst hin, nicht auf einen Defekt des externen Sensors. Ursachen sind ein interner Prozessor- oder Speicherfehler, eine fehlerhafte Steuergeräte-Software oder eine zu niedrige bzw. gestörte Versorgungsspannung.'
   affected_components:
     - ecu_internal_processing
     - accelerator_pedal_position_sensor
@@ -63734,8 +63734,8 @@
     en: Internal Control Module Throttle Position Performance
     de: Internes Steuermodul - Drosselklappenposition - Funktion
   description:
-    en: 'The ECU has detected an internal performance fault in the processing of accelerator pedal position - the redundant signals are tracked internally and one of them shows a software-side anomaly.'
-    de: 'Das Steuergerät erkennt einen internen Funktionsfehler bei der Verarbeitung der Gaspedalposition - die redundanten Signale werden intern verfolgt und eines zeigt eine softwareseitige Anomalie.'
+    en: 'An internal self-test in the control module reports a fault in its processing of the "throttle position" value. The module computes and cross-checks this value redundantly inside its own processor; when the results disagree, the code sets. It points to a hardware or software fault inside the module itself, not to a defect of the external sensor. Causes are an internal processor or memory fault, corrupted control-module software, or low or disturbed module supply voltage.'
+    de: 'Ein interner Selbsttest im Steuergerät meldet einen Fehler bei der Verarbeitung der Größe "Drosselklappenposition". Das Steuergerät berechnet und prüft diesen Wert intern redundant; bei Abweichung wird der Code gesetzt. Er weist auf einen Hardware- oder Softwarefehler im Steuergerät selbst hin, nicht auf einen Defekt des externen Sensors. Ursachen sind ein interner Prozessor- oder Speicherfehler, eine fehlerhafte Steuergeräte-Software oder eine zu niedrige bzw. gestörte Versorgungsspannung.'
   affected_components:
     - ecu_internal_processing
     - throttle_position_sensor
@@ -63773,8 +63773,8 @@
     en: Internal Control Module Coolant Temperature Performance
     de: Internes Steuermodul - Kühlmitteltemperatur - Funktion
   description:
-    en: 'The ECU has detected an internal performance fault in the processing of accelerator pedal position - the redundant signals are tracked internally and one of them shows a software-side anomaly.'
-    de: 'Das Steuergerät erkennt einen internen Funktionsfehler bei der Verarbeitung der Gaspedalposition - die redundanten Signale werden intern verfolgt und eines zeigt eine softwareseitige Anomalie.'
+    en: 'An internal self-test in the control module reports a fault in its processing of the "engine coolant temperature" value. The module computes and cross-checks this value redundantly inside its own processor; when the results disagree, the code sets. It points to a hardware or software fault inside the module itself, not to a defect of the external sensor. Causes are an internal processor or memory fault, corrupted control-module software, or low or disturbed module supply voltage.'
+    de: 'Ein interner Selbsttest im Steuergerät meldet einen Fehler bei der Verarbeitung der Größe "Kühlmitteltemperatur". Das Steuergerät berechnet und prüft diesen Wert intern redundant; bei Abweichung wird der Code gesetzt. Er weist auf einen Hardware- oder Softwarefehler im Steuergerät selbst hin, nicht auf einen Defekt des externen Sensors. Ursachen sind ein interner Prozessor- oder Speicherfehler, eine fehlerhafte Steuergeräte-Software oder eine zu niedrige bzw. gestörte Versorgungsspannung.'
   affected_components:
     - ecu_internal_processing
     - coolant_temperature_sensor
@@ -64269,8 +64269,8 @@
     en: Internal Control Module Torque Performance
     de: Internes Steuermodul - Drehmomenterfassung - Funktion
   description:
-    en: 'The ECU has detected an internal performance fault in the processing of accelerator pedal position - the redundant signals are tracked internally and one of them shows a software-side anomaly.'
-    de: 'Das Steuergerät erkennt einen internen Funktionsfehler bei der Verarbeitung der Gaspedalposition - die redundanten Signale werden intern verfolgt und eines zeigt eine softwareseitige Anomalie.'
+    en: 'An internal self-test in the control module reports a fault in its processing of the "engine torque" value. The module computes and cross-checks this value redundantly inside its own processor; when the results disagree, the code sets. It points to a hardware or software fault inside the module itself, not to a defect of the external sensor. Causes are an internal processor or memory fault, corrupted control-module software, or low or disturbed module supply voltage.'
+    de: 'Ein interner Selbsttest im Steuergerät meldet einen Fehler bei der Verarbeitung der Größe "Motordrehmoment". Das Steuergerät berechnet und prüft diesen Wert intern redundant; bei Abweichung wird der Code gesetzt. Er weist auf einen Hardware- oder Softwarefehler im Steuergerät selbst hin, nicht auf einen Defekt des externen Sensors. Ursachen sind ein interner Prozessor- oder Speicherfehler, eine fehlerhafte Steuergeräte-Software oder eine zu niedrige bzw. gestörte Versorgungsspannung.'
   affected_components:
     - ecu_torque_calculation
   common_causes:
@@ -64307,8 +64307,8 @@
     en: Internal Control Module Torque Calculation Performance
     de: Internes Steuermodul - Drehmomentberechnung - Funktion
   description:
-    en: 'The ECU has detected an internal performance fault in the processing of accelerator pedal position - the redundant signals are tracked internally and one of them shows a software-side anomaly.'
-    de: 'Das Steuergerät erkennt einen internen Funktionsfehler bei der Verarbeitung der Gaspedalposition - die redundanten Signale werden intern verfolgt und eines zeigt eine softwareseitige Anomalie.'
+    en: 'An internal self-test in the control module reports a fault in its processing of the "torque calculation" value. The module computes and cross-checks this value redundantly inside its own processor; when the results disagree, the code sets. It points to a hardware or software fault inside the module itself, not to a defect of the external sensor. Causes are an internal processor or memory fault, corrupted control-module software, or low or disturbed module supply voltage.'
+    de: 'Ein interner Selbsttest im Steuergerät meldet einen Fehler bei der Verarbeitung der Größe "Drehmomentberechnung". Das Steuergerät berechnet und prüft diesen Wert intern redundant; bei Abweichung wird der Code gesetzt. Er weist auf einen Hardware- oder Softwarefehler im Steuergerät selbst hin, nicht auf einen Defekt des externen Sensors. Ursachen sind ein interner Prozessor- oder Speicherfehler, eine fehlerhafte Steuergeräte-Software oder eine zu niedrige bzw. gestörte Versorgungsspannung.'
   affected_components:
     - ecu_torque_calculation
   common_causes:
@@ -64345,8 +64345,8 @@
     en: Internal Control Module Engine RPM Performance
     de: Internes Steuermodul - Motordrehzahl - Funktion
   description:
-    en: 'The ECU has detected an internal performance fault in the processing of accelerator pedal position - the redundant signals are tracked internally and one of them shows a software-side anomaly.'
-    de: 'Das Steuergerät erkennt einen internen Funktionsfehler bei der Verarbeitung der Gaspedalposition - die redundanten Signale werden intern verfolgt und eines zeigt eine softwareseitige Anomalie.'
+    en: 'An internal self-test in the control module reports a fault in its processing of the "engine speed (RPM)" value. The module computes and cross-checks this value redundantly inside its own processor; when the results disagree, the code sets. It points to a hardware or software fault inside the module itself, not to a defect of the external sensor. Causes are an internal processor or memory fault, corrupted control-module software, or low or disturbed module supply voltage.'
+    de: 'Ein interner Selbsttest im Steuergerät meldet einen Fehler bei der Verarbeitung der Größe "Motordrehzahl". Das Steuergerät berechnet und prüft diesen Wert intern redundant; bei Abweichung wird der Code gesetzt. Er weist auf einen Hardware- oder Softwarefehler im Steuergerät selbst hin, nicht auf einen Defekt des externen Sensors. Ursachen sind ein interner Prozessor- oder Speicherfehler, eine fehlerhafte Steuergeräte-Software oder eine zu niedrige bzw. gestörte Versorgungsspannung.'
   affected_components:
     - ecu_internal_processing
     - crankshaft_position_sensor
@@ -64384,8 +64384,8 @@
     en: Internal Control Module Engine Air Mass Performance
     de: Internes Steuermodul - Luftmassenerfassung - Funktion
   description:
-    en: 'The ECU has detected an internal performance fault in the processing of accelerator pedal position - the redundant signals are tracked internally and one of them shows a software-side anomaly.'
-    de: 'Das Steuergerät erkennt einen internen Funktionsfehler bei der Verarbeitung der Gaspedalposition - die redundanten Signale werden intern verfolgt und eines zeigt eine softwareseitige Anomalie.'
+    en: 'An internal self-test in the control module reports a fault in its processing of the "intake air mass" value. The module computes and cross-checks this value redundantly inside its own processor; when the results disagree, the code sets. It points to a hardware or software fault inside the module itself, not to a defect of the external sensor. Causes are an internal processor or memory fault, corrupted control-module software, or low or disturbed module supply voltage.'
+    de: 'Ein interner Selbsttest im Steuergerät meldet einen Fehler bei der Verarbeitung der Größe "Luftmasse". Das Steuergerät berechnet und prüft diesen Wert intern redundant; bei Abweichung wird der Code gesetzt. Er weist auf einen Hardware- oder Softwarefehler im Steuergerät selbst hin, nicht auf einen Defekt des externen Sensors. Ursachen sind ein interner Prozessor- oder Speicherfehler, eine fehlerhafte Steuergeräte-Software oder eine zu niedrige bzw. gestörte Versorgungsspannung.'
   affected_components:
     - ecu_internal_processing
     - mass_air_flow_sensor
@@ -64423,8 +64423,8 @@
     en: Internal Control Module Brake Signal Performance
     de: Internes Steuermodul - Bremssignal - Funktion
   description:
-    en: 'The ECU has detected an internal performance fault in the processing of accelerator pedal position - the redundant signals are tracked internally and one of them shows a software-side anomaly.'
-    de: 'Das Steuergerät erkennt einen internen Funktionsfehler bei der Verarbeitung der Gaspedalposition - die redundanten Signale werden intern verfolgt und eines zeigt eine softwareseitige Anomalie.'
+    en: 'An internal self-test in the control module reports a fault in its processing of the "brake signal" value. The module computes and cross-checks this value redundantly inside its own processor; when the results disagree, the code sets. It points to a hardware or software fault inside the module itself, not to a defect of the external sensor. Causes are an internal processor or memory fault, corrupted control-module software, or low or disturbed module supply voltage.'
+    de: 'Ein interner Selbsttest im Steuergerät meldet einen Fehler bei der Verarbeitung der Größe "Bremssignal". Das Steuergerät berechnet und prüft diesen Wert intern redundant; bei Abweichung wird der Code gesetzt. Er weist auf einen Hardware- oder Softwarefehler im Steuergerät selbst hin, nicht auf einen Defekt des externen Sensors. Ursachen sind ein interner Prozessor- oder Speicherfehler, eine fehlerhafte Steuergeräte-Software oder eine zu niedrige bzw. gestörte Versorgungsspannung.'
   affected_components:
     - ecu_internal_processing
     - brake_pedal_switch
@@ -64462,8 +64462,8 @@
     en: Internal Control Module Throttle Actuator Controller Performance
     de: Internes Steuermodul - Drosselsteller-Regler - Funktion
   description:
-    en: 'The ECU has detected an internal performance fault in the processing of accelerator pedal position - the redundant signals are tracked internally and one of them shows a software-side anomaly.'
-    de: 'Das Steuergerät erkennt einen internen Funktionsfehler bei der Verarbeitung der Gaspedalposition - die redundanten Signale werden intern verfolgt und eines zeigt eine softwareseitige Anomalie.'
+    en: 'An internal self-test in the control module reports a fault in its processing of the "throttle actuator control" value. The module computes and cross-checks this value redundantly inside its own processor; when the results disagree, the code sets. It points to a hardware or software fault inside the module itself, not to a defect of the external sensor. Causes are an internal processor or memory fault, corrupted control-module software, or low or disturbed module supply voltage.'
+    de: 'Ein interner Selbsttest im Steuergerät meldet einen Fehler bei der Verarbeitung der Größe "Drosselsteller-Regelung". Das Steuergerät berechnet und prüft diesen Wert intern redundant; bei Abweichung wird der Code gesetzt. Er weist auf einen Hardware- oder Softwarefehler im Steuergerät selbst hin, nicht auf einen Defekt des externen Sensors. Ursachen sind ein interner Prozessor- oder Speicherfehler, eine fehlerhafte Steuergeräte-Software oder eine zu niedrige bzw. gestörte Versorgungsspannung.'
   affected_components:
     - ecu_throttle_controller
   common_causes:
@@ -65016,8 +65016,8 @@
     en: Internal Control Module Fuel Injector Control Performance
     de: Internes Steuermodul - Einspritzsteuerung - Funktion
   description:
-    en: 'The ECU has detected an internal performance fault in the processing of accelerator pedal position - the redundant signals are tracked internally and one of them shows a software-side anomaly.'
-    de: 'Das Steuergerät erkennt einen internen Funktionsfehler bei der Verarbeitung der Gaspedalposition - die redundanten Signale werden intern verfolgt und eines zeigt eine softwareseitige Anomalie.'
+    en: 'An internal self-test in the control module reports a fault in its processing of the "fuel injector control" value. The module computes and cross-checks this value redundantly inside its own processor; when the results disagree, the code sets. It points to a hardware or software fault inside the module itself, not to a defect of the external sensor. Causes are an internal processor or memory fault, corrupted control-module software, or low or disturbed module supply voltage.'
+    de: 'Ein interner Selbsttest im Steuergerät meldet einen Fehler bei der Verarbeitung der Größe "Einspritzsteuerung". Das Steuergerät berechnet und prüft diesen Wert intern redundant; bei Abweichung wird der Code gesetzt. Er weist auf einen Hardware- oder Softwarefehler im Steuergerät selbst hin, nicht auf einen Defekt des externen Sensors. Ursachen sind ein interner Prozessor- oder Speicherfehler, eine fehlerhafte Steuergeräte-Software oder eine zu niedrige bzw. gestörte Versorgungsspannung.'
   affected_components:
     - ecu_internal_processing
     - fuel_injectors
@@ -65055,8 +65055,8 @@
     en: Internal Control Module Vehicle Speed Performance
     de: Internes Steuermodul - Fahrzeuggeschwindigkeit - Funktion
   description:
-    en: 'The ECU has detected an internal performance fault in the processing of accelerator pedal position - the redundant signals are tracked internally and one of them shows a software-side anomaly.'
-    de: 'Das Steuergerät erkennt einen internen Funktionsfehler bei der Verarbeitung der Gaspedalposition - die redundanten Signale werden intern verfolgt und eines zeigt eine softwareseitige Anomalie.'
+    en: 'An internal self-test in the control module reports a fault in its processing of the "vehicle speed" value. The module computes and cross-checks this value redundantly inside its own processor; when the results disagree, the code sets. It points to a hardware or software fault inside the module itself, not to a defect of the external sensor. Causes are an internal processor or memory fault, corrupted control-module software, or low or disturbed module supply voltage.'
+    de: 'Ein interner Selbsttest im Steuergerät meldet einen Fehler bei der Verarbeitung der Größe "Fahrzeuggeschwindigkeit". Das Steuergerät berechnet und prüft diesen Wert intern redundant; bei Abweichung wird der Code gesetzt. Er weist auf einen Hardware- oder Softwarefehler im Steuergerät selbst hin, nicht auf einen Defekt des externen Sensors. Ursachen sind ein interner Prozessor- oder Speicherfehler, eine fehlerhafte Steuergeräte-Software oder eine zu niedrige bzw. gestörte Versorgungsspannung.'
   affected_components:
     - ecu_internal_processing
     - vehicle_speed_sensor_a
@@ -66458,8 +66458,8 @@
     en: Internal Control Module O2 Sensor Processor Performance Bank 1
     de: Internes Steuermodul - Lambdasonden-Prozessor Bank 1 - Funktion
   description:
-    en: 'The ECU has detected an internal performance fault in the processing of accelerator pedal position - the redundant signals are tracked internally and one of them shows a software-side anomaly.'
-    de: 'Das Steuergerät erkennt einen internen Funktionsfehler bei der Verarbeitung der Gaspedalposition - die redundanten Signale werden intern verfolgt und eines zeigt eine softwareseitige Anomalie.'
+    en: 'An internal self-test in the control module reports a fault in its processing of the "oxygen sensor processing, bank 1" value. The module computes and cross-checks this value redundantly inside its own processor; when the results disagree, the code sets. It points to a hardware or software fault inside the module itself, not to a defect of the external sensor. Causes are an internal processor or memory fault, corrupted control-module software, or low or disturbed module supply voltage.'
+    de: 'Ein interner Selbsttest im Steuergerät meldet einen Fehler bei der Verarbeitung der Größe "Lambdasonden-Auswertung Bank 1". Das Steuergerät berechnet und prüft diesen Wert intern redundant; bei Abweichung wird der Code gesetzt. Er weist auf einen Hardware- oder Softwarefehler im Steuergerät selbst hin, nicht auf einen Defekt des externen Sensors. Ursachen sind ein interner Prozessor- oder Speicherfehler, eine fehlerhafte Steuergeräte-Software oder eine zu niedrige bzw. gestörte Versorgungsspannung.'
   affected_components:
     - ecu_internal_processing
     - oxygen_sensor_b1
@@ -66508,8 +66508,8 @@
     en: Internal Control Module O2 Sensor Processor Performance Bank 2
     de: Internes Steuermodul - Lambdasonden-Prozessor Bank 2 - Funktion
   description:
-    en: 'The ECU has detected an internal performance fault in the processing of accelerator pedal position - the redundant signals are tracked internally and one of them shows a software-side anomaly.'
-    de: 'Das Steuergerät erkennt einen internen Funktionsfehler bei der Verarbeitung der Gaspedalposition - die redundanten Signale werden intern verfolgt und eines zeigt eine softwareseitige Anomalie.'
+    en: 'An internal self-test in the control module reports a fault in its processing of the "oxygen sensor processing, bank 2" value. The module computes and cross-checks this value redundantly inside its own processor; when the results disagree, the code sets. It points to a hardware or software fault inside the module itself, not to a defect of the external sensor. Causes are an internal processor or memory fault, corrupted control-module software, or low or disturbed module supply voltage.'
+    de: 'Ein interner Selbsttest im Steuergerät meldet einen Fehler bei der Verarbeitung der Größe "Lambdasonden-Auswertung Bank 2". Das Steuergerät berechnet und prüft diesen Wert intern redundant; bei Abweichung wird der Code gesetzt. Er weist auf einen Hardware- oder Softwarefehler im Steuergerät selbst hin, nicht auf einen Defekt des externen Sensors. Ursachen sind ein interner Prozessor- oder Speicherfehler, eine fehlerhafte Steuergeräte-Software oder eine zu niedrige bzw. gestörte Versorgungsspannung.'
   affected_components:
     - ecu_internal_processing
     - oxygen_sensor_b2
@@ -66647,8 +66647,8 @@
     en: Sensor Reference Voltage B Circuit Open
     de: Sensor-Referenzspannung B Stromkreis - offen
   description:
-    en: Modern ECUs supply 5 V reference rails to multiple sensors. Reference rail B is open - the ECU loses supply on every sensor connected to it (typically TPS B, MAP, or pressure sensors).
-    de: Moderne Steuergeräte versorgen mehrere Sensoren mit 5-V-Referenzschienen. Die Referenzschiene B ist unterbrochen - alle daran hängenden Sensoren (typisch TPS B, MAP oder Drucksensoren) verlieren ihre Versorgung.
+    en: 'The 5-volt sensor reference rail B is open — the module supplies no voltage on this circuit. Every sensor powered from reference B loses its supply and reads invalid, so the ECU substitutes default values and may limit engine operation. Causes: a broken reference wire, a disconnected connector, or an internal open in the module''s voltage regulator for rail B.'
+    de: 'Die 5-Volt-Sensorreferenz B ist unterbrochen — das Steuergerät liefert auf diesem Kreis keine Spannung. Jeder aus Referenz B versorgte Sensor verliert seine Versorgung und meldet ungültige Werte; das Steuergerät setzt Ersatzwerte ein und begrenzt unter Umständen den Motorbetrieb. Ursachen: unterbrochene Referenzleitung, abgezogener Stecker oder eine interne Unterbrechung im Spannungsregler des Steuergeräts für die Referenz B.'
   affected_components:
     - sensor_reference_voltage_b
   common_causes:
@@ -68047,8 +68047,8 @@
     en: Glow Plug Module Control Circuit
     de: Glühkerzenmodul Steuerkreis
   description:
-    en: The control circuit between the engine controller and the glow plug control module reports a fault. The module cannot reliably drive the glow plugs for cold-start preheating.
-    de: Der Steuerkreis zwischen Motorsteuergerät und Glühkerzenmodul meldet einen Fehler. Das Modul kann die Glühkerzen für die Kaltstart-Vorglühung nicht zuverlässig ansteuern.
+    en: 'The control circuit between the engine controller and the glow plug control module reports a fault. The ECU can no longer reliably command the module that drives the glow plugs, so cold-start pre-heating may not run. On a diesel this causes hard starting, white smoke, and rough running until warm. Causes: open or shorted wiring between ECU and glow plug module, a failed module, or a power/ground fault at the module.'
+    de: 'Der Steuerkreis zwischen Motorsteuergerät und Glühkerzenmodul meldet einen Fehler. Die Motorsteuerung kann das Modul, das die Glühkerzen ansteuert, nicht mehr zuverlässig kommandieren; das Vorglühen läuft eventuell nicht. Beim Diesel führt das zu schwerem Start, weißem Rauch und unrundem Lauf bis zur Betriebstemperatur. Ursachen: unterbrochene oder kurzgeschlossene Leitung zwischen Steuergerät und Glühkerzenmodul, ein defektes Modul oder ein Versorgungs-/Massefehler am Modul.'
   affected_components:
     - glow_plug_module
     - module_wiring
@@ -68090,8 +68090,8 @@
     en: Cylinder 1 Glow Plug Circuit
     de: Glühkerze Zylinder 1 Schaltkreis
   description:
-    en: 'The control circuit between the engine controller and the glow plug control module reports a fault. The module cannot reliably drive the glow plugs for cold-start preheating.'
-    de: 'Der Steuerkreis zwischen Motorsteuergerät und Glühkerzenmodul meldet einen Fehler. Das Modul kann die Glühkerzen für die Kaltstart-Vorglühung nicht zuverlässig ansteuern.'
+    en: 'An electrical fault is present in the glow plug circuit for cylinder 1. The glow plug control module cannot drive this plug correctly — open circuit, short, or out-of-range resistance — so cylinder 1 is not pre-heated. On a cold start this causes hard starting, white smoke, and a misfire-like rough run until the engine warms. Causes: a failed glow plug, a broken supply lead to that plug, corrosion at the plug connector, or a faulty module output for cylinder 1.'
+    de: 'Im Glühkerzen-Schaltkreis von Zylinder 1 liegt ein elektrischer Fehler vor. Das Glühkerzenmodul kann diese Kerze nicht korrekt ansteuern — Unterbrechung, Kurzschluss oder Widerstand außerhalb des Bereichs — sodass Zylinder 1 nicht vorgeglüht wird. Beim Kaltstart führt das zu schwerem Start, weißem Rauch und unrundem Lauf bis zur Betriebstemperatur. Ursachen: defekte Glühkerze, unterbrochene Zuleitung zur Kerze, Korrosion am Kerzenstecker oder ein fehlerhafter Modulausgang für Zylinder 1.'
   affected_components:
     - glow_plug
     - glow_plug_wiring
@@ -68133,8 +68133,8 @@
     en: Cylinder 2 Glow Plug Circuit
     de: Glühkerze Zylinder 2 Schaltkreis
   description:
-    en: 'The control circuit between the engine controller and the glow plug control module reports a fault. The module cannot reliably drive the glow plugs for cold-start preheating.'
-    de: 'Der Steuerkreis zwischen Motorsteuergerät und Glühkerzenmodul meldet einen Fehler. Das Modul kann die Glühkerzen für die Kaltstart-Vorglühung nicht zuverlässig ansteuern.'
+    en: 'An electrical fault is present in the glow plug circuit for cylinder 2. The glow plug control module cannot drive this plug correctly — open circuit, short, or out-of-range resistance — so cylinder 2 is not pre-heated. On a cold start this causes hard starting, white smoke, and a misfire-like rough run until the engine warms. Causes: a failed glow plug, a broken supply lead to that plug, corrosion at the plug connector, or a faulty module output for cylinder 2.'
+    de: 'Im Glühkerzen-Schaltkreis von Zylinder 2 liegt ein elektrischer Fehler vor. Das Glühkerzenmodul kann diese Kerze nicht korrekt ansteuern — Unterbrechung, Kurzschluss oder Widerstand außerhalb des Bereichs — sodass Zylinder 2 nicht vorgeglüht wird. Beim Kaltstart führt das zu schwerem Start, weißem Rauch und unrundem Lauf bis zur Betriebstemperatur. Ursachen: defekte Glühkerze, unterbrochene Zuleitung zur Kerze, Korrosion am Kerzenstecker oder ein fehlerhafter Modulausgang für Zylinder 2.'
   affected_components:
     - glow_plug
     - glow_plug_wiring
@@ -68171,8 +68171,8 @@
     en: Cylinder 3 Glow Plug Circuit
     de: Glühkerze Zylinder 3 Schaltkreis
   description:
-    en: 'The control circuit between the engine controller and the glow plug control module reports a fault. The module cannot reliably drive the glow plugs for cold-start preheating.'
-    de: 'Der Steuerkreis zwischen Motorsteuergerät und Glühkerzenmodul meldet einen Fehler. Das Modul kann die Glühkerzen für die Kaltstart-Vorglühung nicht zuverlässig ansteuern.'
+    en: 'An electrical fault is present in the glow plug circuit for cylinder 3. The glow plug control module cannot drive this plug correctly — open circuit, short, or out-of-range resistance — so cylinder 3 is not pre-heated. On a cold start this causes hard starting, white smoke, and a misfire-like rough run until the engine warms. Causes: a failed glow plug, a broken supply lead to that plug, corrosion at the plug connector, or a faulty module output for cylinder 3.'
+    de: 'Im Glühkerzen-Schaltkreis von Zylinder 3 liegt ein elektrischer Fehler vor. Das Glühkerzenmodul kann diese Kerze nicht korrekt ansteuern — Unterbrechung, Kurzschluss oder Widerstand außerhalb des Bereichs — sodass Zylinder 3 nicht vorgeglüht wird. Beim Kaltstart führt das zu schwerem Start, weißem Rauch und unrundem Lauf bis zur Betriebstemperatur. Ursachen: defekte Glühkerze, unterbrochene Zuleitung zur Kerze, Korrosion am Kerzenstecker oder ein fehlerhafter Modulausgang für Zylinder 3.'
   affected_components:
     - glow_plug
     - glow_plug_wiring
@@ -68209,8 +68209,8 @@
     en: Cylinder 4 Glow Plug Circuit
     de: Glühkerze Zylinder 4 Schaltkreis
   description:
-    en: 'The control circuit between the engine controller and the glow plug control module reports a fault. The module cannot reliably drive the glow plugs for cold-start preheating.'
-    de: 'Der Steuerkreis zwischen Motorsteuergerät und Glühkerzenmodul meldet einen Fehler. Das Modul kann die Glühkerzen für die Kaltstart-Vorglühung nicht zuverlässig ansteuern.'
+    en: 'An electrical fault is present in the glow plug circuit for cylinder 4. The glow plug control module cannot drive this plug correctly — open circuit, short, or out-of-range resistance — so cylinder 4 is not pre-heated. On a cold start this causes hard starting, white smoke, and a misfire-like rough run until the engine warms. Causes: a failed glow plug, a broken supply lead to that plug, corrosion at the plug connector, or a faulty module output for cylinder 4.'
+    de: 'Im Glühkerzen-Schaltkreis von Zylinder 4 liegt ein elektrischer Fehler vor. Das Glühkerzenmodul kann diese Kerze nicht korrekt ansteuern — Unterbrechung, Kurzschluss oder Widerstand außerhalb des Bereichs — sodass Zylinder 4 nicht vorgeglüht wird. Beim Kaltstart führt das zu schwerem Start, weißem Rauch und unrundem Lauf bis zur Betriebstemperatur. Ursachen: defekte Glühkerze, unterbrochene Zuleitung zur Kerze, Korrosion am Kerzenstecker oder ein fehlerhafter Modulausgang für Zylinder 4.'
   affected_components:
     - glow_plug
     - glow_plug_wiring
@@ -68247,8 +68247,8 @@
     en: Cylinder 5 Glow Plug Circuit
     de: Glühkerze Zylinder 5 Schaltkreis
   description:
-    en: 'The control circuit between the engine controller and the glow plug control module reports a fault. The module cannot reliably drive the glow plugs for cold-start preheating.'
-    de: 'Der Steuerkreis zwischen Motorsteuergerät und Glühkerzenmodul meldet einen Fehler. Das Modul kann die Glühkerzen für die Kaltstart-Vorglühung nicht zuverlässig ansteuern.'
+    en: 'An electrical fault is present in the glow plug circuit for cylinder 5. The glow plug control module cannot drive this plug correctly — open circuit, short, or out-of-range resistance — so cylinder 5 is not pre-heated. On a cold start this causes hard starting, white smoke, and a misfire-like rough run until the engine warms. Causes: a failed glow plug, a broken supply lead to that plug, corrosion at the plug connector, or a faulty module output for cylinder 5.'
+    de: 'Im Glühkerzen-Schaltkreis von Zylinder 5 liegt ein elektrischer Fehler vor. Das Glühkerzenmodul kann diese Kerze nicht korrekt ansteuern — Unterbrechung, Kurzschluss oder Widerstand außerhalb des Bereichs — sodass Zylinder 5 nicht vorgeglüht wird. Beim Kaltstart führt das zu schwerem Start, weißem Rauch und unrundem Lauf bis zur Betriebstemperatur. Ursachen: defekte Glühkerze, unterbrochene Zuleitung zur Kerze, Korrosion am Kerzenstecker oder ein fehlerhafter Modulausgang für Zylinder 5.'
   affected_components:
     - glow_plug
     - glow_plug_wiring
@@ -68285,8 +68285,8 @@
     en: Cylinder 6 Glow Plug Circuit
     de: Glühkerze Zylinder 6 Schaltkreis
   description:
-    en: 'The control circuit between the engine controller and the glow plug control module reports a fault. The module cannot reliably drive the glow plugs for cold-start preheating.'
-    de: 'Der Steuerkreis zwischen Motorsteuergerät und Glühkerzenmodul meldet einen Fehler. Das Modul kann die Glühkerzen für die Kaltstart-Vorglühung nicht zuverlässig ansteuern.'
+    en: 'An electrical fault is present in the glow plug circuit for cylinder 6. The glow plug control module cannot drive this plug correctly — open circuit, short, or out-of-range resistance — so cylinder 6 is not pre-heated. On a cold start this causes hard starting, white smoke, and a misfire-like rough run until the engine warms. Causes: a failed glow plug, a broken supply lead to that plug, corrosion at the plug connector, or a faulty module output for cylinder 6.'
+    de: 'Im Glühkerzen-Schaltkreis von Zylinder 6 liegt ein elektrischer Fehler vor. Das Glühkerzenmodul kann diese Kerze nicht korrekt ansteuern — Unterbrechung, Kurzschluss oder Widerstand außerhalb des Bereichs — sodass Zylinder 6 nicht vorgeglüht wird. Beim Kaltstart führt das zu schwerem Start, weißem Rauch und unrundem Lauf bis zur Betriebstemperatur. Ursachen: defekte Glühkerze, unterbrochene Zuleitung zur Kerze, Korrosion am Kerzenstecker oder ein fehlerhafter Modulausgang für Zylinder 6.'
   affected_components:
     - glow_plug
     - glow_plug_wiring
@@ -68323,8 +68323,8 @@
     en: Cylinder 7 Glow Plug Circuit
     de: Glühkerze Zylinder 7 Schaltkreis
   description:
-    en: 'The control circuit between the engine controller and the glow plug control module reports a fault. The module cannot reliably drive the glow plugs for cold-start preheating.'
-    de: 'Der Steuerkreis zwischen Motorsteuergerät und Glühkerzenmodul meldet einen Fehler. Das Modul kann die Glühkerzen für die Kaltstart-Vorglühung nicht zuverlässig ansteuern.'
+    en: 'An electrical fault is present in the glow plug circuit for cylinder 7. The glow plug control module cannot drive this plug correctly — open circuit, short, or out-of-range resistance — so cylinder 7 is not pre-heated. On a cold start this causes hard starting, white smoke, and a misfire-like rough run until the engine warms. Causes: a failed glow plug, a broken supply lead to that plug, corrosion at the plug connector, or a faulty module output for cylinder 7.'
+    de: 'Im Glühkerzen-Schaltkreis von Zylinder 7 liegt ein elektrischer Fehler vor. Das Glühkerzenmodul kann diese Kerze nicht korrekt ansteuern — Unterbrechung, Kurzschluss oder Widerstand außerhalb des Bereichs — sodass Zylinder 7 nicht vorgeglüht wird. Beim Kaltstart führt das zu schwerem Start, weißem Rauch und unrundem Lauf bis zur Betriebstemperatur. Ursachen: defekte Glühkerze, unterbrochene Zuleitung zur Kerze, Korrosion am Kerzenstecker oder ein fehlerhafter Modulausgang für Zylinder 7.'
   affected_components:
     - glow_plug
     - glow_plug_wiring
@@ -68361,8 +68361,8 @@
     en: Cylinder 8 Glow Plug Circuit
     de: Glühkerze Zylinder 8 Schaltkreis
   description:
-    en: 'The control circuit between the engine controller and the glow plug control module reports a fault. The module cannot reliably drive the glow plugs for cold-start preheating.'
-    de: 'Der Steuerkreis zwischen Motorsteuergerät und Glühkerzenmodul meldet einen Fehler. Das Modul kann die Glühkerzen für die Kaltstart-Vorglühung nicht zuverlässig ansteuern.'
+    en: 'An electrical fault is present in the glow plug circuit for cylinder 8. The glow plug control module cannot drive this plug correctly — open circuit, short, or out-of-range resistance — so cylinder 8 is not pre-heated. On a cold start this causes hard starting, white smoke, and a misfire-like rough run until the engine warms. Causes: a failed glow plug, a broken supply lead to that plug, corrosion at the plug connector, or a faulty module output for cylinder 8.'
+    de: 'Im Glühkerzen-Schaltkreis von Zylinder 8 liegt ein elektrischer Fehler vor. Das Glühkerzenmodul kann diese Kerze nicht korrekt ansteuern — Unterbrechung, Kurzschluss oder Widerstand außerhalb des Bereichs — sodass Zylinder 8 nicht vorgeglüht wird. Beim Kaltstart führt das zu schwerem Start, weißem Rauch und unrundem Lauf bis zur Betriebstemperatur. Ursachen: defekte Glühkerze, unterbrochene Zuleitung zur Kerze, Korrosion am Kerzenstecker oder ein fehlerhafter Modulausgang für Zylinder 8.'
   affected_components:
     - glow_plug
     - glow_plug_wiring
@@ -69810,8 +69810,8 @@
     en: Sensor Reference Voltage C Circuit Open
     de: Sensor-Referenzspannung C Stromkreis - offen
   description:
-    en: 'Modern ECUs supply 5 V reference rails to multiple sensors. Reference rail B is open - the ECU loses supply on every sensor connected to it (typically TPS B, MAP, or pressure sensors).'
-    de: 'Moderne Steuergeräte versorgen mehrere Sensoren mit 5-V-Referenzschienen. Die Referenzschiene B ist unterbrochen - alle daran hängenden Sensoren (typisch TPS B, MAP oder Drucksensoren) verlieren ihre Versorgung.'
+    en: 'The 5-volt sensor reference rail C is open — the module supplies no voltage on this circuit. Every sensor powered from reference C loses its supply and reads invalid, so the ECU substitutes default values and may limit engine operation. Causes: a broken reference wire, a disconnected connector, or an internal open in the module''s voltage regulator for rail C.'
+    de: 'Die 5-Volt-Sensorreferenz C ist unterbrochen — das Steuergerät liefert auf diesem Kreis keine Spannung. Jeder aus Referenz C versorgte Sensor verliert seine Versorgung und meldet ungültige Werte; das Steuergerät setzt Ersatzwerte ein und begrenzt unter Umständen den Motorbetrieb. Ursachen: unterbrochene Referenzleitung, abgezogener Stecker oder eine interne Unterbrechung im Spannungsregler des Steuergeräts für die Referenz C.'
   affected_components:
     - sensor_reference_voltage_c
   common_causes:
@@ -70350,8 +70350,8 @@
     en: Sensor Reference Voltage D Circuit Open
     de: Sensor-Referenzspannung D Stromkreis - offen
   description:
-    en: 'Modern ECUs supply 5 V reference rails to multiple sensors. Reference rail B is open - the ECU loses supply on every sensor connected to it (typically TPS B, MAP, or pressure sensors).'
-    de: 'Moderne Steuergeräte versorgen mehrere Sensoren mit 5-V-Referenzschienen. Die Referenzschiene B ist unterbrochen - alle daran hängenden Sensoren (typisch TPS B, MAP oder Drucksensoren) verlieren ihre Versorgung.'
+    en: 'The 5-volt sensor reference rail D is open — the module supplies no voltage on this circuit. Every sensor powered from reference D loses its supply and reads invalid, so the ECU substitutes default values and may limit engine operation. Causes: a broken reference wire, a disconnected connector, or an internal open in the module''s voltage regulator for rail D.'
+    de: 'Die 5-Volt-Sensorreferenz D ist unterbrochen — das Steuergerät liefert auf diesem Kreis keine Spannung. Jeder aus Referenz D versorgte Sensor verliert seine Versorgung und meldet ungültige Werte; das Steuergerät setzt Ersatzwerte ein und begrenzt unter Umständen den Motorbetrieb. Ursachen: unterbrochene Referenzleitung, abgezogener Stecker oder eine interne Unterbrechung im Spannungsregler des Steuergeräts für die Referenz D.'
   affected_components:
     - sensor_reference_voltage_d
   common_causes:
@@ -70497,8 +70497,8 @@
     en: Sensor Reference Voltage A Circuit Range or Performance
     de: Sensor-Referenzspannung A Stromkreis - Bereich/Funktion
   description:
-    en: Reference rail A is electrically intact yet not delivering exactly 5.000 V - drift, load-induced sag, or noise pulled the rail out of tolerance.
-    de: Die Referenzschiene A ist elektrisch in Ordnung, liefert aber nicht genau 5,000 V - Drift, lastbedingter Einbruch oder Störungen ziehen die Schiene aus der Toleranz.
+    en: 'The 5-volt sensor reference rail A is electrically connected but its voltage is out of tolerance — drifting, sagging under load, or noisy instead of a stable 5.00 V. Every sensor fed from reference A then reports skewed readings, which can trigger secondary faults. Causes: a partial short or high resistance on the reference-A circuit, an overloaded rail caused by a shorted sensor, or an internal regulator fault in the module.'
+    de: 'Die 5-Volt-Sensorreferenz A ist elektrisch verbunden, ihre Spannung liegt jedoch außerhalb der Toleranz — sie driftet, bricht unter Last ein oder ist verrauscht statt stabil bei 5,00 V. Jeder aus Referenz A versorgte Sensor liefert dann verschobene Werte, was Folgefehler auslösen kann. Ursachen: ein teilweiser Kurzschluss oder hoher Widerstand im Referenzkreis A, eine durch einen kurzgeschlossenen Sensor überlastete Leitung oder ein interner Reglerfehler im Steuergerät.'
   affected_components:
     - sensor_reference_voltage_a
   common_causes:
@@ -70536,8 +70536,8 @@
     en: Sensor Reference Voltage B Circuit Range or Performance
     de: Sensor-Referenzspannung B Stromkreis - Bereich/Funktion
   description:
-    en: 'Reference rail A is electrically intact yet not delivering exactly 5.000 V - drift, load-induced sag, or noise pulled the rail out of tolerance.'
-    de: 'Die Referenzschiene A ist elektrisch in Ordnung, liefert aber nicht genau 5,000 V - Drift, lastbedingter Einbruch oder Störungen ziehen die Schiene aus der Toleranz.'
+    en: 'The 5-volt sensor reference rail B is electrically connected but its voltage is out of tolerance — drifting, sagging under load, or noisy instead of a stable 5.00 V. Every sensor fed from reference B then reports skewed readings, which can trigger secondary faults. Causes: a partial short or high resistance on the reference-B circuit, an overloaded rail caused by a shorted sensor, or an internal regulator fault in the module.'
+    de: 'Die 5-Volt-Sensorreferenz B ist elektrisch verbunden, ihre Spannung liegt jedoch außerhalb der Toleranz — sie driftet, bricht unter Last ein oder ist verrauscht statt stabil bei 5,00 V. Jeder aus Referenz B versorgte Sensor liefert dann verschobene Werte, was Folgefehler auslösen kann. Ursachen: ein teilweiser Kurzschluss oder hoher Widerstand im Referenzkreis B, eine durch einen kurzgeschlossenen Sensor überlastete Leitung oder ein interner Reglerfehler im Steuergerät.'
   affected_components:
     - sensor_reference_voltage_b
   common_causes:
@@ -70575,8 +70575,8 @@
     en: Sensor Reference Voltage C Circuit Range or Performance
     de: Sensor-Referenzspannung C Stromkreis - Bereich/Funktion
   description:
-    en: 'Reference rail A is electrically intact yet not delivering exactly 5.000 V - drift, load-induced sag, or noise pulled the rail out of tolerance.'
-    de: 'Die Referenzschiene A ist elektrisch in Ordnung, liefert aber nicht genau 5,000 V - Drift, lastbedingter Einbruch oder Störungen ziehen die Schiene aus der Toleranz.'
+    en: 'The 5-volt sensor reference rail C is electrically connected but its voltage is out of tolerance — drifting, sagging under load, or noisy instead of a stable 5.00 V. Every sensor fed from reference C then reports skewed readings, which can trigger secondary faults. Causes: a partial short or high resistance on the reference-C circuit, an overloaded rail caused by a shorted sensor, or an internal regulator fault in the module.'
+    de: 'Die 5-Volt-Sensorreferenz C ist elektrisch verbunden, ihre Spannung liegt jedoch außerhalb der Toleranz — sie driftet, bricht unter Last ein oder ist verrauscht statt stabil bei 5,00 V. Jeder aus Referenz C versorgte Sensor liefert dann verschobene Werte, was Folgefehler auslösen kann. Ursachen: ein teilweiser Kurzschluss oder hoher Widerstand im Referenzkreis C, eine durch einen kurzgeschlossenen Sensor überlastete Leitung oder ein interner Reglerfehler im Steuergerät.'
   affected_components:
     - sensor_reference_voltage_c
   common_causes:
@@ -70614,8 +70614,8 @@
     en: Sensor Reference Voltage D Circuit Range or Performance
     de: Sensor-Referenzspannung D Stromkreis - Bereich/Funktion
   description:
-    en: 'Reference rail A is electrically intact yet not delivering exactly 5.000 V - drift, load-induced sag, or noise pulled the rail out of tolerance.'
-    de: 'Die Referenzschiene A ist elektrisch in Ordnung, liefert aber nicht genau 5,000 V - Drift, lastbedingter Einbruch oder Störungen ziehen die Schiene aus der Toleranz.'
+    en: 'The 5-volt sensor reference rail D is electrically connected but its voltage is out of tolerance — drifting, sagging under load, or noisy instead of a stable 5.00 V. Every sensor fed from reference D then reports skewed readings, which can trigger secondary faults. Causes: a partial short or high resistance on the reference-D circuit, an overloaded rail caused by a shorted sensor, or an internal regulator fault in the module.'
+    de: 'Die 5-Volt-Sensorreferenz D ist elektrisch verbunden, ihre Spannung liegt jedoch außerhalb der Toleranz — sie driftet, bricht unter Last ein oder ist verrauscht statt stabil bei 5,00 V. Jeder aus Referenz D versorgte Sensor liefert dann verschobene Werte, was Folgefehler auslösen kann. Ursachen: ein teilweiser Kurzschluss oder hoher Widerstand im Referenzkreis D, eine durch einen kurzgeschlossenen Sensor überlastete Leitung oder ein interner Reglerfehler im Steuergerät.'
   affected_components:
     - sensor_reference_voltage_d
   common_causes:
@@ -71201,8 +71201,8 @@
     en: Internal Control Module Knock Combustion Vibration Sensor Processor 1 Performance
     de: Internes Steuermodul - Klopfsensor-Prozessor 1 - Funktion
   description:
-    en: 'The ECU has detected an internal performance fault in the processing of accelerator pedal position - the redundant signals are tracked internally and one of them shows a software-side anomaly.'
-    de: 'Das Steuergerät erkennt einen internen Funktionsfehler bei der Verarbeitung der Gaspedalposition - die redundanten Signale werden intern verfolgt und eines zeigt eine softwareseitige Anomalie.'
+    en: 'An internal self-test in the control module reports a fault in its processing of the "knock sensor processing, channel 1" value. The module computes and cross-checks this value redundantly inside its own processor; when the results disagree, the code sets. It points to a hardware or software fault inside the module itself, not to a defect of the external sensor. Causes are an internal processor or memory fault, corrupted control-module software, or low or disturbed module supply voltage.'
+    de: 'Ein interner Selbsttest im Steuergerät meldet einen Fehler bei der Verarbeitung der Größe "Klopfsensor-Auswertung Kanal 1". Das Steuergerät berechnet und prüft diesen Wert intern redundant; bei Abweichung wird der Code gesetzt. Er weist auf einen Hardware- oder Softwarefehler im Steuergerät selbst hin, nicht auf einen Defekt des externen Sensors. Ursachen sind ein interner Prozessor- oder Speicherfehler, eine fehlerhafte Steuergeräte-Software oder eine zu niedrige bzw. gestörte Versorgungsspannung.'
   affected_components:
     - ecu_internal_processing
     - knock_sensor
@@ -71250,8 +71250,8 @@
     en: Internal Control Module Knock Combustion Vibration Sensor Processor 2 Performance
     de: Internes Steuermodul - Klopfsensor-Prozessor 2 - Funktion
   description:
-    en: 'The ECU has detected an internal performance fault in the processing of accelerator pedal position - the redundant signals are tracked internally and one of them shows a software-side anomaly.'
-    de: 'Das Steuergerät erkennt einen internen Funktionsfehler bei der Verarbeitung der Gaspedalposition - die redundanten Signale werden intern verfolgt und eines zeigt eine softwareseitige Anomalie.'
+    en: 'An internal self-test in the control module reports a fault in its processing of the "knock sensor processing, channel 2" value. The module computes and cross-checks this value redundantly inside its own processor; when the results disagree, the code sets. It points to a hardware or software fault inside the module itself, not to a defect of the external sensor. Causes are an internal processor or memory fault, corrupted control-module software, or low or disturbed module supply voltage.'
+    de: 'Ein interner Selbsttest im Steuergerät meldet einen Fehler bei der Verarbeitung der Größe "Klopfsensor-Auswertung Kanal 2". Das Steuergerät berechnet und prüft diesen Wert intern redundant; bei Abweichung wird der Code gesetzt. Er weist auf einen Hardware- oder Softwarefehler im Steuergerät selbst hin, nicht auf einen Defekt des externen Sensors. Ursachen sind ein interner Prozessor- oder Speicherfehler, eine fehlerhafte Steuergeräte-Software oder eine zu niedrige bzw. gestörte Versorgungsspannung.'
   affected_components:
     - ecu_internal_processing
     - knock_sensor
@@ -72201,8 +72201,8 @@
     en: Internal Control Module Ignition Coil Control Performance
     de: Internes Steuermodul - Zündspulen-Steuerung - Funktion
   description:
-    en: 'The ECU has detected an internal performance fault in the processing of accelerator pedal position - the redundant signals are tracked internally and one of them shows a software-side anomaly.'
-    de: 'Das Steuergerät erkennt einen internen Funktionsfehler bei der Verarbeitung der Gaspedalposition - die redundanten Signale werden intern verfolgt und eines zeigt eine softwareseitige Anomalie.'
+    en: 'An internal self-test in the control module reports a fault in its processing of the "ignition coil control" value. The module computes and cross-checks this value redundantly inside its own processor; when the results disagree, the code sets. It points to a hardware or software fault inside the module itself, not to a defect of the external sensor. Causes are an internal processor or memory fault, corrupted control-module software, or low or disturbed module supply voltage.'
+    de: 'Ein interner Selbsttest im Steuergerät meldet einen Fehler bei der Verarbeitung der Größe "Zündspulen-Ansteuerung". Das Steuergerät berechnet und prüft diesen Wert intern redundant; bei Abweichung wird der Code gesetzt. Er weist auf einen Hardware- oder Softwarefehler im Steuergerät selbst hin, nicht auf einen Defekt des externen Sensors. Ursachen sind ein interner Prozessor- oder Speicherfehler, eine fehlerhafte Steuergeräte-Software oder eine zu niedrige bzw. gestörte Versorgungsspannung.'
   affected_components:
     - ecu_internal_processing
     - ignition_coils
@@ -72240,8 +72240,8 @@
     en: Sensor Reference Voltage E Circuit Open
     de: Sensor-Referenzspannung E Stromkreis - offen
   description:
-    en: 'Modern ECUs supply 5 V reference rails to multiple sensors. Reference rail B is open - the ECU loses supply on every sensor connected to it (typically TPS B, MAP, or pressure sensors).'
-    de: 'Moderne Steuergeräte versorgen mehrere Sensoren mit 5-V-Referenzschienen. Die Referenzschiene B ist unterbrochen - alle daran hängenden Sensoren (typisch TPS B, MAP oder Drucksensoren) verlieren ihre Versorgung.'
+    en: 'The 5-volt sensor reference rail E is open — the module supplies no voltage on this circuit. Every sensor powered from reference E loses its supply and reads invalid, so the ECU substitutes default values and may limit engine operation. Causes: a broken reference wire, a disconnected connector, or an internal open in the module''s voltage regulator for rail E.'
+    de: 'Die 5-Volt-Sensorreferenz E ist unterbrochen — das Steuergerät liefert auf diesem Kreis keine Spannung. Jeder aus Referenz E versorgte Sensor verliert seine Versorgung und meldet ungültige Werte; das Steuergerät setzt Ersatzwerte ein und begrenzt unter Umständen den Motorbetrieb. Ursachen: unterbrochene Referenzleitung, abgezogener Stecker oder eine interne Unterbrechung im Spannungsregler des Steuergeräts für die Referenz E.'
   affected_components:
     - sensor_reference_voltage_e
   common_causes:
@@ -72387,8 +72387,8 @@
     en: Sensor Reference Voltage E Circuit Range or Performance
     de: Sensor-Referenzspannung E Stromkreis - Bereich/Funktion
   description:
-    en: 'Reference rail A is electrically intact yet not delivering exactly 5.000 V - drift, load-induced sag, or noise pulled the rail out of tolerance.'
-    de: 'Die Referenzschiene A ist elektrisch in Ordnung, liefert aber nicht genau 5,000 V - Drift, lastbedingter Einbruch oder Störungen ziehen die Schiene aus der Toleranz.'
+    en: 'The 5-volt sensor reference rail E is electrically connected but its voltage is out of tolerance — drifting, sagging under load, or noisy instead of a stable 5.00 V. Every sensor fed from reference E then reports skewed readings, which can trigger secondary faults. Causes: a partial short or high resistance on the reference-E circuit, an overloaded rail caused by a shorted sensor, or an internal regulator fault in the module.'
+    de: 'Die 5-Volt-Sensorreferenz E ist elektrisch verbunden, ihre Spannung liegt jedoch außerhalb der Toleranz — sie driftet, bricht unter Last ein oder ist verrauscht statt stabil bei 5,00 V. Jeder aus Referenz E versorgte Sensor liefert dann verschobene Werte, was Folgefehler auslösen kann. Ursachen: ein teilweiser Kurzschluss oder hoher Widerstand im Referenzkreis E, eine durch einen kurzgeschlossenen Sensor überlastete Leitung oder ein interner Reglerfehler im Steuergerät.'
   affected_components:
     - sensor_reference_voltage_e
   common_causes:
@@ -72426,8 +72426,8 @@
     en: Sensor Reference Voltage F Circuit Open
     de: Sensor-Referenzspannung F Stromkreis - offen
   description:
-    en: 'Modern ECUs supply 5 V reference rails to multiple sensors. Reference rail B is open - the ECU loses supply on every sensor connected to it (typically TPS B, MAP, or pressure sensors).'
-    de: 'Moderne Steuergeräte versorgen mehrere Sensoren mit 5-V-Referenzschienen. Die Referenzschiene B ist unterbrochen - alle daran hängenden Sensoren (typisch TPS B, MAP oder Drucksensoren) verlieren ihre Versorgung.'
+    en: 'The 5-volt sensor reference rail F is open — the module supplies no voltage on this circuit. Every sensor powered from reference F loses its supply and reads invalid, so the ECU substitutes default values and may limit engine operation. Causes: a broken reference wire, a disconnected connector, or an internal open in the module''s voltage regulator for rail F.'
+    de: 'Die 5-Volt-Sensorreferenz F ist unterbrochen — das Steuergerät liefert auf diesem Kreis keine Spannung. Jeder aus Referenz F versorgte Sensor verliert seine Versorgung und meldet ungültige Werte; das Steuergerät setzt Ersatzwerte ein und begrenzt unter Umständen den Motorbetrieb. Ursachen: unterbrochene Referenzleitung, abgezogener Stecker oder eine interne Unterbrechung im Spannungsregler des Steuergeräts für die Referenz F.'
   affected_components:
     - sensor_reference_voltage_f
   common_causes:
@@ -72573,8 +72573,8 @@
     en: Sensor Reference Voltage F Circuit Range or Performance
     de: Sensor-Referenzspannung F Stromkreis - Bereich/Funktion
   description:
-    en: 'Reference rail A is electrically intact yet not delivering exactly 5.000 V - drift, load-induced sag, or noise pulled the rail out of tolerance.'
-    de: 'Die Referenzschiene A ist elektrisch in Ordnung, liefert aber nicht genau 5,000 V - Drift, lastbedingter Einbruch oder Störungen ziehen die Schiene aus der Toleranz.'
+    en: 'The 5-volt sensor reference rail F is electrically connected but its voltage is out of tolerance — drifting, sagging under load, or noisy instead of a stable 5.00 V. Every sensor fed from reference F then reports skewed readings, which can trigger secondary faults. Causes: a partial short or high resistance on the reference-F circuit, an overloaded rail caused by a shorted sensor, or an internal regulator fault in the module.'
+    de: 'Die 5-Volt-Sensorreferenz F ist elektrisch verbunden, ihre Spannung liegt jedoch außerhalb der Toleranz — sie driftet, bricht unter Last ein oder ist verrauscht statt stabil bei 5,00 V. Jeder aus Referenz F versorgte Sensor liefert dann verschobene Werte, was Folgefehler auslösen kann. Ursachen: ein teilweiser Kurzschluss oder hoher Widerstand im Referenzkreis F, eine durch einen kurzgeschlossenen Sensor überlastete Leitung oder ein interner Reglerfehler im Steuergerät.'
   affected_components:
     - sensor_reference_voltage_f
   common_causes:
@@ -73343,8 +73343,8 @@
     en: NOx Sensor Processor Performance Bank 1 Sensor 1
     de: NOx-Sensor-Prozessor Bank 1 Sensor 1 - Funktion
   description:
-    en: 'The ECU has detected an internal performance fault in the processing of accelerator pedal position - the redundant signals are tracked internally and one of them shows a software-side anomaly.'
-    de: 'Das Steuergerät erkennt einen internen Funktionsfehler bei der Verarbeitung der Gaspedalposition - die redundanten Signale werden intern verfolgt und eines zeigt eine softwareseitige Anomalie.'
+    en: 'An internal self-test in the control module reports a fault in its processing of the "NOx sensor processing, bank 1 sensor 1" value. The module computes and cross-checks this value redundantly inside its own processor; when the results disagree, the code sets. It points to a hardware or software fault inside the module itself, not to a defect of the external sensor. Causes are an internal processor or memory fault, corrupted control-module software, or low or disturbed module supply voltage.'
+    de: 'Ein interner Selbsttest im Steuergerät meldet einen Fehler bei der Verarbeitung der Größe "NOx-Sensor-Auswertung Bank 1 Sensor 1". Das Steuergerät berechnet und prüft diesen Wert intern redundant; bei Abweichung wird der Code gesetzt. Er weist auf einen Hardware- oder Softwarefehler im Steuergerät selbst hin, nicht auf einen Defekt des externen Sensors. Ursachen sind ein interner Prozessor- oder Speicherfehler, eine fehlerhafte Steuergeräte-Software oder eine zu niedrige bzw. gestörte Versorgungsspannung.'
   affected_components:
     - ecu_internal_processing
     - nox_sensor_b1s1
@@ -76149,8 +76149,8 @@
     en: Gear 6 Incorrect Ratio
     de: 6. Gang falsche Übersetzung
   description:
-    en: 'When 1st gear is commanded, the actual ratio between input and output speed sensors does not match the expected value. Indicates internal slip — typically worn clutches or low line pressure.'
-    de: 'Wenn der 1. Gang angefordert wird, stimmt das gemessene Übersetzungsverhältnis zwischen Eingangs- und Ausgangsdrehzahlsensor nicht mit dem Erwarteten überein. Hinweis auf inneren Schlupf — typischerweise verschlissene Kupplungen oder niedriger Leitungsdruck.'
+    en: 'When gear 6 is engaged, the measured ratio between the input- and output-shaft speed sensors does not match the expected ratio for that gear. This means the transmission is slipping in gear 6 rather than transmitting power solidly. Causes: worn clutch packs or bands, low fluid level or pressure, a stuck shift solenoid, or a valve-body fault affecting gear 6.'
+    de: 'Bei eingelegtem Gang 6 stimmt das gemessene Verhältnis zwischen Eingangs- und Ausgangsdrehzahlsensor nicht mit dem Sollwert dieses Gangs überein. Das Getriebe rutscht in Gang 6 durch, statt die Kraft fest zu übertragen. Ursachen: verschlissene Lamellenkupplungen oder Bremsbänder, zu niedriger Ölstand oder Öldruck, ein klemmender Schaltmagnet oder ein Fehler im Ventilkörper, der Gang 6 betrifft.'
   affected_components:
     - automatic_transmission
     - shift_solenoid
@@ -76273,8 +76273,8 @@
     en: Stuck in Gear 1
     de: In Gang 1 festgefahren
   description:
-    en: The transmission is stuck in gear 1 - upshifts to higher gears are blocked by a stuck shift solenoid or hydraulic valve.
-    de: Das Getriebe ist im 1. Gang blockiert - das Hochschalten in höhere Gänge wird durch einen hängenden Schaltmagnet oder ein Hydraulikventil verhindert.
+    en: 'The transmission is mechanically stuck in gear 1 and will not shift out of it. A shift solenoid or hydraulic valve on the gear-1 circuit has jammed, or a clutch/band has failed to release. Symptoms are no up- or downshifts, harsh behaviour, and often limp mode. Causes: a stuck or failed shift solenoid, a valve-body fault, a hydraulic pressure problem, or internal mechanical damage.'
+    de: 'Das Getriebe ist mechanisch in Gang 1 festgefahren und schaltet nicht mehr heraus. Ein Schaltmagnet oder Hydraulikventil im Gang-1-Kreis klemmt, oder eine Kupplung bzw. Bremsband löst nicht. Symptome: keine Hoch- oder Rückschaltungen, hartes Verhalten und oft Notlauf. Ursachen: klemmender oder defekter Schaltmagnet, Fehler im Ventilkörper, Hydraulikdruckproblem oder interner mechanischer Schaden.'
   affected_components:
     - transmission
     - shift_solenoids
@@ -76312,8 +76312,8 @@
     en: Stuck in Gear 2
     de: In Gang 2 festgefahren
   description:
-    en: 'The transmission is stuck in gear 1 - upshifts to higher gears are blocked by a stuck shift solenoid or hydraulic valve.'
-    de: 'Das Getriebe ist im 1. Gang blockiert - das Hochschalten in höhere Gänge wird durch einen hängenden Schaltmagnet oder ein Hydraulikventil verhindert.'
+    en: 'The transmission is mechanically stuck in gear 2 and will not shift out of it. A shift solenoid or hydraulic valve on the gear-2 circuit has jammed, or a clutch/band has failed to release. Symptoms are no up- or downshifts, harsh behaviour, and often limp mode. Causes: a stuck or failed shift solenoid, a valve-body fault, a hydraulic pressure problem, or internal mechanical damage.'
+    de: 'Das Getriebe ist mechanisch in Gang 2 festgefahren und schaltet nicht mehr heraus. Ein Schaltmagnet oder Hydraulikventil im Gang-2-Kreis klemmt, oder eine Kupplung bzw. Bremsband löst nicht. Symptome: keine Hoch- oder Rückschaltungen, hartes Verhalten und oft Notlauf. Ursachen: klemmender oder defekter Schaltmagnet, Fehler im Ventilkörper, Hydraulikdruckproblem oder interner mechanischer Schaden.'
   affected_components:
     - transmission
   common_causes:
@@ -76350,8 +76350,8 @@
     en: Stuck in Gear 3
     de: In Gang 3 festgefahren
   description:
-    en: 'The transmission is stuck in gear 1 - upshifts to higher gears are blocked by a stuck shift solenoid or hydraulic valve.'
-    de: 'Das Getriebe ist im 1. Gang blockiert - das Hochschalten in höhere Gänge wird durch einen hängenden Schaltmagnet oder ein Hydraulikventil verhindert.'
+    en: 'The transmission is mechanically stuck in gear 3 and will not shift out of it. A shift solenoid or hydraulic valve on the gear-3 circuit has jammed, or a clutch/band has failed to release. Symptoms are no up- or downshifts, harsh behaviour, and often limp mode. Causes: a stuck or failed shift solenoid, a valve-body fault, a hydraulic pressure problem, or internal mechanical damage.'
+    de: 'Das Getriebe ist mechanisch in Gang 3 festgefahren und schaltet nicht mehr heraus. Ein Schaltmagnet oder Hydraulikventil im Gang-3-Kreis klemmt, oder eine Kupplung bzw. Bremsband löst nicht. Symptome: keine Hoch- oder Rückschaltungen, hartes Verhalten und oft Notlauf. Ursachen: klemmender oder defekter Schaltmagnet, Fehler im Ventilkörper, Hydraulikdruckproblem oder interner mechanischer Schaden.'
   affected_components:
     - transmission
   common_causes:
@@ -76388,8 +76388,8 @@
     en: Stuck in Gear 4
     de: In Gang 4 festgefahren
   description:
-    en: 'The transmission is stuck in gear 1 - upshifts to higher gears are blocked by a stuck shift solenoid or hydraulic valve.'
-    de: 'Das Getriebe ist im 1. Gang blockiert - das Hochschalten in höhere Gänge wird durch einen hängenden Schaltmagnet oder ein Hydraulikventil verhindert.'
+    en: 'The transmission is mechanically stuck in gear 4 and will not shift out of it. A shift solenoid or hydraulic valve on the gear-4 circuit has jammed, or a clutch/band has failed to release. Symptoms are no up- or downshifts, harsh behaviour, and often limp mode. Causes: a stuck or failed shift solenoid, a valve-body fault, a hydraulic pressure problem, or internal mechanical damage.'
+    de: 'Das Getriebe ist mechanisch in Gang 4 festgefahren und schaltet nicht mehr heraus. Ein Schaltmagnet oder Hydraulikventil im Gang-4-Kreis klemmt, oder eine Kupplung bzw. Bremsband löst nicht. Symptome: keine Hoch- oder Rückschaltungen, hartes Verhalten und oft Notlauf. Ursachen: klemmender oder defekter Schaltmagnet, Fehler im Ventilkörper, Hydraulikdruckproblem oder interner mechanischer Schaden.'
   affected_components:
     - transmission
   common_causes:
@@ -76478,8 +76478,8 @@
     en: Gear 1 Incorrect Ratio
     de: Gang 1 falsche Übersetzung
   description:
-    en: When 1st gear is commanded, the actual ratio between input and output speed sensors does not match the expected value. Indicates internal slip — typically worn clutches or low line pressure.
-    de: Wenn der 1. Gang angefordert wird, stimmt das gemessene Übersetzungsverhältnis zwischen Eingangs- und Ausgangsdrehzahlsensor nicht mit dem Erwarteten überein. Hinweis auf inneren Schlupf — typischerweise verschlissene Kupplungen oder niedriger Leitungsdruck.
+    en: 'When gear 1 is engaged, the measured ratio between the input- and output-shaft speed sensors does not match the expected ratio for that gear. This means the transmission is slipping in gear 1 rather than transmitting power solidly. Causes: worn clutch packs or bands, low fluid level or pressure, a stuck shift solenoid, or a valve-body fault affecting gear 1.'
+    de: 'Bei eingelegtem Gang 1 stimmt das gemessene Verhältnis zwischen Eingangs- und Ausgangsdrehzahlsensor nicht mit dem Sollwert dieses Gangs überein. Das Getriebe rutscht in Gang 1 durch, statt die Kraft fest zu übertragen. Ursachen: verschlissene Lamellenkupplungen oder Bremsbänder, zu niedriger Ölstand oder Öldruck, ein klemmender Schaltmagnet oder ein Fehler im Ventilkörper, der Gang 1 betrifft.'
   affected_components:
     - transmission_clutch_pack
     - transmission_valve_body
@@ -76525,8 +76525,8 @@
     en: Gear 2 Incorrect Ratio
     de: Gang 2 falsche Übersetzung
   description:
-    en: 'When 1st gear is commanded, the actual ratio between input and output speed sensors does not match the expected value. Indicates internal slip — typically worn clutches or low line pressure.'
-    de: 'Wenn der 1. Gang angefordert wird, stimmt das gemessene Übersetzungsverhältnis zwischen Eingangs- und Ausgangsdrehzahlsensor nicht mit dem Erwarteten überein. Hinweis auf inneren Schlupf — typischerweise verschlissene Kupplungen oder niedriger Leitungsdruck.'
+    en: 'When gear 2 is engaged, the measured ratio between the input- and output-shaft speed sensors does not match the expected ratio for that gear. This means the transmission is slipping in gear 2 rather than transmitting power solidly. Causes: worn clutch packs or bands, low fluid level or pressure, a stuck shift solenoid, or a valve-body fault affecting gear 2.'
+    de: 'Bei eingelegtem Gang 2 stimmt das gemessene Verhältnis zwischen Eingangs- und Ausgangsdrehzahlsensor nicht mit dem Sollwert dieses Gangs überein. Das Getriebe rutscht in Gang 2 durch, statt die Kraft fest zu übertragen. Ursachen: verschlissene Lamellenkupplungen oder Bremsbänder, zu niedriger Ölstand oder Öldruck, ein klemmender Schaltmagnet oder ein Fehler im Ventilkörper, der Gang 2 betrifft.'
   affected_components:
     - transmission_clutch_pack
     - transmission_valve_body
@@ -76572,8 +76572,8 @@
     en: Gear 3 Incorrect Ratio
     de: Gang 3 falsche Übersetzung
   description:
-    en: 'When 1st gear is commanded, the actual ratio between input and output speed sensors does not match the expected value. Indicates internal slip — typically worn clutches or low line pressure.'
-    de: 'Wenn der 1. Gang angefordert wird, stimmt das gemessene Übersetzungsverhältnis zwischen Eingangs- und Ausgangsdrehzahlsensor nicht mit dem Erwarteten überein. Hinweis auf inneren Schlupf — typischerweise verschlissene Kupplungen oder niedriger Leitungsdruck.'
+    en: 'When gear 3 is engaged, the measured ratio between the input- and output-shaft speed sensors does not match the expected ratio for that gear. This means the transmission is slipping in gear 3 rather than transmitting power solidly. Causes: worn clutch packs or bands, low fluid level or pressure, a stuck shift solenoid, or a valve-body fault affecting gear 3.'
+    de: 'Bei eingelegtem Gang 3 stimmt das gemessene Verhältnis zwischen Eingangs- und Ausgangsdrehzahlsensor nicht mit dem Sollwert dieses Gangs überein. Das Getriebe rutscht in Gang 3 durch, statt die Kraft fest zu übertragen. Ursachen: verschlissene Lamellenkupplungen oder Bremsbänder, zu niedriger Ölstand oder Öldruck, ein klemmender Schaltmagnet oder ein Fehler im Ventilkörper, der Gang 3 betrifft.'
   affected_components:
     - transmission_clutch_pack
     - transmission_valve_body
@@ -76614,8 +76614,8 @@
     en: Gear 4 Incorrect Ratio
     de: Gang 4 falsche Übersetzung
   description:
-    en: 'When 1st gear is commanded, the actual ratio between input and output speed sensors does not match the expected value. Indicates internal slip — typically worn clutches or low line pressure.'
-    de: 'Wenn der 1. Gang angefordert wird, stimmt das gemessene Übersetzungsverhältnis zwischen Eingangs- und Ausgangsdrehzahlsensor nicht mit dem Erwarteten überein. Hinweis auf inneren Schlupf — typischerweise verschlissene Kupplungen oder niedriger Leitungsdruck.'
+    en: 'When gear 4 is engaged, the measured ratio between the input- and output-shaft speed sensors does not match the expected ratio for that gear. This means the transmission is slipping in gear 4 rather than transmitting power solidly. Causes: worn clutch packs or bands, low fluid level or pressure, a stuck shift solenoid, or a valve-body fault affecting gear 4.'
+    de: 'Bei eingelegtem Gang 4 stimmt das gemessene Verhältnis zwischen Eingangs- und Ausgangsdrehzahlsensor nicht mit dem Sollwert dieses Gangs überein. Das Getriebe rutscht in Gang 4 durch, statt die Kraft fest zu übertragen. Ursachen: verschlissene Lamellenkupplungen oder Bremsbänder, zu niedriger Ölstand oder Öldruck, ein klemmender Schaltmagnet oder ein Fehler im Ventilkörper, der Gang 4 betrifft.'
   affected_components:
     - transmission_clutch_pack
     - torque_converter
@@ -76656,8 +76656,8 @@
     en: Gear 5 Incorrect Ratio
     de: Gang 5 falsche Übersetzung
   description:
-    en: 'When 1st gear is commanded, the actual ratio between input and output speed sensors does not match the expected value. Indicates internal slip — typically worn clutches or low line pressure.'
-    de: 'Wenn der 1. Gang angefordert wird, stimmt das gemessene Übersetzungsverhältnis zwischen Eingangs- und Ausgangsdrehzahlsensor nicht mit dem Erwarteten überein. Hinweis auf inneren Schlupf — typischerweise verschlissene Kupplungen oder niedriger Leitungsdruck.'
+    en: 'When gear 5 is engaged, the measured ratio between the input- and output-shaft speed sensors does not match the expected ratio for that gear. This means the transmission is slipping in gear 5 rather than transmitting power solidly. Causes: worn clutch packs or bands, low fluid level or pressure, a stuck shift solenoid, or a valve-body fault affecting gear 5.'
+    de: 'Bei eingelegtem Gang 5 stimmt das gemessene Verhältnis zwischen Eingangs- und Ausgangsdrehzahlsensor nicht mit dem Sollwert dieses Gangs überein. Das Getriebe rutscht in Gang 5 durch, statt die Kraft fest zu übertragen. Ursachen: verschlissene Lamellenkupplungen oder Bremsbänder, zu niedriger Ölstand oder Öldruck, ein klemmender Schaltmagnet oder ein Fehler im Ventilkörper, der Gang 5 betrifft.'
   affected_components:
     - transmission_clutch_pack
   common_causes:
@@ -76878,8 +76878,8 @@
     en: Stuck in Gear 5
     de: In Gang 5 festgefahren
   description:
-    en: 'The transmission is stuck in gear 1 - upshifts to higher gears are blocked by a stuck shift solenoid or hydraulic valve.'
-    de: 'Das Getriebe ist im 1. Gang blockiert - das Hochschalten in höhere Gänge wird durch einen hängenden Schaltmagnet oder ein Hydraulikventil verhindert.'
+    en: 'The transmission is mechanically stuck in gear 5 and will not shift out of it. A shift solenoid or hydraulic valve on the gear-5 circuit has jammed, or a clutch/band has failed to release. Symptoms are no up- or downshifts, harsh behaviour, and often limp mode. Causes: a stuck or failed shift solenoid, a valve-body fault, a hydraulic pressure problem, or internal mechanical damage.'
+    de: 'Das Getriebe ist mechanisch in Gang 5 festgefahren und schaltet nicht mehr heraus. Ein Schaltmagnet oder Hydraulikventil im Gang-5-Kreis klemmt, oder eine Kupplung bzw. Bremsband löst nicht. Symptome: keine Hoch- oder Rückschaltungen, hartes Verhalten und oft Notlauf. Ursachen: klemmender oder defekter Schaltmagnet, Fehler im Ventilkörper, Hydraulikdruckproblem oder interner mechanischer Schaden.'
   affected_components:
     - transmission
   common_causes:
@@ -76916,8 +76916,8 @@
     en: Stuck in Gear 6
     de: In Gang 6 festgefahren
   description:
-    en: 'The transmission is stuck in gear 1 - upshifts to higher gears are blocked by a stuck shift solenoid or hydraulic valve.'
-    de: 'Das Getriebe ist im 1. Gang blockiert - das Hochschalten in höhere Gänge wird durch einen hängenden Schaltmagnet oder ein Hydraulikventil verhindert.'
+    en: 'The transmission is mechanically stuck in gear 6 and will not shift out of it. A shift solenoid or hydraulic valve on the gear-6 circuit has jammed, or a clutch/band has failed to release. Symptoms are no up- or downshifts, harsh behaviour, and often limp mode. Causes: a stuck or failed shift solenoid, a valve-body fault, a hydraulic pressure problem, or internal mechanical damage.'
+    de: 'Das Getriebe ist mechanisch in Gang 6 festgefahren und schaltet nicht mehr heraus. Ein Schaltmagnet oder Hydraulikventil im Gang-6-Kreis klemmt, oder eine Kupplung bzw. Bremsband löst nicht. Symptome: keine Hoch- oder Rückschaltungen, hartes Verhalten und oft Notlauf. Ursachen: klemmender oder defekter Schaltmagnet, Fehler im Ventilkörper, Hydraulikdruckproblem oder interner mechanischer Schaden.'
   affected_components:
     - transmission
   common_causes:
@@ -76954,8 +76954,8 @@
     en: Stuck in Gear 7
     de: In Gang 7 festgefahren
   description:
-    en: 'The transmission is stuck in gear 1 - upshifts to higher gears are blocked by a stuck shift solenoid or hydraulic valve.'
-    de: 'Das Getriebe ist im 1. Gang blockiert - das Hochschalten in höhere Gänge wird durch einen hängenden Schaltmagnet oder ein Hydraulikventil verhindert.'
+    en: 'The transmission is mechanically stuck in gear 7 and will not shift out of it. A shift solenoid or hydraulic valve on the gear-7 circuit has jammed, or a clutch/band has failed to release. Symptoms are no up- or downshifts, harsh behaviour, and often limp mode. Causes: a stuck or failed shift solenoid, a valve-body fault, a hydraulic pressure problem, or internal mechanical damage.'
+    de: 'Das Getriebe ist mechanisch in Gang 7 festgefahren und schaltet nicht mehr heraus. Ein Schaltmagnet oder Hydraulikventil im Gang-7-Kreis klemmt, oder eine Kupplung bzw. Bremsband löst nicht. Symptome: keine Hoch- oder Rückschaltungen, hartes Verhalten und oft Notlauf. Ursachen: klemmender oder defekter Schaltmagnet, Fehler im Ventilkörper, Hydraulikdruckproblem oder interner mechanischer Schaden.'
   affected_components:
     - transmission
   common_causes:
@@ -77069,8 +77069,8 @@
     en: Unable to Engage Gear 1
     de: Gang 1 nicht einlegbar
   description:
-    en: The transmission cannot engage gear 1 - typically a failed shift solenoid, clutch pack, or hydraulic supply problem on the gear-1 circuit.
-    de: Das Getriebe kann den 1. Gang nicht einlegen - meist defekter Schaltmagnet, Kupplungspaket oder Hydraulikproblem im 1.-Gang-Kreis.
+    en: 'The transmission cannot engage gear 1 when it is commanded. The element that should apply for gear 1 — shift solenoid, clutch pack, or band — does not build or hold pressure, so the gear never locks in. Symptoms are slipping, no power transfer in that gear, or a forced limp mode. Causes: a failed shift solenoid, a worn clutch pack, or a valve-body or hydraulic-supply fault on the gear-1 circuit.'
+    de: 'Das Getriebe kann Gang 1 bei Anforderung nicht einlegen. Das für Gang 1 zuständige Element — Schaltmagnet, Lamellenkupplung oder Bremsband — baut keinen Druck auf oder hält ihn nicht, der Gang rastet nicht ein. Symptome: Durchrutschen, keine Kraftübertragung in diesem Gang oder erzwungener Notlauf. Ursachen: defekter Schaltmagnet, verschlissene Lamellenkupplung oder ein Fehler im Ventilkörper bzw. in der Hydraulikversorgung des Gang-1-Kreises.'
   affected_components:
     - transmission
   common_causes:
@@ -77584,8 +77584,8 @@
     en: Unable to Engage Gear 2
     de: Gang 2 nicht einlegbar
   description:
-    en: 'The transmission cannot engage gear 1 - typically a failed shift solenoid, clutch pack, or hydraulic supply problem on the gear-1 circuit.'
-    de: 'Das Getriebe kann den 1. Gang nicht einlegen - meist defekter Schaltmagnet, Kupplungspaket oder Hydraulikproblem im 1.-Gang-Kreis.'
+    en: 'The transmission cannot engage gear 2 when it is commanded. The element that should apply for gear 2 — shift solenoid, clutch pack, or band — does not build or hold pressure, so the gear never locks in. Symptoms are slipping, no power transfer in that gear, or a forced limp mode. Causes: a failed shift solenoid, a worn clutch pack, or a valve-body or hydraulic-supply fault on the gear-2 circuit.'
+    de: 'Das Getriebe kann Gang 2 bei Anforderung nicht einlegen. Das für Gang 2 zuständige Element — Schaltmagnet, Lamellenkupplung oder Bremsband — baut keinen Druck auf oder hält ihn nicht, der Gang rastet nicht ein. Symptome: Durchrutschen, keine Kraftübertragung in diesem Gang oder erzwungener Notlauf. Ursachen: defekter Schaltmagnet, verschlissene Lamellenkupplung oder ein Fehler im Ventilkörper bzw. in der Hydraulikversorgung des Gang-2-Kreises.'
   affected_components:
     - transmission
   common_causes:
@@ -77622,8 +77622,8 @@
     en: Unable to Engage Gear 3
     de: Gang 3 nicht einlegbar
   description:
-    en: 'The transmission cannot engage gear 1 - typically a failed shift solenoid, clutch pack, or hydraulic supply problem on the gear-1 circuit.'
-    de: 'Das Getriebe kann den 1. Gang nicht einlegen - meist defekter Schaltmagnet, Kupplungspaket oder Hydraulikproblem im 1.-Gang-Kreis.'
+    en: 'The transmission cannot engage gear 3 when it is commanded. The element that should apply for gear 3 — shift solenoid, clutch pack, or band — does not build or hold pressure, so the gear never locks in. Symptoms are slipping, no power transfer in that gear, or a forced limp mode. Causes: a failed shift solenoid, a worn clutch pack, or a valve-body or hydraulic-supply fault on the gear-3 circuit.'
+    de: 'Das Getriebe kann Gang 3 bei Anforderung nicht einlegen. Das für Gang 3 zuständige Element — Schaltmagnet, Lamellenkupplung oder Bremsband — baut keinen Druck auf oder hält ihn nicht, der Gang rastet nicht ein. Symptome: Durchrutschen, keine Kraftübertragung in diesem Gang oder erzwungener Notlauf. Ursachen: defekter Schaltmagnet, verschlissene Lamellenkupplung oder ein Fehler im Ventilkörper bzw. in der Hydraulikversorgung des Gang-3-Kreises.'
   affected_components:
     - transmission
   common_causes:
@@ -77660,8 +77660,8 @@
     en: Unable to Engage Gear 4
     de: Gang 4 nicht einlegbar
   description:
-    en: 'The transmission cannot engage gear 1 - typically a failed shift solenoid, clutch pack, or hydraulic supply problem on the gear-1 circuit.'
-    de: 'Das Getriebe kann den 1. Gang nicht einlegen - meist defekter Schaltmagnet, Kupplungspaket oder Hydraulikproblem im 1.-Gang-Kreis.'
+    en: 'The transmission cannot engage gear 4 when it is commanded. The element that should apply for gear 4 — shift solenoid, clutch pack, or band — does not build or hold pressure, so the gear never locks in. Symptoms are slipping, no power transfer in that gear, or a forced limp mode. Causes: a failed shift solenoid, a worn clutch pack, or a valve-body or hydraulic-supply fault on the gear-4 circuit.'
+    de: 'Das Getriebe kann Gang 4 bei Anforderung nicht einlegen. Das für Gang 4 zuständige Element — Schaltmagnet, Lamellenkupplung oder Bremsband — baut keinen Druck auf oder hält ihn nicht, der Gang rastet nicht ein. Symptome: Durchrutschen, keine Kraftübertragung in diesem Gang oder erzwungener Notlauf. Ursachen: defekter Schaltmagnet, verschlissene Lamellenkupplung oder ein Fehler im Ventilkörper bzw. in der Hydraulikversorgung des Gang-4-Kreises.'
   affected_components:
     - transmission
   common_causes:
@@ -77698,8 +77698,8 @@
     en: Unable to Engage Gear 5
     de: Gang 5 nicht einlegbar
   description:
-    en: 'The transmission cannot engage gear 1 - typically a failed shift solenoid, clutch pack, or hydraulic supply problem on the gear-1 circuit.'
-    de: 'Das Getriebe kann den 1. Gang nicht einlegen - meist defekter Schaltmagnet, Kupplungspaket oder Hydraulikproblem im 1.-Gang-Kreis.'
+    en: 'The transmission cannot engage gear 5 when it is commanded. The element that should apply for gear 5 — shift solenoid, clutch pack, or band — does not build or hold pressure, so the gear never locks in. Symptoms are slipping, no power transfer in that gear, or a forced limp mode. Causes: a failed shift solenoid, a worn clutch pack, or a valve-body or hydraulic-supply fault on the gear-5 circuit.'
+    de: 'Das Getriebe kann Gang 5 bei Anforderung nicht einlegen. Das für Gang 5 zuständige Element — Schaltmagnet, Lamellenkupplung oder Bremsband — baut keinen Druck auf oder hält ihn nicht, der Gang rastet nicht ein. Symptome: Durchrutschen, keine Kraftübertragung in diesem Gang oder erzwungener Notlauf. Ursachen: defekter Schaltmagnet, verschlissene Lamellenkupplung oder ein Fehler im Ventilkörper bzw. in der Hydraulikversorgung des Gang-5-Kreises.'
   affected_components:
     - transmission
   common_causes:
@@ -77736,8 +77736,8 @@
     en: Unable to Engage Gear 6
     de: Gang 6 nicht einlegbar
   description:
-    en: 'The transmission cannot engage gear 1 - typically a failed shift solenoid, clutch pack, or hydraulic supply problem on the gear-1 circuit.'
-    de: 'Das Getriebe kann den 1. Gang nicht einlegen - meist defekter Schaltmagnet, Kupplungspaket oder Hydraulikproblem im 1.-Gang-Kreis.'
+    en: 'The transmission cannot engage gear 6 when it is commanded. The element that should apply for gear 6 — shift solenoid, clutch pack, or band — does not build or hold pressure, so the gear never locks in. Symptoms are slipping, no power transfer in that gear, or a forced limp mode. Causes: a failed shift solenoid, a worn clutch pack, or a valve-body or hydraulic-supply fault on the gear-6 circuit.'
+    de: 'Das Getriebe kann Gang 6 bei Anforderung nicht einlegen. Das für Gang 6 zuständige Element — Schaltmagnet, Lamellenkupplung oder Bremsband — baut keinen Druck auf oder hält ihn nicht, der Gang rastet nicht ein. Symptome: Durchrutschen, keine Kraftübertragung in diesem Gang oder erzwungener Notlauf. Ursachen: defekter Schaltmagnet, verschlissene Lamellenkupplung oder ein Fehler im Ventilkörper bzw. in der Hydraulikversorgung des Gang-6-Kreises.'
   affected_components:
     - transmission
   common_causes:
@@ -77774,8 +77774,8 @@
     en: Unable to Engage Gear 7
     de: Gang 7 nicht einlegbar
   description:
-    en: 'The transmission cannot engage gear 1 - typically a failed shift solenoid, clutch pack, or hydraulic supply problem on the gear-1 circuit.'
-    de: 'Das Getriebe kann den 1. Gang nicht einlegen - meist defekter Schaltmagnet, Kupplungspaket oder Hydraulikproblem im 1.-Gang-Kreis.'
+    en: 'The transmission cannot engage gear 7 when it is commanded. The element that should apply for gear 7 — shift solenoid, clutch pack, or band — does not build or hold pressure, so the gear never locks in. Symptoms are slipping, no power transfer in that gear, or a forced limp mode. Causes: a failed shift solenoid, a worn clutch pack, or a valve-body or hydraulic-supply fault on the gear-7 circuit.'
+    de: 'Das Getriebe kann Gang 7 bei Anforderung nicht einlegen. Das für Gang 7 zuständige Element — Schaltmagnet, Lamellenkupplung oder Bremsband — baut keinen Druck auf oder hält ihn nicht, der Gang rastet nicht ein. Symptome: Durchrutschen, keine Kraftübertragung in diesem Gang oder erzwungener Notlauf. Ursachen: defekter Schaltmagnet, verschlissene Lamellenkupplung oder ein Fehler im Ventilkörper bzw. in der Hydraulikversorgung des Gang-7-Kreises.'
   affected_components:
     - transmission
   common_causes:
