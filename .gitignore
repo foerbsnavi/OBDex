@@ -10,3 +10,6 @@ npm-debug.log*
 *.tgz
 .cache/
 obdex_funktionen.txt
+
+# Interner Arbeitsplan (nicht veröffentlichen)
+aufarbeitungs_plan.html

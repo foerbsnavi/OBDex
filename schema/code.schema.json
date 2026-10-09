@@ -122,6 +122,11 @@
       "type": "array",
       "items": { "type": "string" },
       "minItems": 1
+    },
+    "reviewed": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "Date (YYYY-MM-DD) of the last individual review: title verified against independent code lists, sources fetched and checked, all prose rewritten for this code."
     }
   }
 }

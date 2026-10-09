@@ -26,6 +26,16 @@ By submitting a pull request you agree that your contribution is dedicated to th
 
 If you're enriching a stub entry, move it from `*_stub.yaml` to `*_enriched.yaml` in the same PR — duplicates are blocked by CI.
 
+## Reviewing codes
+
+The dataset is being reviewed code by code in packages of 50 (`node tools/paket.mjs liste`). A reviewed code has its title checked against at least two independent code lists, at least two sources that explain this specific code or component (catch-all pages such as "On-board diagnostics" do not count), and all prose rewritten for this code. It then carries `reviewed: 'YYYY-MM-DD'`.
+
+1. `node tools/paket.mjs hole <nr> <work.yaml>` extracts a package into a work file.
+2. Edit the work file.
+3. `node tools/quellen_check.mjs <work.yaml>` fetches every source URL and flags codes below the source minimum.
+4. `node tools/paket.mjs schreibe <work.yaml>` validates and writes the package back; all other lines stay untouched.
+5. Run `npm run check`.
+
 ## Adding a PID
 
 1. Mode 01 / Mode 09 PIDs go to `data/pids/mode01.yaml` / `data/pids/mode09.yaml`. These are standardised in SAE J1979 / ISO 15031-5; `sources` are optional for them.
