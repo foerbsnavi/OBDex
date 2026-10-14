@@ -23,7 +23,7 @@ If you are looking up a P-, B-, C- or U-code from your scan tool, this is a sing
 - **All 9,533 generic codes** of the SAE J2012 / ISO 15031-6 standard in one repository, every one with the full schema.
 - **Bilingual (English + German)** title, description, affected components, common causes with likelihood, symptoms, repair difficulty + cost + hours, MIL / emissions / limp-mode flags, related codes, and at least one public source — for every code.
 - **132 OBD-II PIDs** (Mode 01 + Mode 09) with formulas, units, and ranges.
-- **CC0 data, MIT tooling.** Use it in your scan-tool app, garage software, training material — no attribution required, no licence fee.
+- **CC0 data, MIT tooling.** Use it in your scan-tool app, garage software, training material — no licence fee. Attribution is not required, but a credit helps the project grow (see [How to credit](#how-to-credit)).
 - **Static JSON over CDN.** No API key, no rate limit, no account.
 
 Manufacturer-specific codes (P1xxx, B1xxx, etc.) are deliberately out of scope — those are vendor IP. obdex covers only the generic layer that every OBD-II tool already speaks.
@@ -168,6 +168,20 @@ JSON Schema Draft 2020-12. CI rejects any pull request that fails validation or 
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Short version: one PR per code or coherent batch, sources required, schema-validated automatically.
+
+## How to credit
+
+The data is CC0, so a credit is voluntary. If obdex is useful to you, a short line in your app, documentation or about page keeps the project alive and helps others find it:
+
+> OBD-II code data: [obdex](https://github.com/foerbsnavi/obdex) (CC0-1.0)
+
+HTML:
+
+```html
+OBD-II code data: <a href="https://github.com/foerbsnavi/obdex">obdex</a> (CC0-1.0)
+```
+
+For papers and reports, use the **Cite this repository** button on GitHub (from [`CITATION.cff`](CITATION.cff)). The same credit line is also published in [`meta.json`](https://foerbsnavi.github.io/obdex/meta.json) under `attribution`.
 
 ## License
 

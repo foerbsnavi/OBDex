@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this data, please credit it as below. The data is CC0-1.0, so a credit is voluntary, but appreciated."
+title: "obdex — open database of generic OBD-II diagnostic trouble codes and PIDs"
+type: dataset
+authors:
+  - name: "obdex contributors"
+repository-code: "https://github.com/foerbsnavi/obdex"
+url: "https://foerbsnavi.github.io/obdex/"
+license: CC0-1.0
+keywords:
+  - OBD-II
+  - DTC
+  - diagnostic trouble codes
+  - SAE J2012
+  - PID

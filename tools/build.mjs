@@ -61,6 +61,12 @@ const totalRelated = generic.reduce((s, c) => s + (Array.isArray(c.related_codes
 
 const meta = {
   generated_at: new Date().toISOString(),
+  license: "CC0-1.0",
+  attribution: {
+    note: "Credit is voluntary under CC0, but appreciated.",
+    text: "OBD-II code data: obdex (https://github.com/foerbsnavi/obdex), CC0-1.0",
+    html: "OBD-II code data: <a href=\"https://github.com/foerbsnavi/obdex\">obdex</a> (CC0-1.0)"
+  },
   counts: {
     generic: {
       total: totalCodes,
@@ -275,7 +281,7 @@ ${pidLinks}
   <footer>
     <p>Source on <a href="https://github.com/foerbsnavi/obdex">GitHub</a> · <a href="https://github.com/foerbsnavi/obdex/blob/main/CONTRIBUTING.md">contributing</a> · <a href="https://github.com/foerbsnavi/obdex/issues">report a wrong description</a> · <a href="https://obd.signalwelt.de/">live search</a></p>
     <p>Identifiers follow SAE J2012. Descriptions are independently authored, with Wikipedia and source references on each code.</p>
-    <p>Data <a href="https://github.com/foerbsnavi/obdex/blob/main/LICENSE-DATA">CC0-1.0</a> · code <a href="https://github.com/foerbsnavi/obdex/blob/main/LICENSE-CODE">MIT</a></p>
+    <p>Data <a href="https://github.com/foerbsnavi/obdex/blob/main/LICENSE-DATA">CC0-1.0</a> · code <a href="https://github.com/foerbsnavi/obdex/blob/main/LICENSE-CODE">MIT</a> · credit is voluntary, but appreciated: <a href="https://github.com/foerbsnavi/obdex#how-to-credit">how to credit</a></p>
   </footer>
 </main>
 
