@@ -153920,8 +153920,8 @@
     en: Hybrid/EV Battery Pack Cooling Fan 1 Stuck On
     de: Hybrid-/EV-Batteriepack Lüfter 1 hängt ein
   description:
-    en: "P0A83 means battery cooling fan 1 keeps turning although the controller has switched it off. No manufacturer publicly documents this exact code. CARB asks for fan outputs to be checked for proper response to commands. GM shows the method under its sense code P0BC8: with the fan off for more than 20 s, a reported speed above about 250 rpm counts as a fault. Likely causes are a control wire shorted to supply, a welded fan relay (GM files that as P0BC1) or a fan controller that ignores the command. The pack stays cool, but the fan drains the 12 V battery when parked and stays loud. Do not confuse it with P0A82 (fan too weak or off) or the circuit codes P0A81/P0A84/P0A85."
-    de: "P0A83 heißt: Batterielüfter 1 dreht weiter, obwohl das Steuergerät ihn abgeschaltet hat. Kein Hersteller dokumentiert genau diesen Code öffentlich. CARB verlangt, dass Lüfterausgänge auf korrekte Reaktion auf Befehle geprüft werden. Wie das geht, zeigt GM unter dem eigenen Sensorcode P0BC8: Ist der Lüfter länger als 20 s aus und meldet trotzdem über etwa 250 U/min, zählt das als Fehler. Wahrscheinliche Ursachen sind eine Steuerleitung mit Schluss nach Plus, ein verschweißtes Lüfterrelais (bei GM als P0BC1 geführt) oder eine Lüfterelektronik, die den Befehl ignoriert. Der Akku bleibt kühl, doch der Lüfter leert im Stand die 12-V-Batterie und bleibt laut. Abgrenzung: P0A82 (zu schwach/aus) und Kreiscodes P0A81/P0A84/P0A85."
+    en: "P0A83 means battery cooling fan 1 keeps turning although the controller has switched it off. No manufacturer publicly documents this exact code. CARB asks for fan outputs to be checked for proper response to commands. GM shows the method under its sense code P0BC8: with the fan off for more than 20 s, a reported speed above 120 rpm counts as a fault. Likely causes are a control wire shorted to supply, a welded fan relay (GM files that as P0BC1) or a fan controller that ignores the command. The pack stays cool, but the fan drains the 12 V battery when parked and stays loud. Do not confuse it with P0A82 (fan too weak or off) or the circuit codes P0A81/P0A84/P0A85."
+    de: "P0A83 heißt: Batterielüfter 1 dreht weiter, obwohl das Steuergerät ihn abgeschaltet hat. Kein Hersteller dokumentiert genau diesen Code öffentlich. CARB verlangt, dass Lüfterausgänge auf korrekte Reaktion auf Befehle geprüft werden. Wie das geht, zeigt GM unter dem eigenen Sensorcode P0BC8: Ist der Lüfter länger als 20 s aus und meldet trotzdem über 120 U/min, zählt das als Fehler. Wahrscheinliche Ursachen sind eine Steuerleitung mit Schluss nach Plus, ein verschweißtes Lüfterrelais (bei GM als P0BC1 geführt) oder eine Lüfterelektronik, die den Befehl ignoriert. Der Akku bleibt kühl, doch der Lüfter leert im Stand die 12-V-Batterie und bleibt laut. Abgrenzung: P0A82 (zu schwach/aus) und Kreiscodes P0A81/P0A84/P0A85."
   affected_components:
     - battery_cooling_fan
     - fan_motor
@@ -153971,7 +153971,8 @@
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://gsi.ext.gm.com/gmspo/mode6/pdf/2016/16OBDG07B%20Engine%20Diagnostics.pdf
     - https://gsi.ext.gm.com/gmspo/mode6/pdf/2011/11OBDG10%20HYBRID%20Diagnostics.pdf
-  reviewed: '2026-10-14'
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2016/16OBDG02%20Hybrid%20Diagnostics.pdf
+  reviewed: '2026-10-17'
 
 - code: P0A84
   category: powertrain
