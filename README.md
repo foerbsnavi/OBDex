@@ -16,7 +16,7 @@ If you are looking up a P-, B-, C- or U-code from your scan tool, this is a sing
 | | |
 |---|---|
 | 🚗 **Live search app** | **<https://obd.signalwelt.de/>** — full DE/EN UI, PWA, deep-linkable, PDF export. Try `P0420`, `oxygen sensor`, `Lambdasonde`. |
-| 📊 **Data browser** | <https://foerbsnavi.github.io/obdex/> — search the raw database, download JSON bundles. |
+| 📊 **Data browser** | <https://foerbsnavi.github.io/OBDex/> — search the raw database, download JSON bundles. |
 
 ## What you get
 
@@ -33,7 +33,7 @@ Manufacturer-specific codes (P1xxx, B1xxx, etc.) are deliberately out of scope �
 Look up a single code in three lines of JavaScript:
 
 ```js
-const r = await fetch("https://foerbsnavi.github.io/obdex/generic.min.json");
+const r = await fetch("https://foerbsnavi.github.io/OBDex/generic.min.json");
 const codes = await r.json();
 const p0420 = codes.find(c => c.code === "P0420");
 console.log(p0420.title.en);  // "Catalyst System Efficiency Below Threshold (Bank 1)"
@@ -42,7 +42,7 @@ console.log(p0420.title.en);  // "Catalyst System Efficiency Below Threshold (Ba
 Or via curl + jq:
 
 ```bash
-curl -s https://foerbsnavi.github.io/obdex/generic.min.json | jq '.[] | select(.code=="P0420")'
+curl -s https://foerbsnavi.github.io/OBDex/generic.min.json | jq '.[] | select(.code=="P0420")'
 ```
 
 ## Endpoints
@@ -50,11 +50,11 @@ curl -s https://foerbsnavi.github.io/obdex/generic.min.json | jq '.[] | select(.
 Direct JSON over GitHub Pages — no auth, no rate limit. Each file also exists as a minified `.min.json` variant for production.
 
 ```
-https://foerbsnavi.github.io/obdex/all.json          # codes + PIDs combined
-https://foerbsnavi.github.io/obdex/generic.json      # DTCs only (9,533 entries)
-https://foerbsnavi.github.io/obdex/pids/mode01.json  # live data PIDs
-https://foerbsnavi.github.io/obdex/pids/mode09.json  # vehicle info PIDs
-https://foerbsnavi.github.io/obdex/meta.json         # counts, build time
+https://foerbsnavi.github.io/OBDex/all.json          # codes + PIDs combined
+https://foerbsnavi.github.io/OBDex/generic.json      # DTCs only (9,533 entries)
+https://foerbsnavi.github.io/OBDex/pids/mode01.json  # live data PIDs
+https://foerbsnavi.github.io/OBDex/pids/mode09.json  # vehicle info PIDs
+https://foerbsnavi.github.io/OBDex/meta.json         # counts, build time
 ```
 
 ## What an entry looks like
@@ -152,7 +152,7 @@ Every code carries the full schema: English + German title and description, affe
 
 The 132 PIDs (Mode 01 + Mode 09) are all complete with formula, unit, and range where applicable.
 
-Live counts are also in [`meta.json`](https://foerbsnavi.github.io/obdex/meta.json) and visualised on the [landing page](https://foerbsnavi.github.io/obdex/).
+Live counts are also in [`meta.json`](https://foerbsnavi.github.io/OBDex/meta.json) and visualised on the [landing page](https://foerbsnavi.github.io/OBDex/).
 
 ## Maintainer notes
 
@@ -181,7 +181,7 @@ HTML:
 OBD-II code data: <a href="https://github.com/foerbsnavi/obdex">obdex</a> (CC0-1.0)
 ```
 
-For papers and reports, use the **Cite this repository** button on GitHub (from [`CITATION.cff`](CITATION.cff)). The same credit line is also published in [`meta.json`](https://foerbsnavi.github.io/obdex/meta.json) under `attribution`.
+For papers and reports, use the **Cite this repository** button on GitHub (from [`CITATION.cff`](CITATION.cff)). The same credit line is also published in [`meta.json`](https://foerbsnavi.github.io/OBDex/meta.json) under `attribution`.
 
 ## License
 

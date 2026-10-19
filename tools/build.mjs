@@ -127,7 +127,7 @@ const indexHtml = `<!doctype html>
   <meta property="og:title" content="obdex — OBD-II diagnostic codes &amp; PIDs">
   <meta property="og:description" content="Open, machine-readable database of ${totalCodes.toLocaleString("en-US")} generic OBD-II codes and ${totalPids} PIDs. SAE J2012, CC0.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://foerbsnavi.github.io/obdex/">
+  <meta property="og:url" content="https://foerbsnavi.github.io/OBDex/">
   <meta name="twitter:card" content="summary">
   <style>
     :root { color-scheme: light dark; --fg: #111; --muted: #666; --bg: #fff; --accent: #0969da; --border: #d0d7de; --code-bg: #f6f8fa; --card: #f6f8fa; --pill-bg: #ddf4ff; --pill-fg: #0969da; --warn-bg: #fff8c5; --warn-fg: #7d4e00; }

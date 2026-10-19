@@ -5,7 +5,7 @@ type: dataset
 authors:
   - name: "obdex contributors"
 repository-code: "https://github.com/foerbsnavi/obdex"
-url: "https://foerbsnavi.github.io/obdex/"
+url: "https://foerbsnavi.github.io/OBDex/"
 license: CC0-1.0
 keywords:
   - OBD-II
