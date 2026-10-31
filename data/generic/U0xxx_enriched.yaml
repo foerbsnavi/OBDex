@@ -9302,8 +9302,8 @@
 - code: U0144
   category: network
   title:
-    en: Lost Communication with Personalization Module "B"
-    de: Kommunikation mit Personalisierungs-Modul "B" verloren
+    en: Lost Communication With Body Control Module D
+    de: Kommunikation mit Bordnetzsteuergerät D verloren
   description:
     en: 'The Personalization Module "B" has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Driver-profile settings (seats, mirrors, presets) are not applied. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
     de: 'Personalisierungs-Modul "B" — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Fahrerprofil-Einstellungen (Sitze, Spiegel, Vorwahlen) werden nicht übernommen. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
@@ -9352,8 +9352,8 @@
 - code: U0145
   category: network
   title:
-    en: Lost Communication with Restraints Control Module Auxiliary
-    de: Kommunikation mit Auxiliar-Rückhaltesystem-Steuergerät verloren
+    en: Lost Communication With Body Control Module E
+    de: Kommunikation mit Bordnetzsteuergerät E verloren
   description:
     en: A secondary or auxiliary airbag/restraints controller (e.g. for rear or curtain bags) has stopped responding. The airbag warning lamp lights up and parts of the restraint system may be disabled.
     de: Ein sekundäres oder zusätzliches Airbag-/Rückhalte-Steuergerät (z. B. für hintere oder Kopfairbags) antwortet nicht mehr. Die Airbag-Warnlampe leuchtet, Teile des Rückhaltesystems können deaktiviert sein.
@@ -9503,8 +9503,8 @@
 - code: U0148
   category: network
   title:
-    en: Lost Communication with Body Control Module "C"
-    de: Kommunikation mit Bordnetzsteuergerät "C" verloren
+    en: Lost Communication With Gateway C
+    de: Kommunikation mit Gateway C verloren
   description:
     en: 'The Body Control Module "C" has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. A third body controller is unreachable; its assigned body functions are affected. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
     de: 'Bordnetzsteuergerät "C" — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Ein drittes Karosseriesteuergerät ist nicht erreichbar; die zugeordneten Funktionen sind betroffen. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
@@ -9553,8 +9553,8 @@
 - code: U0149
   category: network
   title:
-    en: Lost Communication with Door Driver Module
-    de: Kommunikation mit Fahrertür-Modul verloren
+    en: Lost Communication With Gateway D
+    de: Kommunikation mit Gateway D verloren
   description:
     en: 'The Door Driver Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The driver-door module is silent; its window, lock, and mirror controls fail. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
     de: 'Fahrertür-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Das Fahrertürmodul meldet sich nicht; Fensterheber, Verriegelung und Spiegel der Tür fallen aus. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
@@ -9865,8 +9865,8 @@
 - code: U0150
   category: network
   title:
-    en: Lost Communication with Side Object Detection Control Module Left
-    de: Kommunikation mit Seitenobjekterkennung links verloren
+    en: Lost Communication With Gateway E
+    de: Kommunikation mit Gateway E verloren
   description:
     en: 'The Side Object Detection Control Module Left has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Left-side blind-spot monitoring stops working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
     de: 'Seitenobjekterkennung links — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Totwinkelüberwachung links fällt aus. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
@@ -10012,8 +10012,8 @@
 - code: U0153
   category: network
   title:
-    en: Lost Communication with Restraints Control Module B
-    de: Kommunikation mit Airbag-Steuergerät B verloren
+    en: Lost Communication With Side Restraints Control Module Right
+    de: Kommunikation mit Seiten-Airbag-Steuergerät rechts verloren
   description:
     en: 'The Restraints Control Module B has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. A second restraints controller is unreachable, affecting airbag readiness. Safety-critical. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
     de: 'Airbag-Steuergerät B — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Ein zweites Airbag-Steuergerät ist nicht erreichbar; die Airbag-Bereitschaft ist betroffen. Sicherheitskritisch. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
@@ -10209,8 +10209,8 @@
 - code: U0157
   category: network
   title:
-    en: Lost Communication with Personalization Control Module
-    de: Kommunikation mit Personalisierungs-Steuergerät verloren
+    en: Lost Communication With Information Center B
+    de: Kommunikation mit Informations-Center B verloren
   description:
     en: 'The Personalization Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Stored personalisation settings are not loaded. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
     de: 'Personalisierungs-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Gespeicherte Personalisierungs-Einstellungen werden nicht geladen. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
@@ -11533,8 +11533,8 @@
 - code: U0173
   category: network
   title:
-    en: Communication Bus "C" Off
-    de: Kommunikationsbus "C" abgeschaltet
+    en: Lost Communication With Restraints System Sensor D
+    de: Kommunikationsverlust mit Rückhaltesystem-Sensor D
   description:
     en: A control module has detected that bus C is non-functional and shut its bus C interface off. Bus C is typically a tertiary segment used for diagnostics or specialized subsystems; modules on the segment fall silent simultaneously.
     de: Ein Steuergerät hat erkannt, dass Bus C nicht funktioniert, und seine Bus-C-Schnittstelle abgeschaltet. Bus C ist typischerweise ein tertiäres Segment für Diagnose oder spezialisierte Subsysteme; Steuergeräte am Segment werden gleichzeitig still.
@@ -11743,8 +11743,8 @@
 - code: U0177
   category: network
   title:
-    en: Lost Communication with Mirror Memory Module
-    de: Kommunikation mit Spiegel-Memory-Modul verloren
+    en: Lost Communication With Restraints System Sensor H
+    de: Kommunikationsverlust mit Rückhaltesystem-Sensor H
   description:
     en: 'The Mirror Memory Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Memory mirror positioning stops working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
     de: 'Spiegel-Memory-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Spiegel-Memory-Verstellung funktioniert nicht mehr. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
@@ -11846,8 +11846,8 @@
 - code: U0179
   category: network
   title:
-    en: Lost Communication with Power Liftgate Control Module
-    de: Kommunikation mit elektrischer Heckklappen-Steuerung verloren
+    en: Lost Communication With Restraints System Sensor J
+    de: Kommunikationsverlust mit Rückhaltesystem-Sensor J
   description:
     en: 'The Power Liftgate Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The powered tailgate stops operating automatically. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
     de: 'elektrischer Heckklappen-Steuerung — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die elektrische Heckklappe arbeitet nicht mehr automatisch. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
@@ -12264,8 +12264,8 @@
 - code: U0181
   category: network
   title:
-    en: Lost Communication with Auto Park Brake Module
-    de: Kommunikation mit elektrischer Parkbremsen-Steuerung verloren
+    en: Lost Communication With Headlamp Leveling Control Module
+    de: Kommunikation mit Leuchtweitenregelungs-Steuergerät verloren
   description:
     en: 'The Auto Park Brake Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Automatic parking-brake functions stop working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
     de: 'elektrischer Parkbremsen-Steuerung — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die automatischen Feststellbrems-Funktionen fallen aus. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
@@ -12314,8 +12314,8 @@
 - code: U0182
   category: network
   title:
-    en: Lost Communication with Headlamp Leveling Control Module
-    de: Kommunikation mit Leuchtweitenregelungs-Steuergerät verloren
+    en: Lost Communication With Lighting Control Module Front
+    de: Kommunikation mit Lichtsteuergerät vorn verloren
   description:
     en: The vehicle network has lost the headlamp leveling controller. Automatic leveling is disabled and the lamps stay in a default position; on many vehicles the headlight warning comes on.
     de: Das Fahrzeugnetz hat das Steuergerät der Leuchtweitenregelung verloren. Die automatische Regelung ist deaktiviert, die Scheinwerfer bleiben in einer Standardstellung; bei vielen Fahrzeugen leuchtet die Lichtwarnung.
@@ -12608,8 +12608,8 @@
 - code: U0188
   category: network
   title:
-    en: Lost Communication with Audio Rear Control Module
-    de: Kommunikation mit Audio-Hecksteuerung verloren
+    en: Lost Communication With Digital Disc Player/Changer Module B
+    de: Kommunikation mit Disc-Player/-Wechsler-Modul B verloren
   description:
     en: 'The Audio Rear Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Rear-seat audio controls stop working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
     de: 'Audio-Hecksteuerung — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die hintere Audiobedienung funktioniert nicht mehr. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
@@ -12657,8 +12657,8 @@
 - code: U0189
   category: network
   title:
-    en: Lost Communication with Auxiliary Heater Control Module
-    de: Kommunikation mit Zusatzheizungs-Steuergerät verloren
+    en: Lost Communication With Digital Disc Player/Changer Module C
+    de: Kommunikation mit Disc-Player/-Wechsler-Modul C verloren
   description:
     en: The HVAC controller has lost the auxiliary fuel-fired heater module. Pre-heating cannot be commanded; the heater stays inactive.
     de: Die Klimasteuerung hat das Modul der kraftstoffbetriebenen Standheizung verloren. Vorheizen lässt sich nicht ansteuern, die Heizung bleibt inaktiv.
@@ -12759,8 +12759,8 @@
 - code: U0190
   category: network
   title:
-    en: Lost Communication with Subwoofer Amplifier Module
-    de: Kommunikation mit Subwoofer-Verstärker-Modul verloren
+    en: Lost Communication With Digital Disc Player/Changer Module D
+    de: Kommunikation mit Disc-Player/-Wechsler-Modul D verloren
   description:
     en: 'The Subwoofer Amplifier Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The subwoofer amplifier drops off the bus. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
     de: 'Subwoofer-Verstärker-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Der Subwoofer-Verstärker fällt vom Bus ab. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
@@ -12906,8 +12906,8 @@
 - code: U0193
   category: network
   title:
-    en: Lost Communication with Mobile Phone Module
-    de: Kommunikation mit Mobiltelefon-Modul verloren
+    en: Lost Communication With Digital Audio Control Module A
+    de: Kommunikation mit digitalem Audio-Steuergerät A verloren
   description:
     en: 'The Mobile Phone Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Hands-free phone integration stops working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
     de: 'Mobiltelefon-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Freisprech-Telefonanbindung funktioniert nicht mehr. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
@@ -12955,8 +12955,8 @@
 - code: U0194
   category: network
   title:
-    en: Lost Communication with Personal Assist Module
-    de: Kommunikation mit persönlichem Assistenz-Modul verloren
+    en: Lost Communication With Digital Audio Control Module B
+    de: Kommunikation mit digitalem Audio-Steuergerät B verloren
   description:
     en: The infotainment bus has lost the voice assistant / personal assist module. Voice commands and connected concierge features stop working.
     de: Der Infotainment-Bus hat das Sprachassistenz-/Personal-Assist-Modul verloren. Sprachbefehle und vernetzte Concierge-Dienste funktionieren nicht mehr.
@@ -16441,8 +16441,8 @@
 - code: U0219
   category: network
   title:
-    en: Lost Communication with Liftgate/Decklid Control Module
-    de: Kommunikation mit Heckklappen-/Kofferraumdeckel-Steuergerät verloren
+    en: Lost Communication With Door Switch E
+    de: Kommunikation mit Türschalter E verloren
   description:
     en: The body bus has lost the powered liftgate / decklid module. Electric opening and soft-close features stop working; latch must be operated manually.
     de: Der Bordnetz-Bus hat das Modul der elektrischen Heckklappe / des Kofferraumdeckels verloren. Elektrisches Öffnen und Soft-Close arbeiten nicht mehr, der Deckel muss manuell betätigt werden.
@@ -24551,8 +24551,8 @@
 - code: U0304
   category: network
   title:
-    en: Invalid Data Received from Transmission Control Module
-    de: Ungültige Daten vom Getriebesteuergerät empfangen
+    en: Software Incompatibility With Gear Shift Control Module
+    de: Software-Inkompatibilität mit Schaltmodul
   description:
     en: The ECU receives messages from the TCM but their content is implausible (e.g. invalid gear, impossible speed). The transmission may switch to limp-home mode and shift quality is degraded.
     de: Die Motorsteuerung empfängt Botschaften vom TCM, deren Inhalt aber unplausibel ist (z. B. ungültiger Gang, unmögliche Drehzahl). Das Getriebe geht eventuell in den Notlauf, die Schaltqualität verschlechtert sich.
@@ -24748,8 +24748,8 @@
 - code: U0308
   category: network
   title:
-    en: Software Incompatibility with Body Control Module
-    de: Software-Inkompatibilität mit Bordnetzsteuergerät
+    en: Software Incompatibility With Throttle Actuator Control Module
+    de: Software-Inkompatibilität mit Drosselklappensteller-Steuergerät
   description:
     en: The BCM software does not match what other vehicle modules expect. Comfort or lighting features can behave erratically until reflashing or coding is performed.
     de: Die Software des Bordnetzsteuergeräts passt nicht zur Erwartung anderer Steuergeräte. Komfort- oder Lichtfunktionen verhalten sich sporadisch fehlerhaft, bis BCM und andere Module neu geflasht oder codiert werden.
@@ -25463,8 +25463,8 @@
 - code: U0316
   category: network
   title:
-    en: Software Incompatibility with Park Brake Control Module
-    de: Software-Inkompatibilität mit Parkbremsen-Steuergerät
+    en: Software Incompatibility With Vehicle Dynamics Control Module
+    de: Software-Inkompatibilität mit Fahrdynamik-Steuergerät
   description:
     en: A control module has detected that its software version does not match the parking brake module. Most often after replacing the EPB unit with one from a different model year or coding variant.
     de: Ein Steuergerät hat erkannt, dass seine Software-Version nicht zum Parkbremsen-Modul passt. Meistens nach Tausch der EPB-Einheit gegen eines aus anderem Modelljahr oder anderer Codiervariante.
@@ -25513,8 +25513,8 @@
 - code: U0317
   category: network
   title:
-    en: Software Incompatibility with Brake System Control Module
-    de: Software-Inkompatibilität mit Bremssystem-Steuergerät
+    en: Software Incompatibility With Park Brake Control Module
+    de: Software-Inkompatibilität mit Parkbremsen-Steuergerät
   description:
     en: A control module has detected that its software version does not match the ABS/brake system module. Typically after a partial flash or fitting an unmatched ABS unit.
     de: Ein Steuergerät hat erkannt, dass seine Software-Version nicht zum ABS-/Bremssystem-Modul passt. Typischerweise nach Teil-Flash oder Verbau einer nicht passenden ABS-Einheit.
@@ -25563,8 +25563,8 @@
 - code: U0318
   category: network
   title:
-    en: Software Incompatibility with Power Steering Control Module
-    de: Software-Inkompatibilität mit Lenkungs-Steuergerät
+    en: Software Incompatibility With Brake System Control Module
+    de: Software-Inkompatibilität mit Bremssystem-Steuergerät
   description:
     en: A control module has detected that its software version does not match the electric power steering module. Steering may stay functional but become heavy if the EPS goes into a fallback mode.
     de: Ein Steuergerät hat erkannt, dass seine Software-Version nicht zum Lenkungs-Steuergerät (EPS) passt. Die Lenkung bleibt eventuell funktionsfähig, wird aber schwergängig, wenn das EPS in einen Notlauf geht.
@@ -25614,8 +25614,8 @@
 - code: U0319
   category: network
   title:
-    en: Software Incompatibility with Anti-Lock Brake System Control Module
-    de: Software-Inkompatibilität mit ABS-Steuergerät
+    en: Software Incompatibility With Steering Effort Control Module
+    de: Software-Inkompatibilität mit Lenkkraft-Steuergerät
   description:
     en: The ABS controller advertises a software version not supported by the rest of the vehicle network. ABS, ESP and ASR functions are usually disabled until coding is corrected.
     de: Das ABS-Steuergerät meldet eine Software-Version, die das übrige Fahrzeugnetz nicht unterstützt. ABS, ESP und ASR werden meist deaktiviert, bis die Codierung korrigiert wurde.
@@ -28734,8 +28734,8 @@
 - code: U0406
   category: network
   title:
-    en: Invalid Data Received from Cruise Control Front Distance Range Sensor
-    de: Ungültige Daten vom ACC-Frontradar empfangen
+    en: Invalid Data Received From Fuel Injector Control Module
+    de: Ungültige Daten vom Einspritzdüsen-Steuergerät empfangen
   description:
     en: ACC receives bus messages from the radar but their content is implausible (e.g. negative distances, jittering targets). Adaptive cruise is disabled until the radar reports plausible data again.
     de: Der ACC empfängt Botschaften vom Radar, deren Inhalt aber unplausibel ist (z. B. negative Abstände, springende Ziele). Der Abstandsregeltempomat wird deaktiviert, bis das Radar wieder plausible Daten liefert.
@@ -28782,8 +28782,8 @@
 - code: U0407
   category: network
   title:
-    en: Invalid Data Received from Steering Angle Sensor Module
-    de: Ungültige Daten vom Lenkwinkelsensor empfangen
+    en: Invalid Data Received From Glow Plug Control Module
+    de: Ungültige Daten vom Glühkerzen-Steuergerät empfangen
   description:
     en: ESP receives steering angle data that does not match yaw or wheel speeds. ESP and lane-keeping are deactivated until the steering angle sensor is recalibrated.
     de: Das ESP empfängt Lenkwinkeldaten, die nicht zu Gierrate und Raddrehzahlen passen. ESP und Spurhalteassistent werden deaktiviert, bis der Lenkwinkelsensor neu kalibriert ist.
@@ -28831,8 +28831,8 @@
 - code: U0408
   category: network
   title:
-    en: Invalid Data Received from Vehicle Immobilizer Control Module
-    de: Ungültige Daten vom Wegfahrsperren-Steuergerät empfangen
+    en: Invalid Data Received From Throttle Actuator Control Module
+    de: Ungültige Daten vom Drosselklappensteller-Steuergerät empfangen
   description:
     en: The ECU receives an authorisation message from the immobilizer that does not match the expected rolling code. Engine start is blocked.
     de: Die Motorsteuerung empfängt vom Wegfahrsperren-Steuergerät eine Freigabe-Botschaft, die nicht zum erwarteten Rolling-Code passt. Der Motorstart wird blockiert.
@@ -28881,8 +28881,8 @@
 - code: U0409
   category: network
   title:
-    en: Invalid Data Received from Vehicle Security Control Module
-    de: Ungültige Daten vom Fahrzeug-Sicherheitssteuergerät empfangen
+    en: Invalid Data Received From Alternative Fuel Control Module
+    de: Ungültige Daten vom Alternativ-Kraftstoff-Steuergerät empfangen
   description:
     en: The vehicle security / alarm controller is sending implausible status data (e.g. armed/unarmed jitter). Alarm and immobilizer behaviour can become unpredictable.
     de: Das Sicherheits-/Alarmsteuergerät sendet unplausible Statusdaten (z. B. springender Scharf-/Unscharf-Zustand). Alarm und Wegfahrsperre verhalten sich eventuell unvorhersehbar.
@@ -29240,8 +29240,8 @@
 - code: U0410
   category: network
   title:
-    en: Invalid Data Received from Parking Brake Control Module
-    de: Ungültige Daten vom Feststellbremsen-Steuergerät empfangen
+    en: Invalid Data Received From Fuel Pump Control Module
+    de: Ungültige Daten vom Kraftstoffpumpen-Steuergerät empfangen
   description:
     en: The vehicle network receives EPB data that contradicts other inputs (e.g. brake reported applied while moving). Auto-Hold is disabled and EPB warnings are shown.
     de: Das Fahrzeugnetz empfängt EPB-Daten, die anderen Signalen widersprechen (z. B. Bremse gemeldet eingelegt bei Fahrt). Auto-Hold wird deaktiviert, EPB-Warnungen werden angezeigt.
@@ -29288,8 +29288,8 @@
 - code: U0411
   category: network
   title:
-    en: Invalid Data Received from Wheel Speed Sensor (Front, Driver Side)
-    de: Ungültige Daten vom Raddrehzahlsensor vorne links empfangen
+    en: Invalid Data Received From Drive Motor Control Module
+    de: Ungültige Daten vom Antriebsmotor-Steuergerät empfangen
   description:
     en: ABS reports invalid front-driver wheel speed data. ABS, ESP and traction control are deactivated; the speedometer can be inaccurate.
     de: Das ABS meldet ungültige Raddrehzahldaten vorne links. ABS, ESP und ASR werden deaktiviert, der Tacho kann ungenau sein.
@@ -29336,8 +29336,8 @@
 - code: U0412
   category: network
   title:
-    en: Invalid Data Received from Wheel Speed Sensor (Front, Passenger Side)
-    de: Ungültige Daten vom Raddrehzahlsensor vorne rechts empfangen
+    en: Invalid Data Received From Battery Energy Control Module A
+    de: Ungültige Daten vom Batterie-Energie-Steuergerät A empfangen
   description:
     en: ABS receives invalid front-passenger wheel speed data. ABS/ESP are deactivated until the signal becomes plausible again.
     de: Das ABS empfängt ungültige Raddrehzahldaten vorne rechts. ABS/ESP werden deaktiviert, bis das Signal wieder plausibel ist.
@@ -29384,8 +29384,8 @@
 - code: U0413
   category: network
   title:
-    en: Invalid Data Received from Wheel Speed Sensor (Rear, Driver Side)
-    de: Ungültige Daten vom Raddrehzahlsensor hinten links empfangen
+    en: Invalid Data Received From Battery Energy Control Module B
+    de: Ungültige Daten vom Batterie-Energie-Steuergerät B empfangen
   description:
     en: 'ABS receives implausible rear-driver wheel speed data. ESP and traction control are deactivated. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
     de: 'Das ABS empfängt unplausible Raddrehzahldaten hinten links. ESP und ASR werden deaktiviert. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'

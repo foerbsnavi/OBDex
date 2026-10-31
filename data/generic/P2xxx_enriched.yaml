@@ -12791,8 +12791,8 @@
 - code: P2113
   category: powertrain
   title:
-    en: Throttle Actuator Control System Forced Limited RPM
-    de: Drosselklappensteller System auf Drehzahl-Notlauf begrenzt
+    en: Throttle/Pedal Position Sensor/Switch B Minimum Stop Performance
+    de: Drosselklappen-/Pedalpositionssensor/-schalter B Mindestanschlag-Funktion
   description:
     en: The throttle actuator control has detected a fault and limits engine speed to a defined emergency value. The vehicle stays drivable but with severely reduced power until the underlying fault is cleared.
     de: Die Drosselklappenregelung hat einen Fehler erkannt und begrenzt die Motordrehzahl auf einen definierten Notwert. Das Fahrzeug bleibt fahrbar, aber mit stark reduzierter Leistung, bis der zugrundeliegende Fehler behoben ist.
@@ -12839,8 +12839,8 @@
 - code: P2114
   category: powertrain
   title:
-    en: Throttle Actuator Control System Forced Below Limit RPM
-    de: Drosselklappensteller System unter Notlauf-Drehzahl begrenzt
+    en: Throttle/Pedal Position Sensor/Switch C Minimum Stop Performance
+    de: Drosselklappen-/Pedalpositionssensor/-schalter C Mindestanschlag-Funktion
   description:
     en: The throttle actuator system has dropped engine speed below the normal limp limit because of a more serious fault. The engine may run only at idle or stall.
     de: Das Drosselklappenregelsystem hat die Motordrehzahl wegen eines schwerwiegenderen Fehlers unter den üblichen Notlauf-Grenzwert abgesenkt. Der Motor läuft eventuell nur im Leerlauf oder geht aus.
@@ -12887,8 +12887,8 @@
 - code: P2115
   category: powertrain
   title:
-    en: Throttle/Pedal Position Sensor A Minimum Stop Performance
-    de: Drosselklappen-/Pedalpositionssensor A Mindestanschlag-Funktion
+    en: Throttle/Pedal Position Sensor/Switch D Minimum Stop Performance
+    de: Drosselklappen-/Pedalpositionssensor/-schalter D Mindestanschlag-Funktion
   description:
     en: The minimum stop calibration of throttle position sensor A is outside the expected range during the ECU self-check. The signal at fully closed throttle does not match the stored reference, indicating a mechanical or sensor issue.
     de: Die Anschlag-Kalibrierung des Drosselklappenpositionssensors A liegt waehrend der Selbstpruefung der ECU ausserhalb des erwarteten Bereichs. Das Signal bei vollstaendig geschlossener Klappe passt nicht zur gespeicherten Referenz, was auf ein mechanisches oder Sensor-Problem hindeutet.
@@ -12935,8 +12935,8 @@
 - code: P2116
   category: powertrain
   title:
-    en: Throttle/Pedal Position Sensor B Minimum Stop Performance
-    de: Drosselklappen-/Pedalpositionssensor B Mindestanschlag-Funktion
+    en: Throttle/Pedal Position Sensor/Switch E Minimum Stop Performance
+    de: Drosselklappen-/Pedalpositionssensor/-schalter E Mindestanschlag-Funktion
   description:
     en: The minimum stop calibration of throttle position sensor B does not match the learned reference during ECU self-test. Sensor B is the redundant channel used to cross-check sensor A.
     de: Die Anschlag-Kalibrierung des Drosselklappenpositionssensors B passt waehrend der ECU-Selbstpruefung nicht zur gelernten Referenz. Sensor B ist der redundante Kanal zur Kreuzpruefung von Sensor A.
@@ -12983,8 +12983,8 @@
 - code: P2117
   category: powertrain
   title:
-    en: Throttle/Pedal Position Sensor C Minimum Stop Performance
-    de: Drosselklappen-/Pedalpositionssensor C Mindestanschlag-Funktion
+    en: Throttle/Pedal Position Sensor/Switch F Minimum Stop Performance
+    de: Drosselklappen-/Pedalpositionssensor/-schalter F Mindestanschlag-Funktion
   description:
     en: The minimum stop signal from throttle/pedal position sensor C is out of specification during initialization. Used on systems with three redundant sensor channels for safety-critical drive-by-wire control.
     de: Das Anschlag-Mindestsignal des Drosselklappen-/Pedalpositionssensors C ist waehrend der Initialisierung ausserhalb der Spezifikation. Wird bei Systemen mit drei redundanten Sensorkanaelen fuer sicherheitsrelevante Drive-by-Wire-Regelung eingesetzt.
@@ -13084,8 +13084,8 @@
 - code: P2119
   category: powertrain
   title:
-    en: Throttle Closed Position Performance
-    de: Drosselklappen-Schliessstellung Plausibilität
+    en: Throttle Actuator Control Throttle Body Range/Performance
+    de: Drosselklappensteller Drosselklappengehäuse Bereich/Plausibilität
   description:
     en: When commanded to idle, the throttle plate does not reach the calibrated closed position. Often a coked throttle bore preventing the plate from seating fully.
     de: Bei Leerlaufanforderung erreicht die Drosselklappe nicht die kalibrierte Schliessstellung. Häufig ein verkokter Drosselklappenstutzen, in dem die Klappe nicht voll aufsetzt.
@@ -13688,8 +13688,8 @@
 - code: P2125
   category: powertrain
   title:
-    en: Throttle/Pedal Position Sensor "C" Circuit High
-    de: Drosselklappen-/Pedalstellungssensor "C" Signal zu hoch
+    en: Throttle/Pedal Position Sensor/Switch E Circuit
+    de: Drosselklappen-/Pedalstellungssensor/-schalter E Stromkreis
   description:
     en: The "C" channel signal is above the upper threshold — typically a short to positive or an open ground.
     de: Das Signal des Kanals "C" liegt über dem oberen Schwellwert — typischerweise Kurzschluss nach Plus oder unterbrochene Masse.
@@ -13740,8 +13740,8 @@
 - code: P2126
   category: powertrain
   title:
-    en: Throttle/Pedal Position Sensor "C" Circuit Intermittent
-    de: Drosselklappen-/Pedalstellungssensor "C" Stromkreis sporadisch
+    en: Throttle/Pedal Position Sensor/Switch E Circuit Range/Performance
+    de: Drosselklappen-/Pedalstellungssensor/-schalter E Stromkreis Bereich/Plausibilität
   description:
     en: The "C" channel produces an intermittent signal — usually a marginal connector or a worn track inside the pedal sensor.
     de: Der Kanal "C" liefert ein sporadisches Signal — meist ein grenzwertiger Stecker oder eine verschlissene Spur im Pedalsensor.
@@ -13898,8 +13898,8 @@
 - code: P2129
   category: powertrain
   title:
-    en: Throttle/Pedal Position Sensor "D" Circuit Intermittent
-    de: Drosselklappen-/Pedalstellungssensor "D" Stromkreis sporadisch
+    en: Throttle/Pedal Position Sensor/Switch E Circuit Intermittent
+    de: Drosselklappen-/Pedalstellungssensor/-schalter E Stromkreis sporadisch
   description:
     en: The "D" channel of the throttle or pedal sensor produces an intermittent signal — typically marginal connector contacts.
     de: Der Kanal "D" des Drosselklappen- oder Pedalsensors liefert ein sporadisches Signal — typischerweise grenzwertige Steckkontakte.
@@ -23415,8 +23415,8 @@
 - code: P2206
   category: powertrain
   title:
-    en: NOx Sensor Circuit (Bank 2)
-    de: NOx-Sensor Stromkreis (Bank 2)
+    en: NOx Sensor Heater Control Circuit Low (Bank 1)
+    de: NOx-Sensor Heizung Steuerkreis zu niedrig (Bank 1)
   description:
     en: A general electrical fault on the bank 2 NOx sensor circuit. NOx sensors are smart sensors with a CAN/LIN interface; this code typically indicates that the sensor module no longer responds.
     de: Allgemeiner elektrischer Fehler im Stromkreis des NOx-Sensors auf Bank 2. NOx-Sensoren sind intelligente Sensoren mit CAN-/LIN-Schnittstelle; dieser Code wird gesetzt, wenn das Sensormodul nicht mehr antwortet.
@@ -23461,8 +23461,8 @@
 - code: P2207
   category: powertrain
   title:
-    en: NOx Sensor Circuit Range/Performance (Bank 2)
-    de: NOx-Sensor Stromkreis Bereich/Plausibilität (Bank 2)
+    en: NOx Sensor Heater Control Circuit High (Bank 1)
+    de: NOx-Sensor Heizung Steuerkreis zu hoch (Bank 1)
   description:
     en: The bank 2 NOx sensor returns values outside the expected range for the operating point — for example a non-zero reading at engine off or unchanged values during load changes.
     de: Der NOx-Sensor auf Bank 2 liefert Werte ausserhalb des erwarteten Bereichs für den Betriebspunkt — etwa Werte ungleich null bei Motor aus oder unveränderte Werte trotz Lastwechsel.
@@ -23511,8 +23511,8 @@
 - code: P2208
   category: powertrain
   title:
-    en: NOx Sensor Heater Circuit (Bank 2)
-    de: NOx-Sensorheizung Stromkreis (Bank 2)
+    en: NOx Sensor Heater Sense Circuit (Bank 1)
+    de: NOx-Sensorheizung Diagnose-Stromkreis (Bank 1)
   description:
     en: A general electrical fault on the heater of the bank 2 NOx sensor. NOx sensors must reach roughly 800 C to measure correctly; without heater current the sensor never enters its operating range.
     de: Allgemeiner elektrischer Fehler an der Heizung des NOx-Sensors auf Bank 2. NOx-Sensoren müssen rund 800 C erreichen, um korrekt zu messen; ohne Heizstrom kommt der Sensor nicht in seinen Arbeitsbereich.
@@ -23557,8 +23557,8 @@
 - code: P2209
   category: powertrain
   title:
-    en: NOx Sensor Heater Sense Circuit Range/Performance (Bank 2)
-    de: NOx-Sensorheizung Diagnose-Stromkreis Bereich/Plausibilität (Bank 2)
+    en: NOx Sensor Heater Sense Circuit Range/Performance (Bank 1)
+    de: NOx-Sensorheizung Diagnose-Stromkreis Bereich/Plausibilität (Bank 1)
   description:
     en: The heater feedback (sense) line on the bank 2 NOx sensor reports values outside the expected window — heating is happening but the temperature does not match the model.
     de: Die Heizungsrückmeldung (Sense-Leitung) am NOx-Sensor Bank 2 liefert Werte ausserhalb des Erwartungsfensters — die Heizung arbeitet, aber die Temperatur passt nicht zum Modell.
@@ -23869,8 +23869,8 @@
 - code: P2210
   category: powertrain
   title:
-    en: NOx Sensor Circuit Intermittent (Bank 2)
-    de: NOx-Sensor Stromkreis sporadisch (Bank 2)
+    en: NOx Sensor Heater Sense Circuit Low (Bank 1)
+    de: NOx-Sensorheizung Diagnose-Stromkreis zu niedrig (Bank 1)
   description:
     en: The bank 2 NOx sensor reports correctly some of the time but intermittently drops out. Often a marginal connector, a wiring chafe or a sensor that fails when warm.
     de: Der NOx-Sensor auf Bank 2 meldet zeitweise korrekt, fällt aber sporadisch aus. Häufig ein grenzwertiger Stecker, eine gescheuerte Leitung oder ein Sensor, der erst im warmen Zustand ausfällt.
@@ -23920,8 +23920,8 @@
 - code: P2211
   category: powertrain
   title:
-    en: NOx Sensor Heater Sense Circuit Intermittent (Bank 2)
-    de: NOx-Sensorheizung Diagnose-Stromkreis sporadisch (Bank 2)
+    en: NOx Sensor Heater Sense Circuit High (Bank 1)
+    de: NOx-Sensorheizung Diagnose-Stromkreis zu hoch (Bank 1)
   description:
     en: The heater sense line on the bank 2 NOx sensor produces intermittent readings. Often a thermal fault inside the sensor or a connector under temperature cycling.
     de: Die Heizungs-Sense-Leitung am NOx-Sensor Bank 2 liefert sporadische Messwerte. Häufig ein thermischer Fehler im Sensor oder ein Stecker unter Temperaturwechsel.
@@ -25277,8 +25277,8 @@
 - code: P2230
   category: powertrain
   title:
-    en: Barometric Pressure Circuit Low
-    de: Umgebungsdruck-Sensor Stromkreis niedrig
+    en: Barometric Pressure Circuit Intermittent/Erratic
+    de: Umgebungsdrucksensor Stromkreis sporadisch/unregelmäßig
   description:
     en: Voltage from the barometric pressure sensor is below the calibrated minimum. The signal is too low for any plausible atmospheric pressure, suggesting a short to ground or sensor fault.
     de: Die Spannung des Umgebungsdrucksensors liegt unter dem kalibrierten Mindestwert. Das Signal ist fuer einen plausiblen Atmosphaerendruck zu niedrig, was auf einen Masseschluss oder Sensordefekt hindeutet.
@@ -25319,8 +25319,8 @@
 - code: P2231
   category: powertrain
   title:
-    en: Barometric Pressure Circuit High
-    de: Umgebungsdruck-Sensor Stromkreis hoch
+    en: O2 Sensor Signal Circuit Shorted to Heater Circuit (Bank 1 Sensor 1)
+    de: Lambdasonden-Signalkreis kurzgeschlossen mit Heizkreis (Bank 1 Sensor 1)
   description:
     en: The barometric pressure sensor reports a voltage above the upper limit. The signal cannot represent any realistic atmospheric pressure, indicating an open circuit or short to supply voltage.
     de: Der Umgebungsdrucksensor liefert eine Spannung oberhalb des Grenzwerts. Das Signal kann keinem realistischen Atmosphaerendruck entsprechen, was auf eine Unterbrechung oder einen Kurzschluss zur Versorgungsspannung hinweist.
@@ -26902,8 +26902,8 @@
 - code: P2254
   category: powertrain
   title:
-    en: O2 Sensor Negative Current Control Circuit Low (Bank 2 Sensor 1)
-    de: Lambdasonde Negativstrom-Steuerkreis Signal zu niedrig (Bank 2 Sonde 1)
+    en: O2 Sensor Negative Current Control Circuit/Open (Bank 2 Sensor 1)
+    de: Lambdasonde Negativstrom-Steuerkreis/Unterbrechung (Bank 2 Sonde 1)
   description:
     en: Bank 2 counterpart to P2252. The Vs negative line on the wide-band oxygen sensor at bank 2, sensor 1 is below the lower threshold.
     de: Bank-2-Pendant zu P2252. Die Vs-Negativ-Leitung der Breitbandsonde an Bank 2, Sonde 1 liegt unter dem unteren Schwellwert.
@@ -26953,8 +26953,8 @@
 - code: P2255
   category: powertrain
   title:
-    en: O2 Sensor Negative Current Control Circuit High (Bank 2 Sensor 1)
-    de: Lambdasonde Negativstrom-Steuerkreis Signal zu hoch (Bank 2 Sonde 1)
+    en: O2 Sensor Negative Current Control Circuit Low (Bank 2 Sensor 1)
+    de: Lambdasonde Negativstrom-Steuerkreis Signal zu niedrig (Bank 2 Sonde 1)
   description:
     en: Bank 2 counterpart to P2253. The Vs negative line on bank 2, sensor 1 reads above the upper threshold.
     de: Bank-2-Pendant zu P2253. Die Vs-Negativ-Leitung an Bank 2, Sonde 1 liegt über dem oberen Schwellwert.
@@ -27004,8 +27004,8 @@
 - code: P2256
   category: powertrain
   title:
-    en: O2 Sensor Heater Control Circuit Low Bank 1 Sensor 2
-    de: Lambdasonden-Heizung Stromkreis niedrig Bank 1 Sonde 2
+    en: O2 Sensor Negative Current Control Circuit High (Bank 2 Sensor 1)
+    de: Lambdasonde Negativstrom-Steuerkreis Signal zu hoch (Bank 2 Sonde 1)
   description:
     en: The ECU detects a low-side voltage below threshold on the heater control of the rear oxygen sensor on bank 1. The heater driver may be stuck on or shorted to ground.
     de: Die Motorsteuerung erkennt eine zu niedrige Spannung auf der Niederseite der Heizungsansteuerung der hinteren Lambdasonde Bank 1. Der Heizertreiber haengt moeglicherweise oder ist gegen Masse kurzgeschlossen.
@@ -45919,8 +45919,8 @@
 - code: P2415
   category: powertrain
   title:
-    en: EVAP Switching Valve Circuit Open
-    de: EVAP Schaltventil Stromkreis offen
+    en: O2 Sensor Exhaust Sample Error (Bank 2 Sensor 1)
+    de: Lambdasonde Abgas-Abtastfehler (Bank 2 Sensor 1)
   description:
     en: The ECU detects an open circuit on the EVAP switching valve drive line. The valve cannot be commanded between its purge and isolation positions.
     de: Die Motorsteuerung erkennt eine Unterbrechung im Steuerkreis des EVAP-Schaltventils. Das Ventil lässt sich nicht zwischen Spül- und Sperrstellung umschalten.
@@ -45969,8 +45969,8 @@
 - code: P2416
   category: powertrain
   title:
-    en: EVAP Switching Valve Performance
-    de: EVAP Schaltventil Plausibilität
+    en: O2 Sensor Signals Swapped (Bank 1 Sensor 2 / Bank 1 Sensor 3)
+    de: Lambdasonden-Signale vertauscht (Bank 1 Sensor 2 / Bank 1 Sensor 3)
   description:
     en: The EVAP switching valve responds electrically but does not produce the expected pressure change. Often a stuck valve seat or a torn diaphragm.
     de: Das EVAP-Schaltventil reagiert elektrisch, erzeugt aber nicht die erwartete Druckänderung. Häufig ein verklebter Ventilsitz oder eine gerissene Membran.
@@ -46014,8 +46014,8 @@
 - code: P2417
   category: powertrain
   title:
-    en: EVAP Switching Valve Stuck Closed
-    de: EVAP Schaltventil hängt geschlossen
+    en: O2 Sensor Signals Swapped (Bank 2 Sensor 2 / Bank 2 Sensor 3)
+    de: Lambdasonden-Signale vertauscht (Bank 2 Sensor 2 / Bank 2 Sensor 3)
   description:
     en: The EVAP switching valve cannot reach the open position. Purge flow is blocked and the EVAP system cannot vent the canister.
     de: Das EVAP-Schaltventil erreicht die offene Stellung nicht. Der Spülfluss ist blockiert und das EVAP-System kann den Aktivkohlefilter nicht entlüften.
@@ -46064,8 +46064,8 @@
 - code: P2418
   category: powertrain
   title:
-    en: EVAP Switching Valve Control Circuit Performance
-    de: EVAP Umschaltventil Ansteuerung Plausibilität
+    en: EVAP System Switching Valve Control Circuit/Open
+    de: EVAP-System Umschaltventil Steuerkreis/Unterbrechung
   description:
     en: The evaporative switching valve — used on multi-path EVAP systems to route purge or pressure-test flow — does not respond as expected. Self-test fails because tank pressure does not change in the calibrated direction.
     de: Das Umschaltventil der Tankentlüftung — bei mehrwegigen EVAP-Systemen zur Steuerung von Spülung oder Druckprüfung — reagiert nicht wie erwartet. Der Selbsttest scheitert, weil sich der Tankdruck nicht in die kalibrierte Richtung ändert.
@@ -46109,8 +46109,8 @@
 - code: P2419
   category: powertrain
   title:
-    en: EVAP Switching Valve Stuck Open
-    de: EVAP Umschaltventil hängt offen
+    en: EVAP System Switching Valve Control Circuit Low
+    de: EVAP-System Umschaltventil Steuerkreis zu niedrig
   description:
     en: The EVAP switching valve cannot close. Tank pressure cannot be isolated for the leak detection test, and purge routing may bypass the canister.
     de: Das EVAP-Umschaltventil schliesst nicht. Der Tankdruck lässt sich für die Leckdiagnose nicht isolieren, und die Spülroute kann den Aktivkohlefilter umgehen.
@@ -46399,8 +46399,8 @@
 - code: P2420
   category: powertrain
   title:
-    en: EVAP Switching Valve Stuck Closed
-    de: EVAP Umschaltventil hängt geschlossen
+    en: EVAP System Switching Valve Control Circuit High
+    de: EVAP-System Umschaltventil Steuerkreis zu hoch
   description:
     en: The EVAP switching valve cannot open when commanded. Purge or test flow cannot reach the appropriate path and the leak monitor aborts.
     de: Das EVAP-Umschaltventil öffnet auf Befehl nicht. Spül- oder Prüfstrom erreichen den erforderlichen Pfad nicht, und die Leckdiagnose bricht ab.
@@ -58115,8 +58115,8 @@
 - code: P2540
   category: powertrain
   title:
-    en: Low Pressure Fuel System Sensor Circuit
-    de: Niederdruck-Kraftstoffsystem Sensor Stromkreis
+    en: Low Pressure Fuel System Sensor Circuit Range/Performance
+    de: Niederdruck-Kraftstoffsystem Sensor Stromkreis Bereich/Plausibilität
   description:
     en: The ECU detects a general fault in the low-pressure fuel system pressure sensor circuit. Without a valid signal the ECU cannot verify lift-pump pressure or fuel rail pre-pressure.
     de: Die Motorsteuerung erkennt einen allgemeinen Fehler im Stromkreis des Niederdruck-Kraftstoffdrucksensors. Ohne gueltiges Signal kann die ECU den Vorfoerderdruck oder Vorlauf-Raildruck nicht ueberpruefen.
@@ -58153,8 +58153,8 @@
 - code: P2541
   category: powertrain
   title:
-    en: Low Pressure Fuel System Sensor Circuit Range/Performance
-    de: Niederdruck-Kraftstoffdrucksensor Stromkreis Bereich/Funktion
+    en: Low Pressure Fuel System Sensor Circuit Low
+    de: Niederdruck-Kraftstoffsystem Sensor Stromkreis zu niedrig
   description:
     en: The signal of the low-pressure fuel sensor does not match the expected value during operation. Pressure does not rise as expected when the lift pump is commanded.
     de: Das Signal des Niederdruck-Kraftstoffdrucksensors entspricht im Betrieb nicht dem erwarteten Wert. Der Druck steigt nicht wie erwartet, wenn die Vorfoerderpumpe angesteuert wird.
@@ -58238,8 +58238,8 @@
 - code: P2543
   category: powertrain
   title:
-    en: Power Demand Signal Circuit
-    de: Leistungsanforderungs-Signal Stromkreis
+    en: Low Pressure Fuel System Sensor Circuit Intermittent/Erratic
+    de: Niederdruck-Kraftstoffsystem Sensor Stromkreis sporadisch/unregelmäßig
   description:
     en: The ECU detects an electrical fault on the power demand input signal used to coordinate accessory loads (e.g. AC compressor, alternator load). The signal is missing or implausible.
     de: Die Motorsteuerung erkennt einen elektrischen Fehler am Leistungsanforderungs-Eingang, der zur Koordination von Nebenverbrauchern dient (z. B. Klimakompressor, Generatorlast). Das Signal fehlt oder ist unplausibel.
@@ -59454,8 +59454,8 @@
 - code: P2563
   category: powertrain
   title:
-    en: Turbocharger Boost Control Position Sensor Circuit
-    de: Turbolader Ladedruck-Stellungssensor Stromkreis
+    en: Turbocharger Boost Control Position Sensor A Circuit Range/Performance
+    de: Turbolader Ladedruck-Positionssensor A Stromkreis Bereich/Plausibilität
   description:
     en: The position feedback sensor on the variable-geometry or wastegate turbocharger actuator is not communicating or is implausible. Without position feedback, boost control runs in default mode and power is reduced.
     de: Der Stellungssensor des Variabel-Geometrie- oder Wastegate-Turboladerstellers liefert kein Signal oder ist unplausibel. Ohne Stellungs-Rückmeldung läuft die Ladedruckregelung im Default und die Leistung sinkt.
@@ -59596,8 +59596,8 @@
 - code: P2566
   category: powertrain
   title:
-    en: Turbocharger Boost Control Position Sensor Range/Performance
-    de: Turbolader Ladedruck-Stellungssensor Bereich/Plausibilität
+    en: Turbocharger Boost Control Position Sensor A Circuit Intermittent/Erratic
+    de: Turbolader Ladedruck-Positionssensor A Stromkreis sporadisch/unregelmäßig
   description:
     en: The turbocharger actuator position sensor reports a value, but it does not track commanded vane or wastegate position within tolerance. Often a sticky VTG mechanism due to soot.
     de: Der Stellungssensor des Turboladerstellers liefert ein Signal, das aber nicht zur kommandierten Schaufel- oder Wastegate-Stellung innerhalb der Toleranz passt. Häufig ein verrusster VTG-Mechanismus.
@@ -59646,8 +59646,8 @@
 - code: P2567
   category: powertrain
   title:
-    en: Turbocharger Boost Control Position Sensor Circuit Low
-    de: Turbolader Ladedruck-Stellungssensor Signal zu niedrig
+    en: Direct Ozone Reduction Catalyst Temperature Sensor Circuit
+    de: Direkt-Ozonreduktions-Katalysator Temperatursensor Stromkreis
   description:
     en: The turbocharger position sensor signal is below the lower limit — short to ground or sensor at zero stop.
     de: Das Signal des Turbolader-Stellungssensors liegt unter dem unteren Grenzwert — Kurzschluss nach Masse oder Sensor am Nullanschlag.
@@ -59696,8 +59696,8 @@
 - code: P2568
   category: powertrain
   title:
-    en: Turbocharger Boost Control Position Sensor Circuit High
-    de: Turbolader Ladedruck-Stellungssensor Signal zu hoch
+    en: Direct Ozone Reduction Catalyst Temperature Sensor Circuit Range/Performance
+    de: Direkt-Ozonreduktions-Katalysator Temperatursensor Stromkreis Bereich/Plausibilität
   description:
     en: The turbocharger position sensor signal is above the upper limit — short to supply, open ground or sensor failed high.
     de: Das Signal des Turbolader-Stellungssensors liegt über dem oberen Grenzwert — Kurzschluss nach Plus, offene Masse oder defekter Sensor mit Hoch-Fehler.
@@ -66404,8 +66404,8 @@
 - code: P2602
   category: powertrain
   title:
-    en: Coolant Pump Control Circuit Open
-    de: Kühlmittelpumpe Steuerkreis offen
+    en: Coolant Pump A Control Circuit Low
+    de: Kühlmittelpumpe A Steuerkreis zu niedrig
   description:
     en: The ECU detects an open circuit on the electric coolant pump control line. Without pump control the engine cannot actively manage warm-up and cool-down phases.
     de: Die Motorsteuerung erkennt eine Unterbrechung im Steuerkreis der elektrischen Kühlmittelpumpe. Ohne Pumpenansteuerung kann der Motor Aufwärm- und Abkühlphasen nicht aktiv regeln.
@@ -66446,8 +66446,8 @@
 - code: P2603
   category: powertrain
   title:
-    en: Coolant Pump Control Circuit Low
-    de: Kühlmittelpumpe Steuerkreis Signal zu niedrig
+    en: Coolant Pump A Control Circuit High
+    de: Kühlmittelpumpe A Steuerkreis zu hoch
   description:
     en: The electric coolant pump drive line reads below the lower threshold — typically a short to ground or a failed driver stage.
     de: Die Ansteuerleitung der elektrischen Kühlmittelpumpe liegt unter dem unteren Schwellwert — typischerweise Massekurzschluss oder defekte Endstufe.
@@ -66489,8 +66489,8 @@
 - code: P2604
   category: powertrain
   title:
-    en: Coolant Pump Control Circuit High
-    de: Kühlmittelpumpe Steuerkreis Signal zu hoch
+    en: Intake Air Heater A Circuit Range/Performance
+    de: Ansauglufterhitzer A Stromkreis Bereich/Plausibilität
   description:
     en: The electric coolant pump drive line reads above the upper threshold — usually a short to positive or a stuck-on driver stage.
     de: Die Ansteuerleitung der elektrischen Kühlmittelpumpe liegt über dem oberen Schwellwert — meist Kurzschluss nach Plus oder eine durchlegierte Endstufe.
