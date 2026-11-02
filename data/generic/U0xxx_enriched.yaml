@@ -9305,49 +9305,57 @@
     en: Lost Communication With Body Control Module D
     de: Kommunikation mit Bordnetzsteuergerät D verloren
   description:
-    en: 'The Personalization Module "B" has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Driver-profile settings (seats, mirrors, presets) are not applied. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
-    de: 'Personalisierungs-Modul "B" — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Fahrerprofil-Einstellungen (Sitze, Spiegel, Vorwahlen) werden nicht übernommen. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
+    en: "U0144 is logged by one or more control units that no longer receive the cyclic messages of the body controller J2012 calls Body Control Module D. In GM's network logic every node broadcasts a state-of-health message with ignition on; if it stays away while the supply is between 9 and 16 V, the listeners store a code naming the silent unit, not themselves. No manufacturer documents U0144 publicly: GM's U-code list knows only U0140, and Stellantis uses the neighbour U0145 for a BCM LIN bus. What the D unit does is maker-specific, typically a body sub-controller for doors, seats or lighting. U0140 to U0143 and U0145 cover the other body modules. Expect dead comfort functions, no MIL."
+    de: "U0144 legt ein Steuergerät ab, das die zyklischen Botschaften des Karosserie-Steuergeräts nicht mehr empfängt, das J2012 als Body Control Module D führt. Nach GM-Logik sendet jeder Teilnehmer bei eingeschalteter Zündung eine Lebenszeichen-Botschaft; bleibt sie bei 9–16 V Versorgung aus, speichern die Empfänger einen Code für das stumme Gerät – nicht für sich selbst. Öffentlich dokumentiert kein Hersteller U0144: GMs U-Code-Liste kennt nur U0140, Stellantis belegt den Nachbarn U0145 mit einem LIN-Bus des BCM. Welche Aufgabe Modul D hat, legt jeder Hersteller selbst fest, meist ein Unter-Steuergerät für Türen, Sitze oder Licht. U0140 bis U0143 und U0145 betreffen die übrigen Karosseriemodule. Folge: ausgefallene Komfortfunktionen, keine MIL."
   affected_components:
-    - personalization_module
+    - body_control_module
     - can_bus_wiring
   common_causes:
-    - id: personalization_module_unpowered
+    - id: module_supply_loss
       likelihood: high
       label:
-        en: Personalization module unpowered
-        de: Personalisierungs-Modul ohne Spannung
-    - id: personalization_wiring
+        en: Fuse, power or ground of the body module D missing
+        de: Sicherung, Plus oder Masse von Karosseriemodul D fehlt
+    - id: bus_wiring_connector
       likelihood: medium
       label:
-        en: CAN wiring to personalization module broken
-        de: CAN-Leitung zum Personalisierungs-Modul unterbrochen
-    - id: gateway_module_fault
+        en: Chafed bus wire or loose, wet connector on the way to module D
+        de: Durchgescheuerte Busleitung oder lockerer, feuchter Stecker zu Modul D
+    - id: low_battery_voltage
+      likelihood: medium
+      label:
+        en: Weak battery or voltage dip, so the module drops off the bus (history code)
+        de: Schwache Batterie oder Spannungseinbruch, das Modul fällt vom Bus (gespeicherter Code)
+    - id: module_internal
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Body module D internally faulty or not programmed
+        de: Karosseriemodul D intern defekt oder nicht programmiert
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Body functions handled by module D (locks, lighting, seats) do not respond
+      de: Von Modul D gesteuerte Funktionen (Verriegelung, Licht, Sitze) reagieren nicht
+    - en: Scan tool cannot reach module D
+      de: Diagnosegerät erreicht Modul D nicht
+    - en: Same code stored in several other modules
+      de: Derselbe Code steht in mehreren anderen Steuergeräten
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [60, 700]
-    estimated_hours: [0.5, 3.0]
+    estimated_hours: [0.5, 3]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0140, U0141, U0142, U0143, U0145]
   sources:
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
     - https://en.wikipedia.org/wiki/Body_control_module
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/control-module-u-code-list
+  reviewed: '2026-11-02'
 
 - code: U0145
   category: network
@@ -9355,48 +9363,57 @@
     en: Lost Communication With Body Control Module E
     de: Kommunikation mit Bordnetzsteuergerät E verloren
   description:
-    en: A secondary or auxiliary airbag/restraints controller (e.g. for rear or curtain bags) has stopped responding. The airbag warning lamp lights up and parts of the restraint system may be disabled.
-    de: Ein sekundäres oder zusätzliches Airbag-/Rückhalte-Steuergerät (z. B. für hintere oder Kopfairbags) antwortet nicht mehr. Die Airbag-Warnlampe leuchtet, Teile des Rückhaltesystems können deaktiviert sein.
+    en: "U0145 means the network has lost contact with the body controller J2012 labels E. Receiving modules expect its periodic messages; GM's generic logic sets such a code when a supervised message carrying the sender's availability fails to arrive at 9-16 V. Stellantis is the one maker found using U0145 publicly: a 2023 STAR case lists U0145-00 as a LIN bus 3 fault stored in the body control module next to U0140-00, and asks technicians to trace the bus harness and check for loose or pushed-out terminals before replacing the BCM. So on Stellantis vehicles the code points at a LIN branch hanging off the BCM. U0140 to U0144 cover the main and other body modules. MIL stays off; lights, locks or other LIN-driven functions may fail."
+    de: "U0145 heißt: Das Netz hat den Kontakt zum Karosserie-Steuergerät E verloren. Die Empfänger erwarten dessen zyklische Botschaften; nach der allgemeinen GM-Logik entsteht ein solcher Code, wenn eine überwachte Botschaft mit der Verfügbarkeit des Senders bei 9–16 V ausbleibt. Öffentlich nutzt nachweislich Stellantis den Code: Ein STAR-Fall von 2023 nennt U0145-00 als Fehler „LIN BUS 3“, gespeichert im BCM neben U0140-00, und verlangt, vor einem BCM-Tausch den Busstrang zu verfolgen und Stecker auf lockere oder herausgedrückte Kontakte zu prüfen. Bei Stellantis zeigt der Code also auf einen LIN-Zweig am BCM. U0140 bis U0144 betreffen das Haupt- und die übrigen Karosseriemodule. Keine MIL; Licht, Verriegelung oder andere LIN-Funktionen können ausfallen."
   affected_components:
-    - auxiliary_restraint_module
-    - can_bus_wiring
+    - body_control_module
+    - lin_bus_wiring
   common_causes:
-    - id: module_failed
+    - id: bus_terminal_fault
+      likelihood: high
+      label:
+        en: Loose, spread or pushed-out terminal in the bus harness (Stellantis case)
+        de: Lockerer, aufgeweiteter oder herausgedrückter Kontakt im Busstrang (Stellantis-Fall)
+    - id: lin_wiring_fault
       likelihood: medium
       label:
-        en: Auxiliary restraint module failed
-        de: Auxiliar-Rückhalte-Modul defekt
-    - id: gateway_module_fault
+        en: Open or short on the LIN/CAN line to module E
+        de: Unterbrechung oder Kurzschluss der LIN-/CAN-Leitung zu Modul E
+    - id: module_supply_loss
+      likelihood: medium
+      label:
+        en: Power or ground of module E missing
+        de: Plus oder Masse von Modul E fehlt
+    - id: module_internal
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Body module E or BCM internally faulty
+        de: Karosseriemodul E oder BCM intern defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Individual body functions such as lights or locks inoperative
+      de: Einzelne Karosseriefunktionen wie Licht oder Verriegelung ohne Funktion
+    - en: Code appears together with U0140 in several modules
+      de: Code erscheint zusammen mit U0140 in mehreren Steuergeräten
+    - en: Fault comes and goes when the harness is moved
+      de: Fehler kommt und geht beim Bewegen des Kabelstrangs
   repair:
-    difficulty: hard
+    difficulty: medium
     diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1.0, 4.0]
+    estimated_cost_eur: [60, 700]
+    estimated_hours: [0.5, 3]
   flags:
     mil: false
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0140, U0141, U0142, U0143, U0144]
   sources:
-    - https://en.wikipedia.org/wiki/Airbag
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://static.nhtsa.gov/odi/tsbs/2023/MC-10244408-9999.pdf
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
+    - https://en.wikipedia.org/wiki/Body_control_module
+  reviewed: '2026-11-02'
 
 - code: U0146
   category: network
@@ -9506,49 +9523,57 @@
     en: Lost Communication With Gateway C
     de: Kommunikation mit Gateway C verloren
   description:
-    en: 'The Body Control Module "C" has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. A third body controller is unreachable; its assigned body functions are affected. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
-    de: 'Bordnetzsteuergerät "C" — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Ein drittes Karosseriesteuergerät ist nicht erreichbar; die zugeordneten Funktionen sind betroffen. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
+    en: "U0148 reports that the third gateway, Gateway C, has gone silent. A gateway links separate bus segments (CAN, LIN, Ethernet) and forwards messages between them, so when it drops out, every module behind it disappears too. GM's procedure for U0100-U02FF explains the mechanism: listeners expect a periodic state-of-health message and log the missing sender once it fails to arrive at 9-16 V. No manufacturer documents U0148 publicly; GM's U-code list contains only U0146 for its serial data gateway. Unlike U0146 and U0147 for gateways A and B, or U0149 and U0150 for D and E, this code names the C unit, whose role differs by maker. Often several other U-codes appear at once; MIL usually off."
+    de: "U0148 meldet, dass das dritte Gateway, Gateway C, verstummt ist. Ein Gateway verbindet getrennte Bussegmente (CAN, LIN, Ethernet) und reicht Botschaften zwischen ihnen weiter; fällt es aus, verschwinden auch alle Steuergeräte dahinter. Den Mechanismus beschreibt GMs Prüfablauf für U0100–U02FF: Die Empfänger erwarten eine zyklische Lebenszeichen-Botschaft und speichern den fehlenden Sender, sobald sie bei 9–16 V ausbleibt. Öffentlich dokumentiert kein Hersteller U0148; GMs U-Code-Liste enthält für das eigene Datengateway nur U0146. Anders als U0146/U0147 (Gateway A/B) oder U0149/U0150 (D/E) bezeichnet dieser Code die Einheit C, deren Rolle herstellerabhängig ist. Meist stehen viele weitere U-Codes; die MIL bleibt in der Regel aus."
   affected_components:
-    - body_control_module
+    - gateway_module
     - can_bus_wiring
   common_causes:
-    - id: bcm_c_unpowered
+    - id: gateway_supply_loss
       likelihood: high
       label:
-        en: BCM-C unpowered
-        de: BCM-C ohne Spannung
-    - id: bcm_c_wiring
+        en: Fuse, power or ground of gateway C missing
+        de: Sicherung, Plus oder Masse von Gateway C fehlt
+    - id: bus_wiring_connector
       likelihood: medium
       label:
-        en: CAN wiring to BCM-C broken
-        de: CAN-Leitung zum BCM-C unterbrochen
-    - id: gateway_module_fault
+        en: Damaged bus wiring or corroded connector at gateway C
+        de: Beschädigte Busleitung oder korrodierter Stecker an Gateway C
+    - id: gateway_software
+      likelihood: medium
+      label:
+        en: Gateway C software fault or incomplete programming
+        de: Softwarefehler oder unvollständige Programmierung von Gateway C
+    - id: gateway_internal
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Gateway C internally faulty
+        de: Gateway C intern defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Several modules behind the gateway unreachable at once
+      de: Mehrere Steuergeräte hinter dem Gateway gleichzeitig nicht erreichbar
+    - en: Many U-codes stored across the vehicle
+      de: Viele U-Codes im ganzen Fahrzeug gespeichert
+    - en: Multiple warning lamps or messages in the cluster
+      de: Mehrere Warnleuchten oder Meldungen im Kombiinstrument
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur: [100, 1800]
-    estimated_hours: [1.0, 6.0]
+    estimated_cost_eur: [80, 1200]
+    estimated_hours: [1, 4]
   flags:
-    mil: true
+    mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0146, U0147, U0149, U0150]
   sources:
-    - https://en.wikipedia.org/wiki/Body_control_module
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
+    - https://www.bosch-mobility.com/en/solutions/vehicle-computer/central-gateway/
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/control-module-u-code-list
+  reviewed: '2026-11-02'
 
 - code: U0149
   category: network
@@ -9556,49 +9581,57 @@
     en: Lost Communication With Gateway D
     de: Kommunikation mit Gateway D verloren
   description:
-    en: 'The Door Driver Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The driver-door module is silent; its window, lock, and mirror controls fail. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
-    de: 'Fahrertür-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Das Fahrertürmodul meldet sich nicht; Fensterheber, Verriegelung und Spiegel der Tür fallen aus. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
+    en: U0149 names Gateway D as the module whose messages no longer arrive. Vehicles with several gateways split the network into domains, and each gateway routes traffic between its own bus segments; losing D therefore cuts off the domain it serves. Following GM's generic U0100-U02FF logic, a receiving module stores the code when the expected periodic message with the sender's availability is missing while voltage is normal. No manufacturer documents U0149 publicly, and GM only lists U0146 for a single gateway. U0146 to U0148 cover gateways A to C, U0150 the fifth one. A history-only entry after a battery disconnect or flat battery is often harmless; an active one usually comes with many other U-codes. No MIL as a rule.
+    de: U0149 nennt Gateway D als das Modul, dessen Botschaften nicht mehr ankommen. Fahrzeuge mit mehreren Gateways teilen das Netz in Bereiche auf, jedes Gateway vermittelt zwischen seinen eigenen Bussegmenten; fällt D aus, ist der von ihm versorgte Bereich abgeschnitten. Nach GMs allgemeiner Logik für U0100–U02FF speichert ein Empfänger den Code, wenn die erwartete zyklische Botschaft mit der Verfügbarkeit des Senders bei normaler Spannung fehlt. Öffentlich dokumentiert kein Hersteller U0149, GM führt nur U0146 für ein einziges Gateway. U0146 bis U0148 betreffen die Gateways A bis C, U0150 das fünfte. Ein reiner Speichereintrag nach abgeklemmter oder leerer Batterie ist oft harmlos; ein aktiver kommt meist mit vielen weiteren U-Codes. In der Regel keine MIL.
   affected_components:
-    - door_control_module
+    - gateway_module
     - can_bus_wiring
   common_causes:
-    - id: driver_door_module_unpowered
+    - id: gateway_supply_loss
       likelihood: high
       label:
-        en: Driver door module unpowered (often broken wires in door hinge)
-        de: Fahrertür-Modul ohne Spannung (oft gebrochene Drähte im Türscharnier)
-    - id: water_in_driver_door
+        en: Gateway D without power or ground
+        de: Gateway D ohne Plus oder Masse
+    - id: bus_wiring_connector
       likelihood: medium
       label:
-        en: Water ingress into driver door module
-        de: Wassereinbruch ins Fahrertür-Modul
-    - id: gateway_module_fault
+        en: Open or shorted bus wiring, wet or corroded connector at gateway D
+        de: Busleitung unterbrochen oder kurzgeschlossen, Stecker an Gateway D nass oder korrodiert
+    - id: low_battery_voltage
+      likelihood: medium
+      label:
+        en: Low battery voltage or battery disconnect (history code only)
+        de: Unterspannung oder abgeklemmte Batterie (nur gespeicherter Code)
+    - id: gateway_internal
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Gateway D internally faulty
+        de: Gateway D intern defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Group of modules in one domain does not answer
+      de: Eine Gruppe von Steuergeräten eines Bereichs antwortet nicht
+    - en: Many U-codes stored at the same time
+      de: Viele U-Codes gleichzeitig gespeichert
+    - en: Functions of the cut-off domain inoperative
+      de: Funktionen des abgeschnittenen Bereichs ausgefallen
   repair:
-    difficulty: medium
+    difficulty: hard
     diy_possible: false
-    estimated_cost_eur: [80, 800]
-    estimated_hours: [1.0, 3.0]
+    estimated_cost_eur: [80, 1200]
+    estimated_hours: [1, 4]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0146, U0147, U0148, U0150]
   sources:
-    - https://en.wikipedia.org/wiki/Power_window
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
+    - https://www.bosch-mobility.com/en/solutions/vehicle-computer/central-gateway/
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/control-module-u-code-list
+  reviewed: '2026-11-02'
 
 - code: U014A
   category: network
@@ -9868,48 +9901,57 @@
     en: Lost Communication With Gateway E
     de: Kommunikation mit Gateway E verloren
   description:
-    en: 'The Side Object Detection Control Module Left has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Left-side blind-spot monitoring stops working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
-    de: 'Seitenobjekterkennung links — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Totwinkelüberwachung links fällt aus. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
+    en: "U0150 is the last code of the gateway block and points at Gateway E. Gateways are central nodes that connect bus systems of different speed and type and forward only the messages each side needs. When E stops sending, the modules that expect its traffic log U0150, the way GM's U0100-U02FF procedure describes for any silent sender: a supervised periodic message is missing although supply voltage is in range. No manufacturer documents U0150 publicly; GM's U-code list ends its gateway entries at U0146. U0146 to U0149 refer to gateways A to D. Before suspecting the gateway, check power, ground and the bus lines to it; a code stored only in history after battery work needs no repair. MIL normally stays off."
+    de: "U0150 ist der letzte Code des Gateway-Blocks und zeigt auf Gateway E. Gateways sind zentrale Knoten, die Bussysteme unterschiedlicher Art und Geschwindigkeit verbinden und jeder Seite nur die nötigen Botschaften weiterreichen. Hört E auf zu senden, speichern die Steuergeräte, die seinen Verkehr erwarten, U0150 – so wie es GMs Ablauf für U0100–U02FF für jeden stummen Sender beschreibt: Eine überwachte zyklische Botschaft fehlt, obwohl die Versorgung im Sollbereich liegt. Öffentlich dokumentiert kein Hersteller U0150; GMs U-Code-Liste führt beim Gateway nur U0146. U0146 bis U0149 betreffen die Gateways A bis D. Vor dem Verdacht auf das Gateway Plus, Masse und Busleitungen prüfen; ein nach Batteriearbeiten nur gespeicherter Code braucht keine Reparatur. Die MIL bleibt normalerweise aus."
   affected_components:
-    - side_object_detection_module_left
+    - gateway_module
     - can_bus_wiring
   common_causes:
-    - id: side_radar_unpowered
+    - id: gateway_supply_loss
       likelihood: high
       label:
-        en: Side radar module unpowered
-        de: Seitenradar-Modul ohne Spannung
-    - id: side_radar_blocked
+        en: Gateway E fuse blown or ground loose
+        de: Sicherung von Gateway E defekt oder Masse locker
+    - id: bus_wiring_connector
       likelihood: medium
       label:
-        en: Side radar damaged or covered (rear bumper hit)
-        de: Seitenradar beschädigt oder verdeckt (Heckstoßstange)
-    - id: gateway_module_fault
+        en: Bus line to gateway E chafed or connector corroded
+        de: Busleitung zu Gateway E durchgescheuert oder Stecker korrodiert
+    - id: gateway_software
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Gateway E software fault, update or reprogramming needed
+        de: Softwarefehler in Gateway E, Update oder Neuprogrammierung nötig
+    - id: gateway_internal
+      likelihood: low
+      label:
+        en: Gateway E internally faulty
+        de: Gateway E intern defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Modules routed through gateway E not reachable by the scan tool
+      de: Über Gateway E angebundene Steuergeräte für das Diagnosegerät nicht erreichbar
+    - en: Several functions fail together
+      de: Mehrere Funktionen fallen gemeinsam aus
+    - en: Warning messages in the instrument cluster
+      de: Warnmeldungen im Kombiinstrument
   repair:
-    difficulty: medium
+    difficulty: hard
     diy_possible: false
     estimated_cost_eur: [80, 1200]
-    estimated_hours: [1.0, 4.0]
+    estimated_hours: [1, 4]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0146, U0147, U0148, U0149]
   sources:
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
+    - https://www.bosch-mobility.com/en/solutions/vehicle-computer/central-gateway/
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/control-module-u-code-list
+  reviewed: '2026-11-02'
 
 - code: U0151
   category: network
@@ -10013,50 +10055,59 @@
   category: network
   title:
     en: Lost Communication With Side Restraints Control Module Right
-    de: Kommunikation mit Seiten-Airbag-Steuergerät rechts verloren
+    de: Kommunikation mit Seitenairbag-Steuergerät rechts verloren
   description:
-    en: 'The Restraints Control Module B has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. A second restraints controller is unreachable, affecting airbag readiness. Safety-critical. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
-    de: 'Airbag-Steuergerät B — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Ein zweites Airbag-Steuergerät ist nicht erreichbar; die Airbag-Bereitschaft ist betroffen. Sicherheitskritisch. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
+    en: "U0153 means the airbag system no longer hears from the separate control module for the right-side restraints. Some vehicles split the job: a central airbag unit plus side units that evaluate side impact sensors and fire side or curtain bags. When the right unit's periodic messages stop, the receiving modules store U0153, in the same way GM's U0100-U02FF logic treats any silent node. No manufacturer documents U0153 publicly; GM's list stops at U0151 for its single sensing and diagnostic module. U0152 is the left-hand twin, U0151 the main restraints module. The airbag warning lamp comes on and side protection on the right may be unavailable; no MIL. Work on airbag components belongs in a workshop."
+    de: "U0153 bedeutet: Das Airbagsystem hört nichts mehr vom eigenen Steuergerät der rechten Seitenrückhaltesysteme. Manche Fahrzeuge teilen die Aufgabe auf – ein zentrales Airbagsteuergerät plus Seitenmodule, die Seitencrash-Sensoren auswerten und Seiten- oder Kopfairbags zünden. Bleiben die zyklischen Botschaften des rechten Moduls aus, speichern die Empfänger U0153, so wie GMs Logik für U0100–U02FF jeden stummen Teilnehmer behandelt. Öffentlich dokumentiert kein Hersteller U0153; GMs Liste endet bei U0151 für sein einziges Airbag-Diagnosemodul. U0152 ist das linke Gegenstück, U0151 das Hauptsteuergerät. Die Airbag-Warnleuchte leuchtet, der rechte Seitenschutz kann fehlen; keine MIL. Arbeiten am Airbagsystem gehören in die Werkstatt."
   affected_components:
-    - restraints_control_module
+    - side_restraints_module_right
     - can_bus_wiring
   common_causes:
-    - id: srs_b_unpowered
+    - id: connector_b_pillar_seat
       likelihood: high
       label:
-        en: Secondary SRS module unpowered
-        de: Sekundäres SRS-Modul ohne Spannung
-    - id: can_wiring_to_srs_b
+        en: Loose or corroded connector at the right side module (B-pillar or under the seat)
+        de: Lockerer oder korrodierter Stecker am rechten Seitenmodul (B-Säule oder unter dem Sitz)
+    - id: module_supply_loss
       likelihood: medium
       label:
-        en: CAN wiring to secondary SRS broken
-        de: CAN-Leitung zum sekundären SRS unterbrochen
-    - id: gateway_module_fault
+        en: Power or ground of the right side module missing
+        de: Plus oder Masse des rechten Seitenmoduls fehlt
+    - id: bus_wiring_damage
+      likelihood: medium
+      label:
+        en: Bus wiring damaged after seat or trim work
+        de: Busleitung nach Sitz- oder Verkleidungsarbeiten beschädigt
+    - id: module_internal
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Right side restraints module faulty
+        de: Rechtes Seitenairbag-Steuergerät defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Airbag warning lamp on
+      de: Airbag-Warnleuchte leuchtet
+    - en: Right side or curtain airbag may not deploy
+      de: Seiten- oder Kopfairbag rechts löst unter Umständen nicht aus
+    - en: Scan tool cannot reach the right side module
+      de: Diagnosegerät erreicht das rechte Seitenmodul nicht
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [150, 1800]
-    estimated_hours: [1.0, 4.0]
+    estimated_cost_eur: [100, 900]
+    estimated_hours: [1, 3]
   flags:
-    mil: true
+    mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0151, U0152, U0154]
   sources:
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
+    - https://www.bosch-mobility.com/en/solutions/passive-safety/occupant-protection/
+    - https://en.wikipedia.org/wiki/Airbag
+  reviewed: '2026-11-02'
 
 - code: U0154
   category: network
@@ -10210,51 +10261,59 @@
   category: network
   title:
     en: Lost Communication With Information Center B
-    de: Kommunikation mit Informations-Center B verloren
+    de: Kommunikation mit Informationszentrum B verloren
   description:
-    en: 'The Personalization Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Stored personalisation settings are not loaded. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
-    de: 'Personalisierungs-Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Gespeicherte Personalisierungs-Einstellungen werden nicht geladen. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
+    en: "U0157 is set when the second information display, Information Center B, stops transmitting on the vehicle bus. J2012 provides two such driver information displays, A (U0156) and B, separate from the instrument cluster (U0155) and the head-up display (U0158); which screen counts as B is up to the manufacturer. The setting logic is the generic one GM documents for U0100-U02FF: a monitored periodic message is missing while the supply sits between 9 and 16 V, and every module waiting for it logs the code. No manufacturer documents U0157 publicly; GM's list carries only U0155 and U0158. The display stays dark or frozen, the rest of the car is mostly unaffected, and no MIL comes on."
+    de: "U0157 entsteht, wenn die zweite Informationsanzeige, Information Center B, keine Botschaften mehr auf den Fahrzeugbus legt. J2012 sieht zwei solche Fahrer-Informationsanzeigen vor, A (U0156) und B, getrennt vom Kombiinstrument (U0155) und vom Head-up-Display (U0158); welcher Bildschirm als B gilt, bestimmt der Hersteller. Die Setzlogik ist die allgemeine, die GM für U0100–U02FF beschreibt: Eine überwachte zyklische Botschaft fehlt bei 9–16 V Versorgung, und jedes Steuergerät, das darauf wartet, speichert den Code. Öffentlich dokumentiert kein Hersteller U0157; GMs Liste führt nur U0155 und U0158. Die Anzeige bleibt dunkel oder eingefroren, das übrige Fahrzeug ist meist unbeeinträchtigt, eine MIL gibt es nicht."
   affected_components:
-    - personalization_module
+    - information_display_module
     - can_bus_wiring
   common_causes:
-    - id: personalization_unpowered
+    - id: module_supply_loss
       likelihood: high
       label:
-        en: Personalization module unpowered
-        de: Personalisierungs-Modul ohne Spannung
-    - id: can_wiring_to_personalization
+        en: Display unit B without power or ground (fuse, connector)
+        de: Anzeigeeinheit B ohne Plus oder Masse (Sicherung, Stecker)
+    - id: bus_wiring_connector
       likelihood: medium
       label:
-        en: CAN wiring to personalization module broken
-        de: CAN-Leitung zum Personalisierungs-Modul unterbrochen
-    - id: gateway_module_fault
+        en: Bus line or connector behind the dashboard damaged
+        de: Busleitung oder Stecker hinter dem Armaturenbrett beschädigt
+    - id: display_software
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Display software hang or failed update
+        de: Software der Anzeige hängt oder Update fehlgeschlagen
+    - id: module_internal
+      likelihood: low
+      label:
+        en: Information Center B internally faulty
+        de: Information Center B intern defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Secondary display dark, frozen or showing no data
+      de: Zweitanzeige dunkel, eingefroren oder ohne Daten
+    - en: Messages normally shown on display B missing
+      de: Sonst auf Anzeige B gezeigte Meldungen fehlen
+    - en: Code stored in several modules
+      de: Code in mehreren Steuergeräten gespeichert
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur: [80, 800]
-    estimated_hours: [1.0, 3.0]
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 3]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0155, U0156, U0158]
   sources:
-    - https://en.wikipedia.org/wiki/Body_control_module
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/control-module-u-code-list
+    - https://en.wikipedia.org/wiki/Dashboard
+  reviewed: '2026-11-02'
 
 - code: U0158
   category: network
@@ -11534,52 +11593,59 @@
   category: network
   title:
     en: Lost Communication With Restraints System Sensor D
-    de: Kommunikationsverlust mit Rückhaltesystem-Sensor D
+    de: Kommunikation mit Rückhaltesystem-Sensor D verloren
   description:
-    en: A control module has detected that bus C is non-functional and shut its bus C interface off. Bus C is typically a tertiary segment used for diagnostics or specialized subsystems; modules on the segment fall silent simultaneously.
-    de: Ein Steuergerät hat erkannt, dass Bus C nicht funktioniert, und seine Bus-C-Schnittstelle abgeschaltet. Bus C ist typischerweise ein tertiäres Segment für Diagnose oder spezialisierte Subsysteme; Steuergeräte am Segment werden gleichzeitig still.
+    en: "U0173 tells that the airbag control unit no longer receives data from remote crash sensor D. Such satellite sensors sit in the crumple zone, doors or pillars and report acceleration in one or two axes so the control unit can judge direction and severity of an impact. Chrysler documents the code: in its 2006-2010 Jeep airbag code list U0173 stands for the second left-side satellite acceleration sensor, beside U0170/U0171 (front left/right), U0172 (left side 1) and U0175/U0176 (right side). Which position letter D has on other makes is their choice. The airbag warning lamp lights, protection on that side may be reduced, and there is no MIL. Diagnosis and repair belong to trained staff only."
+    de: "U0173 heißt: Das Airbagsteuergerät erhält keine Daten mehr vom ausgelagerten Crash-Sensor D. Solche Satellitensensoren sitzen in der Knautschzone, den Türen oder Säulen und melden die Beschleunigung in einer oder zwei Achsen, damit das Steuergerät Richtung und Schwere eines Aufpralls bewerten kann. Chrysler dokumentiert den Code: In seiner Airbag-Codeliste für Jeep-Modelle 2006–2010 steht U0173 für den zweiten linken seitlichen Satelliten-Beschleunigungssensor, neben U0170/U0171 (vorn links/rechts), U0172 (links seitlich 1) und U0175/U0176 (rechts seitlich). Welche Einbaulage der Buchstabe D bei anderen Herstellern hat, legen diese selbst fest. Die Airbag-Warnleuchte leuchtet, der Schutz auf dieser Seite kann eingeschränkt sein; keine MIL. Diagnose und Reparatur nur durch Fachpersonal."
   affected_components:
-    - can_bus_wiring
-    - control_module
+    - restraints_sensor_d
+    - crash_signal_wiring
   common_causes:
-    - id: bus_c_short
+    - id: sensor_connector
       likelihood: high
       label:
-        en: Bus C shorted to supply or ground
-        de: Bus C gegen Versorgung oder Masse kurzgeschlossen
-    - id: failing_module_pulling_bus_down
+        en: Loose or corroded connector at satellite sensor D
+        de: Lockerer oder korrodierter Stecker an Satellitensensor D
+    - id: sensor_wiring
       likelihood: medium
       label:
-        en: One failing module pulling bus C down
-        de: Ein defektes Steuergerät zieht Bus C herunter
-    - id: gateway_module_fault
+        en: Sensor line damaged, e.g. in the door or pillar area
+        de: Sensorleitung beschädigt, etwa im Tür- oder Säulenbereich
+    - id: sensor_failed
+      likelihood: medium
+      label:
+        en: Satellite sensor D failed (water ingress, impact)
+        de: Satellitensensor D defekt (Wassereintritt, Anstoß)
+    - id: airbag_unit_input
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Sensor input of the airbag control unit faulty
+        de: Sensoreingang des Airbagsteuergeräts defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Airbag warning lamp on
+      de: Airbag-Warnleuchte leuchtet
+    - en: Side impact detection on the affected side reduced
+      de: Seitencrash-Erkennung auf der betroffenen Seite eingeschränkt
+    - en: Code stays active until the sensor link is restored
+      de: Code bleibt aktiv, bis die Sensorverbindung wieder steht
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [80, 1500]
-    estimated_hours: [1.0, 8.0]
+    estimated_cost_eur: [80, 600]
+    estimated_hours: [0.5, 2.5]
   flags:
-    mil: true
+    mil: false
     emissions_relevant: false
-    limp_mode_possible: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-    - iso:11898
+  related_codes: [U0151, U0170, U0171, U0172, U0174, U0175, U0176]
   sources:
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://static.nhtsa.gov/odi/inv/2011/INRL-PE11019-48176P.pdf
+    - https://www.bosch-mobility.com/en/solutions/sensors/peripheral-acceleration-sensor/
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
+  reviewed: '2026-11-02'
 
 - code: U0174
   category: network
@@ -11744,51 +11810,59 @@
   category: network
   title:
     en: Lost Communication With Restraints System Sensor H
-    de: Kommunikationsverlust mit Rückhaltesystem-Sensor H
+    de: Kommunikation mit Rückhaltesystem-Sensor H verloren
   description:
-    en: 'The Mirror Memory Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Memory mirror positioning stops working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
-    de: 'Spiegel-Memory-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Spiegel-Memory-Verstellung funktioniert nicht mehr. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
+    en: "U0177 is stored when crash sensor H, the eighth remote sensor of the restraint system in J2012 lettering, stops reporting to the airbag control unit. Remote acceleration or pressure sensors detect front, side or rear impacts early and feed the central unit that decides on deployment. No manufacturer documents U0177 publicly. Chrysler's Jeep airbag list from 2006-2010 shows how the block is used, assigning U0170 to U0176 to front and side satellites, but ends before H; so U0177 only appears on vehicles with very many satellites. Siblings U0170 to U0176, U0178 and U0179 name the other sensor positions. Result: airbag warning lamp on, possibly reduced protection in one zone, no MIL. Leave airbag work to a workshop."
+    de: "U0177 wird gespeichert, wenn Crash-Sensor H – nach J2012-Zählung der achte ausgelagerte Sensor des Rückhaltesystems – nicht mehr an das Airbagsteuergerät meldet. Ausgelagerte Beschleunigungs- oder Drucksensoren erkennen Front-, Seiten- oder Heckaufprall früh und liefern ihre Werte an das zentrale Gerät, das über die Auslösung entscheidet. Öffentlich dokumentiert kein Hersteller U0177. Chryslers Airbag-Liste für Jeep 2006–2010 zeigt, wie der Block genutzt wird – U0170 bis U0176 für Front- und Seitensatelliten –, endet aber vor H; U0177 kommt also nur bei Fahrzeugen mit sehr vielen Satelliten vor. Die Geschwister U0170 bis U0176, U0178 und U0179 bezeichnen die übrigen Einbaulagen. Folge: Airbag-Warnleuchte an, unter Umständen schwächerer Schutz in einem Bereich, keine MIL. Airbagarbeiten der Werkstatt überlassen."
   affected_components:
-    - mirror_memory_module
-    - can_bus_wiring
+    - restraints_sensor_h
+    - crash_signal_wiring
   common_causes:
-    - id: mirror_module_unpowered
+    - id: sensor_connector
       likelihood: high
       label:
-        en: Mirror module unpowered
-        de: Spiegel-Modul ohne Spannung
-    - id: mirror_wiring
+        en: Connector at sensor H loose, wet or corroded
+        de: Stecker an Sensor H locker, nass oder korrodiert
+    - id: sensor_wiring
       likelihood: medium
       label:
-        en: CAN wiring to mirror module broken
-        de: CAN-Leitung zum Spiegel-Modul unterbrochen
-    - id: gateway_module_fault
+        en: Sensor wiring damaged by trim or body work
+        de: Sensorleitung durch Verkleidungs- oder Karosseriearbeiten beschädigt
+    - id: sensor_failed
+      likelihood: medium
+      label:
+        en: Crash sensor H failed
+        de: Crash-Sensor H defekt
+    - id: airbag_unit_input
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Airbag control unit input faulty or wrong configuration
+        de: Eingang des Airbagsteuergeräts defekt oder falsch konfiguriert
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Airbag warning lamp on
+      de: Airbag-Warnleuchte leuchtet
+    - en: Impact detection in the zone of sensor H unavailable
+      de: Aufprallerkennung im Bereich von Sensor H nicht verfügbar
+    - en: Code returns immediately after clearing
+      de: Code kehrt nach dem Löschen sofort zurück
   repair:
-    difficulty: medium
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [60, 700]
+    estimated_cost_eur: [80, 600]
     estimated_hours: [0.5, 2.5]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0151, U0170, U0176, U0178, U0179]
   sources:
-    - https://en.wikipedia.org/wiki/Power_seat
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://www.bosch-mobility.com/en/solutions/sensors/peripheral-acceleration-sensor/
+    - https://www.bosch-mobility.com/en/solutions/passive-safety/occupant-protection/
+    - https://static.nhtsa.gov/odi/inv/2011/INRL-PE11019-48176P.pdf
+  reviewed: '2026-11-02'
 
 - code: U0178
   category: network
@@ -11847,51 +11921,59 @@
   category: network
   title:
     en: Lost Communication With Restraints System Sensor J
-    de: Kommunikationsverlust mit Rückhaltesystem-Sensor J
+    de: Kommunikation mit Rückhaltesystem-Sensor J verloren
   description:
-    en: 'The Power Liftgate Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The powered tailgate stops operating automatically. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
-    de: 'elektrischer Heckklappen-Steuerung — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die elektrische Heckklappe arbeitet nicht mehr automatisch. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
+    en: U0179 closes the J2012 block for remote restraint sensors and names sensor J, the tenth position (the letter I is used as well, see U0178). The airbag control unit checks that each connected satellite keeps sending; if sensor J falls silent, the unit stores U0179, switches on the airbag warning lamp and may disable the deployment paths that rely on it. No manufacturer documents U0179 publicly, and Chrysler's published Jeep list stops at the sixth satellite (U0176), so this code is rare. Bosch describes peripheral sensors in front, side and rear positions, which explains why up to ten slots exist. U0170 to U0178 cover sensors A to I, U0151 the airbag unit itself. No MIL; repairs only by trained staff.
+    de: U0179 schließt den J2012-Block für ausgelagerte Rückhaltesensoren ab und nennt Sensor J, die zehnte Position (der Buchstabe I ist ebenfalls vergeben, siehe U0178). Das Airbagsteuergerät prüft, ob jeder angeschlossene Satellit weiter sendet; verstummt Sensor J, speichert es U0179, schaltet die Airbag-Warnleuchte ein und kann die Auslösepfade sperren, die von ihm abhängen. Öffentlich dokumentiert kein Hersteller U0179, und Chryslers veröffentlichte Jeep-Liste endet beim sechsten Satelliten (U0176) – der Code ist also selten. Bosch beschreibt Peripheriesensoren in Front-, Seiten- und Heckpositionen; daher gibt es bis zu zehn Plätze. U0170 bis U0178 betreffen die Sensoren A bis I, U0151 das Airbagsteuergerät selbst. Keine MIL; Reparatur nur durch Fachpersonal.
   affected_components:
-    - power_liftgate_module
-    - can_bus_wiring
+    - restraints_sensor_j
+    - crash_signal_wiring
   common_causes:
-    - id: liftgate_module_unpowered
+    - id: sensor_connector
       likelihood: high
       label:
-        en: Liftgate module unpowered
-        de: Heckklappen-Modul ohne Spannung
-    - id: liftgate_wiring
+        en: Connector at sensor J loose or corroded
+        de: Stecker an Sensor J locker oder korrodiert
+    - id: sensor_wiring
       likelihood: medium
       label:
-        en: Wiring through liftgate hinge broken
-        de: Verkabelung durch Heckklappen-Scharnier unterbrochen
-    - id: gateway_module_fault
+        en: Open or shorted line between sensor J and the airbag unit
+        de: Leitung zwischen Sensor J und Airbagsteuergerät unterbrochen oder kurzgeschlossen
+    - id: sensor_failed
+      likelihood: medium
+      label:
+        en: Crash sensor J failed, e.g. after a minor impact
+        de: Crash-Sensor J defekt, etwa nach einem leichten Anstoß
+    - id: airbag_unit_input
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Airbag control unit input faulty
+        de: Eingang des Airbagsteuergeräts defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Airbag warning lamp on
+      de: Airbag-Warnleuchte leuchtet
+    - en: Restraint deployment relying on sensor J may be disabled
+      de: Von Sensor J abhängige Auslösung kann gesperrt sein
+    - en: Scan tool shows sensor J as not responding
+      de: Diagnosegerät zeigt Sensor J als nicht antwortend
   repair:
-    difficulty: medium
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [80, 1000]
-    estimated_hours: [1.0, 4.0]
+    estimated_cost_eur: [80, 600]
+    estimated_hours: [0.5, 2.5]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0151, U0170, U0177, U0178]
   sources:
-    - https://en.wikipedia.org/wiki/Body_control_module
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://www.bosch-mobility.com/en/solutions/sensors/peripheral-acceleration-sensor/
+    - https://www.bosch-mobility.com/en/solutions/passive-safety/occupant-protection/
+    - https://static.nhtsa.gov/odi/inv/2011/INRL-PE11019-48176P.pdf
+  reviewed: '2026-11-02'
 
 - code: U017A
   category: network
@@ -12265,51 +12347,60 @@
   category: network
   title:
     en: Lost Communication With Headlamp Leveling Control Module
-    de: Kommunikation mit Leuchtweitenregelungs-Steuergerät verloren
+    de: Kommunikation mit Leuchtweiteregulierungs-Steuergerät verloren
   description:
-    en: 'The Auto Park Brake Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Automatic parking-brake functions stop working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
-    de: 'elektrischer Parkbremsen-Steuerung — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die automatischen Feststellbrems-Funktionen fallen aus. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
+    en: "U0181 says the module that controls automatic headlamp levelling has dropped off the bus. That module reads ride-height sensors on the axles and drives the actuator motors in the headlamps to keep the beam at the right angle under load. GM uses the code: the Saab 9-5 (2010-2011) U-code list names it Lost Communication With Headlamp Leveling Control Module, and a GM bulletin for the 2017-2021 GMC Acadia and Cadillac XT5 lists U0181 among the U-codes caused by a chafed dash harness or water in the BCM. Per GM it sets when the module's supervised periodic message is missing at 9-16 V. U0180 is the automatic lighting module, U0182 and U0183 the front and rear lighting modules. No MIL; beam height may stay fixed."
+    de: "U0181 sagt: Das Steuergerät der automatischen Leuchtweiteregulierung ist vom Bus verschwunden. Es liest Höhenstandssensoren an den Achsen aus und steuert die Stellmotoren in den Scheinwerfern, damit der Lichtkegel auch beladen richtig steht. GM nutzt den Code: Die U-Code-Liste des Saab 9-5 (2010–2011) führt ihn als Kommunikationsverlust mit dem Leuchtweiteregelungs-Steuergerät, und ein GM-Bulletin für GMC Acadia und Cadillac XT5 2017–2021 nennt U0181 unter den U-Codes, die ein durchgescheuerter Armaturenbrett-Kabelstrang oder Wasser im BCM auslöst. Laut GM setzt er, wenn die überwachte zyklische Botschaft des Moduls bei 9–16 V fehlt. U0180 ist das Modul für automatisches Licht, U0182 und U0183 die Lichtmodule vorn und hinten. Keine MIL; die Leuchtweite kann starr bleiben."
   affected_components:
-    - park_brake_module
+    - headlamp_leveling_module
     - can_bus_wiring
   common_causes:
-    - id: epb_unpowered
+    - id: module_supply_loss
       likelihood: high
       label:
-        en: EPB module unpowered
-        de: EPB-Modul ohne Spannung
-    - id: epb_wiring
+        en: Levelling module without power or ground
+        de: Leuchtweite-Steuergerät ohne Plus oder Masse
+    - id: harness_chafe_water
       likelihood: medium
       label:
-        en: CAN wiring to EPB broken
-        de: CAN-Leitung zum EPB unterbrochen
-    - id: gateway_module_fault
+        en: Chafed harness or water in connectors or BCM area (GM Acadia/XT5)
+        de: Durchgescheuerter Kabelstrang oder Wasser in Steckern bzw. am BCM (GM Acadia/XT5)
+    - id: bus_wiring_connector
+      likelihood: medium
+      label:
+        en: Corroded connector at the module near the headlamp
+        de: Korrodierter Stecker am Modul nahe dem Scheinwerfer
+    - id: module_internal
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Headlamp levelling module faulty or not coded
+        de: Leuchtweite-Steuergerät defekt oder nicht codiert
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Headlamp beam height no longer adjusts
+      de: Leuchtweite stellt sich nicht mehr nach
+    - en: Headlamp or lighting warning in the cluster
+      de: Scheinwerfer- oder Lichtwarnung im Kombiinstrument
+    - en: Oncoming traffic dazzled or road poorly lit when loaded
+      de: Gegenverkehr geblendet oder Fahrbahn bei Beladung schlecht ausgeleuchtet
   repair:
-    difficulty: hard
+    difficulty: medium
     diy_possible: false
-    estimated_cost_eur: [120, 1500]
-    estimated_hours: [1.0, 5.0]
+    estimated_cost_eur: [60, 700]
+    estimated_hours: [0.5, 3]
   flags:
-    mil: true
+    mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0180, U0182, U0183, U0140]
   sources:
-    - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/control-module-u-code-list
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10187169-9999.pdf
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
+    - https://www.hella.com/techworld/us/technical/automotive-lighting/headlamp-levelling-system/
+  reviewed: '2026-11-02'
 
 - code: U0182
   category: network
@@ -12317,48 +12408,58 @@
     en: Lost Communication With Lighting Control Module Front
     de: Kommunikation mit Lichtsteuergerät vorn verloren
   description:
-    en: The vehicle network has lost the headlamp leveling controller. Automatic leveling is disabled and the lamps stay in a default position; on many vehicles the headlight warning comes on.
-    de: Das Fahrzeugnetz hat das Steuergerät der Leuchtweitenregelung verloren. Die automatische Regelung ist deaktiviert, die Scheinwerfer bleiben in einer Standardstellung; bei vielen Fahrzeugen leuchtet die Lichtwarnung.
+    en: "U0182 is logged when the front lighting control module stops talking on the bus. This module drives front lamp functions such as swivelling or adaptive beam patterns. GM lists it as Lost Communication With Lighting Control Module - Front in the Saab 9-5 (2010-2011) U-code list. Chrysler uses it for the adaptive front lighting module: a 2014 Jeep Grand Cherokee field report filed with NHTSA shows U0182-00 Lost Communication With Adaptive Front Lighting Control Module next to other network codes. GM's logic: the code sets when the module's supervised periodic message stops arriving at 9-16 V. U0181 is the headlamp levelling module, U0183 the rear lighting module. No MIL; cornering or adaptive light may fall back to a basic beam."
+    de: "U0182 wird gespeichert, wenn das Lichtsteuergerät vorn nicht mehr auf dem Bus spricht. Es steuert Funktionen der Frontbeleuchtung wie schwenkendes Kurvenlicht oder adaptive Lichtverteilung. GM führt den Code in der U-Code-Liste des Saab 9-5 (2010–2011) als Kommunikationsverlust mit dem vorderen Lichtsteuergerät. Chrysler nutzt ihn für das adaptive Frontlicht-Modul: Ein bei der NHTSA eingereichter Werkstattbericht zu einem Jeep Grand Cherokee 2014 zeigt U0182-00 „Adaptive Front Lighting Control Module“ neben weiteren Netzwerk-Codes. Nach GM-Logik entsteht der Code, wenn die überwachte zyklische Botschaft des Moduls bei 9–16 V ausbleibt. U0181 ist die Leuchtweiteregelung, U0183 das Lichtmodul hinten. Keine MIL; Kurven- oder adaptives Licht kann auf eine Grundeinstellung zurückfallen."
   affected_components:
-    - headlamp_leveling_module
+    - front_lighting_control_module
     - can_bus_wiring
   common_causes:
-    - id: module_unpowered
+    - id: module_supply_loss
       likelihood: high
       label:
-        en: Leveling module unpowered
-        de: Leuchtweiten-Modul ohne Spannung
-    - id: gateway_module_fault
+        en: Front lighting module without power or ground
+        de: Lichtsteuergerät vorn ohne Plus oder Masse
+    - id: connector_corrosion
+      likelihood: medium
+      label:
+        en: Corroded connector in the engine bay or headlamp area
+        de: Korrodierter Stecker im Motorraum oder am Scheinwerfer
+    - id: bus_wiring_connector
+      likelihood: medium
+      label:
+        en: Bus line to the module chafed or open
+        de: Busleitung zum Modul durchgescheuert oder unterbrochen
+    - id: module_internal
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Front lighting module faulty
+        de: Lichtsteuergerät vorn defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Adaptive or cornering light inoperative
+      de: Adaptives oder Kurvenlicht ohne Funktion
+    - en: Lighting warning lamp or message in the cluster
+      de: Licht-Warnleuchte oder Meldung im Kombiinstrument
+    - en: Front lamps fall back to a fixed default beam
+      de: Frontscheinwerfer fallen auf festen Grundlichtkegel zurück
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur: [60, 500]
-    estimated_hours: [0.5, 2.0]
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 3]
   flags:
     mil: false
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0180, U0181, U0183, U0140]
   sources:
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/control-module-u-code-list
+    - https://static.nhtsa.gov/odi/inv/2015/INRL-PE15021-64219.pdf
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
     - https://en.wikipedia.org/wiki/Headlamp
-    - https://en.wikipedia.org/wiki/CAN_bus
+  reviewed: '2026-11-02'
 
 - code: U0183
   category: network
@@ -12611,48 +12712,56 @@
     en: Lost Communication With Digital Disc Player/Changer Module B
     de: Kommunikation mit Disc-Player/-Wechsler-Modul B verloren
   description:
-    en: 'The Audio Rear Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Rear-seat audio controls stop working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
-    de: 'Audio-Hecksteuerung — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die hintere Audiobedienung funktioniert nicht mehr. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
+    en: U0188 means the second networked disc player or changer, module B, no longer answers. Disc changers hold several CDs or DVDs and were often mounted apart from the radio, in the dash, a console or the boot, and linked to the infotainment bus. Receiving units set a lost-communication code once the expected periodic message of a node is missing, as GM's U0100-U02FF procedure explains for all such codes. No manufacturer documents U0188 publicly; GM's U-code list has no disc player entries at all. U0187 names player A, U0189 and U0190 players C and D. Many newer cars have no disc drive, so a stray entry can also come from wrong coding. Only playback from that unit is lost; no MIL.
+    de: "U0188 heißt: Der zweite vernetzte Disc-Player oder -Wechsler, Modul B, antwortet nicht mehr. Disc-Wechsler fassen mehrere CDs oder DVDs und saßen oft getrennt vom Radio – im Armaturenbrett, in einer Konsole oder im Kofferraum – am Infotainment-Bus. Empfänger setzen einen Kommunikationsverlust-Code, sobald die erwartete zyklische Botschaft eines Teilnehmers fehlt, wie GMs Ablauf für U0100–U02FF für alle diese Codes beschreibt. Öffentlich dokumentiert kein Hersteller U0188; GMs U-Code-Liste enthält überhaupt keine Disc-Player. U0187 nennt Player A, U0189 und U0190 die Player C und D. Viele neuere Fahrzeuge haben kein Laufwerk mehr, ein verirrter Eintrag kann daher auch von falscher Codierung stammen. Nur die Wiedergabe dieses Geräts fällt aus; keine MIL."
   affected_components:
-    - audio_rear_control_module
+    - disc_player_module
     - can_bus_wiring
   common_causes:
-    - id: rear_audio_unpowered
+    - id: module_supply_loss
       likelihood: high
       label:
-        en: Rear audio module unpowered
-        de: Hecksitz-Audio-Modul ohne Spannung
-    - id: rear_audio_wiring
+        en: Disc unit B without power or ground
+        de: Disc-Gerät B ohne Plus oder Masse
+    - id: bus_wiring_connector
       likelihood: medium
       label:
-        en: CAN wiring to rear audio module broken
-        de: CAN-Leitung zum Hecksitz-Audio-Modul unterbrochen
-    - id: gateway_module_fault
+        en: Bus or connector to the changer (often in boot or console) damaged
+        de: Bus oder Stecker zum Wechsler (oft Kofferraum oder Konsole) beschädigt
+    - id: coding_mismatch
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Unit removed or vehicle coded for a device not fitted
+        de: Gerät ausgebaut oder Fahrzeug auf nicht verbautes Gerät codiert
+    - id: module_internal
+      likelihood: low
+      label:
+        en: Disc player/changer B faulty
+        de: Disc-Player/-Wechsler B defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Disc source B missing or not selectable
+      de: Disc-Quelle B fehlt oder ist nicht wählbar
+    - en: Discs not ejected or not played
+      de: Discs werden nicht ausgeworfen oder nicht abgespielt
+    - en: Code stored in the radio or head unit
+      de: Code im Radio bzw. in der Haupteinheit gespeichert
   repair:
-    difficulty: medium
-    diy_possible: false
-    estimated_cost_eur: [50, 600]
-    estimated_hours: [0.5, 2.0]
+    difficulty: easy
+    diy_possible: true
+    estimated_cost_eur: [0, 400]
+    estimated_hours: [0.3, 2]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0184, U0187, U0189, U0190]
   sources:
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
+    - https://en.wikipedia.org/wiki/CD_player
+  reviewed: '2026-11-02'
 
 - code: U0189
   category: network
@@ -12660,49 +12769,56 @@
     en: Lost Communication With Digital Disc Player/Changer Module C
     de: Kommunikation mit Disc-Player/-Wechsler-Modul C verloren
   description:
-    en: The HVAC controller has lost the auxiliary fuel-fired heater module. Pre-heating cannot be commanded; the heater stays inactive.
-    de: Die Klimasteuerung hat das Modul der kraftstoffbetriebenen Standheizung verloren. Vorheizen lässt sich nicht ansteuern, die Heizung bleibt inaktiv.
+    en: U0189 covers the third disc player or changer on the bus, module C. Systems with more than one drive are found mostly in rear-seat entertainment or luxury setups, where a front unit and separate rear players feed different screens. The head unit or another listener stores U0189 once module C's cyclic messages stop arriving; GM describes this mechanism for all U0100-U02FF codes, with voltage required to be between 9 and 16 V. No manufacturer documents U0189 publicly, and GM's published list contains no disc player codes. U0187 and U0188 name modules A and B, U0190 module D. Check whether the vehicle really has a third drive before chasing wiring. Only that source fails; no MIL, no effect on driving.
+    de: U0189 betrifft den dritten Disc-Player oder -Wechsler am Bus, Modul C. Systeme mit mehr als einem Laufwerk finden sich vor allem bei Fond-Unterhaltung oder Oberklasse-Ausstattungen, wo eine Fronteinheit und eigene Fond-Player verschiedene Bildschirme versorgen. Die Haupteinheit oder ein anderer Empfänger speichert U0189, sobald die zyklischen Botschaften von Modul C ausbleiben; GM beschreibt diesen Mechanismus für alle Codes U0100–U02FF, die Spannung muss dabei zwischen 9 und 16 V liegen. Öffentlich dokumentiert kein Hersteller U0189, GMs veröffentlichte Liste enthält keine Disc-Codes. U0187 und U0188 nennen die Module A und B, U0190 Modul D. Vor der Leitungssuche klären, ob überhaupt ein drittes Laufwerk verbaut ist. Nur diese Quelle fällt aus; keine MIL, kein Einfluss aufs Fahren.
   affected_components:
-    - auxiliary_heater
+    - disc_player_module
     - can_bus_wiring
   common_causes:
-    - id: heater_unpowered
+    - id: module_supply_loss
       likelihood: high
       label:
-        en: Auxiliary heater unpowered
-        de: Standheizung ohne Spannung
-    - id: gateway_module_fault
+        en: Disc unit C fuse blown or ground loose
+        de: Sicherung von Disc-Gerät C defekt oder Masse locker
+    - id: bus_wiring_connector
+      likelihood: medium
+      label:
+        en: Connector or bus wiring to the rear player damaged
+        de: Stecker oder Busleitung zum Fond-Player beschädigt
+    - id: coding_mismatch
+      likelihood: medium
+      label:
+        en: Vehicle coded for a third drive that is not fitted
+        de: Fahrzeug auf ein drittes Laufwerk codiert, das nicht verbaut ist
+    - id: module_internal
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Disc player/changer C faulty
+        de: Disc-Player/-Wechsler C defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Rear or third disc source unavailable
+      de: Fond- bzw. dritte Disc-Quelle nicht verfügbar
+    - en: Rear screen shows no disc content
+      de: Fond-Bildschirm zeigt keine Disc-Inhalte
+    - en: Code stored in the head unit
+      de: Code in der Haupteinheit gespeichert
   repair:
-    difficulty: medium
-    diy_possible: false
-    estimated_cost_eur: [80, 700]
-    estimated_hours: [0.5, 3.0]
+    difficulty: easy
+    diy_possible: true
+    estimated_cost_eur: [0, 400]
+    estimated_hours: [0.3, 2]
   flags:
     mil: false
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [U0166]
+  related_codes: [U0184, U0187, U0188, U0190]
   sources:
-    - https://en.wikipedia.org/wiki/Auxiliary_heater
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
+    - https://en.wikipedia.org/wiki/CD_player
+  reviewed: '2026-11-02'
 
 - code: U018A
   category: network
@@ -12762,48 +12878,56 @@
     en: Lost Communication With Digital Disc Player/Changer Module D
     de: Kommunikation mit Disc-Player/-Wechsler-Modul D verloren
   description:
-    en: 'The Subwoofer Amplifier Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. The subwoofer amplifier drops off the bus. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
-    de: 'Subwoofer-Verstärker-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Der Subwoofer-Verstärker fällt vom Bus ab. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
+    en: U0190 is the last code in the J2012 disc player block and names module D, a fourth networked drive or changer. When that unit goes silent, the modules expecting its periodic traffic store U0190; GM's procedure for U0100-U02FF adds that a code stored only in history after a flat battery or a module disconnected with the bus awake is not a reason to replace parts. No manufacturer documents U0190 publicly, and a fourth disc drive is very rare in practice, so the code is unusual. A changer is a mechanical unit that loads discs from a magazine, which makes power supply and mounting location the first checks. U0187 to U0189 cover modules A to C. Only disc playback from D is lost; no MIL.
+    de: U0190 ist der letzte Code des J2012-Blocks für Disc-Player und nennt Modul D, ein viertes vernetztes Laufwerk oder einen Wechsler. Verstummt dieses Gerät, speichern die Steuergeräte, die seinen zyklischen Verkehr erwarten, U0190; GMs Ablauf für U0100–U02FF ergänzt, dass ein nur gespeicherter Code nach leerer Batterie oder einem bei wachem Bus abgezogenen Modul kein Grund für einen Teiletausch ist. Öffentlich dokumentiert kein Hersteller U0190, und ein viertes Laufwerk ist in der Praxis sehr selten – der Code ist entsprechend ungewöhnlich. Ein Wechsler lädt Discs mechanisch aus einem Magazin; zuerst also Versorgung und Einbauort prüfen. U0187 bis U0189 betreffen die Module A bis C. Nur die Disc-Wiedergabe von D fällt aus; keine MIL.
   affected_components:
-    - subwoofer_amplifier_module
+    - disc_player_module
     - can_bus_wiring
   common_causes:
-    - id: subwoofer_amp_unpowered
+    - id: module_supply_loss
       likelihood: high
       label:
-        en: Subwoofer amp unpowered
-        de: Subwoofer-Verstärker ohne Spannung
-    - id: subwoofer_amp_wiring
+        en: Disc unit D without power or ground
+        de: Disc-Gerät D ohne Plus oder Masse
+    - id: low_battery_voltage
       likelihood: medium
       label:
-        en: CAN wiring to subwoofer amp broken
-        de: CAN-Leitung zum Subwoofer-Verstärker unterbrochen
-    - id: gateway_module_fault
+        en: History entry after flat battery or unit unplugged with bus awake
+        de: Speichereintrag nach leerer Batterie oder bei wachem Bus abgezogenem Gerät
+    - id: bus_wiring_connector
+      likelihood: medium
+      label:
+        en: Connector or bus line to module D damaged
+        de: Stecker oder Busleitung zu Modul D beschädigt
+    - id: module_internal
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Disc player/changer D faulty
+        de: Disc-Player/-Wechsler D defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Disc source D missing
+      de: Disc-Quelle D fehlt
+    - en: Magazine not loaded or ejected
+      de: Magazin wird nicht geladen oder ausgeworfen
+    - en: Code stored in the head unit
+      de: Code in der Haupteinheit gespeichert
   repair:
-    difficulty: medium
-    diy_possible: false
-    estimated_cost_eur: [60, 800]
-    estimated_hours: [0.5, 2.0]
+    difficulty: easy
+    diy_possible: true
+    estimated_cost_eur: [0, 400]
+    estimated_hours: [0.3, 2]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0184, U0187, U0188, U0189]
   sources:
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
+    - https://en.wikipedia.org/wiki/CD_player
+  reviewed: '2026-11-02'
 
 - code: U0191
   category: network
@@ -12909,48 +13033,59 @@
     en: Lost Communication With Digital Audio Control Module A
     de: Kommunikation mit digitalem Audio-Steuergerät A verloren
   description:
-    en: 'The Mobile Phone Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Hands-free phone integration stops working. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
-    de: 'Mobiltelefon-Modul — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Freisprech-Telefonanbindung funktioniert nicht mehr. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
+    en: "U0193 reports that digital audio control module A no longer sends its messages. Makers fill this slot differently. GM calls it Lost Communication With Digital Radio Receiver Control Module in the Saab 9-5 (2010-2011) U-code list, i.e. the separate receiver for digital or satellite radio, and its 2017-2021 GMC Acadia and Cadillac XT5 bulletin lists U0193 among codes caused by harness chafing or water in the BCM. Chrysler's 2006-2010 Jeep code list uses U0193 for a traffic information receiver module. GM's logic: a supervised periodic message is missing at 9-16 V. U0194 is module B, U0184 the radio, U0186 the amplifier. Digital radio or traffic data drops out; no MIL."
+    de: U0193 meldet, dass das digitale Audio-Steuergerät A keine Botschaften mehr sendet. Die Hersteller belegen diesen Platz unterschiedlich. GM nennt ihn in der U-Code-Liste des Saab 9-5 (2010–2011) Kommunikationsverlust mit dem Digitalradio-Empfangsmodul, also dem separaten Empfänger für Digital- oder Satellitenradio; ein GM-Bulletin für GMC Acadia und Cadillac XT5 2017–2021 führt U0193 unter den Codes durch durchgescheuerten Kabelstrang oder Wasser im BCM. Chryslers Codeliste für Jeep 2006–2010 verwendet U0193 für ein Verkehrsinfo-Empfangsmodul. Nach GM-Logik fehlt eine überwachte zyklische Botschaft bei 9–16 V. U0194 ist Modul B, U0184 das Radio, U0186 der Verstärker. Digitalradio oder Verkehrsdaten fallen aus; keine MIL.
   affected_components:
-    - mobile_phone_module
+    - digital_audio_control_module
     - can_bus_wiring
   common_causes:
-    - id: phone_module_unpowered
+    - id: module_supply_loss
       likelihood: high
       label:
-        en: Phone module unpowered
-        de: Telefon-Modul ohne Spannung
-    - id: phone_module_wiring
+        en: Digital receiver module without power or ground
+        de: Digitales Empfangsmodul ohne Plus oder Masse
+    - id: harness_chafe_water
       likelihood: medium
       label:
-        en: CAN wiring to phone module broken
-        de: CAN-Leitung zum Telefon-Modul unterbrochen
-    - id: gateway_module_fault
+        en: Chafed harness or water in connectors (GM Acadia/XT5)
+        de: Durchgescheuerter Kabelstrang oder Wasser in Steckern (GM Acadia/XT5)
+    - id: bus_wiring_connector
+      likelihood: medium
+      label:
+        en: Bus wire or connector to the receiver damaged
+        de: Busleitung oder Stecker zum Empfänger beschädigt
+    - id: module_internal
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Digital audio module A faulty
+        de: Digitales Audio-Steuergerät A defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Digital, satellite radio or traffic data unavailable
+      de: Digital-, Satellitenradio oder Verkehrsdaten nicht verfügbar
+    - en: Radio shows no signal for the digital source
+      de: Radio zeigt bei der digitalen Quelle kein Signal
+    - en: Code stored in radio and other modules
+      de: Code im Radio und weiteren Steuergeräten gespeichert
   repair:
     difficulty: medium
-    diy_possible: false
-    estimated_cost_eur: [60, 800]
+    diy_possible: true
+    estimated_cost_eur: [40, 600]
     estimated_hours: [0.5, 2.5]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0184, U0186, U0194, U0195]
   sources:
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/control-module-u-code-list
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10187169-9999.pdf
+    - https://static.nhtsa.gov/odi/inv/2011/INRL-PE11019-48176P.pdf
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
+    - https://en.wikipedia.org/wiki/HD_Radio
+  reviewed: '2026-11-02'
 
 - code: U0194
   category: network
@@ -12958,48 +13093,57 @@
     en: Lost Communication With Digital Audio Control Module B
     de: Kommunikation mit digitalem Audio-Steuergerät B verloren
   description:
-    en: The infotainment bus has lost the voice assistant / personal assist module. Voice commands and connected concierge features stop working.
-    de: Der Infotainment-Bus hat das Sprachassistenz-/Personal-Assist-Modul verloren. Sprachbefehle und vernetzte Concierge-Dienste funktionieren nicht mehr.
+    en: "U0194 marks the second digital audio control module, B, as silent on the bus. GM uses the code but does not name the module publicly: on the 2013-2014 Buick Enclave, Chevrolet Traverse and GMC Acadia the radio stores U0194 together with many other U-codes when the harness of the rear side object detection sensors rubs on the exhaust and disturbs the network. Ford lists U0194 among codes on 2017 C-MAX vehicles with water in the active grille shutter connector, again without stating the module. The setting rule follows GM's U0100-U02FF logic: a supervised periodic message is missing at normal voltage. U0193 is module A, U0184 the radio. Audio features may cut out; no MIL of its own."
+    de: "U0194 kennzeichnet das zweite digitale Audio-Steuergerät, B, als stumm auf dem Bus. GM verwendet den Code, nennt das Modul aber nicht öffentlich: Bei Buick Enclave, Chevrolet Traverse und GMC Acadia 2013–2014 speichert das Radio U0194 zusammen mit vielen anderen U-Codes, wenn der Kabelstrang der hinteren Seitenobjekt-Sensoren am Auspuff scheuert und das Netz stört. Ford führt U0194 unter den Codes bei C-MAX 2017 mit Wasser im Stecker der aktiven Kühlerjalousie, ebenfalls ohne Modulangabe. Die Setzregel folgt GMs Logik für U0100–U02FF: Eine überwachte zyklische Botschaft fehlt bei normaler Spannung. U0193 ist Modul A, U0184 das Radio. Audiofunktionen können aussetzen; eine eigene MIL gibt es nicht."
   affected_components:
-    - voice_assistant_module
-    - infotainment_bus
+    - digital_audio_control_module
+    - can_bus_wiring
   common_causes:
-    - id: assist_module_unpowered
+    - id: network_wiring_chafe
       likelihood: high
       label:
-        en: Assist module unpowered or hung
-        de: Assistenzmodul ohne Spannung oder hängend
-    - id: gateway_module_fault
+        en: Network harness chafed elsewhere in the car disturbing the bus (GM Lambda)
+        de: Anderswo durchgescheuerter Netzwerk-Kabelstrang stört den Bus (GM Lambda)
+    - id: water_in_connector
+      likelihood: medium
+      label:
+        en: Water in a bus connector (Ford C-MAX)
+        de: Wasser in einem Bus-Stecker (Ford C-MAX)
+    - id: module_supply_loss
+      likelihood: medium
+      label:
+        en: Audio module B without power or ground
+        de: Audio-Steuergerät B ohne Plus oder Masse
+    - id: module_internal
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Digital audio module B faulty
+        de: Digitales Audio-Steuergerät B defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Radio shuts off or audio source drops out intermittently
+      de: Radio schaltet sich aus oder Audioquelle fällt sporadisch weg
+    - en: Many U-codes stored at the same time
+      de: Viele U-Codes gleichzeitig gespeichert
+    - en: Cluster or other modules act up together with the radio
+      de: Kombiinstrument oder andere Steuergeräte spinnen zusammen mit dem Radio
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur: [60, 500]
-    estimated_hours: [0.3, 2.0]
+    estimated_cost_eur: [40, 600]
+    estimated_hours: [0.5, 3]
   flags:
     mil: false
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0184, U0186, U0193, U0195]
   sources:
-    - https://en.wikipedia.org/wiki/Voice_user_interface
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://static.nhtsa.gov/odi/tsbs/2014/SB-10055394-7364.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2017/MC-10125076-9999.pdf
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
+  reviewed: '2026-11-02'
 
 - code: U0195
   category: network
@@ -16444,48 +16588,57 @@
     en: Lost Communication With Door Switch E
     de: Kommunikation mit Türschalter E verloren
   description:
-    en: The body bus has lost the powered liftgate / decklid module. Electric opening and soft-close features stop working; latch must be operated manually.
-    de: Der Bordnetz-Bus hat das Modul der elektrischen Heckklappe / des Kofferraumdeckels verloren. Elektrisches Öffnen und Soft-Close arbeiten nicht mehr, der Deckel muss manuell betätigt werden.
+    en: U0219 means the networked door switch unit E is no longer heard. In modern doors the switch packs for windows, mirrors and locks are often small bus nodes, typically LIN slaves under a door or body module, so each panel can report its own communication loss. The master that polls switch E stores U0219 once its replies stop; GM documents this setting rule for the whole U0100-U02FF range. No manufacturer documents U0219 publicly; GM's U-code list uses its own entries (U0203/U0204) for rear door switch panel modules instead. The letter E is assigned by the maker, so the door concerned must be taken from the vehicle's documentation. U0215 to U0218 and U0220 cover the other switches. Window or lock buttons fail; no MIL.
+    de: "U0219 heißt: Die vernetzte Türschalter-Einheit E ist nicht mehr zu hören. In modernen Türen sind die Schalterblöcke für Fenster, Spiegel und Verriegelung oft kleine Busteilnehmer, meist LIN-Slaves unter einem Tür- oder Karosseriemodul – so kann jede Schalterleiste ihren eigenen Kommunikationsverlust melden. Der Master, der Schalter E abfragt, speichert U0219, sobald die Antworten ausbleiben; GM beschreibt diese Setzregel für den ganzen Bereich U0100–U02FF. Öffentlich dokumentiert kein Hersteller U0219; GMs U-Code-Liste nutzt für die hinteren Türschalterleisten stattdessen eigene Einträge (U0203/U0204). Den Buchstaben E vergibt der Hersteller, welche Tür gemeint ist, steht in dessen Unterlagen. U0215 bis U0218 und U0220 betreffen die übrigen Schalter. Fenster- oder Verriegelungstasten fallen aus; keine MIL."
   affected_components:
-    - liftgate_module
-    - liftgate_harness
+    - door_switch_module
+    - door_harness
   common_causes:
-    - id: liftgate_harness
+    - id: door_harness_break
       likelihood: high
       label:
-        en: Liftgate harness broken
-        de: Kabelbaum der Heckklappe unterbrochen
-    - id: gateway_module_fault
+        en: Broken wire in the door hinge area (flexing harness)
+        de: Leitungsbruch im Türscharnierbereich (bewegter Kabelstrang)
+    - id: water_in_door_switch
+      likelihood: medium
+      label:
+        en: Water ingress into the door switch pack
+        de: Wassereintritt in den Türschalterblock
+    - id: module_supply_loss
+      likelihood: medium
+      label:
+        en: Switch unit E without power or ground
+        de: Schaltereinheit E ohne Plus oder Masse
+    - id: switch_internal
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Door switch unit E faulty
+        de: Türschalter-Einheit E defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Window, mirror or lock buttons in one door inoperative
+      de: Fenster-, Spiegel- oder Verriegelungstasten einer Tür ohne Funktion
+    - en: Switch illumination off
+      de: Schalterbeleuchtung aus
+    - en: Fault changes when the door is opened or closed
+      de: Fehler ändert sich beim Öffnen oder Schließen der Tür
   repair:
     difficulty: medium
-    diy_possible: false
-    estimated_cost_eur: [100, 800]
-    estimated_hours: [0.5, 3.0]
+    diy_possible: true
+    estimated_cost_eur: [30, 400]
+    estimated_hours: [0.5, 2.5]
   flags:
     mil: false
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0215, U0216, U0217, U0218, U0220]
   sources:
-    - https://en.wikipedia.org/wiki/Power_liftgate
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
+    - https://en.wikipedia.org/wiki/Local_Interconnect_Network
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/control-module-u-code-list
+  reviewed: '2026-11-02'
 
 - code: U0220
   category: network
@@ -24554,49 +24707,52 @@
     en: Software Incompatibility With Gear Shift Control Module
     de: Software-Inkompatibilität mit Schaltmodul
   description:
-    en: The ECU receives messages from the TCM but their content is implausible (e.g. invalid gear, impossible speed). The transmission may switch to limp-home mode and shift quality is degraded.
-    de: Die Motorsteuerung empfängt Botschaften vom TCM, deren Inhalt aber unplausibel ist (z. B. ungültiger Gang, unmögliche Drehzahl). Das Getriebe geht eventuell in den Notlauf, die Schaltqualität verschlechtert sich.
+    en: "U0304 is stored when a control unit, usually the transmission controller, finds that the software or calibration identity of the gear shift control module does not match what it expects. GM's generic U03xx procedure (Saab 9-5, 2011) treats such codes as configuration faults: checked at 9-16 V with normal bus traffic, no circuit test, cured by setup or programming. Allison uses U0304 for its 6th-generation controls as Gear Shift Module 1 Incompatible: a 6th-generation push-button selector does not work with a 5th-generation TCM, and the selector must match the TCM calibration; U0333 covers selector 2. U0103 means lost contact, U0404 invalid data from the same module. The driver may be unable to select a range."
+    de: "U0304 legt ein Steuergerät ab, meist das Getriebesteuergerät, wenn die Software- oder Kalibrierungskennung des Schaltmoduls (Wählhebel bzw. Tastenfeld) nicht zur erwarteten passt. Die allgemeine GM-Prozedur für U03xx (Saab 9-5, 2011) behandelt solche Codes als Konfigurationsfehler: Prüfung bei 9–16 V und funktionierendem Bus, keine Leitungsprüfung, Abhilfe durch Einrichten oder Programmieren. Allison belegt U0304 in der 6. Steuerungsgeneration als „Gear Shift Module 1 Incompatible“: Ein Tastenwählschalter der 6. Generation arbeitet nicht mit einem TCM der 5. Generation, und der verbaute Wählschalter muss zur TCM-Kalibrierung passen; U0333 gilt für Wählschalter 2. U0103 steht für Kontaktverlust, U0404 für ungültige Daten desselben Moduls. Folge: Fahrstufen lassen sich womöglich nicht wählen."
   affected_components:
-    - tcm
-    - can_bus_wiring
+    - gear_shift_module
+    - transmission_control_module
+    - control_module_software
   common_causes:
-    - id: tcm_software_mismatch
+    - id: selector_tcm_mismatch
+      likelihood: high
+      label:
+        en: Shift selector generation or type does not match the TCM calibration (e.g. after replacement)
+        de: Wählschalter-Generation oder -Typ passt nicht zur TCM-Kalibrierung (z. B. nach Tausch)
+    - id: module_not_programmed
       likelihood: medium
       label:
-        en: Software version mismatch after replacement
-        de: Software-Versionskonflikt nach Austausch
-    - id: tcm_failing
-      likelihood: medium
-      label:
-        en: TCM partially failing
-        de: TCM intern teilweise defekt
-    - id: gateway_module_fault
+        en: Shift module or TCM replaced or flashed without setup
+        de: Schaltmodul oder TCM getauscht bzw. geflasht, ohne Einrichtung
+    - id: interrupted_flash
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Software update aborted, wrong file loaded
+        de: Software-Update abgebrochen, falsche Datei aufgespielt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Gear ranges cannot be selected or the selector does not respond
+      de: Fahrstufen lassen sich nicht wählen oder der Wählschalter reagiert nicht
+    - en: Transmission warning or code shown on the selector display
+      de: Getriebewarnung oder Code in der Wählschalter-Anzeige
+    - en: Code appears right after a selector or TCM was replaced
+      de: Code tritt direkt nach dem Tausch von Wählschalter oder TCM auf
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [80, 2000]
-    estimated_hours: [0.5, 6.0]
+    estimated_cost_eur: [80, 600]
+    estimated_hours: [0.5, 2]
   flags:
-    mil: true
+    mil: false
+    emissions_relevant: false
+    drive_cycle_required: false
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0103, U0404, U0302, U0300]
   sources:
-    - https://en.wikipedia.org/wiki/Engine_control_unit
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0300-u0336
+    - https://static.nhtsa.gov/odi/tsbs/2021/MC-10203293-9999.pdf
+  reviewed: '2026-11-02'
 
 - code: U0305
   category: network
@@ -24751,48 +24907,54 @@
     en: Software Incompatibility With Throttle Actuator Control Module
     de: Software-Inkompatibilität mit Drosselklappensteller-Steuergerät
   description:
-    en: The BCM software does not match what other vehicle modules expect. Comfort or lighting features can behave erratically until reflashing or coding is performed.
-    de: Die Software des Bordnetzsteuergeräts passt nicht zur Erwartung anderer Steuergeräte. Komfort- oder Lichtfunktionen verhalten sich sporadisch fehlerhaft, bis BCM und andere Module neu geflasht oder codiert werden.
+    en: "U0308 flags that the throttle actuator control module carries software or a calibration that the engine controller does not accept. In most current cars throttle control lives inside the ECM/PCM, so a separate TAC module and this code are rare; no manufacturer documents U0308 publicly. Ford shows how such a mismatch is handled when the logic is integrated: its 2012 OBD summary files a software version mismatch between the electronic-throttle processors under U0300, non-MIL on Gen2 and MIL on Gen3/Gen4 throttle systems. GM's U03xx procedure links these codes to a module that was not configured after installation. Throttle control affects emissions, so CARB demands monitoring and a MIL is likely. U0107 means lost contact, U0408 invalid data."
+    de: "U0308 meldet, dass das Steuergerät des Drosselklappenstellers eine Software oder Kalibrierung trägt, die das Motorsteuergerät nicht akzeptiert. In den meisten heutigen Fahrzeugen sitzt die Drosselklappenregelung im ECM/PCM; ein eigenes TAC-Modul und damit dieser Code sind selten, öffentlich dokumentiert ihn kein Hersteller. Wie Ford einen solchen Konflikt bei integrierter Logik behandelt, zeigt die OBD-Übersicht 2012: Eine abweichende Softwareversion der Drosselklappen-Prozessoren läuft dort unter U0300, bei Gen2 ohne, bei Gen3/Gen4 mit MIL. Nach der GM-Prozedur für U03xx steht dahinter ein nach dem Einbau nicht eingerichtetes Modul. Weil die Drosselklappe die Abgaswerte beeinflusst, verlangt CARB eine Überwachung; eine MIL ist wahrscheinlich. U0107 steht für Kontaktverlust, U0408 für ungültige Daten."
   affected_components:
-    - body_control_module
-    - vehicle_gateway
+    - throttle_actuator_control_module
+    - engine_control_module
+    - control_module_software
   common_causes:
-    - id: incompatible_flash
+    - id: module_not_programmed
       likelihood: high
       label:
-        en: Incompatible flash after BCM swap
-        de: Inkompatibler Flash nach BCM-Tausch
-    - id: gateway_module_fault
+        en: Throttle or engine control module replaced or flashed without matching software
+        de: Drosselklappen- oder Motorsteuergerät getauscht bzw. geflasht, ohne passende Software
+    - id: wrong_calibration
+      likelihood: medium
+      label:
+        en: Wrong or outdated calibration loaded, e.g. by an engine tune
+        de: Falsche oder veraltete Kalibrierung aufgespielt, etwa durch Chiptuning
+    - id: interrupted_flash
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Programming aborted due to low voltage
+        de: Programmierung wegen Unterspannung abgebrochen
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: Reduced power or limp mode with limited throttle opening
+      de: Leistungsreduzierung oder Notlauf mit begrenzter Drosselklappenöffnung
+    - en: Code appears after module replacement or programming
+      de: Code erscheint nach Modultausch oder Programmierung
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [100, 600]
-    estimated_hours: [0.5, 2.5]
+    estimated_cost_eur: [80, 700]
+    estimated_hours: [0.5, 2]
   flags:
-    mil: false
+    mil: true
+    emissions_relevant: true
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0107, U0408, U0301, U0300]
   sources:
-    - https://en.wikipedia.org/wiki/Body_control_module
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0300-u0336
+    - http://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://en.wikipedia.org/wiki/Electronic_throttle_control
+  reviewed: '2026-11-02'
 
 - code: U0309
   category: network
@@ -25466,49 +25628,52 @@
     en: Software Incompatibility With Vehicle Dynamics Control Module
     de: Software-Inkompatibilität mit Fahrdynamik-Steuergerät
   description:
-    en: A control module has detected that its software version does not match the parking brake module. Most often after replacing the EPB unit with one from a different model year or coding variant.
-    de: Ein Steuergerät hat erkannt, dass seine Software-Version nicht zum Parkbremsen-Modul passt. Meistens nach Tausch der EPB-Einheit gegen eines aus anderem Modelljahr oder anderer Codiervariante.
+    en: "U0316 means the vehicle dynamics control module, the electronic stability control unit, reports a software or calibration identity another module does not accept, typically after it was replaced or reflashed without setup. GM's U03xx procedure (Saab 9-5, 2011) runs at 9-16 V and sets such codes when a module is not configured properly; GM itself uses U0315 for its electronic brake module. Mazda uses U0316 differently: in 2014-2015 Mazda3, Mazda6 and CX-5 bulletins U0316:09 sits in a receiving module and stands for an error signal received from the DSC unit, there caused by a failed SAS module. So on a Mazda it is a follow-up code, not a software issue. U0122 means lost contact, U0416 invalid data. Stability control may switch off; MIL normally off."
+    de: "U0316 bedeutet: Das Fahrdynamik-Steuergerät (ESP/ESC) meldet eine Software- oder Kalibrierungskennung, die ein anderes Steuergerät nicht akzeptiert – meist nach einem Tausch oder Flashvorgang ohne Einrichtung. Die GM-Prozedur für U03xx (Saab 9-5, 2011) prüft bei 9–16 V und setzt solche Codes, wenn ein Modul nicht richtig konfiguriert ist; GM selbst nutzt für sein Bremssteuergerät U0315. Mazda belegt U0316 anders: In Bulletins für Mazda3, Mazda6 und CX-5 (2014–2015) steht U0316:09 in einem empfangenden Modul für ein vom DSC-Steuergerät gemeldetes Fehlersignal, dort ausgelöst durch ein defektes SAS-Modul. Bei Mazda ist er also ein Folgecode, kein Softwarefehler. U0122 steht für Kontaktverlust, U0416 für ungültige Daten. Die Stabilitätskontrolle kann abschalten; MIL meist aus."
   affected_components:
-    - park_brake_module
-    - control_module
+    - vehicle_dynamics_module
+    - control_module_software
   common_causes:
-    - id: epb_software_mismatch
+    - id: module_not_programmed
       likelihood: high
       label:
-        en: EPB software/calibration mismatch
-        de: EPB-Software-/Kalibrierungs-Mismatch
-    - id: used_epb_fitted
+        en: Stability control module replaced or flashed without setup/coding
+        de: ESP-Steuergerät getauscht oder geflasht, ohne Einrichtung/Codierung
+    - id: wrong_software_variant
       likelihood: medium
       label:
-        en: Used EPB module fitted from different vehicle
-        de: Gebrauchtes EPB-Modul aus anderem Fahrzeug verbaut
-    - id: gateway_module_fault
-      likelihood: low
+        en: Software variant does not match vehicle equipment
+        de: Softwarevariante passt nicht zur Fahrzeugausstattung
+    - id: upstream_module_fault
+      likelihood: medium
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: "Mazda: fault in DSC or SAS module reported to other units (U0316:09)"
+        de: "Mazda: Fehler in DSC- oder SAS-Modul, an andere Steuergeräte gemeldet (U0316:09)"
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Stability or traction control warning light on
+      de: Warnleuchte für Stabilitäts- oder Traktionskontrolle an
+    - en: Driver assistance functions unavailable
+      de: Fahrerassistenzfunktionen nicht verfügbar
+    - en: Code stored in several modules at once
+      de: Code in mehreren Steuergeräten gleichzeitig gespeichert
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [80, 600]
-    estimated_hours: [0.5, 2.0]
+    estimated_cost_eur: [80, 900]
+    estimated_hours: [0.5, 2.5]
   flags:
-    mil: true
+    mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0122, U0416, U0315, U0300]
   sources:
-    - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0300-u0336
+    - https://static.nhtsa.gov/odi/tsbs/2015/SB-10099694-2532.pdf
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/electronic-stability-program/
+  reviewed: '2026-11-02'
 
 - code: U0317
   category: network
@@ -25516,49 +25681,52 @@
     en: Software Incompatibility With Park Brake Control Module
     de: Software-Inkompatibilität mit Parkbremsen-Steuergerät
   description:
-    en: A control module has detected that its software version does not match the ABS/brake system module. Typically after a partial flash or fitting an unmatched ABS unit.
-    de: Ein Steuergerät hat erkannt, dass seine Software-Version nicht zum ABS-/Bremssystem-Modul passt. Typischerweise nach Teil-Flash oder Verbau einer nicht passenden ABS-Einheit.
+    en: "U0317 tells that the park brake control module of an electric parking brake runs software or a calibration another module does not accept. Following GM's generic U03xx logic it is checked at 9-16 V with normal bus traffic, sets when a module is not configured properly and needs no wiring test; the cure is setup or programming. No manufacturer documents this J2012 meaning publicly. Mitsubishi reassigns the number: for the 2017 Outlander (TSB-17-23-001) U0317 stands for a CAN time-out with the EPB ECU, which a wrongly programmed TCM stored as P0317 instead; a TCM reflash corrects it. On such vehicles read U0317 as a communication fault. U0128 means lost contact, U0417 invalid data. Park brake warnings or disabled auto functions are possible; no MIL."
+    de: "U0317 besagt, dass das Steuergerät der elektrischen Parkbremse eine Software oder Kalibrierung trägt, die ein anderes Steuergerät nicht akzeptiert. Nach der allgemeinen GM-Logik für U03xx läuft die Prüfung bei 9–16 V und intaktem Bus; der Code entsteht, wenn ein Modul nicht richtig konfiguriert ist, eine Leitungsprüfung entfällt, abgeholfen wird durch Einrichten oder Programmieren. Öffentlich dokumentiert kein Hersteller diese J2012-Bedeutung. Mitsubishi belegt die Nummer um: Beim Outlander 2017 (TSB-17-23-001) steht U0317 für eine CAN-Zeitüberschreitung zum EPB-Steuergerät, die ein falsch programmiertes TCM stattdessen als P0317 ablegte; ein TCM-Update behebt das. Dort ist U0317 also ein Kommunikationsfehler. U0128 steht für Kontaktverlust, U0417 für ungültige Daten. Möglich: Parkbremsen-Warnung, Automatikfunktionen aus; keine MIL."
   affected_components:
-    - abs_control_module
-    - control_module
+    - park_brake_module
+    - control_module_software
   common_causes:
-    - id: abs_software_mismatch
+    - id: module_not_programmed
       likelihood: high
       label:
-        en: ABS software/calibration mismatch
-        de: ABS-Software-/Kalibrierungs-Mismatch
-    - id: used_abs_fitted
+        en: Park brake module replaced or flashed without setup
+        de: Parkbremsen-Steuergerät getauscht oder geflasht, ohne Einrichtung
+    - id: epb_can_timeout
       likelihood: medium
       label:
-        en: Used ABS module fitted from different vehicle
-        de: Gebrauchtes ABS-Modul aus anderem Fahrzeug verbaut
-    - id: gateway_module_fault
+        en: "Mitsubishi: CAN time-out to the EPB ECU, e.g. connector unplugged"
+        de: "Mitsubishi: CAN-Zeitüberschreitung zum EPB-Steuergerät, z. B. Stecker abgezogen"
+    - id: wrong_software_variant
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Software level of park brake module and partner module do not match
+        de: Softwarestände von Parkbremsen-Steuergerät und Partnermodul passen nicht zusammen
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Park brake warning light or message
+      de: Parkbremsen-Warnleuchte oder -Meldung
+    - en: Automatic release or hill hold not working
+      de: Automatisches Lösen oder Berganfahrhilfe ohne Funktion
+    - en: Code appears after park brake module work
+      de: Code erscheint nach Arbeiten an der Parkbremse
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [80, 800]
-    estimated_hours: [0.5, 3.0]
+    estimated_cost_eur: [80, 700]
+    estimated_hours: [0.5, 2]
   flags:
-    mil: true
+    mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0128, U0417, U0316, U0318]
   sources:
-    - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0300-u0336
+    - https://static.nhtsa.gov/odi/tsbs/2017/SB-10098938-0335.pdf
+    - https://en.wikipedia.org/wiki/Parking_brake
+  reviewed: '2026-11-02'
 
 - code: U0318
   category: network
@@ -25566,50 +25734,52 @@
     en: Software Incompatibility With Brake System Control Module
     de: Software-Inkompatibilität mit Bremssystem-Steuergerät
   description:
-    en: A control module has detected that its software version does not match the electric power steering module. Steering may stay functional but become heavy if the EPS goes into a fallback mode.
-    de: Ein Steuergerät hat erkannt, dass seine Software-Version nicht zum Lenkungs-Steuergerät (EPS) passt. Die Lenkung bleibt eventuell funktionsfähig, wird aber schwergängig, wenn das EPS in einen Notlauf geht.
+    en: "U0318 indicates a software or calibration mismatch with the brake system control module, a unit J2012 separates from the ABS module (U0315) and the vehicle dynamics module (U0316). Which box that is depends on the maker; on brake-by-wire systems or electromechanical boosters it is often the controller that builds brake pressure. GM's U03xx procedure (Saab 9-5, 2011) describes the trigger: a module not configured properly, checked at 9-16 V, no external circuit involved. No manufacturer documents U0318 publicly, so the exact owner of the code must come from the vehicle's own manual. It mostly appears after a module swap or a broken flash. U0129 means lost contact, U0418 invalid data. Brake warnings and reduced assist functions are possible; MIL usually off."
+    de: "U0318 zeigt eine nicht passende Software oder Kalibrierung des Bremssystem-Steuergeräts an – ein Gerät, das J2012 vom ABS-Modul (U0315) und vom Fahrdynamik-Modul (U0316) unterscheidet. Welches Gerät das konkret ist, legt der Hersteller fest; bei Brake-by-Wire oder elektromechanischem Bremskraftverstärker ist es oft der Regler, der den Bremsdruck aufbaut. Den Auslöser beschreibt die GM-Prozedur für U03xx (Saab 9-5, 2011): ein nicht richtig konfiguriertes Modul, geprüft bei 9–16 V, ohne äußeren Leitungsfehler. Kein Hersteller dokumentiert U0318 öffentlich; welches Gerät gemeint ist, klärt die Werkstattliteratur des Fahrzeugs. Meist tritt er nach einem Modultausch oder abgebrochenen Flashen auf. U0129 steht für Kontaktverlust, U0418 für ungültige Daten. Möglich sind Bremswarnungen und eingeschränkte Hilfsfunktionen; MIL meist aus."
   affected_components:
-    - power_steering_module
-    - control_module
+    - brake_system_control_module
+    - control_module_software
   common_causes:
-    - id: eps_software_mismatch
+    - id: module_not_programmed
       likelihood: high
       label:
-        en: EPS software/calibration mismatch
-        de: EPS-Software-/Kalibrierungs-Mismatch
-    - id: used_eps_fitted
+        en: Brake system module replaced or flashed without setup
+        de: Bremssystem-Steuergerät getauscht oder geflasht, ohne Einrichtung
+    - id: wrong_software_variant
       likelihood: medium
       label:
-        en: Used EPS module fitted from different vehicle
-        de: Gebrauchtes EPS-Modul aus anderem Fahrzeug verbaut
-    - id: gateway_module_fault
+        en: Software level does not match the ABS/ESC or engine controller
+        de: Softwarestand passt nicht zum ABS/ESP- oder Motorsteuergerät
+    - id: interrupted_flash
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Programming aborted due to low battery voltage
+        de: Programmierung wegen niedriger Batteriespannung abgebrochen
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Brake system warning light or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Brake assist or regenerative braking functions unavailable
+      de: Bremsassistent oder Rekuperationsfunktionen nicht verfügbar
+    - en: Code appears after brake module service
+      de: Code erscheint nach Arbeiten am Bremssteuergerät
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [80, 800]
-    estimated_hours: [0.5, 3.0]
+    estimated_cost_eur: [80, 900]
+    estimated_hours: [0.5, 2.5]
   flags:
-    mil: true
+    mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [U0320]
+  related_codes: [U0129, U0418, U0315, U0316]
   sources:
-    - https://en.wikipedia.org/wiki/Power_steering
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0300-u0336
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/integrated-power-brake/
+    - https://en.wikipedia.org/wiki/Brake-by-wire
+  reviewed: '2026-11-02'
 
 - code: U0319
   category: network
@@ -25617,48 +25787,51 @@
     en: Software Incompatibility With Steering Effort Control Module
     de: Software-Inkompatibilität mit Lenkkraft-Steuergerät
   description:
-    en: The ABS controller advertises a software version not supported by the rest of the vehicle network. ABS, ESP and ASR functions are usually disabled until coding is corrected.
-    de: Das ABS-Steuergerät meldet eine Software-Version, die das übrige Fahrzeugnetz nicht unterstützt. ABS, ESP und ASR werden meist deaktiviert, bis die Codierung korrigiert wurde.
+    en: "U0319 is set when the steering effort control module, the unit that varies steering assist, for example with road speed, reports a software or calibration identity the network does not accept. J2012 keeps it apart from the power steering control module, which has its own code U0320. GM's generic U03xx description fits: the check runs at 9-16 V with normal bus traffic, and a module that was not configured after installation sets the code; the repair is programming, not wiring. No manufacturer documents U0319 publicly, so which steering unit carries the code is maker-specific. U0130 means lost contact, U0419 invalid data from the same module. Steering may feel heavier or less speed-dependent, a steering warning may light, the MIL normally stays off."
+    de: "U0319 entsteht, wenn das Lenkkraft-Steuergerät – das Gerät, das die Lenkunterstützung etwa nach Geschwindigkeit verändert – eine Software- oder Kalibrierungskennung meldet, die das Netz nicht akzeptiert. J2012 trennt es vom Servolenkungs-Steuergerät, das mit U0320 einen eigenen Code hat. Die allgemeine GM-Beschreibung für U03xx passt: Prüfung bei 9–16 V und funktionierendem Bus, ausgelöst durch ein nach dem Einbau nicht eingerichtetes Modul; repariert wird durch Programmieren, nicht an Leitungen. Öffentlich dokumentiert kein Hersteller U0319, welches Lenkungsgerät den Code trägt, ist herstellerabhängig. U0130 steht für Kontaktverlust, U0419 für ungültige Daten desselben Moduls. Die Lenkung kann schwerer gehen oder nicht mehr geschwindigkeitsabhängig reagieren; eine Lenkungswarnung ist möglich, die MIL bleibt meist aus."
   affected_components:
-    - abs_module
+    - steering_effort_module
+    - control_module_software
   common_causes:
-    - id: software_mismatch
+    - id: module_not_programmed
       likelihood: high
       label:
-        en: Wrong ABS software flashed
-        de: Falsche ABS-Software geflasht
-    - id: gateway_module_fault
+        en: Steering module replaced or flashed without setup
+        de: Lenkungs-Steuergerät getauscht oder geflasht, ohne Einrichtung
+    - id: wrong_software_variant
+      likelihood: medium
+      label:
+        en: Software variant does not match vehicle configuration
+        de: Softwarevariante passt nicht zur Fahrzeugkonfiguration
+    - id: interrupted_flash
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Programming aborted or wrong file loaded
+        de: Programmierung abgebrochen oder falsche Datei aufgespielt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Steering heavier or assist no longer speed-dependent
+      de: Lenkung schwergängiger oder Unterstützung nicht mehr geschwindigkeitsabhängig
+    - en: Steering warning light or message
+      de: Lenkungs-Warnleuchte oder -Meldung
+    - en: Code appears after steering module work
+      de: Code erscheint nach Arbeiten am Lenkungs-Steuergerät
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [120, 700]
-    estimated_hours: [0.5, 3.0]
+    estimated_cost_eur: [80, 800]
+    estimated_hours: [0.5, 2]
   flags:
-    mil: true
-    limp_mode_possible: true
+    mil: false
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [U0130, U0419, U0320, U0318]
   sources:
-    - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0300-u0336
+    - https://en.wikipedia.org/wiki/Power_steering
+  reviewed: '2026-11-02'
 
 - code: U031A
   category: network
@@ -28737,47 +28910,58 @@
     en: Invalid Data Received From Fuel Injector Control Module
     de: Ungültige Daten vom Einspritzdüsen-Steuergerät empfangen
   description:
-    en: ACC receives bus messages from the radar but their content is implausible (e.g. negative distances, jittering targets). Adaptive cruise is disabled until the radar reports plausible data again.
-    de: Der ACC empfängt Botschaften vom Radar, deren Inhalt aber unplausibel ist (z. B. negative Abstände, springende Ziele). Der Abstandsregeltempomat wird deaktiviert, bis das Radar wieder plausible Daten liefert.
+    en: "U0406 means a receiving controller, normally the ECM/PCM, gets messages from the fuel injector control module that arrive but fail its checks: wrong counter, checksum, range or a signal marked invalid. Ford's 2012 OBD summary shows the U04xx principle with U0401: the TCM stores it when the ECM sends invalid or faulted torque or pedal data. A separate injector module exists only on some designs; GM's 2013 bi-fuel CNG Silverado/Sierra uses an FICM that switches the injectors and passes rail pressure and temperature to the ECM over serial data. No manufacturer documents U0406 publicly. As fuel delivery affects emissions, CARB requires such inputs to be monitored and a MIL is likely. U0105 means lost contact, U0306 a software mismatch."
+    de: "U0406 heißt: Ein empfangendes Steuergerät, meist das ECM/PCM, erhält Botschaften vom Einspritzdüsen-Steuergerät, die zwar ankommen, aber die Prüfung nicht bestehen – falscher Zähler, Prüfsumme, Wertebereich oder ein als ungültig markiertes Signal. Das U04xx-Prinzip zeigt Fords OBD-Übersicht 2012 an U0401: Das TCM speichert ihn, wenn das ECM ungültige oder fehlerhafte Drehmoment- oder Pedaldaten sendet. Ein eigenes Einspritzmodul gibt es nur bei manchen Bauarten; GMs bivalenter CNG-Silverado/Sierra 2013 nutzt ein FICM, das die Düsen umschaltet und Raildruck und -temperatur über serielle Daten an das ECM meldet. Öffentlich dokumentiert kein Hersteller U0406. Weil die Einspritzung die Abgaswerte bestimmt, verlangt CARB eine Überwachung; eine MIL ist wahrscheinlich. U0105 steht für Kontaktverlust, U0306 für Software-Konflikt."
   affected_components:
-    - acc_radar
+    - fuel_injector_control_module
+    - engine_control_module
+    - can_bus_wiring
   common_causes:
-    - id: radar_obstructed
-      likelihood: high
-      label:
-        en: Radar obstructed by snow/dirt
-        de: Radar durch Schnee/Schmutz verdeckt
-    - id: radar_misalignment
+    - id: bus_wiring_connector
       likelihood: medium
       label:
-        en: Radar misaligned after collision
-        de: Radar nach Unfall dejustiert
-    - id: gateway_module_fault
+        en: Corroded or loose connector, damaged bus wire to the injector module
+        de: Korrodierter oder lockerer Stecker, beschädigte Busleitung zum Einspritzmodul
+    - id: module_supply_voltage
+      likelihood: medium
+      label:
+        en: Low supply voltage at the injector module
+        de: Zu niedrige Versorgungsspannung am Einspritzmodul
+    - id: software_mismatch
+      likelihood: medium
+      label:
+        en: Software levels of injector module and ECM do not match
+        de: Softwarestände von Einspritzmodul und ECM passen nicht zusammen
+    - id: module_internal
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Injector control module internally faulty
+        de: Einspritzdüsen-Steuergerät intern defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: Rough running, misfire or hard start
+      de: Unrunder Lauf, Aussetzer oder schlechtes Anspringen
+    - en: Reduced power
+      de: Leistungsreduzierung
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur: [80, 1500]
-    estimated_hours: [0.5, 3.0]
+    estimated_cost_eur: [100, 1200]
+    estimated_hours: [1, 3]
   flags:
     mil: true
+    emissions_relevant: true
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0105, U0306, U0401, U0407]
   sources:
-    - https://en.wikipedia.org/wiki/Adaptive_cruise_control
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - http://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2015/SB-10059129-4167.pdf
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+  reviewed: '2026-11-02'
 
 - code: U0407
   category: network
@@ -28785,48 +28969,58 @@
     en: Invalid Data Received From Glow Plug Control Module
     de: Ungültige Daten vom Glühkerzen-Steuergerät empfangen
   description:
-    en: ESP receives steering angle data that does not match yaw or wheel speeds. ESP and lane-keeping are deactivated until the steering angle sensor is recalibrated.
-    de: Das ESP empfängt Lenkwinkeldaten, die nicht zu Gierrate und Raddrehzahlen passen. ESP und Spurhalteassistent werden deaktiviert, bis der Lenkwinkelsensor neu kalibriert ist.
+    en: "U0407 is stored when the engine controller receives data from the glow plug control module that it rejects as implausible. Volkswagen lists the code in the 2014 Touareg diesel OBD chart as Invalid Data Received From Glow Plug Control Module 1, criterion implausible messages received. On that engine the glow unit talks to the ECM over LIN; VW uses U0106 for a missing LIN message and U0307 for a failed software check, which separates the three siblings clearly. Ford's 2012 OBD summary shows the same U04xx idea for other modules: data arrive but are faulted. Because the glow module also reports plug faults, invalid data can hide real glow plug problems. Expect hard cold starts, white smoke and on a diesel usually the MIL."
+    de: "U0407 legt das Motorsteuergerät ab, wenn es Daten vom Glühkerzen-Steuergerät als unplausibel verwirft. Volkswagen führt den Code in der OBD-Tabelle des Touareg-Diesels 2014 als „Invalid Data Received From Glow Plug Control Module 1“ mit dem Kriterium „unplausible Botschaften empfangen“. Bei diesem Motor spricht das Glühsteuergerät per LIN mit dem ECM; eine fehlende LIN-Botschaft meldet VW als U0106, eine fehlgeschlagene Softwareprüfung als U0307 – so grenzen sich die drei Geschwister klar ab. Fords OBD-Übersicht 2012 zeigt dasselbe U04xx-Prinzip bei anderen Modulen: Daten kommen an, sind aber fehlerhaft. Da das Glühmodul auch Kerzenfehler meldet, können ungültige Daten echte Glühkerzenprobleme verdecken. Folgen: schlechter Kaltstart, weißer Rauch, beim Diesel meist MIL."
   affected_components:
-    - steering_angle_sensor
+    - glow_plug_control_module
+    - engine_control_module
+    - vehicle_bus_wiring
   common_causes:
-    - id: sensor_uncalibrated
+    - id: lin_wiring_connector
       likelihood: high
       label:
-        en: Sensor not calibrated after alignment
-        de: Sensor nach Achsvermessung nicht kalibriert
-    - id: gateway_module_fault
+        en: LIN wire or connector between glow module and ECM corroded or loose
+        de: LIN-Leitung oder Stecker zwischen Glühmodul und ECM korrodiert oder locker
+    - id: module_internal
+      likelihood: medium
+      label:
+        en: Glow plug control module internally faulty
+        de: Glühkerzen-Steuergerät intern defekt
+    - id: voltage_drop_cranking
+      likelihood: medium
+      label:
+        en: Voltage dip during glow check or cranking
+        de: Spannungseinbruch während Glühprüfung oder Startvorgang
+    - id: software_mismatch
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Glow module software does not match the ECM
+        de: Software des Glühmoduls passt nicht zum ECM
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Check engine or glow plug light on
+      de: Motorkontroll- oder Vorglühleuchte an
+    - en: Hard starting in cold weather
+      de: Schlechtes Anspringen bei Kälte
+    - en: White smoke and rough idle after cold start
+      de: Weißer Rauch und unruhiger Leerlauf nach Kaltstart
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur: [40, 200]
-    estimated_hours: [0.2, 1.0]
+    estimated_cost_eur: [80, 600]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
+    emissions_relevant: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [U0428]
+  related_codes: [U0106, U0307, U0406]
   sources:
-    - https://en.wikipedia.org/wiki/Electronic_stability_control
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10074008-2280.pdf
+    - http://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
+    - https://en.wikipedia.org/wiki/Glow_plug
+  reviewed: '2026-11-02'
 
 - code: U0408
   category: network
@@ -28834,49 +29028,58 @@
     en: Invalid Data Received From Throttle Actuator Control Module
     de: Ungültige Daten vom Drosselklappensteller-Steuergerät empfangen
   description:
-    en: The ECU receives an authorisation message from the immobilizer that does not match the expected rolling code. Engine start is blocked.
-    de: Die Motorsteuerung empfängt vom Wegfahrsperren-Steuergerät eine Freigabe-Botschaft, die nicht zum erwarteten Rolling-Code passt. Der Motorstart wird blockiert.
+    en: "U0408 points to messages from the throttle actuator control module that the receiver, usually the ECM/PCM, judges invalid: implausible content, a failed checksum or counter, or a value outside its range. Most vehicles integrate throttle control in the engine controller, so a separate TAC module and therefore this code are uncommon; no manufacturer documents U0408 publicly. Ford's 2012 OBD summary illustrates the U04xx logic with U0401, which the TCM stores when ECM torque or pedal data are faulted. Because the throttle meters intake air, CARB's comprehensive component rules apply, and a MIL together with reduced power or a limp mode is likely. U0107 means lost contact, U0308 a software mismatch with the same module."
+    de: "U0408 weist auf Botschaften des Drosselklappensteller-Steuergeräts hin, die der Empfänger – meist das ECM/PCM – als ungültig einstuft: unplausibler Inhalt, falsche Prüfsumme oder falscher Zähler, Wert außerhalb des Bereichs. In den meisten Fahrzeugen steckt die Drosselklappenregelung im Motorsteuergerät; ein eigenes TAC-Modul und damit dieser Code sind selten, öffentlich dokumentiert ihn kein Hersteller. Die U04xx-Logik zeigt Fords OBD-Übersicht 2012 an U0401, den das TCM bei fehlerhaften Drehmoment- oder Pedaldaten des ECM speichert. Weil die Drosselklappe die Ansaugluft dosiert, gelten die CARB-Regeln für überwachte Bauteile; MIL plus Leistungsreduzierung oder Notlauf sind wahrscheinlich. U0107 steht für Kontaktverlust, U0308 für einen Software-Konflikt mit demselben Modul."
   affected_components:
-    - immobilizer_module
-    - ecm
+    - throttle_actuator_control_module
+    - engine_control_module
+    - can_bus_wiring
   common_causes:
-    - id: key_not_learned
-      likelihood: high
-      label:
-        en: Key not properly learned
-        de: Schlüssel nicht korrekt angelernt
-    - id: immo_software_mismatch
+    - id: bus_wiring_connector
       likelihood: medium
       label:
-        en: Software version mismatch
-        de: Software-Versionskonflikt
-    - id: gateway_module_fault
+        en: Damaged bus wire or poor connector contact at the throttle module
+        de: Beschädigte Busleitung oder schlechter Steckkontakt am Drosselklappenmodul
+    - id: module_internal
+      likelihood: medium
+      label:
+        en: Throttle actuator control module internally faulty
+        de: Drosselklappensteller-Steuergerät intern defekt
+    - id: software_mismatch
+      likelihood: medium
+      label:
+        en: Software of throttle module and ECM do not match
+        de: Software von Drosselklappenmodul und ECM passt nicht zusammen
+    - id: low_supply_voltage
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Low or unstable supply voltage
+        de: Niedrige oder schwankende Versorgungsspannung
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: Limp mode with reduced throttle response
+      de: Notlauf mit verminderter Gasannahme
+    - en: Unstable idle or stalling
+      de: Instabiler Leerlauf oder Absterben
   repair:
-    difficulty: hard
+    difficulty: medium
     diy_possible: false
     estimated_cost_eur: [80, 800]
-    estimated_hours: [0.3, 3.0]
+    estimated_hours: [0.5, 2.5]
   flags:
     mil: true
+    emissions_relevant: true
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [U0425]
+  related_codes: [U0107, U0308, U0401, U0406]
   sources:
-    - https://en.wikipedia.org/wiki/Immobiliser
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - http://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://en.wikipedia.org/wiki/Electronic_throttle_control
+  reviewed: '2026-11-02'
 
 - code: U0409
   category: network
@@ -28884,48 +29087,53 @@
     en: Invalid Data Received From Alternative Fuel Control Module
     de: Ungültige Daten vom Alternativ-Kraftstoff-Steuergerät empfangen
   description:
-    en: The vehicle security / alarm controller is sending implausible status data (e.g. armed/unarmed jitter). Alarm and immobilizer behaviour can become unpredictable.
-    de: Das Sicherheits-/Alarmsteuergerät sendet unplausible Statusdaten (z. B. springender Scharf-/Unscharf-Zustand). Alarm und Wegfahrsperre verhalten sich eventuell unvorhersehbar.
+    en: U0409 is logged when the engine controller receives data from the alternative fuel control module that fail its validity checks. Such a module runs the gas side of bi-fuel CNG or LPG vehicles. In Ford's 2000 bi-fuel OBD description the AFCM passes the requested mode (ALT or GAS) and supply status between the gas metering unit and the PCM, which then switches the petrol injectors on or off; GM's 2013 CNG Silverado/Sierra sends rail pressure and temperature from its injector module to the ECM over serial data. No manufacturer documents U0409 publicly. Corrupt data can make the engine fall back to petrol or misjudge gas pressure, so CARB monitoring applies and a MIL is likely. U0108 means lost contact, U0309 a software mismatch.
+    de: U0409 speichert das Motorsteuergerät, wenn Daten vom Alternativ-Kraftstoff-Steuergerät die Gültigkeitsprüfung nicht bestehen. Ein solches Modul steuert die Gasseite bivalenter CNG- oder LPG-Fahrzeuge. In Fords Bi-Fuel-OBD-Beschreibung von 2000 übermittelt das AFCM die gewählte Betriebsart (ALT oder GAS) und den Versorgungszustand zwischen Gas-Dosiereinheit und PCM, das daraufhin die Benzindüsen ab- oder zuschaltet; im CNG-Silverado/Sierra 2013 von GM meldet das Einspritzmodul Raildruck und -temperatur über serielle Daten an das ECM. Öffentlich dokumentiert kein Hersteller U0409. Fehlerhafte Daten können den Motor auf Benzin zurückfallen lassen oder den Gasdruck falsch erscheinen lassen; CARB verlangt die Überwachung, eine MIL ist wahrscheinlich. U0108 steht für Kontaktverlust, U0309 für Software-Konflikt.
   affected_components:
-    - vehicle_security_module
+    - alternative_fuel_control_module
+    - engine_control_module
+    - can_bus_wiring
   common_causes:
-    - id: security_module_failed
+    - id: bus_wiring_connector
+      likelihood: high
+      label:
+        en: Corroded connector or damaged wiring of the retrofit or factory gas system
+        de: Korrodierter Stecker oder beschädigte Leitungen der Gasanlage
+    - id: gas_sensor_fault
       likelihood: medium
       label:
-        en: Security module internally failed
-        de: Sicherheitsmodul intern defekt
-    - id: gateway_module_fault
-      likelihood: low
+        en: Faulty gas rail pressure/temperature sensor delivering implausible values
+        de: Defekter Gas-Raildruck-/Temperatursensor liefert unplausible Werte
+    - id: module_internal
+      likelihood: medium
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Alternative fuel control module faulty or wrongly configured
+        de: Alternativ-Kraftstoff-Steuergerät defekt oder falsch konfiguriert
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: Engine stays on or switches back to petrol
+      de: Motor bleibt im Benzinbetrieb oder schaltet auf Benzin zurück
+    - en: Gas gauge or fuel mode indicator incorrect
+      de: Gasanzeige oder Betriebsartanzeige falsch
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [120, 800]
-    estimated_hours: [0.5, 3.0]
+    estimated_cost_eur: [100, 900]
+    estimated_hours: [1, 3]
   flags:
-    mil: false
+    mil: true
+    emissions_relevant: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [U0427]
+  related_codes: [U0108, U0309, U0406, U0410]
   sources:
-    - https://en.wikipedia.org/wiki/Vehicle_anti-theft_system
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://static.nhtsa.gov/odi/inv/2008/INRD-PE08063-33501P.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2015/SB-10059129-4167.pdf
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+  reviewed: '2026-11-02'
 
 - code: U040A
   category: network
@@ -29243,47 +29451,58 @@
     en: Invalid Data Received From Fuel Pump Control Module
     de: Ungültige Daten vom Kraftstoffpumpen-Steuergerät empfangen
   description:
-    en: The vehicle network receives EPB data that contradicts other inputs (e.g. brake reported applied while moving). Auto-Hold is disabled and EPB warnings are shown.
-    de: Das Fahrzeugnetz empfängt EPB-Daten, die anderen Signalen widersprechen (z. B. Bremse gemeldet eingelegt bei Fahrt). Auto-Hold wird deaktiviert, EPB-Warnungen werden angezeigt.
+    en: "U0410 means the engine controller receives data from the fuel pump control module that it cannot trust, such as a bad checksum, counter or an out-of-range value. Many cars drive the in-tank pump through such a module to set the low-side pressure on demand. GM shows why the data matter for emissions: bulletin PIP5427 (2014-2016 trucks and SUVs) traces a lit service engine lamp and a fuel pressure deviation P2635 to communication faults between ECM and pump module, logged there as U0074 or GM's own U18A2. From 2014 GM renamed this unit chassis control module. No manufacturer documents U0410 publicly. Expect a MIL, hesitation or reduced power. U0109 means lost contact, U0310 a software mismatch."
+    de: "U0410 bedeutet: Das Motorsteuergerät erhält vom Kraftstoffpumpen-Steuergerät Daten, denen es nicht trauen kann – falsche Prüfsumme, falscher Zähler oder Werte außerhalb des Bereichs. Viele Fahrzeuge steuern die Tankpumpe über ein solches Modul, um den Vordruck nach Bedarf einzustellen. Warum die Daten abgasrelevant sind, zeigt GM: Das Bulletin PIP5427 (Pick-ups und SUVs 2014–2016) führt eine leuchtende Motorkontrollleuchte und die Druckabweichung P2635 auf Kommunikationsfehler zwischen ECM und Pumpenmodul zurück, dort als U0074 oder GM-eigener U18A2 gespeichert. Ab 2014 heißt das Gerät bei GM Chassis Control Module. Öffentlich dokumentiert kein Hersteller U0410. Zu erwarten: MIL, Ruckeln oder Leistungsverlust. U0109 steht für Kontaktverlust, U0310 für Software-Konflikt."
   affected_components:
-    - epb_module
+    - fuel_pump_control_module
+    - engine_control_module
+    - can_bus_wiring
   common_causes:
-    - id: epb_sensor_drift
+    - id: bus_wiring_connector
+      likelihood: high
+      label:
+        en: Damaged bus wire or corroded connector to the fuel pump module (often near the tank)
+        de: Beschädigte Busleitung oder korrodierter Stecker zum Pumpenmodul (oft nahe dem Tank)
+    - id: module_supply_ground
       likelihood: medium
       label:
-        en: Caliper or position sensor drift
-        de: Sattel- oder Positionssensor-Drift
-    - id: gateway_module_fault
+        en: Poor power or ground of the fuel pump module
+        de: Schlechte Versorgung oder Masse des Pumpenmoduls
+    - id: software_mismatch
+      likelihood: medium
+      label:
+        en: Pump module and ECM software do not match after replacement
+        de: Software von Pumpenmodul und ECM passt nach Tausch nicht zusammen
+    - id: module_internal
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Fuel pump control module internally faulty
+        de: Kraftstoffpumpen-Steuergerät intern defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: Fuel pressure codes such as P2635 set together
+      de: Kraftstoffdruck-Codes wie P2635 gleichzeitig gesetzt
+    - en: Hesitation, stalling or reduced power
+      de: Ruckeln, Absterben oder Leistungsverlust
   repair:
-    difficulty: hard
+    difficulty: medium
     diy_possible: false
-    estimated_cost_eur: [120, 1500]
-    estimated_hours: [0.5, 4.0]
+    estimated_cost_eur: [80, 900]
+    estimated_hours: [0.5, 2.5]
   flags:
     mil: true
+    emissions_relevant: true
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0109, U0310, U0409]
   sources:
-    - https://en.wikipedia.org/wiki/Electronic_parking_brake
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://static.nhtsa.gov/odi/tsbs/2016/MC-10099961-2280.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2013/SB-10053903-4206.pdf
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+  reviewed: '2026-11-02'
 
 - code: U0411
   category: network
@@ -29291,47 +29510,58 @@
     en: Invalid Data Received From Drive Motor Control Module
     de: Ungültige Daten vom Antriebsmotor-Steuergerät empfangen
   description:
-    en: ABS reports invalid front-driver wheel speed data. ABS, ESP and traction control are deactivated; the speedometer can be inaccurate.
-    de: Das ABS meldet ungültige Raddrehzahldaten vorne links. ABS, ESP und ASR werden deaktiviert, der Tacho kann ungenau sein.
+    en: "U0411 is stored when a controller, typically the engine or hybrid controller, receives messages from the drive motor control module (the inverter electronics of an electric traction motor) that it judges invalid. Volkswagen lists it in its 2014 hybrid OBD charts: for the Touareg Hybrid on implausible messages from the motor module, for the Jetta Hybrid on an incorrect CAN data length code. Bentley's Flying Spur Hybrid (2022-2023) stores U041100 in the engine control unit with a warning lamp, partly together with P0A2E for the motor temperature sensor circuit, and has the technician measure and inspect a harness connector. U0110 means lost contact, U0311 a software mismatch. Hybrid drive may be limited or switched off."
+    de: "U0411 legt ein Steuergerät ab, meist das Motor- oder Hybridsteuergerät, wenn Botschaften des Antriebsmotor-Steuergeräts – der Leistungselektronik eines elektrischen Fahrmotors – als ungültig gelten. Volkswagen führt den Code in den Hybrid-OBD-Tabellen 2014: beim Touareg Hybrid für unplausible Botschaften des Motormoduls, beim Jetta Hybrid für eine falsche CAN-Datenlänge. Bentley speichert beim Flying Spur Hybrid (2022–2023) U041100 im Motorsteuergerät mit Warnleuchte, teils zusammen mit P0A2E für den Temperaturfühlerkreis des E-Motors, und lässt einen Steckverbinder im Kabelstrang messen und prüfen. U0110 steht für Kontaktverlust, U0311 für einen Software-Konflikt. Der Hybridantrieb kann eingeschränkt oder abgeschaltet werden."
   affected_components:
-    - wheel_speed_sensor_fl
+    - drive_motor_control_module
+    - hybrid_control_module
+    - can_bus_wiring
   common_causes:
-    - id: sensor_air_gap
+    - id: harness_connector
       likelihood: high
       label:
-        en: Excessive air gap or contaminated tone ring
-        de: Zu großer Luftspalt oder verschmutzter Impulsring
-    - id: gateway_module_fault
+        en: Damaged pins or poor contact in harness connectors near the drive motor (Bentley case)
+        de: Beschädigte Kontakte oder schlechter Kontakt in Steckverbindern am E-Motor (Bentley-Fall)
+    - id: motor_sensor_fault
+      likelihood: medium
+      label:
+        en: Faulty motor temperature sensor circuit making the module send invalid data
+        de: Fehler im Temperaturfühlerkreis des E-Motors, Modul sendet ungültige Daten
+    - id: software_mismatch
+      likelihood: medium
+      label:
+        en: Software of motor module and hybrid controller do not match
+        de: Software von Motormodul und Hybridsteuergerät passt nicht zusammen
+    - id: module_internal
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Drive motor control module internally faulty
+        de: Antriebsmotor-Steuergerät intern defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Engine or drive system warning light on
+      de: Motor- oder Antriebs-Warnleuchte an
+    - en: Electric drive unavailable, engine runs constantly
+      de: Elektrischer Fahrbetrieb nicht verfügbar, Verbrenner läuft dauernd
+    - en: Reduced power
+      de: Leistungsreduzierung
   repair:
-    difficulty: medium
-    diy_possible: true
-    estimated_cost_eur: [30, 250]
-    estimated_hours: [0.3, 1.5]
+    difficulty: shop_only
+    diy_possible: false
+    estimated_cost_eur: [100, 1500]
+    estimated_hours: [1, 4]
   flags:
     mil: true
+    emissions_relevant: true
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0110, U0311, U0412]
   sources:
-    - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://static.nhtsa.gov/odi/tsbs/2023/MC-10245083-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10074008-2280.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10073289-2280.pdf
+  reviewed: '2026-11-02'
 
 - code: U0412
   category: network
@@ -29339,47 +29569,58 @@
     en: Invalid Data Received From Battery Energy Control Module A
     de: Ungültige Daten vom Batterie-Energie-Steuergerät A empfangen
   description:
-    en: ABS receives invalid front-passenger wheel speed data. ABS/ESP are deactivated until the signal becomes plausible again.
-    de: Das ABS empfängt ungültige Raddrehzahldaten vorne rechts. ABS/ESP werden deaktiviert, bis das Signal wieder plausibel ist.
+    en: U0412 is stored when the hybrid or engine controller receives data from battery energy control module A, the management unit of the high-voltage battery, that it rejects as invalid. Volkswagen's 2014 Jetta Hybrid OBD chart sets it on implausible received data. FCA lists U0412-00 for the 2019 Chrysler Pacifica plug-in hybrid (TSB 08-114-22) among codes that light the MIL and can remain as permanent codes, so the vehicle fails a state smog check; the fix is new software for the hybrid control processors, not a battery part. CARB requires emission-related control units to be monitored, which explains the MIL. U0111 means lost contact, U0413 covers module B, U0312 a software mismatch. Charging or electric driving may be limited.
+    de: U0412 legt das Hybrid- oder Motorsteuergerät ab, wenn es Daten vom Batterie-Energie-Steuergerät A – dem Management der Hochvoltbatterie – als ungültig verwirft. In der OBD-Tabelle des Jetta Hybrid 2014 setzt Volkswagen ihn bei unplausiblen empfangenen Daten. FCA führt U0412-00 beim Chrysler Pacifica Plug-in-Hybrid 2019 (TSB 08-114-22) unter Codes, die die MIL einschalten und als permanente Codes stehen bleiben können, sodass das Fahrzeug die Abgasprüfung nicht besteht; abgeholfen wird mit neuer Software für die Hybrid-Steuerprozessoren, nicht mit Batterieteilen. CARB verlangt die Überwachung abgasrelevanter Steuergeräte, daher die MIL. U0111 steht für Kontaktverlust, U0413 für Modul B, U0312 für Software-Konflikt. Laden oder elektrisches Fahren kann eingeschränkt sein.
   affected_components:
-    - wheel_speed_sensor_fr
+    - battery_energy_control_module
+    - hybrid_control_module
+    - can_bus_wiring
   common_causes:
-    - id: sensor_air_gap
+    - id: software_fault
       likelihood: high
       label:
-        en: Excessive air gap or contaminated tone ring
-        de: Zu großer Luftspalt oder verschmutzter Impulsring
-    - id: gateway_module_fault
+        en: "Software error in hybrid controller or battery management (FCA: reflash HCP/AHCP)"
+        de: "Softwarefehler in Hybridsteuerung oder Batteriemanagement (FCA: HCP/AHCP neu flashen)"
+    - id: bus_wiring_connector
+      likelihood: medium
+      label:
+        en: Bus wiring or connector fault between battery module and hybrid controller
+        de: Fehler in Busleitung oder Stecker zwischen Batteriemodul und Hybridsteuerung
+    - id: low_12v_supply
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
+        en: Weak 12 V battery disturbing module start-up
+        de: Schwache 12-V-Batterie stört den Modulstart
+    - id: module_internal
       likelihood: low
       label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Battery energy control module internally faulty
+        de: Batterie-Energie-Steuergerät intern defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Check engine light on, code may become permanent
+      de: Motorkontrollleuchte an, Code kann permanent werden
+    - en: Charging or electric driving limited
+      de: Laden oder elektrisches Fahren eingeschränkt
+    - en: Hybrid system warning message
+      de: Warnmeldung zum Hybridsystem
   repair:
-    difficulty: medium
-    diy_possible: true
-    estimated_cost_eur: [30, 250]
-    estimated_hours: [0.3, 1.5]
+    difficulty: shop_only
+    diy_possible: false
+    estimated_cost_eur: [100, 1500]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
+    emissions_relevant: true
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0111, U0312, U0413, U0411]
   sources:
-    - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://static.nhtsa.gov/odi/tsbs/2022/MC-10214640-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10073289-2280.pdf
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+  reviewed: '2026-11-02'
 
 - code: U0413
   category: network
@@ -29387,47 +29628,53 @@
     en: Invalid Data Received From Battery Energy Control Module B
     de: Ungültige Daten vom Batterie-Energie-Steuergerät B empfangen
   description:
-    en: 'ABS receives implausible rear-driver wheel speed data. ESP and traction control are deactivated. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Das ABS empfängt unplausible Raddrehzahldaten hinten links. ESP und ASR werden deaktiviert. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: U0413 is the counterpart of U0412 for battery energy control module B, used where the high-voltage battery has a second management unit or a split controller. Volkswagen's 2014 Jetta Hybrid chart sets it on implausible data, while the 2014 Touareg Hybrid chart uses U0413 for its single battery module, which shows that the A/B assignment is maker-specific. Audi stores U041300 in the engine and electric drive controllers of the Q5 and A7 plug-in hybrids (model years 2019-2022) together with a drive system warning; the cause was software in the battery management and its junction box, cured by an update. U0112 means lost contact, U0313 a software mismatch, U0412 covers module A. Electric driving may be restricted.
+    de: U0413 ist das Gegenstück zu U0412 für das Batterie-Energie-Steuergerät B, das dort vorkommt, wo die Hochvoltbatterie ein zweites Managementgerät oder einen geteilten Regler hat. In der Jetta-Hybrid-Tabelle 2014 setzt Volkswagen ihn bei unplausiblen Daten, die Touareg-Hybrid-Tabelle 2014 nutzt U0413 dagegen für das einzige Batteriemodul – die Zuordnung A/B ist also herstellerabhängig. Audi speichert U041300 im Motor- und im E-Antriebs-Steuergerät der Plug-in-Hybride Q5 und A7 (Modelljahre 2019–2022) mit einer Antriebswarnung; Ursache war Software im Batteriemanagement und in dessen Anschlusskasten, behoben per Update. U0112 steht für Kontaktverlust, U0313 für Software-Konflikt, U0412 für Modul A. Elektrisches Fahren kann eingeschränkt sein.
   affected_components:
-    - wheel_speed_sensor_rl
+    - battery_energy_module_b
+    - hybrid_control_module
+    - can_bus_wiring
   common_causes:
-    - id: sensor_air_gap
+    - id: software_fault
       likelihood: high
       label:
-        en: Excessive air gap or contaminated tone ring
-        de: Zu großer Luftspalt oder verschmutzter Impulsring
-    - id: gateway_module_fault
+        en: "Software error in battery management or junction box (Audi: SVM update)"
+        de: "Softwarefehler in Batteriemanagement oder Anschlusskasten (Audi: SVM-Update)"
+    - id: bus_wiring_connector
+      likelihood: medium
+      label:
+        en: Bus wiring or connector fault at the battery module
+        de: Fehler in Busleitung oder Stecker am Batteriemodul
+    - id: module_internal
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Battery energy control module B internally faulty
+        de: Batterie-Energie-Steuergerät B intern defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Drive system or engine warning light on
+      de: Antriebs- oder Motorwarnleuchte an
+    - en: Electric driving or charging restricted
+      de: Elektrisches Fahren oder Laden eingeschränkt
+    - en: Code stored in engine and electric drive controllers
+      de: Code in Motor- und E-Antriebs-Steuergerät gespeichert
   repair:
-    difficulty: medium
-    diy_possible: true
-    estimated_cost_eur: [30, 250]
-    estimated_hours: [0.3, 1.5]
+    difficulty: shop_only
+    diy_possible: false
+    estimated_cost_eur: [100, 1500]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
+    emissions_relevant: true
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0112, U0313, U0412]
   sources:
-    - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://static.nhtsa.gov/odi/tsbs/2023/MC-10237012-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10073289-2280.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10074008-2280.pdf
+  reviewed: '2026-11-02'
 
 - code: U0414
   category: network

@@ -12791,242 +12791,290 @@
 - code: P2113
   category: powertrain
   title:
-    en: Throttle/Pedal Position Sensor/Switch B Minimum Stop Performance
-    de: Drosselklappen-/Pedalpositionssensor/-schalter B Mindestanschlag-Funktion
+    en: Throttle/Pedal Position Sensor B Minimum Stop Performance
+    de: Drosselklappen-/Pedalpositionssensor B Mindestanschlag-Funktion
   description:
-    en: The throttle actuator control has detected a fault and limits engine speed to a defined emergency value. The vehicle stays drivable but with severely reduced power until the underlying fault is cleared.
-    de: Die Drosselklappenregelung hat einen Fehler erkannt und begrenzt die Motordrehzahl auf einen definierten Notwert. Das Fahrzeug bleibt fahrbar, aber mit stark reduzierter Leistung, bis der zugrundeliegende Fehler behoben ist.
+    en: The engine computer checks whether position signal B reports a plausible value when the throttle or pedal rests against its lower mechanical stop. At key-on many systems learn this minimum and compare it with a tolerance window; a reading outside that window sets the code. Ford and GM label their second throttle position sensor as B, so on those layouts B means the throttle body, but neither maker publishes P2113 itself. No manufacturer documents this code publicly; Subaru uses the A version (P2109). Ice, coking or a bent stop are typical triggers. P0220-P0223 cover the B circuit, P2109 and P2114-P2117 the other letters. The driver may see a warning lamp and reduced power.
+    de: "Das Steuergerät prüft, ob Positionssignal B am unteren mechanischen Anschlag von Drosselklappe oder Pedal einen stimmigen Wert liefert. Viele Systeme lernen diesen Ruhewert beim Einschalten und vergleichen ihn mit einem Toleranzfenster; liegt er außerhalb, wird der Code gesetzt. Ford und GM nennen ihren zweiten Drosselklappensensor B, dort betrifft B also das Drosselklappengehäuse – P2113 selbst veröffentlicht aber kein Hersteller; Subaru dokumentiert nur die A-Variante P2109. Typische Auslöser sind Eis, Verkokung oder ein verbogener Anschlag. Der Kreis B hat eigene Codes (P0220–P0223), die übrigen Buchstaben P2109 und P2114–P2117. Für den Fahrer: Warnleuchte und oft weniger Leistung."
   affected_components:
-    - throttle_actuator_motor
-    - throttle_position_sensor
+    - throttle_position_sensor_b
+    - throttle_body
     - ecm
   common_causes:
-    - id: throttle_actuator_fault
+    - id: throttle_body_deposits
       likelihood: high
       label:
-        en: Underlying throttle actuator fault
-        de: Zugrundeliegender Fehler am Drosselklappensteller
-    - id: tps_correlation_fault
+        en: Carbon deposits or ice keep the throttle plate off its rest stop
+        de: Verkokung oder Eis halten die Drosselklappe vom Ruheanschlag fern
+    - id: sensor_b_drift
       likelihood: medium
       label:
-        en: Pedal/throttle correlation fault
-        de: Pedal/Drosselklappen-Plausibilitätsfehler
+        en: Position sensor B worn or drifted at the low end of its track
+        de: Positionssensor B am unteren Ende der Bahn verschlissen oder abgedriftet
+    - id: minimum_not_relearned
+      likelihood: medium
+      label:
+        en: Minimum position not relearned after cleaning or part replacement
+        de: Ruheposition nach Reinigung oder Teiletausch nicht neu angelernt
+    - id: connector_resistance
+      likelihood: low
+      label:
+        en: Corroded connector shifting the sensor B signal
+        de: Korrodierter Stecker verschiebt das Signal von Sensor B
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Reduced throttle response, possible limp mode'
-      de: 'Reduzierte Gasannahme, evtl. Notlauf'
-    - en: 'Hesitation or surging'
-      de: 'Zögern oder Ruckeln'
-    - en: 'Idle too high or too low'
-      de: 'Leerlauf zu hoch oder zu niedrig'
+    - en: Engine or ETC warning lamp on
+      de: Motor- oder E-Gas-Warnleuchte an
+    - en: Unstable or raised idle speed
+      de: Unruhige oder erhöhte Leerlaufdrehzahl
+    - en: Reduced engine power (limp mode)
+      de: Reduzierte Motorleistung (Notlauf)
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [120, 700]
-    estimated_hours: [0.5, 3.0]
+    estimated_cost_eur: [30, 600]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [P2109, P2114, P0221, P0222, P0223, P2135]
   sources:
-    - https://en.wikipedia.org/wiki/Throttle_position_sensor
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://patents.google.com/patent/US6588400B2/en
+    - https://static.nhtsa.gov/odi/tsbs/2023/MC-10232235-0001.pdf
+    - https://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
+  reviewed: '2026-11-02'
 
 - code: P2114
   category: powertrain
   title:
-    en: Throttle/Pedal Position Sensor/Switch C Minimum Stop Performance
-    de: Drosselklappen-/Pedalpositionssensor/-schalter C Mindestanschlag-Funktion
+    en: Throttle/Pedal Position Sensor C Minimum Stop Performance
+    de: Drosselklappen-/Pedalpositionssensor C Mindestanschlag-Funktion
   description:
-    en: The throttle actuator system has dropped engine speed below the normal limp limit because of a more serious fault. The engine may run only at idle or stall.
-    de: Das Drosselklappenregelsystem hat die Motordrehzahl wegen eines schwerwiegenderen Fehlers unter den üblichen Notlauf-Grenzwert abgesenkt. Der Motor läuft eventuell nur im Leerlauf oder geht aus.
+    en: "This code reports that position signal C does not show a believable value while its throttle or pedal sits on the lower stop. The controller learns or expects a minimum reading within a tolerance band and flags a fault when the learned value falls outside it. Letter C is rarely assigned: Ford and GM use A/B for the throttle and D/E/F for the pedal, so C appears only on layouts with a third sensor. No manufacturer documents this code publicly; the logic follows the A version P2109 (Subaru) and the Delphi minimum-learn patent. P2113 and P2115-P2117 are the same test for other letters, P2136/P2137 compare C against A or B. Expect a warning lamp and possibly limited power."
+    de: "Der Code meldet, dass Positionssignal C am unteren Anschlag von Drosselklappe oder Pedal keinen glaubwürdigen Wert zeigt. Das Steuergerät lernt oder erwartet einen Ruhewert innerhalb eines Toleranzbands und setzt den Fehler, wenn der gelernte Wert herausfällt. Der Buchstabe C ist selten vergeben: Ford und GM verwenden A/B für die Drosselklappe und D/E/F für das Pedal, C gibt es nur bei Aufbauten mit drittem Sensor. Kein Hersteller dokumentiert diesen Code öffentlich; die Logik entspricht der A-Variante P2109 (Subaru) und dem Delphi-Patent zum Anlernen der Ruheposition. P2113 und P2115–P2117 sind dieselbe Prüfung für andere Buchstaben, P2136/P2137 vergleichen C mit A oder B. Warnleuchte, eventuell Leistungsbegrenzung."
   affected_components:
-    - throttle_actuator_motor
-    - throttle_position_sensor
+    - throttle_position_sensor_c
+    - throttle_body
+    - ecm
   common_causes:
-    - id: throttle_actuator_fault
-      likelihood: high
-      label:
-        en: Severe throttle actuator fault
-        de: Schwerer Fehler am Drosselklappensteller
-    - id: tps_signal_lost
+    - id: sensor_c_drift
       likelihood: medium
       label:
-        en: TPS signal lost
-        de: TPS-Signal verloren
+        en: Position sensor C worn or drifted near its rest position
+        de: Positionssensor C nahe der Ruheposition verschlissen oder abgedriftet
+    - id: mechanical_obstruction
+      likelihood: medium
+      label:
+        en: Deposits, ice or a damaged stop prevent the rest position
+        de: Ablagerungen, Eis oder beschädigter Anschlag verhindern die Ruhelage
+    - id: minimum_not_relearned
+      likelihood: medium
+      label:
+        en: Rest position not relearned after repair
+        de: Ruheposition nach Reparatur nicht angelernt
+    - id: connector_resistance
+      likelihood: low
+      label:
+        en: Connector or wiring fault shifting the C signal
+        de: Stecker- oder Leitungsfehler verschiebt das C-Signal
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Reduced throttle response, possible limp mode'
-      de: 'Reduzierte Gasannahme, evtl. Notlauf'
-    - en: 'Hesitation or surging'
-      de: 'Zögern oder Ruckeln'
-    - en: 'Idle too high or too low'
-      de: 'Leerlauf zu hoch oder zu niedrig'
+    - en: Engine or ETC warning lamp on
+      de: Motor- oder E-Gas-Warnleuchte an
+    - en: Irregular idle
+      de: Unregelmäßiger Leerlauf
+    - en: Reduced power possible
+      de: Leistungsreduzierung möglich
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [120, 700]
-    estimated_hours: [0.5, 3.0]
+    estimated_cost_eur: [30, 600]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
     limp_mode_possible: true
-  related_codes: [P2113]
   references:
     - sae:J2012
+  related_codes: [P2109, P2113, P2115, P2136, P2137]
   sources:
-    - https://en.wikipedia.org/wiki/Throttle_position_sensor
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://patents.google.com/patent/US6588400B2/en
+    - https://static.nhtsa.gov/odi/tsbs/2023/MC-10232235-0001.pdf
+  reviewed: '2026-11-02'
 
 - code: P2115
   category: powertrain
   title:
-    en: Throttle/Pedal Position Sensor/Switch D Minimum Stop Performance
-    de: Drosselklappen-/Pedalpositionssensor/-schalter D Mindestanschlag-Funktion
+    en: Throttle/Pedal Position Sensor D Minimum Stop Performance
+    de: Drosselklappen-/Pedalpositionssensor D Mindestanschlag-Funktion
   description:
-    en: The minimum stop calibration of throttle position sensor A is outside the expected range during the ECU self-check. The signal at fully closed throttle does not match the stored reference, indicating a mechanical or sensor issue.
-    de: Die Anschlag-Kalibrierung des Drosselklappenpositionssensors A liegt waehrend der Selbstpruefung der ECU ausserhalb des erwarteten Bereichs. Das Signal bei vollstaendig geschlossener Klappe passt nicht zur gespeicherten Referenz, was auf ein mechanisches oder Sensor-Problem hindeutet.
+    en: Here the controller judges position signal D at the released (minimum) end of travel. On Ford and GM drive-by-wire systems D is the first accelerator pedal sensor, so the code means the pedal's idle reading is outside the expected window, for example because the pedal does not return fully or its sensor track has shifted. No manufacturer documents P2115 publicly; Ford and GM publish only circuit and correlation codes for D (P2120-P2123, P2138). P2116 and P2117 are the E and F counterparts, P2109 and P2113 refer to A and B. The engine may not return to idle cleanly, and the ECU may limit pedal response.
+    de: Hier bewertet das Steuergerät Positionssignal D am losgelassenen Ende des Wegs (Mindestanschlag). Bei Ford und GM ist D der erste Fahrpedalsensor; der Code bedeutet dort, dass der Leerlaufwert des Pedals außerhalb des erwarteten Fensters liegt – etwa weil das Pedal nicht ganz zurückkehrt oder die Sensorbahn verschoben ist. Kein Hersteller dokumentiert P2115 öffentlich; Ford und GM veröffentlichen für D nur Kreis- und Vergleichscodes (P2120–P2123, P2138). P2116 und P2117 sind die Gegenstücke für E und F, P2109 und P2113 betreffen A und B. Der Motor kehrt eventuell nicht sauber in den Leerlauf zurück, und die Pedalwirkung kann begrenzt werden.
   affected_components:
-    - throttle_position_sensor
-    - throttle_body
+    - accelerator_pedal_position_sensor
+    - accelerator_pedal
+    - ecm
   common_causes:
-    - id: throttle_body_dirty
+    - id: pedal_not_returning
       likelihood: high
       label:
-        en: Throttle plate sticking due to carbon
-        de: Drosselklappe durch Verkokung schwergaengig
-    - id: tps_internal_fault
+        en: Pedal blocked by floor mat or weak return spring
+        de: Pedal durch Fußmatte blockiert oder Rückstellfeder schwach
+    - id: pedal_sensor_wear
       likelihood: medium
       label:
-        en: Internal sensor fault
-        de: Interner Sensorfehler
+        en: Worn pedal sensor track D at the idle end
+        de: Verschlissene Sensorbahn D am Leerlaufende
+    - id: aftermarket_pedal_module
+      likelihood: low
+      label:
+        en: Aftermarket pedal tuning module or wrong pedal part
+        de: Nachgerüstetes Pedal-Tuningmodul oder falsches Pedal
+    - id: connector_fault
+      likelihood: low
+      label:
+        en: Corroded or loose pedal connector
+        de: Korrodierter oder lockerer Pedalstecker
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Reduced throttle response, possible limp mode'
-      de: 'Reduzierte Gasannahme, evtl. Notlauf'
-    - en: 'Hesitation or surging'
-      de: 'Zögern oder Ruckeln'
-    - en: 'Idle too high or too low'
-      de: 'Leerlauf zu hoch oder zu niedrig'
+    - en: Warning lamp on
+      de: Warnleuchte an
+    - en: Engine does not drop to normal idle when the pedal is released
+      de: Motor fällt beim Loslassen nicht auf normalen Leerlauf
+    - en: Dull or limited pedal response
+      de: Träge oder begrenzte Gasannahme
   repair:
-    difficulty: medium
+    difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [100, 500]
-    estimated_hours: [0.5, 2]
+    estimated_cost_eur: [0, 350]
+    estimated_hours: [0.2, 1]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
     limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [P2116, P2117, P2109]
+  related_codes: [P2116, P2117, P2109, P2120, P2122, P2138]
   sources:
-    - https://en.wikipedia.org/wiki/Throttle_position_sensor
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2007/07_GRP12_All%20Engines.pdf
+    - https://patents.google.com/patent/US6588400B2/en
+  reviewed: '2026-11-02'
 
 - code: P2116
   category: powertrain
   title:
-    en: Throttle/Pedal Position Sensor/Switch E Minimum Stop Performance
-    de: Drosselklappen-/Pedalpositionssensor/-schalter E Mindestanschlag-Funktion
+    en: Throttle/Pedal Position Sensor E Minimum Stop Performance
+    de: Drosselklappen-/Pedalpositionssensor E Mindestanschlag-Funktion
   description:
-    en: The minimum stop calibration of throttle position sensor B does not match the learned reference during ECU self-test. Sensor B is the redundant channel used to cross-check sensor A.
-    de: Die Anschlag-Kalibrierung des Drosselklappenpositionssensors B passt waehrend der ECU-Selbstpruefung nicht zur gelernten Referenz. Sensor B ist der redundante Kanal zur Kreuzpruefung von Sensor A.
+    en: "The code covers the rest-position check of signal E. Ford, GM and Mitsubishi assign E to the second accelerator pedal sensor, which on many pedals runs at roughly half the voltage of sensor D (GM: APP 2 between 0.16 and 2.3 V). If the reading with the pedal released lies outside the learned or calibrated window, P2116 can be stored. No manufacturer documents this code publicly. Circuit faults of the same sensor are reported separately (P2125, P2127-P2129) and disagreement between D and E as P2138; P2115 and P2117 handle D and F. Typical effects are a warning lamp, an unsteady idle and limited throttle response."
+    de: "Der Code betrifft die Ruhelagen-Prüfung von Signal E. Ford, GM und Mitsubishi ordnen E dem zweiten Fahrpedalsensor zu, der bei vielen Pedalen mit etwa halber Spannung von Sensor D arbeitet (GM: Pedalsensor 2 zwischen 0,16 und 2,3 V). Liegt der Wert bei losgelassenem Pedal außerhalb des gelernten oder kalibrierten Fensters, kann P2116 gespeichert werden. Kein Hersteller dokumentiert diesen Code öffentlich. Kreisfehler desselben Sensors laufen getrennt (P2125, P2127–P2129), eine Abweichung zwischen D und E als P2138; P2115 und P2117 decken D und F ab. Folgen sind meist Warnleuchte, unruhiger Leerlauf und begrenzte Gasannahme."
   affected_components:
-    - throttle_position_sensor
-    - throttle_body
+    - accelerator_pedal_position_sensor
+    - accelerator_pedal
+    - ecm
   common_causes:
-    - id: throttle_body_dirty
+    - id: pedal_not_returning
       likelihood: high
       label:
-        en: Carbon deposits affecting throttle motion
-        de: Verkokung beeintraechtigt Klappenbewegung
-    - id: tps_internal_fault
+        en: Pedal held off its stop by floor mat or sticking pivot
+        de: Pedal durch Fußmatte oder schwergängiges Lager vom Anschlag gehalten
+    - id: pedal_sensor_wear
       likelihood: medium
       label:
-        en: Internal sensor B fault
-        de: Interner Fehler Sensor B
+        en: Worn or contaminated sensor track E
+        de: Verschlissene oder verschmutzte Sensorbahn E
+    - id: connector_fault
+      likelihood: low
+      label:
+        en: Moisture or corrosion at the pedal connector
+        de: Feuchtigkeit oder Korrosion am Pedalstecker
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Reduced throttle response, possible limp mode'
-      de: 'Reduzierte Gasannahme, evtl. Notlauf'
-    - en: 'Hesitation or surging'
-      de: 'Zögern oder Ruckeln'
-    - en: 'Idle too high or too low'
-      de: 'Leerlauf zu hoch oder zu niedrig'
+    - en: Warning lamp on
+      de: Warnleuchte an
+    - en: Unsteady or raised idle
+      de: Unruhiger oder erhöhter Leerlauf
+    - en: Limited throttle response
+      de: Begrenzte Gasannahme
   repair:
-    difficulty: medium
+    difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [100, 500]
-    estimated_hours: [0.5, 2]
+    estimated_cost_eur: [0, 350]
+    estimated_hours: [0.2, 1]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
     limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [P2115, P2117, P2109]
+  related_codes: [P2115, P2117, P2125, P2127, P2128, P2138]
   sources:
-    - https://en.wikipedia.org/wiki/Throttle_position_sensor
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2006/2006file13.pdf
+    - https://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
+    - https://patents.google.com/patent/US6588400B2/en
+  reviewed: '2026-11-02'
 
 - code: P2117
   category: powertrain
   title:
-    en: Throttle/Pedal Position Sensor/Switch F Minimum Stop Performance
-    de: Drosselklappen-/Pedalpositionssensor/-schalter F Mindestanschlag-Funktion
+    en: Throttle/Pedal Position Sensor F Minimum Stop Performance
+    de: Drosselklappen-/Pedalpositionssensor F Mindestanschlag-Funktion
   description:
-    en: The minimum stop signal from throttle/pedal position sensor C is out of specification during initialization. Used on systems with three redundant sensor channels for safety-critical drive-by-wire control.
-    de: Das Anschlag-Mindestsignal des Drosselklappen-/Pedalpositionssensors C ist waehrend der Initialisierung ausserhalb der Spezifikation. Wird bei Systemen mit drei redundanten Sensorkanaelen fuer sicherheitsrelevante Drive-by-Wire-Regelung eingesetzt.
+    en: P2117 is the minimum-stop check for signal F. Ford lists F as the third accelerator pedal sensor on its older Gen2 throttle systems (circuit codes P2132/P2133, range P2131), while most current pedals carry only D and E, so the code can only occur on three-track pedals. The ECU flags it when the F reading at the released position lies outside the expected band. No manufacturer documents P2117 publicly. Siblings are P2115 (D) and P2116 (E); P2139 and P2140 compare F with D or E. A sticking pedal or a worn track usually lies behind it, with a warning lamp and reduced pedal response as the visible result.
+    de: P2117 ist die Mindestanschlag-Prüfung für Signal F. Ford führt F als dritten Fahrpedalsensor seiner älteren E-Gas-Systeme der zweiten Generation (Kreiscodes P2132/P2133, Plausibilität P2131); die meisten heutigen Pedale haben nur D und E, der Code ist also nur bei dreibahnigen Pedalen möglich. Das Steuergerät setzt ihn, wenn der F-Wert in Ruhelage außerhalb des erwarteten Bereichs liegt. Kein Hersteller dokumentiert P2117 öffentlich. Geschwister sind P2115 (D) und P2116 (E); P2139 und P2140 vergleichen F mit D bzw. E. Ursache ist meist ein klemmendes Pedal oder eine verschlissene Bahn, sichtbar als Warnleuchte und verminderte Pedalwirkung.
   affected_components:
     - accelerator_pedal_position_sensor
-    - throttle_position_sensor
+    - accelerator_pedal
+    - ecm
   common_causes:
-    - id: pedal_sensor_fault
+    - id: pedal_not_returning
       likelihood: high
       label:
-        en: Internal pedal sensor fault
-        de: Interner Pedalsensor-Fehler
-    - id: connector_corrosion
+        en: Pedal does not return fully to its stop
+        de: Pedal kehrt nicht vollständig an den Anschlag zurück
+    - id: pedal_sensor_wear
       likelihood: medium
       label:
-        en: Corroded connector pins
-        de: Korrodierte Steckkontakte
+        en: Worn third sensor track F
+        de: Verschlissene dritte Sensorbahn F
+    - id: connector_fault
+      likelihood: low
+      label:
+        en: Poor contact at the pedal connector
+        de: Schlechter Kontakt am Pedalstecker
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Reduced throttle response, possible limp mode'
-      de: 'Reduzierte Gasannahme, evtl. Notlauf'
-    - en: 'Hesitation or surging'
-      de: 'Zögern oder Ruckeln'
-    - en: 'Idle too high or too low'
-      de: 'Leerlauf zu hoch oder zu niedrig'
+    - en: Warning lamp on
+      de: Warnleuchte an
+    - en: Idle speed does not settle
+      de: Leerlaufdrehzahl pendelt sich nicht ein
+    - en: Reduced pedal response
+      de: Verminderte Pedalwirkung
   repair:
-    difficulty: medium
+    difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [120, 450]
-    estimated_hours: [0.5, 1.5]
+    estimated_cost_eur: [0, 350]
+    estimated_hours: [0.2, 1]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
     limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [P2116, P2115, P2109]
+  related_codes: [P2115, P2116, P2130, P2139, P2140]
   sources:
-    - https://en.wikipedia.org/wiki/Throttle_position_sensor
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
+    - https://patents.google.com/patent/US6588400B2/en
+  reviewed: '2026-11-02'
 
 - code: P2118
   category: powertrain
@@ -13085,48 +13133,67 @@
   category: powertrain
   title:
     en: Throttle Actuator Control Throttle Body Range/Performance
-    de: Drosselklappensteller Drosselklappengehäuse Bereich/Plausibilität
+    de: Drosselklappensteller-Steuerung Drosselklappengehäuse Bereich/Funktion
   description:
-    en: When commanded to idle, the throttle plate does not reach the calibrated closed position. Often a coked throttle bore preventing the plate from seating fully.
-    de: Bei Leerlaufanforderung erreicht die Drosselklappe nicht die kalibrierte Schliessstellung. Häufig ein verkokter Drosselklappenstutzen, in dem die Klappe nicht voll aufsetzt.
+    en: "This is a mechanical performance check of the electronic throttle body. GM calls it Throttle Closed Position Performance: after the motor is de-energized the return springs must bring the plate into its default (limp) position, e.g. 1.32-1.90 V on TP sensor 1 in GM's 2006 tables; 15 failed samples in a row set it. A Bosch-based GM ECM times the spring return at key-on (fault above 0.56 s). Toyota, Lexus, Ford (Ranger/Bronco, ice behind the throttle) and Mitsubishi use the code too. Unlike P2101 (position error while driven) or P2118 (motor current), P2119 points at a sticking or iced plate or a weak spring; the engine may enter limp mode."
+    de: "Hier wird die Mechanik der elektronischen Drosselklappe geprüft. GM nennt den Code Throttle Closed Position Performance: Nach dem Abschalten des Motors müssen die Rückstellfedern die Klappe in ihre Notlaufstellung bringen, laut GM-Tabelle 2006 etwa 1,32–1,90 V an Sensor 1; 15 Fehlproben in Folge setzen ihn. Ein Bosch-Steuergerät bei GM misst beim Einschalten die Rücklaufzeit (Fehler über 0,56 s). Toyota, Lexus, Ford (Ranger/Bronco, Eis hinter der Klappe) und Mitsubishi verwenden den Code ebenfalls. Anders als P2101 (Lagefehler im Betrieb) oder P2118 (Motorstrom) deutet P2119 auf eine klemmende oder vereiste Klappe oder eine schwache Feder; Notlauf ist möglich."
   affected_components:
-    - throttle_body
+    - electronic_throttle_body
     - throttle_actuator_motor
+    - throttle_position_sensor
+    - ecm
   common_causes:
-    - id: throttle_body_coked
+    - id: throttle_body_deposits
       likelihood: high
       label:
-        en: Throttle bore coked at closed-position stop
-        de: Drosselklappenstutzen am Schliessanschlag verkokt
-    - id: throttle_plate_misadjusted
+        en: Carbon deposits make the throttle plate stick
+        de: Verkokung lässt die Drosselklappe schwergängig werden
+    - id: ice_in_throttle
       likelihood: medium
       label:
-        en: Plate or stop misadjusted after service
-        de: Klappe oder Anschlag nach Wartung verstellt
+        en: Water or ice in the intake behind the throttle body
+        de: Wasser oder Eis im Ansaugtrakt hinter der Drosselklappe
+    - id: return_spring_weak
+      likelihood: medium
+      label:
+        en: Weak return spring or worn gear in the throttle body
+        de: Schwache Rückstellfeder oder verschlissenes Getriebe in der Drosselklappe
+    - id: ecm_calibration
+      likelihood: low
+      label:
+        en: ECM software that sets the code falsely (update available)
+        de: Steuergeräte-Software setzt den Code fälschlich (Update verfügbar)
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Reduced throttle response, possible limp mode'
-      de: 'Reduzierte Gasannahme, evtl. Notlauf'
-    - en: 'Hesitation or surging'
-      de: 'Zögern oder Ruckeln'
-    - en: 'Idle too high or too low'
-      de: 'Leerlauf zu hoch oder zu niedrig'
+    - en: Engine warning lamp on
+      de: Motorkontrollleuchte an
+    - en: Reduced power or limp mode
+      de: Leistungsverlust oder Notlauf
+    - en: Hesitation or uneven acceleration
+      de: Zögern oder ungleichmäßige Beschleunigung
+    - en: Raised or unstable idle
+      de: Erhöhter oder unruhiger Leerlauf
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [40, 500]
-    estimated_hours: [0.3, 2.0]
+    estimated_cost_eur: [20, 700]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2111, P2112]
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [P2101, P2111, P2112, P2118, P2176, P0638]
   sources:
-    - https://en.wikipedia.org/wiki/Throttle_position_sensor
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2007/07_GRP12_All%20Engines.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2006/2006file13.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2012/12OBDGS1%20Engine%20Diagnostics.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10185785-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2016/SB-10087802-5448.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2021/MC-10202632-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2023/MC-10237505-0001.pdf
+  reviewed: '2026-11-02'
 
 - code: P211A
   category: powertrain
@@ -13691,103 +13758,113 @@
     en: Throttle/Pedal Position Sensor/Switch E Circuit
     de: Drosselklappen-/Pedalstellungssensor/-schalter E Stromkreis
   description:
-    en: The "C" channel signal is above the upper threshold — typically a short to positive or an open ground.
-    de: Das Signal des Kanals "C" liegt über dem oberen Schwellwert — typischerweise Kurzschluss nach Plus oder unterbrochene Masse.
+    en: "P2125 reports a general electrical fault in signal circuit E. GM uses it as Accelerator Pedal Position Sensor 2 Circuit: the ECM looks for a continuous or intermittent open or short in the sensor 2 circuit with a counter at 12.5 ms per count (19 of 39 counts). In GM's 2006 tables sensor 2 is valid between about 0.16 and 2.3 V. GM bulletin 14636 lists P2125 among the pedal codes caused by a broken solder joint inside the pedal (2009-2011 Impala, LaCrosse). Range/Performance is P2126, explicit low or high voltage P2127/P2128, dropouts P2129, and the D/E comparison P2138. With one pedal track lost the ECU usually limits engine power."
+    de: "P2125 meldet einen allgemeinen elektrischen Fehler im Signalkreis E. GM verwendet ihn als Kreisfehler des Fahrpedalsensors 2: Das Steuergerät sucht eine dauerhafte oder zeitweise Unterbrechung bzw. einen Kurzschluss im Kreis von Sensor 2 und zählt dabei in 12,5-ms-Schritten (19 von 39 Zählungen). Laut GM-Tabelle 2006 ist Sensor 2 zwischen etwa 0,16 und 2,3 V gültig. GM-Bulletin 14636 nennt P2125 unter den Pedalcodes, die eine gebrochene Lötstelle im Pedal auslöst (Impala 2009–2011, LaCrosse). Plausibilität ist P2126, zu niedrige oder zu hohe Spannung P2127/P2128, Aussetzer P2129, der D/E-Vergleich P2138. Fällt eine Pedalbahn aus, begrenzt das Steuergerät meist die Leistung."
   affected_components:
-    - accelerator_pedal_sensor
+    - accelerator_pedal_position_sensor
     - pedal_sensor_wiring
+    - ecm
   common_causes:
-    - id: signal_short_to_power
+    - id: pedal_sensor_internal
       likelihood: high
       label:
-        en: Signal shorted to positive
-        de: Signal nach Plus kurzgeschlossen
-    - id: ground_open
+        en: Internal fault in the pedal sensor (e.g. cracked solder joint)
+        de: Interner Fehler im Pedalsensor (z. B. gerissene Lötstelle)
+    - id: harness_open_short
       likelihood: medium
       label:
-        en: Sensor ground open
-        de: Sensormasse unterbrochen
-    - id: connector_corrosion
+        en: Open or short in the sensor 2 wiring or 5 V reference
+        de: Unterbrechung oder Kurzschluss in Leitung oder 5-V-Referenz von Sensor 2
+    - id: connector_terminal
+      likelihood: medium
+      label:
+        en: Loose or corroded pedal or inline connector
+        de: Lockerer oder korrodierter Pedal- oder Zwischenstecker
+    - id: ecm_fault
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: ECM input fault
+        de: Eingangsfehler im Motorsteuergerät
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Reduced throttle response, possible limp mode'
-      de: 'Reduzierte Gasannahme, evtl. Notlauf'
-    - en: 'Hesitation or surging'
-      de: 'Zögern oder Ruckeln'
-    - en: 'Idle too high or too low'
-      de: 'Leerlauf zu hoch oder zu niedrig'
+    - en: Engine warning lamp and reduced power message
+      de: Motorkontrollleuchte und Meldung „Leistung reduziert“
+    - en: Delayed or limited pedal response
+      de: Verzögerte oder begrenzte Gasannahme
+    - en: Traction control may be switched off
+      de: Traktionskontrolle kann abgeschaltet sein
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [80, 400]
+    estimated_cost_eur: [20, 350]
     estimated_hours: [0.3, 1.5]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2120, P2124, P2123, P2128, P2133]
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [P2126, P2127, P2128, P2129, P2138, P2120]
   sources:
-    - https://en.wikipedia.org/wiki/Throttle_position_sensor
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2006/2006file13.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2007/07_GRP12_All%20Engines.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2015/SB-10090054-2280.pdf
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+  reviewed: '2026-11-02'
 
 - code: P2126
   category: powertrain
   title:
     en: Throttle/Pedal Position Sensor/Switch E Circuit Range/Performance
-    de: Drosselklappen-/Pedalstellungssensor/-schalter E Stromkreis Bereich/Plausibilität
+    de: Drosselklappen-/Pedalstellungssensor/-schalter E Stromkreis Bereich/Funktion
   description:
-    en: The "C" channel produces an intermittent signal — usually a marginal connector or a worn track inside the pedal sensor.
-    de: Der Kanal "C" liefert ein sporadisches Signal — meist ein grenzwertiger Stecker oder eine verschlissene Spur im Pedalsensor.
+    en: "Signal E is electrically intact but its value does not fit the situation. Ford's 2012 OBD summary uses P2126 for the second pedal sensor on Gen2 throttle systems: it sets when sensors D and E disagree by more than 1.1 degrees, as a non-MIL fault with the wrench lamp. Mitsubishi lists P2126 as accelerator pedal sensor E on the 2022 Outlander. Many newer systems report the same disagreement as P2138 instead. P2125 is the general circuit fault, P2127/P2128 are voltage below or above limits, P2129 covers dropouts. The vehicle usually stays drivable with softened pedal response; on Ford the MIL stays off and only the wrench lamp lights."
+    de: "Signal E ist elektrisch in Ordnung, passt aber nicht zur Lage. Fords OBD-Übersicht 2012 verwendet P2126 für den zweiten Pedalsensor der E-Gas-Systeme der zweiten Generation: Der Code wird gesetzt, wenn Sensor D und E um mehr als 1,1 Grad voneinander abweichen, und gilt als Fehler ohne MIL mit Schraubenschlüssel-Leuchte. Mitsubishi führt P2126 beim Outlander 2022 als Fahrpedalsensor E. Viele neuere Systeme melden dieselbe Abweichung stattdessen als P2138. P2125 ist der allgemeine Kreisfehler, P2127/P2128 Spannung unter bzw. über der Grenze, P2129 Aussetzer. Das Fahrzeug bleibt meist fahrbar, reagiert aber gedämpft aufs Pedal; bei Ford bleibt die MIL aus."
   affected_components:
-    - accelerator_pedal_sensor
+    - accelerator_pedal_position_sensor
     - pedal_sensor_wiring
+    - ecm
   common_causes:
-    - id: connector_intermittent
+    - id: pedal_sensor_wear
       likelihood: high
       label:
-        en: Connector intermittent
-        de: Stecker mit Wackelkontakt
-    - id: tps_track_worn
+        en: Worn or dirty sensor track E giving offset readings
+        de: Verschlissene oder verschmutzte Sensorbahn E mit Versatz
+    - id: connector_resistance
       likelihood: medium
       label:
-        en: Track C worn at common pedal angle
-        de: Spur C im üblichen Pedalwinkel verschlissen
-    - id: harness_vibration
+        en: Contact resistance at the pedal connector
+        de: Übergangswiderstand am Pedalstecker
+    - id: reference_ground_fault
       likelihood: low
       label:
-        en: 'Harness routed against vibrating component'
-        de: 'Kabelbaum verläuft an vibrierender Komponente'
+        en: Shared reference or ground circuit shifting one signal
+        de: Gemeinsame Referenz- oder Masseleitung verschiebt ein Signal
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Reduced throttle response, possible limp mode'
-      de: 'Reduzierte Gasannahme, evtl. Notlauf'
-    - en: 'Hesitation or surging'
-      de: 'Zögern oder Ruckeln'
-    - en: 'Idle too high or too low'
-      de: 'Leerlauf zu hoch oder zu niedrig'
+    - en: Wrench or engine warning lamp on
+      de: Schraubenschlüssel- oder Motorwarnleuchte an
+    - en: Softened or delayed acceleration
+      de: Gedämpfte oder verzögerte Beschleunigung
+    - en: Idle may be raised when braking
+      de: Leerlauf beim Bremsen eventuell erhöht
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [80, 400]
+    estimated_cost_eur: [20, 350]
     estimated_hours: [0.3, 1.5]
   flags:
-    mil: true
+    mil: false
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2120, P2129, P0124]
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [P2125, P2127, P2128, P2129, P2138, P2121]
   sources:
-    - https://en.wikipedia.org/wiki/Throttle_position_sensor
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2023/MC-10237505-0001.pdf
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+  reviewed: '2026-11-02'
 
 - code: P2127
   category: powertrain
@@ -13901,51 +13978,53 @@
     en: Throttle/Pedal Position Sensor/Switch E Circuit Intermittent
     de: Drosselklappen-/Pedalstellungssensor/-schalter E Stromkreis sporadisch
   description:
-    en: The "D" channel of the throttle or pedal sensor produces an intermittent signal — typically marginal connector contacts.
-    de: Der Kanal "D" des Drosselklappen- oder Pedalsensors liefert ein sporadisches Signal — typischerweise grenzwertige Steckkontakte.
+    en: "P2129 is meant for short dropouts or spikes in signal circuit E that do not last long enough for a steady low or high fault. No manufacturer documents this code publicly. GM and Ford, which assign E to the second pedal sensor, catch such glitches inside their circuit codes instead: GM counts failures every 12.5 ms and flags the APP sensor 2 circuit after 19 of 39 counts (P2125/P2127/P2128), Ford uses 0.25/4.75 V limits. CARB requires circuit monitoring of input sensors; the code fits that duty. Check for loose pins and harness chafing with the pedal moved slowly. Effects range from a warning lamp to brief power cuts while driving."
+    de: "P2129 ist für kurze Aussetzer oder Spitzen im Signalkreis E gedacht, die nicht lange genug für einen dauerhaften Low- oder High-Fehler anstehen. Kein Hersteller dokumentiert diesen Code öffentlich. GM und Ford, die E dem zweiten Pedalsensor zuordnen, fangen solche Störungen in ihren Kreiscodes ab: GM zählt Fehler im 12,5-ms-Takt und meldet den Kreis von Pedalsensor 2 nach 19 von 39 Zählungen (P2125/P2127/P2128), Ford nutzt Grenzen von 0,25/4,75 V. CARB verlangt die Kreisüberwachung von Eingangssensoren, in diese Pflicht fällt der Code. Lose Kontakte und durchgescheuerte Leitungen bei langsam bewegtem Pedal suchen. Folgen reichen von der Warnleuchte bis zu kurzen Leistungseinbrüchen."
   affected_components:
-    - accelerator_pedal_sensor
+    - accelerator_pedal_position_sensor
     - pedal_sensor_wiring
+    - ecm
   common_causes:
-    - id: connector_intermittent
+    - id: connector_terminal
       likelihood: high
       label:
-        en: Connector intermittent
-        de: Stecker mit Wackelkontakt
-    - id: tps_track_worn
+        en: Loose terminal or poor pin tension at the pedal connector
+        de: Lockerer Kontakt oder schwache Kontaktspannung am Pedalstecker
+    - id: harness_chafing
       likelihood: medium
       label:
-        en: Track D worn
-        de: Spur D verschlissen
-    - id: harness_vibration
-      likelihood: low
+        en: Chafed harness making intermittent contact
+        de: Durchgescheuerte Leitung mit zeitweisem Kontakt
+    - id: pedal_sensor_internal
+      likelihood: medium
       label:
-        en: 'Harness routed against vibrating component'
-        de: 'Kabelbaum verläuft an vibrierender Komponente'
+        en: Worn spot or cracked joint inside the pedal sensor
+        de: Abgenutzte Stelle oder Haarriss im Pedalsensor
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Reduced throttle response, possible limp mode'
-      de: 'Reduzierte Gasannahme, evtl. Notlauf'
-    - en: 'Hesitation or surging'
-      de: 'Zögern oder Ruckeln'
-    - en: 'Idle too high or too low'
-      de: 'Leerlauf zu hoch oder zu niedrig'
+    - en: Warning lamp that comes and goes
+      de: Warnleuchte, die kommt und geht
+    - en: Brief hesitation or power loss while driving
+      de: Kurzes Stocken oder Leistungseinbruch während der Fahrt
+    - en: Reduced power mode after repeated dropouts
+      de: Leistungsreduzierung nach wiederholten Aussetzern
   repair:
-    difficulty: easy
+    difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [80, 400]
-    estimated_hours: [0.3, 1.5]
+    estimated_cost_eur: [20, 350]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [P2126, P0124]
+  related_codes: [P2125, P2126, P2127, P2128, P2138]
   sources:
-    - https://en.wikipedia.org/wiki/Throttle_position_sensor
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2007/07_GRP12_All%20Engines.pdf
+    - https://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
+  reviewed: '2026-11-02'
 
 - code: P212A
   category: powertrain
@@ -23416,194 +23495,218 @@
   category: powertrain
   title:
     en: NOx Sensor Heater Control Circuit Low (Bank 1)
-    de: NOx-Sensor Heizung Steuerkreis zu niedrig (Bank 1)
+    de: NOx-Sensor Heizungssteuerkreis zu niedrig (Bank 1)
   description:
-    en: A general electrical fault on the bank 2 NOx sensor circuit. NOx sensors are smart sensors with a CAN/LIN interface; this code typically indicates that the sensor module no longer responds.
-    de: Allgemeiner elektrischer Fehler im Stromkreis des NOx-Sensors auf Bank 2. NOx-Sensoren sind intelligente Sensoren mit CAN-/LIN-Schnittstelle; dieser Code wird gesetzt, wenn das Sensormodul nicht mehr antwortet.
+    en: A NOx sensor needs its ceramic element heated to several hundred degrees before it can measure. P2206 means the heater control circuit of the first (upstream) NOx sensor on bank 1 reads low, typically a short to ground or a driver output stuck low. CARB requires diesel OBD to detect heater circuit opens and shorts that conflict with the commanded state. GM's 3.0L Duramax (LZ0) lists it as NOx Sensor Heater Control Circuit Low; Volvo and Mack trucks treat P2206 on the inlet sensor as an internal sensor failure and replace the sensor. P2205 is the general heater circuit fault, P2207 the high side, P2208-P2211 the heater sense circuit. The SCR system loses NOx feedback.
+    de: Ein NOx-Sensor braucht ein auf mehrere hundert Grad beheiztes Keramikelement, bevor er messen kann. P2206 bedeutet, dass der Heizungssteuerkreis des ersten (vorderen) NOx-Sensors auf Bank 1 zu niedrig liegt, meist Kurzschluss nach Masse oder eine dauerhaft auf Low hängende Endstufe. CARB verlangt bei Diesel-OBD, Unterbrechungen und Kurzschlüsse des Heizkreises gegen den Sollzustand zu erkennen. GM führt den Code beim 3.0-l-Duramax (LZ0); Volvo und Mack werten P2206 am Einlasssensor als inneren Sensordefekt und tauschen den Sensor. P2205 ist der allgemeine Heizkreisfehler, P2207 die High-Seite, P2208–P2211 der Rückmeldekreis. Die SCR-Regelung verliert ihr NOx-Signal.
   affected_components:
-    - nox_sensor_b2
+    - nox_sensor
+    - nox_sensor_heater
     - nox_sensor_wiring
+    - ecm
   common_causes:
-    - id: nox_sensor_failed
+    - id: nox_sensor_internal
       likelihood: high
       label:
-        en: NOx sensor module failed
-        de: NOx-Sensormodul defekt
-    - id: nox_sensor_wiring_open
+        en: Internal heater or control-unit fault in the NOx sensor
+        de: Interner Heizungs- oder Elektronikfehler im NOx-Sensor
+    - id: harness_short_ground
       likelihood: medium
       label:
-        en: Wiring open or connector loose
-        de: Leitung unterbrochen oder Stecker locker
+        en: Heater wiring chafed to ground near the exhaust
+        de: Heizungsleitung am Abgasstrang nach Masse durchgescheuert
+    - id: connector_moisture
+      likelihood: low
+      label:
+        en: Moisture or corrosion in the sensor connector
+        de: Feuchtigkeit oder Korrosion im Sensorstecker
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: SCR or emissions warning on the display
+      de: SCR- bzw. Abgaswarnung im Display
+    - en: Usually no change in driveability
+      de: Fahrverhalten meist unverändert
   repair:
     difficulty: medium
-    diy_possible: true
-    estimated_cost_eur: [300, 1000]
-    estimated_hours: [0.5, 2.0]
+    diy_possible: false
+    estimated_cost_eur: [250, 900]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P2200, P2213]
+  related_codes: [P2205, P2207, P2208, P2219, P22A4]
   sources:
-    - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11018070-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2021/MC-10201707-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2022/MC-10217013-0001.pdf
+  reviewed: '2026-11-02'
 
 - code: P2207
   category: powertrain
   title:
     en: NOx Sensor Heater Control Circuit High (Bank 1)
-    de: NOx-Sensor Heizung Steuerkreis zu hoch (Bank 1)
+    de: NOx-Sensor Heizungssteuerkreis zu hoch (Bank 1)
   description:
-    en: The bank 2 NOx sensor returns values outside the expected range for the operating point — for example a non-zero reading at engine off or unchanged values during load changes.
-    de: Der NOx-Sensor auf Bank 2 liefert Werte ausserhalb des erwarteten Bereichs für den Betriebspunkt — etwa Werte ungleich null bei Motor aus oder unveränderte Werte trotz Lastwechsel.
+    en: "P2207 is the high-side counterpart of P2206: the heater control circuit of the upstream NOx sensor on bank 1 shows a voltage that is too high for the commanded state, typically an open heater element or a short to supply voltage. CARB requires the diesel OBD system to flag such circuit faults that contradict the command. GM lists P2207 as NOx Sensor Heater Control Circuit High for the 2024 Silverado/Sierra 3.0L diesel (LZ0). Without heating the sensor never becomes ready, so SCR dosing runs without NOx feedback. P2205 is the general heater circuit code, P2206 the low side, and P2208-P2211 concern the heater feedback circuit. P22A5 is the same fault on sensor 2."
+    de: "P2207 ist das Gegenstück zu P2206 auf der High-Seite: Der Heizungssteuerkreis des vorderen NOx-Sensors auf Bank 1 zeigt für den angesteuerten Zustand eine zu hohe Spannung, typisch bei unterbrochenem Heizelement oder Kurzschluss nach Plus. CARB fordert, dass die Diesel-OBD solche dem Befehl widersprechenden Kreisfehler erkennt. GM führt P2207 beim Silverado/Sierra 2024 mit 3.0-l-Diesel (LZ0). Ohne Heizung wird der Sensor nie messbereit, die AdBlue-Dosierung läuft dann ohne NOx-Rückmeldung. P2205 ist der allgemeine Heizkreiscode, P2206 die Low-Seite, P2208–P2211 betreffen den Rückmeldekreis der Heizung. P22A5 ist derselbe Fehler am zweiten Sensor."
   affected_components:
-    - nox_sensor_b2
+    - nox_sensor
+    - nox_sensor_heater
+    - nox_sensor_wiring
+    - ecm
   common_causes:
-    - id: nox_sensor_drift
+    - id: heater_element_open
       likelihood: high
       label:
-        en: Sensor drift due to ageing
-        de: Sensordrift durch Alterung
-    - id: nox_sensor_contaminated
+        en: Heater element inside the NOx sensor burnt open
+        de: Heizelement im NOx-Sensor durchgebrannt
+    - id: harness_open_short_power
       likelihood: medium
       label:
-        en: Sensor contaminated with soot or condensate
-        de: Sensor mit Ruß oder Kondensat verunreinigt
-    - id: sensor_aged
+        en: Open circuit or short to voltage in the heater wiring
+        de: Unterbrechung oder Kurzschluss nach Plus in der Heizungsleitung
+    - id: connector_fault
       likelihood: low
       label:
-        en: 'Sensor element aged beyond calibration window'
-        de: 'Sensorelement gealtert über Kalibrierfenster hinaus'
+        en: Loose or heat-damaged connector
+        de: Lockerer oder hitzegeschädigter Stecker
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: NOx readiness or SCR efficiency faults may follow
+      de: Folgefehler zu NOx-Bereitschaft oder SCR-Wirkungsgrad möglich
   repair:
     difficulty: medium
-    diy_possible: true
-    estimated_cost_eur: [300, 1000]
-    estimated_hours: [0.5, 2.0]
+    diy_possible: false
+    estimated_cost_eur: [250, 900]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2206, P2214]
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2205, P2206, P2208, P2220, P22A5]
   sources:
-    - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11018070-0001.pdf
+  reviewed: '2026-11-02'
 
 - code: P2208
   category: powertrain
   title:
     en: NOx Sensor Heater Sense Circuit (Bank 1)
-    de: NOx-Sensorheizung Diagnose-Stromkreis (Bank 1)
+    de: NOx-Sensor Heizungs-Rückmeldekreis (Bank 1)
   description:
-    en: A general electrical fault on the heater of the bank 2 NOx sensor. NOx sensors must reach roughly 800 C to measure correctly; without heater current the sensor never enters its operating range.
-    de: Allgemeiner elektrischer Fehler an der Heizung des NOx-Sensors auf Bank 2. NOx-Sensoren müssen rund 800 C erreichen, um korrekt zu messen; ohne Heizstrom kommt der Sensor nicht in seinen Arbeitsbereich.
+    en: Besides the control line, the NOx sensor heater has a sense or feedback path through which the controller checks how the heater actually responds (current, resistance or element temperature). P2208 marks a general fault in this sense circuit of the upstream sensor on bank 1. GM calls it NOx Sensor Heater Feedback Circuit (3.0L LZ0 diesel); Volvo and Mack class P2208 on the inlet sensor as a sensor failure that requires replacement. CARB demands heater performance monitoring within the supplier's limits. P2209 is the plausibility check of the same feedback, P2210/P2211 low or high values, P2212 dropouts; P2205-P2207 concern the control side. MIL on, driveability normal.
+    de: Neben der Ansteuerleitung hat die Heizung des NOx-Sensors einen Rückmeldepfad, über den das Steuergerät prüft, wie die Heizung tatsächlich reagiert (Strom, Widerstand oder Elementtemperatur). P2208 kennzeichnet einen allgemeinen Fehler in diesem Rückmeldekreis des vorderen Sensors auf Bank 1. GM nennt ihn Heater Feedback Circuit (3.0-l-Diesel LZ0); Volvo und Mack stufen P2208 am Einlasssensor als Sensordefekt mit Tauschpflicht ein. CARB verlangt die Überwachung der Heizleistung innerhalb der Zuliefergrenzen. P2209 ist die Plausibilitätsprüfung dieser Rückmeldung, P2210/P2211 zu niedrige bzw. hohe Werte, P2212 Aussetzer; P2205–P2207 betreffen die Ansteuerung. MIL an, Fahrverhalten normal.
   affected_components:
-    - nox_sensor_b2
+    - nox_sensor
     - nox_sensor_heater
+    - nox_sensor_wiring
   common_causes:
-    - id: heater_element_failed
+    - id: nox_sensor_internal
       likelihood: high
       label:
-        en: Heater element failed
-        de: Heizelement defekt
-    - id: heater_wiring_open
+        en: Internal fault in the NOx sensor or its control unit
+        de: Interner Fehler im NOx-Sensor oder seiner Elektronik
+    - id: harness_fault
       likelihood: medium
       label:
-        en: Heater wiring open or connector loose
-        de: Heizungsleitung unterbrochen oder Stecker locker
+        en: Damaged wiring between sensor element and sensor control unit
+        de: Beschädigte Leitung zwischen Sensorelement und Sensorelektronik
+    - id: connector_moisture
+      likelihood: low
+      label:
+        en: Water ingress in the connector
+        de: Wassereintritt im Stecker
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: NOx sensor reports no valid value
+      de: NOx-Sensor liefert keinen gültigen Wert
   repair:
     difficulty: medium
-    diy_possible: true
-    estimated_cost_eur: [300, 1000]
-    estimated_hours: [0.5, 2.0]
+    diy_possible: false
+    estimated_cost_eur: [250, 900]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2206, P2211]
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2209, P2210, P2211, P2212, P2205, P2221]
   sources:
-    - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11018070-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2021/MC-10201707-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2022/MC-10217013-0001.pdf
+  reviewed: '2026-11-02'
 
 - code: P2209
   category: powertrain
   title:
     en: NOx Sensor Heater Sense Circuit Range/Performance (Bank 1)
-    de: NOx-Sensorheizung Diagnose-Stromkreis Bereich/Plausibilität (Bank 1)
+    de: NOx-Sensor Heizungs-Rückmeldekreis Bereich/Funktion (Bank 1)
   description:
-    en: The heater feedback (sense) line on the bank 2 NOx sensor reports values outside the expected window — heating is happening but the temperature does not match the model.
-    de: Die Heizungsrückmeldung (Sense-Leitung) am NOx-Sensor Bank 2 liefert Werte ausserhalb des Erwartungsfensters — die Heizung arbeitet, aber die Temperatur passt nicht zum Modell.
+    en: "P2209 is the performance check of the NOx sensor heater: the feedback is electrically present but shows that the element does not reach or hold operating temperature as expected. VW's 2014 TDI specification books (Passat, Touareg) set it when NOx control has not become active more than 180 s after the dew point was passed. Ford's 2023 diesel OBD summary uses P2209 as NOx signal readiness, judged by the ratio of actual to expected sensor on-time. GM names it Heater Feedback Performance. CARB requires both heater performance and NOx sensor activity monitoring. P2208 is the circuit fault, P2210/P2211 low or high values. MIL after confirmation, no limp mode."
+    de: "P2209 ist die Funktionsprüfung der NOx-Sensorheizung: Die Rückmeldung ist elektrisch vorhanden, zeigt aber, dass das Element die Betriebstemperatur nicht wie erwartet erreicht oder hält. VWs TDI-Datenbücher 2014 (Passat, Touareg) setzen ihn, wenn die NOx-Messung mehr als 180 s nach Überschreiten des Taupunkts noch nicht aktiv ist. Fords Diesel-OBD-Übersicht 2023 nutzt P2209 als NOx-Signalbereitschaft, bewertet über das Verhältnis von tatsächlicher zu erwarteter Messzeit. GM nennt ihn Heater Feedback Performance. CARB verlangt sowohl die Prüfung der Heizleistung als auch der Sensoraktivität. P2208 ist der Kreisfehler, P2210/P2211 zu niedrige bzw. hohe Werte. MIL nach Bestätigung, kein Notlauf."
   affected_components:
-    - nox_sensor_b2
+    - nox_sensor
     - nox_sensor_heater
+    - ecm
   common_causes:
-    - id: heater_element_aged
+    - id: nox_sensor_aged
       likelihood: high
       label:
-        en: Heater element ageing, resistance drift
-        de: Heizelement gealtert, Widerstand driftet
-    - id: nox_sensor_failed
+        en: Aged NOx sensor element that heats up too slowly
+        de: Gealtertes NOx-Sensorelement heizt zu langsam auf
+    - id: supply_voltage_low
       likelihood: medium
       label:
-        en: Sensor module failed
-        de: Sensormodul defekt
-    - id: sensor_aged
+        en: Low supply voltage or poor ground to the sensor
+        de: Zu geringe Versorgungsspannung oder schlechte Masse am Sensor
+    - id: exhaust_moisture
       likelihood: low
       label:
-        en: 'Sensor element aged beyond calibration window'
-        de: 'Sensorelement gealtert über Kalibrierfenster hinaus'
+        en: Prolonged cold or wet exhaust delaying dew-point release
+        de: Lange kalter oder feuchter Abgasstrang verzögert die Taupunktfreigabe
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: NOx sensor not ready for long periods after start
+      de: NOx-Sensor nach dem Start lange nicht messbereit
+    - en: Possible follow-up SCR efficiency faults
+      de: Mögliche Folgefehler zum SCR-Wirkungsgrad
   repair:
     difficulty: medium
-    diy_possible: true
-    estimated_cost_eur: [300, 1000]
-    estimated_hours: [0.5, 2.0]
+    diy_possible: false
+    estimated_cost_eur: [250, 900]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
-  related_codes: [P2208, P2222]
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2208, P2210, P2211, P2212, P220E, P2222]
   sources:
-    - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10074008-2280.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10074004-2280.pdf
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11018070-0001.pdf
+  reviewed: '2026-11-02'
 
 - code: P220A
   category: powertrain
@@ -23870,103 +23973,103 @@
   category: powertrain
   title:
     en: NOx Sensor Heater Sense Circuit Low (Bank 1)
-    de: NOx-Sensorheizung Diagnose-Stromkreis zu niedrig (Bank 1)
+    de: NOx-Sensor Heizungs-Rückmeldekreis zu niedrig (Bank 1)
   description:
-    en: The bank 2 NOx sensor reports correctly some of the time but intermittently drops out. Often a marginal connector, a wiring chafe or a sensor that fails when warm.
-    de: Der NOx-Sensor auf Bank 2 meldet zeitweise korrekt, fällt aber sporadisch aus. Häufig ein grenzwertiger Stecker, eine gescheuerte Leitung oder ein Sensor, der erst im warmen Zustand ausfällt.
+    en: P2210 means the heater feedback signal of the upstream NOx sensor on bank 1 sits below its permitted range. Typical electrical causes are a short to ground in the sense line or a failed measuring stage in the sensor electronics. GM lists the code as NOx Sensor Heater Feedback Circuit Low for the 2024 Silverado/Sierra 3.0L diesel (LZ0). CARB requires the OBD system to detect heater circuit faults that conflict with the commanded state. P2211 is the opposite direction, P2208 the general sense-circuit fault, P2209 a plausible but poor heating result, and P2206 a low reading on the control side. The sensor then delivers no usable NOx value; the MIL comes on.
+    de: P2210 bedeutet, dass das Rückmeldesignal der Heizung des vorderen NOx-Sensors auf Bank 1 unter dem zulässigen Bereich liegt. Typische elektrische Ursachen sind ein Masseschluss in der Rückmeldeleitung oder eine defekte Messstufe in der Sensorelektronik. GM führt den Code als Heater Feedback Circuit Low beim Silverado/Sierra 2024 mit 3.0-l-Diesel (LZ0). CARB verlangt, dass die OBD Heizkreisfehler erkennt, die dem Sollzustand widersprechen. P2211 ist die Gegenrichtung, P2208 der allgemeine Rückmeldekreisfehler, P2209 ein plausibles, aber schlechtes Heizergebnis und P2206 ein zu niedriger Wert auf der Ansteuerseite. Der Sensor liefert dann keinen brauchbaren NOx-Wert; die MIL geht an.
   affected_components:
-    - nox_sensor_b2
+    - nox_sensor
+    - nox_sensor_heater
     - nox_sensor_wiring
   common_causes:
-    - id: connector_intermittent
+    - id: nox_sensor_internal
       likelihood: high
       label:
-        en: Connector intermittent
-        de: Stecker mit Wackelkontakt
-    - id: nox_sensor_thermal_fault
+        en: Fault in the sensor element or its control unit
+        de: Fehler im Sensorelement oder seiner Elektronik
+    - id: harness_short_ground
       likelihood: medium
       label:
-        en: Sensor fails when hot
-        de: Sensor fällt bei Hitze aus
-    - id: harness_vibration
+        en: Sense line shorted to ground
+        de: Rückmeldeleitung mit Masseschluss
+    - id: connector_moisture
       likelihood: low
       label:
-        en: 'Harness routed against vibrating component'
-        de: 'Kabelbaum verläuft an vibrierender Komponente'
+        en: Corrosion in the connector
+        de: Korrosion im Stecker
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: No NOx reading in live data
+      de: Kein NOx-Wert in den Messwerten
   repair:
     difficulty: medium
-    diy_possible: true
-    estimated_cost_eur: [300, 1000]
-    estimated_hours: [0.5, 2.0]
+    diy_possible: false
+    estimated_cost_eur: [250, 900]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2206, P2217, P2204]
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2208, P2209, P2211, P2212, P2206, P2223]
   sources:
-    - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11018070-0001.pdf
+  reviewed: '2026-11-02'
 
 - code: P2211
   category: powertrain
   title:
     en: NOx Sensor Heater Sense Circuit High (Bank 1)
-    de: NOx-Sensorheizung Diagnose-Stromkreis zu hoch (Bank 1)
+    de: NOx-Sensor Heizungs-Rückmeldekreis zu hoch (Bank 1)
   description:
-    en: The heater sense line on the bank 2 NOx sensor produces intermittent readings. Often a thermal fault inside the sensor or a connector under temperature cycling.
-    de: Die Heizungs-Sense-Leitung am NOx-Sensor Bank 2 liefert sporadische Messwerte. Häufig ein thermischer Fehler im Sensor oder ein Stecker unter Temperaturwechsel.
+    en: P2211 flags a heater feedback signal above its permitted range on the upstream NOx sensor of bank 1. An open sense line, a short to supply voltage or an interrupted heater element that the electronics reads as maximum resistance are the usual reasons. GM lists it as NOx Sensor Heater Feedback Circuit High for the 3.0L Duramax (LZ0) in the 2024 Silverado/Sierra. Under CARB rules such circuit faults must be detected regardless of operating conditions. P2210 is the low direction, P2208 the general fault, P2209 the performance check and P2207 the high fault on the control side. The NOx sensor stays unready, SCR control falls back on modelled values, and the MIL lights up.
+    de: P2211 meldet ein Rückmeldesignal der Heizung oberhalb des zulässigen Bereichs am vorderen NOx-Sensor von Bank 1. Übliche Gründe sind eine unterbrochene Rückmeldeleitung, ein Kurzschluss nach Plus oder ein unterbrochenes Heizelement, das die Elektronik als maximalen Widerstand liest. GM führt ihn als Heater Feedback Circuit High beim 3.0-l-Duramax (LZ0) im Silverado/Sierra 2024. Nach den CARB-Regeln sind solche Kreisfehler unabhängig von Betriebsbedingungen zu erkennen. P2210 ist die Low-Richtung, P2208 der allgemeine Fehler, P2209 die Funktionsprüfung und P2207 der High-Fehler auf der Ansteuerseite. Der NOx-Sensor bleibt unbereit, die SCR-Regelung arbeitet mit Modellwerten, die MIL leuchtet.
   affected_components:
-    - nox_sensor_b2
+    - nox_sensor
     - nox_sensor_heater
+    - nox_sensor_wiring
   common_causes:
-    - id: connector_intermittent
+    - id: heater_element_open
       likelihood: high
       label:
-        en: Connector intermittent under temperature
-        de: Stecker mit Wackelkontakt unter Temperatur
-    - id: nox_sensor_thermal_fault
+        en: Interrupted heater element in the NOx sensor
+        de: Unterbrochenes Heizelement im NOx-Sensor
+    - id: harness_open_short_power
       likelihood: medium
       label:
-        en: Sensor heater intermittent when hot
-        de: Sensorheizung sporadisch im Heisszustand
-    - id: harness_vibration
+        en: Open sense line or short to voltage
+        de: Unterbrochene Rückmeldeleitung oder Kurzschluss nach Plus
+    - id: connector_fault
       likelihood: low
       label:
-        en: 'Harness routed against vibrating component'
-        de: 'Kabelbaum verläuft an vibrierender Komponente'
+        en: Loose or heat-damaged connector
+        de: Lockerer oder hitzegeschädigter Stecker
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: NOx sensor stays not ready
+      de: NOx-Sensor bleibt unbereit
   repair:
     difficulty: medium
-    diy_possible: true
-    estimated_cost_eur: [300, 1000]
-    estimated_hours: [0.5, 2.0]
+    diy_possible: false
+    estimated_cost_eur: [250, 900]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2208, P2225]
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2208, P2209, P2210, P2212, P2207, P2224]
   sources:
-    - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11018070-0001.pdf
+  reviewed: '2026-11-02'
 
 - code: P2212
   category: powertrain
@@ -25278,85 +25381,110 @@
   category: powertrain
   title:
     en: Barometric Pressure Circuit Intermittent/Erratic
-    de: Umgebungsdrucksensor Stromkreis sporadisch/unregelmäßig
+    de: Umgebungsdrucksensor Stromkreis sporadisch/unstet
   description:
-    en: Voltage from the barometric pressure sensor is below the calibrated minimum. The signal is too low for any plausible atmospheric pressure, suggesting a short to ground or sensor fault.
-    de: Die Spannung des Umgebungsdrucksensors liegt unter dem kalibrierten Mindestwert. Das Signal ist fuer einen plausiblen Atmosphaerendruck zu niedrig, was auf einen Masseschluss oder Sensordefekt hindeutet.
+    en: P2230 flags a barometric pressure (BARO) signal that is electrically present but jumps or drops out for short moments instead of sitting permanently low or high. The engine computer uses BARO for air-charge, fuelling and boost calculations. Ford's 2020-2023 gasoline OBD summary lists P2230 with P2227-P2229 among the BARO faults that inhibit auto start-stop. GM bulletins for 2014-2017 trucks and SUVs with the 5.3/6.2 L V8 and for the 2012-2013 Equinox/Terrain 2.4 L trace P2230 to engine harness wires chafed through. Exact thresholds are not published. P2228/P2229 are steady low/high signals, P2227 a plausibility fault. Drivers usually notice only the warning light; start-stop may stay off.
+    de: P2230 meldet ein Umgebungsdrucksignal, das zwar elektrisch vorhanden ist, aber kurzzeitig springt oder aussetzt, statt dauerhaft zu niedrig oder zu hoch zu liegen. Das Motorsteuergerät braucht den Luftdruck für Füllungs-, Gemisch- und Ladedruckberechnung. Fords OBD-Übersicht für Benziner 2020-2023 führt P2230 zusammen mit P2227-P2229 unter den Luftdruckfehlern, die die Start-Stopp-Automatik sperren. GM-Bulletins zu Pick-ups und SUVs 2014-2017 mit 5,3/6,2-l-V8 und zum Equinox/Terrain 2,4 l (2012-2013) führen P2230 auf durchgescheuerte Leitungen im Motorkabelbaum zurück. Schwellwerte sind nicht veröffentlicht. P2228/P2229 stehen für dauerhaft niedrige bzw. hohe Werte, P2227 für einen Plausibilitätsfehler. Meist fällt nur die Warnleuchte auf, Start-Stopp kann abgeschaltet bleiben.
   affected_components:
     - barometric_pressure_sensor
-    - bps_wiring
+    - sensor_wiring
+    - engine_wiring_harness
   common_causes:
-    - id: short_to_ground
+    - id: harness_chafed
       likelihood: high
       label:
-        en: Signal wire shorted to ground
-        de: Signalleitung gegen Masse kurzgeschlossen
-    - id: bps_fault
+        en: Engine harness chafed against an engine component (e.g. vacuum pump pulley, cam cover)
+        de: Motorkabelbaum an einem Motorteil durchgescheuert (z. B. Vakuumpumpen-Riemenscheibe, Ventildeckel)
+    - id: loose_connector_pin
       likelihood: medium
       label:
-        en: Internal sensor fault
-        de: Interner Sensorfehler
-    - id: connector_corrosion
+        en: Loose or corroded pin at the BARO sensor or ECM connector
+        de: Lockerer oder korrodierter Kontakt am Luftdrucksensor- oder Steuergerätestecker
+    - id: sensor_internal_fault
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Barometric pressure sensor with an internal contact problem
+        de: Umgebungsdrucksensor mit internem Kontaktfehler
+  symptoms:
+    - en: Check engine light, often coming and going
+      de: Motorkontrollleuchte, oft wechselnd an und aus
+    - en: Auto start-stop inactive
+      de: Start-Stopp-Automatik inaktiv
+    - en: Other sensor codes stored at the same time if a shared harness is damaged
+      de: Weitere Sensorcodes gleichzeitig gespeichert, wenn ein gemeinsamer Kabelstrang beschädigt ist
   repair:
-    difficulty: easy
+    difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [60, 250]
-    estimated_hours: [0.3, 1]
+    estimated_cost_eur: [40, 300]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2227, P2228, P2229, P0106]
   sources:
-    - https://en.wikipedia.org/wiki/Barometer
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2016/MC-10119055-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2013/SB-10071674-5448.pdf
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBD-Operations-Summary-Gasoline-2020-2023.pdf
+  reviewed: '2026-11-02'
 
 - code: P2231
   category: powertrain
   title:
     en: O2 Sensor Signal Circuit Shorted to Heater Circuit (Bank 1 Sensor 1)
-    de: Lambdasonden-Signalkreis kurzgeschlossen mit Heizkreis (Bank 1 Sensor 1)
+    de: Lambdasonde Signalkreis Kurzschluss zum Heizkreis (Bank 1 Sensor 1)
   description:
-    en: The barometric pressure sensor reports a voltage above the upper limit. The signal cannot represent any realistic atmospheric pressure, indicating an open circuit or short to supply voltage.
-    de: Der Umgebungsdrucksensor liefert eine Spannung oberhalb des Grenzwerts. Das Signal kann keinem realistischen Atmosphaerendruck entsprechen, was auf eine Unterbrechung oder einen Kurzschluss zur Versorgungsspannung hinweist.
+    en: P2231 means the engine computer sees the heater supply of the upstream oxygen sensor on bank 1 leaking into the sensor's signal path - typically an internal short in the sensor or two neighbouring wires touching in the harness. VW's 2014 specification books for the Passat and Tiguan set it when the front sensor signal changes by more than 190 microamps, i.e. the measured sensor current is distorted. CARB requires circuit faults of every fuel-control oxygen sensor to be detected. P2232/P2233 cover sensors 2 and 3 of bank 1, P2234 the first sensor of bank 2. Because the mixture feedback can no longer be trusted, the engine may run on open-loop fuelling with higher consumption and emissions.
+    de: Bei P2231 erkennt das Motorsteuergerät, dass die Heizspannung der vorderen Lambdasonde auf Bank 1 in den Signalkreis übergreift - meist durch einen inneren Schluss in der Sonde oder zwei aneinanderliegende Adern im Kabelbaum. VWs Datenbücher 2014 für Passat und Tiguan setzen den Code, wenn sich das Signal der Vorkat-Sonde um mehr als 190 Mikroampere verschiebt, der gemessene Sondenstrom also verfälscht ist. CARB verlangt, dass Kreisfehler aller regelnden Lambdasonden erkannt werden. P2232/P2233 betreffen Sonde 2 und 3 auf Bank 1, P2234 die erste Sonde auf Bank 2. Weil die Gemischrückmeldung nicht mehr verlässlich ist, kann die Lambdaregelung abschalten; Verbrauch und Abgaswerte steigen.
   affected_components:
-    - barometric_pressure_sensor
-    - bps_wiring
+    - oxygen_sensor_bank1_sensor1
+    - oxygen_sensor_heater
+    - oxygen_sensor_wiring
   common_causes:
-    - id: short_to_b_plus
+    - id: sensor_internal_short
       likelihood: high
       label:
-        en: Signal shorted to supply voltage
-        de: Signal gegen Versorgungsspannung kurzgeschlossen
-    - id: open_circuit
+        en: Internal short between heater and sensing element in the oxygen sensor
+        de: Innerer Schluss zwischen Heizung und Messzelle der Lambdasonde
+    - id: harness_wires_shorted
       likelihood: medium
       label:
-        en: Open in signal or ground wire
-        de: Unterbrechung in Signal- oder Masseleitung
-    - id: connector_corrosion
+        en: Heater and signal wires melted or chafed together (exhaust heat, routing)
+        de: Heiz- und Signalader durch Abgaswärme oder Scheuern miteinander verbunden
+    - id: connector_contamination
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Moisture or contamination bridging pins in the sensor connector
+        de: Feuchtigkeit oder Schmutz überbrückt Kontakte im Sondenstecker
+  symptoms:
+    - en: Check engine light
+      de: Motorkontrollleuchte an
+    - en: Higher fuel consumption due to open-loop fuelling
+      de: Höherer Verbrauch durch Betrieb ohne Lambdaregelung
+    - en: Rough idle or hesitation in some cases
+      de: Teilweise unruhiger Leerlauf oder Ruckeln
   repair:
-    difficulty: easy
+    difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [60, 250]
-    estimated_hours: [0.3, 1]
+    estimated_cost_eur: [80, 350]
+    estimated_hours: [0.5, 1.5]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2232, P2233, P2234, P0030, P0130]
   sources:
-    - https://en.wikipedia.org/wiki/Barometer
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10074004-2280.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10122272-9999.pdf
+  reviewed: '2026-11-02'
 
 - code: P2232
   category: powertrain
@@ -26905,151 +27033,163 @@
     en: O2 Sensor Negative Current Control Circuit/Open (Bank 2 Sensor 1)
     de: Lambdasonde Negativstrom-Steuerkreis/Unterbrechung (Bank 2 Sonde 1)
   description:
-    en: Bank 2 counterpart to P2252. The Vs negative line on the wide-band oxygen sensor at bank 2, sensor 1 is below the lower threshold.
-    de: Bank-2-Pendant zu P2252. Die Vs-Negativ-Leitung der Breitbandsonde an Bank 2, Sonde 1 liegt unter dem unteren Schwellwert.
+    en: "P2254 concerns the negative current control line - also called reference ground, virtual ground or COM - of the wide-band air-fuel sensor ahead of the catalyst on bank 2. Ford's OBD summaries (2012 and 2020-2023) set it for an open line: with Bosch sensors the PCM briefly injects a reference current and flags the line if lambda barely moves, within about 10 s; with NTK sensors the interface chip reports the open line directly. VW's 2014 Passat and CC books set it when the front signal sits at 1.47-1.52 V while the cell resistance exceeds 950 ohms. P2251 is the same fault on bank 1, P2255/P2256 are low/high faults. Closed-loop mixture control on bank 2 is lost."
+    de: "P2254 betrifft die Negativstrom-Leitung - auch Bezugsmasse, virtuelle Masse oder COM genannt - der Breitband-Lambdasonde vor dem Katalysator auf Bank 2. Fords OBD-Übersichten (2012 und 2020-2023) setzen ihn bei unterbrochener Leitung: Bei Bosch-Sonden prägt das Steuergerät kurz einen Referenzstrom ein und meldet den Fehler, wenn sich Lambda dabei kaum bewegt, nach rund 10 s; bei NTK-Sonden meldet der Auswertebaustein die offene Leitung selbst. VWs Datenbücher 2014 für Passat und CC setzen ihn, wenn das Vorkat-Signal bei 1,47-1,52 V verharrt und der Zellwiderstand über 950 Ohm liegt. P2251 ist derselbe Fehler auf Bank 1, P2255/P2256 die Fälle niedrig/hoch. Die Lambdaregelung auf Bank 2 fällt aus."
   affected_components:
-    - oxygen_sensor_upstream_b2
+    - oxygen_sensor_bank2_sensor1
     - oxygen_sensor_wiring
+    - ecm
   common_causes:
-    - id: signal_short_to_ground
+    - id: open_wire
       likelihood: high
       label:
-        en: Vs negative line shorted to ground
-        de: Vs-Negativ-Leitung gegen Masse kurzgeschlossen
-    - id: o2_sensor_internal_open
+        en: Broken reference ground wire or pushed-out pin between sensor and ECM
+        de: Gebrochene Bezugsmasse-Ader oder zurückgeschobener Kontakt zwischen Sonde und Steuergerät
+    - id: sensor_internal_open
       likelihood: medium
       label:
-        en: Nernst cell return open inside sensor
-        de: Nernst-Zellenrückführung in der Sonde unterbrochen
+        en: Internal open circuit in the wide-band sensor
+        de: Innere Unterbrechung in der Breitbandsonde
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Corroded sensor connector with high contact resistance
+        de: Korrodierter Sondenstecker mit hohem Übergangswiderstand
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
-    - en: 'Possible rough idle or hesitation'
-      de: 'Möglicherweise unrunder Leerlauf oder Aussetzer'
-    - en: 'Failed emissions test'
-      de: 'Abgasuntersuchung fehlgeschlagen'
+    - en: Check engine light
+      de: Motorkontrollleuchte an
+    - en: Higher fuel consumption from open-loop fuelling on bank 2
+      de: Mehrverbrauch durch ungeregelten Betrieb auf Bank 2
+    - en: Possible rough running or failed emissions test
+      de: Möglicherweise unrunder Lauf oder nicht bestandene Abgasuntersuchung
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [150, 500]
-    estimated_hours: [0.5, 2.0]
+    estimated_cost_eur: [80, 400]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2252, P22B3, P22C0]
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2251, P2255, P2256, P2247, P2240, P0150]
   sources:
-    - https://en.wikipedia.org/wiki/Oxygen_sensor
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10074004-2280.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10119356-9999.pdf
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBD-Operations-Summary-Gasoline-2020-2023.pdf
+  reviewed: '2026-11-02'
 
 - code: P2255
   category: powertrain
   title:
     en: O2 Sensor Negative Current Control Circuit Low (Bank 2 Sensor 1)
-    de: Lambdasonde Negativstrom-Steuerkreis Signal zu niedrig (Bank 2 Sonde 1)
+    de: Lambdasonde Negativstrom-Steuerkreis niedrig (Bank 2 Sonde 1)
   description:
-    en: Bank 2 counterpart to P2253. The Vs negative line on bank 2, sensor 1 reads above the upper threshold.
-    de: Bank-2-Pendant zu P2253. Die Vs-Negativ-Leitung an Bank 2, Sonde 1 liegt über dem oberen Schwellwert.
+    en: P2255 reports that the negative current control line (reference ground) of the bank 2 upstream wide-band sensor reads too low, typically a short to ground. No manufacturer publicly documents P2255 with thresholds. Ford's OBD summaries assign shorts to ground on any wide-band sensor line to P0151 and use P2254 only for an open line, and VW's 2014 specification books likewise list only P2254. The code therefore appears mainly where the sensor interface separates short-circuit faults by line. CARB requires circuit and out-of-range faults of fuel-control sensors to be detected and, where feasible, stored as separate codes. P2252 is the bank 1 counterpart, P2256 the high-side fault. Mixture control on bank 2 becomes unreliable.
+    de: P2255 meldet, dass die Negativstrom-Leitung (Bezugsmasse) der vorderen Breitbandsonde auf Bank 2 zu niedrig liegt, meist wegen eines Masseschlusses. Kein Hersteller dokumentiert P2255 öffentlich mit Schwellwerten. Ford ordnet in seinen OBD-Übersichten Masseschlüsse jeder Leitung der Breitbandsonde dem Code P0151 zu und verwendet P2254 nur für die Unterbrechung; auch VWs Datenbücher 2014 kennen nur P2254. Der Code taucht daher vor allem dort auf, wo die Sondenauswertung Kurzschlüsse je Leitung unterscheidet. CARB verlangt, dass Kreis- und Bereichsfehler regelnder Sonden erkannt und, soweit möglich, getrennt gespeichert werden. P2252 ist das Gegenstück auf Bank 1, P2256 der Fehler zu hoch. Die Gemischregelung auf Bank 2 wird unzuverlässig.
   affected_components:
-    - oxygen_sensor_upstream_b2
+    - oxygen_sensor_bank2_sensor1
     - oxygen_sensor_wiring
+    - ecm
   common_causes:
-    - id: signal_short_to_power
+    - id: short_to_ground
       likelihood: high
       label:
-        en: Vs negative line shorted to positive
-        de: Vs-Negativ-Leitung nach Plus kurzgeschlossen
-    - id: o2_sensor_internal_short
+        en: Reference ground wire shorted to ground (chafed against exhaust or body)
+        de: Bezugsmasse-Ader mit Masseschluss (an Abgasanlage oder Karosserie gescheuert)
+    - id: sensor_internal_fault
       likelihood: medium
       label:
-        en: Internal short in sensor
-        de: Interner Kurzschluss in der Sonde
-    - id: connector_corrosion
+        en: Internal fault in the wide-band sensor
+        de: Innerer Defekt der Breitbandsonde
+    - id: ecm_interface_fault
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Fault in the sensor interface of the ECM
+        de: Defekt in der Sondenauswertung des Steuergeräts
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
-    - en: 'Possible rough idle or hesitation'
-      de: 'Möglicherweise unrunder Leerlauf oder Aussetzer'
-    - en: 'Failed emissions test'
-      de: 'Abgasuntersuchung fehlgeschlagen'
+    - en: Check engine light
+      de: Motorkontrollleuchte an
+    - en: Higher fuel consumption
+      de: Erhöhter Verbrauch
+    - en: Possible hesitation or uneven running
+      de: Möglicherweise Ruckeln oder unruhiger Lauf
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [150, 500]
-    estimated_hours: [0.5, 2.0]
+    estimated_cost_eur: [80, 400]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2253, P2254, P22B4, P22C1]
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2252, P2254, P2256, P0151]
   sources:
-    - https://en.wikipedia.org/wiki/Oxygen_sensor
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBD-Operations-Summary-Gasoline-2020-2023.pdf
+  reviewed: '2026-11-02'
 
 - code: P2256
   category: powertrain
   title:
     en: O2 Sensor Negative Current Control Circuit High (Bank 2 Sensor 1)
-    de: Lambdasonde Negativstrom-Steuerkreis Signal zu hoch (Bank 2 Sonde 1)
+    de: Lambdasonde Negativstrom-Steuerkreis hoch (Bank 2 Sonde 1)
   description:
-    en: The ECU detects a low-side voltage below threshold on the heater control of the rear oxygen sensor on bank 1. The heater driver may be stuck on or shorted to ground.
-    de: Die Motorsteuerung erkennt eine zu niedrige Spannung auf der Niederseite der Heizungsansteuerung der hinteren Lambdasonde Bank 1. Der Heizertreiber haengt moeglicherweise oder ist gegen Masse kurzgeschlossen.
+    en: P2256 means the negative current control line (reference ground) of the bank 2 upstream wide-band sensor reads too high, typically a short to battery or heater voltage. No manufacturer publicly documents P2256 with thresholds. Ford's OBD summaries send a short to battery on any wide-band sensor line to P0152 and reserve P2254 for the open line; VW's 2014 books also list only P2254 for this circuit. CARB requires fuel-control sensors to be checked for circuit continuity and out-of-range values, with separate codes where feasible. P2253 is the bank 1 counterpart, P2255 the low-side fault, P2254 the open circuit. A short to voltage can damage the sensor or the interface, so the wiring should be checked before a new sensor is fitted.
+    de: P2256 bedeutet, dass die Negativstrom-Leitung (Bezugsmasse) der vorderen Breitbandsonde auf Bank 2 zu hoch liegt, meist durch einen Schluss zur Batterie- oder Heizspannung. Kein Hersteller dokumentiert P2256 öffentlich mit Schwellwerten. Ford legt Plusschlüsse jeder Leitung der Breitbandsonde auf P0152 und verwendet P2254 nur für die Unterbrechung; VWs Datenbücher 2014 führen für diesen Kreis ebenfalls nur P2254. CARB verlangt die Prüfung regelnder Sonden auf Kreisdurchgang und Bereichsgrenzen, wo möglich mit getrennten Codes. P2253 ist das Gegenstück auf Bank 1, P2255 der Fehler zu niedrig, P2254 die Unterbrechung. Ein Plusschluss kann Sonde oder Auswertung schädigen; vor dem Sondentausch daher die Leitungen prüfen.
   affected_components:
-    - oxygen_sensor
-    - oxygen_sensor_heater_circuit
+    - oxygen_sensor_bank2_sensor1
+    - oxygen_sensor_wiring
+    - ecm
   common_causes:
-    - id: heater_short_ground
+    - id: short_to_voltage
       likelihood: high
       label:
-        en: Heater wire shorted to ground
-        de: Heizerleitung gegen Masse kurzgeschlossen
-    - id: heater_internal_short
+        en: Reference ground wire shorted to heater supply or battery voltage
+        de: Bezugsmasse-Ader mit Schluss zur Heiz- oder Batteriespannung
+    - id: sensor_internal_fault
       likelihood: medium
       label:
-        en: Internal heater short
-        de: Interner Heizerkurzschluss
-    - id: connector_corrosion
+        en: Internal short in the wide-band sensor
+        de: Innerer Schluss in der Breitbandsonde
+    - id: ecm_interface_fault
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Fault in the sensor interface of the ECM
+        de: Defekt in der Sondenauswertung des Steuergeräts
   symptoms:
-    - en: 'Check engine light on after several drive cycles'
-      de: 'Motorkontrollleuchte nach mehreren Fahrzyklen an'
-    - en: 'Slightly increased fuel consumption during cold start'
-      de: 'Leicht erhöhter Verbrauch beim Kaltstart'
-    - en: 'Delayed entry into closed-loop fuel control'
-      de: 'Verzögerter Übergang in den geschlossenen Regelkreis'
-    - en: 'Failed emissions inspection (lambda readiness)'
-      de: 'Abgasuntersuchung wegen Lambda-Bereitschaft fehlgeschlagen'
+    - en: Check engine light
+      de: Motorkontrollleuchte an
+    - en: Higher fuel consumption
+      de: Erhöhter Verbrauch
+    - en: Repeat failure of a new sensor if the wiring short remains
+      de: Erneuter Ausfall einer neuen Sonde, wenn der Leitungsschluss bleibt
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [100, 400]
-    estimated_hours: [0.5, 1.5]
+    estimated_cost_eur: [80, 450]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2253, P2254, P2255, P0152]
   sources:
-    - https://en.wikipedia.org/wiki/Oxygen_sensor
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBD-Operations-Summary-Gasoline-2020-2023.pdf
+  reviewed: '2026-11-02'
 
 - code: P2257
   category: powertrain
@@ -45920,51 +46060,56 @@
   category: powertrain
   title:
     en: O2 Sensor Exhaust Sample Error (Bank 2 Sensor 1)
-    de: Lambdasonde Abgas-Abtastfehler (Bank 2 Sensor 1)
+    de: Lambdasonde Abgasprobe fehlerhaft (Bank 2 Sensor 1)
   description:
-    en: The ECU detects an open circuit on the EVAP switching valve drive line. The valve cannot be commanded between its purge and isolation positions.
-    de: Die Motorsteuerung erkennt eine Unterbrechung im Steuerkreis des EVAP-Schaltventils. Das Ventil lässt sich nicht zwischen Spül- und Sperrstellung umschalten.
+    en: P2415 indicates that the upstream air-fuel sensor on bank 2 is not reading a representative exhaust sample - typically because outside air is drawn in through a leak near the sensor or the sensor is not seated correctly, so the reading is implausibly lean. VW's 2014 specification books for the Passat, CC and Touareg evaluate the sensor signal voltage against two bands, 3.70-4.81 V and a lower band of 2.51-3.00 V or 3.0-3.70 V, the band being switched with the gain factor used for the sensor characteristic. P2414 is the identical check on bank 1. CARB requires fuel-control sensors to be monitored for every parameter that affects emissions. Expect a warning light and possibly rough running and higher consumption.
+    de: P2415 zeigt an, dass die vordere Breitbandsonde auf Bank 2 keine repräsentative Abgasprobe misst - meist weil durch ein Leck nahe der Sonde Falschluft angesaugt wird oder die Sonde nicht richtig sitzt, sodass sie unplausibel mager misst. VWs Datenbücher 2014 für Passat, CC und Touareg bewerten die Signalspannung der Sonde in zwei Fenstern, 3,70-4,81 V sowie einem unteren Fenster von 2,51-3,00 V bzw. 3,0-3,70 V; welches gilt, hängt vom Verstärkungsfaktor der Sondenkennlinie ab. P2414 ist dieselbe Prüfung auf Bank 1. CARB verlangt, regelnde Sonden auf alle abgasrelevanten Kenngrößen zu überwachen. Zu erwarten sind Warnleuchte, eventuell unrunder Lauf und Mehrverbrauch.
   affected_components:
-    - evap_switching_valve
-    - evap_wiring
+    - oxygen_sensor_bank2_sensor1
+    - exhaust_system
+    - oxygen_sensor_wiring
   common_causes:
-    - id: evap_valve_coil_open
+    - id: exhaust_leak_upstream
       likelihood: high
       label:
-        en: Valve coil open
-        de: Ventilspule unterbrochen
-    - id: evap_wiring_open
+        en: Exhaust leak ahead of or near the sensor (manifold, gasket, flex pipe)
+        de: Abgasleck vor oder nahe der Sonde (Krümmer, Dichtung, Flexrohr)
+    - id: sensor_not_seated
       likelihood: medium
       label:
-        en: Drive line open
-        de: Ansteuerleitung unterbrochen
-    - id: connector_back_out
-      likelihood: low
+        en: Sensor loose or installed incorrectly
+        de: Sonde locker oder falsch eingebaut
+    - id: sensor_aged
+      likelihood: medium
       label:
-        en: 'Pin pushed back out of connector body'
-        de: 'Pin aus dem Steckergehäuse zurückgedrückt'
+        en: Aged or contaminated wide-band sensor
+        de: Gealterte oder verunreinigte Breitbandsonde
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Possible smell of fuel near tank or engine bay'
-      de: 'Möglicher Benzingeruch an Tank oder Motorraum'
-    - en: 'Failed emissions inspection'
-      de: 'Abgasuntersuchung fehlgeschlagen'
-    - en: 'Loose-cap warning may appear'
-      de: 'Möglicherweise Tankdeckel-Warnung'
+    - en: Check engine light
+      de: Motorkontrollleuchte an
+    - en: Ticking exhaust noise when a leak is present
+      de: Tickendes Abgasgeräusch bei vorhandenem Leck
+    - en: Higher fuel consumption or uneven running
+      de: Mehrverbrauch oder unruhiger Lauf
   repair:
-    difficulty: easy
+    difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [60, 250]
-    estimated_hours: [0.3, 1.2]
+    estimated_cost_eur: [60, 500]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2414, P0174, P2254]
   sources:
-    - https://en.wikipedia.org/wiki/Onboard_refueling_vapor_recovery
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10074004-2280.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10074008-2280.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10119356-9999.pdf
+  reviewed: '2026-11-02'
 
 - code: P2416
   category: powertrain
@@ -45972,44 +46117,52 @@
     en: O2 Sensor Signals Swapped (Bank 1 Sensor 2 / Bank 1 Sensor 3)
     de: Lambdasonden-Signale vertauscht (Bank 1 Sensor 2 / Bank 1 Sensor 3)
   description:
-    en: The EVAP switching valve responds electrically but does not produce the expected pressure change. Often a stuck valve seat or a torn diaphragm.
-    de: Das EVAP-Schaltventil reagiert elektrisch, erzeugt aber nicht die erwartete Druckänderung. Häufig ein verklebter Ventilsitz oder eine gerissene Membran.
+    en: P2416 means the engine computer concludes that the two downstream oxygen sensors of bank 1 - sensor 2 after the first catalyst and sensor 3 after a second catalyst, as used mainly on SULEV/PZEV vehicles - are connected the wrong way round. No manufacturer publicly documents the detection logic for P2416. By analogy with P0040, which VW sets when the lambda controllers of the two front sensors move beyond their limits in opposite directions, the check compares the expected and actual response of each sensor. The usual cause is swapped connectors after a sensor replacement or harness repair. CARB requires secondary oxygen sensors to be monitored for proper function. P2417 is the bank 2 counterpart, P0041 a swap between banks.
+    de: P2416 bedeutet, dass das Motorsteuergerät die beiden hinteren Lambdasonden von Bank 1 für vertauscht hält - Sonde 2 nach dem ersten und Sonde 3 nach einem zweiten Katalysator, wie vor allem bei SULEV-/PZEV-Fahrzeugen verbaut. Kein Hersteller dokumentiert die Erkennungslogik für P2416 öffentlich. Ähnlich wie bei P0040, den VW setzt, wenn die Lambdaregler zweier Vorkat-Sonden in entgegengesetzte Richtungen über ihre Grenzen laufen, vergleicht die Prüfung die erwartete mit der tatsächlichen Reaktion jeder Sonde. Typische Ursache sind vertauschte Stecker nach Sondentausch oder Kabelbaumreparatur. CARB verlangt die Funktionsüberwachung der Nachkat-Sonden. P2417 ist das Gegenstück auf Bank 2, P0041 eine Vertauschung zwischen den Bänken.
   affected_components:
-    - evap_switching_valve
+    - oxygen_sensor_bank1_sensor2
+    - oxygen_sensor_b1s3
+    - oxygen_sensor_wiring
   common_causes:
-    - id: evap_valve_seat_stuck
+    - id: connectors_swapped
       likelihood: high
       label:
-        en: Valve seat stuck
-        de: Ventilsitz verklebt
-    - id: evap_valve_diaphragm_torn
+        en: Sensor 2 and sensor 3 connectors swapped after a repair
+        de: Stecker von Sonde 2 und Sonde 3 nach einer Reparatur vertauscht
+    - id: wrong_sensor_fitted
       likelihood: medium
       label:
-        en: Diaphragm torn
-        de: Ventilmembran gerissen
+        en: Wrong sensor type or harness length fitted in one position
+        de: Falscher Sondentyp oder falsche Kabellänge an einer Position verbaut
+    - id: harness_repair_error
+      likelihood: low
+      label:
+        en: Wires crossed in a harness repair
+        de: Adern bei einer Kabelbaumreparatur vertauscht
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Possible smell of fuel near tank or engine bay'
-      de: 'Möglicher Benzingeruch an Tank oder Motorraum'
-    - en: 'Failed emissions inspection'
-      de: 'Abgasuntersuchung fehlgeschlagen'
-    - en: 'Loose-cap warning may appear'
-      de: 'Möglicherweise Tankdeckel-Warnung'
+    - en: Check engine light shortly after an exhaust or sensor repair
+      de: Motorkontrollleuchte kurz nach einer Abgas- oder Sondenreparatur
+    - en: Catalyst monitor not completing or giving implausible results
+      de: Katalysatorprüfung läuft nicht durch oder liefert unplausible Ergebnisse
+    - en: Usually no noticeable driveability change
+      de: Meist keine spürbare Veränderung im Fahrverhalten
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [60, 250]
-    estimated_hours: [0.3, 1.2]
+    estimated_cost_eur: [0, 150]
+    estimated_hours: [0.2, 1]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
-  related_codes: [P2415]
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2417, P0041, P0040, P0136, P0142]
   sources:
-    - https://en.wikipedia.org/wiki/Onboard_refueling_vapor_recovery
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10074008-2280.pdf
+  reviewed: '2026-11-02'
 
 - code: P2417
   category: powertrain
@@ -46017,49 +46170,52 @@
     en: O2 Sensor Signals Swapped (Bank 2 Sensor 2 / Bank 2 Sensor 3)
     de: Lambdasonden-Signale vertauscht (Bank 2 Sensor 2 / Bank 2 Sensor 3)
   description:
-    en: The EVAP switching valve cannot reach the open position. Purge flow is blocked and the EVAP system cannot vent the canister.
-    de: Das EVAP-Schaltventil erreicht die offene Stellung nicht. Der Spülfluss ist blockiert und das EVAP-System kann den Aktivkohlefilter nicht entlüften.
+    en: P2417 is set when the engine computer finds that the two downstream oxygen sensors on bank 2 - sensor 2 behind the first catalyst and sensor 3 behind a second one - respond as if their wiring were exchanged. Such three-sensor layouts are typical of V-engines built to SULEV/PZEV limits. No manufacturer publicly documents the detection logic for P2417; the closest documented analogue is P0040, which VW sets when two sensors drive their lambda controllers past opposite limits. In practice the fault follows a repair in which plugs or harness branches were mixed up. CARB requires secondary oxygen sensors to be checked for proper function. P2416 is the same check on bank 1, P0041 a swap between the banks.
+    de: P2417 wird gesetzt, wenn das Motorsteuergerät feststellt, dass die beiden hinteren Lambdasonden auf Bank 2 - Sonde 2 hinter dem ersten und Sonde 3 hinter einem zweiten Katalysator - so reagieren, als wären ihre Leitungen getauscht. Solche Anordnungen mit drei Sonden je Bank sind typisch für V-Motoren mit SULEV-/PZEV-Zulassung. Kein Hersteller dokumentiert die Erkennungslogik für P2417 öffentlich; am nächsten kommt P0040, den VW setzt, wenn zwei Sonden ihre Lambdaregler über entgegengesetzte Grenzen treiben. In der Praxis folgt der Fehler auf eine Reparatur, bei der Stecker oder Kabelstränge verwechselt wurden. CARB verlangt die Funktionsprüfung der Nachkat-Sonden. P2416 ist dieselbe Prüfung auf Bank 1, P0041 eine Vertauschung zwischen den Bänken.
   affected_components:
-    - evap_switching_valve
+    - oxygen_sensor_bank2_sensor2
+    - oxygen_sensor_bank2_sensor3
+    - oxygen_sensor_wiring
   common_causes:
-    - id: evap_valve_seat_stuck
+    - id: connectors_swapped
       likelihood: high
       label:
-        en: Valve seat stuck closed
-        de: Ventilsitz hängt geschlossen
-    - id: evap_valve_corroded
+        en: Sensor 2 and sensor 3 connectors swapped after a repair
+        de: Stecker von Sonde 2 und Sonde 3 nach einer Reparatur vertauscht
+    - id: wrong_sensor_fitted
       likelihood: medium
       label:
-        en: Valve internals corroded
-        de: Ventilinnenleben korrodiert
-    - id: stuck_carbon_buildup
+        en: Wrong sensor type or harness length fitted in one position
+        de: Falscher Sondentyp oder falsche Kabellänge an einer Position verbaut
+    - id: harness_repair_error
       likelihood: low
       label:
-        en: 'Carbon or debris buildup preventing free movement'
-        de: 'Verkokung oder Ablagerungen verhindern freies Bewegen'
+        en: Wires crossed in a harness repair
+        de: Adern bei einer Kabelbaumreparatur vertauscht
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Possible smell of fuel near tank or engine bay'
-      de: 'Möglicher Benzingeruch an Tank oder Motorraum'
-    - en: 'Failed emissions inspection'
-      de: 'Abgasuntersuchung fehlgeschlagen'
-    - en: 'Loose-cap warning may appear'
-      de: 'Möglicherweise Tankdeckel-Warnung'
+    - en: Check engine light shortly after an exhaust or sensor repair
+      de: Motorkontrollleuchte kurz nach einer Abgas- oder Sondenreparatur
+    - en: Catalyst monitor for bank 2 not completing
+      de: Katalysatorprüfung für Bank 2 läuft nicht durch
+    - en: Usually no noticeable driveability change
+      de: Meist keine spürbare Veränderung im Fahrverhalten
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [60, 250]
-    estimated_hours: [0.3, 1.2]
+    estimated_cost_eur: [0, 150]
+    estimated_hours: [0.2, 1]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
-  related_codes: [P2416, P2420]
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2416, P0041, P0040, P0156, P0162]
   sources:
-    - https://en.wikipedia.org/wiki/Onboard_refueling_vapor_recovery
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10119356-9999.pdf
+  reviewed: '2026-11-02'
 
 - code: P2418
   category: powertrain
@@ -46067,94 +46223,108 @@
     en: EVAP System Switching Valve Control Circuit/Open
     de: EVAP-System Umschaltventil Steuerkreis/Unterbrechung
   description:
-    en: The evaporative switching valve — used on multi-path EVAP systems to route purge or pressure-test flow — does not respond as expected. Self-test fails because tank pressure does not change in the calibrated direction.
-    de: Das Umschaltventil der Tankentlüftung — bei mehrwegigen EVAP-Systemen zur Steuerung von Spülung oder Druckprüfung — reagiert nicht wie erwartet. Der Selbsttest scheitert, weil sich der Tankdruck nicht in die kalibrierte Richtung ändert.
+    en: P2418 is the electrical check of the control circuit of the EVAP switching valve - an extra valve in the evaporative system whose job depends on the design. Ford calls it EVAP switching valve or vapor blocking valve; its 2012 and 2020-2023 OBD summaries check the driver continuously and set P2418 when a short, open or intermittent fault persists for more than 5 s, so at Ford this one code covers all circuit faults. Karma's Revero and GS-6 bulletin uses P2418 for the open control circuit of the rear fuel tank isolation valve driven by the ECM. P2419/P2420 separate low and high circuit faults, P2450 is the mechanical stuck-open fault. While the valve cannot be controlled, leak tests are suspended and fuel vapour odour or refuelling trouble may follow.
+    de: P2418 ist die elektrische Prüfung des Steuerkreises des EVAP-Umschaltventils - eines zusätzlichen Ventils im Tankentlüftungssystem, dessen Aufgabe von der Bauart abhängt. Ford nennt es EVAP Switching Valve bzw. Vapor Blocking Valve; seine OBD-Übersichten 2012 und 2020-2023 prüfen die Endstufe ständig und setzen P2418, wenn Kurzschluss, Unterbrechung oder Wackelkontakt länger als 5 s anliegen - bei Ford deckt dieser eine Code also alle Kreisfehler ab. Karma verwendet P2418 laut Bulletin für Revero und GS-6 bei offenem Steuerkreis des hinteren, vom Motorsteuergerät angesteuerten Tankabsperrventils. P2419/P2420 trennen Fehler niedrig und hoch, P2450 ist das mechanisch offen hängende Ventil. Solange das Ventil nicht ansteuerbar ist, ruht die Dichtheitsprüfung; Kraftstoffgeruch oder Probleme beim Tanken sind möglich.
   affected_components:
     - evap_switching_valve
-    - evap_lines
+    - valve_wiring
+    - ecm
   common_causes:
-    - id: evap_switching_valve_failed
+    - id: open_wire
       likelihood: high
       label:
-        en: Switching valve failed
-        de: Umschaltventil defekt
-    - id: evap_line_blocked
+        en: Broken control wire or unplugged valve connector
+        de: Gebrochene Steuerleitung oder abgezogener Ventilstecker
+    - id: valve_coil_open
       likelihood: medium
       label:
-        en: EVAP line blocked or kinked
-        de: EVAP-Leitung verstopft oder geknickt
+        en: Open solenoid coil in the switching valve
+        de: Unterbrochene Magnetspule im Umschaltventil
+    - id: connector_corrosion
+      likelihood: low
+      label:
+        en: Corroded connector near the tank (road salt, splash water)
+        de: Korrodierter Stecker im Tankbereich (Streusalz, Spritzwasser)
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Possible smell of fuel near tank or engine bay'
-      de: 'Möglicher Benzingeruch an Tank oder Motorraum'
-    - en: 'Failed emissions inspection'
-      de: 'Abgasuntersuchung fehlgeschlagen'
-    - en: 'Loose-cap warning may appear'
-      de: 'Möglicherweise Tankdeckel-Warnung'
+    - en: Check engine light
+      de: Motorkontrollleuchte an
+    - en: EVAP readiness not set
+      de: EVAP-Bereitschaft nicht gesetzt
+    - en: Possible fuel vapour odour or slow refuelling
+      de: Möglicherweise Kraftstoffgeruch oder schleppendes Tanken
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [60, 400]
-    estimated_hours: [0.5, 2.0]
+    estimated_cost_eur: [40, 350]
+    estimated_hours: [0.5, 2.5]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2419, P2420, P2450, P2451]
   sources:
-    - https://en.wikipedia.org/wiki/Onboard_refueling_vapor_recovery
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2024/MC-11001970-0001.pdf
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBD-Operations-Summary-Gasoline-2020-2023.pdf
+  reviewed: '2026-11-02'
 
 - code: P2419
   category: powertrain
   title:
     en: EVAP System Switching Valve Control Circuit Low
-    de: EVAP-System Umschaltventil Steuerkreis zu niedrig
+    de: EVAP-System Umschaltventil Steuerkreis niedrig
   description:
-    en: The EVAP switching valve cannot close. Tank pressure cannot be isolated for the leak detection test, and purge routing may bypass the canister.
-    de: Das EVAP-Umschaltventil schliesst nicht. Der Tankdruck lässt sich für die Leckdiagnose nicht isolieren, und die Spülroute kann den Aktivkohlefilter umgehen.
+    en: P2419 reports that the control circuit of the EVAP switching valve reads low - usually the control line is shorted to ground, or the driver stage measures too little voltage. Karma's Revero/GS-6 bulletin lists P2419 for the rear fuel tank isolation valve controlled by the ECM. Subaru's bulletin 09-103-23 for 2015 Legacy and Outback with an evaporative leak check module (ELCM) tells technicians to look for P2419 and P2420 whenever the ELCM pump fault P2404 is stored, because the switching valve sits in the same module. Ford, by contrast, reports every circuit fault of this valve as P2418. CARB requires output components to be checked for circuit faults. P2420 is the high-side fault, P2418 the open circuit. The leak test is suspended and the warning light comes on.
+    de: P2419 meldet, dass der Steuerkreis des EVAP-Umschaltventils zu niedrig liegt - meist hat die Steuerleitung Masseschluss oder die Endstufe misst zu wenig Spannung. Karmas Bulletin zu Revero/GS-6 führt P2419 für das hintere, vom Motorsteuergerät angesteuerte Tankabsperrventil. Subarus Bulletin 09-103-23 für Legacy und Outback 2015 mit Leckprüfmodul (ELCM) weist an, bei gespeichertem Pumpenfehler P2404 auch nach P2419 und P2420 zu sehen, weil das Umschaltventil im selben Modul sitzt. Ford dagegen meldet jeden Kreisfehler dieses Ventils als P2418. CARB verlangt die Prüfung von Ausgangskomponenten auf Kreisfehler. P2420 ist der Fehler zu hoch, P2418 die Unterbrechung. Die Dichtheitsprüfung ruht, die Warnleuchte geht an.
   affected_components:
     - evap_switching_valve
+    - evap_leak_detection_pump
+    - valve_wiring
   common_causes:
-    - id: evap_switching_valve_stuck_open
+    - id: short_to_ground
       likelihood: high
       label:
-        en: Valve stuck open mechanically
-        de: Ventil mechanisch offen verklemmt
-    - id: evap_switching_valve_drive_open
+        en: Control wire shorted to ground (chafed near tank or frame)
+        de: Steuerleitung mit Masseschluss (am Tank oder Rahmen gescheuert)
+    - id: valve_coil_short
       likelihood: medium
       label:
-        en: Drive circuit always energised
-        de: Ansteuerkreis dauerhaft bestromt
-    - id: stuck_carbon_buildup
+        en: Shorted coil in the switching valve or leak check module
+        de: Kurzgeschlossene Spule im Umschaltventil oder Leckprüfmodul
+    - id: water_in_module
       likelihood: low
       label:
-        en: 'Carbon or debris buildup preventing free movement'
-        de: 'Verkokung oder Ablagerungen verhindern freies Bewegen'
+        en: Water ingress into the leak check module
+        de: Wassereintritt in das Leckprüfmodul
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Possible smell of fuel near tank or engine bay'
-      de: 'Möglicher Benzingeruch an Tank oder Motorraum'
-    - en: 'Failed emissions inspection'
-      de: 'Abgasuntersuchung fehlgeschlagen'
-    - en: 'Loose-cap warning may appear'
-      de: 'Möglicherweise Tankdeckel-Warnung'
+    - en: Check engine light
+      de: Motorkontrollleuchte an
+    - en: EVAP readiness not set
+      de: EVAP-Bereitschaft nicht gesetzt
+    - en: Often stored together with leak detection pump codes
+      de: Oft zusammen mit Codes der Leckdiagnosepumpe gespeichert
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [60, 400]
-    estimated_hours: [0.5, 2.0]
+    estimated_cost_eur: [40, 450]
+    estimated_hours: [0.5, 2.5]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2418]
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2418, P2420, P2404, P2401]
   sources:
-    - https://en.wikipedia.org/wiki/Onboard_refueling_vapor_recovery
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2024/MC-11001970-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2023/MC-10240103-0001.pdf
+  reviewed: '2026-11-02'
 
 - code: P241A
   category: powertrain
@@ -46400,51 +46570,55 @@
   category: powertrain
   title:
     en: EVAP System Switching Valve Control Circuit High
-    de: EVAP-System Umschaltventil Steuerkreis zu hoch
+    de: EVAP-System Umschaltventil Steuerkreis hoch
   description:
-    en: The EVAP switching valve cannot open when commanded. Purge or test flow cannot reach the appropriate path and the leak monitor aborts.
-    de: Das EVAP-Umschaltventil öffnet auf Befehl nicht. Spül- oder Prüfstrom erreichen den erforderlichen Pfad nicht, und die Leckdiagnose bricht ab.
+    en: P2420 means the control circuit of the EVAP switching valve reads high - typically a short to battery voltage on the control line or an overcurrent detected by the driver stage. Karma lists P2420 for the rear fuel tank isolation valve of the Revero and GS-6, which the ECM operates, and Subaru's bulletin 09-103-23 for 2015 Legacy/Outback with an evaporative leak check module (ELCM) includes P2420 among the codes to check alongside the pump fault P2404. Ford instead reports all circuit faults of its switching valve as P2418. CARB requires output components to be monitored for circuit faults. P2419 is the low-side fault and P2418 the open circuit. The evap leak monitor cannot run until the circuit is repaired.
+    de: P2420 bedeutet, dass der Steuerkreis des EVAP-Umschaltventils zu hoch liegt - meist Plusschluss der Steuerleitung oder ein von der Endstufe erkannter Überstrom. Karma führt P2420 für das hintere Tankabsperrventil von Revero und GS-6, das das Motorsteuergerät schaltet; Subarus Bulletin 09-103-23 für Legacy/Outback 2015 mit Leckprüfmodul (ELCM) nennt P2420 unter den Codes, die neben dem Pumpenfehler P2404 zu prüfen sind. Ford meldet alle Kreisfehler seines Umschaltventils dagegen als P2418. CARB verlangt die Überwachung von Ausgangskomponenten auf Kreisfehler. P2419 ist der Fehler zu niedrig, P2418 die Unterbrechung. Die Leckprüfung des Tanksystems kann erst nach der Reparatur wieder laufen.
   affected_components:
     - evap_switching_valve
+    - evap_leak_detection_pump
+    - valve_wiring
   common_causes:
-    - id: evap_switching_valve_stuck_closed
+    - id: short_to_voltage
       likelihood: high
       label:
-        en: Valve stuck closed mechanically
-        de: Ventil mechanisch geschlossen verklemmt
-    - id: evap_switching_valve_drive_open_circuit
+        en: Control wire shorted to battery voltage
+        de: Steuerleitung mit Schluss zur Batteriespannung
+    - id: valve_coil_low_resistance
       likelihood: medium
       label:
-        en: Drive circuit open
-        de: Ansteuerkreis unterbrochen
-    - id: stuck_carbon_buildup
+        en: Switching valve coil with too low resistance (overcurrent)
+        de: Spule des Umschaltventils mit zu geringem Widerstand (Überstrom)
+    - id: ecm_driver_fault
       likelihood: low
       label:
-        en: 'Carbon or debris buildup preventing free movement'
-        de: 'Verkokung oder Ablagerungen verhindern freies Bewegen'
+        en: Faulty driver stage in the ECM
+        de: Defekte Endstufe im Steuergerät
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Possible smell of fuel near tank or engine bay'
-      de: 'Möglicher Benzingeruch an Tank oder Motorraum'
-    - en: 'Failed emissions inspection'
-      de: 'Abgasuntersuchung fehlgeschlagen'
-    - en: 'Loose-cap warning may appear'
-      de: 'Möglicherweise Tankdeckel-Warnung'
+    - en: Check engine light
+      de: Motorkontrollleuchte an
+    - en: EVAP readiness not set
+      de: EVAP-Bereitschaft nicht gesetzt
+    - en: No noticeable driveability change
+      de: Keine spürbare Veränderung im Fahrverhalten
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [60, 400]
-    estimated_hours: [0.5, 2.0]
+    estimated_cost_eur: [40, 450]
+    estimated_hours: [0.5, 2.5]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2418, P2419, P2417]
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2418, P2419, P2404, P2402]
   sources:
-    - https://en.wikipedia.org/wiki/Onboard_refueling_vapor_recovery
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2024/MC-11001970-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2023/MC-10240103-0001.pdf
+  reviewed: '2026-11-02'
 
 - code: P2421
   category: powertrain
@@ -58116,82 +58290,115 @@
   category: powertrain
   title:
     en: Low Pressure Fuel System Sensor Circuit Range/Performance
-    de: Niederdruck-Kraftstoffsystem Sensor Stromkreis Bereich/Plausibilität
+    de: Niederdruck-Kraftstoffsystem Sensor Stromkreis Plausibilität/Funktion
   description:
-    en: The ECU detects a general fault in the low-pressure fuel system pressure sensor circuit. Without a valid signal the ECU cannot verify lift-pump pressure or fuel rail pre-pressure.
-    de: Die Motorsteuerung erkennt einen allgemeinen Fehler im Stromkreis des Niederdruck-Kraftstoffdrucksensors. Ohne gueltiges Signal kann die ECU den Vorfoerderdruck oder Vorlauf-Raildruck nicht ueberpruefen.
+    en: P2540 is the plausibility check of the low-pressure fuel sensor, which measures supply pressure between the in-tank or lift pump and the high-pressure pump. The signal is electrically valid but does not match the commanded or expected pressure. VW's 2014 Touareg book sets it on the 3.6 L V6 when the measured pressure deviates from target beyond calibrated limits. Ram's bulletin 18-021-25 for the 2025 Ram 3500 with the 6.7 L Cummins lists P2540 and P2543 among the faults addressed by a PCM software update, so calibration can play a role as well. A weak supply pump or a clogged filter produces a genuine deviation. P2539 is the circuit fault, P2541/P2542 low/high, P2543 intermittent. Expect hesitation or hard starting.
+    de: P2540 ist die Plausibilitätsprüfung des Niederdruck-Kraftstoffsensors, der den Vordruck zwischen Tank- bzw. Förderpumpe und Hochdruckpumpe misst. Das Signal ist elektrisch gültig, passt aber nicht zum angeforderten oder erwarteten Druck. VWs Datenbuch 2014 für den Touareg setzt ihn beim 3,6-l-V6, wenn der gemessene Druck über kalibrierte Grenzen vom Sollwert abweicht. Rams Bulletin 18-021-25 für den Ram 3500 (2025) mit 6,7-l-Cummins nennt P2540 und P2543 unter den Fehlern, die ein Software-Update des Motorsteuergeräts behebt - auch die Kalibrierung kann also eine Rolle spielen. Eine schwache Förderpumpe oder ein zugesetzter Filter erzeugen eine echte Abweichung. P2539 ist der Kreisfehler, P2541/P2542 niedrig/hoch, P2543 sporadisch. Zu erwarten sind Leistungslöcher oder schlechtes Anspringen.
   affected_components:
     - low_pressure_fuel_sensor
-    - fuel_pump
+    - low_pressure_fuel_pump
+    - fuel_filter
   common_causes:
-    - id: lp_sensor_fault
+    - id: supply_pump_weak
       likelihood: high
       label:
-        en: Defective low-pressure sensor
-        de: Defekter Niederdrucksensor
-    - id: wiring_fault
+        en: Weak in-tank or lift pump causing real pressure deviation
+        de: Schwache Tank- oder Förderpumpe mit echter Druckabweichung
+    - id: fuel_filter_restricted
       likelihood: medium
       label:
-        en: Wiring or connector fault
-        de: Verkabelungs- oder Steckerfehler
+        en: Restricted fuel filter or kinked supply line
+        de: Zugesetzter Kraftstofffilter oder geknickte Zulaufleitung
+    - id: sensor_drift
+      likelihood: medium
+      label:
+        en: Low-pressure sensor reading offset
+        de: Niederdrucksensor misst mit Versatz
+    - id: software_calibration
+      likelihood: low
+      label:
+        en: Outdated engine software (manufacturer update available)
+        de: Veraltete Motorsoftware (Hersteller-Update verfügbar)
+  symptoms:
+    - en: Check engine light
+      de: Motorkontrollleuchte an
+    - en: Hesitation or power loss under load
+      de: Leistungsloch oder Leistungsverlust unter Last
+    - en: Long cranking or hard starting
+      de: Langes Orgeln oder schlechtes Anspringen
   repair:
     difficulty: medium
-    diy_possible: true
-    estimated_cost_eur: [120, 500]
-    estimated_hours: [0.5, 2]
+    diy_possible: false
+    estimated_cost_eur: [80, 700]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
+    limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [P2539]
+  related_codes: [P2539, P2541, P2542, P2543, P0087]
   sources:
-    - https://en.wikipedia.org/wiki/Fuel_pump
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10074008-2280.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11024298-0001.pdf
+  reviewed: '2026-11-02'
 
 - code: P2541
   category: powertrain
   title:
     en: Low Pressure Fuel System Sensor Circuit Low
-    de: Niederdruck-Kraftstoffsystem Sensor Stromkreis zu niedrig
+    de: Niederdruck-Kraftstoffsystem Sensor Stromkreis niedrig
   description:
-    en: The signal of the low-pressure fuel sensor does not match the expected value during operation. Pressure does not rise as expected when the lift pump is commanded.
-    de: Das Signal des Niederdruck-Kraftstoffdrucksensors entspricht im Betrieb nicht dem erwarteten Wert. Der Druck steigt nicht wie erwartet, wenn die Vorfoerderpumpe angesteuert wird.
+    en: "P2541 means the signal of the low-pressure fuel sensor is below its valid range - typically a short to ground on the signal line or a lost 5 V sensor supply. VW's 2014 specification books set it below 0.2 V on the Passat, CC and Touareg (VW wording: short to ground or low input), whereas a signal above 4.8 V leads to P2539. CARB requires every emissions-relevant input to be checked for circuit faults and out-of-range values. Without a valid reading the engine computer can only run the fuel supply pump on a substitute value, so pressure control becomes coarse. P2540 is the plausibility fault, P2542 the high-side fault, P2543 an intermittent signal. Symptoms range from none to hesitation under load or hard starting."
+    de: "P2541 bedeutet, dass das Signal des Niederdruck-Kraftstoffsensors unter seinem gültigen Bereich liegt - meist Masseschluss der Signalleitung oder fehlende 5-V-Versorgung. VWs Datenbücher 2014 setzen ihn bei Passat, CC und Touareg unterhalb von 0,2 V (bei VW: Kurzschluss nach Masse bzw. zu geringes Eingangssignal), während ein Signal über 4,8 V zu P2539 führt. CARB verlangt, jeden abgasrelevanten Eingang auf Kreisfehler und Bereichsüberschreitung zu prüfen. Ohne gültigen Messwert kann das Steuergerät die Förderpumpe nur mit einem Ersatzwert betreiben, die Druckregelung wird grob. P2540 ist der Plausibilitätsfehler, P2542 der Fehler zu hoch, P2543 ein sporadisches Signal. Die Folgen reichen von unauffällig bis zu Leistungslöchern oder schlechtem Anspringen."
   affected_components:
     - low_pressure_fuel_sensor
-    - fuel_pump
-    - fuel_filter
+    - sensor_wiring
+    - ecm
   common_causes:
-    - id: lp_sensor_drift
+    - id: short_to_ground
       likelihood: high
       label:
-        en: Sensor drift
-        de: Sensordrift
-    - id: clogged_filter
+        en: Signal wire shorted to ground
+        de: Signalleitung mit Masseschluss
+    - id: lost_reference_voltage
       likelihood: medium
       label:
-        en: Clogged fuel filter
-        de: Verstopfter Kraftstofffilter
-    - id: sensor_aged
-      likelihood: low
+        en: 5 V reference supply missing or pulled down by another sensor
+        de: 5-V-Versorgung fehlt oder wird von einem anderen Sensor heruntergezogen
+    - id: sensor_failed
+      likelihood: medium
       label:
-        en: 'Sensor element aged beyond calibration window'
-        de: 'Sensorelement gealtert über Kalibrierfenster hinaus'
+        en: Failed low-pressure fuel sensor
+        de: Defekter Niederdruck-Kraftstoffsensor
+  symptoms:
+    - en: Check engine light
+      de: Motorkontrollleuchte an
+    - en: Hesitation under load
+      de: Leistungsloch unter Last
+    - en: Possible hard starting
+      de: Möglicherweise schlechtes Anspringen
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [60, 400]
-    estimated_hours: [0.3, 2]
+    estimated_cost_eur: [60, 300]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [P2539, P2540, P2542, P2543]
   sources:
-    - https://en.wikipedia.org/wiki/Fuel_pump
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10074004-2280.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10074008-2280.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10119356-9999.pdf
+  reviewed: '2026-11-02'
 
 - code: P2542
   category: powertrain
@@ -58239,38 +58446,53 @@
   category: powertrain
   title:
     en: Low Pressure Fuel System Sensor Circuit Intermittent/Erratic
-    de: Niederdruck-Kraftstoffsystem Sensor Stromkreis sporadisch/unregelmäßig
+    de: Niederdruck-Kraftstoffsystem Sensor Stromkreis sporadisch/unstet
   description:
-    en: The ECU detects an electrical fault on the power demand input signal used to coordinate accessory loads (e.g. AC compressor, alternator load). The signal is missing or implausible.
-    de: Die Motorsteuerung erkennt einen elektrischen Fehler am Leistungsanforderungs-Eingang, der zur Koordination von Nebenverbrauchern dient (z. B. Klimakompressor, Generatorlast). Das Signal fehlt oder ist unplausibel.
+    en: P2543 flags a low-pressure fuel sensor signal that drops out or jumps for short moments while staying inside its electrical range most of the time - a loose pin, a chafed wire or a sensor with an internal contact problem. Ram's bulletin 18-021-25 for the 2025 Ram 3500 with the 6.7 L Cummins lists P2543-00 next to P2540-00 among the faults corrected by a PCM software update, which shows that calibration can also produce entries. Other manufacturers do not publish thresholds for this code. CARB requires input components to be checked for circuit faults and, where feasible, rationality. P2541/P2542 describe a steady low or high signal, P2540 a plausibility fault. The code often comes and goes, sometimes with brief stumbling.
+    de: P2543 meldet ein Signal des Niederdruck-Kraftstoffsensors, das kurzzeitig aussetzt oder springt, aber meist im elektrisch gültigen Bereich bleibt - ein lockerer Kontakt, eine durchgescheuerte Ader oder ein Sensor mit innerem Kontaktfehler. Rams Bulletin 18-021-25 für den Ram 3500 (2025) mit 6,7-l-Cummins führt P2543-00 neben P2540-00 unter den Fehlern, die ein Software-Update des Motorsteuergeräts behebt; auch die Kalibrierung kann also Einträge erzeugen. Andere Hersteller veröffentlichen keine Schwellwerte zu diesem Code. CARB verlangt, Eingangskomponenten auf Kreisfehler und, wo möglich, auf Plausibilität zu prüfen. P2541/P2542 stehen für dauerhaft niedrige bzw. hohe Signale, P2540 für einen Plausibilitätsfehler. Der Code kommt und geht oft, teils mit kurzem Stottern.
   affected_components:
-    - power_demand_signal_module
-    - hvac_module
+    - low_pressure_fuel_sensor
+    - sensor_wiring
   common_causes:
-    - id: signal_wire_open
+    - id: loose_connector_pin
       likelihood: high
       label:
-        en: Open signal wire
-        de: Offene Signalleitung
-    - id: requesting_module_fault
+        en: Loose or corroded pin at the sensor connector
+        de: Lockerer oder korrodierter Kontakt am Sensorstecker
+    - id: harness_chafed
       likelihood: medium
       label:
-        en: Fault in requesting module
-        de: Fehler im anfordernden Modul
+        en: Chafed signal or supply wire with intermittent contact
+        de: Durchgescheuerte Signal- oder Versorgungsader mit Wackelkontakt
+    - id: software_calibration
+      likelihood: low
+      label:
+        en: Outdated engine software (manufacturer update available)
+        de: Veraltete Motorsoftware (Hersteller-Update verfügbar)
+  symptoms:
+    - en: Check engine light, often intermittent
+      de: Motorkontrollleuchte, oft nur zeitweise
+    - en: Brief stumbling or hesitation
+      de: Kurzes Stottern oder Zögern
+    - en: No symptoms between events
+      de: Zwischen den Aussetzern unauffällig
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [80, 400]
-    estimated_hours: [0.3, 1.5]
+    estimated_cost_eur: [40, 300]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
-    emissions_relevant: false
+    emissions_relevant: true
     drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [P2539, P2540, P2541, P2542]
   sources:
-    - https://en.wikipedia.org/wiki/Engine_control_unit
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11024298-0001.pdf
+  reviewed: '2026-11-02'
 
 - code: P2544
   category: powertrain
@@ -59455,36 +59677,42 @@
   category: powertrain
   title:
     en: Turbocharger Boost Control Position Sensor A Circuit Range/Performance
-    de: Turbolader Ladedruck-Positionssensor A Stromkreis Bereich/Plausibilität
+    de: Turbolader Ladedruckregelung Positionssensor A Stromkreis Plausibilität/Funktion
   description:
-    en: The position feedback sensor on the variable-geometry or wastegate turbocharger actuator is not communicating or is implausible. Without position feedback, boost control runs in default mode and power is reduced.
-    de: Der Stellungssensor des Variabel-Geometrie- oder Wastegate-Turboladerstellers liefert kein Signal oder ist unplausibel. Ohne Stellungs-Rückmeldung läuft die Ladedruckregelung im Default und die Leistung sinkt.
+    en: P2563 means the position feedback of the turbocharger boost control actuator - variable vanes or wastegate - does not match the commanded position, although the sensor circuit itself is electrically intact. GM's 2009 Duramax diesel table sets it when vane position differs from target by 15 % or more for 5 s (Type B, warning light after two trips). VW's 2014 Passat TDI book compares the control deviation with a map based on engine speed and torque, and VW bulletin 21-15-06 links P2563 on 2.0 L TDI engines to kinked vacuum hoses, a leaking vacuum diaphragm or a broken adjustment stud on the turbocharger. P2562/P2564/P2565 are circuit faults, P2566 an intermittent signal. Boost is often limited, so power drops noticeably.
+    de: P2563 bedeutet, dass die Positionsrückmeldung des Ladedruckstellers - verstellbare Leitschaufeln oder Wastegate - nicht zur angeforderten Stellung passt, obwohl der Sensorkreis elektrisch in Ordnung ist. GMs Tabelle für den Duramax-Diesel 2009 setzt ihn, wenn die Schaufelstellung 5 s lang um 15 % oder mehr vom Soll abweicht (Typ B, Warnleuchte nach zwei Fahrten). VWs Datenbuch 2014 für den Passat TDI vergleicht die Regelabweichung mit einem Kennfeld aus Drehzahl und Drehmoment; VW-Bulletin 21-15-06 führt P2563 beim 2,0-l-TDI auf geknickte Unterdruckschläuche, eine undichte Unterdruckdose oder einen abgerissenen Einstellbolzen am Lader zurück. P2562/P2564/P2565 sind Kreisfehler, P2566 ein sporadisches Signal. Der Ladedruck wird oft begrenzt, die Leistung sinkt spürbar.
   affected_components:
-    - turbocharger_actuator
-    - turbocharger_position_sensor
+    - turbo_actuator_position_sensor_a
+    - boost_control_actuator_a
+    - vacuum_hose
   common_causes:
-    - id: turbo_pos_sensor_failed
+    - id: vacuum_hose_fault
       likelihood: high
       label:
-        en: Position sensor failed
-        de: Stellungssensor defekt
-    - id: turbo_pos_wiring_open
+        en: Kinked, twisted or leaking vacuum hose to the boost actuator
+        de: Geknickter, verdrehter oder undichter Unterdruckschlauch zum Ladedrucksteller
+    - id: actuator_diaphragm_leak
       likelihood: medium
       label:
-        en: Wiring open or chafed near turbo
-        de: Leitung am Turbolader unterbrochen oder gescheuert
+        en: Leaking actuator diaphragm or sticking vanes
+        de: Undichte Stellermembran oder schwergängige Leitschaufeln
+    - id: adjustment_stud_broken
+      likelihood: low
+      label:
+        en: Broken or missing adjustment stud, actuator travel out of tolerance
+        de: Abgerissener oder fehlender Einstellbolzen, Stellweg außer Toleranz
   symptoms:
-    - en: 'Charge status indicator shows fault'
-      de: 'Ladestatus-Anzeige zeigt Fehler'
-    - en: 'Charging may not start or interrupts'
-      de: 'Ladevorgang startet nicht oder bricht ab'
-    - en: 'Slower-than-expected charge rate'
-      de: 'Langsamerer Ladevorgang als erwartet'
+    - en: Noticeable loss of power, limp mode
+      de: Deutlicher Leistungsverlust, Notlauf
+    - en: Check engine light
+      de: Motorkontrollleuchte an
+    - en: Underboost code P0299 stored at the same time
+      de: Gleichzeitig Unterladedruck-Code P0299 gespeichert
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur: [200, 2000]
-    estimated_hours: [1.0, 5.0]
+    estimated_cost_eur: [50, 1800]
+    estimated_hours: [0.5, 5]
   flags:
     mil: true
     emissions_relevant: true
@@ -59492,8 +59720,13 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [P2562, P2564, P2565, P2566, P0299]
   sources:
-    - https://en.wikipedia.org/wiki/Turbocharger
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2009/09OBDG01%20DURAMAX%20Engine%20Diagnostics.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10074004-2280.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10176953-0001.pdf
+  reviewed: '2026-11-02'
 
 - code: P2564
   category: powertrain
@@ -59597,51 +59830,55 @@
   category: powertrain
   title:
     en: Turbocharger Boost Control Position Sensor A Circuit Intermittent/Erratic
-    de: Turbolader Ladedruck-Positionssensor A Stromkreis sporadisch/unregelmäßig
+    de: Turbolader Ladedruckregelung Positionssensor A Stromkreis sporadisch/unstet
   description:
-    en: The turbocharger actuator position sensor reports a value, but it does not track commanded vane or wastegate position within tolerance. Often a sticky VTG mechanism due to soot.
-    de: Der Stellungssensor des Turboladerstellers liefert ein Signal, das aber nicht zur kommandierten Schaufel- oder Wastegate-Stellung innerhalb der Toleranz passt. Häufig ein verrusster VTG-Mechanismus.
+    en: P2566 reports that the signal from the boost control position sensor flickers or drops out briefly instead of being steadily wrong. VW bulletins 21-15-04 (2015) and 21-15-06 (2020) for 2009-2014 Jetta, Golf and Jetta SportWagen with the 2.0 L TDI (CBEA, CJAA) list P2566 together with P2562-P2565 and P0299 for the complaint of lacking power; there the position sensor G581 sits in the vacuum diaphragm, and the repair path starts with vacuum hoses, diaphragm and the actuator travel. No thresholds are published. CARB requires turbocharger electronic components to be monitored as comprehensive components. P2563 is the plausibility fault, P2564/P2565 a steady low or high signal. Expect intermittent power loss and a warning light.
+    de: P2566 meldet, dass das Signal des Positionssensors der Ladedruckregelung kurzzeitig flackert oder aussetzt, statt dauerhaft falsch zu sein. Die VW-Bulletins 21-15-04 (2015) und 21-15-06 (2020) für Jetta, Golf und Jetta SportWagen 2009-2014 mit 2,0-l-TDI (CBEA, CJAA) führen P2566 zusammen mit P2562-P2565 und P0299 bei der Beanstandung fehlender Leistung; dort sitzt der Positionsgeber G581 in der Unterdruckdose, und die Reparatur beginnt bei Unterdruckschläuchen, Dose und Stellweg. Schwellwerte sind nicht veröffentlicht. CARB verlangt, elektronische Turbolader-Komponenten als Bauteile der umfassenden Komponentenüberwachung zu prüfen. P2563 ist der Plausibilitätsfehler, P2564/P2565 ein dauerhaft niedriges bzw. hohes Signal. Zu erwarten sind zeitweiser Leistungsverlust und Warnleuchte.
   affected_components:
-    - turbocharger_actuator
-    - turbocharger_vanes
+    - turbo_actuator_position_sensor_a
+    - boost_control_actuator_wiring
+    - boost_control_actuator_a
   common_causes:
-    - id: vtg_vanes_sooted
+    - id: loose_connector_pin
       likelihood: high
       label:
-        en: VTG vanes coked, sticky
-        de: VTG-Schaufeln verrusst und klemmen
-    - id: actuator_linkage_worn
+        en: Loose or corroded pin at the position sensor connector
+        de: Lockerer oder korrodierter Kontakt am Stecker des Positionssensors
+    - id: harness_heat_damage
       likelihood: medium
       label:
-        en: Actuator linkage worn
-        de: Stellgestänge verschlissen
-    - id: sensor_aged
-      likelihood: low
+        en: Heat-damaged or chafed sensor wiring near the turbocharger
+        de: Hitzegeschädigte oder durchgescheuerte Sensorleitung am Turbolader
+    - id: sensor_worn
+      likelihood: medium
       label:
-        en: 'Sensor element aged beyond calibration window'
-        de: 'Sensorelement gealtert über Kalibrierfenster hinaus'
+        en: Worn position sensor in the actuator
+        de: Verschlissener Positionssensor im Steller
   symptoms:
-    - en: 'Charge status indicator shows fault'
-      de: 'Ladestatus-Anzeige zeigt Fehler'
-    - en: 'Charging may not start or interrupts'
-      de: 'Ladevorgang startet nicht oder bricht ab'
-    - en: 'Slower-than-expected charge rate'
-      de: 'Langsamerer Ladevorgang als erwartet'
+    - en: Intermittent loss of power or limp mode
+      de: Zeitweiser Leistungsverlust oder Notlauf
+    - en: Check engine light, sometimes going out again
+      de: Motorkontrollleuchte, teils wieder erlöschend
+    - en: Surging boost
+      de: Schwankender Ladedruck
   repair:
-    difficulty: hard
+    difficulty: medium
     diy_possible: false
-    estimated_cost_eur: [200, 2500]
-    estimated_hours: [1.0, 6.0]
+    estimated_cost_eur: [50, 1200]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
     limp_mode_possible: true
-  related_codes: [P2563]
   references:
     - sae:J2012
+  related_codes: [P2562, P2563, P2564, P2565, P0299]
   sources:
-    - https://en.wikipedia.org/wiki/Turbocharger
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2015/MC-10122920-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10176953-0001.pdf
+  reviewed: '2026-11-02'
 
 - code: P2567
   category: powertrain
@@ -59649,99 +59886,108 @@
     en: Direct Ozone Reduction Catalyst Temperature Sensor Circuit
     de: Direkt-Ozonreduktions-Katalysator Temperatursensor Stromkreis
   description:
-    en: The turbocharger position sensor signal is below the lower limit — short to ground or sensor at zero stop.
-    de: Das Signal des Turbolader-Stellungssensors liegt unter dem unteren Grenzwert — Kurzschluss nach Masse oder Sensor am Nullanschlag.
+    en: P2567 is the general circuit fault of the sensor on a direct ozone reduction (DOR) radiator - a radiator with a catalytic coating that converts ground-level ozone in the passing air and earns low-emission vehicles an NMOG credit. CARB section (e)(14) requires the OBD system to detect a missing or deteriorated DOR function. No manufacturer publicly documents P2567 itself. VW's 2014 books (CC, Tiguan) use the sibling codes P2568-P2570 for radiator sensor G611, which reports an ID and temperature over LIN, and MINI fits a comparable sensor on the radiator of B46M PZEV engines to confirm the coated radiator. P2568 is the plausibility fault, P2569-P2571 low, high and intermittent. Often the radiator with its bonded sensor is replaced.
+    de: P2567 ist der allgemeine Kreisfehler des Sensors an einem Kühler mit Direkt-Ozonreduktion (DOR) - einem Kühler mit katalytischer Beschichtung, die bodennahes Ozon in der durchströmenden Luft umwandelt und schadstoffarmen Fahrzeugen eine NMOG-Gutschrift einbringt. CARB verlangt in Abschnitt (e)(14), dass das OBD-System eine fehlende oder nachlassende DOR-Wirkung erkennt. Kein Hersteller dokumentiert P2567 selbst öffentlich. VWs Datenbücher 2014 (CC, Tiguan) nutzen die Geschwister P2568-P2570 für den Kühlersensor G611, der Kennung und Temperatur per LIN meldet; MINI setzt bei B46M-PZEV-Motoren einen vergleichbaren Sensor am Kühler ein, der den beschichteten Kühler bestätigt. P2568 ist der Plausibilitätsfehler, P2569-P2571 niedrig, hoch und sporadisch. Häufig wird der Kühler samt verklebtem Sensor getauscht.
   affected_components:
-    - turbocharger_position_sensor
-    - turbocharger_actuator_wiring
+    - dor_temperature_sensor
+    - radiator
+    - lin_bus
   common_causes:
-    - id: signal_short_to_ground
+    - id: sensor_failed
       likelihood: high
       label:
-        en: Signal wire shorted to ground
-        de: Signalleitung gegen Masse kurzgeschlossen
-    - id: turbo_pos_sensor_failed_low
+        en: Failed radiator identification/temperature sensor
+        de: Defekter Kennungs-/Temperatursensor am Kühler
+    - id: wiring_fault
       likelihood: medium
       label:
-        en: Sensor failed low
-        de: Sensor mit Niedrig-Defekt
-    - id: connector_corrosion
-      likelihood: low
+        en: Damaged sensor wiring or connector at the radiator
+        de: Beschädigte Sensorleitung oder Stecker am Kühler
+    - id: non_coated_radiator
+      likelihood: medium
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Replacement radiator without coating or without sensor fitted
+        de: Ersatzkühler ohne Beschichtung oder ohne Sensor verbaut
   symptoms:
-    - en: 'Charge status indicator shows fault'
-      de: 'Ladestatus-Anzeige zeigt Fehler'
-    - en: 'Charging may not start or interrupts'
-      de: 'Ladevorgang startet nicht oder bricht ab'
-    - en: 'Slower-than-expected charge rate'
-      de: 'Langsamerer Ladevorgang als erwartet'
+    - en: Check engine light
+      de: Motorkontrollleuchte an
+    - en: No change in driveability or engine cooling
+      de: Keine Änderung an Fahrverhalten oder Motorkühlung
+    - en: Possible failed emissions inspection because of the stored code
+      de: Möglicherweise nicht bestandene Abgasuntersuchung wegen des gespeicherten Codes
   repair:
-    difficulty: hard
+    difficulty: medium
     diy_possible: false
-    estimated_cost_eur: [200, 1800]
-    estimated_hours: [1.0, 5.0]
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-    limp_mode_possible: true
-  related_codes: [P2563]
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2568, P2569, P2570, P2571]
   sources:
-    - https://en.wikipedia.org/wiki/Turbocharger
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10119356-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10179826-9999.pdf
+  reviewed: '2026-11-02'
 
 - code: P2568
   category: powertrain
   title:
     en: Direct Ozone Reduction Catalyst Temperature Sensor Circuit Range/Performance
-    de: Direkt-Ozonreduktions-Katalysator Temperatursensor Stromkreis Bereich/Plausibilität
+    de: Direkt-Ozonreduktions-Katalysator Temperatursensor Stromkreis Plausibilität/Funktion
   description:
-    en: The turbocharger position sensor signal is above the upper limit — short to supply, open ground or sensor failed high.
-    de: Das Signal des Turbolader-Stellungssensors liegt über dem oberen Grenzwert — Kurzschluss nach Plus, offene Masse oder defekter Sensor mit Hoch-Fehler.
+    en: P2568 is the plausibility check of the sensor on a direct ozone reduction (DOR) radiator, whose coating converts ozone in the cooling air. VW's 2014 specification books for the CC and Tiguan set it on a failed ID check or a failed functional check of the temperature sensor. VW Tech Tip 19-12-01 explains that on 2009-2015 Eos, Jetta, GTI, Passat and Tiguan with the 2.0 L TSI (CCTA, CBFA) this code refers to the radiator identification sensor G611; a new radiator comes with the sensor packed separately, to be bonded on. A non-coated aftermarket radiator or an unbonded sensor therefore triggers P2568. P2569/P2570 are LIN electrical faults, P2567 the general circuit fault. CARB section (e)(14) requires DOR monitoring.
+    de: P2568 ist die Plausibilitätsprüfung des Sensors an einem Kühler mit Direkt-Ozonreduktion (DOR), dessen Beschichtung Ozon in der Kühlluft umsetzt. VWs Datenbücher 2014 für CC und Tiguan setzen ihn, wenn die Kennungsprüfung oder die Funktionsprüfung des Temperatursensors scheitert. VWs Tech Tip 19-12-01 erläutert, dass der Code bei Eos, Jetta, GTI, Passat und Tiguan 2009-2015 mit 2,0-l-TSI (CCTA, CBFA) den Kühler-Kennungssensor G611 meint; ein neuer Kühler wird mit lose beigelegtem Sensor geliefert, der aufzukleben ist. Ein unbeschichteter Nachbaukühler oder ein nicht montierter Sensor löst P2568 daher aus. P2569/P2570 sind elektrische LIN-Fehler, P2567 der allgemeine Kreisfehler. CARB verlangt in Abschnitt (e)(14) die Überwachung der DOR-Funktion.
   affected_components:
-    - turbocharger_position_sensor
-    - turbocharger_actuator_wiring
+    - dor_temperature_sensor
+    - radiator
+    - lin_bus
   common_causes:
-    - id: signal_short_to_supply
+    - id: non_coated_radiator
       likelihood: high
       label:
-        en: Signal wire shorted to supply
-        de: Signalleitung gegen Plus kurzgeschlossen
-    - id: turbo_pos_sensor_failed_high
+        en: Aftermarket radiator without ozone coating or without the identification sensor
+        de: Nachbaukühler ohne Ozonbeschichtung oder ohne Kennungssensor
+    - id: sensor_not_bonded
       likelihood: medium
       label:
-        en: Sensor failed high
-        de: Sensor mit Hoch-Defekt
-    - id: connector_corrosion
-      likelihood: low
+        en: Identification sensor not bonded after radiator replacement
+        de: Kennungssensor nach Kühlertausch nicht aufgeklebt
+    - id: sensor_failed
+      likelihood: medium
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Identification/temperature sensor failed its self-test
+        de: Kennungs-/Temperatursensor besteht die Eigenprüfung nicht
   symptoms:
-    - en: 'Charge status indicator shows fault'
-      de: 'Ladestatus-Anzeige zeigt Fehler'
-    - en: 'Charging may not start or interrupts'
-      de: 'Ladevorgang startet nicht oder bricht ab'
-    - en: 'Slower-than-expected charge rate'
-      de: 'Langsamerer Ladevorgang als erwartet'
+    - en: Check engine light, often after a radiator replacement
+      de: Motorkontrollleuchte, oft nach einem Kühlertausch
+    - en: No change in driveability or engine cooling
+      de: Keine Änderung an Fahrverhalten oder Motorkühlung
+    - en: Possible failed emissions inspection
+      de: Möglicherweise nicht bestandene Abgasuntersuchung
   repair:
-    difficulty: hard
+    difficulty: medium
     diy_possible: false
-    estimated_cost_eur: [200, 1800]
-    estimated_hours: [1.0, 5.0]
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
-    limp_mode_possible: true
-  related_codes: [P2563]
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2567, P2569, P2570, P2571]
   sources:
-    - https://en.wikipedia.org/wiki/Turbocharger
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10119356-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10122272-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2015/MC-10122979-9999.pdf
+  reviewed: '2026-11-02'
 
 - code: P2569
   category: powertrain
@@ -66405,129 +66651,172 @@
   category: powertrain
   title:
     en: Coolant Pump A Control Circuit Low
-    de: Kühlmittelpumpe A Steuerkreis zu niedrig
+    de: Kühlmittelpumpe A Steuerkreis niedrig
   description:
-    en: The ECU detects an open circuit on the electric coolant pump control line. Without pump control the engine cannot actively manage warm-up and cool-down phases.
-    de: Die Motorsteuerung erkennt eine Unterbrechung im Steuerkreis der elektrischen Kühlmittelpumpe. Ohne Pumpenansteuerung kann der Motor Aufwärm- und Abkühlphasen nicht aktiv regeln.
+    en: "P2602 reports that the control circuit of electric coolant pump A reads low - a short to ground, or a corresponding report from the driver stage. Which pump is A varies: Ford's 2020-2023 gasoline OBD summary defines it as the auxiliary pump of the high-temperature loop for cabin heating, checked continuously over 5 s above 11 V; GM's 2008 3.6 L LLT table uses an after-run pump (P2602 = circuit to ground, stored only as pending code without warning light). VW's 2014 books set it below about 3.0 V on the Passat and CC and below 2.8-3.2 V on the Touareg. P2600 is the open circuit, P2601 the performance fault, P2603 the high-side fault. Without the pump, heater output or after-run cooling of a hot engine may suffer."
+    de: "P2602 meldet, dass der Steuerkreis der elektrischen Kühlmittelpumpe A zu niedrig liegt - Masseschluss oder eine entsprechende Meldung der Endstufe. Welche Pumpe A ist, unterscheidet sich: Fords OBD-Übersicht für Benziner 2020-2023 definiert sie als Zusatzpumpe des Hochtemperaturkreises für die Innenraumheizung, ständig geprüft mit 5-s-Fenster ab 11 V Bordspannung; GMs Tabelle für den 3,6-l-LLT (2008) nutzt eine Nachlaufpumpe (P2602 = Schluss nach Masse, nur als vorläufiger Code ohne Warnleuchte). VWs Datenbücher 2014 setzen den Code unter etwa 3,0 V bei Passat und CC und unter 2,8-3,2 V beim Touareg. P2600 ist die Unterbrechung, P2601 der Funktionsfehler, P2603 der Fehler zu hoch. Ohne Pumpe leiden Heizleistung oder der Nachlauf eines heißen Motors."
   affected_components:
-    - electric_coolant_pump
-    - coolant_pump_wiring
+    - coolant_pump_a
+    - actuator_wiring
+    - ecm
   common_causes:
-    - id: coolant_pump_coil_open
+    - id: short_to_ground
       likelihood: high
       label:
-        en: Pump motor open
-        de: Pumpenmotor unterbrochen
-    - id: signal_wire_open
+        en: Control wire shorted to ground
+        de: Steuerleitung mit Masseschluss
+    - id: pump_internal_fault
       likelihood: medium
       label:
-        en: Drive line open
-        de: Ansteuerleitung unterbrochen
-    - id: connector_back_out
+        en: Internal fault in the electric coolant pump or its electronics
+        de: Innerer Defekt der elektrischen Kühlmittelpumpe oder ihrer Elektronik
+    - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Pin pushed back out of connector body'
-        de: 'Pin aus dem Steckergehäuse zurückgedrückt'
+        en: Coolant or water ingress into the pump connector
+        de: Kühlmittel oder Wasser im Pumpenstecker
+  symptoms:
+    - en: Fault code stored; warning light depends on manufacturer (none at GM)
+      de: Fehlercode gespeichert; Warnleuchte herstellerabhängig (bei GM keine)
+    - en: Weak cabin heating
+      de: Schwache Innenraumheizung
+    - en: No after-run of the pump after a hot shutdown
+      de: Kein Pumpennachlauf nach Abstellen des heißen Motors
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [120, 700]
+    estimated_cost_eur: [60, 500]
     estimated_hours: [0.5, 2.5]
   flags:
-    mil: true
+    mil: false
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2600, P2601, P2603]
   sources:
-    - https://en.wikipedia.org/wiki/Engine_coolant_temperature_sensor
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2008/08%20GRP02%20LLT%20Engine.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10074004-2280.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10074008-2280.pdf
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBD-Operations-Summary-Gasoline-2020-2023.pdf
+  reviewed: '2026-11-02'
 
 - code: P2603
   category: powertrain
   title:
     en: Coolant Pump A Control Circuit High
-    de: Kühlmittelpumpe A Steuerkreis zu hoch
+    de: Kühlmittelpumpe A Steuerkreis hoch
   description:
-    en: The electric coolant pump drive line reads below the lower threshold — typically a short to ground or a failed driver stage.
-    de: Die Ansteuerleitung der elektrischen Kühlmittelpumpe liegt unter dem unteren Schwellwert — typischerweise Massekurzschluss oder defekte Endstufe.
+    en: "P2603 means the control circuit of electric coolant pump A reads high - typically a short to battery voltage, or an overcurrent seen by the driver stage. Ford's 2020-2023 gasoline OBD summary assigns pump A to the auxiliary high-temperature loop for cabin heating and sets P2602/P2603 when the smart driver reports a fault within 5 s. GM's 2008 3.6 L LLT table monitors its after-run pump for a circuit fault to voltage (pending code only, no warning light). VW's 2014 books use a current threshold: about 0.60-1.20 A on the Passat and CC, 5.5-10 A on the Touareg. CARB requires output components to be checked for circuit faults. P2600 is the open circuit, P2601 performance, P2602 the low-side fault. Heater output or after-run cooling may be lost."
+    de: "P2603 bedeutet, dass der Steuerkreis der elektrischen Kühlmittelpumpe A zu hoch liegt - meist Plusschluss oder ein von der Endstufe erkannter Überstrom. Fords OBD-Übersicht für Benziner 2020-2023 ordnet Pumpe A dem Hochtemperaturkreis der Innenraumheizung zu und setzt P2602/P2603, wenn die intelligente Endstufe binnen 5 s einen Fehler meldet. GMs Tabelle für den 3,6-l-LLT (2008) überwacht die Nachlaufpumpe auf Schluss nach Plus (nur vorläufiger Code, keine Warnleuchte). VWs Datenbücher 2014 arbeiten mit einer Stromschwelle: etwa 0,60-1,20 A bei Passat und CC, 5,5-10 A beim Touareg. CARB verlangt die Prüfung von Ausgangskomponenten auf Kreisfehler. P2600 ist die Unterbrechung, P2601 der Funktionsfehler, P2602 der Fehler zu niedrig. Heizleistung oder Nachlaufkühlung können ausfallen."
   affected_components:
-    - electric_coolant_pump
-    - coolant_pump_wiring
+    - coolant_pump_a
+    - actuator_wiring
+    - ecm
   common_causes:
-    - id: signal_short_to_ground
+    - id: short_to_voltage
       likelihood: high
       label:
-        en: Drive line shorted to ground
-        de: Ansteuerleitung gegen Masse kurzgeschlossen
-    - id: driver_stage_failed
+        en: Control wire shorted to battery voltage
+        de: Steuerleitung mit Plusschluss
+    - id: pump_seized
       likelihood: medium
       label:
-        en: Driver stage failed
-        de: Endstufe defekt
-    - id: connector_corrosion
+        en: Seized or sluggish pump drawing excessive current
+        de: Festgegangene oder schwergängige Pumpe mit zu hoher Stromaufnahme
+    - id: ecm_driver_fault
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Faulty driver stage in the ECM
+        de: Defekte Endstufe im Steuergerät
+  symptoms:
+    - en: Fault code stored; warning light depends on manufacturer (none at GM)
+      de: Fehlercode gespeichert; Warnleuchte herstellerabhängig (bei GM keine)
+    - en: Weak cabin heating
+      de: Schwache Innenraumheizung
+    - en: Higher coolant temperature after hot shutdown
+      de: Erhöhte Kühlmitteltemperatur nach Abstellen des heißen Motors
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [120, 700]
+    estimated_cost_eur: [60, 500]
     estimated_hours: [0.5, 2.5]
   flags:
-    mil: true
+    mil: false
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2602]
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2600, P2601, P2602]
   sources:
-    - https://en.wikipedia.org/wiki/Engine_coolant_temperature_sensor
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2008/08%20GRP02%20LLT%20Engine.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10119356-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10074008-2280.pdf
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBD-Operations-Summary-Gasoline-2020-2023.pdf
+  reviewed: '2026-11-02'
 
 - code: P2604
   category: powertrain
   title:
     en: Intake Air Heater A Circuit Range/Performance
-    de: Ansauglufterhitzer A Stromkreis Bereich/Plausibilität
+    de: Ansaugluftheizung A Stromkreis Plausibilität/Funktion
   description:
-    en: The electric coolant pump drive line reads above the upper threshold — usually a short to positive or a stuck-on driver stage.
-    de: Die Ansteuerleitung der elektrischen Kühlmittelpumpe liegt über dem oberen Schwellwert — meist Kurzschluss nach Plus oder eine durchlegierte Endstufe.
+    en: P2604 is the functional check of intake air heater A - the grid heater in the intake that warms the charge air of a diesel engine for cold starts. The circuit responds, but current, voltage drop or heating effect do not match the command. CARB requires glow plugs and intake air heaters to be monitored for proper functional response and for correct current and voltage drop. Volvo's heavy-truck engine bulletins (2020, 2022) list P2604-7F among the codes caused by a weak pre-heat relay and fix it with a software update, a check of terminal tension at heater and relay, and a new relay plus supply cable. P0540-P0543 cover the electrical faults of heater A, P2605-P2608 heater B, P2609 the system. Expect hard cold starts and white smoke.
+    de: P2604 ist die Funktionsprüfung der Ansaugluftheizung A - des Heizgitters im Ansaugtrakt, das beim Dieselmotor die Ladeluft für den Kaltstart erwärmt. Der Kreis reagiert, aber Strom, Spannungsabfall oder Heizwirkung passen nicht zur Ansteuerung. CARB verlangt, Glühkerzen und Ansaugluftheizungen auf korrekte Funktion sowie auf richtigen Strom und Spannungsabfall zu überwachen. Volvos Bulletins für schwere Lkw (2020, 2022) führen P2604-7F unter den Codes, die ein schwächelndes Vorglührelais auslöst, und beheben sie per Software-Update, Prüfung der Kontaktspannung an Heizelement und Relais sowie neuem Relais samt Versorgungskabel. P0540-P0543 decken die elektrischen Fehler der Heizung A ab, P2605-P2608 die Heizung B, P2609 das System. Zu erwarten sind schlechte Kaltstarts und weißer Rauch.
   affected_components:
-    - electric_coolant_pump
-    - coolant_pump_wiring
+    - intake_air_heater
+    - intake_air_heater_relay
+    - heater_wiring
   common_causes:
-    - id: signal_short_to_power
+    - id: heater_relay_fault
       likelihood: high
       label:
-        en: Drive line shorted to positive
-        de: Ansteuerleitung nach Plus kurzgeschlossen
-    - id: driver_stage_shorted
+        en: Worn or sticking intake air heater relay
+        de: Verschlissenes oder klemmendes Relais der Ansaugluftheizung
+    - id: loose_terminals
       likelihood: medium
       label:
-        en: Driver stage shorted on
-        de: Endstufe durchlegiert
-    - id: connector_corrosion
+        en: Loose or burnt terminals on the heater supply cable
+        de: Lockere oder verschmorte Anschlüsse am Versorgungskabel der Heizung
+    - id: heater_element_degraded
+      likelihood: medium
+      label:
+        en: Degraded or partly open heater grid
+        de: Gealtertes oder teilweise unterbrochenes Heizgitter
+    - id: software_calibration
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Outdated engine software (manufacturer update available)
+        de: Veraltete Motorsoftware (Hersteller-Update verfügbar)
+  symptoms:
+    - en: Hard starting in cold weather
+      de: Schlechtes Anspringen bei Kälte
+    - en: White smoke and rough running after a cold start
+      de: Weißer Rauch und unrunder Lauf nach dem Kaltstart
+    - en: Check engine light
+      de: Motorkontrollleuchte an
   repair:
     difficulty: medium
-    diy_possible: true
-    estimated_cost_eur: [120, 700]
-    estimated_hours: [0.5, 2.5]
+    diy_possible: false
+    estimated_cost_eur: [80, 600]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
-  related_codes: [P2602, P2603]
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P0540, P0541, P0542, P0543, P2605, P2609]
   sources:
-    - https://en.wikipedia.org/wiki/Engine_coolant_temperature_sensor
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10179298-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2022/MC-10219414-0001.pdf
+  reviewed: '2026-11-02'
 
 - code: P2605
   category: powertrain
