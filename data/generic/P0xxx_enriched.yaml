@@ -215950,30 +215950,14 @@
 - code: P0FFF
   category: powertrain
   title:
-    en: Reserved Powertrain Fault
-    de: Reservierter Antriebsstrang-Fehler
+    en: Not Documented - No Defined Meaning
+    de: Nicht belegt - keine festgelegte Bedeutung
   description:
-    en: Manufacturer-specific reserved code in the SAE generic range used as catch-all for hybrid system faults that do not map to a more specific defined code. Should be diagnosed using the freeze frame data and any additional manufacturer codes.
-    de: Herstellerspezifischer reservierter Code im SAE-Generic-Bereich als Sammelcode für Hybridsystemfehler, die keinem spezifischeren Code zugeordnet sind. Diagnose erfolgt anhand der Freeze-Frame-Daten und ergänzender Herstellercodes.
-  affected_components:
-    - hybrid_control_module
-  common_causes:
-    - id: unspecified_fault
-      likelihood: medium
-      label:
-        en: Unspecified hybrid system fault
-        de: Nicht näher spezifizierter Hybridsystemfehler
-  repair:
-    difficulty: shop_only
-    diy_possible: false
-    estimated_cost_eur: [200, 5000]
-    estimated_hours: [1.0, 16.0]
-  flags:
-    mil: true
-    emissions_relevant: false
-    drive_cycle_required: false
+    en: P0FFF has no documented meaning. The published code lists for SAE J2012 end the P0 range at P0EFE, and the block P0F00 onward is held back by ISO and SAE as reserved. No vehicle maker, no regulator filing and no service bulletin in the NHTSA archive uses P0FFF. A meaning sometimes shown online belongs to a different code. If a scan tool reports P0FFF, the likely causes are a reading error, a tool with a faulty code table or a maker-specific code shown with the wrong prefix; check the raw data and the manufacturer's own code list.
+    de: Für P0FFF gibt es keine belegte Bedeutung. Die veröffentlichten Code-Listen zu SAE J2012 enden im P0-Bereich bei P0EFE, der Block ab P0F00 ist von ISO und SAE als reserviert zurückgehalten. Kein Fahrzeughersteller, keine Zulassungsunterlage und kein Bulletin im NHTSA-Archiv nutzt P0FFF. Eine im Netz kursierende Bedeutung gehört zu einem anderen Code. Zeigt ein Diagnosegerät P0FFF an, steckt meist ein Lesefehler, eine fehlerhafte Codetabelle im Gerät oder ein Herstellercode mit falschem Präfix dahinter; Rohdaten und die Codeliste des Herstellers prüfen.
   references:
     - sae:J2012
   sources:
-    - https://en.wikipedia.org/wiki/OBD-II_PIDs
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://raw.githubusercontent.com/Wal33D/dtc-database/main/data/source-data/p_codes.txt
+    - https://cdn.mycarly.com/sitemaps/obd-codes/sitemap_en.xml
+  reviewed: '2026-11-03'
