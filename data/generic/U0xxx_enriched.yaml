@@ -1386,150 +1386,150 @@
 - code: U0029
   category: network
   title:
-    en: Vehicle Communication Bus B
-    de: Fahrzeug-Kommunikationsbus B
+    en: Vehicle Communication Bus A Performance
+    de: Fahrzeug-Kommunikationsbus A Leistung
   description:
-    en: Generic fault on vehicle communication bus B. Used as a catch-all for unspecified problems on a secondary CAN/comfort segment.
-    de: Allgemeiner Fehler am Fahrzeug-Kommunikationsbus B. Wird als Sammelfehler für unspezifische Probleme an einem zweiten CAN-/Komfort-Segment verwendet.
+    en: "U0029 reports degraded communication although no hard wiring fault is identified: frames get lost, error counters rise or messages arrive late on vehicle communication bus A. SAE J2012 gives each vehicle bus a block of codes: the bus itself, performance, then open, low and high for the (+) and the (-) line and a short between them; which physical network carries which letter is set by the manufacturer. Modules on the affected bus may stop exchanging data, so lost-communication codes and warning lights in several systems usually appear together."
+    de: "U0029 meldet gestörte Kommunikation, obwohl kein eindeutiger Leitungsfehler vorliegt: Botschaften gehen verloren, Fehlerzähler steigen oder Nachrichten kommen verspätet am Fahrzeug-Kommunikationsbus A. SAE J2012 vergibt für jeden Fahrzeugbus einen Codeblock: den Bus selbst, die Leistung, dann unterbrochen, niedrig und hoch für die (+)- und die (-)-Leitung sowie einen Kurzschluss zwischen beiden; welches physische Netz welchen Buchstaben trägt, legt der Hersteller fest. Steuergeräte am betroffenen Bus tauschen unter Umständen keine Daten mehr aus, daher treten meist Kommunikationsverlust-Codes und Warnleuchten in mehreren Systemen gemeinsam auf."
   affected_components:
-    - can_bus_wiring
-    - control_module
+    - bus_a_wiring
   common_causes:
-    - id: intermittent_wiring
+    - id: intermittent_connector
       likelihood: high
       label:
-        en: Intermittent wiring fault on bus B
-        de: Sporadischer Leitungsfehler an Bus B
-    - id: gateway_module_fault
+        en: Intermittent contact in a bus connector
+        de: Wackelkontakt in einem Busstecker
+    - id: termination_fault
+      likelihood: medium
+      label:
+        en: Missing or faulty bus termination
+        de: Fehlender oder defekter Busabschluss
+    - id: disturbing_node
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: A defective module disturbing the bus
+        de: Defektes Steuergerät stört den Bus
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Several warning lights at once
+      de: Mehrere Warnleuchten gleichzeitig
+    - en: Lost-communication codes stored in other modules
+      de: Kommunikationsverlust-Codes in anderen Steuergeräten
+    - en: Functions of modules on this bus inoperative
+      de: Funktionen der Steuergeräte an diesem Bus außer Betrieb
+    - en: Scan tool cannot reach some modules
+      de: Diagnosegerät erreicht einzelne Steuergeräte nicht
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [80, 700]
-    estimated_hours: [1.0, 5.0]
+    estimated_hours: [1, 5]
   flags:
     mil: true
   references:
     - sae:J2012
     - iso:11898
-  related_codes: [U0028, U0037, U0046, U0055, U0064, U0089, U009B, U009D]
+  related_codes: [U0028, U0030, U0031, U0032, U0033, U0034, U0035, U0036]
   sources:
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0030
   category: network
   title:
-    en: Powertrain Sensor Data Bus
-    de: Antriebsstrang-Sensordatenbus
+    en: Vehicle Communication Bus A (+) Open
+    de: Fahrzeug-Kommunikationsbus A (+) unterbrochen
   description:
-    en: A fault has been detected on the dedicated powertrain sensor data bus (a sub-bus used for high-speed sensor data such as crank, knock or wheel-speed). Symptoms range from rough running to limp-home, depending on which sensor stream is missing.
-    de: Auf dem speziellen Antriebsstrang-Sensordatenbus (ein Sub-Bus für schnelle Sensordaten wie Kurbelwellen-, Klopf- oder Raddrehzahlsensoren) wurde ein Fehler erkannt. Symptome reichen von unruhigem Lauf bis Notlauf, je nachdem welcher Sensor-Datenstrom fehlt.
+    en: "U0030 reports an open circuit in the (+) line on vehicle communication bus A. SAE J2012 gives each vehicle bus a block of codes: the bus itself, performance, then open, low and high for the (+) and the (-) line and a short between them; which physical network carries which letter is set by the manufacturer. On CAN networks (+) normally stands for CAN-High and (-) for CAN-Low. Modules on the affected bus may stop exchanging data, so lost-communication codes and warning lights in several systems usually appear together."
+    de: "U0030 meldet eine Unterbrechung der (+)-Leitung am Fahrzeug-Kommunikationsbus A. SAE J2012 vergibt für jeden Fahrzeugbus einen Codeblock: den Bus selbst, die Leistung, dann unterbrochen, niedrig und hoch für die (+)- und die (-)-Leitung sowie einen Kurzschluss zwischen beiden; welches physische Netz welchen Buchstaben trägt, legt der Hersteller fest. Bei CAN-Netzen steht (+) üblicherweise für CAN-High und (-) für CAN-Low. Steuergeräte am betroffenen Bus tauschen unter Umständen keine Daten mehr aus, daher treten meist Kommunikationsverlust-Codes und Warnleuchten in mehreren Systemen gemeinsam auf."
   affected_components:
-    - sensor_data_bus
-    - can_bus_wiring
+    - bus_a_wiring
   common_causes:
-    - id: sensor_bus_wiring
+    - id: open_wiring
       likelihood: high
       label:
-        en: Sensor data bus wiring damaged
-        de: Sensor-Datenbus-Verkabelung beschädigt
-    - id: sensor_module_failed
+        en: Broken (+) wire or unplugged connector
+        de: Gebrochene (+)-Leitung oder abgezogener Stecker
+    - id: connector_corrosion
       likelihood: medium
       label:
-        en: Sensor module on bus failed
-        de: Sensor-Modul am Bus defekt
-    - id: gateway_module_fault
-      likelihood: low
-      label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Corroded or pushed-back connector pin
+        de: Korrodierter oder zurückgeschobener Steckerpin
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Several warning lights at once
+      de: Mehrere Warnleuchten gleichzeitig
+    - en: Lost-communication codes stored in other modules
+      de: Kommunikationsverlust-Codes in anderen Steuergeräten
+    - en: Functions of modules on this bus inoperative
+      de: Funktionen der Steuergeräte an diesem Bus außer Betrieb
+    - en: Scan tool cannot reach some modules
+      de: Diagnosegerät erreicht einzelne Steuergeräte nicht
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [80, 1500]
-    estimated_hours: [1.0, 6.0]
+    estimated_hours: [1, 6]
   flags:
     mil: true
     emissions_relevant: false
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0028, U0029, U0031, U0032, U0033, U0034, U0035, U0036]
   sources:
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0031
   category: network
   title:
-    en: Vehicle Communication Bus C (+) Open
-    de: Fahrzeug-Kommunikationsbus C (+) unterbrochen
+    en: Vehicle Communication Bus A (+) Low
+    de: Fahrzeug-Kommunikationsbus A (+) niedrig
   description:
-    en: 'The plus line of vehicle bus C is open. Modules sharing this segment drop offline. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Die Plus-Leitung des Fahrzeugbus C ist unterbrochen. Module dieses Segments fallen aus. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: "U0031 reports the (+) line held at too low a voltage, usually because it is shorted to ground on vehicle communication bus A. SAE J2012 gives each vehicle bus a block of codes: the bus itself, performance, then open, low and high for the (+) and the (-) line and a short between them; which physical network carries which letter is set by the manufacturer. On CAN networks (+) normally stands for CAN-High and (-) for CAN-Low. Modules on the affected bus may stop exchanging data, so lost-communication codes and warning lights in several systems usually appear together."
+    de: "U0031 meldet eine zu niedrige Spannung auf der (+)-Leitung, meist durch Masseschluss am Fahrzeug-Kommunikationsbus A. SAE J2012 vergibt für jeden Fahrzeugbus einen Codeblock: den Bus selbst, die Leistung, dann unterbrochen, niedrig und hoch für die (+)- und die (-)-Leitung sowie einen Kurzschluss zwischen beiden; welches physische Netz welchen Buchstaben trägt, legt der Hersteller fest. Bei CAN-Netzen steht (+) üblicherweise für CAN-High und (-) für CAN-Low. Steuergeräte am betroffenen Bus tauschen unter Umständen keine Daten mehr aus, daher treten meist Kommunikationsverlust-Codes und Warnleuchten in mehreren Systemen gemeinsam auf."
   affected_components:
-    - can_high_wire
+    - bus_a_wiring
   common_causes:
-    - id: canh_open
+    - id: short_to_ground
       likelihood: high
       label:
-        en: Bus-C high wire broken
-        de: Bus-C-High-Leitung unterbrochen
-    - id: gateway_module_fault
+        en: (+) wire shorted to ground
+        de: (+)-Leitung mit Masseschluss
+    - id: harness_chafe
+      likelihood: medium
+      label:
+        en: Harness chafed through
+        de: Kabelbaum durchgescheuert
+    - id: transceiver_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Failed bus transceiver in a module
+        de: Defekter Bus-Transceiver in einem Steuergerät
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Several warning lights at once
+      de: Mehrere Warnleuchten gleichzeitig
+    - en: Lost-communication codes stored in other modules
+      de: Kommunikationsverlust-Codes in anderen Steuergeräten
+    - en: Functions of modules on this bus inoperative
+      de: Funktionen der Steuergeräte an diesem Bus außer Betrieb
+    - en: Scan tool cannot reach some modules
+      de: Diagnosegerät erreicht einzelne Steuergeräte nicht
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [80, 700]
-    estimated_hours: [1.0, 5.0]
+    estimated_hours: [1, 5]
   flags:
     mil: true
   references:
     - sae:J2012
     - iso:11898
-  related_codes: [U0039, U0042, U0048, U0050, U0057, U0060, U0066, U0078, U008B, U0094]
+  related_codes: [U0028, U0029, U0030, U0032, U0033, U0034, U0035, U0036]
   sources:
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0032
@@ -1956,44 +1956,43 @@
 - code: U0040
   category: network
   title:
-    en: Communication Bus Off
-    de: Kommunikationsbus abgeschaltet
+    en: Vehicle Communication Bus B (+) Low
+    de: Fahrzeug-Kommunikationsbus B (+) niedrig
   description:
-    en: A control module has counted enough transmit errors to enter the bus-off state defined by ISO 11898 and stops transmitting on the bus. Multiple modules typically lose communication and several warning lamps illuminate at once.
-    de: Ein Steuergerät hat genug Sendefehler gezählt, um den in ISO 11898 definierten Bus-Off-Zustand einzunehmen, und stellt das Senden auf dem Bus ein. Mehrere Steuergeräte verlieren typischerweise die Kommunikation und mehrere Warnleuchten leuchten gleichzeitig.
+    en: "U0040 reports the (+) line held at too low a voltage, usually because it is shorted to ground on vehicle communication bus B. SAE J2012 gives each vehicle bus a block of codes: the bus itself, performance, then open, low and high for the (+) and the (-) line and a short between them; which physical network carries which letter is set by the manufacturer. On CAN networks (+) normally stands for CAN-High and (-) for CAN-Low. Modules on the affected bus may stop exchanging data, so lost-communication codes and warning lights in several systems usually appear together."
+    de: "U0040 meldet eine zu niedrige Spannung auf der (+)-Leitung, meist durch Masseschluss am Fahrzeug-Kommunikationsbus B. SAE J2012 vergibt für jeden Fahrzeugbus einen Codeblock: den Bus selbst, die Leistung, dann unterbrochen, niedrig und hoch für die (+)- und die (-)-Leitung sowie einen Kurzschluss zwischen beiden; welches physische Netz welchen Buchstaben trägt, legt der Hersteller fest. Bei CAN-Netzen steht (+) üblicherweise für CAN-High und (-) für CAN-Low. Steuergeräte am betroffenen Bus tauschen unter Umständen keine Daten mehr aus, daher treten meist Kommunikationsverlust-Codes und Warnleuchten in mehreren Systemen gemeinsam auf."
   affected_components:
-    - can_bus_wiring
-    - can_terminating_resistor
+    - bus_b_wiring
   common_causes:
-    - id: can_short
+    - id: short_to_ground
       likelihood: high
       label:
-        en: CAN line shorted to supply or ground
-        de: CAN-Leitung gegen Versorgung oder Masse kurzgeschlossen
-    - id: terminating_resistor_failed
+        en: (+) wire shorted to ground
+        de: (+)-Leitung mit Masseschluss
+    - id: harness_chafe
       likelihood: medium
       label:
-        en: Terminating resistor failed
-        de: Abschlusswiderstand defekt
-    - id: gateway_module_fault
+        en: Harness chafed through
+        de: Kabelbaum durchgescheuert
+    - id: transceiver_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Failed bus transceiver in a module
+        de: Defekter Bus-Transceiver in einem Steuergerät
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Several warning lights at once
+      de: Mehrere Warnleuchten gleichzeitig
+    - en: Lost-communication codes stored in other modules
+      de: Kommunikationsverlust-Codes in anderen Steuergeräten
+    - en: Functions of modules on this bus inoperative
+      de: Funktionen der Steuergeräte an diesem Bus außer Betrieb
+    - en: Scan tool cannot reach some modules
+      de: Diagnosegerät erreicht einzelne Steuergeräte nicht
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [80, 1500]
-    estimated_hours: [1.0, 6.0]
+    estimated_hours: [1, 6]
   flags:
     mil: true
     emissions_relevant: false
@@ -2001,7 +2000,10 @@
   references:
     - sae:J2012
     - iso:11898
+  related_codes: [U0037, U0038, U0039, U0041, U0042, U0043, U0044, U0045]
   sources:
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0041
@@ -2060,51 +2062,47 @@
 - code: U0042
   category: network
   title:
-    en: Vehicle Communication Bus D (+) Open
-    de: Fahrzeug-Kommunikationsbus D (+) unterbrochen
+    en: Vehicle Communication Bus B (-) Open
+    de: Fahrzeug-Kommunikationsbus B (-) unterbrochen
   description:
-    en: The plus line of vehicle bus D is open. The fault is reported by the gateway when traffic from this segment disappears.
-    de: Die Plus-Leitung des Fahrzeugbus D ist unterbrochen. Der Fehler wird vom Gateway gemeldet, sobald der Datenverkehr aus diesem Segment ausfällt.
+    en: "U0042 reports an open circuit in the (-) line on vehicle communication bus B. SAE J2012 gives each vehicle bus a block of codes: the bus itself, performance, then open, low and high for the (+) and the (-) line and a short between them; which physical network carries which letter is set by the manufacturer. On CAN networks (+) normally stands for CAN-High and (-) for CAN-Low. Modules on the affected bus may stop exchanging data, so lost-communication codes and warning lights in several systems usually appear together."
+    de: "U0042 meldet eine Unterbrechung der (-)-Leitung am Fahrzeug-Kommunikationsbus B. SAE J2012 vergibt für jeden Fahrzeugbus einen Codeblock: den Bus selbst, die Leistung, dann unterbrochen, niedrig und hoch für die (+)- und die (-)-Leitung sowie einen Kurzschluss zwischen beiden; welches physische Netz welchen Buchstaben trägt, legt der Hersteller fest. Bei CAN-Netzen steht (+) üblicherweise für CAN-High und (-) für CAN-Low. Steuergeräte am betroffenen Bus tauschen unter Umständen keine Daten mehr aus, daher treten meist Kommunikationsverlust-Codes und Warnleuchten in mehreren Systemen gemeinsam auf."
   affected_components:
-    - can_high_wire
-    - gateway_module
+    - bus_b_wiring
   common_causes:
-    - id: canh_open
+    - id: open_wiring
       likelihood: high
       label:
-        en: Bus-D high wire broken
-        de: Bus-D-High-Leitung unterbrochen
-    - id: gateway_module_fault
-      likelihood: low
+        en: Broken (-) wire or unplugged connector
+        de: Gebrochene (-)-Leitung oder abgezogener Stecker
+    - id: connector_corrosion
+      likelihood: medium
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Corroded or pushed-back connector pin
+        de: Korrodierter oder zurückgeschobener Steckerpin
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Several warning lights at once
+      de: Mehrere Warnleuchten gleichzeitig
+    - en: Lost-communication codes stored in other modules
+      de: Kommunikationsverlust-Codes in anderen Steuergeräten
+    - en: Functions of modules on this bus inoperative
+      de: Funktionen der Steuergeräte an diesem Bus außer Betrieb
+    - en: Scan tool cannot reach some modules
+      de: Diagnosegerät erreicht einzelne Steuergeräte nicht
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [80, 700]
-    estimated_hours: [1.0, 5.0]
+    estimated_hours: [1, 5]
   flags:
     mil: true
   references:
     - sae:J2012
     - iso:11898
-  related_codes: [U0048, U0039, U0050, U0031, U0057, U0060, U0066, U0078, U008B, U0094]
+  related_codes: [U0037, U0038, U0039, U0040, U0041, U0043, U0044, U0045]
   sources:
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0043
@@ -2475,50 +2473,52 @@
 - code: U0050
   category: network
   title:
-    en: Vehicle Communication Bus E (+) Open
-    de: Fahrzeug-Kommunikationsbus E (+) unterbrochen
+    en: Vehicle Communication Bus C (+) High
+    de: Fahrzeug-Kommunikationsbus C (+) hoch
   description:
-    en: The plus line of vehicle bus E (often a secondary safety or chassis CAN) is open. Loss of this segment usually disables related convenience or chassis features.
-    de: Die Plus-Leitung des Fahrzeugbus E (oft sekundärer Sicherheits- oder Fahrwerks-CAN) ist unterbrochen. Der Ausfall dieses Segments deaktiviert meist die zugehörigen Komfort- oder Fahrwerksfunktionen.
+    en: "U0050 reports the (+) line held at too high a voltage, usually because it is shorted to battery voltage on vehicle communication bus C. SAE J2012 gives each vehicle bus a block of codes: the bus itself, performance, then open, low and high for the (+) and the (-) line and a short between them; which physical network carries which letter is set by the manufacturer. On CAN networks (+) normally stands for CAN-High and (-) for CAN-Low. Modules on the affected bus may stop exchanging data, so lost-communication codes and warning lights in several systems usually appear together."
+    de: "U0050 meldet eine zu hohe Spannung auf der (+)-Leitung, meist durch Kurzschluss nach Plus am Fahrzeug-Kommunikationsbus C. SAE J2012 vergibt für jeden Fahrzeugbus einen Codeblock: den Bus selbst, die Leistung, dann unterbrochen, niedrig und hoch für die (+)- und die (-)-Leitung sowie einen Kurzschluss zwischen beiden; welches physische Netz welchen Buchstaben trägt, legt der Hersteller fest. Bei CAN-Netzen steht (+) üblicherweise für CAN-High und (-) für CAN-Low. Steuergeräte am betroffenen Bus tauschen unter Umständen keine Daten mehr aus, daher treten meist Kommunikationsverlust-Codes und Warnleuchten in mehreren Systemen gemeinsam auf."
   affected_components:
-    - can_high_wire
+    - bus_c_wiring
   common_causes:
-    - id: canh_open
+    - id: short_to_battery
       likelihood: high
       label:
-        en: Bus-E high wire broken
-        de: Bus-E-High-Leitung unterbrochen
-    - id: gateway_module_fault
+        en: (+) wire shorted to battery voltage
+        de: (+)-Leitung mit Kurzschluss nach Plus
+    - id: harness_chafe
+      likelihood: medium
+      label:
+        en: Harness chafed through
+        de: Kabelbaum durchgescheuert
+    - id: transceiver_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Failed bus transceiver in a module
+        de: Defekter Bus-Transceiver in einem Steuergerät
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Several warning lights at once
+      de: Mehrere Warnleuchten gleichzeitig
+    - en: Lost-communication codes stored in other modules
+      de: Kommunikationsverlust-Codes in anderen Steuergeräten
+    - en: Functions of modules on this bus inoperative
+      de: Funktionen der Steuergeräte an diesem Bus außer Betrieb
+    - en: Scan tool cannot reach some modules
+      de: Diagnosegerät erreicht einzelne Steuergeräte nicht
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [80, 700]
-    estimated_hours: [1.0, 5.0]
+    estimated_hours: [1, 5]
   flags:
     mil: true
   references:
     - sae:J2012
     - iso:11898
-  related_codes: [U0057, U0048, U0042, U0060, U0066, U0039, U0031, U0078, U008B, U0094]
+  related_codes: [U0046, U0047, U0048, U0049, U0051, U0052, U0053, U0054]
   sources:
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0051
@@ -2993,50 +2993,47 @@
 - code: U0060
   category: network
   title:
-    en: Vehicle Communication Bus F (+) Open
-    de: Fahrzeug-Kommunikationsbus F (+) unterbrochen
+    en: Vehicle Communication Bus D (-) Open
+    de: Fahrzeug-Kommunikationsbus D (-) unterbrochen
   description:
-    en: The plus line of vehicle bus F is open. Used by some vehicles for body or infotainment subnets; loss disables those features.
-    de: Die Plus-Leitung des Fahrzeugbus F ist unterbrochen. Wird in einigen Fahrzeugen für Karosserie- oder Infotainment-Subnetze verwendet, beim Ausfall fallen diese Funktionen aus.
+    en: "U0060 reports an open circuit in the (-) line on vehicle communication bus D. SAE J2012 gives each vehicle bus a block of codes: the bus itself, performance, then open, low and high for the (+) and the (-) line and a short between them; which physical network carries which letter is set by the manufacturer. On CAN networks (+) normally stands for CAN-High and (-) for CAN-Low. Modules on the affected bus may stop exchanging data, so lost-communication codes and warning lights in several systems usually appear together."
+    de: "U0060 meldet eine Unterbrechung der (-)-Leitung am Fahrzeug-Kommunikationsbus D. SAE J2012 vergibt für jeden Fahrzeugbus einen Codeblock: den Bus selbst, die Leistung, dann unterbrochen, niedrig und hoch für die (+)- und die (-)-Leitung sowie einen Kurzschluss zwischen beiden; welches physische Netz welchen Buchstaben trägt, legt der Hersteller fest. Bei CAN-Netzen steht (+) üblicherweise für CAN-High und (-) für CAN-Low. Steuergeräte am betroffenen Bus tauschen unter Umständen keine Daten mehr aus, daher treten meist Kommunikationsverlust-Codes und Warnleuchten in mehreren Systemen gemeinsam auf."
   affected_components:
-    - can_high_wire
+    - bus_d_wiring
   common_causes:
-    - id: canh_open
+    - id: open_wiring
       likelihood: high
       label:
-        en: Bus-F high wire broken
-        de: Bus-F-High-Leitung unterbrochen
-    - id: gateway_module_fault
-      likelihood: low
+        en: Broken (-) wire or unplugged connector
+        de: Gebrochene (-)-Leitung oder abgezogener Stecker
+    - id: connector_corrosion
+      likelihood: medium
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Corroded or pushed-back connector pin
+        de: Korrodierter oder zurückgeschobener Steckerpin
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Several warning lights at once
+      de: Mehrere Warnleuchten gleichzeitig
+    - en: Lost-communication codes stored in other modules
+      de: Kommunikationsverlust-Codes in anderen Steuergeräten
+    - en: Functions of modules on this bus inoperative
+      de: Funktionen der Steuergeräte an diesem Bus außer Betrieb
+    - en: Scan tool cannot reach some modules
+      de: Diagnosegerät erreicht einzelne Steuergeräte nicht
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [80, 700]
-    estimated_hours: [1.0, 5.0]
+    estimated_hours: [1, 5]
   flags:
     mil: true
   references:
     - sae:J2012
     - iso:11898
-  related_codes: [U0066, U0057, U0050, U0048, U0078, U0042, U0039, U008B, U0031, U0094]
+  related_codes: [U0055, U0056, U0057, U0058, U0059, U0061, U0062, U0063]
   sources:
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0061
@@ -3511,150 +3508,156 @@
 - code: U0070
   category: network
   title:
-    en: Communication Bus "B" Performance
-    de: Kommunikationsbus "B" Leistungsfehler
+    en: Vehicle Communication Bus E (-) Low
+    de: Fahrzeug-Kommunikationsbus E (-) niedrig
   description:
-    en: The secondary communication bus (Bus B, often a chassis or comfort sub-bus) shows reduced performance — high error rate, intermittent dropouts, or framing errors. Bus is still alive but unreliable.
-    de: Der sekundäre Kommunikationsbus (Bus B, oft ein Fahrwerks- oder Komfort-Sub-Bus) zeigt reduzierte Leistung — hohe Fehlerrate, sporadische Ausfälle oder Framing-Fehler. Der Bus ist noch aktiv, aber unzuverlässig.
+    en: "U0070 reports the (-) line held at too low a voltage, usually because it is shorted to ground on vehicle communication bus E. SAE J2012 gives each vehicle bus a block of codes: the bus itself, performance, then open, low and high for the (+) and the (-) line and a short between them; which physical network carries which letter is set by the manufacturer. On CAN networks (+) normally stands for CAN-High and (-) for CAN-Low. Modules on the affected bus may stop exchanging data, so lost-communication codes and warning lights in several systems usually appear together."
+    de: "U0070 meldet eine zu niedrige Spannung auf der (-)-Leitung, meist durch Masseschluss am Fahrzeug-Kommunikationsbus E. SAE J2012 vergibt für jeden Fahrzeugbus einen Codeblock: den Bus selbst, die Leistung, dann unterbrochen, niedrig und hoch für die (+)- und die (-)-Leitung sowie einen Kurzschluss zwischen beiden; welches physische Netz welchen Buchstaben trägt, legt der Hersteller fest. Bei CAN-Netzen steht (+) üblicherweise für CAN-High und (-) für CAN-Low. Steuergeräte am betroffenen Bus tauschen unter Umständen keine Daten mehr aus, daher treten meist Kommunikationsverlust-Codes und Warnleuchten in mehreren Systemen gemeinsam auf."
   affected_components:
-    - can_bus_wiring
-    - can_terminating_resistor
+    - bus_e_wiring
   common_causes:
-    - id: marginal_wiring
+    - id: short_to_ground
       likelihood: high
       label:
-        en: Marginal wiring or corroded connector
-        de: Grenzwertige Verkabelung oder korrodierter Stecker
-    - id: emi_interference
+        en: (-) wire shorted to ground
+        de: (-)-Leitung mit Masseschluss
+    - id: harness_chafe
       likelihood: medium
       label:
-        en: EMI interference (aftermarket equipment)
-        de: EMV-Störung (Nachrüstausstattung)
-    - id: gateway_module_fault
+        en: Harness chafed through
+        de: Kabelbaum durchgescheuert
+    - id: transceiver_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Failed bus transceiver in a module
+        de: Defekter Bus-Transceiver in einem Steuergerät
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Several warning lights at once
+      de: Mehrere Warnleuchten gleichzeitig
+    - en: Lost-communication codes stored in other modules
+      de: Kommunikationsverlust-Codes in anderen Steuergeräten
+    - en: Functions of modules on this bus inoperative
+      de: Funktionen der Steuergeräte an diesem Bus außer Betrieb
+    - en: Scan tool cannot reach some modules
+      de: Diagnosegerät erreicht einzelne Steuergeräte nicht
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [80, 1200]
-    estimated_hours: [1.0, 5.0]
+    estimated_hours: [1, 5]
   flags:
     mil: true
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [U0064, U0065, U0066, U0067, U0068, U0069, U0071, U0072]
   sources:
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0071
   category: network
   title:
-    en: Vehicle Communication Bus A (+) Bus Off
-    de: Fahrzeug-Kommunikationsbus A (+) Bus-Off
+    en: Vehicle Communication Bus E (-) High
+    de: Fahrzeug-Kommunikationsbus E (-) hoch
   description:
-    en: The CAN controller for bus A has shut its plus driver after exceeding the SAE J2284 / ISO 11898 transmit error threshold. The node disconnects from the bus until error counters recover.
-    de: Der CAN-Controller für Bus A hat seinen Plus-Treiber abgeschaltet, nachdem die Sendefehler-Schwelle nach SAE J2284 / ISO 11898 überschritten wurde. Der Knoten trennt sich vom Bus, bis sich die Fehlerzähler erholen.
+    en: "U0071 reports the (-) line held at too high a voltage, usually because it is shorted to battery voltage on vehicle communication bus E. SAE J2012 gives each vehicle bus a block of codes: the bus itself, performance, then open, low and high for the (+) and the (-) line and a short between them; which physical network carries which letter is set by the manufacturer. On CAN networks (+) normally stands for CAN-High and (-) for CAN-Low. Modules on the affected bus may stop exchanging data, so lost-communication codes and warning lights in several systems usually appear together."
+    de: "U0071 meldet eine zu hohe Spannung auf der (-)-Leitung, meist durch Kurzschluss nach Plus am Fahrzeug-Kommunikationsbus E. SAE J2012 vergibt für jeden Fahrzeugbus einen Codeblock: den Bus selbst, die Leistung, dann unterbrochen, niedrig und hoch für die (+)- und die (-)-Leitung sowie einen Kurzschluss zwischen beiden; welches physische Netz welchen Buchstaben trägt, legt der Hersteller fest. Bei CAN-Netzen steht (+) üblicherweise für CAN-High und (-) für CAN-Low. Steuergeräte am betroffenen Bus tauschen unter Umständen keine Daten mehr aus, daher treten meist Kommunikationsverlust-Codes und Warnleuchten in mehreren Systemen gemeinsam auf."
   affected_components:
-    - can_transceiver
-    - can_high_wire
+    - bus_e_wiring
   common_causes:
-    - id: persistent_short
+    - id: short_to_battery
       likelihood: high
       label:
-        en: Persistent short on the CAN-H wire
-        de: Dauerhafter Kurzschluss auf CAN-H
-    - id: faulty_module
+        en: (-) wire shorted to battery voltage
+        de: (-)-Leitung mit Kurzschluss nach Plus
+    - id: harness_chafe
       likelihood: medium
       label:
-        en: One module driving bus permanently dominant
-        de: Ein Modul hält den Bus dauerhaft dominant
-    - id: gateway_module_fault
+        en: Harness chafed through
+        de: Kabelbaum durchgescheuert
+    - id: transceiver_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Failed bus transceiver in a module
+        de: Defekter Bus-Transceiver in einem Steuergerät
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Several warning lights at once
+      de: Mehrere Warnleuchten gleichzeitig
+    - en: Lost-communication codes stored in other modules
+      de: Kommunikationsverlust-Codes in anderen Steuergeräten
+    - en: Functions of modules on this bus inoperative
+      de: Funktionen der Steuergeräte an diesem Bus außer Betrieb
+    - en: Scan tool cannot reach some modules
+      de: Diagnosegerät erreicht einzelne Steuergeräte nicht
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [80, 800]
-    estimated_hours: [1.0, 6.0]
+    estimated_hours: [1, 6]
   flags:
     mil: true
     limp_mode_possible: true
   references:
     - sae:J2012
     - iso:11898
+  related_codes: [U0064, U0065, U0066, U0067, U0068, U0069, U0070, U0072]
   sources:
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0072
   category: network
   title:
-    en: Vehicle Communication Bus A (-) Bus Off
-    de: Fahrzeug-Kommunikationsbus A (-) Bus-Off
+    en: Vehicle Communication Bus E (-) shorted to Bus E (+)
+    de: Fahrzeug-Kommunikationsbus E (-) mit Bus E (+) kurzgeschlossen
   description:
-    en: The CAN controller for bus A has gone bus-off on the minus side. Common after a CAN-L short or a faulty transceiver pulling the bus low.
-    de: Der CAN-Controller für Bus A ist auf der Minus-Seite in den Bus-Off-Zustand gegangen. Tritt häufig nach einem CAN-L-Kurzschluss oder bei einem defekten Transceiver auf, der den Bus dauerhaft auf Low zieht.
+    en: "U0072 reports the (-) line shorted to the (+) line on vehicle communication bus E. SAE J2012 gives each vehicle bus a block of codes: the bus itself, performance, then open, low and high for the (+) and the (-) line and a short between them; which physical network carries which letter is set by the manufacturer. On CAN networks (+) normally stands for CAN-High and (-) for CAN-Low. Modules on the affected bus may stop exchanging data, so lost-communication codes and warning lights in several systems usually appear together."
+    de: "U0072 meldet einen Kurzschluss zwischen (-)- und (+)-Leitung am Fahrzeug-Kommunikationsbus E. SAE J2012 vergibt für jeden Fahrzeugbus einen Codeblock: den Bus selbst, die Leistung, dann unterbrochen, niedrig und hoch für die (+)- und die (-)-Leitung sowie einen Kurzschluss zwischen beiden; welches physische Netz welchen Buchstaben trägt, legt der Hersteller fest. Bei CAN-Netzen steht (+) üblicherweise für CAN-High und (-) für CAN-Low. Steuergeräte am betroffenen Bus tauschen unter Umständen keine Daten mehr aus, daher treten meist Kommunikationsverlust-Codes und Warnleuchten in mehreren Systemen gemeinsam auf."
   affected_components:
-    - can_transceiver
-    - can_low_wire
+    - bus_e_wiring
   common_causes:
-    - id: canl_short
+    - id: lines_shorted
       likelihood: high
       label:
-        en: Persistent short on CAN-L wire
-        de: Dauerhafter Kurzschluss auf CAN-L
-    - id: gateway_module_fault
+        en: Bus wires shorted together, e.g. crushed harness
+        de: Busleitungen miteinander kurzgeschlossen, etwa gequetschter Kabelbaum
+    - id: water_in_connector
+      likelihood: medium
+      label:
+        en: Water ingress in a bus connector
+        de: Wassereintritt in einem Busstecker
+    - id: transceiver_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Failed bus transceiver in a module
+        de: Defekter Bus-Transceiver in einem Steuergerät
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Several warning lights at once
+      de: Mehrere Warnleuchten gleichzeitig
+    - en: Lost-communication codes stored in other modules
+      de: Kommunikationsverlust-Codes in anderen Steuergeräten
+    - en: Functions of modules on this bus inoperative
+      de: Funktionen der Steuergeräte an diesem Bus außer Betrieb
+    - en: Scan tool cannot reach some modules
+      de: Diagnosegerät erreicht einzelne Steuergeräte nicht
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [80, 800]
-    estimated_hours: [1.0, 6.0]
+    estimated_hours: [1, 6]
   flags:
     mil: true
     limp_mode_possible: true
   references:
     - sae:J2012
     - iso:11898
+  related_codes: [U0064, U0065, U0066, U0067, U0068, U0069, U0070, U0071]
   sources:
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0073
@@ -3766,94 +3769,96 @@
 - code: U0075
   category: network
   title:
-    en: Control Module Communication Bus "B" Performance
-    de: Steuergerät-Kommunikationsbus "B" Performance
+    en: Control Module Communication Bus C Off
+    de: Steuergerät-Kommunikationsbus C abgeschaltet
   description:
-    en: Bus B is operational but performance is degraded — error frames or out-of-spec timing. Modules on this bus may behave erratically.
-    de: Bus B funktioniert, aber die Performance ist eingeschränkt — Fehlerframes oder Zeitverhalten außerhalb der Spezifikation. Steuergeräte auf diesem Bus können sich sprunghaft verhalten.
+    en: "U0075 means a control module has gone 'bus off' on communication bus C: its CAN controller counted so many transmit errors that, as the CAN protocol requires, it stopped sending. SAE numbers these codes by bus letter (U0073 bus A, U0074 bus B, U0075 bus C and so on up to U007F); the assignment of letters to networks is the manufacturer's. Until the controller recovers, the module cannot exchange data, so its own functions and those that depend on its messages drop out."
+    de: "U0075 bedeutet, dass ein Steuergerät am Kommunikationsbus C in den Zustand 'Bus off' gegangen ist: Sein CAN-Controller hat so viele Sendefehler gezählt, dass er, wie das CAN-Protokoll es vorschreibt, das Senden eingestellt hat. SAE nummeriert diese Codes nach Busbuchstaben (U0073 Bus A, U0074 Bus B, U0075 Bus C und so weiter bis U007F); welcher Buchstabe zu welchem Netz gehört, legt der Hersteller fest. Bis sich der Controller erholt, kann das Steuergerät keine Daten austauschen, daher fallen seine Funktionen und die davon abhängigen aus."
   affected_components:
-    - can_bus_wiring
-    - control_module
+    - bus_c_wiring
+    - can_transceiver
   common_causes:
-    - id: can_wire_corrosion
+    - id: bus_wiring_fault
       likelihood: high
       label:
-        en: Corrosion or poor contact in connectors
-        de: Korrosion oder schlechter Kontakt in Steckverbindern
-    - id: marginal_module
+        en: Shorted or open bus wiring
+        de: Kurzschluss oder Unterbrechung der Busleitung
+    - id: termination_fault
       likelihood: medium
       label:
-        en: One module sending malformed frames
-        de: Ein Steuergerät sendet fehlerhafte Frames
-    - id: gateway_module_fault
-      likelihood: low
+        en: Faulty bus termination
+        de: Defekter Busabschluss
+    - id: transceiver_fault
+      likelihood: medium
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Defective transceiver in the reporting module
+        de: Defekter Transceiver im meldenden Steuergerät
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Several warning lights at once
+      de: Mehrere Warnleuchten gleichzeitig
+    - en: Lost-communication codes stored in other modules
+      de: Kommunikationsverlust-Codes in anderen Steuergeräten
+    - en: Functions of modules on this bus inoperative
+      de: Funktionen der Steuergeräte an diesem Bus außer Betrieb
+    - en: Scan tool cannot reach some modules
+      de: Diagnosegerät erreicht einzelne Steuergeräte nicht
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [80, 1200]
-    estimated_hours: [1.0, 6.0]
+    estimated_hours: [1, 6]
   flags:
     mil: true
     emissions_relevant: false
   references:
     - sae:J2012
     - iso:11898
+  related_codes: [U0073, U0074, U0076, U0077, U0078, U0079]
   sources:
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0076
   category: network
   title:
-    en: Control Module Communication Bus "C" Off
-    de: Steuergerät-Kommunikationsbus "C" abgeschaltet
+    en: Control Module Communication Bus D Off
+    de: Steuergerät-Kommunikationsbus D abgeschaltet
   description:
-    en: A control module has shut its bus C interface off because the bus is non-functional. Bus C is typically a tertiary CAN or LIN segment used for diagnostic or specialized subsystems.
-    de: Ein Steuergerät hat seine Bus-C-Schnittstelle abgeschaltet, weil der Bus nicht funktioniert. Bus C ist typischerweise ein tertiäres CAN- oder LIN-Segment, das für Diagnose oder spezialisierte Subsysteme verwendet wird.
+    en: "U0076 means a control module has gone 'bus off' on communication bus D: its CAN controller counted so many transmit errors that, as the CAN protocol requires, it stopped sending. SAE numbers these codes by bus letter (U0073 bus A, U0074 bus B, U0075 bus C and so on up to U007F); the assignment of letters to networks is the manufacturer's. Until the controller recovers, the module cannot exchange data, so its own functions and those that depend on its messages drop out."
+    de: "U0076 bedeutet, dass ein Steuergerät am Kommunikationsbus D in den Zustand 'Bus off' gegangen ist: Sein CAN-Controller hat so viele Sendefehler gezählt, dass er, wie das CAN-Protokoll es vorschreibt, das Senden eingestellt hat. SAE nummeriert diese Codes nach Busbuchstaben (U0073 Bus A, U0074 Bus B, U0075 Bus C und so weiter bis U007F); welcher Buchstabe zu welchem Netz gehört, legt der Hersteller fest. Bis sich der Controller erholt, kann das Steuergerät keine Daten austauschen, daher fallen seine Funktionen und die davon abhängigen aus."
   affected_components:
-    - can_bus_wiring
-    - control_module
+    - bus_d_wiring
+    - can_transceiver
   common_causes:
-    - id: can_short_to_voltage_or_ground
+    - id: bus_wiring_fault
       likelihood: high
       label:
-        en: Bus C line shorted to supply or ground
-        de: Bus-C-Leitung gegen Versorgung oder Masse kurzgeschlossen
-    - id: failing_module_pulling_bus_down
+        en: Shorted or open bus wiring
+        de: Kurzschluss oder Unterbrechung der Busleitung
+    - id: termination_fault
       likelihood: medium
       label:
-        en: One failing module pulling the bus down
-        de: Ein defektes Steuergerät zieht den Bus herunter
-    - id: gateway_module_fault
-      likelihood: low
+        en: Faulty bus termination
+        de: Defekter Busabschluss
+    - id: transceiver_fault
+      likelihood: medium
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Defective transceiver in the reporting module
+        de: Defekter Transceiver im meldenden Steuergerät
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Several warning lights at once
+      de: Mehrere Warnleuchten gleichzeitig
+    - en: Lost-communication codes stored in other modules
+      de: Kommunikationsverlust-Codes in anderen Steuergeräten
+    - en: Functions of modules on this bus inoperative
+      de: Funktionen der Steuergeräte an diesem Bus außer Betrieb
+    - en: Scan tool cannot reach some modules
+      de: Diagnosegerät erreicht einzelne Steuergeräte nicht
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [80, 1500]
-    estimated_hours: [1.0, 8.0]
+    estimated_hours: [1, 8]
   flags:
     mil: true
     emissions_relevant: false
@@ -3861,155 +3866,162 @@
   references:
     - sae:J2012
     - iso:11898
-  related_codes: [U0074, U0073]
+  related_codes: [U0073, U0074, U0075, U0077, U0078, U0079]
   sources:
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0077
   category: network
   title:
-    en: Vehicle Communication Bus B Off
-    de: Fahrzeug-Kommunikationsbus B abgeschaltet
+    en: Control Module Communication Bus E Off
+    de: Steuergerät-Kommunikationsbus E abgeschaltet
   description:
-    en: A controller on bus B has reached its transmit error limit and shut its transceiver off. All traffic on this segment stops until the cause is removed.
-    de: Ein Steuergerät an Bus B hat sein Sendefehler-Limit erreicht und den Transceiver abgeschaltet. Der Datenverkehr auf diesem Segment ruht, bis die Ursache beseitigt ist.
+    en: "U0077 means a control module has gone 'bus off' on communication bus E: its CAN controller counted so many transmit errors that, as the CAN protocol requires, it stopped sending. SAE numbers these codes by bus letter (U0073 bus A, U0074 bus B, U0075 bus C and so on up to U007F); the assignment of letters to networks is the manufacturer's. Until the controller recovers, the module cannot exchange data, so its own functions and those that depend on its messages drop out."
+    de: "U0077 bedeutet, dass ein Steuergerät am Kommunikationsbus E in den Zustand 'Bus off' gegangen ist: Sein CAN-Controller hat so viele Sendefehler gezählt, dass er, wie das CAN-Protokoll es vorschreibt, das Senden eingestellt hat. SAE nummeriert diese Codes nach Busbuchstaben (U0073 Bus A, U0074 Bus B, U0075 Bus C und so weiter bis U007F); welcher Buchstabe zu welchem Netz gehört, legt der Hersteller fest. Bis sich der Controller erholt, kann das Steuergerät keine Daten austauschen, daher fallen seine Funktionen und die davon abhängigen aus."
   affected_components:
+    - bus_e_wiring
     - can_transceiver
-    - can_bus_wiring
   common_causes:
-    - id: persistent_bus_fault
+    - id: bus_wiring_fault
       likelihood: high
       label:
-        en: Persistent wiring fault on bus B
-        de: Dauerhafter Leitungsfehler auf Bus B
-    - id: gateway_module_fault
-      likelihood: low
+        en: Shorted or open bus wiring
+        de: Kurzschluss oder Unterbrechung der Busleitung
+    - id: termination_fault
+      likelihood: medium
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
+        en: Faulty bus termination
+        de: Defekter Busabschluss
+    - id: transceiver_fault
+      likelihood: medium
       label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Defective transceiver in the reporting module
+        de: Defekter Transceiver im meldenden Steuergerät
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Several warning lights at once
+      de: Mehrere Warnleuchten gleichzeitig
+    - en: Lost-communication codes stored in other modules
+      de: Kommunikationsverlust-Codes in anderen Steuergeräten
+    - en: Functions of modules on this bus inoperative
+      de: Funktionen der Steuergeräte an diesem Bus außer Betrieb
+    - en: Scan tool cannot reach some modules
+      de: Diagnosegerät erreicht einzelne Steuergeräte nicht
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [80, 800]
-    estimated_hours: [1.0, 6.0]
+    estimated_hours: [1, 6]
   flags:
     mil: true
   references:
     - sae:J2012
     - iso:11898
+  related_codes: [U0073, U0074, U0075, U0076, U0078, U0079]
   sources:
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0078
   category: network
   title:
-    en: Vehicle Communication Bus B (+) Open
-    de: Fahrzeug-Kommunikationsbus B (+) unterbrochen
+    en: Control Module Communication Bus F Off
+    de: Steuergerät-Kommunikationsbus F abgeschaltet
   description:
-    en: 'The plus wire of bus B is open. Modules on this segment lose communication. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Die Plus-Leitung von Bus B ist unterbrochen. Steuergeräte dieses Segments verlieren die Kommunikation. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: "U0078 means a control module has gone 'bus off' on communication bus F: its CAN controller counted so many transmit errors that, as the CAN protocol requires, it stopped sending. SAE numbers these codes by bus letter (U0073 bus A, U0074 bus B, U0075 bus C and so on up to U007F); the assignment of letters to networks is the manufacturer's. Until the controller recovers, the module cannot exchange data, so its own functions and those that depend on its messages drop out."
+    de: "U0078 bedeutet, dass ein Steuergerät am Kommunikationsbus F in den Zustand 'Bus off' gegangen ist: Sein CAN-Controller hat so viele Sendefehler gezählt, dass er, wie das CAN-Protokoll es vorschreibt, das Senden eingestellt hat. SAE nummeriert diese Codes nach Busbuchstaben (U0073 Bus A, U0074 Bus B, U0075 Bus C und so weiter bis U007F); welcher Buchstabe zu welchem Netz gehört, legt der Hersteller fest. Bis sich der Controller erholt, kann das Steuergerät keine Daten austauschen, daher fallen seine Funktionen und die davon abhängigen aus."
   affected_components:
-    - can_high_wire
+    - bus_f_wiring
+    - can_transceiver
   common_causes:
-    - id: canh_open
+    - id: bus_wiring_fault
       likelihood: high
       label:
-        en: Bus-B plus wire broken
-        de: Bus-B-Plus-Leitung unterbrochen
-    - id: gateway_module_fault
-      likelihood: low
+        en: Shorted or open bus wiring
+        de: Kurzschluss oder Unterbrechung der Busleitung
+    - id: termination_fault
+      likelihood: medium
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
+        en: Faulty bus termination
+        de: Defekter Busabschluss
+    - id: transceiver_fault
+      likelihood: medium
       label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Defective transceiver in the reporting module
+        de: Defekter Transceiver im meldenden Steuergerät
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Several warning lights at once
+      de: Mehrere Warnleuchten gleichzeitig
+    - en: Lost-communication codes stored in other modules
+      de: Kommunikationsverlust-Codes in anderen Steuergeräten
+    - en: Functions of modules on this bus inoperative
+      de: Funktionen der Steuergeräte an diesem Bus außer Betrieb
+    - en: Scan tool cannot reach some modules
+      de: Diagnosegerät erreicht einzelne Steuergeräte nicht
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [60, 500]
-    estimated_hours: [0.8, 4.0]
+    estimated_hours: [0.8, 4]
   flags:
     mil: true
   references:
     - sae:J2012
     - iso:11898
-  related_codes: [U0066, U008B, U0060, U0094, U0057, U0050, U0048, U0042, U0039, U0031]
+  related_codes: [U0073, U0074, U0075, U0076, U0077, U0079]
   sources:
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0079
   category: network
   title:
-    en: Vehicle Communication Bus B (+) Low
-    de: Fahrzeug-Kommunikationsbus B (+) zu niedrig
+    en: Control Module Communication Bus G Off
+    de: Steuergerät-Kommunikationsbus G abgeschaltet
   description:
-    en: The plus line of bus B is shorted to ground. The differential signal collapses and bus traffic stops.
-    de: Die Plus-Leitung von Bus B ist gegen Masse kurzgeschlossen. Das differenzielle Signal bricht zusammen, der Bus-Verkehr steht still.
+    en: "U0079 means a control module has gone 'bus off' on communication bus G: its CAN controller counted so many transmit errors that, as the CAN protocol requires, it stopped sending. SAE numbers these codes by bus letter (U0073 bus A, U0074 bus B, U0075 bus C and so on up to U007F); the assignment of letters to networks is the manufacturer's. Until the controller recovers, the module cannot exchange data, so its own functions and those that depend on its messages drop out."
+    de: "U0079 bedeutet, dass ein Steuergerät am Kommunikationsbus G in den Zustand 'Bus off' gegangen ist: Sein CAN-Controller hat so viele Sendefehler gezählt, dass er, wie das CAN-Protokoll es vorschreibt, das Senden eingestellt hat. SAE nummeriert diese Codes nach Busbuchstaben (U0073 Bus A, U0074 Bus B, U0075 Bus C und so weiter bis U007F); welcher Buchstabe zu welchem Netz gehört, legt der Hersteller fest. Bis sich der Controller erholt, kann das Steuergerät keine Daten austauschen, daher fallen seine Funktionen und die davon abhängigen aus."
   affected_components:
-    - can_high_wire
+    - bus_g_wiring
+    - can_transceiver
   common_causes:
-    - id: canh_short_ground
+    - id: bus_wiring_fault
       likelihood: high
       label:
-        en: Bus-B plus shorted to ground
-        de: Bus-B-Plus gegen Masse kurzgeschlossen
-    - id: gateway_module_fault
-      likelihood: low
+        en: Shorted or open bus wiring
+        de: Kurzschluss oder Unterbrechung der Busleitung
+    - id: termination_fault
+      likelihood: medium
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
+        en: Faulty bus termination
+        de: Defekter Busabschluss
+    - id: transceiver_fault
+      likelihood: medium
       label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Defective transceiver in the reporting module
+        de: Defekter Transceiver im meldenden Steuergerät
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Several warning lights at once
+      de: Mehrere Warnleuchten gleichzeitig
+    - en: Lost-communication codes stored in other modules
+      de: Kommunikationsverlust-Codes in anderen Steuergeräten
+    - en: Functions of modules on this bus inoperative
+      de: Funktionen der Steuergeräte an diesem Bus außer Betrieb
+    - en: Scan tool cannot reach some modules
+      de: Diagnosegerät erreicht einzelne Steuergeräte nicht
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [60, 600]
-    estimated_hours: [0.8, 5.0]
+    estimated_hours: [0.8, 5]
   flags:
     mil: true
   references:
     - sae:J2012
     - iso:11898
-  related_codes: [U0067, U008C, U0095, U0058, U0049]
+  related_codes: [U0073, U0074, U0075, U0076, U0077, U0078]
   sources:
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U007A
@@ -4333,43 +4345,38 @@
 - code: U0080
   category: network
   title:
-    en: Vehicle Communication Bus B (+) High
-    de: Fahrzeug-Kommunikationsbus B (+) zu hoch
+    en: Vehicle Communication Bus F
+    de: Fahrzeug-Kommunikationsbus F
   description:
-    en: 'The plus line of bus B is shorted to battery voltage. The bus stops carrying valid frames. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Die Plus-Leitung von Bus B ist gegen Batteriespannung kurzgeschlossen. Es werden keine gültigen Botschaften mehr übertragen. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: "U0080 reports a fault on the bus that the module cannot narrow down to a single line or condition on vehicle communication bus F. SAE J2012 gives each vehicle bus a block of codes: the bus itself, performance, then open, low and high for the (+) and the (-) line and a short between them; which physical network carries which letter is set by the manufacturer. Modules on the affected bus may stop exchanging data, so lost-communication codes and warning lights in several systems usually appear together."
+    de: "U0080 meldet einen Fehler am Bus, den das Steuergerät nicht auf eine einzelne Leitung oder Fehlerart eingrenzen kann am Fahrzeug-Kommunikationsbus F. SAE J2012 vergibt für jeden Fahrzeugbus einen Codeblock: den Bus selbst, die Leistung, dann unterbrochen, niedrig und hoch für die (+)- und die (-)-Leitung sowie einen Kurzschluss zwischen beiden; welches physische Netz welchen Buchstaben trägt, legt der Hersteller fest. Steuergeräte am betroffenen Bus tauschen unter Umständen keine Daten mehr aus, daher treten meist Kommunikationsverlust-Codes und Warnleuchten in mehreren Systemen gemeinsam auf."
   affected_components:
-    - can_high_wire
+    - bus_f_wiring
   common_causes:
-    - id: canh_short_battery
-      likelihood: high
+    - id: bus_wiring_fault
+      likelihood: medium
       label:
-        en: Bus-B plus shorted to battery
-        de: Bus-B-Plus gegen Batterie kurzgeschlossen
-    - id: gateway_module_fault
-      likelihood: low
+        en: Bus wiring or connector fault
+        de: Fehler an Busleitung oder Stecker
+    - id: module_fault
+      likelihood: medium
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: A module on the bus failed or without power
+        de: Steuergerät am Bus defekt oder ohne Versorgung
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Several warning lights at once
+      de: Mehrere Warnleuchten gleichzeitig
+    - en: Lost-communication codes stored in other modules
+      de: Kommunikationsverlust-Codes in anderen Steuergeräten
+    - en: Functions of modules on this bus inoperative
+      de: Funktionen der Steuergeräte an diesem Bus außer Betrieb
+    - en: Scan tool cannot reach some modules
+      de: Diagnosegerät erreicht einzelne Steuergeräte nicht
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [60, 600]
-    estimated_hours: [0.8, 5.0]
+    estimated_hours: [0.8, 5]
   flags:
     mil: true
   references:
@@ -4377,6 +4384,7 @@
     - iso:11898
   related_codes: [U008D, U0096, U0068, U0059, U0041, U0032]
   sources:
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0081
@@ -5208,44 +5216,43 @@
 - code: U0091
   category: network
   title:
-    en: CAN Communication Bus "C" Off
-    de: CAN-Kommunikationsbus "C" abgeschaltet
+    en: Vehicle Communication Bus G (-) shorted to Bus G (+)
+    de: Fahrzeug-Kommunikationsbus G (-) mit Bus G (+) kurzgeschlossen
   description:
-    en: Bus C (third CAN bus, often used for chassis or infotainment) has entered the bus-off state. All modules on Bus C lose communication.
-    de: Bus C (dritter CAN-Bus, oft für Fahrwerk oder Infotainment) ist in den Bus-Off-Zustand gegangen. Alle Steuergeräte an Bus C verlieren die Kommunikation.
+    en: "U0091 reports the (-) line shorted to the (+) line on vehicle communication bus G. SAE J2012 gives each vehicle bus a block of codes: the bus itself, performance, then open, low and high for the (+) and the (-) line and a short between them; which physical network carries which letter is set by the manufacturer. On CAN networks (+) normally stands for CAN-High and (-) for CAN-Low. Modules on the affected bus may stop exchanging data, so lost-communication codes and warning lights in several systems usually appear together."
+    de: "U0091 meldet einen Kurzschluss zwischen (-)- und (+)-Leitung am Fahrzeug-Kommunikationsbus G. SAE J2012 vergibt für jeden Fahrzeugbus einen Codeblock: den Bus selbst, die Leistung, dann unterbrochen, niedrig und hoch für die (+)- und die (-)-Leitung sowie einen Kurzschluss zwischen beiden; welches physische Netz welchen Buchstaben trägt, legt der Hersteller fest. Bei CAN-Netzen steht (+) üblicherweise für CAN-High und (-) für CAN-Low. Steuergeräte am betroffenen Bus tauschen unter Umständen keine Daten mehr aus, daher treten meist Kommunikationsverlust-Codes und Warnleuchten in mehreren Systemen gemeinsam auf."
   affected_components:
-    - can_bus_wiring
-    - can_terminating_resistor
+    - bus_g_wiring
   common_causes:
-    - id: bus_c_short
+    - id: lines_shorted
       likelihood: high
       label:
-        en: Bus C shorted to supply or ground
-        de: Bus C gegen Versorgung oder Masse kurzgeschlossen
-    - id: bus_c_terminator
+        en: Bus wires shorted together, e.g. crushed harness
+        de: Busleitungen miteinander kurzgeschlossen, etwa gequetschter Kabelbaum
+    - id: water_in_connector
       likelihood: medium
       label:
-        en: Bus C terminating resistor failed
-        de: Abschlusswiderstand von Bus C defekt
-    - id: gateway_module_fault
+        en: Water ingress in a bus connector
+        de: Wassereintritt in einem Busstecker
+    - id: transceiver_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Failed bus transceiver in a module
+        de: Defekter Bus-Transceiver in einem Steuergerät
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Several warning lights at once
+      de: Mehrere Warnleuchten gleichzeitig
+    - en: Lost-communication codes stored in other modules
+      de: Kommunikationsverlust-Codes in anderen Steuergeräten
+    - en: Functions of modules on this bus inoperative
+      de: Funktionen der Steuergeräte an diesem Bus außer Betrieb
+    - en: Scan tool cannot reach some modules
+      de: Diagnosegerät erreicht einzelne Steuergeräte nicht
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [80, 1500]
-    estimated_hours: [1.0, 6.0]
+    estimated_hours: [1, 6]
   flags:
     mil: true
     emissions_relevant: false
@@ -5254,54 +5261,51 @@
     - sae:J2012
     - iso:11898
   sources:
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0092
   category: network
   title:
-    en: CAN Communication Bus "C" Performance
-    de: CAN-Kommunikationsbus "C" Leistungsfehler
+    en: Vehicle Communication Bus H
+    de: Fahrzeug-Kommunikationsbus H
   description:
-    en: Bus C shows degraded performance with elevated error counters but has not yet gone bus-off. Sporadic message losses on modules attached to Bus C.
-    de: Bus C zeigt verschlechterte Leistung mit erhöhten Fehlerzählern, ist aber noch nicht im Bus-Off-Zustand. Sporadische Nachrichtenverluste an Steuergeräten an Bus C.
+    en: "U0092 reports a fault on the bus that the module cannot narrow down to a single line or condition on vehicle communication bus H. SAE J2012 gives each vehicle bus a block of codes: the bus itself, performance, then open, low and high for the (+) and the (-) line and a short between them; which physical network carries which letter is set by the manufacturer. Modules on the affected bus may stop exchanging data, so lost-communication codes and warning lights in several systems usually appear together."
+    de: "U0092 meldet einen Fehler am Bus, den das Steuergerät nicht auf eine einzelne Leitung oder Fehlerart eingrenzen kann am Fahrzeug-Kommunikationsbus H. SAE J2012 vergibt für jeden Fahrzeugbus einen Codeblock: den Bus selbst, die Leistung, dann unterbrochen, niedrig und hoch für die (+)- und die (-)-Leitung sowie einen Kurzschluss zwischen beiden; welches physische Netz welchen Buchstaben trägt, legt der Hersteller fest. Steuergeräte am betroffenen Bus tauschen unter Umständen keine Daten mehr aus, daher treten meist Kommunikationsverlust-Codes und Warnleuchten in mehreren Systemen gemeinsam auf."
   affected_components:
-    - can_bus_wiring
+    - bus_h_wiring
   common_causes:
-    - id: marginal_bus_c
-      likelihood: high
-      label:
-        en: Marginal Bus C wiring or connector
-        de: Grenzwertige Bus-C-Verkabelung oder Stecker
-    - id: bus_c_module_marginal
+    - id: bus_wiring_fault
       likelihood: medium
       label:
-        en: One module on Bus C transmitting marginal frames
-        de: Ein Steuergerät an Bus C sendet grenzwertige Frames
-    - id: gateway_module_fault
-      likelihood: low
+        en: Bus wiring or connector fault
+        de: Fehler an Busleitung oder Stecker
+    - id: module_fault
+      likelihood: medium
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: A module on the bus failed or without power
+        de: Steuergerät am Bus defekt oder ohne Versorgung
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Several warning lights at once
+      de: Mehrere Warnleuchten gleichzeitig
+    - en: Lost-communication codes stored in other modules
+      de: Kommunikationsverlust-Codes in anderen Steuergeräten
+    - en: Functions of modules on this bus inoperative
+      de: Funktionen der Steuergeräte an diesem Bus außer Betrieb
+    - en: Scan tool cannot reach some modules
+      de: Diagnosegerät erreicht einzelne Steuergeräte nicht
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [80, 1200]
-    estimated_hours: [1.0, 5.0]
+    estimated_hours: [1, 5]
   flags:
     mil: true
     emissions_relevant: false
   references:
     - sae:J2012
   sources:
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0093
@@ -6905,44 +6909,39 @@
 - code: U0113
   category: network
   title:
-    en: Lost Communication with Battery Charger A Control Module
-    de: Kommunikation mit Batterieladegerät A Steuergerät verloren
+    en: Lost Communication With Emissions Critical Control Information
+    de: Kommunikation mit emissionskritischen Steuerinformationen verloren
   description:
-    en: 'The Battery Charger A Control Module has stopped transmitting on the vehicle data bus, so other control units no longer receive its messages. Onboard charging control is lost, so the traction battery may not charge. Typical causes are loss of power or ground at the module, an open or shorted CAN/LIN bus wire, a connector fault, or an internal module failure.'
-    de: 'Batterieladegerät A Steuergerät — diese Komponente sendet keine Botschaften mehr auf dem Datenbus, sodass andere Steuergeräte die benötigten Informationen nicht mehr erhalten. Die Ladesteuerung fällt aus; die Traktionsbatterie lädt möglicherweise nicht. Typische Ursachen sind fehlende Spannungs- oder Masseversorgung, eine unterbrochene oder kurzgeschlossene CAN-/LIN-Leitung, ein Steckerfehler oder ein interner Defekt der Komponente.'
+    en: U0113 is set when a module stops receiving messages that carry emissions-critical control information from another module. Unlike most U01xx codes it names a group of data rather than a single module; which unit sends it depends on the vehicle. Because the missing data are needed for emissions control, the engine control usually switches to substitute values and the MIL is requested.
+    de: U0113 wird gesetzt, wenn ein Steuergerät keine Botschaften mit emissionskritischen Steuerinformationen eines anderen Steuergeräts mehr empfängt. Anders als die meisten U01xx-Codes bezeichnet er keine einzelne Einheit, sondern eine Datengruppe; welches Steuergerät sie sendet, hängt vom Fahrzeug ab. Weil die fehlenden Daten für die Abgasregelung gebraucht werden, arbeitet die Motorsteuerung meist mit Ersatzwerten und fordert die Motorkontrollleuchte an.
   affected_components:
-    - battery_charger_module
-    - can_bus_wiring
+    - vehicle_network
   common_causes:
-    - id: charger_unpowered
-      likelihood: high
-      label:
-        en: Charger module unpowered
-        de: Ladegerät-Modul ohne Spannung
-    - id: can_wiring_to_charger
+    - id: bus_wiring_fault
       likelihood: medium
       label:
-        en: CAN wiring to charger broken
-        de: CAN-Leitung zum Ladegerät unterbrochen
-    - id: gateway_module_fault
+        en: Bus wiring or connector fault between the modules
+        de: Fehler an Busleitung oder Stecker zwischen den Steuergeräten
+    - id: sending_module_fault
+      likelihood: medium
+      label:
+        en: Sending module without power or failed
+        de: Sendendes Steuergerät ohne Versorgung oder defekt
+    - id: software_mismatch
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Software mismatch after a module replacement
+        de: Softwarestand passt nach Steuergerätetausch nicht
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: Reduced power or substitute operation possible
+      de: Leistungsreduzierung oder Ersatzbetrieb möglich
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [200, 3500]
-    estimated_hours: [2.0, 8.0]
+    estimated_hours: [2, 8]
   flags:
     mil: true
     emissions_relevant: false
@@ -6950,6 +6949,8 @@
   references:
     - sae:J2012
   sources:
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0114
@@ -13246,8 +13247,8 @@
 - code: U0197
   category: network
   title:
-    en: Lost Communication with Hands-Free Phone Control Module
-    de: Kommunikation mit Freisprecheinrichtungs-Steuergerät verloren
+    en: Lost Communication With Telephone Control Module
+    de: Kommunikation mit Telefon-Steuergerät verloren
   description:
     en: The infotainment system cannot reach the hands-free phone controller. Bluetooth telephony, address book sync and emergency call features may be unavailable.
     de: Das Infotainment kann das Steuergerät der Freisprecheinrichtung nicht erreichen. Bluetooth-Telefonie, Adressbuch-Synchronisation und Notruffunktionen können ausfallen.
@@ -13263,27 +13264,27 @@
     - id: gateway_module_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Gateway module routing CAN messages incorrectly
+        de: Gateway-Modul leitet CAN-Botschaften fehlerhaft
     - id: terminator_resistor_drift
       likelihood: low
       label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: CAN terminating resistor (120 Ω) drifted out of spec
+        de: CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Multiple warning lights may illuminate
+      de: Mehrere Warnleuchten können aufleuchten
+    - en: Affected modules may go into limp mode or shut down
+      de: Betroffene Steuergeräte können in Notlauf gehen oder abschalten
+    - en: Specific functions inoperative depending on module
+      de: Spezifische Funktionen je nach Modul außer Betrieb
+    - en: Diagnostic tools may show communication faults
+      de: Diagnosegeräte können Kommunikationsfehler anzeigen
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [60, 500]
-    estimated_hours: [0.3, 2.0]
+    estimated_hours: [0.3, 2]
   flags:
     mil: false
   references:
@@ -16389,198 +16390,214 @@
 - code: U0215
   category: network
   title:
-    en: Lost Communication with Door Control Module Front Driver
-    de: Kommunikation mit Türmodul Fahrer vorn verloren
+    en: Lost Communication With Door Switch A
+    de: Kommunikation mit Türschalter A verloren
   description:
-    en: The body controller has lost the front driver door module. Power window, mirror, lock and door light functions on this door stop working.
-    de: Das Bordnetzsteuergerät hat das Türmodul Fahrer vorn verloren. Fensterheber, Spiegel, Verriegelung und Türleuchten dieser Tür arbeiten nicht mehr.
+    en: U0215 means the networked door switch unit A no longer answers. In many doors the switch packs for windows, mirrors and locks are small bus nodes, usually LIN slaves under a door or body module, and the master stores this code once switch A stops replying. The manufacturer decides which door panel carries letter A. U0215 to U0221 cover switches A to G. The buttons on that panel stop working, while the other doors normally keep working.
+    de: U0215 bedeutet, dass die vernetzte Türschalter-Einheit A nicht mehr antwortet. In vielen Türen sind die Schalterblöcke für Fenster, Spiegel und Verriegelung kleine Busteilnehmer, meist LIN-Slaves unter einem Tür- oder Karosseriemodul; der Master speichert diesen Code, sobald Schalter A nicht mehr antwortet. Welche Türleiste den Buchstaben A trägt, legt der Hersteller fest. U0215 bis U0221 decken die Schalter A bis G ab. Die Tasten dieser Leiste fallen aus, die übrigen Türen arbeiten meist normal weiter.
   affected_components:
-    - door_control_module
-    - door_harness
+    - door_switch_a
+    - lin_bus
   common_causes:
     - id: door_harness_break
       likelihood: high
       label:
-        en: Door harness broken in hinge
-        de: Türkabelbaum im Türscharnier gebrochen
-    - id: door_module_failed
+        en: Broken wire in the door hinge area
+        de: Leitungsbruch im Türscharnierbereich
+    - id: connector_water
       likelihood: medium
       label:
-        en: Door module failed
-        de: Türmodul defekt
-    - id: gateway_module_fault
+        en: Water or corrosion in the switch connector
+        de: Wasser oder Korrosion im Schalterstecker
+    - id: switch_module_failed
+      likelihood: medium
+      label:
+        en: Switch unit failed
+        de: Schaltereinheit defekt
+    - id: master_module_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Fault in the door or body module polling the switch
+        de: Fehler im abfragenden Tür- oder Karosseriesteuergerät
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Window, lock or mirror buttons on one panel not working
+      de: Fenster-, Verriegelungs- oder Spiegeltasten einer Leiste ohne Funktion
+    - en: Usually no MIL
+      de: Meist keine Motorkontrollleuchte
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [80, 600]
-    estimated_hours: [0.5, 3.0]
+    estimated_hours: [0.5, 3]
   flags:
     mil: false
   references:
     - sae:J2012
+  related_codes: [U0216, U0217, U0218, U0219, U0220, U0221]
   sources:
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
 
 - code: U0216
   category: network
   title:
-    en: Lost Communication with Door Control Module Front Passenger
-    de: Kommunikation mit Türmodul Beifahrer vorn verloren
+    en: Lost Communication With Door Switch B
+    de: Kommunikation mit Türschalter B verloren
   description:
-    en: The body controller has lost the front passenger door module. Window, lock, mirror and door light functions on this door stop responding.
-    de: Das Bordnetzsteuergerät hat das Türmodul Beifahrer vorn verloren. Fensterheber, Verriegelung, Spiegel und Türleuchten dieser Tür reagieren nicht mehr.
+    en: U0216 means the networked door switch unit B no longer answers. In many doors the switch packs for windows, mirrors and locks are small bus nodes, usually LIN slaves under a door or body module, and the master stores this code once switch B stops replying. The manufacturer decides which door panel carries letter B. U0215 to U0221 cover switches A to G. The buttons on that panel stop working, while the other doors normally keep working.
+    de: U0216 bedeutet, dass die vernetzte Türschalter-Einheit B nicht mehr antwortet. In vielen Türen sind die Schalterblöcke für Fenster, Spiegel und Verriegelung kleine Busteilnehmer, meist LIN-Slaves unter einem Tür- oder Karosseriemodul; der Master speichert diesen Code, sobald Schalter B nicht mehr antwortet. Welche Türleiste den Buchstaben B trägt, legt der Hersteller fest. U0215 bis U0221 decken die Schalter A bis G ab. Die Tasten dieser Leiste fallen aus, die übrigen Türen arbeiten meist normal weiter.
   affected_components:
-    - door_control_module
-    - door_harness
+    - door_switch_b
+    - lin_bus
   common_causes:
     - id: door_harness_break
       likelihood: high
       label:
-        en: Door harness broken in hinge
-        de: Türkabelbaum im Türscharnier gebrochen
-    - id: gateway_module_fault
+        en: Broken wire in the door hinge area
+        de: Leitungsbruch im Türscharnierbereich
+    - id: connector_water
+      likelihood: medium
+      label:
+        en: Water or corrosion in the switch connector
+        de: Wasser oder Korrosion im Schalterstecker
+    - id: switch_module_failed
+      likelihood: medium
+      label:
+        en: Switch unit failed
+        de: Schaltereinheit defekt
+    - id: master_module_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Fault in the door or body module polling the switch
+        de: Fehler im abfragenden Tür- oder Karosseriesteuergerät
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Window, lock or mirror buttons on one panel not working
+      de: Fenster-, Verriegelungs- oder Spiegeltasten einer Leiste ohne Funktion
+    - en: Usually no MIL
+      de: Meist keine Motorkontrollleuchte
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [80, 600]
-    estimated_hours: [0.5, 3.0]
+    estimated_hours: [0.5, 3]
   flags:
     mil: false
   references:
     - sae:J2012
+  related_codes: [U0215, U0217, U0218, U0219, U0220, U0221]
   sources:
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
 
 - code: U0217
   category: network
   title:
-    en: Lost Communication with Door Control Module Rear Driver
-    de: Kommunikation mit Türmodul Fahrer hinten verloren
+    en: Lost Communication With Door Switch C
+    de: Kommunikation mit Türschalter C verloren
   description:
-    en: The body controller has lost the rear driver door module. Window, lock and child-lock functions on this door stop responding.
-    de: Das Bordnetzsteuergerät hat das Türmodul Fahrer hinten verloren. Fensterheber, Verriegelung und Kindersicherung dieser Tür reagieren nicht mehr.
+    en: U0217 means the networked door switch unit C no longer answers. In many doors the switch packs for windows, mirrors and locks are small bus nodes, usually LIN slaves under a door or body module, and the master stores this code once switch C stops replying. The manufacturer decides which door panel carries letter C. U0215 to U0221 cover switches A to G. The buttons on that panel stop working, while the other doors normally keep working.
+    de: U0217 bedeutet, dass die vernetzte Türschalter-Einheit C nicht mehr antwortet. In vielen Türen sind die Schalterblöcke für Fenster, Spiegel und Verriegelung kleine Busteilnehmer, meist LIN-Slaves unter einem Tür- oder Karosseriemodul; der Master speichert diesen Code, sobald Schalter C nicht mehr antwortet. Welche Türleiste den Buchstaben C trägt, legt der Hersteller fest. U0215 bis U0221 decken die Schalter A bis G ab. Die Tasten dieser Leiste fallen aus, die übrigen Türen arbeiten meist normal weiter.
   affected_components:
-    - door_control_module
-    - door_harness
+    - door_switch_c
+    - lin_bus
   common_causes:
     - id: door_harness_break
       likelihood: high
       label:
-        en: Door harness broken in hinge
-        de: Türkabelbaum im Türscharnier gebrochen
-    - id: gateway_module_fault
+        en: Broken wire in the door hinge area
+        de: Leitungsbruch im Türscharnierbereich
+    - id: connector_water
+      likelihood: medium
+      label:
+        en: Water or corrosion in the switch connector
+        de: Wasser oder Korrosion im Schalterstecker
+    - id: switch_module_failed
+      likelihood: medium
+      label:
+        en: Switch unit failed
+        de: Schaltereinheit defekt
+    - id: master_module_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Fault in the door or body module polling the switch
+        de: Fehler im abfragenden Tür- oder Karosseriesteuergerät
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Window, lock or mirror buttons on one panel not working
+      de: Fenster-, Verriegelungs- oder Spiegeltasten einer Leiste ohne Funktion
+    - en: Usually no MIL
+      de: Meist keine Motorkontrollleuchte
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [80, 600]
-    estimated_hours: [0.5, 3.0]
+    estimated_hours: [0.5, 3]
   flags:
     mil: false
   references:
     - sae:J2012
+  related_codes: [U0215, U0216, U0218, U0219, U0220, U0221]
   sources:
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
 
 - code: U0218
   category: network
   title:
-    en: Lost Communication with Door Control Module Rear Passenger
-    de: Kommunikation mit Türmodul Beifahrer hinten verloren
+    en: Lost Communication With Door Switch D
+    de: Kommunikation mit Türschalter D verloren
   description:
-    en: The body controller has lost the rear passenger door module. Window, lock and child-lock functions on this door stop responding.
-    de: Das Bordnetzsteuergerät hat das Türmodul Beifahrer hinten verloren. Fensterheber, Verriegelung und Kindersicherung dieser Tür reagieren nicht mehr.
+    en: U0218 means the networked door switch unit D no longer answers. In many doors the switch packs for windows, mirrors and locks are small bus nodes, usually LIN slaves under a door or body module, and the master stores this code once switch D stops replying. The manufacturer decides which door panel carries letter D. U0215 to U0221 cover switches A to G. The buttons on that panel stop working, while the other doors normally keep working.
+    de: U0218 bedeutet, dass die vernetzte Türschalter-Einheit D nicht mehr antwortet. In vielen Türen sind die Schalterblöcke für Fenster, Spiegel und Verriegelung kleine Busteilnehmer, meist LIN-Slaves unter einem Tür- oder Karosseriemodul; der Master speichert diesen Code, sobald Schalter D nicht mehr antwortet. Welche Türleiste den Buchstaben D trägt, legt der Hersteller fest. U0215 bis U0221 decken die Schalter A bis G ab. Die Tasten dieser Leiste fallen aus, die übrigen Türen arbeiten meist normal weiter.
   affected_components:
-    - door_control_module
-    - door_harness
+    - door_switch_d
+    - lin_bus
   common_causes:
     - id: door_harness_break
       likelihood: high
       label:
-        en: Door harness broken in hinge
-        de: Türkabelbaum im Türscharnier gebrochen
-    - id: gateway_module_fault
+        en: Broken wire in the door hinge area
+        de: Leitungsbruch im Türscharnierbereich
+    - id: connector_water
+      likelihood: medium
+      label:
+        en: Water or corrosion in the switch connector
+        de: Wasser oder Korrosion im Schalterstecker
+    - id: switch_module_failed
+      likelihood: medium
+      label:
+        en: Switch unit failed
+        de: Schaltereinheit defekt
+    - id: master_module_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Fault in the door or body module polling the switch
+        de: Fehler im abfragenden Tür- oder Karosseriesteuergerät
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Window, lock or mirror buttons on one panel not working
+      de: Fenster-, Verriegelungs- oder Spiegeltasten einer Leiste ohne Funktion
+    - en: Usually no MIL
+      de: Meist keine Motorkontrollleuchte
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [80, 600]
-    estimated_hours: [0.5, 3.0]
+    estimated_hours: [0.5, 3]
   flags:
     mil: false
   references:
     - sae:J2012
+  related_codes: [U0215, U0216, U0217, U0219, U0220, U0221]
   sources:
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
 
 - code: U0219
   category: network
@@ -16643,152 +16660,156 @@
 - code: U0220
   category: network
   title:
-    en: Lost Communication with Door Control Module D
-    de: Kommunikation mit Türmodul D verloren
+    en: Lost Communication With Door Switch F
+    de: Kommunikation mit Türschalter F verloren
   description:
-    en: The body bus has lost an additional door control module (e.g. sliding door on a van). Window or sliding-door functions on this door are unavailable.
-    de: Der Bordnetz-Bus hat ein zusätzliches Türmodul (z. B. Schiebetür eines Transporters) verloren. Fensterheber- oder Schiebetürfunktionen dieser Tür sind nicht verfügbar.
+    en: U0220 means the networked door switch unit F no longer answers. In many doors the switch packs for windows, mirrors and locks are small bus nodes, usually LIN slaves under a door or body module, and the master stores this code once switch F stops replying. The manufacturer decides which door panel carries letter F. U0215 to U0221 cover switches A to G. The buttons on that panel stop working, while the other doors normally keep working.
+    de: U0220 bedeutet, dass die vernetzte Türschalter-Einheit F nicht mehr antwortet. In vielen Türen sind die Schalterblöcke für Fenster, Spiegel und Verriegelung kleine Busteilnehmer, meist LIN-Slaves unter einem Tür- oder Karosseriemodul; der Master speichert diesen Code, sobald Schalter F nicht mehr antwortet. Welche Türleiste den Buchstaben F trägt, legt der Hersteller fest. U0215 bis U0221 decken die Schalter A bis G ab. Die Tasten dieser Leiste fallen aus, die übrigen Türen arbeiten meist normal weiter.
   affected_components:
-    - door_control_module
-    - door_harness
+    - door_switch_f
+    - lin_bus
   common_causes:
     - id: door_harness_break
       likelihood: high
       label:
-        en: Door harness damaged
-        de: Türkabelbaum beschädigt
-    - id: gateway_module_fault
+        en: Broken wire in the door hinge area
+        de: Leitungsbruch im Türscharnierbereich
+    - id: connector_water
+      likelihood: medium
+      label:
+        en: Water or corrosion in the switch connector
+        de: Wasser oder Korrosion im Schalterstecker
+    - id: switch_module_failed
+      likelihood: medium
+      label:
+        en: Switch unit failed
+        de: Schaltereinheit defekt
+    - id: master_module_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Fault in the door or body module polling the switch
+        de: Fehler im abfragenden Tür- oder Karosseriesteuergerät
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Window, lock or mirror buttons on one panel not working
+      de: Fenster-, Verriegelungs- oder Spiegeltasten einer Leiste ohne Funktion
+    - en: Usually no MIL
+      de: Meist keine Motorkontrollleuchte
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [80, 700]
-    estimated_hours: [0.5, 3.0]
+    estimated_hours: [0.5, 3]
   flags:
     mil: false
   references:
     - sae:J2012
-  related_codes: [U0221, U0222, U020B, U0205, U0204, U0203, U0202, U0201, U0200]
+  related_codes: [U0215, U0216, U0217, U0218, U0219, U0221]
   sources:
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
 
 - code: U0221
   category: network
   title:
-    en: Lost Communication with Door Control Module E
-    de: Kommunikation mit Türmodul E verloren
+    en: Lost Communication With Door Switch G
+    de: Kommunikation mit Türschalter G verloren
   description:
-    en: The body bus has lost door control module E (e.g. second sliding door). Functions on this door stop working.
-    de: Der Bordnetz-Bus hat das Türmodul E (z. B. zweite Schiebetür) verloren. Funktionen dieser Tür arbeiten nicht mehr.
+    en: U0221 means the networked door switch unit G no longer answers. In many doors the switch packs for windows, mirrors and locks are small bus nodes, usually LIN slaves under a door or body module, and the master stores this code once switch G stops replying. The manufacturer decides which door panel carries letter G. U0215 to U0221 cover switches A to G. The buttons on that panel stop working, while the other doors normally keep working.
+    de: U0221 bedeutet, dass die vernetzte Türschalter-Einheit G nicht mehr antwortet. In vielen Türen sind die Schalterblöcke für Fenster, Spiegel und Verriegelung kleine Busteilnehmer, meist LIN-Slaves unter einem Tür- oder Karosseriemodul; der Master speichert diesen Code, sobald Schalter G nicht mehr antwortet. Welche Türleiste den Buchstaben G trägt, legt der Hersteller fest. U0215 bis U0221 decken die Schalter A bis G ab. Die Tasten dieser Leiste fallen aus, die übrigen Türen arbeiten meist normal weiter.
   affected_components:
-    - door_control_module
-    - door_harness
+    - door_switch_g
+    - lin_bus
   common_causes:
     - id: door_harness_break
       likelihood: high
       label:
-        en: Door harness damaged
-        de: Türkabelbaum beschädigt
-    - id: gateway_module_fault
+        en: Broken wire in the door hinge area
+        de: Leitungsbruch im Türscharnierbereich
+    - id: connector_water
+      likelihood: medium
+      label:
+        en: Water or corrosion in the switch connector
+        de: Wasser oder Korrosion im Schalterstecker
+    - id: switch_module_failed
+      likelihood: medium
+      label:
+        en: Switch unit failed
+        de: Schaltereinheit defekt
+    - id: master_module_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Fault in the door or body module polling the switch
+        de: Fehler im abfragenden Tür- oder Karosseriesteuergerät
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Window, lock or mirror buttons on one panel not working
+      de: Fenster-, Verriegelungs- oder Spiegeltasten einer Leiste ohne Funktion
+    - en: Usually no MIL
+      de: Meist keine Motorkontrollleuchte
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [80, 700]
-    estimated_hours: [0.5, 3.0]
+    estimated_hours: [0.5, 3]
   flags:
     mil: false
   references:
     - sae:J2012
-  related_codes: [U0220, U0222, U020B, U0205, U0204, U0203, U0202, U0201, U0200]
+  related_codes: [U0215, U0216, U0217, U0218, U0219, U0220]
   sources:
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
 
 - code: U0222
   category: network
   title:
-    en: Lost Communication with Door Control Module F
-    de: Kommunikation mit Türmodul F verloren
+    en: Lost Communication With Door Window Motor A
+    de: Kommunikationsverlust mit Fensterhebermotor A
   description:
-    en: The body bus has lost door control module F. Functions on this door (often a rear barn-door of a van) stop working.
-    de: Der Bordnetz-Bus hat das Türmodul F verloren. Funktionen dieser Tür (häufig hintere Flügeltür eines Transporters) arbeiten nicht mehr.
+    en: U0222 means the networked window motor A, a motor with its own electronics and bus interface (usually LIN), no longer answers. The door or body module stores the code once the motor stops replying; U0222 to U0228 cover motors A to G, and the manufacturer assigns the letters to the doors. One-touch and anti-pinch operation of that window stop, and the window may not move at all.
+    de: U0222 bedeutet, dass der vernetzte Fensterhebermotor A, ein Motor mit eigener Elektronik und Busanschluss (meist LIN), nicht mehr antwortet. Das Tür- oder Karosseriesteuergerät speichert den Code, sobald der Motor schweigt; U0222 bis U0228 decken die Motoren A bis G ab, die Zuordnung zu den Türen legt der Hersteller fest. Antipp- und Einklemmschutzfunktion dieses Fensters fallen aus, unter Umständen bewegt es sich gar nicht mehr.
   affected_components:
-    - door_control_module
-    - door_harness
+    - door_window_motor_a
+    - lin_bus
   common_causes:
     - id: door_harness_break
       likelihood: high
       label:
-        en: Door harness damaged
-        de: Türkabelbaum beschädigt
-    - id: gateway_module_fault
-      likelihood: low
+        en: Broken bus or supply wire in the door harness
+        de: Gebrochene Bus- oder Versorgungsleitung im Türkabelbaum
+    - id: motor_power_loss
+      likelihood: medium
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
+        en: Loss of power or ground at the motor
+        de: Spannungsversorgung oder Masse am Motor fehlt
+    - id: motor_electronics_failed
+      likelihood: medium
       label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Window motor electronics failed
+        de: Elektronik des Fensterhebermotors defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Window does not move or only without one-touch
+      de: Fenster bewegt sich nicht oder nur ohne Antippfunktion
+    - en: Anti-pinch function unavailable
+      de: Einklemmschutz nicht verfügbar
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [80, 700]
-    estimated_hours: [0.5, 3.0]
+    estimated_hours: [0.5, 3]
   flags:
     mil: false
   references:
     - sae:J2012
-  related_codes: [U0221, U0220, U020B, U0205, U0204, U0203, U0202, U0201, U0200]
+  related_codes: [U0223, U0224, U0225, U0226, U0227, U0228]
   sources:
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
-    - https://en.wikipedia.org/wiki/CAN_bus
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
 
 - code: U0223
   category: network
@@ -30341,51 +30362,47 @@
 - code: U0421
   category: network
   title:
-    en: Invalid Data Received from Throttle/Pedal Position Sensor
-    de: Ungültige Daten vom Drosselklappen-/Pedalwertgeber empfangen
+    en: Invalid Data Received From Suspension Control Module A
+    de: Ungültige Daten vom Fahrwerk-Steuergerät A empfangen
   description:
-    en: The ECU receives implausible accelerator pedal or throttle data over the bus. The engine drops to limp-mode with reduced power.
-    de: Die Motorsteuerung empfängt unplausible Werte des Gas-/Drosselklappenpotis über den Bus. Der Motor geht in den Notlauf mit reduzierter Leistung.
+    en: "U0421 means a module receives messages from the suspension control module a but their content is implausible: values out of range, failed checksums or message counters, or signals the sender itself marks as invalid. The bus connection works; the problem lies in the data. Older code lists call this unit the ride level control module. Ride height, damping or levelling data from it are rejected, so the receiving modules use substitute values and suspension functions may be limited."
+    de: "U0421 bedeutet, dass ein Steuergerät Botschaften vom Fahrwerk-Steuergerät A empfängt, deren Inhalt aber unplausibel ist: Werte außerhalb des Bereichs, fehlerhafte Prüfsummen oder Botschaftszähler oder Signale, die der Sender selbst als ungültig kennzeichnet. Die Busverbindung funktioniert, das Problem liegt in den Daten. Ältere Codelisten nennen diese Einheit Niveauregulierungs-Steuergerät. Daten zu Fahrzeughöhe, Dämpfung oder Niveau werden verworfen, die empfangenden Steuergeräte nutzen Ersatzwerte, und Fahrwerksfunktionen können eingeschränkt sein."
   affected_components:
-    - accelerator_pedal_sensor
-    - throttle_actuator
+    - suspension_control_module_a
   common_causes:
-    - id: pedal_sensor_failed
+    - id: sender_input_fault
       likelihood: medium
       label:
-        en: Pedal sensor partially failed
-        de: Pedalsensor teilweise defekt
-    - id: gateway_module_fault
+        en: Faulty sensor or input at the sending module
+        de: Defekter Sensor oder Eingang am sendenden Steuergerät
+    - id: software_mismatch
+      likelihood: medium
+      label:
+        en: Software or configuration mismatch after a repair
+        de: Software- oder Konfigurationsstand passt nach Reparatur nicht
+    - id: sender_internal_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Internal fault in the sending module
+        de: Interner Fehler im sendenden Steuergerät
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Warning lights or messages in the affected systems
+      de: Warnleuchten oder Meldungen in den betroffenen Systemen
+    - en: Functions using these data limited or unavailable
+      de: Funktionen, die diese Daten nutzen, eingeschränkt oder nicht verfügbar
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [80, 500]
-    estimated_hours: [0.3, 2.0]
+    estimated_hours: [0.3, 2]
   flags:
     mil: true
     limp_mode_possible: true
   references:
     - sae:J2012
   sources:
-    - https://en.wikipedia.org/wiki/Throttle_position_sensor
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0422
@@ -30442,50 +30459,47 @@
 - code: U0423
   category: network
   title:
-    en: Invalid Data Received from Information Center
-    de: Ungültige Daten vom Informations-Center empfangen
+    en: Invalid Data Received From Instrument Panel Cluster Control Module
+    de: Ungültige Daten vom Kombiinstrument-Steuergerät empfangen
   description:
-    en: 'The Information Center is present on the data bus but the values it reports are implausible — out of range, frozen, or failing the checksum or rolling-count check. The receiving modules reject the data. Driver-display content may be wrong or missing. Causes include a faulty sensor feeding the module, internal computation errors, a software or calibration mismatch after a repair, or bus interference corrupting the frames.'
-    de: 'Informations-Center — diese Komponente ist zwar am Datenbus aktiv, liefert aber unplausible Werte (außerhalb des Bereichs, eingefroren oder mit fehlerhafter Prüfsumme bzw. Zählung). Die empfangenden Steuergeräte verwerfen die Daten. Die Anzeige im Fahrerdisplay kann falsch sein oder fehlen. Ursachen sind ein fehlerhafter Sensor am Modul, interne Rechenfehler, eine falsche Software- oder Kalibrierungsversion nach einer Reparatur oder Störungen auf dem Bus.'
+    en: "U0423 means a module receives messages from the instrument panel cluster control module but their content is implausible: values out of range, failed checksums or message counters, or signals the sender itself marks as invalid. The bus connection works; the problem lies in the data. Values the cluster sends, for example odometer, settings or driver inputs routed through it, are rejected by the receiving modules, which then use defaults."
+    de: "U0423 bedeutet, dass ein Steuergerät Botschaften vom Kombiinstrument-Steuergerät empfängt, deren Inhalt aber unplausibel ist: Werte außerhalb des Bereichs, fehlerhafte Prüfsummen oder Botschaftszähler oder Signale, die der Sender selbst als ungültig kennzeichnet. Die Busverbindung funktioniert, das Problem liegt in den Daten. Werte, die das Kombiinstrument sendet, etwa Kilometerstand, Einstellungen oder darüber geleitete Fahrereingaben, verwerfen die empfangenden Steuergeräte und nutzen Standardwerte."
   affected_components:
-    - information_display_module
-    - can_bus_wiring
+    - instrument_panel_cluster_control_module
   common_causes:
-    - id: head_unit_internal_fault
+    - id: sender_input_fault
       likelihood: medium
       label:
-        en: Head unit internal fault
-        de: Interner Fehler in der Head-Unit
-    - id: can_corruption
+        en: Faulty sensor or input at the sending module
+        de: Defekter Sensor oder Eingang am sendenden Steuergerät
+    - id: software_mismatch
       likelihood: medium
       label:
-        en: CAN corruption causing checksum errors
-        de: CAN-Korruption mit Checksummen-Fehlern
-    - id: gateway_module_fault
+        en: Software or configuration mismatch after a repair
+        de: Software- oder Konfigurationsstand passt nach Reparatur nicht
+    - id: sender_internal_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Internal fault in the sending module
+        de: Interner Fehler im sendenden Steuergerät
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Warning lights or messages in the affected systems
+      de: Warnleuchten oder Meldungen in den betroffenen Systemen
+    - en: Functions using these data limited or unavailable
+      de: Funktionen, die diese Daten nutzen, eingeschränkt oder nicht verfügbar
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [80, 1500]
-    estimated_hours: [1.0, 4.0]
+    estimated_hours: [1, 4]
   flags:
     mil: false
     emissions_relevant: false
   references:
     - sae:J2012
   sources:
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
 
 - code: U0424
