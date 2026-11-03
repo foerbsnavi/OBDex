@@ -206790,7 +206790,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [P0E52, P0E53, P0E54, P0E55, P0E9E]
+  related_codes: [P0E52, P0E53, P0E54, P0E55, P0E9B]
   sources:
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://static.nhtsa.gov/odi/tsbs/2025/MC-11021800-0001.pdf
@@ -206849,7 +206849,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [P0E51, P0E53, P0E54, P0E55, P0E9F]
+  related_codes: [P0E51, P0E53, P0E54, P0E55, P0E9C]
   sources:
     - https://static.nhtsa.gov/odi/tsbs/2021/MC-10190705-9999.pdf
     - https://static.nhtsa.gov/odi/tsbs/2026/MC-11032756-0001.pdf
@@ -206904,7 +206904,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [P0E51, P0E52, P0E54, P0E55, P0EA0]
+  related_codes: [P0E51, P0E52, P0E54, P0E55, P0E9D]
   sources:
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBDSM1901_HEV.pdf
@@ -206958,7 +206958,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [P0E51, P0E52, P0E53, P0E55, P0EA1, P0C3B]
+  related_codes: [P0E51, P0E52, P0E53, P0E55, P0E9E, P0C3B]
   sources:
     - https://static.nhtsa.gov/odi/tsbs/2025/MC-11021800-0001.pdf
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
@@ -207011,7 +207011,7 @@
     limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [P0E51, P0E52, P0E53, P0E54, P0EA2]
+  related_codes: [P0E51, P0E52, P0E53, P0E54, P0E9F]
   sources:
     - https://static.nhtsa.gov/odi/tsbs/2024/MC-10251877-9999.pdf
     - https://static.nhtsa.gov/odi/tsbs/2025/MC-11024292-0001.pdf
