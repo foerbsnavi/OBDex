@@ -619,8 +619,8 @@
     en: Deactivation/Exhaust Valve Control Circuit Bank 1
     de: Zylinderabschaltung/Auslassventil-Steuerschaltkreis Bank 1
   description:
-    en: 'Generic electrical fault on the cylinder deactivation/exhaust valve control circuit on bank 1. The exhaust control valve modulates exhaust backpressure or routing (EGR feed, sound, regen support); a malfunction shifts torque mapping and may trigger limp mode.'
-    de: 'Allgemeiner elektrischer Fehler am Schaltkreis der Zylinderabschaltung/Auslassventilsteuerung Bank 1. Das Abgas-Steuerventil reguliert Abgas-Gegendruck oder -Führung (EGR-Speisung, Sound, Regenerations-Stütze); eine Fehlfunktion verschiebt das Drehmoment-Mapping und kann Notlauf auslösen.'
+    en: Generic electrical fault on the cylinder deactivation/exhaust valve control circuit on bank 1. On engines with cylinder deactivation the exhaust valves of a switched-off cylinder are held closed together with its intake valves, typically by switchable rocker arms or lifters that oil-pressure solenoids control; this code covers the bank's control circuit for the exhaust-side actuators. While it is faulty the module stops deactivating cylinders on that bank, so the engine runs on all cylinders and uses slightly more fuel.
+    de: Allgemeiner elektrischer Fehler am Schaltkreis der Zylinderabschaltung/Auslassventilsteuerung Bank 1. Bei Motoren mit Zylinderabschaltung werden die Auslassventile eines abgeschalteten Zylinders zusammen mit den Einlassventilen geschlossen gehalten, meist über schaltbare Schlepphebel oder Stößel, die von Öldruck-Magnetventilen gesteuert werden; dieser Code betrifft den Steuerkreis der auslassseitigen Aktuatoren dieser Bank. Solange er gestört ist, schaltet das Steuergerät auf dieser Bank keine Zylinder mehr ab, der Motor läuft auf allen Zylindern und verbraucht etwas mehr Kraftstoff.
   affected_components:
     - cylinder_deactivation_solenoid
     - actuator_wiring
@@ -635,6 +635,11 @@
       label:
         en: Wiring break or unplugged connector
         de: Kabelbruch oder loser Stecker
+  symptoms:
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: Cylinder deactivation inactive, slightly higher fuel consumption
+      de: Zylinderabschaltung inaktiv, etwas höherer Verbrauch
   repair:
     difficulty: hard
     diy_possible: false
@@ -651,6 +656,9 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.mobilityengineeringtech.com/component/content/article/41966-sae-ma-01159
+    - https://patents.google.com/patent/US20070240659A1/en
 
 - code: P340D
   category: powertrain
@@ -658,8 +666,8 @@
     en: Deactivation/Exhaust Valve Control Circuit Bank 2
     de: Zylinderabschaltung/Auslassventil-Steuerschaltkreis Bank 2
   description:
-    en: 'Generic electrical fault on the cylinder deactivation/exhaust valve control circuit on bank 2. The exhaust control valve modulates exhaust backpressure or routing (EGR feed, sound, regen support); a malfunction shifts torque mapping and may trigger limp mode.'
-    de: 'Allgemeiner elektrischer Fehler am Schaltkreis der Zylinderabschaltung/Auslassventilsteuerung Bank 2. Das Abgas-Steuerventil reguliert Abgas-Gegendruck oder -Führung (EGR-Speisung, Sound, Regenerations-Stütze); eine Fehlfunktion verschiebt das Drehmoment-Mapping und kann Notlauf auslösen.'
+    en: Generic electrical fault on the cylinder deactivation/exhaust valve control circuit on bank 2. On engines with cylinder deactivation the exhaust valves of a switched-off cylinder are held closed together with its intake valves, typically by switchable rocker arms or lifters that oil-pressure solenoids control; this code covers the bank's control circuit for the exhaust-side actuators. While it is faulty the module stops deactivating cylinders on that bank, so the engine runs on all cylinders and uses slightly more fuel.
+    de: Allgemeiner elektrischer Fehler am Schaltkreis der Zylinderabschaltung/Auslassventilsteuerung Bank 2. Bei Motoren mit Zylinderabschaltung werden die Auslassventile eines abgeschalteten Zylinders zusammen mit den Einlassventilen geschlossen gehalten, meist über schaltbare Schlepphebel oder Stößel, die von Öldruck-Magnetventilen gesteuert werden; dieser Code betrifft den Steuerkreis der auslassseitigen Aktuatoren dieser Bank. Solange er gestört ist, schaltet das Steuergerät auf dieser Bank keine Zylinder mehr ab, der Motor läuft auf allen Zylindern und verbraucht etwas mehr Kraftstoff.
   affected_components:
     - cylinder_deactivation_solenoid
     - actuator_wiring
@@ -674,6 +682,11 @@
       label:
         en: Wiring break or unplugged connector
         de: Kabelbruch oder loser Stecker
+  symptoms:
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: Cylinder deactivation inactive, slightly higher fuel consumption
+      de: Zylinderabschaltung inaktiv, etwas höherer Verbrauch
   repair:
     difficulty: hard
     diy_possible: false
@@ -690,6 +703,9 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.mobilityengineeringtech.com/component/content/article/41966-sae-ma-01159
+    - https://patents.google.com/patent/US20070240659A1/en
 
 - code: P3410
   category: powertrain
@@ -4909,8 +4925,8 @@
     en: Cylinder 11 Exhaust Valve Control Circuit Low
     de: Zylinder 11 Auslassventil-Steuerschaltkreis niedrig
   description:
-    en: 'Cylinder 11 exhaust valve control voltage below expected range — short to ground. The exhaust control valve modulates exhaust backpressure or routing (EGR feed, sound, regen support); a malfunction shifts torque mapping and may trigger limp mode.'
-    de: 'Steuerspannung Auslassventil Zylinder 11 unter Sollbereich — Masseschluss. Das Abgas-Steuerventil reguliert Abgas-Gegendruck oder -Führung (EGR-Speisung, Sound, Regenerations-Stütze); eine Fehlfunktion verschiebt das Drehmoment-Mapping und kann Notlauf auslösen.'
+    en: Cylinder 11 exhaust valve control voltage below expected range — short to ground. Engines with twelve cylinders and cylinder deactivation, such as Lamborghini's Aventador V12, hold the exhaust valves of the shut-off cylinders closed with a switchable actuator; this code concerns that actuator's circuit on cylinder 11. While the circuit is faulty the module keeps all cylinders active, and if the valve gear is stuck in the off position the cylinder may misfire.
+    de: Steuerspannung Auslassventil Zylinder 11 unter Sollbereich — Masseschluss. Zwölfzylinder mit Zylinderabschaltung, etwa der V12 des Lamborghini Aventador, halten die Auslassventile der abgeschalteten Zylinder über einen schaltbaren Aktuator geschlossen; dieser Code betrifft dessen Stromkreis an Zylinder 11. Solange der Stromkreis gestört ist, lässt das Steuergerät alle Zylinder aktiv, und hängt der Ventiltrieb in der abgeschalteten Stellung, kann der Zylinder Aussetzer haben.
   affected_components:
     - cyl11_exhaust_valve_actuator
     - actuator_wiring
@@ -4923,13 +4939,20 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: harness_chafe
       likelihood: low
       label:
-        en: 'Harness chafing through insulation'
-        de: 'Kabelbaum scheuert sich durch die Isolation'
+        en: Harness chafing through insulation
+        de: Kabelbaum scheuert sich durch die Isolation
+  symptoms:
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: Cylinder deactivation inactive
+      de: Zylinderabschaltung inaktiv
+    - en: Possible misfire on cylinder 11
+      de: Möglicherweise Zündaussetzer an Zylinder 11
   repair:
     difficulty: medium
     diy_possible: true
@@ -4946,6 +4969,10 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.mobilityengineeringtech.com/component/content/article/41966-sae-ma-01159
+    - https://patents.google.com/patent/US20070240659A1/en
+    - https://newatlas.com/aventador-lp-700-4-start-stop/24363/
 
 - code: P3488
   category: powertrain
@@ -4953,8 +4980,8 @@
     en: Cylinder 11 Exhaust Valve Control Circuit High
     de: Zylinder 11 Auslassventil-Steuerschaltkreis hoch
   description:
-    en: 'Cylinder 11 exhaust valve control voltage above expected range — short to power or open ground. The exhaust control valve modulates exhaust backpressure or routing (EGR feed, sound, regen support); a malfunction shifts torque mapping and may trigger limp mode.'
-    de: 'Steuerspannung Auslassventil Zylinder 11 über Sollbereich — Plus-Schluss oder offene Masse. Das Abgas-Steuerventil reguliert Abgas-Gegendruck oder -Führung (EGR-Speisung, Sound, Regenerations-Stütze); eine Fehlfunktion verschiebt das Drehmoment-Mapping und kann Notlauf auslösen.'
+    en: Cylinder 11 exhaust valve control voltage above expected range — short to power or open ground. Engines with twelve cylinders and cylinder deactivation, such as Lamborghini's Aventador V12, hold the exhaust valves of the shut-off cylinders closed with a switchable actuator; this code concerns that actuator's circuit on cylinder 11. While the circuit is faulty the module keeps all cylinders active, and if the valve gear is stuck in the off position the cylinder may misfire.
+    de: Steuerspannung Auslassventil Zylinder 11 über Sollbereich — Plus-Schluss oder offene Masse. Zwölfzylinder mit Zylinderabschaltung, etwa der V12 des Lamborghini Aventador, halten die Auslassventile der abgeschalteten Zylinder über einen schaltbaren Aktuator geschlossen; dieser Code betrifft dessen Stromkreis an Zylinder 11. Solange der Stromkreis gestört ist, lässt das Steuergerät alle Zylinder aktiv, und hängt der Ventiltrieb in der abgeschalteten Stellung, kann der Zylinder Aussetzer haben.
   affected_components:
     - cyl11_exhaust_valve_actuator
     - actuator_wiring
@@ -4967,13 +4994,20 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: supply_pinch
       likelihood: low
       label:
-        en: 'Supply wire pinched against B+ source'
-        de: 'Versorgungsleitung gegen B+-Quelle eingeklemmt'
+        en: Supply wire pinched against B+ source
+        de: Versorgungsleitung gegen B+-Quelle eingeklemmt
+  symptoms:
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: Cylinder deactivation inactive
+      de: Zylinderabschaltung inaktiv
+    - en: Possible misfire on cylinder 11
+      de: Möglicherweise Zündaussetzer an Zylinder 11
   repair:
     difficulty: medium
     diy_possible: true
@@ -4990,6 +5024,10 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.mobilityengineeringtech.com/component/content/article/41966-sae-ma-01159
+    - https://patents.google.com/patent/US20070240659A1/en
+    - https://newatlas.com/aventador-lp-700-4-start-stop/24363/
 
 - code: P3489
   category: powertrain

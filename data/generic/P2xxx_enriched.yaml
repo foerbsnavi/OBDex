@@ -1992,8 +1992,8 @@
     en: Reductant Tank Heater Control Circuit High
     de: Reduktionsmitteltank-Heizung Steuerkreis Spannung hoch
   description:
-    en: 'The DEF tank heater control line reads above the expected voltage — short to B+ or open ground. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Die Steuerleitung der AdBlue-Tankheizung liegt über der erwarteten Spannung — Kurzschluss nach Plus oder offene Masse. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: The DEF tank heater control line reads above the expected voltage — short to B+ or open ground. The tank heater thaws the urea solution around the pump intake and keeps it liquid, since DEF freezes at about −11 °C. With the heating out of action, dosing is delayed or blocked in frost and the SCR catalyst cannot reduce NOx until the fluid has thawed.
+    de: Die Steuerleitung der AdBlue-Tankheizung liegt über der erwarteten Spannung — Kurzschluss nach Plus oder offene Masse. Die Tankheizung taut die Harnstofflösung im Bereich der Pumpenansaugung auf und hält sie flüssig, denn AdBlue gefriert bei etwa −11 °C. Fällt die Heizung aus, verzögert oder sperrt das System die Dosierung bei Frost, und der SCR-Katalysator kann NOx erst nach dem Auftauen reduzieren.
   affected_components:
     - reductant_tank_heater
   common_causes:
@@ -2005,22 +2005,22 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: supply_pinch
       likelihood: low
       label:
-        en: 'Supply wire pinched against B+ source'
-        de: 'Versorgungsleitung gegen B+-Quelle eingeklemmt'
+        en: Supply wire pinched against B+ source
+        de: Versorgungsleitung gegen B+-Quelle eingeklemmt
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light or NOx warning on
+      de: Motorkontrollleuchte oder NOx-Warnung an
+    - en: AdBlue/DEF level or quality warning
+      de: AdBlue-/DEF-Stand- oder Qualitätswarnung
+    - en: Possible no-start countdown after ignore period
+      de: Möglicherweise Startsperre nach Ignorieren-Frist
+    - en: Failed emissions inspection (NOx)
+      de: Abgasuntersuchung fehlgeschlagen (NOx)
   repair:
     difficulty: medium
     diy_possible: false
@@ -2029,12 +2029,15 @@
   flags:
     mil: true
     emissions_relevant: true
-  related_codes: [P202A]
   references:
     - sae:J2012
+  related_codes: [P202A]
   sources:
     - https://en.wikipedia.org/wiki/Diesel_exhaust_fluid
     - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://patents.google.com/patent/US9273581
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2014/14OBDG10%20Engine%20Diagnostics.pdf
 
 - code: P202D
   category: powertrain
@@ -7532,8 +7535,8 @@
     en: Reductant Purge Control Valve A Circuit Low
     de: Reduktionsmittel-Spülventil A Schaltkreis niedrig
   description:
-    en: 'Reductant purge control valve A drive line stuck low — short to ground. The evaporative system captures fuel vapor from the tank and purges it into intake; leaks or stuck purge valves leak hydrocarbons and cause emissions failures.'
-    de: 'Treiberleitung des AdBlue-Spülventils A niedrig — Kurzschluss nach Masse. Das EVAP-System fängt Kraftstoffdämpfe aus dem Tank und spült sie in den Ansaugtrakt; Leckagen oder klemmende Tankentlüftungs-Ventile lassen Kohlenwasserstoffe entweichen und führen zur AU-Durchfallen.'
+    en: Reductant purge control valve A drive line stuck low — short to ground. The purge valve opens a path so that, after the engine is switched off, the dosing system can draw the remaining urea solution out of the dosing valve and lines; this protects them from freezing, as DEF freezes at about −11 °C, and from crystal deposits. If the valve cannot be controlled, the lines may stay filled, which risks frozen or blocked dosing parts and later SCR faults.
+    de: Treiberleitung des AdBlue-Spülventils A niedrig — Kurzschluss nach Masse. Das Spülventil öffnet einen Weg, über den das Dosiersystem nach dem Abstellen des Motors die restliche Harnstofflösung aus Dosierventil und Leitungen absaugen kann; das schützt sie vor dem Einfrieren, da AdBlue bei etwa −11 °C gefriert, und vor Kristallablagerungen. Lässt sich das Ventil nicht ansteuern, bleiben die Leitungen womöglich gefüllt, was eingefrorene oder verstopfte Dosierteile und spätere SCR-Fehler nach sich ziehen kann.
   affected_components:
     - reductant_purge_valve
   common_causes:
@@ -7545,22 +7548,22 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: harness_chafe
       likelihood: low
       label:
-        en: 'Harness chafing through insulation'
-        de: 'Kabelbaum scheuert sich durch die Isolation'
+        en: Harness chafing through insulation
+        de: Kabelbaum scheuert sich durch die Isolation
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light or NOx warning on
+      de: Motorkontrollleuchte oder NOx-Warnung an
+    - en: AdBlue/DEF level or quality warning
+      de: AdBlue-/DEF-Stand- oder Qualitätswarnung
+    - en: Possible no-start countdown after ignore period
+      de: Möglicherweise Startsperre nach Ignorieren-Frist
+    - en: Failed emissions inspection (NOx)
+      de: Abgasuntersuchung fehlgeschlagen (NOx)
   repair:
     difficulty: medium
     diy_possible: false
@@ -7569,12 +7572,14 @@
   flags:
     mil: true
     emissions_relevant: true
-  related_codes: [P20A0, P24DD]
   references:
     - sae:J2012
+  related_codes: [P20A0, P24DD]
   sources:
     - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
-    - https://en.wikipedia.org/wiki/Onboard_refueling_vapor_recovery
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://patents.google.com/patent/US9273581
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2014/14OBDG10%20Engine%20Diagnostics.pdf
 
 - code: P20A3
   category: powertrain
@@ -7582,8 +7587,8 @@
     en: Reductant Purge Control Valve A Circuit High
     de: Reduktionsmittel-Spülventil A Schaltkreis hoch
   description:
-    en: 'Reductant purge control valve A drive line stuck high — short to B+. The evaporative system captures fuel vapor from the tank and purges it into intake; leaks or stuck purge valves leak hydrocarbons and cause emissions failures.'
-    de: 'Treiberleitung des AdBlue-Spülventils A hoch — Kurzschluss nach Plus. Das EVAP-System fängt Kraftstoffdämpfe aus dem Tank und spült sie in den Ansaugtrakt; Leckagen oder klemmende Tankentlüftungs-Ventile lassen Kohlenwasserstoffe entweichen und führen zur AU-Durchfallen.'
+    en: Reductant purge control valve A drive line stuck high — short to B+. The purge valve opens a path so that, after the engine is switched off, the dosing system can draw the remaining urea solution out of the dosing valve and lines; this protects them from freezing, as DEF freezes at about −11 °C, and from crystal deposits. If the valve cannot be controlled, the lines may stay filled, which risks frozen or blocked dosing parts and later SCR faults.
+    de: Treiberleitung des AdBlue-Spülventils A hoch — Kurzschluss nach Plus. Das Spülventil öffnet einen Weg, über den das Dosiersystem nach dem Abstellen des Motors die restliche Harnstofflösung aus Dosierventil und Leitungen absaugen kann; das schützt sie vor dem Einfrieren, da AdBlue bei etwa −11 °C gefriert, und vor Kristallablagerungen. Lässt sich das Ventil nicht ansteuern, bleiben die Leitungen womöglich gefüllt, was eingefrorene oder verstopfte Dosierteile und spätere SCR-Fehler nach sich ziehen kann.
   affected_components:
     - reductant_purge_valve
   common_causes:
@@ -7595,22 +7600,22 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: supply_pinch
       likelihood: low
       label:
-        en: 'Supply wire pinched against B+ source'
-        de: 'Versorgungsleitung gegen B+-Quelle eingeklemmt'
+        en: Supply wire pinched against B+ source
+        de: Versorgungsleitung gegen B+-Quelle eingeklemmt
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light or NOx warning on
+      de: Motorkontrollleuchte oder NOx-Warnung an
+    - en: AdBlue/DEF level or quality warning
+      de: AdBlue-/DEF-Stand- oder Qualitätswarnung
+    - en: Possible no-start countdown after ignore period
+      de: Möglicherweise Startsperre nach Ignorieren-Frist
+    - en: Failed emissions inspection (NOx)
+      de: Abgasuntersuchung fehlgeschlagen (NOx)
   repair:
     difficulty: medium
     diy_possible: false
@@ -7619,12 +7624,14 @@
   flags:
     mil: true
     emissions_relevant: true
-  related_codes: [P20A0, P24DE]
   references:
     - sae:J2012
+  related_codes: [P20A0, P24DE]
   sources:
     - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
-    - https://en.wikipedia.org/wiki/Onboard_refueling_vapor_recovery
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://patents.google.com/patent/US9273581
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2014/14OBDG10%20Engine%20Diagnostics.pdf
 
 - code: P20A4
   category: powertrain
@@ -8544,8 +8551,8 @@
     en: Reductant Metering Unit Heater Control Circuit Low
     de: Reduktionsmittel-Dosiereinheit Heizung Steuerkreis niedrig
   description:
-    en: 'Metering unit heater control line stuck low — short to ground. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Steuerleitung der Dosiereinheit-Heizung niedrig — Kurzschluss nach Masse. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: Metering unit heater control line stuck low — short to ground. The metering or supply unit holds the pump and valves that deliver urea solution to the dosing valve, and its own heater thaws the fluid inside the unit after a cold start so that pressure can be built up. While the heater cannot be driven, dosing is held off in frost and NOx conversion starts late.
+    de: Steuerleitung der Dosiereinheit-Heizung niedrig — Kurzschluss nach Masse. Die Dosier- bzw. Fördereinheit enthält Pumpe und Ventile, die die Harnstofflösung zum Dosierventil liefern; ihre eigene Heizung taut die Flüssigkeit in der Einheit nach einem Kaltstart auf, damit Druck aufgebaut werden kann. Solange die Heizung nicht angesteuert werden kann, unterbleibt die Dosierung bei Frost, und die NOx-Minderung setzt verspätet ein.
   affected_components:
     - reductant_metering_unit_heater
   common_causes:
@@ -8557,36 +8564,39 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: harness_chafe
       likelihood: low
       label:
-        en: 'Harness chafing through insulation'
-        de: 'Kabelbaum scheuert sich durch die Isolation'
+        en: Harness chafing through insulation
+        de: Kabelbaum scheuert sich durch die Isolation
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light or NOx warning on
+      de: Motorkontrollleuchte oder NOx-Warnung an
+    - en: AdBlue/DEF level or quality warning
+      de: AdBlue-/DEF-Stand- oder Qualitätswarnung
+    - en: Possible no-start countdown after ignore period
+      de: Möglicherweise Startsperre nach Ignorieren-Frist
+    - en: Failed emissions inspection (NOx)
+      de: Abgasuntersuchung fehlgeschlagen (NOx)
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [200, 1500]
-    estimated_hours: [1.0, 4.0]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: true
-  related_codes: [P20B5]
   references:
     - sae:J2012
+  related_codes: [P20B5]
   sources:
     - https://en.wikipedia.org/wiki/Diesel_exhaust_fluid
     - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://patents.google.com/patent/US9273581
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2014/14OBDG10%20Engine%20Diagnostics.pdf
 
 - code: P20B8
   category: powertrain
@@ -8594,8 +8604,8 @@
     en: Reductant Metering Unit Heater Control Circuit High
     de: Reduktionsmittel-Dosiereinheit Heizung Steuerkreis hoch
   description:
-    en: 'Metering unit heater control line stuck high — short to B+. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Steuerleitung der Dosiereinheit-Heizung hoch — Kurzschluss nach Plus. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: Metering unit heater control line stuck high — short to B+. The metering or supply unit holds the pump and valves that deliver urea solution to the dosing valve, and its own heater thaws the fluid inside the unit after a cold start so that pressure can be built up. While the heater cannot be driven, dosing is held off in frost and NOx conversion starts late.
+    de: Steuerleitung der Dosiereinheit-Heizung hoch — Kurzschluss nach Plus. Die Dosier- bzw. Fördereinheit enthält Pumpe und Ventile, die die Harnstofflösung zum Dosierventil liefern; ihre eigene Heizung taut die Flüssigkeit in der Einheit nach einem Kaltstart auf, damit Druck aufgebaut werden kann. Solange die Heizung nicht angesteuert werden kann, unterbleibt die Dosierung bei Frost, und die NOx-Minderung setzt verspätet ein.
   affected_components:
     - reductant_metering_unit_heater
   common_causes:
@@ -8607,36 +8617,39 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: supply_pinch
       likelihood: low
       label:
-        en: 'Supply wire pinched against B+ source'
-        de: 'Versorgungsleitung gegen B+-Quelle eingeklemmt'
+        en: Supply wire pinched against B+ source
+        de: Versorgungsleitung gegen B+-Quelle eingeklemmt
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light or NOx warning on
+      de: Motorkontrollleuchte oder NOx-Warnung an
+    - en: AdBlue/DEF level or quality warning
+      de: AdBlue-/DEF-Stand- oder Qualitätswarnung
+    - en: Possible no-start countdown after ignore period
+      de: Möglicherweise Startsperre nach Ignorieren-Frist
+    - en: Failed emissions inspection (NOx)
+      de: Abgasuntersuchung fehlgeschlagen (NOx)
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [200, 1500]
-    estimated_hours: [1.0, 4.0]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: true
-  related_codes: [P20B5]
   references:
     - sae:J2012
+  related_codes: [P20B5]
   sources:
     - https://en.wikipedia.org/wiki/Diesel_exhaust_fluid
     - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://patents.google.com/patent/US9273581
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2014/14OBDG10%20Engine%20Diagnostics.pdf
 
 - code: P20B9
   category: powertrain
@@ -10463,40 +10476,34 @@
 - code: P20E0
   category: powertrain
   title:
-    en: Reductant Pressure Too Low
-    de: Reduktionsmitteldruck zu niedrig
+    en: Exhaust Aftertreatment Fuel Pressure Sensor Circuit High
+    de: Abgasnachbehandlung Kraftstoffdrucksensor Schaltkreis hoch
   description:
-    en: The pressure in the SCR reductant (AdBlue/DEF) line is below the calibrated minimum. Without sufficient pressure the dosing module cannot atomise reagent properly, leading to NOx exceedence.
-    de: Der Druck in der SCR-Reduktionsmittelleitung (AdBlue/DEF) liegt unter dem kalibrierten Mindestwert. Ohne ausreichenden Druck kann das Dosiermodul das Reagenz nicht richtig zerstaeuben, was zu NOx-Ueberschreitungen fuehrt.
+    en: P20E0 means the signal of the aftertreatment fuel pressure sensor is above its valid range, typically because the signal line is shorted to a voltage or the ground of the sensor is open. On diesels that inject fuel into the exhaust for particulate filter regeneration, this sensor monitors the pressure in the supply to the exhaust fuel injector (P20DD to P20E1 cover its circuit). Without a valid reading the module typically blocks active regeneration, so soot builds up in the filter.
+    de: P20E0 bedeutet, dass das Signal des Kraftstoffdrucksensors der Abgasnachbehandlung über dem gültigen Bereich liegt, meist durch einen Kurzschluss der Signalleitung nach Spannung oder eine offene Sensormasse. Bei Dieselmotoren, die zur Partikelfilter-Regeneration Kraftstoff in den Abgasstrang einspritzen, überwacht dieser Sensor den Druck in der Zuleitung zum Abgas-Kraftstoffinjektor (P20DD bis P20E1 betreffen seinen Stromkreis). Ohne gültigen Messwert sperrt das Steuergerät meist die aktive Regeneration, und im Filter sammelt sich Ruß an.
   affected_components:
-    - def_pump
-    - def_pressure_sensor
-    - def_lines
+    - aftertreatment_fuel_pressure_sensor
   common_causes:
-    - id: def_pump_worn
+    - id: signal_short_to_voltage
       likelihood: high
       label:
-        en: Worn DEF pump
-        de: Verschlissene AdBlue-Pumpe
-    - id: def_line_leak
+        en: Signal wire shorted to voltage
+        de: Signalleitung mit Kurzschluss nach Spannung
+    - id: sensor_ground_open
       likelihood: medium
       label:
-        en: Leak in DEF line
-        de: Leck in AdBlue-Leitung
-    - id: def_filter_clogged
+        en: Open sensor ground
+        de: Sensormasse unterbrochen
+    - id: sensor_failed
       likelihood: medium
       label:
-        en: Clogged DEF filter
-        de: Verstopfter AdBlue-Filter
+        en: Pressure sensor failed
+        de: Drucksensor defekt
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: DPF regeneration inhibited, DPF warning later
+      de: Partikelfilter-Regeneration gesperrt, später DPF-Warnung
   repair:
     difficulty: hard
     diy_possible: false
@@ -10509,52 +10516,49 @@
     limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [P20E1, P20E8]
+  related_codes: [P20DD, P20DE, P20DF, P20E1]
   sources:
-    - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://github.com/fabiovila/OBDIICodes
+    - https://github.com/tekseport/obd2-codes
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://partsavatar.ca/p20df-obd-ii-trouble-code-exhaust-aftertreatment-fuel-pressure-sensor-circuit-low-solution
 
 - code: P20E1
   category: powertrain
   title:
-    en: Reductant Pressure Too Low
-    de: Reagenzdruck zu niedrig
+    en: Exhaust Aftertreatment Fuel Pressure Sensor Circuit Intermittent/Erratic
+    de: Abgasnachbehandlung Kraftstoffdrucksensor Schaltkreis sporadisch/unregelmäßig
   description:
-    en: The reductant (AdBlue/DEF) line pressure stays below the demanded value during dosing. The dosing system needs a stable supply pressure to inject metered amounts; without it the system cannot meet NOx targets.
-    de: Der Leitungsdruck des Reagenzmittels (AdBlue/DEF) bleibt während der Dosierung unter dem geforderten Wert. Das System benötigt einen stabilen Versorgungsdruck zum Einspritzen definierter Mengen; ohne ihn werden die NOx-Vorgaben verfehlt.
+    en: P20E1 means the signal of the aftertreatment fuel pressure sensor drops out or jumps in a way the real pressure cannot. On diesels that inject fuel into the exhaust for particulate filter regeneration, this sensor monitors the pressure in the supply to the exhaust fuel injector (P20DD to P20E1 cover its circuit). Without a valid reading the module typically blocks active regeneration, so soot builds up in the filter.
+    de: P20E1 bedeutet, dass das Signal des Kraftstoffdrucksensors der Abgasnachbehandlung aussetzt oder springt, wie es der tatsächliche Druck nicht kann. Bei Dieselmotoren, die zur Partikelfilter-Regeneration Kraftstoff in den Abgasstrang einspritzen, überwacht dieser Sensor den Druck in der Zuleitung zum Abgas-Kraftstoffinjektor (P20DD bis P20E1 betreffen seinen Stromkreis). Ohne gültigen Messwert sperrt das Steuergerät meist die aktive Regeneration, und im Filter sammelt sich Ruß an.
   affected_components:
-    - reductant_pump
-    - reductant_pressure_sensor
-    - reductant_lines
+    - aftertreatment_fuel_pressure_sensor
   common_causes:
-    - id: reductant_pump_weak
+    - id: loose_connector
       likelihood: high
       label:
-        en: Reductant pump worn or weak
-        de: Reagenzpumpe verschlissen oder schwach
-    - id: reductant_line_leak
+        en: Loose or corroded connector
+        de: Lockerer oder korrodierter Stecker
+    - id: harness_chafe
       likelihood: medium
       label:
-        en: Leak in pressure line
-        de: Undichtigkeit in der Druckleitung
-    - id: reductant_filter_clogged
-      likelihood: medium
+        en: Chafed wiring
+        de: Durchgescheuerte Leitung
+    - id: sensor_failed
+      likelihood: low
       label:
-        en: Inline filter clogged
-        de: Vorfilter verstopft
+        en: Pressure sensor failing internally
+        de: Drucksensor mit innerem Fehler
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: DPF regeneration inhibited, DPF warning later
+      de: Partikelfilter-Regeneration gesperrt, später DPF-Warnung
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [250, 1500]
-    estimated_hours: [1.0, 4.0]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: true
@@ -10562,63 +10566,61 @@
     limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [P20E0, P20E8]
+  related_codes: [P20DD, P20DE, P20DF, P20E0]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_exhaust_fluid
-    - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://github.com/fabiovila/OBDIICodes
+    - https://github.com/tekseport/obd2-codes
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://partsavatar.ca/p20e1-obd-ii-trouble-code-exhaust-after-treatment-fuel-pressure-sensor-circuit-intermittent-erratic
 
 - code: P20E2
   category: powertrain
   title:
-    en: Reductant Pressure Too High
-    de: Reagenzdruck zu hoch
+    en: Exhaust Gas Temperature Sensor 1/2 Correlation (Bank 1)
+    de: Abgastemperatursensor 1/2 Korrelation (Bank 1)
   description:
-    en: The reductant line pressure exceeds the upper limit. A blocked return path, a stuck pump or a faulty pressure sensor are common causes; over-pressure can damage the dosing valve and the pump head.
-    de: Der Reagenzleitungsdruck überschreitet den oberen Grenzwert. Häufig durch blockierte Rücklaufleitung, hängende Pumpe oder fehlerhaften Drucksensor; zu hoher Druck kann Dosierventil und Pumpenkopf beschädigen.
+    en: P20E2 means exhaust gas temperature sensors 1 and 2 on bank 1 disagree at a moment when they should read about the same, for example after a long cold soak. It opens the correlation series P20E2 to P20E4 (1/2, 1/3, 2/3). The aftertreatment control relies on these sensors for regeneration and SCR temperature models, so it may stop active regeneration until the fault is cleared.
+    de: P20E2 bedeutet, dass die Abgastemperatursensoren 1 und 2 auf Bank 1 voneinander abweichen, obwohl sie etwa gleich messen müssten, etwa nach langer Abkühlzeit. Der Code eröffnet die Korrelationsreihe P20E2 bis P20E4 (1/2, 1/3, 2/3). Die Abgasnachbehandlung stützt Regeneration und SCR-Temperaturmodelle auf diese Sensoren und setzt die aktive Regeneration deshalb unter Umständen aus, bis der Fehler behoben ist.
   affected_components:
-    - reductant_pump
-    - reductant_pressure_sensor
-    - reductant_lines
+    - egt_sensor_1_bank1
+    - egt_sensor_2_bank1
   common_causes:
-    - id: reductant_return_blocked
+    - id: sensor_drift
       likelihood: high
       label:
-        en: Return line blocked or frozen
-        de: Rücklaufleitung blockiert oder vereist
-    - id: reductant_pressure_sensor_drift
+        en: One temperature sensor drifted
+        de: Ein Temperatursensor driftet
+    - id: connector_resistance
       likelihood: medium
       label:
-        en: Pressure sensor reads high
-        de: Drucksensor liest zu hoch
-    - id: dosing_valve_stuck_closed
-      likelihood: medium
+        en: High resistance in a sensor connector
+        de: Hoher Übergangswiderstand in einem Sensorstecker
+    - id: sensors_swapped
+      likelihood: low
       label:
-        en: Dosing valve stuck closed
-        de: Dosierventil hängt geschlossen
+        en: Sensors swapped after a repair
+        de: Sensoren nach Reparatur vertauscht
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: DPF regeneration may be inhibited
+      de: Partikelfilter-Regeneration kann gesperrt sein
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [250, 1500]
-    estimated_hours: [1.0, 4.0]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
-  related_codes: [P20E1, P20E9]
   references:
     - sae:J2012
+  related_codes: [P20E3, P20E4]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_exhaust_fluid
-    - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://github.com/tekseport/obd2-codes
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
 
 - code: P20E3
   category: powertrain
@@ -10912,8 +10914,8 @@
 - code: P20EA
   category: powertrain
   title:
-    en: Reductant Pump Control Circuit Open
-    de: AdBlue-Pumpe Ansteuerung offen
+    en: Reductant Control Module Power Relay De-Energized Performance - Too Early
+    de: Reduktionsmittel-Steuergerät Leistungsrelais Abfallverhalten - zu früh
   description:
     en: The control circuit to the reductant (DEF) dosing pump is open — no current flow detected. Without pump pressure no AdBlue reaches the SCR catalyst and NOx reduction stops.
     de: Der Ansteuerkreis der AdBlue-Dosierpumpe ist offen — kein Stromfluss erkannt. Ohne Pumpendruck erreicht kein AdBlue den SCR-Katalysator und die NOx-Reduktion bricht zusammen.
@@ -10934,22 +10936,22 @@
     - id: connector_back_out
       likelihood: low
       label:
-        en: 'Pin pushed back out of connector body'
-        de: 'Pin aus dem Steckergehäuse zurückgedrückt'
+        en: Pin pushed back out of connector body
+        de: Pin aus dem Steckergehäuse zurückgedrückt
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light or NOx warning on
+      de: Motorkontrollleuchte oder NOx-Warnung an
+    - en: AdBlue/DEF level or quality warning
+      de: AdBlue-/DEF-Stand- oder Qualitätswarnung
+    - en: Possible no-start countdown after ignore period
+      de: Möglicherweise Startsperre nach Ignorieren-Frist
+    - en: Failed emissions inspection (NOx)
+      de: Abgasuntersuchung fehlgeschlagen (NOx)
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [200, 1200]
-    estimated_hours: [1.0, 4.0]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: true
@@ -10962,8 +10964,8 @@
 - code: P20EB
   category: powertrain
   title:
-    en: Reductant Reservoir Heater "A" Control Circuit
-    de: Reagenztank-Heizung "A" Steuerkreis
+    en: Reductant Control Module Power Relay De-Energized Performance - Too Late
+    de: Reduktionsmittel-Steuergerät Leistungsrelais Abfallverhalten - zu spät
   description:
     en: A general electrical fault on the reductant tank heater "A" control circuit. AdBlue freezes at -11 C, so the tank heater must work for cold-start dosing.
     de: Allgemeiner elektrischer Fehler im Steuerkreis der Reagenztankheizung "A". AdBlue gefriert bei -11 C, deshalb muss die Tankheizung für die Dosierung beim Kaltstart funktionieren.
@@ -10982,19 +10984,19 @@
         en: Wiring open or connector loose
         de: Leitung unterbrochen oder Stecker locker
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light or NOx warning on
+      de: Motorkontrollleuchte oder NOx-Warnung an
+    - en: AdBlue/DEF level or quality warning
+      de: AdBlue-/DEF-Stand- oder Qualitätswarnung
+    - en: Possible no-start countdown after ignore period
+      de: Möglicherweise Startsperre nach Ignorieren-Frist
+    - en: Failed emissions inspection (NOx)
+      de: Abgasuntersuchung fehlgeschlagen (NOx)
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [200, 1200]
-    estimated_hours: [1.0, 4.0]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: true
@@ -11008,106 +11010,102 @@
 - code: P20EC
   category: powertrain
   title:
-    en: Reductant Heater "A" Control Stuck Off
-    de: Reagenzheizung "A" hängt aus
+    en: SCR NOx Catalyst Over Temperature (Bank 1)
+    de: SCR NOx-Katalysator Übertemperatur (Bank 1)
   description:
-    en: The reductant tank heater "A" does not heat when commanded on. Either a failed element or a stuck-off driver in the dosing module.
-    de: Die Reagenztankheizung "A" heizt nicht, obwohl angefordert. Entweder ein defektes Heizelement oder eine hängende Endstufe im Dosiermodul.
+    en: P20EC means the temperature of the SCR NOx catalyst on bank 1, measured or modelled from the exhaust temperature sensors, has exceeded the limit that protects the catalyst coating. Typical triggers are an over-long or uncontrolled particulate filter regeneration, excess fuel in the exhaust or a faulty temperature sensor. Repeated overheating ages the catalyst and lowers its NOx conversion.
+    de: P20EC bedeutet, dass die Temperatur des SCR-NOx-Katalysators auf Bank 1, gemessen oder aus den Abgastemperatursensoren modelliert, die Grenze zum Schutz der Katalysatorbeschichtung überschritten hat. Typische Auslöser sind eine zu lange oder unkontrollierte Partikelfilter-Regeneration, zu viel Kraftstoff im Abgas oder ein defekter Temperatursensor. Wiederholte Überhitzung lässt den Katalysator altern und senkt seine NOx-Umsetzung.
   affected_components:
-    - reductant_tank_heater
-    - reductant_dosing_unit
+    - scr_catalyst
   common_causes:
-    - id: heater_element_open
+    - id: regen_overtemp
       likelihood: high
       label:
-        en: Heater element open
-        de: Heizelement unterbrochen
-    - id: heater_driver_stuck_off
+        en: Uncontrolled or over-long DPF regeneration
+        de: Unkontrollierte oder zu lange Partikelfilter-Regeneration
+    - id: fuel_in_exhaust
       likelihood: medium
       label:
-        en: Heater driver stuck off
-        de: Heizungs-Endstufe hängt aus
-    - id: stuck_carbon_buildup
+        en: Leaking exhaust fuel injector or injector dripping
+        de: Undichter Abgas-Kraftstoffinjektor oder tropfende Einspritzdüse
+    - id: temp_sensor_fault
       likelihood: low
       label:
-        en: 'Carbon or debris buildup preventing free movement'
-        de: 'Verkokung oder Ablagerungen verhindern freies Bewegen'
+        en: Exhaust temperature sensor reading too high
+        de: Abgastemperatursensor misst zu hoch
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: Reduced power possible
+      de: Leistungsreduzierung möglich
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [200, 1200]
-    estimated_hours: [1.0, 4.0]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
-  related_codes: [P20EB, P20ED]
   references:
     - sae:J2012
+  related_codes: [P20EE, P20F0]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_exhaust_fluid
+    - https://github.com/fabiovila/OBDIICodes
+    - https://github.com/tekseport/obd2-codes
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://partsavatar.ca/p20ec-obd-ii-trouble-code-scr-nox-catalyst-over-temperature-bank-1-solution-sensor-injector-fluid
 
 - code: P20ED
   category: powertrain
   title:
-    en: Reductant Heater "A" Control Stuck On
-    de: Reagenzheizung "A" hängt ein
+    en: SCR NOx Pre-Catalyst Over Temperature (Bank 1)
+    de: SCR NOx-Vorkatalysator Übertemperatur (Bank 1)
   description:
-    en: The reductant tank heater "A" stays energised even when not commanded — usually a shorted driver stage. Continuous heating wastes current and can overheat the heater element.
-    de: Die Reagenztankheizung "A" bleibt eingeschaltet, obwohl nicht angefordert — meist eine durchlegierte Endstufe. Dauerheizen verschwendet Strom und kann das Heizelement überlasten.
+    en: P20ED means the temperature of the SCR NOx pre-catalyst on bank 1, measured or modelled from the exhaust temperature sensors, has exceeded the limit that protects the catalyst coating. The pre-catalyst is a smaller SCR stage mounted close to the engine on some systems. Typical triggers are an over-long or uncontrolled particulate filter regeneration, excess fuel in the exhaust or a faulty temperature sensor. Repeated overheating ages the catalyst and lowers its NOx conversion.
+    de: P20ED bedeutet, dass die Temperatur des SCR-NOx-Vorkatalysators auf Bank 1, gemessen oder aus den Abgastemperatursensoren modelliert, die Grenze zum Schutz der Katalysatorbeschichtung überschritten hat. Der Vorkatalysator ist bei manchen Systemen eine kleinere, motornahe SCR-Stufe. Typische Auslöser sind eine zu lange oder unkontrollierte Partikelfilter-Regeneration, zu viel Kraftstoff im Abgas oder ein defekter Temperatursensor. Wiederholte Überhitzung lässt den Katalysator altern und senkt seine NOx-Umsetzung.
   affected_components:
-    - reductant_tank_heater
-    - reductant_dosing_unit
+    - scr_pre_catalyst
   common_causes:
-    - id: heater_driver_shorted
+    - id: regen_overtemp
       likelihood: high
       label:
-        en: Heater driver shorted on
-        de: Heizungs-Endstufe durchlegiert
-    - id: heater_wiring_short_to_power
+        en: Uncontrolled or over-long DPF regeneration
+        de: Unkontrollierte oder zu lange Partikelfilter-Regeneration
+    - id: fuel_in_exhaust
       likelihood: medium
       label:
-        en: Heater line shorted to positive
-        de: Heizungsleitung nach Plus kurzgeschlossen
-    - id: stuck_carbon_buildup
+        en: Leaking exhaust fuel injector or injector dripping
+        de: Undichter Abgas-Kraftstoffinjektor oder tropfende Einspritzdüse
+    - id: temp_sensor_fault
       likelihood: low
       label:
-        en: 'Carbon or debris buildup preventing free movement'
-        de: 'Verkokung oder Ablagerungen verhindern freies Bewegen'
+        en: Exhaust temperature sensor reading too high
+        de: Abgastemperatursensor misst zu hoch
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: Reduced power possible
+      de: Leistungsreduzierung möglich
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [200, 1200]
-    estimated_hours: [1.0, 4.0]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
-  related_codes: [P20EB, P20EC]
   references:
     - sae:J2012
+  related_codes: [P20EE, P20F0]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_exhaust_fluid
+    - https://github.com/fabiovila/OBDIICodes
+    - https://github.com/tekseport/obd2-codes
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://partsavatar.ca/p20ed-obd-ii-trouble-code-scr-nox-pre-catalyst-over-temperature-bank-1-solution-control-module-exhaust-fluid
 
 - code: P20EE
   category: powertrain
@@ -11164,34 +11162,36 @@
 - code: P20EF
   category: powertrain
   title:
-    en: Reductant Injection Valve Performance
-    de: Reduktionsmittel-Einspritzventil Funktion
+    en: SCR NOx Pre-Catalyst Efficiency Below Threshold (Bank 1)
+    de: SCR NOx-Vorkatalysator Wirkungsgrad unter Schwellwert (Bank 1)
   description:
-    en: The SCR reductant injection valve does not deliver the commanded amount of reagent. Causes include clogging by urea crystals, electrical faults or incorrect spray pattern.
-    de: Das SCR-Reduktionsmittel-Einspritzventil liefert nicht die angeforderte Reagenzmenge. Ursachen sind Verkrustungen durch Harnstoff, elektrische Fehler oder ein falsches Spruehbild.
+    en: "P20EF means the SCR pre-catalyst on bank 1, a smaller SCR stage ahead of the main catalyst on some systems, converts less NOx than the monitor requires. The module compares the NOx signals before and after the stage with the dosed reductant. Causes are similar to P20EE for the main catalyst: an aged or poisoned catalyst, poor reductant quality or dosing, or a drifting NOx sensor."
+    de: "P20EF bedeutet, dass der SCR-Vorkatalysator auf Bank 1, bei manchen Systemen eine kleinere SCR-Stufe vor dem Hauptkatalysator, weniger NOx umsetzt, als die Überwachung verlangt. Das Steuergerät vergleicht dazu die NOx-Signale vor und nach der Stufe mit der dosierten Reduktionsmittelmenge. Die Ursachen ähneln P20EE beim Hauptkatalysator: gealterter oder vergifteter Katalysator, mangelhafte Reduktionsmittelqualität oder Dosierung oder ein driftender NOx-Sensor."
   affected_components:
-    - def_dosing_valve
-    - def_pump
+    - scr_pre_catalyst
   common_causes:
-    - id: dosing_valve_crystal
+    - id: scr_catalyst_aged
       likelihood: high
       label:
-        en: Urea crystals in dosing valve
-        de: Harnstoffkristalle im Dosierventil
-    - id: dosing_valve_electrical
+        en: Pre-catalyst aged or poisoned
+        de: Vorkatalysator gealtert oder vergiftet
+    - id: reductant_quality_dosing
       likelihood: medium
       label:
-        en: Electrical fault in dosing valve
-        de: Elektrischer Fehler im Dosierventil
+        en: Poor reductant quality or dosing
+        de: Mangelhafte Reduktionsmittelqualität oder Dosierung
+    - id: nox_sensor_drift
+      likelihood: medium
+      label:
+        en: NOx sensor drift
+        de: NOx-Sensordrift
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: Failed emissions inspection
+      de: Abgasuntersuchung fehlgeschlagen
+    - en: Possible engine power limitation after repeated detection
+      de: Mögliche Leistungsbegrenzung nach wiederholter Erkennung
   repair:
     difficulty: hard
     diy_possible: false
@@ -11204,8 +11204,13 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [P20EE, P20F0]
   sources:
+    - https://github.com/fabiovila/OBDIICodes
+    - https://github.com/tekseport/obd2-codes
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://partsavatar.ca/p20ef-obd-ii-trouble-code-scr-nox-pre-catalyst-efficiency-below-threshold-bank-1-fluid-pump-control-module
 
 - code: P20F0
   category: powertrain
@@ -13795,39 +13800,34 @@
 - code: P2124
   category: powertrain
   title:
-    en: Throttle/Pedal Position Sensor "C" Circuit Low
-    de: Drosselklappen-/Pedalstellungssensor "C" Signal zu niedrig
+    en: Throttle/Pedal Position Sensor "D" Circuit Intermittent
+    de: Drosselklappen-/Pedalstellungssensor "D" Stromkreis sporadisch
   description:
-    en: The "C" channel signal is below the lower threshold — usually a short to ground or an open signal wire.
-    de: Das Signal des Kanals "C" liegt unter dem unteren Schwellwert — meist Massekurzschluss oder unterbrochene Signalleitung.
+    en: P2124 means the signal of throttle/pedal position sensor D drops out or jumps briefly. It completes the D series after P2122 (low) and P2123 (high); on most cars sensor D is one of the two tracks of the accelerator pedal sensor. Because the engine control cannot trust the pedal input, it limits throttle opening or enters limp mode.
+    de: P2124 bedeutet, dass das Signal des Drosselklappen-/Pedalstellungssensors D kurzzeitig aussetzt oder springt. Der Code schließt die D-Reihe nach P2122 (niedrig) und P2123 (hoch) ab; bei den meisten Fahrzeugen ist Sensor D eine der beiden Spuren des Fahrpedalsensors. Weil die Motorsteuerung dem Pedalsignal nicht trauen kann, begrenzt sie die Drosselklappenöffnung oder schaltet in den Notlauf.
   affected_components:
-    - accelerator_pedal_sensor
-    - pedal_sensor_wiring
+    - accelerator_pedal_position_sensor_d
   common_causes:
-    - id: signal_short_to_ground
+    - id: loose_connector
       likelihood: high
       label:
-        en: Signal shorted to ground
-        de: Signal gegen Masse kurzgeschlossen
-    - id: signal_wire_open
+        en: Loose or corroded pedal sensor connector
+        de: Lockerer oder korrodierter Stecker am Pedalsensor
+    - id: worn_track
       likelihood: medium
       label:
-        en: Signal wire open
-        de: Signalleitung unterbrochen
-    - id: connector_corrosion
+        en: Worn sensor track in the pedal module
+        de: Verschlissene Sensorbahn im Pedalmodul
+    - id: harness_chafe
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Chafed wiring
+        de: Durchgescheuerte Leitung
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Reduced throttle response, possible limp mode'
-      de: 'Reduzierte Gasannahme, evtl. Notlauf'
-    - en: 'Hesitation or surging'
-      de: 'Zögern oder Ruckeln'
-    - en: 'Idle too high or too low'
-      de: 'Leerlauf zu hoch oder zu niedrig'
+    - en: Check engine or EPC light on
+      de: Motorkontroll- oder EPC-Leuchte an
+    - en: Hesitation or limp mode
+      de: Ruckeln oder Notlauf
   repair:
     difficulty: easy
     diy_possible: true
@@ -13837,12 +13837,14 @@
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
-  related_codes: [P2120, P2122, P2127, P2132]
   references:
     - sae:J2012
+  related_codes: [P2122, P2123, P2138]
   sources:
-    - https://en.wikipedia.org/wiki/Throttle_position_sensor
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/tekseport/obd2-codes
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://partsavatar.ca/p2124-obd-ii-trouble-code-throttle-position-sensor-switch-d-circuit-high-intermittent-solution-plate
 
 - code: P2125
   category: powertrain
@@ -17399,27 +17401,37 @@
 - code: P2173
   category: powertrain
   title:
-    en: High Airflow/Vacuum Leak Detected (Slow Accumulation)
-    de: Hoher Luftmassenstrom / Vakuumleck erkannt (langsame Akkumulation)
+    en: Throttle Actuator Control System - High Air Flow Detected
+    de: Drosselklappensteuerung - hohe Luftmenge erkannt
   description:
-    en: Long-term fuel and air adaptation values indicate a slow but continuous excess of air entering the engine. The ECU concludes that an unmetered air leak is gradually growing in the intake system.
-    de: Die Langzeit-Adaptionswerte fuer Luft und Kraftstoff zeigen einen langsamen, aber kontinuierlichen Luftueberschuss im Motor. Die ECU schliesst auf ein langsam zunehmendes Falschluftleck im Ansaugsystem.
+    en: P2173 means the measured air flow is persistently higher than the throttle position and engine speed would allow, the slow counterpart to P2172 (sudden high air flow). Typical reasons are an air leak downstream of the throttle, a throttle plate that does not close as far as commanded, or a skewed air flow or manifold pressure signal. The engine control reduces throttle authority to keep torque under control.
+    de: P2173 bedeutet, dass die gemessene Luftmenge dauerhaft höher ist, als Drosselklappenstellung und Drehzahl zulassen; es ist das langsame Gegenstück zu P2172 (plötzlich hohe Luftmenge). Typische Gründe sind Falschluft hinter der Drosselklappe, eine Klappe, die nicht so weit schließt wie befohlen, oder ein verfälschtes Luftmassen- oder Saugrohrdrucksignal. Die Motorsteuerung schränkt die Drosselklappe ein, um das Drehmoment im Griff zu behalten.
   affected_components:
-    - intake_manifold_gasket
-    - vacuum_hoses
-    - throttle_body
-    - mass_air_flow_sensor
+    - electronic_throttle_body
+    - intake_manifold
   common_causes:
-    - id: vacuum_leak
+    - id: intake_leak
       likelihood: high
       label:
-        en: Cracked vacuum hose or intake gasket
-        de: Geplatzter Unterdruckschlauch oder Ansaugdichtung
-    - id: maf_dirty
+        en: Air leak after the throttle (hose, gasket, PCV)
+        de: Falschluft hinter der Drosselklappe (Schlauch, Dichtung, Kurbelgehäuseentlüftung)
+    - id: throttle_not_closing
       likelihood: medium
       label:
-        en: Dirty mass airflow sensor
-        de: Verschmutzter Luftmassenmesser
+        en: Throttle plate dirty or not closing fully
+        de: Drosselklappe verschmutzt oder schließt nicht vollständig
+    - id: maf_map_skewed
+      likelihood: low
+      label:
+        en: Air flow or manifold pressure sensor reading high
+        de: Luftmassen- oder Saugrohrdrucksensor misst zu hoch
+  symptoms:
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: High or unstable idle
+      de: Hoher oder unruhiger Leerlauf
+    - en: Reduced power possible
+      de: Leistungsreduzierung möglich
   repair:
     difficulty: medium
     diy_possible: true
@@ -17431,9 +17443,13 @@
     drive_cycle_required: true
   references:
     - sae:J2012
+  related_codes: [P2172, P2174, P2175]
   sources:
-    - https://en.wikipedia.org/wiki/Mass_flow_sensor
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
+    - https://github.com/fabiovila/OBDIICodes
+    - https://github.com/tekseport/obd2-codes
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://partsavatar.ca/p2173-obd-ii-trouble-code-throttle-actuator-control-system-high-air-flow-detected-egr-gasket-tps
 
 - code: P2174
   category: powertrain
@@ -34364,8 +34380,8 @@
 - code: P22F1
   category: powertrain
   title:
-    en: Particulate Matter Sensor Heater Performance
-    de: Partikelsensor-Heizung Funktion
+    en: Cylinder 7 Alternative Fuel Injector Control Circuit/Open
+    de: Zylinder 7 Alternativkraftstoff-Einspritzventil Steuerkreis/unterbrochen
   description:
     en: The particulate matter (PM) sensor heater on diesel after-DPF systems does not reach or hold the calibrated operating temperature within the expected time. Without proper heating the PM sensor cannot be regenerated and read correctly.
     de: Die Heizung des Partikelsensors (PM-Sensor) im Dieselsystem nach dem DPF erreicht oder haelt die kalibrierte Betriebstemperatur nicht innerhalb der erwarteten Zeit. Ohne korrekte Heizung kann der PM-Sensor nicht regeneriert und korrekt ausgelesen werden.
@@ -38713,8 +38729,8 @@
 - code: P2359
   category: powertrain
   title:
-    en: Ignition Coil L Secondary Circuit
-    de: Zuendspule L Sekundaerkreis
+    en: Cylinder 10 Pressure Variation Low
+    de: Zylinder 10 Druckschwankung zu gering
   description:
     en: The ECU detects a secondary-circuit fault on ignition coil L (cylinder 12 on a V12 or another high-numbered cylinder). The cylinder will misfire if the spark output is insufficient.
     de: Die Motorsteuerung erkennt einen Sekundaerkreisfehler an Zuendspule L (Zylinder 12 bei einem V12 oder einem anderen hochnummerierten Zylinder). Bei unzureichender Zuendung kommt es zu Aussetzern.
@@ -39043,8 +39059,8 @@
 - code: P2362
   category: powertrain
   title:
-    en: Glow Plug Module Control Module Power Circuit Low
-    de: Vorgluehzeitsteuergeraet Versorgungs-Stromkreis niedrig
+    en: Cylinder 11 Pressure Too High
+    de: Zylinder 11 Druck zu hoch
   description:
     en: The diesel glow plug control module reports a power-supply voltage below the operating threshold. Glow plug heating may be partially or fully disabled, causing hard cold start.
     de: Das Vorgluehzeitsteuergeraet meldet eine Versorgungsspannung unter dem Betriebsschwellenwert. Die Gluehkerzenheizung kann teilweise oder ganz deaktiviert sein, was zu schlechtem Kaltstart fuehrt.
@@ -39066,15 +39082,15 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
   symptoms:
-    - en: 'Glow plug warning light on (often orange coil symbol)'
-      de: 'Glühkerzen-Warnleuchte an (oft orange Spule-Symbol)'
-    - en: 'Hard cold start or no start in cold weather'
-      de: 'Schwerer Kaltstart oder kein Start bei Kälte'
-    - en: 'White smoke from exhaust during warm-up'
-      de: 'Weißer Rauch aus dem Auspuff während der Warmlaufphase'
+    - en: Glow plug warning light on (often orange coil symbol)
+      de: Glühkerzen-Warnleuchte an (oft orange Spule-Symbol)
+    - en: Hard cold start or no start in cold weather
+      de: Schwerer Kaltstart oder kein Start bei Kälte
+    - en: White smoke from exhaust during warm-up
+      de: Weißer Rauch aus dem Auspuff während der Warmlaufphase
   repair:
     difficulty: medium
     diy_possible: true
@@ -39092,8 +39108,8 @@
 - code: P2363
   category: powertrain
   title:
-    en: Glow Plug Module Control Module Power Circuit High
-    de: Vorgluehzeitsteuergeraet Versorgungs-Stromkreis hoch
+    en: Cylinder 11 Pressure Variation Low
+    de: Zylinder 11 Druckschwankung zu gering
   description:
     en: The voltage at the glow plug control module supply line is above the upper threshold. Indicates wiring or charging-system overvoltage condition.
     de: Die Spannung an der Versorgungsleitung des Vorgluehzeitsteuergeraets liegt oberhalb des oberen Schwellenwerts. Hinweis auf Verkabelungsfehler oder Ueberspannung im Ladesystem.
@@ -39114,15 +39130,15 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
   symptoms:
-    - en: 'Glow plug warning light on (often orange coil symbol)'
-      de: 'Glühkerzen-Warnleuchte an (oft orange Spule-Symbol)'
-    - en: 'Hard cold start or no start in cold weather'
-      de: 'Schwerer Kaltstart oder kein Start bei Kälte'
-    - en: 'White smoke from exhaust during warm-up'
-      de: 'Weißer Rauch aus dem Auspuff während der Warmlaufphase'
+    - en: Glow plug warning light on (often orange coil symbol)
+      de: Glühkerzen-Warnleuchte an (oft orange Spule-Symbol)
+    - en: Hard cold start or no start in cold weather
+      de: Schwerer Kaltstart oder kein Start bei Kälte
+    - en: White smoke from exhaust during warm-up
+      de: Weißer Rauch aus dem Auspuff während der Warmlaufphase
   repair:
     difficulty: medium
     diy_possible: true
@@ -40251,8 +40267,8 @@
 - code: P2380
   category: powertrain
   title:
-    en: Wait to Start Lamp Control Circuit
-    de: Vorgluehkontrollleuchte Steuerkreis
+    en: EGR Sensor D Circuit
+    de: AGR-Sensor D Stromkreis
   description:
     en: The ECU detects an electrical fault on the wait-to-start indicator output of the diesel preheat system. The driver may not get a correct preheat indication.
     de: Die Motorsteuerung erkennt einen elektrischen Fehler am Ausgang fuer die Vorgluehkontrollleuchte des Dieselsystems. Der Fahrer erhaelt moeglicherweise keine korrekte Vorgluehanzeige.
@@ -42234,8 +42250,8 @@
     en: NOx Sensor Heater Control Circuit Low Bank 1 Sensor 3
     de: NOx-Sensor Heizungs-Steuerkreis - niedrig Bank 1 Sensor 3
   description:
-    en: 'Same as P23B1 with the heater control line shorted to ground. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Wie P23B1, mit Steuerleitung gegen Masse kurzgeschlossen. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: Same as P23B1 with the heater control line shorted to ground. A NOx sensor uses a ceramic measuring cell that has to be heated to several hundred degrees before it delivers a valid reading, so the control unit regulates the heater and monitors its circuit. Sensor 3 is an additional NOx sensor further down the exhaust line, as fitted for example to GM's 3.0 L Duramax diesel; without its heater the module cannot use that reading to check the SCR system or adjust dosing.
+    de: Wie P23B1, mit Steuerleitung gegen Masse kurzgeschlossen. Ein NOx-Sensor arbeitet mit einer keramischen Messzelle, die auf mehrere hundert Grad aufgeheizt werden muss, bevor sie gültige Werte liefert; das Steuergerät regelt daher die Heizung und überwacht ihren Stromkreis. Sensor 3 ist ein zusätzlicher NOx-Sensor weiter hinten im Abgasstrang, wie ihn etwa der 3,0-l-Duramax-Diesel von GM besitzt. Ohne Heizung kann das Steuergerät seinen Messwert weder zur Überwachung des SCR-Systems noch zur Anpassung der Dosierung nutzen.
   affected_components:
     - nox_sensor_b1s3_heater
   common_causes:
@@ -42247,34 +42263,38 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: harness_chafe
       likelihood: low
       label:
-        en: 'Harness chafing through insulation'
-        de: 'Kabelbaum scheuert sich durch die Isolation'
+        en: Harness chafing through insulation
+        de: Kabelbaum scheuert sich durch die Isolation
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light or NOx warning on
+      de: Motorkontrollleuchte oder NOx-Warnung an
+    - en: AdBlue/DEF level or quality warning
+      de: AdBlue-/DEF-Stand- oder Qualitätswarnung
+    - en: Possible no-start countdown after ignore period
+      de: Möglicherweise Startsperre nach Ignorieren-Frist
+    - en: Failed emissions inspection (NOx)
+      de: Abgasuntersuchung fehlgeschlagen (NOx)
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [400, 850]
-    estimated_hours: [1.0, 2.0]
+    estimated_hours: [1, 2]
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/NOx_sensor
     - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11018070-0001.pdf
 
 - code: P23B3
   category: powertrain
@@ -42282,8 +42302,8 @@
     en: NOx Sensor Heater Control Circuit High Bank 1 Sensor 3
     de: NOx-Sensor Heizungs-Steuerkreis - hoch Bank 1 Sensor 3
   description:
-    en: 'Same as P23B1 with the heater control line shorted to supply. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Wie P23B1, mit Steuerleitung gegen Versorgung kurzgeschlossen. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: Same as P23B1 with the heater control line shorted to supply. A NOx sensor uses a ceramic measuring cell that has to be heated to several hundred degrees before it delivers a valid reading, so the control unit regulates the heater and monitors its circuit. Sensor 3 is an additional NOx sensor further down the exhaust line, as fitted for example to GM's 3.0 L Duramax diesel; without its heater the module cannot use that reading to check the SCR system or adjust dosing.
+    de: Wie P23B1, mit Steuerleitung gegen Versorgung kurzgeschlossen. Ein NOx-Sensor arbeitet mit einer keramischen Messzelle, die auf mehrere hundert Grad aufgeheizt werden muss, bevor sie gültige Werte liefert; das Steuergerät regelt daher die Heizung und überwacht ihren Stromkreis. Sensor 3 ist ein zusätzlicher NOx-Sensor weiter hinten im Abgasstrang, wie ihn etwa der 3,0-l-Duramax-Diesel von GM besitzt. Ohne Heizung kann das Steuergerät seinen Messwert weder zur Überwachung des SCR-Systems noch zur Anpassung der Dosierung nutzen.
   affected_components:
     - nox_sensor_b1s3_heater
   common_causes:
@@ -42295,34 +42315,38 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: supply_pinch
       likelihood: low
       label:
-        en: 'Supply wire pinched against B+ source'
-        de: 'Versorgungsleitung gegen B+-Quelle eingeklemmt'
+        en: Supply wire pinched against B+ source
+        de: Versorgungsleitung gegen B+-Quelle eingeklemmt
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light or NOx warning on
+      de: Motorkontrollleuchte oder NOx-Warnung an
+    - en: AdBlue/DEF level or quality warning
+      de: AdBlue-/DEF-Stand- oder Qualitätswarnung
+    - en: Possible no-start countdown after ignore period
+      de: Möglicherweise Startsperre nach Ignorieren-Frist
+    - en: Failed emissions inspection (NOx)
+      de: Abgasuntersuchung fehlgeschlagen (NOx)
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [400, 850]
-    estimated_hours: [1.0, 2.0]
+    estimated_hours: [1, 2]
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/NOx_sensor
     - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11018070-0001.pdf
 
 - code: P23B4
   category: powertrain
@@ -43286,8 +43310,8 @@
     en: Fuel Rail Heater Control Circuit Low
     de: Kraftstoffrail-Heizung Steuerkreis - niedrig
   description:
-    en: 'Same as P23CA with the control line shorted to ground. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Wie P23CA, mit Steuerleitung gegen Masse kurzgeschlossen. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: "Same as P23CA with the control line shorted to ground. Heated fuel rails and heaters at the individual injectors are used mainly on flex-fuel engines that may run on high-ethanol blends: ethanol vaporises poorly when cold, so the fuel is warmed before injection to allow a cold start without a separate gasoline starting tank. While the heater cannot be driven, cold starts on ethanol may be long or rough or fail altogether; once the engine is warm it runs normally."
+    de: "Wie P23CA, mit Steuerleitung gegen Masse kurzgeschlossen. Beheizte Kraftstoffverteiler und Heizungen an den einzelnen Einspritzventilen gibt es vor allem bei Flex-Fuel-Motoren, die mit hohem Ethanolanteil fahren können: Ethanol verdampft bei Kälte schlecht, deshalb wird der Kraftstoff vor dem Einspritzen erwärmt, damit ein Kaltstart ohne zusätzlichen Benzin-Starttank gelingt. Solange die Heizung nicht angesteuert werden kann, dauert ein Kaltstart mit Ethanol länger, verläuft unruhig oder misslingt; betriebswarm läuft der Motor normal."
   affected_components:
     - fuel_rail_heater
   common_causes:
@@ -43299,25 +43323,34 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: harness_chafe
       likelihood: low
       label:
-        en: 'Harness chafing through insulation'
-        de: 'Kabelbaum scheuert sich durch die Isolation'
+        en: Harness chafing through insulation
+        de: Kabelbaum scheuert sich durch die Isolation
+  symptoms:
+    - en: Hard or failed cold start, especially on high-ethanol fuel
+      de: Schwerer oder misslingender Kaltstart, vor allem mit hohem Ethanolanteil
+    - en: Rough running right after a cold start
+      de: Unruhiger Motorlauf direkt nach dem Kaltstart
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
   repair:
     difficulty: medium
     diy_possible: true
     estimated_cost_eur: [120, 450]
-    estimated_hours: [0.6, 2.0]
+    estimated_hours: [0.6, 2]
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
   sources:
-    - https://en.wikipedia.org/wiki/Common_rail
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://patents.google.com/patent/US20140182554A1/en
+    - https://patents.google.com/patent/US9163593
 
 - code: P23CC
   category: powertrain
@@ -43325,8 +43358,8 @@
     en: Fuel Rail Heater Control Circuit High
     de: Kraftstoffrail-Heizung Steuerkreis - hoch
   description:
-    en: 'Same as P23CA with the control line shorted to supply. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Wie P23CA, mit Steuerleitung gegen Versorgung kurzgeschlossen. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: "Same as P23CA with the control line shorted to supply. Heated fuel rails and heaters at the individual injectors are used mainly on flex-fuel engines that may run on high-ethanol blends: ethanol vaporises poorly when cold, so the fuel is warmed before injection to allow a cold start without a separate gasoline starting tank. While the heater cannot be driven, cold starts on ethanol may be long or rough or fail altogether; once the engine is warm it runs normally."
+    de: "Wie P23CA, mit Steuerleitung gegen Versorgung kurzgeschlossen. Beheizte Kraftstoffverteiler und Heizungen an den einzelnen Einspritzventilen gibt es vor allem bei Flex-Fuel-Motoren, die mit hohem Ethanolanteil fahren können: Ethanol verdampft bei Kälte schlecht, deshalb wird der Kraftstoff vor dem Einspritzen erwärmt, damit ein Kaltstart ohne zusätzlichen Benzin-Starttank gelingt. Solange die Heizung nicht angesteuert werden kann, dauert ein Kaltstart mit Ethanol länger, verläuft unruhig oder misslingt; betriebswarm läuft der Motor normal."
   affected_components:
     - fuel_rail_heater
   common_causes:
@@ -43338,25 +43371,34 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: supply_pinch
       likelihood: low
       label:
-        en: 'Supply wire pinched against B+ source'
-        de: 'Versorgungsleitung gegen B+-Quelle eingeklemmt'
+        en: Supply wire pinched against B+ source
+        de: Versorgungsleitung gegen B+-Quelle eingeklemmt
+  symptoms:
+    - en: Hard or failed cold start, especially on high-ethanol fuel
+      de: Schwerer oder misslingender Kaltstart, vor allem mit hohem Ethanolanteil
+    - en: Rough running right after a cold start
+      de: Unruhiger Motorlauf direkt nach dem Kaltstart
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
   repair:
     difficulty: medium
     diy_possible: true
     estimated_cost_eur: [120, 450]
-    estimated_hours: [0.6, 2.0]
+    estimated_hours: [0.6, 2]
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
   sources:
-    - https://en.wikipedia.org/wiki/Common_rail
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://patents.google.com/patent/US20140182554A1/en
+    - https://patents.google.com/patent/US9163593
 
 - code: P23CD
   category: powertrain
@@ -43540,8 +43582,8 @@
     en: Cylinder 1 Fuel Heater Control Circuit High
     de: Zylinder 1 Kraftstoffheizung Steuerkreis - hoch
   description:
-    en: 'Same as P23D1 with the control line shorted to supply. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Wie P23D1, mit Steuerleitung gegen Versorgung kurzgeschlossen. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: "Same as P23D1 with the control line shorted to supply. Heated fuel rails and heaters at the individual injectors are used mainly on flex-fuel engines that may run on high-ethanol blends: ethanol vaporises poorly when cold, so the fuel is warmed before injection to allow a cold start without a separate gasoline starting tank. While the heater cannot be driven, cold starts on ethanol may be long or rough or fail altogether; once the engine is warm it runs normally."
+    de: "Wie P23D1, mit Steuerleitung gegen Versorgung kurzgeschlossen. Beheizte Kraftstoffverteiler und Heizungen an den einzelnen Einspritzventilen gibt es vor allem bei Flex-Fuel-Motoren, die mit hohem Ethanolanteil fahren können: Ethanol verdampft bei Kälte schlecht, deshalb wird der Kraftstoff vor dem Einspritzen erwärmt, damit ein Kaltstart ohne zusätzlichen Benzin-Starttank gelingt. Solange die Heizung nicht angesteuert werden kann, dauert ein Kaltstart mit Ethanol länger, verläuft unruhig oder misslingt; betriebswarm läuft der Motor normal."
   affected_components:
     - fuel_heater_cyl_1
   common_causes:
@@ -43553,13 +43595,20 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: supply_pinch
       likelihood: low
       label:
-        en: 'Supply wire pinched against B+ source'
-        de: 'Versorgungsleitung gegen B+-Quelle eingeklemmt'
+        en: Supply wire pinched against B+ source
+        de: Versorgungsleitung gegen B+-Quelle eingeklemmt
+  symptoms:
+    - en: Hard or failed cold start, especially on high-ethanol fuel
+      de: Schwerer oder misslingender Kaltstart, vor allem mit hohem Ethanolanteil
+    - en: Rough running right after a cold start
+      de: Unruhiger Motorlauf direkt nach dem Kaltstart
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
   repair:
     difficulty: medium
     diy_possible: true
@@ -43568,11 +43617,13 @@
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
   related_codes: [P23D6, P23DA, P23DE]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_fuel
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://patents.google.com/patent/US20140182554A1/en
+    - https://patents.google.com/patent/US9163593
 
 - code: P23D3
   category: powertrain
@@ -43580,8 +43631,8 @@
     en: Cylinder 1 Fuel Heater Control Circuit Low
     de: Zylinder 1 Kraftstoffheizung Steuerkreis - niedrig
   description:
-    en: 'Same as P23D1 with the control line shorted to ground. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Wie P23D1, mit Steuerleitung gegen Masse kurzgeschlossen. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: "Same as P23D1 with the control line shorted to ground. Heated fuel rails and heaters at the individual injectors are used mainly on flex-fuel engines that may run on high-ethanol blends: ethanol vaporises poorly when cold, so the fuel is warmed before injection to allow a cold start without a separate gasoline starting tank. While the heater cannot be driven, cold starts on ethanol may be long or rough or fail altogether; once the engine is warm it runs normally."
+    de: "Wie P23D1, mit Steuerleitung gegen Masse kurzgeschlossen. Beheizte Kraftstoffverteiler und Heizungen an den einzelnen Einspritzventilen gibt es vor allem bei Flex-Fuel-Motoren, die mit hohem Ethanolanteil fahren können: Ethanol verdampft bei Kälte schlecht, deshalb wird der Kraftstoff vor dem Einspritzen erwärmt, damit ein Kaltstart ohne zusätzlichen Benzin-Starttank gelingt. Solange die Heizung nicht angesteuert werden kann, dauert ein Kaltstart mit Ethanol länger, verläuft unruhig oder misslingt; betriebswarm läuft der Motor normal."
   affected_components:
     - fuel_heater_cyl_1
   common_causes:
@@ -43593,13 +43644,20 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: harness_chafe
       likelihood: low
       label:
-        en: 'Harness chafing through insulation'
-        de: 'Kabelbaum scheuert sich durch die Isolation'
+        en: Harness chafing through insulation
+        de: Kabelbaum scheuert sich durch die Isolation
+  symptoms:
+    - en: Hard or failed cold start, especially on high-ethanol fuel
+      de: Schwerer oder misslingender Kaltstart, vor allem mit hohem Ethanolanteil
+    - en: Rough running right after a cold start
+      de: Unruhiger Motorlauf direkt nach dem Kaltstart
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
   repair:
     difficulty: medium
     diy_possible: true
@@ -43608,11 +43666,13 @@
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
   related_codes: [P23D7, P23DB, P23DF]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_fuel
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://patents.google.com/patent/US20140182554A1/en
+    - https://patents.google.com/patent/US9163593
 
 - code: P23D4
   category: powertrain
@@ -43690,8 +43750,8 @@
     en: Cylinder 2 Fuel Heater Control Circuit High
     de: Zylinder 2 Kraftstoffheizung Steuerkreis - hoch
   description:
-    en: 'Same as P23D2 on cylinder 2. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Wie P23D2, an Zylinder 2. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: "Same as P23D2 on cylinder 2. Heated fuel rails and heaters at the individual injectors are used mainly on flex-fuel engines that may run on high-ethanol blends: ethanol vaporises poorly when cold, so the fuel is warmed before injection to allow a cold start without a separate gasoline starting tank. While the heater cannot be driven, cold starts on ethanol may be long or rough or fail altogether; once the engine is warm it runs normally."
+    de: "Wie P23D2, an Zylinder 2. Beheizte Kraftstoffverteiler und Heizungen an den einzelnen Einspritzventilen gibt es vor allem bei Flex-Fuel-Motoren, die mit hohem Ethanolanteil fahren können: Ethanol verdampft bei Kälte schlecht, deshalb wird der Kraftstoff vor dem Einspritzen erwärmt, damit ein Kaltstart ohne zusätzlichen Benzin-Starttank gelingt. Solange die Heizung nicht angesteuert werden kann, dauert ein Kaltstart mit Ethanol länger, verläuft unruhig oder misslingt; betriebswarm läuft der Motor normal."
   affected_components:
     - fuel_heater_cyl_2
   common_causes:
@@ -43703,13 +43763,20 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: supply_pinch
       likelihood: low
       label:
-        en: 'Supply wire pinched against B+ source'
-        de: 'Versorgungsleitung gegen B+-Quelle eingeklemmt'
+        en: Supply wire pinched against B+ source
+        de: Versorgungsleitung gegen B+-Quelle eingeklemmt
+  symptoms:
+    - en: Hard or failed cold start, especially on high-ethanol fuel
+      de: Schwerer oder misslingender Kaltstart, vor allem mit hohem Ethanolanteil
+    - en: Rough running right after a cold start
+      de: Unruhiger Motorlauf direkt nach dem Kaltstart
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
   repair:
     difficulty: medium
     diy_possible: true
@@ -43718,11 +43785,13 @@
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
   related_codes: [P23D2, P23DA, P23DE]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_fuel
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://patents.google.com/patent/US20140182554A1/en
+    - https://patents.google.com/patent/US9163593
 
 - code: P23D7
   category: powertrain
@@ -43730,8 +43799,8 @@
     en: Cylinder 2 Fuel Heater Control Circuit Low
     de: Zylinder 2 Kraftstoffheizung Steuerkreis - niedrig
   description:
-    en: 'Same as P23D3 on cylinder 2. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Wie P23D3, an Zylinder 2. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: "Same as P23D3 on cylinder 2. Heated fuel rails and heaters at the individual injectors are used mainly on flex-fuel engines that may run on high-ethanol blends: ethanol vaporises poorly when cold, so the fuel is warmed before injection to allow a cold start without a separate gasoline starting tank. While the heater cannot be driven, cold starts on ethanol may be long or rough or fail altogether; once the engine is warm it runs normally."
+    de: "Wie P23D3, an Zylinder 2. Beheizte Kraftstoffverteiler und Heizungen an den einzelnen Einspritzventilen gibt es vor allem bei Flex-Fuel-Motoren, die mit hohem Ethanolanteil fahren können: Ethanol verdampft bei Kälte schlecht, deshalb wird der Kraftstoff vor dem Einspritzen erwärmt, damit ein Kaltstart ohne zusätzlichen Benzin-Starttank gelingt. Solange die Heizung nicht angesteuert werden kann, dauert ein Kaltstart mit Ethanol länger, verläuft unruhig oder misslingt; betriebswarm läuft der Motor normal."
   affected_components:
     - fuel_heater_cyl_2
   common_causes:
@@ -43743,13 +43812,20 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: harness_chafe
       likelihood: low
       label:
-        en: 'Harness chafing through insulation'
-        de: 'Kabelbaum scheuert sich durch die Isolation'
+        en: Harness chafing through insulation
+        de: Kabelbaum scheuert sich durch die Isolation
+  symptoms:
+    - en: Hard or failed cold start, especially on high-ethanol fuel
+      de: Schwerer oder misslingender Kaltstart, vor allem mit hohem Ethanolanteil
+    - en: Rough running right after a cold start
+      de: Unruhiger Motorlauf direkt nach dem Kaltstart
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
   repair:
     difficulty: medium
     diy_possible: true
@@ -43758,11 +43834,13 @@
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
   related_codes: [P23D3, P23DB, P23DF]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_fuel
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://patents.google.com/patent/US20140182554A1/en
+    - https://patents.google.com/patent/US9163593
 
 - code: P23D8
   category: powertrain
@@ -43840,8 +43918,8 @@
     en: Cylinder 3 Fuel Heater Control Circuit High
     de: Zylinder 3 Kraftstoffheizung Steuerkreis - hoch
   description:
-    en: 'Same as P23D2 on cylinder 3. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Wie P23D2, an Zylinder 3. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: "Same as P23D2 on cylinder 3. Heated fuel rails and heaters at the individual injectors are used mainly on flex-fuel engines that may run on high-ethanol blends: ethanol vaporises poorly when cold, so the fuel is warmed before injection to allow a cold start without a separate gasoline starting tank. While the heater cannot be driven, cold starts on ethanol may be long or rough or fail altogether; once the engine is warm it runs normally."
+    de: "Wie P23D2, an Zylinder 3. Beheizte Kraftstoffverteiler und Heizungen an den einzelnen Einspritzventilen gibt es vor allem bei Flex-Fuel-Motoren, die mit hohem Ethanolanteil fahren können: Ethanol verdampft bei Kälte schlecht, deshalb wird der Kraftstoff vor dem Einspritzen erwärmt, damit ein Kaltstart ohne zusätzlichen Benzin-Starttank gelingt. Solange die Heizung nicht angesteuert werden kann, dauert ein Kaltstart mit Ethanol länger, verläuft unruhig oder misslingt; betriebswarm läuft der Motor normal."
   affected_components:
     - fuel_heater_cyl_3
   common_causes:
@@ -43853,13 +43931,20 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: supply_pinch
       likelihood: low
       label:
-        en: 'Supply wire pinched against B+ source'
-        de: 'Versorgungsleitung gegen B+-Quelle eingeklemmt'
+        en: Supply wire pinched against B+ source
+        de: Versorgungsleitung gegen B+-Quelle eingeklemmt
+  symptoms:
+    - en: Hard or failed cold start, especially on high-ethanol fuel
+      de: Schwerer oder misslingender Kaltstart, vor allem mit hohem Ethanolanteil
+    - en: Rough running right after a cold start
+      de: Unruhiger Motorlauf direkt nach dem Kaltstart
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
   repair:
     difficulty: medium
     diy_possible: true
@@ -43868,11 +43953,13 @@
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
   related_codes: [P23D6, P23DE, P23D2]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_fuel
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://patents.google.com/patent/US20140182554A1/en
+    - https://patents.google.com/patent/US9163593
 
 - code: P23DB
   category: powertrain
@@ -43880,8 +43967,8 @@
     en: Cylinder 3 Fuel Heater Control Circuit Low
     de: Zylinder 3 Kraftstoffheizung Steuerkreis - niedrig
   description:
-    en: 'Same as P23D3 on cylinder 3. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Wie P23D3, an Zylinder 3. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: "Same as P23D3 on cylinder 3. Heated fuel rails and heaters at the individual injectors are used mainly on flex-fuel engines that may run on high-ethanol blends: ethanol vaporises poorly when cold, so the fuel is warmed before injection to allow a cold start without a separate gasoline starting tank. While the heater cannot be driven, cold starts on ethanol may be long or rough or fail altogether; once the engine is warm it runs normally."
+    de: "Wie P23D3, an Zylinder 3. Beheizte Kraftstoffverteiler und Heizungen an den einzelnen Einspritzventilen gibt es vor allem bei Flex-Fuel-Motoren, die mit hohem Ethanolanteil fahren können: Ethanol verdampft bei Kälte schlecht, deshalb wird der Kraftstoff vor dem Einspritzen erwärmt, damit ein Kaltstart ohne zusätzlichen Benzin-Starttank gelingt. Solange die Heizung nicht angesteuert werden kann, dauert ein Kaltstart mit Ethanol länger, verläuft unruhig oder misslingt; betriebswarm läuft der Motor normal."
   affected_components:
     - fuel_heater_cyl_3
   common_causes:
@@ -43893,13 +43980,20 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: harness_chafe
       likelihood: low
       label:
-        en: 'Harness chafing through insulation'
-        de: 'Kabelbaum scheuert sich durch die Isolation'
+        en: Harness chafing through insulation
+        de: Kabelbaum scheuert sich durch die Isolation
+  symptoms:
+    - en: Hard or failed cold start, especially on high-ethanol fuel
+      de: Schwerer oder misslingender Kaltstart, vor allem mit hohem Ethanolanteil
+    - en: Rough running right after a cold start
+      de: Unruhiger Motorlauf direkt nach dem Kaltstart
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
   repair:
     difficulty: medium
     diy_possible: true
@@ -43908,11 +44002,13 @@
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
   related_codes: [P23D7, P23DF, P23D3]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_fuel
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://patents.google.com/patent/US20140182554A1/en
+    - https://patents.google.com/patent/US9163593
 
 - code: P23DC
   category: powertrain
@@ -43990,8 +44086,8 @@
     en: Cylinder 4 Fuel Heater Control Circuit High
     de: Zylinder 4 Kraftstoffheizung Steuerkreis - hoch
   description:
-    en: 'Same as P23D2 on cylinder 4. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Wie P23D2, an Zylinder 4. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: "Same as P23D2 on cylinder 4. Heated fuel rails and heaters at the individual injectors are used mainly on flex-fuel engines that may run on high-ethanol blends: ethanol vaporises poorly when cold, so the fuel is warmed before injection to allow a cold start without a separate gasoline starting tank. While the heater cannot be driven, cold starts on ethanol may be long or rough or fail altogether; once the engine is warm it runs normally."
+    de: "Wie P23D2, an Zylinder 4. Beheizte Kraftstoffverteiler und Heizungen an den einzelnen Einspritzventilen gibt es vor allem bei Flex-Fuel-Motoren, die mit hohem Ethanolanteil fahren können: Ethanol verdampft bei Kälte schlecht, deshalb wird der Kraftstoff vor dem Einspritzen erwärmt, damit ein Kaltstart ohne zusätzlichen Benzin-Starttank gelingt. Solange die Heizung nicht angesteuert werden kann, dauert ein Kaltstart mit Ethanol länger, verläuft unruhig oder misslingt; betriebswarm läuft der Motor normal."
   affected_components:
     - fuel_heater_cyl_4
   common_causes:
@@ -44003,13 +44099,20 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: supply_pinch
       likelihood: low
       label:
-        en: 'Supply wire pinched against B+ source'
-        de: 'Versorgungsleitung gegen B+-Quelle eingeklemmt'
+        en: Supply wire pinched against B+ source
+        de: Versorgungsleitung gegen B+-Quelle eingeklemmt
+  symptoms:
+    - en: Hard or failed cold start, especially on high-ethanol fuel
+      de: Schwerer oder misslingender Kaltstart, vor allem mit hohem Ethanolanteil
+    - en: Rough running right after a cold start
+      de: Unruhiger Motorlauf direkt nach dem Kaltstart
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
   repair:
     difficulty: medium
     diy_possible: true
@@ -44018,11 +44121,13 @@
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
   related_codes: [P23DA, P23D6, P23D2]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_fuel
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://patents.google.com/patent/US20140182554A1/en
+    - https://patents.google.com/patent/US9163593
 
 - code: P23DF
   category: powertrain
@@ -44030,8 +44135,8 @@
     en: Cylinder 4 Fuel Heater Control Circuit Low
     de: Zylinder 4 Kraftstoffheizung Steuerkreis - niedrig
   description:
-    en: 'Same as P23D3 on cylinder 4. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Wie P23D3, an Zylinder 4. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: "Same as P23D3 on cylinder 4. Heated fuel rails and heaters at the individual injectors are used mainly on flex-fuel engines that may run on high-ethanol blends: ethanol vaporises poorly when cold, so the fuel is warmed before injection to allow a cold start without a separate gasoline starting tank. While the heater cannot be driven, cold starts on ethanol may be long or rough or fail altogether; once the engine is warm it runs normally."
+    de: "Wie P23D3, an Zylinder 4. Beheizte Kraftstoffverteiler und Heizungen an den einzelnen Einspritzventilen gibt es vor allem bei Flex-Fuel-Motoren, die mit hohem Ethanolanteil fahren können: Ethanol verdampft bei Kälte schlecht, deshalb wird der Kraftstoff vor dem Einspritzen erwärmt, damit ein Kaltstart ohne zusätzlichen Benzin-Starttank gelingt. Solange die Heizung nicht angesteuert werden kann, dauert ein Kaltstart mit Ethanol länger, verläuft unruhig oder misslingt; betriebswarm läuft der Motor normal."
   affected_components:
     - fuel_heater_cyl_4
   common_causes:
@@ -44043,13 +44148,20 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: harness_chafe
       likelihood: low
       label:
-        en: 'Harness chafing through insulation'
-        de: 'Kabelbaum scheuert sich durch die Isolation'
+        en: Harness chafing through insulation
+        de: Kabelbaum scheuert sich durch die Isolation
+  symptoms:
+    - en: Hard or failed cold start, especially on high-ethanol fuel
+      de: Schwerer oder misslingender Kaltstart, vor allem mit hohem Ethanolanteil
+    - en: Rough running right after a cold start
+      de: Unruhiger Motorlauf direkt nach dem Kaltstart
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
   repair:
     difficulty: medium
     diy_possible: true
@@ -44058,11 +44170,13 @@
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
   related_codes: [P23DB, P23D7, P23D3]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_fuel
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://patents.google.com/patent/US20140182554A1/en
+    - https://patents.google.com/patent/US9163593
 
 - code: P23E0
   category: powertrain
@@ -45843,8 +45957,8 @@
     en: EVAP System Leak Detection Pump Heater Control Circuit Low
     de: EVAP-System Leckdiagnose-Pumpe Heizung Steuerkreis - niedrig
   description:
-    en: 'Same as P240A with the control line shorted to ground. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Wie P240A, mit Steuerleitung gegen Masse kurzgeschlossen. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: Same as P240A with the control line shorted to ground. The leak detection pump, often called the DMTL module on European cars, pressurises the EVAP system to test it for leaks; newer pumps have a heater in the housing that dries out moisture and stops ice from seizing the pump in cold weather. With the heater circuit faulty the leak test may be skipped or give false results in winter; engine running is not affected.
+    de: Wie P240A, mit Steuerleitung gegen Masse kurzgeschlossen. Die Leckdiagnosepumpe, bei europäischen Fahrzeugen oft DMTL-Modul genannt, setzt das Tankentlüftungssystem für die Dichtheitsprüfung unter Druck; neuere Pumpen haben im Gehäuse eine Heizung, die Feuchtigkeit austrocknet und verhindert, dass die Pumpe bei Kälte festfriert. Ist der Heizkreis gestört, kann die Dichtheitsprüfung im Winter ausfallen oder falsche Ergebnisse liefern; der Motorlauf ist davon nicht betroffen.
   affected_components:
     - evap_leak_detection_pump_heater
   common_causes:
@@ -45856,22 +45970,20 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: harness_chafe
       likelihood: low
       label:
-        en: 'Harness chafing through insulation'
-        de: 'Kabelbaum scheuert sich durch die Isolation'
+        en: Harness chafing through insulation
+        de: Kabelbaum scheuert sich durch die Isolation
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Possible smell of fuel near tank or engine bay'
-      de: 'Möglicher Benzingeruch an Tank oder Motorraum'
-    - en: 'Failed emissions inspection'
-      de: 'Abgasuntersuchung fehlgeschlagen'
-    - en: 'Loose-cap warning may appear'
-      de: 'Möglicherweise Tankdeckel-Warnung'
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: EVAP leak test does not complete in cold weather (readiness monitor not set)
+      de: Dichtheitsprüfung der Tankentlüftung läuft bei Kälte nicht durch (Readiness nicht gesetzt)
+    - en: Failed emissions inspection
+      de: Abgasuntersuchung fehlgeschlagen
   repair:
     difficulty: medium
     diy_possible: true
@@ -45880,9 +45992,12 @@
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Onboard_refueling_vapor_recovery
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.vehicleservicepros.com/industry-news/article/53089788/evap-monitor-on-european-cars-real-world-diagnosis-of-dmtl-systems-2017-08-04
 
 - code: P240C
   category: powertrain
@@ -45890,8 +46005,8 @@
     en: EVAP System Leak Detection Pump Heater Control Circuit High
     de: EVAP-System Leckdiagnose-Pumpe Heizung Steuerkreis - hoch
   description:
-    en: 'Same as P240A with the control line shorted to supply. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Wie P240A, mit Steuerleitung gegen Versorgung kurzgeschlossen. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: Same as P240A with the control line shorted to supply. The leak detection pump, often called the DMTL module on European cars, pressurises the EVAP system to test it for leaks; newer pumps have a heater in the housing that dries out moisture and stops ice from seizing the pump in cold weather. With the heater circuit faulty the leak test may be skipped or give false results in winter; engine running is not affected.
+    de: Wie P240A, mit Steuerleitung gegen Versorgung kurzgeschlossen. Die Leckdiagnosepumpe, bei europäischen Fahrzeugen oft DMTL-Modul genannt, setzt das Tankentlüftungssystem für die Dichtheitsprüfung unter Druck; neuere Pumpen haben im Gehäuse eine Heizung, die Feuchtigkeit austrocknet und verhindert, dass die Pumpe bei Kälte festfriert. Ist der Heizkreis gestört, kann die Dichtheitsprüfung im Winter ausfallen oder falsche Ergebnisse liefern; der Motorlauf ist davon nicht betroffen.
   affected_components:
     - evap_leak_detection_pump_heater
   common_causes:
@@ -45903,22 +46018,20 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: supply_pinch
       likelihood: low
       label:
-        en: 'Supply wire pinched against B+ source'
-        de: 'Versorgungsleitung gegen B+-Quelle eingeklemmt'
+        en: Supply wire pinched against B+ source
+        de: Versorgungsleitung gegen B+-Quelle eingeklemmt
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Possible smell of fuel near tank or engine bay'
-      de: 'Möglicher Benzingeruch an Tank oder Motorraum'
-    - en: 'Failed emissions inspection'
-      de: 'Abgasuntersuchung fehlgeschlagen'
-    - en: 'Loose-cap warning may appear'
-      de: 'Möglicherweise Tankdeckel-Warnung'
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: EVAP leak test does not complete in cold weather (readiness monitor not set)
+      de: Dichtheitsprüfung der Tankentlüftung läuft bei Kälte nicht durch (Readiness nicht gesetzt)
+    - en: Failed emissions inspection
+      de: Abgasuntersuchung fehlgeschlagen
   repair:
     difficulty: medium
     diy_possible: true
@@ -45927,9 +46040,12 @@
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Onboard_refueling_vapor_recovery
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.vehicleservicepros.com/industry-news/article/53089788/evap-monitor-on-european-cars-real-world-diagnosis-of-dmtl-systems-2017-08-04
 
 - code: P240D
   category: powertrain
@@ -45937,8 +46053,8 @@
     en: Alternative Fuel Low Pressure System Leak
     de: Alternativkraftstoff Niederdruck-System - Leck
   description:
-    en: 'Alternative Fuel Low Pressure System Leak: a leak has been detected in this brake-hydraulic circuit, which reduces braking pressure. Safety-critical.'
-    de: 'Alternativkraftstoff Niederdruck-System - Leck: in diesem Brems-Hydraulikkreis wurde ein Leck erkannt, das den Bremsdruck verringert. Sicherheitskritisch.'
+    en: The control module has detected a leak on the low-pressure side of the alternative fuel system, the part downstream of the pressure regulator that feeds gas to the fuel rail. On GM's bi-fuel Impala, for example, the regulator brings CNG down from tank pressure to about 470–900 kPa. Monitors usually infer a leak from pressure that falls while the shut-off valves are closed, or from rail pressure that cannot be held. Bi-fuel systems then close the gas valves and continue on gasoline. Natural gas and LPG are flammable, so the lines, fittings and regulator should be checked for leaks before the gas mode is used again.
+    de: Das Steuergerät hat ein Leck auf der Niederdruckseite der Alternativkraftstoff-Anlage erkannt, also hinter dem Druckregler, wo das Gas zum Kraftstoffverteiler strömt. Beim bivalenten GM Impala etwa senkt der Regler den CNG-Druck vom Tankdruck auf rund 470–900 kPa. Die Überwachung schließt meist auf ein Leck, wenn der Druck bei geschlossenen Absperrventilen fällt oder sich der Verteilerdruck nicht halten lässt. Bivalente Systeme schließen dann die Gasventile und fahren mit Benzin weiter. Erdgas und Autogas sind brennbar; Leitungen, Verschraubungen und Druckregler sollten deshalb auf Dichtheit geprüft werden, bevor wieder mit Gas gefahren wird.
   affected_components:
     - alternative_fuel_low_pressure_line
   common_causes:
@@ -45947,18 +46063,39 @@
       label:
         en: Hose or fitting leak
         de: Schlauch oder Anschluss undicht
+    - id: regulator_or_valve_leak
+      likelihood: medium
+      label:
+        en: Leaking pressure regulator, low-pressure shut-off valve or injector seal
+        de: Undichter Druckregler, Niederdruck-Absperrventil oder Einblasventil-Dichtung
+    - id: pressure_sensor_fault
+      likelihood: low
+      label:
+        en: Pressure sensor drift faking a pressure loss
+        de: Driftender Drucksensor täuscht Druckverlust vor
+  symptoms:
+    - en: Check engine or alternative fuel warning light on
+      de: Motorkontrollleuchte oder Warnleuchte der Gasanlage an
+    - en: Gas mode unavailable, engine runs on gasoline only
+      de: Gasbetrieb nicht verfügbar, Motor läuft nur mit Benzin
+    - en: Gas smell near the tank, lines or engine bay
+      de: Gasgeruch an Tank, Leitungen oder im Motorraum
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [120, 800]
-    estimated_hours: [0.8, 3.0]
+    estimated_hours: [0.8, 3]
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
+  related_codes: [P240E]
   sources:
     - https://en.wikipedia.org/wiki/Alternative_fuel
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10114282-9999.pdf
+    - https://static.nhtsa.gov/odi/inv/2008/INRD-PE08063-33504P.pdf
 
 - code: P240E
   category: powertrain
@@ -45966,8 +46103,8 @@
     en: Alternative Fuel High Pressure System Leak
     de: Alternativkraftstoff Hochdruck-System - Leck
   description:
-    en: 'Alternative Fuel High Pressure System Leak: a leak has been detected in this brake-hydraulic circuit, which reduces braking pressure. Safety-critical.'
-    de: 'Alternativkraftstoff Hochdruck-System - Leck: in diesem Brems-Hydraulikkreis wurde ein Leck erkannt, das den Bremsdruck verringert. Sicherheitskritisch.'
+    en: The control module has detected a leak on the high-pressure side of the alternative fuel system, between the tank and the pressure regulator, where CNG is stored at up to about 25 MPa (3,600 psi). This section includes the tank valves, the high-pressure lines and filter and the inlet of the regulator. Monitors usually infer a leak from tank or line pressure that drops while no gas is being used. Bi-fuel systems then close the tank solenoid valves and continue on gasoline. Because of the stored pressure and the flammable gas, the system should be checked by a qualified shop before the gas mode is used again.
+    de: Das Steuergerät hat ein Leck auf der Hochdruckseite der Alternativkraftstoff-Anlage erkannt, zwischen Tank und Druckregler, wo CNG mit bis zu etwa 25 MPa (3.600 psi) gespeichert ist. Zu diesem Abschnitt gehören die Tankventile, die Hochdruckleitungen mit Filter und der Eingang des Reglers. Die Überwachung schließt meist auf ein Leck, wenn Tank- oder Leitungsdruck sinken, obwohl kein Gas entnommen wird. Bivalente Systeme schließen dann die Tank-Magnetventile und fahren mit Benzin weiter. Wegen des hohen Drucks und des brennbaren Gases sollte eine Fachwerkstatt die Anlage prüfen, bevor wieder mit Gas gefahren wird.
   affected_components:
     - alternative_fuel_high_pressure_line
   common_causes:
@@ -45976,18 +46113,39 @@
       label:
         en: Hose, fitting or cylinder valve leak
         de: Schlauch, Anschluss oder Tankventil undicht
+    - id: tank_solenoid_leak
+      likelihood: medium
+      label:
+        en: Tank solenoid valve not sealing
+        de: Tank-Magnetventil dichtet nicht ab
+    - id: pressure_sensor_fault
+      likelihood: low
+      label:
+        en: Pressure sensor drift faking a pressure loss
+        de: Driftender Drucksensor täuscht Druckverlust vor
+  symptoms:
+    - en: Check engine or alternative fuel warning light on
+      de: Motorkontrollleuchte oder Warnleuchte der Gasanlage an
+    - en: Gas mode unavailable, engine runs on gasoline only
+      de: Gasbetrieb nicht verfügbar, Motor läuft nur mit Benzin
+    - en: Gas smell near the tank, lines or engine bay
+      de: Gasgeruch an Tank, Leitungen oder im Motorraum
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [200, 2000]
-    estimated_hours: [1.0, 5.0]
+    estimated_hours: [1, 5]
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
+  related_codes: [P240D]
   sources:
     - https://en.wikipedia.org/wiki/Alternative_fuel
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10114282-9999.pdf
+    - https://static.nhtsa.gov/odi/inv/2008/INRD-PE08063-33504P.pdf
 
 - code: P240F
   category: powertrain
@@ -49427,39 +49585,39 @@
 - code: P2460
   category: powertrain
   title:
-    en: DPF Restriction — Forced Limited Power
-    de: DPF Verstopfung — Leistung notbegrenzt
+    en: Particulate Filter Pressure Sensor B Circuit Low
+    de: Partikelfilter-Drucksensor B Stromkreis niedrig
   description:
-    en: The DPF restriction has reached a level that forces the ECU to limit engine power. The driver must allow a forced regeneration or have the filter serviced before normal power is restored.
-    de: Die DPF-Verstopfung hat einen Wert erreicht, bei dem die Motorsteuerung die Leistung notbegrenzt. Vor Wiederherstellung der vollen Leistung muss eine Zwangsregeneration oder eine Filterwartung erfolgen.
+    en: P2460 means the signal of particulate filter pressure sensor B is below its valid range, usually from a short to ground or an open supply. Pressure sensor B is the second sensor used to judge the soot load of the particulate filter, for example on a second filter or as an extra measuring point; P245E to P2462 cover its circuit. Without a valid reading the module estimates the soot load from a model and may limit or postpone regeneration.
+    de: P2460 bedeutet, dass das Signal des Partikelfilter-Drucksensors B unter dem gültigen Bereich liegt, meist durch Masseschluss oder unterbrochene Versorgung. Drucksensor B ist der zweite Sensor zur Beurteilung der Rußbeladung des Partikelfilters, etwa an einem zweiten Filter oder als zusätzlicher Messpunkt; P245E bis P2462 betreffen seinen Stromkreis. Ohne gültigen Messwert schätzt das Steuergerät die Beladung über ein Modell und begrenzt oder verschiebt unter Umständen die Regeneration.
   affected_components:
-    - diesel_particulate_filter
-    - dpf_differential_pressure_sensor
+    - dpf_pressure_sensor_b
   common_causes:
-    - id: dpf_loaded_failed_regen
+    - id: wiring_fault
       likelihood: high
       label:
-        en: Heavy soot load, regenerations skipped
-        de: Hohe Russbeladung, Regenerationen ausgefallen
-    - id: dpf_ash_loaded
+        en: Wiring or connector fault in the sensor circuit
+        de: Fehler an Leitung oder Stecker im Sensorkreis
+    - id: sensor_failed
       likelihood: medium
       label:
-        en: Ash loaded near service interval
-        de: Aschebeladung nahe Wartungsintervall
+        en: Pressure sensor failed
+        de: Drucksensor defekt
+    - id: hose_issue
+      likelihood: low
+      label:
+        en: Cracked or melted sensor hose affecting the reading
+        de: Gerissener oder geschmolzener Sensorschlauch verfälscht den Messwert
   symptoms:
-    - en: 'Check engine light or DPF warning light on'
-      de: 'Motorkontrollleuchte oder DPF-Warnleuchte an'
-    - en: 'Power loss / limp mode'
-      de: 'Leistungsverlust / Notlauf'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
-    - en: 'Failed forced regeneration attempts'
-      de: 'Fehlgeschlagene Zwangsregenerationsversuche'
+    - en: Check engine or DPF warning light on
+      de: Motorkontroll- oder DPF-Warnleuchte an
+    - en: Regeneration postponed, reduced power possible
+      de: Regeneration verschoben, Leistungsreduzierung möglich
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [200, 3500]
-    estimated_hours: [1.0, 6.0]
+    estimated_hours: [1, 6]
   flags:
     mil: true
     emissions_relevant: true
@@ -49467,87 +49625,95 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [P245E, P245F, P2461, P2462]
   sources:
+    - https://github.com/tekseport/obd2-codes
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://en.wikipedia.org/wiki/Diesel_particulate_filter
+    - https://partsavatar.ca/p2460-obd-ii-trouble-code-diesel-particulate-filter-pressure-sensor-b-circuit-low-solution-pcm
 
 - code: P2461
   category: powertrain
   title:
-    en: DPF Restriction — Forced Limited
-    de: DPF Verstopfung — Notbegrenzung
+    en: Particulate Filter Pressure Sensor B Circuit High
+    de: Partikelfilter-Drucksensor B Stromkreis hoch
   description:
-    en: The DPF restriction has reached the limit defined for forced limited operation. Vehicle behaviour depends on the manufacturer — usually a hard torque cap with a service warning.
-    de: Die DPF-Verstopfung hat den Grenzwert für die Notbegrenzung erreicht. Das Fahrverhalten hängt vom Hersteller ab — meist ein hartes Drehmomentlimit mit Wartungshinweis.
+    en: P2461 means the signal of particulate filter pressure sensor B is above its valid range, usually from a short to voltage or an open ground. Pressure sensor B is the second sensor used to judge the soot load of the particulate filter, for example on a second filter or as an extra measuring point; P245E to P2462 cover its circuit. Without a valid reading the module estimates the soot load from a model and may limit or postpone regeneration.
+    de: P2461 bedeutet, dass das Signal des Partikelfilter-Drucksensors B über dem gültigen Bereich liegt, meist durch Kurzschluss nach Spannung oder offene Masse. Drucksensor B ist der zweite Sensor zur Beurteilung der Rußbeladung des Partikelfilters, etwa an einem zweiten Filter oder als zusätzlicher Messpunkt; P245E bis P2462 betreffen seinen Stromkreis. Ohne gültigen Messwert schätzt das Steuergerät die Beladung über ein Modell und begrenzt oder verschiebt unter Umständen die Regeneration.
   affected_components:
-    - diesel_particulate_filter
-    - dpf_differential_pressure_sensor
+    - dpf_pressure_sensor_b
   common_causes:
-    - id: dpf_loaded_failed_regen
+    - id: wiring_fault
       likelihood: high
       label:
-        en: Heavy soot load, regenerations skipped
-        de: Hohe Russbeladung, Regenerationen ausgefallen
-    - id: dpf_ash_loaded
+        en: Wiring or connector fault in the sensor circuit
+        de: Fehler an Leitung oder Stecker im Sensorkreis
+    - id: sensor_failed
       likelihood: medium
       label:
-        en: Ash loaded near service interval
-        de: Aschebeladung nahe Wartungsintervall
+        en: Pressure sensor failed
+        de: Drucksensor defekt
+    - id: hose_issue
+      likelihood: low
+      label:
+        en: Cracked or melted sensor hose affecting the reading
+        de: Gerissener oder geschmolzener Sensorschlauch verfälscht den Messwert
   symptoms:
-    - en: 'Check engine light or DPF warning light on'
-      de: 'Motorkontrollleuchte oder DPF-Warnleuchte an'
-    - en: 'Power loss / limp mode'
-      de: 'Leistungsverlust / Notlauf'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
-    - en: 'Failed forced regeneration attempts'
-      de: 'Fehlgeschlagene Zwangsregenerationsversuche'
+    - en: Check engine or DPF warning light on
+      de: Motorkontroll- oder DPF-Warnleuchte an
+    - en: Regeneration postponed, reduced power possible
+      de: Regeneration verschoben, Leistungsreduzierung möglich
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [200, 3500]
-    estimated_hours: [1.0, 6.0]
+    estimated_hours: [1, 6]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
     limp_mode_possible: true
-  related_codes: [P2460]
   references:
     - sae:J2012
+  related_codes: [P245E, P245F, P2460, P2462]
   sources:
+    - https://github.com/fabiovila/OBDIICodes
+    - https://github.com/tekseport/obd2-codes
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://en.wikipedia.org/wiki/Diesel_particulate_filter
+    - https://www.emanualonline.com/blog/?p=79794
 
 - code: P2462
   category: powertrain
   title:
-    en: Diesel Particulate Filter Restriction - Soot Accumulation
-    de: Dieselpartikelfilter Verstopfung - Russbeladung
+    en: Particulate Filter Pressure Sensor B Circuit Intermittent/Erratic
+    de: Partikelfilter-Drucksensor B Stromkreis sporadisch/unregelmäßig
   description:
-    en: The DPF differential pressure sensor reports a backpressure rise consistent with excessive soot accumulation. The filter cannot regenerate fast enough, eventually causing limp mode.
-    de: Der DPF-Differenzdrucksensor meldet einen Staudruckanstieg, der auf eine zu hohe Russbeladung hinweist. Der Filter kann nicht schnell genug regenerieren, was schliesslich zum Notlauf fuehrt.
+    en: P2462 means the signal of particulate filter pressure sensor B drops out or jumps. Pressure sensor B is the second sensor used to judge the soot load of the particulate filter, for example on a second filter or as an extra measuring point; P245E to P2462 cover its circuit. Without a valid reading the module estimates the soot load from a model and may limit or postpone regeneration.
+    de: P2462 bedeutet, dass das Signal des Partikelfilter-Drucksensors B aussetzt oder springt. Drucksensor B ist der zweite Sensor zur Beurteilung der Rußbeladung des Partikelfilters, etwa an einem zweiten Filter oder als zusätzlicher Messpunkt; P245E bis P2462 betreffen seinen Stromkreis. Ohne gültigen Messwert schätzt das Steuergerät die Beladung über ein Modell und begrenzt oder verschiebt unter Umständen die Regeneration.
   affected_components:
-    - diesel_particulate_filter
-    - dpf_diff_pressure_sensor
+    - dpf_pressure_sensor_b
   common_causes:
-    - id: failed_regeneration
+    - id: wiring_fault
       likelihood: high
       label:
-        en: Repeated failed regeneration cycles
-        de: Wiederholte abgebrochene Regenerationen
-    - id: dpf_clogged
-      likelihood: high
+        en: Wiring or connector fault in the sensor circuit
+        de: Fehler an Leitung oder Stecker im Sensorkreis
+    - id: sensor_failed
+      likelihood: medium
       label:
-        en: Heavily clogged DPF
-        de: Stark verstopfter DPF
+        en: Pressure sensor failed
+        de: Drucksensor defekt
+    - id: hose_issue
+      likelihood: low
+      label:
+        en: Cracked or melted sensor hose affecting the reading
+        de: Gerissener oder geschmolzener Sensorschlauch verfälscht den Messwert
   symptoms:
-    - en: 'Check engine light or DPF warning light on'
-      de: 'Motorkontrollleuchte oder DPF-Warnleuchte an'
-    - en: 'Power loss / limp mode'
-      de: 'Leistungsverlust / Notlauf'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
-    - en: 'Failed forced regeneration attempts'
-      de: 'Fehlgeschlagene Zwangsregenerationsversuche'
+    - en: Check engine or DPF warning light on
+      de: Motorkontroll- oder DPF-Warnleuchte an
+    - en: Regeneration postponed, reduced power possible
+      de: Regeneration verschoben, Leistungsreduzierung möglich
   repair:
     difficulty: hard
     diy_possible: false
@@ -49560,8 +49726,13 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [P245E, P245F, P2460, P2461]
   sources:
+    - https://github.com/fabiovila/OBDIICodes
+    - https://github.com/tekseport/obd2-codes
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://en.wikipedia.org/wiki/Diesel_particulate_filter
+    - https://partsavatar.ca/p2462-obd-ii-trouble-code-diesel-particulate-filter-pressure-sensor-b-circuit-intermittent-erratic
 
 - code: P2463
   category: powertrain
@@ -50045,8 +50216,8 @@
 - code: P246F
   category: powertrain
   title:
-    en: Reductant System Cold Start Performance
-    de: Reduktionsmittel-System Kaltstart Plausibilität
+    en: Exhaust Gas Temperature Sensor Circuit Range/Performance Bank 1 Sensor 4
+    de: Abgastemperatursensor Stromkreis Bereich/Funktion Bank 1 Sensor 4
   description:
     en: At cold start the SCR system is unable to begin reductant dosing within the required time. Typical cause on diesel cars in winter — frozen AdBlue in the tank or lines, failed tank heater, or a slow-warming SCR catalyst.
     de: Beim Kaltstart kann das SCR-System die Reduktionsmittel-Dosierung nicht innerhalb der geforderten Zeit aufnehmen. Typische Ursache bei Dieseln im Winter — gefrorenes AdBlue im Tank oder in den Leitungen, defekte Tankheizung oder ein langsam aufheizender SCR-Katalysator.
@@ -50066,19 +50237,19 @@
         en: SCR catalyst slow to reach light-off
         de: SCR-Katalysator erreicht Light-off zu langsam
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light or NOx warning on
+      de: Motorkontrollleuchte oder NOx-Warnung an
+    - en: AdBlue/DEF level or quality warning
+      de: AdBlue-/DEF-Stand- oder Qualitätswarnung
+    - en: Possible no-start countdown after ignore period
+      de: Möglicherweise Startsperre nach Ignorieren-Frist
+    - en: Failed emissions inspection (NOx)
+      de: Abgasuntersuchung fehlgeschlagen (NOx)
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [200, 1500]
-    estimated_hours: [1.0, 4.0]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: true
@@ -52869,8 +53040,8 @@
     en: Particulate Matter Sensor Heater Control Circuit Range or Performance
     de: Partikelmasse-Sensor Heizung Steuerkreis - Bereich/Funktion
   description:
-    en: 'Same as P24B3 with the heater control loop in plausible range yet not matching the heater model. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Wie P24B3, mit Heizungs-Regelkreis im plausiblen Bereich, der aber nicht zum Heizungsmodell passt. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: Same as P24B3 with the heater control loop in plausible range yet not matching the heater model. The particulate matter sensor sits downstream of the particulate filter and collects soot on an electrode structure; its heater burns the sensor clean between measuring phases. Ford checks the heater current while the sensor regenerates and the heater voltage while it measures, and GM's soot sensor control unit reports shorts on the heater line. Without a working heater the sensor cannot be cleaned, so the module can no longer confirm that the particulate filter is intact.
+    de: Wie P24B3, mit Heizungs-Regelkreis im plausiblen Bereich, der aber nicht zum Heizungsmodell passt. Der Partikelsensor sitzt hinter dem Partikelfilter und sammelt Ruß auf einer Elektrodenstruktur; seine Heizung brennt den Sensor zwischen den Messphasen frei. Ford prüft den Heizstrom während der Sensorregeneration und die Heizspannung während der Messung, das Rußsensor-Steuergerät von GM meldet Kurzschlüsse an der Heizleitung. Ohne funktionierende Heizung lässt sich der Sensor nicht freibrennen, und das Steuergerät kann nicht mehr bestätigen, dass der Partikelfilter intakt ist.
   affected_components:
     - particulate_matter_sensor_heater
   common_causes:
@@ -52883,14 +53054,17 @@
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [400, 1200]
-    estimated_hours: [1.0, 3.0]
+    estimated_hours: [1, 3]
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
   sources:
-    - https://en.wikipedia.org/wiki/Particulates
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG04%20Engine%20Diagnostics.pdf
 
 - code: P24B5
   category: powertrain
@@ -52898,8 +53072,8 @@
     en: Particulate Matter Sensor Heater Control Circuit Low
     de: Partikelmasse-Sensor Heizung Steuerkreis - niedrig
   description:
-    en: 'Same as P24B3 with the control line shorted to ground. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Wie P24B3, mit Steuerleitung gegen Masse kurzgeschlossen. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: Same as P24B3 with the control line shorted to ground. The particulate matter sensor sits downstream of the particulate filter and collects soot on an electrode structure; its heater burns the sensor clean between measuring phases. Ford checks the heater current while the sensor regenerates and the heater voltage while it measures, and GM's soot sensor control unit reports shorts on the heater line. Without a working heater the sensor cannot be cleaned, so the module can no longer confirm that the particulate filter is intact.
+    de: Wie P24B3, mit Steuerleitung gegen Masse kurzgeschlossen. Der Partikelsensor sitzt hinter dem Partikelfilter und sammelt Ruß auf einer Elektrodenstruktur; seine Heizung brennt den Sensor zwischen den Messphasen frei. Ford prüft den Heizstrom während der Sensorregeneration und die Heizspannung während der Messung, das Rußsensor-Steuergerät von GM meldet Kurzschlüsse an der Heizleitung. Ohne funktionierende Heizung lässt sich der Sensor nicht freibrennen, und das Steuergerät kann nicht mehr bestätigen, dass der Partikelfilter intakt ist.
   affected_components:
     - particulate_matter_sensor_heater
   common_causes:
@@ -52911,25 +53085,28 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: harness_chafe
       likelihood: low
       label:
-        en: 'Harness chafing through insulation'
-        de: 'Kabelbaum scheuert sich durch die Isolation'
+        en: Harness chafing through insulation
+        de: Kabelbaum scheuert sich durch die Isolation
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [400, 1200]
-    estimated_hours: [1.0, 3.0]
+    estimated_hours: [1, 3]
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
   sources:
-    - https://en.wikipedia.org/wiki/Particulates
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG04%20Engine%20Diagnostics.pdf
 
 - code: P24B6
   category: powertrain
@@ -52937,8 +53114,8 @@
     en: Particulate Matter Sensor Heater Control Circuit High
     de: Partikelmasse-Sensor Heizung Steuerkreis - hoch
   description:
-    en: 'Same as P24B3 with the control line shorted to supply. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Wie P24B3, mit Steuerleitung gegen Versorgung kurzgeschlossen. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: Same as P24B3 with the control line shorted to supply. The particulate matter sensor sits downstream of the particulate filter and collects soot on an electrode structure; its heater burns the sensor clean between measuring phases. Ford checks the heater current while the sensor regenerates and the heater voltage while it measures, and GM's soot sensor control unit reports shorts on the heater line. Without a working heater the sensor cannot be cleaned, so the module can no longer confirm that the particulate filter is intact.
+    de: Wie P24B3, mit Steuerleitung gegen Versorgung kurzgeschlossen. Der Partikelsensor sitzt hinter dem Partikelfilter und sammelt Ruß auf einer Elektrodenstruktur; seine Heizung brennt den Sensor zwischen den Messphasen frei. Ford prüft den Heizstrom während der Sensorregeneration und die Heizspannung während der Messung, das Rußsensor-Steuergerät von GM meldet Kurzschlüsse an der Heizleitung. Ohne funktionierende Heizung lässt sich der Sensor nicht freibrennen, und das Steuergerät kann nicht mehr bestätigen, dass der Partikelfilter intakt ist.
   affected_components:
     - particulate_matter_sensor_heater
   common_causes:
@@ -52950,25 +53127,28 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: supply_pinch
       likelihood: low
       label:
-        en: 'Supply wire pinched against B+ source'
-        de: 'Versorgungsleitung gegen B+-Quelle eingeklemmt'
+        en: Supply wire pinched against B+ source
+        de: Versorgungsleitung gegen B+-Quelle eingeklemmt
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [400, 1200]
-    estimated_hours: [1.0, 3.0]
+    estimated_hours: [1, 3]
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
   sources:
-    - https://en.wikipedia.org/wiki/Particulates
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG04%20Engine%20Diagnostics.pdf
 
 - code: P24B7
   category: powertrain
@@ -54466,8 +54646,8 @@
     en: Reductant Purge Control Valve B Performance
     de: AdBlue-Spülventil B - Funktion
   description:
-    en: 'Same as P24DB with the actuator electrically intact yet not delivering the commanded purge flow. The evaporative system captures fuel vapor from the tank and purges it into intake; leaks or stuck purge valves leak hydrocarbons and cause emissions failures.'
-    de: 'Wie P24DB, mit elektrisch intaktem Stellglied, das aber den geforderten Spülstrom nicht erreicht. Das EVAP-System fängt Kraftstoffdämpfe aus dem Tank und spült sie in den Ansaugtrakt; Leckagen oder klemmende Tankentlüftungs-Ventile lassen Kohlenwasserstoffe entweichen und führen zur AU-Durchfallen.'
+    en: Same as P24DB with the actuator electrically intact yet not delivering the commanded purge flow. Valve B is the second purge valve on systems that use two. The purge valve opens a path so that, after the engine is switched off, the dosing system can draw the remaining urea solution out of the dosing valve and lines; this protects them from freezing, as DEF freezes at about −11 °C, and from crystal deposits. If the valve cannot be controlled, the lines may stay filled, which risks frozen or blocked dosing parts and later SCR faults.
+    de: Wie P24DB, mit elektrisch intaktem Stellglied, das aber den geforderten Spülstrom nicht erreicht. Ventil B ist bei Systemen mit zwei Spülventilen das zweite. Das Spülventil öffnet einen Weg, über den das Dosiersystem nach dem Abstellen des Motors die restliche Harnstofflösung aus Dosierventil und Leitungen absaugen kann; das schützt sie vor dem Einfrieren, da AdBlue bei etwa −11 °C gefriert, und vor Kristallablagerungen. Lässt sich das Ventil nicht ansteuern, bleiben die Leitungen womöglich gefüllt, was eingefrorene oder verstopfte Dosierteile und spätere SCR-Fehler nach sich ziehen kann.
   affected_components:
     - reductant_purge_valve_b
   common_causes:
@@ -54477,27 +54657,29 @@
         en: Purge valve sticking
         de: Spülventil klemmt
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light or NOx warning on
+      de: Motorkontrollleuchte oder NOx-Warnung an
+    - en: AdBlue/DEF level or quality warning
+      de: AdBlue-/DEF-Stand- oder Qualitätswarnung
+    - en: Possible no-start countdown after ignore period
+      de: Möglicherweise Startsperre nach Ignorieren-Frist
+    - en: Failed emissions inspection (NOx)
+      de: Abgasuntersuchung fehlgeschlagen (NOx)
   repair:
     difficulty: medium
     diy_possible: true
     estimated_cost_eur: [120, 500]
-    estimated_hours: [0.6, 2.0]
+    estimated_hours: [0.6, 2]
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
   related_codes: [P20A1]
   sources:
     - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
-    - https://en.wikipedia.org/wiki/Onboard_refueling_vapor_recovery
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://patents.google.com/patent/US9273581
 
 - code: P24DD
   category: powertrain
@@ -54505,8 +54687,8 @@
     en: Reductant Purge Control Valve B Circuit Low
     de: AdBlue-Spülventil B Stromkreis - niedrig
   description:
-    en: 'Same as P24DB with the control line shorted to ground. The evaporative system captures fuel vapor from the tank and purges it into intake; leaks or stuck purge valves leak hydrocarbons and cause emissions failures.'
-    de: 'Wie P24DB, mit Steuerleitung gegen Masse kurzgeschlossen. Das EVAP-System fängt Kraftstoffdämpfe aus dem Tank und spült sie in den Ansaugtrakt; Leckagen oder klemmende Tankentlüftungs-Ventile lassen Kohlenwasserstoffe entweichen und führen zur AU-Durchfallen.'
+    en: Same as P24DB with the control line shorted to ground. Valve B is the second purge valve on systems that use two. The purge valve opens a path so that, after the engine is switched off, the dosing system can draw the remaining urea solution out of the dosing valve and lines; this protects them from freezing, as DEF freezes at about −11 °C, and from crystal deposits. If the valve cannot be controlled, the lines may stay filled, which risks frozen or blocked dosing parts and later SCR faults.
+    de: Wie P24DB, mit Steuerleitung gegen Masse kurzgeschlossen. Ventil B ist bei Systemen mit zwei Spülventilen das zweite. Das Spülventil öffnet einen Weg, über den das Dosiersystem nach dem Abstellen des Motors die restliche Harnstofflösung aus Dosierventil und Leitungen absaugen kann; das schützt sie vor dem Einfrieren, da AdBlue bei etwa −11 °C gefriert, und vor Kristallablagerungen. Lässt sich das Ventil nicht ansteuern, bleiben die Leitungen womöglich gefüllt, was eingefrorene oder verstopfte Dosierteile und spätere SCR-Fehler nach sich ziehen kann.
   affected_components:
     - reductant_purge_valve_b
   common_causes:
@@ -54518,35 +54700,37 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: harness_chafe
       likelihood: low
       label:
-        en: 'Harness chafing through insulation'
-        de: 'Kabelbaum scheuert sich durch die Isolation'
+        en: Harness chafing through insulation
+        de: Kabelbaum scheuert sich durch die Isolation
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light or NOx warning on
+      de: Motorkontrollleuchte oder NOx-Warnung an
+    - en: AdBlue/DEF level or quality warning
+      de: AdBlue-/DEF-Stand- oder Qualitätswarnung
+    - en: Possible no-start countdown after ignore period
+      de: Möglicherweise Startsperre nach Ignorieren-Frist
+    - en: Failed emissions inspection (NOx)
+      de: Abgasuntersuchung fehlgeschlagen (NOx)
   repair:
     difficulty: medium
     diy_possible: true
     estimated_cost_eur: [120, 500]
-    estimated_hours: [0.6, 2.0]
+    estimated_hours: [0.6, 2]
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
   related_codes: [P20A2]
   sources:
     - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
-    - https://en.wikipedia.org/wiki/Onboard_refueling_vapor_recovery
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://patents.google.com/patent/US9273581
 
 - code: P24DE
   category: powertrain
@@ -54554,8 +54738,8 @@
     en: Reductant Purge Control Valve B Circuit High
     de: AdBlue-Spülventil B Stromkreis - hoch
   description:
-    en: 'Same as P24DB with the control line shorted to supply. The evaporative system captures fuel vapor from the tank and purges it into intake; leaks or stuck purge valves leak hydrocarbons and cause emissions failures.'
-    de: 'Wie P24DB, mit Steuerleitung gegen Versorgung kurzgeschlossen. Das EVAP-System fängt Kraftstoffdämpfe aus dem Tank und spült sie in den Ansaugtrakt; Leckagen oder klemmende Tankentlüftungs-Ventile lassen Kohlenwasserstoffe entweichen und führen zur AU-Durchfallen.'
+    en: Same as P24DB with the control line shorted to supply. Valve B is the second purge valve on systems that use two. The purge valve opens a path so that, after the engine is switched off, the dosing system can draw the remaining urea solution out of the dosing valve and lines; this protects them from freezing, as DEF freezes at about −11 °C, and from crystal deposits. If the valve cannot be controlled, the lines may stay filled, which risks frozen or blocked dosing parts and later SCR faults.
+    de: Wie P24DB, mit Steuerleitung gegen Versorgung kurzgeschlossen. Ventil B ist bei Systemen mit zwei Spülventilen das zweite. Das Spülventil öffnet einen Weg, über den das Dosiersystem nach dem Abstellen des Motors die restliche Harnstofflösung aus Dosierventil und Leitungen absaugen kann; das schützt sie vor dem Einfrieren, da AdBlue bei etwa −11 °C gefriert, und vor Kristallablagerungen. Lässt sich das Ventil nicht ansteuern, bleiben die Leitungen womöglich gefüllt, was eingefrorene oder verstopfte Dosierteile und spätere SCR-Fehler nach sich ziehen kann.
   affected_components:
     - reductant_purge_valve_b
   common_causes:
@@ -54567,35 +54751,37 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: supply_pinch
       likelihood: low
       label:
-        en: 'Supply wire pinched against B+ source'
-        de: 'Versorgungsleitung gegen B+-Quelle eingeklemmt'
+        en: Supply wire pinched against B+ source
+        de: Versorgungsleitung gegen B+-Quelle eingeklemmt
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light or NOx warning on
+      de: Motorkontrollleuchte oder NOx-Warnung an
+    - en: AdBlue/DEF level or quality warning
+      de: AdBlue-/DEF-Stand- oder Qualitätswarnung
+    - en: Possible no-start countdown after ignore period
+      de: Möglicherweise Startsperre nach Ignorieren-Frist
+    - en: Failed emissions inspection (NOx)
+      de: Abgasuntersuchung fehlgeschlagen (NOx)
   repair:
     difficulty: medium
     diy_possible: true
     estimated_cost_eur: [120, 500]
-    estimated_hours: [0.6, 2.0]
+    estimated_hours: [0.6, 2]
   flags:
     mil: true
     emissions_relevant: true
-  references: [sae:J2012]
+  references:
+    - sae:J2012
   related_codes: [P20A3]
   sources:
     - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
-    - https://en.wikipedia.org/wiki/Onboard_refueling_vapor_recovery
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://patents.google.com/patent/US9273581
 
 - code: P24DF
   category: powertrain
@@ -72404,8 +72590,8 @@
     en: Fuel Supply Heater Control Circuit Low
     de: Kraftstoff-Vorwärmer Steuerkreis niedrig
   description:
-    en: 'Voltage on the fuel supply heater control line is below the expected window. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Die Spannung auf der Steuerleitung des Kraftstoff-Vorwärmers liegt unter dem erwarteten Bereich. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: Voltage on the fuel supply heater control line is below the expected window. The fuel supply heater warms diesel at the filter or in the supply line so that paraffin crystals cannot clog the filter in cold weather; on GM diesels the engine control module switches it through a relay and checks the relay's low-side driver. If the heater does not work, the engine may be hard to start, lose power or stall in severe cold.
+    de: Die Spannung auf der Steuerleitung des Kraftstoff-Vorwärmers liegt unter dem erwarteten Bereich. Der Kraftstoffvorwärmer erwärmt den Diesel am Filter oder in der Zulaufleitung, damit Paraffinkristalle den Filter bei Kälte nicht zusetzen; bei GM-Dieseln schaltet das Motorsteuergerät ihn über ein Relais und überwacht dessen Low-Side-Treiber. Arbeitet der Vorwärmer nicht, kann der Motor bei strengem Frost schlecht anspringen, an Leistung verlieren oder ausgehen.
   affected_components:
     - fuel_supply_heater
     - wiring_harness
@@ -72423,13 +72609,18 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
+  symptoms:
+    - en: Hard starting, loss of power or stalling in severe cold
+      de: Schlechtes Anspringen, Leistungsverlust oder Absterben bei strengem Frost
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
   repair:
     difficulty: medium
     diy_possible: true
     estimated_cost_eur: [80, 400]
-    estimated_hours: [0.5, 2.0]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
   references:
@@ -72437,6 +72628,8 @@
   sources:
     - https://en.wikipedia.org/wiki/Diesel_fuel
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG04%20Engine%20Diagnostics.pdf
 
 - code: P2689
   category: powertrain
@@ -72444,8 +72637,8 @@
     en: Fuel Supply Heater Control Circuit High
     de: Kraftstoff-Vorwärmer Steuerkreis hoch
   description:
-    en: 'Voltage on the fuel supply heater control line is above the expected window. The sensor heater warms the element to operating temperature (~600 °C); without it the lambda sensor stays inactive in closed loop and the ECM cannot trim mixture.'
-    de: 'Die Spannung auf der Steuerleitung des Kraftstoff-Vorwärmers liegt über dem erwarteten Bereich. Die Sondenheizung bringt das Element auf Betriebstemperatur (~600 °C); ohne sie bleibt die Lambdasonde im geschlossenen Regelkreis inaktiv und das Steuergerät kann das Gemisch nicht regeln.'
+    en: Voltage on the fuel supply heater control line is above the expected window. The fuel supply heater warms diesel at the filter or in the supply line so that paraffin crystals cannot clog the filter in cold weather; on GM diesels the engine control module switches it through a relay and checks the relay's low-side driver. If the heater does not work, the engine may be hard to start, lose power or stall in severe cold.
+    de: Die Spannung auf der Steuerleitung des Kraftstoff-Vorwärmers liegt über dem erwarteten Bereich. Der Kraftstoffvorwärmer erwärmt den Diesel am Filter oder in der Zulaufleitung, damit Paraffinkristalle den Filter bei Kälte nicht zusetzen; bei GM-Dieseln schaltet das Motorsteuergerät ihn über ein Relais und überwacht dessen Low-Side-Treiber. Arbeitet der Vorwärmer nicht, kann der Motor bei strengem Frost schlecht anspringen, an Leistung verlieren oder ausgehen.
   affected_components:
     - fuel_supply_heater
     - wiring_harness
@@ -72463,13 +72656,18 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
+  symptoms:
+    - en: Hard starting, loss of power or stalling in severe cold
+      de: Schlechtes Anspringen, Leistungsverlust oder Absterben bei strengem Frost
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
   repair:
     difficulty: medium
     diy_possible: true
     estimated_cost_eur: [80, 400]
-    estimated_hours: [0.5, 2.0]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
   references:
@@ -72477,6 +72675,8 @@
   sources:
     - https://en.wikipedia.org/wiki/Diesel_fuel
     - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG04%20Engine%20Diagnostics.pdf
 
 - code: P268A
   category: powertrain
@@ -119634,45 +119834,34 @@
 - code: P2BA9
   category: powertrain
   title:
-    en: NOx Exceedence — Insufficient Reagent
-    de: NOx-Überschreitung — zu wenig Reagenz
+    en: NOx Exceedence - Insufficient Reagent Quality
+    de: NOx-Überschreitung - unzureichende Reagenzqualität
   description:
-    en: The SCR system has detected that NOx emissions exceed the legal limit and the cause is traced to insufficient AdBlue/DEF dosing. Modern emission regulations require this fault to be reported separately so that operator-induced misuse (running an empty tank, diluting the fluid) is recorded.
-    de: Das SCR-System hat festgestellt, dass die NOx-Emissionen über dem gesetzlichen Grenzwert liegen, und führt das auf eine ungenügende AdBlue/DEF-Dosierung zurück. Moderne Abgasvorschriften verlangen die getrennte Meldung dieses Fehlers, damit Manipulationen wie das Fahren mit leerem Tank oder verdünnte Flüssigkeit dokumentiert werden.
+    en: "P2BA9 means NOx emissions exceed the permitted level and the module attributes it to this cause: the reagent in the tank does not have the required quality, for example diluted with water, so NOx conversion falls short. The NOx exceedance codes P2BA6 to P2BAE follow the list of causes that EU heavy-duty rules require to be identified for operator inducement (empty tank, interrupted dosing, poor reagent quality, low consumption, EGR faults, monitoring faults). Depending on the market, a persisting fault leads to warnings and then to power or speed limits."
+    de: "P2BA9 bedeutet, dass die NOx-Emission den zulässigen Wert überschreitet und das Steuergerät dies folgender Ursache zuordnet: das Reagenz im Tank nicht die geforderte Qualität hat, etwa mit Wasser verdünnt, sodass die NOx-Umsetzung nicht ausreicht. Die NOx-Überschreitungscodes P2BA6 bis P2BAE folgen der Liste von Ursachen, die die EU-Vorschriften für schwere Nutzfahrzeuge für die Aufforderungsmaßnahmen an den Fahrer verlangen (leerer Tank, unterbrochene Dosierung, schlechte Reagenzqualität, zu geringer Verbrauch, AGR-Fehler, Fehler der Überwachung). Je nach Markt führt ein anhaltender Fehler zu Warnungen und dann zu Leistungs- oder Geschwindigkeitsbegrenzung."
   affected_components:
-    - reductant_dosing_unit
-    - reductant_tank
-    - scr_catalyst
+    - scr_system
   common_causes:
-    - id: def_tank_low_or_empty
+    - id: diluted_reagent
       likelihood: high
       label:
-        en: DEF tank repeatedly run empty
-        de: DEF-Tank wiederholt leer gefahren
-    - id: def_quality_poor
-      likelihood: medium
+        en: Diluted or wrong fluid in the reagent tank
+        de: Verdünnte oder falsche Flüssigkeit im Reagenztank
+    - id: quality_sensor_fault
+      likelihood: low
       label:
-        en: Diluted or contaminated DEF
-        de: DEF verdünnt oder verunreinigt
-    - id: dosing_pump_underperforming
-      likelihood: medium
-      label:
-        en: Dosing pump output below spec
-        de: Dosierpumpe fördert zu wenig
+        en: Reagent quality sensor fault
+        de: Fehler am Reagenz-Qualitätssensor
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine or NOx warning light on
+      de: Motorkontroll- oder NOx-Warnleuchte an
+    - en: Driver warning, later power or speed limitation
+      de: Fahrerwarnung, später Leistungs- oder Geschwindigkeitsbegrenzung
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [200, 1500]
-    estimated_hours: [1.0, 4.0]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: true
@@ -119680,146 +119869,131 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [P2BA7, P2BA8, P2BAA, P2BAB, P2BAC, P2BAD, P2BAE]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_exhaust_fluid
-    - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://github.com/tekseport/obd2-codes
+    - https://eur-lex.europa.eu/eli/reg/2011/582/oj
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
 
 - code: P2BAA
   category: powertrain
   title:
-    en: NOx Sensor Range/Performance (Bank 1, Sensor 1)
-    de: NOx-Sensor Bereich/Plausibilität (Bank 1, Sonde 1)
+    en: NOx Exceedence - Low Reagent Consumption
+    de: NOx-Überschreitung - zu geringer Reagenzverbrauch
   description:
-    en: The upstream NOx sensor on bank 1 returns values that are not plausible for the current operating point. NOx sensors are slow to warm up, sensitive to soot and water, and are a frequent failure on diesel SCR systems.
-    de: Der NOx-Sensor vor dem Katalysator auf Bank 1 liefert für den aktuellen Betriebspunkt unplausible Werte. NOx-Sensoren benötigen lange zur Aufheizung, sind empfindlich gegen Ruß und Wasser und fallen an Diesel-SCR-Systemen häufig aus.
+    en: "P2BAA means NOx emissions exceed the permitted level and the module attributes it to this cause: less reagent is being consumed than the dosing strategy expects, which points to dosing that does not reach the exhaust. The NOx exceedance codes P2BA6 to P2BAE follow the list of causes that EU heavy-duty rules require to be identified for operator inducement (empty tank, interrupted dosing, poor reagent quality, low consumption, EGR faults, monitoring faults). Depending on the market, a persisting fault leads to warnings and then to power or speed limits."
+    de: "P2BAA bedeutet, dass die NOx-Emission den zulässigen Wert überschreitet und das Steuergerät dies folgender Ursache zuordnet: weniger Reagenz verbraucht wird, als die Dosierstrategie erwartet, was darauf hindeutet, dass die Dosierung nicht im Abgas ankommt. Die NOx-Überschreitungscodes P2BA6 bis P2BAE folgen der Liste von Ursachen, die die EU-Vorschriften für schwere Nutzfahrzeuge für die Aufforderungsmaßnahmen an den Fahrer verlangen (leerer Tank, unterbrochene Dosierung, schlechte Reagenzqualität, zu geringer Verbrauch, AGR-Fehler, Fehler der Überwachung). Je nach Markt führt ein anhaltender Fehler zu Warnungen und dann zu Leistungs- oder Geschwindigkeitsbegrenzung."
   affected_components:
-    - nox_sensor_upstream
-    - nox_sensor_wiring
+    - scr_system
   common_causes:
-    - id: nox_sensor_failed
+    - id: dosing_blocked
       likelihood: high
       label:
-        en: NOx sensor element failed
-        de: NOx-Sensorelement defekt
-    - id: nox_sensor_contaminated
+        en: Blocked dosing valve or line
+        de: Verstopftes Dosierventil oder verstopfte Leitung
+    - id: pump_weak
       likelihood: medium
       label:
-        en: Sensor contaminated with soot or condensate
-        de: Sensor mit Ruß oder Kondensat verunreinigt
-    - id: sensor_aged
+        en: Weak reagent pump
+        de: Schwache Reagenzpumpe
+    - id: level_sensor_fault
       likelihood: low
       label:
-        en: 'Sensor element aged beyond calibration window'
-        de: 'Sensorelement gealtert über Kalibrierfenster hinaus'
+        en: Tank level sensor misreading
+        de: Tankfüllstandsensor misst falsch
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine or NOx warning light on
+      de: Motorkontroll- oder NOx-Warnleuchte an
+    - en: Driver warning, later power or speed limitation
+      de: Fahrerwarnung, später Leistungs- oder Geschwindigkeitsbegrenzung
   repair:
     difficulty: medium
     diy_possible: true
     estimated_cost_eur: [200, 800]
-    estimated_hours: [0.5, 2.0]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
   references:
     - sae:J2012
+  related_codes: [P2BA7, P2BA8, P2BA9, P2BAB, P2BAC, P2BAD, P2BAE]
   sources:
-    - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://github.com/tekseport/obd2-codes
+    - https://eur-lex.europa.eu/eli/reg/2011/582/oj
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://partsavatar.ca/p2baa-obd-ii-trouble-code-nox-exceedence-low-reagent-consumption-solution-mass-air-flow-sensor
 
 - code: P2BAB
   category: powertrain
   title:
-    en: NOx Exceedence — Reagent System Performance
-    de: NOx-Überschreitung — Reagenzsystem-Leistung
+    en: NOx Exceedence - Incorrect EGR Flow
+    de: NOx-Überschreitung - fehlerhafter AGR-Durchfluss
   description:
-    en: The SCR system has detected that NOx emissions exceed the legal limit and the cause is traced to a performance fault in the reagent dosing system — for example a slow dosing pump, a clogged injector, or a frozen line that is not yet caught by another DTC.
-    de: Das SCR-System hat festgestellt, dass die NOx-Emissionen über dem gesetzlichen Grenzwert liegen, und führt das auf einen Leistungsfehler im Dosiersystem zurück — etwa eine träge Dosierpumpe, einen verstopften Injektor oder eine vereiste Leitung, die noch nicht durch einen anderen DTC erfasst wurde.
+    en: "P2BAB means NOx emissions exceed the permitted level and the module attributes it to this cause: the EGR flow deviates from the commanded value so far that engine-out NOx is no longer controlled. The NOx exceedance codes P2BA6 to P2BAE follow the list of causes that EU heavy-duty rules require to be identified for operator inducement (empty tank, interrupted dosing, poor reagent quality, low consumption, EGR faults, monitoring faults). Depending on the market, a persisting fault leads to warnings and then to power or speed limits."
+    de: "P2BAB bedeutet, dass die NOx-Emission den zulässigen Wert überschreitet und das Steuergerät dies folgender Ursache zuordnet: der AGR-Durchfluss so weit vom Sollwert abweicht, dass die NOx-Rohemission nicht mehr beherrscht wird. Die NOx-Überschreitungscodes P2BA6 bis P2BAE folgen der Liste von Ursachen, die die EU-Vorschriften für schwere Nutzfahrzeuge für die Aufforderungsmaßnahmen an den Fahrer verlangen (leerer Tank, unterbrochene Dosierung, schlechte Reagenzqualität, zu geringer Verbrauch, AGR-Fehler, Fehler der Überwachung). Je nach Markt führt ein anhaltender Fehler zu Warnungen und dann zu Leistungs- oder Geschwindigkeitsbegrenzung."
   affected_components:
-    - reductant_dosing_unit
-    - reductant_injector
-    - reductant_pump
+    - egr_valve
   common_causes:
-    - id: dosing_injector_clogged
+    - id: egr_valve_sticking
       likelihood: high
       label:
-        en: Reductant injector clogged with crystals
-        de: Reagenzinjektor mit Kristallen verstopft
-    - id: dosing_pump_underperforming
+        en: Sticking or sooted EGR valve
+        de: Klemmendes oder verrußtes AGR-Ventil
+    - id: egr_cooler_blocked
       likelihood: medium
       label:
-        en: Dosing pump output below spec
-        de: Dosierpumpe fördert zu wenig
-    - id: reductant_line_blocked
-      likelihood: medium
-      label:
-        en: Reagent supply line blocked
-        de: Reagenzleitung blockiert
+        en: Restricted EGR cooler
+        de: Zugesetzter AGR-Kühler
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine or NOx warning light on
+      de: Motorkontroll- oder NOx-Warnleuchte an
+    - en: Driver warning, later power or speed limitation
+      de: Fahrerwarnung, später Leistungs- oder Geschwindigkeitsbegrenzung
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [200, 1500]
-    estimated_hours: [1.0, 5.0]
+    estimated_hours: [1, 5]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
     limp_mode_possible: true
-  related_codes: [P2BA9]
   references:
     - sae:J2012
+  related_codes: [P2BA7, P2BA8, P2BA9, P2BAA, P2BAC, P2BAD, P2BAE]
   sources:
-    - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://github.com/tekseport/obd2-codes
+    - https://eur-lex.europa.eu/eli/reg/2011/582/oj
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
 
 - code: P2BAC
   category: powertrain
   title:
-    en: NOx Exceedence - Insufficient Reagent Quality
-    de: NOx-Ueberschreitung - unzureichende Reagenzqualitaet
+    en: NOx Exceedence - Deactivation of EGR
+    de: NOx-Überschreitung - AGR abgeschaltet
   description:
-    en: The diesel exhaust aftertreatment system detects elevated NOx levels combined with abnormal reagent (AdBlue/DEF) consumption, indicating that the reagent quality is insufficient or contaminated. Many regions trigger driver inducement (limited restarts).
-    de: Das Dieselabgasnachbehandlungssystem erkennt erhoehte NOx-Werte zusammen mit auffaelligem Reagenzverbrauch (AdBlue/DEF). Daraus wird auf unzureichende oder verunreinigte Reagenzqualitaet geschlossen. In vielen Regionen wird ein Fahrer-Inducement (Startbegrenzung) ausgeloest.
+    en: "P2BAC means NOx emissions exceed the permitted level and the module attributes it to this cause: the EGR system has been switched off or is being bypassed, so engine-out NOx rises. The NOx exceedance codes P2BA6 to P2BAE follow the list of causes that EU heavy-duty rules require to be identified for operator inducement (empty tank, interrupted dosing, poor reagent quality, low consumption, EGR faults, monitoring faults). Depending on the market, a persisting fault leads to warnings and then to power or speed limits."
+    de: "P2BAC bedeutet, dass die NOx-Emission den zulässigen Wert überschreitet und das Steuergerät dies folgender Ursache zuordnet: das AGR-System abgeschaltet ist oder umgangen wird, sodass die NOx-Rohemission steigt. Die NOx-Überschreitungscodes P2BA6 bis P2BAE folgen der Liste von Ursachen, die die EU-Vorschriften für schwere Nutzfahrzeuge für die Aufforderungsmaßnahmen an den Fahrer verlangen (leerer Tank, unterbrochene Dosierung, schlechte Reagenzqualität, zu geringer Verbrauch, AGR-Fehler, Fehler der Überwachung). Je nach Markt führt ein anhaltender Fehler zu Warnungen und dann zu Leistungs- oder Geschwindigkeitsbegrenzung."
   affected_components:
-    - scr_catalyst
-    - def_tank
-    - nox_sensor
-    - def_quality_sensor
+    - egr_valve
   common_causes:
-    - id: wrong_fluid_in_def_tank
+    - id: egr_disabled
       likelihood: high
       label:
-        en: Non-DEF liquid in tank (water, diesel)
-        de: Falsche Fluessigkeit im Tank (Wasser, Diesel)
-    - id: degraded_def
+        en: EGR valve unplugged, blocked or deactivated
+        de: AGR-Ventil abgesteckt, blockiert oder deaktiviert
+    - id: egr_actuator_fault
       likelihood: medium
       label:
-        en: Aged or diluted DEF/AdBlue
-        de: Gealtertes oder verduenntes AdBlue
+        en: EGR actuator failed
+        de: AGR-Steller defekt
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine or NOx warning light on
+      de: Motorkontroll- oder NOx-Warnleuchte an
+    - en: Driver warning, later power or speed limitation
+      de: Fahrerwarnung, später Leistungs- oder Geschwindigkeitsbegrenzung
   repair:
     difficulty: hard
     diy_possible: false
@@ -119832,42 +120006,40 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [P2BA7, P2BA8, P2BA9, P2BAA, P2BAB, P2BAD, P2BAE]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_exhaust_fluid
-    - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://github.com/fabiovila/OBDIICodes
+    - https://github.com/tekseport/obd2-codes
+    - https://eur-lex.europa.eu/eli/reg/2011/582/oj
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://partsavatar.ca/p2bac-obd-ii-trouble-code-nox-exceedence-deactivation-of-egr-dpf-nox-sensor-o2-sensor-ecm-egr-pcm
 
 - code: P2BAD
   category: powertrain
   title:
-    en: NOx Exceedence - Insufficient Reagent Consumption
-    de: NOx-Ueberschreitung - unzureichender Reagenzverbrauch
+    en: NOx Exceedence - Root Cause Unknown
+    de: NOx-Überschreitung - Ursache unbekannt
   description:
-    en: The aftertreatment system detects elevated NOx emissions while reagent (AdBlue/DEF) consumption is below the expected level. Causes include clogged dosing injector, incorrect dosing rate or tampering.
-    de: Das Abgasnachbehandlungssystem erkennt erhoehte NOx-Emissionen, waehrend der Reagenzverbrauch (AdBlue/DEF) unter dem erwarteten Wert liegt. Ursachen sind verstopfte Dosierventile, falsche Dosierraten oder Manipulation.
+    en: "P2BAD means NOx emissions exceed the permitted level and the module attributes it to this cause: NOx emissions are above the limit but the module cannot assign the exceedance to one of the specific causes covered by the neighbouring codes. The NOx exceedance codes P2BA6 to P2BAE follow the list of causes that EU heavy-duty rules require to be identified for operator inducement (empty tank, interrupted dosing, poor reagent quality, low consumption, EGR faults, monitoring faults). Depending on the market, a persisting fault leads to warnings and then to power or speed limits."
+    de: "P2BAD bedeutet, dass die NOx-Emission den zulässigen Wert überschreitet und das Steuergerät dies folgender Ursache zuordnet: die NOx-Emission über dem Grenzwert liegt, das Steuergerät die Überschreitung aber keiner der konkreten Ursachen der benachbarten Codes zuordnen kann. Die NOx-Überschreitungscodes P2BA6 bis P2BAE folgen der Liste von Ursachen, die die EU-Vorschriften für schwere Nutzfahrzeuge für die Aufforderungsmaßnahmen an den Fahrer verlangen (leerer Tank, unterbrochene Dosierung, schlechte Reagenzqualität, zu geringer Verbrauch, AGR-Fehler, Fehler der Überwachung). Je nach Markt führt ein anhaltender Fehler zu Warnungen und dann zu Leistungs- oder Geschwindigkeitsbegrenzung."
   affected_components:
-    - def_dosing_valve
-    - scr_catalyst
-    - nox_sensor
+    - scr_system
   common_causes:
-    - id: dosing_valve_clogged
-      likelihood: high
-      label:
-        en: Clogged DEF dosing valve
-        de: Verstopftes AdBlue-Dosierventil
-    - id: dosing_calibration
+    - id: scr_degraded
       likelihood: medium
       label:
-        en: Incorrect dosing calibration
-        de: Falsche Dosierkalibrierung
+        en: Degraded SCR catalyst
+        de: Gealterter SCR-Katalysator
+    - id: nox_sensor_drift
+      likelihood: medium
+      label:
+        en: NOx sensor drift
+        de: NOx-Sensordrift
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine or NOx warning light on
+      de: Motorkontroll- oder NOx-Warnleuchte an
+    - en: Driver warning, later power or speed limitation
+      de: Fahrerwarnung, später Leistungs- oder Geschwindigkeitsbegrenzung
   repair:
     difficulty: hard
     diy_possible: false
@@ -119880,43 +120052,38 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [P2BA7, P2BA8, P2BA9, P2BAA, P2BAB, P2BAC, P2BAE]
   sources:
-    - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://github.com/tekseport/obd2-codes
+    - https://eur-lex.europa.eu/eli/reg/2011/582/oj
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
 
 - code: P2BAE
   category: powertrain
   title:
-    en: NOx Exceedence - EGR System
-    de: NOx-Ueberschreitung - AGR-System
+    en: NOx Exceedence - NOx Control Monitoring System
+    de: NOx-Überschreitung - NOx-Überwachungssystem
   description:
-    en: NOx emissions are above the legal threshold and the ECU isolates the cause to the EGR system. EGR flow is too low or absent under operating conditions where NOx reduction is required.
-    de: Die NOx-Emissionen liegen ueber dem gesetzlichen Schwellenwert und die Motorsteuerung lokalisiert die Ursache im AGR-System. Der AGR-Massenstrom ist zu gering oder fehlt unter Betriebsbedingungen, in denen eine NOx-Reduktion erforderlich ist.
+    en: "P2BAE means NOx emissions exceed the permitted level and the module attributes it to this cause: the system that monitors NOx control (sensors and diagnostics used to detect the other exceedance causes) is itself not working. The NOx exceedance codes P2BA6 to P2BAE follow the list of causes that EU heavy-duty rules require to be identified for operator inducement (empty tank, interrupted dosing, poor reagent quality, low consumption, EGR faults, monitoring faults). Depending on the market, a persisting fault leads to warnings and then to power or speed limits."
+    de: "P2BAE bedeutet, dass die NOx-Emission den zulässigen Wert überschreitet und das Steuergerät dies folgender Ursache zuordnet: das System, das die NOx-Minderung überwacht (Sensoren und Diagnosen zur Erkennung der übrigen Ursachen), selbst nicht funktioniert. Die NOx-Überschreitungscodes P2BA6 bis P2BAE folgen der Liste von Ursachen, die die EU-Vorschriften für schwere Nutzfahrzeuge für die Aufforderungsmaßnahmen an den Fahrer verlangen (leerer Tank, unterbrochene Dosierung, schlechte Reagenzqualität, zu geringer Verbrauch, AGR-Fehler, Fehler der Überwachung). Je nach Markt führt ein anhaltender Fehler zu Warnungen und dann zu Leistungs- oder Geschwindigkeitsbegrenzung."
   affected_components:
-    - egr_valve
-    - egr_cooler
-    - egr_diff_pressure_sensor
+    - scr_system
   common_causes:
-    - id: egr_valve_stuck_closed
+    - id: nox_sensor_failed
       likelihood: high
       label:
-        en: EGR valve stuck closed
-        de: AGR-Ventil geschlossen festsitzend
-    - id: egr_passages_clogged
-      likelihood: high
+        en: NOx sensor failed or disconnected
+        de: NOx-Sensor defekt oder abgesteckt
+    - id: monitoring_tampered
+      likelihood: low
       label:
-        en: Carbon clogged EGR passages
-        de: Verkokte AGR-Kanaele
+        en: Tampering with the monitoring system
+        de: Manipulation am Überwachungssystem
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Pinging or knocking under load'
-      de: 'Klingeln oder Klopfen unter Last'
-    - en: 'Power loss and hesitation'
-      de: 'Leistungsverlust und Aussetzer'
-    - en: 'Possible rough idle'
-      de: 'Möglicherweise unrunder Leerlauf'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine or NOx warning light on
+      de: Motorkontroll- oder NOx-Warnleuchte an
+    - en: Driver warning, later power or speed limitation
+      de: Fahrerwarnung, später Leistungs- oder Geschwindigkeitsbegrenzung
   repair:
     difficulty: hard
     diy_possible: false
@@ -119929,8 +120096,11 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [P2BA7, P2BA8, P2BA9, P2BAA, P2BAB, P2BAC, P2BAD]
   sources:
-    - https://en.wikipedia.org/wiki/Exhaust_gas_recirculation
+    - https://github.com/tekseport/obd2-codes
+    - https://eur-lex.europa.eu/eli/reg/2011/582/oj
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
 
 - code: P2BAF
   category: powertrain
