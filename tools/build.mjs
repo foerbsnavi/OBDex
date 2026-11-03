@@ -39,21 +39,23 @@ const all = {
   pids: pidsByMode
 };
 
-// Coverage je Familie: enriched (mit Description) vs indexed (nur Minimal-Schema)
+// Coverage je Familie: enriched (mit Description) vs indexed (nur Minimal-Schema), reviewed (Feld reviewed gesetzt)
 const families = ["P0", "P2", "P3", "U0", "U3", "B0", "C0"];
 const coverage = {};
-for (const fam of families) coverage[fam] = { total: 0, enriched: 0, indexed: 0 };
+for (const fam of families) coverage[fam] = { total: 0, enriched: 0, indexed: 0, reviewed: 0 };
 for (const c of generic) {
   const fam = c.code.slice(0, 2);
   if (!coverage[fam]) continue;
   coverage[fam].total++;
   if (c.description?.en) coverage[fam].enriched++;
   else coverage[fam].indexed++;
+  if (c.reviewed) coverage[fam].reviewed++;
 }
 const totalCodes = generic.length;
 const totalPids = Object.values(pidsByMode).reduce((a, b) => a + b.length, 0);
 const totalEnriched = Object.values(coverage).reduce((a, b) => a + b.enriched, 0);
 const totalIndexed = totalCodes - totalEnriched;
+const totalReviewed = Object.values(coverage).reduce((a, b) => a + b.reviewed, 0);
 const totalSymptoms = generic.reduce((s, c) => s + (Array.isArray(c.symptoms) ? c.symptoms.length : 0), 0);
 const totalCauses = generic.reduce((s, c) => s + (Array.isArray(c.common_causes) ? c.common_causes.length : 0), 0);
 const totalSources = generic.reduce((s, c) => s + (Array.isArray(c.sources) ? c.sources.length : 0), 0);
@@ -72,6 +74,7 @@ const meta = {
       total: totalCodes,
       enriched: totalEnriched,
       indexed: totalIndexed,
+      reviewed: totalReviewed,
       symptoms: totalSymptoms,
       causes: totalCauses,
       sources: totalSources,
@@ -79,7 +82,7 @@ const meta = {
       by_family: Object.fromEntries(
         families
           .filter(f => coverage[f].total > 0)
-          .map(f => [f, { total: coverage[f].total, enriched: coverage[f].enriched, indexed: coverage[f].indexed }])
+          .map(f => [f, { total: coverage[f].total, enriched: coverage[f].enriched, indexed: coverage[f].indexed, reviewed: coverage[f].reviewed }])
       )
     },
     pids: Object.fromEntries(Object.entries(pidsByMode).map(([k, v]) => [k, v.length]))
@@ -94,6 +97,49 @@ function writePair(file, data) {
 writePair(join(dist, "all"), all);
 writePair(join(dist, "generic"), generic);
 writeFileSync(join(dist, "meta.json"), JSON.stringify(meta, null, 2));
+
+// Fortschritt der Einzelprüfung (Edition 2) als SVG für die README, hell und dunkel
+const PROGRESS_ORDER = ["P0", "P2", "U0", "C0", "B0", "P3", "U3"];
+const PROGRESS_LABELS = {
+  P0: "Powertrain", P2: "Powertrain ext.", U0: "Network", C0: "Chassis",
+  B0: "Body", P3: "Powertrain mixed", U3: "Network HV / FCEV"
+};
+const PROGRESS_THEMES = {
+  light: { text: "#1f2328", muted: "#59636e", track: "#e1e4e8", fill: "#2f7d32" },
+  dark: { text: "#e6edf3", muted: "#9198a1", track: "#30363d", fill: "#4fae55" }
+};
+function progressSvg(theme) {
+  const c = PROGRESS_THEMES[theme];
+  const fmt = n => n.toLocaleString("en-US");
+  const pctOf = (r, t) => (t === 0 ? 0 : Math.floor((r / t) * 1000) / 10).toFixed(1);
+  const rows = PROGRESS_ORDER.filter(f => coverage[f]?.total > 0);
+  const W = 720, barX = 190, barW = 360, rowH = 30, top = 76;
+  const H = top + rows.length * rowH + 30;
+  const bar = (y, h, r, t, color) => {
+    const w = Math.round((r / t) * barW);
+    return w > 0 ? `<rect x="${barX}" y="${y}" width="${w}" height="${h}" rx="4" fill="${color}"/>` : "";
+  };
+  const lines = rows.map((f, i) => {
+    const { total, reviewed } = coverage[f];
+    const y = top + i * rowH;
+    return `  <text x="0" y="${y + 11}" class="t"><tspan font-weight="600">${f}</tspan><tspan class="m" dx="8">${PROGRESS_LABELS[f]}</tspan></text>
+  <rect x="${barX}" y="${y}" width="${barW}" height="12" rx="4" fill="${c.track}"/>
+  ${bar(y, 12, reviewed, total, c.fill)}
+  <text x="${W}" y="${y + 11}" class="t n" text-anchor="end">${fmt(reviewed)} / ${fmt(total)}<tspan class="m" dx="8">${pctOf(reviewed, total)} %</tspan></text>`;
+  }).join("\n");
+  const date = meta.generated_at.slice(0, 10);
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Reviewed individually: ${fmt(totalReviewed)} of ${fmt(totalCodes)} codes">
+  <style>.t{font:14px system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:${c.text}}.m{fill:${c.muted}}.n{font-variant-numeric:tabular-nums}.h{font-size:20px;font-weight:600}.s{font-size:12px}</style>
+  <text x="0" y="22" class="t h">${fmt(totalReviewed)} of ${fmt(totalCodes)} codes reviewed individually<tspan class="m" dx="10" font-weight="400">${pctOf(totalReviewed, totalCodes)} %</tspan></text>
+  <rect x="0" y="38" width="${W}" height="8" rx="4" fill="${c.track}"/>
+  ${totalReviewed > 0 ? `<rect x="0" y="38" width="${Math.round((totalReviewed / totalCodes) * W)}" height="8" rx="4" fill="${c.fill}"/>` : ""}
+${lines}
+  <text x="0" y="${H - 6}" class="t m s">Families in order of work · updated ${date} with every release</text>
+</svg>
+`;
+}
+writeFileSync(join(dist, "progress.svg"), progressSvg("light"));
+writeFileSync(join(dist, "progress-dark.svg"), progressSvg("dark"));
 
 for (const [mode, pids] of Object.entries(pidsByMode)) {
   writePair(join(dist, "pids", mode), pids);
