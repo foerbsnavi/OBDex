@@ -107,57 +107,57 @@
     en: Diesel Particulate Filter Efficiency Below Threshold (Bank 1)
     de: Dieselpartikelfilter Wirkungsgrad unter Schwellwert (Bank 1)
   description:
-    en: 'Diesel Particulate Filter Efficiency Below Threshold (Bank 1): the control module has detected this fault condition.'
-    de: 'Dieselpartikelfilter Wirkungsgrad unter Schwellwert (Bank 1): das Steuergerät hat diesen Fehlerzustand erkannt.'
+    en: "P2002 means the particulate filter on bank 1 lets too much soot through, typically because the substrate is cracked, partly melted, emptied or bypassed. CARB requires diesel OBD to flag a filter whose filtering performance lets PM emissions exceed the limit. Older systems judge this from the pressure drop: GM's 2009 Duramax compares the flow resistance shortly after a regeneration (within 600 s or 18.6 miles, soot load at most 40 g) with a table and aims at a filter leaking eight times the standard. Newer systems use a resistive PM sensor behind the filter: on the 2014 Cruze 2.0 diesel, GM's 2018 diesel group and Ford's 2023 diesels the code sets when the sensor current exceeds 12 µA before the modelled amount of soot needed to trigger an intact sensor has passed. Ford names cracked substrates on Transit 3.2, F-150 3.0 and Super Duty 6.7 and replaces the filter; GM states that a filter with P2002 cannot be cleaned by service regeneration. Regenerating does not cure it."
+    de: "P2002 bedeutet, dass der Partikelfilter auf Bank 1 zu viel Ruß durchlässt, meist weil der Filterkörper gerissen, teilweise geschmolzen, ausgeräumt oder umgangen ist. CARB verlangt, dass Diesel-OBD einen Filter meldet, dessen Filterleistung die PM-Emissionen über den Grenzwert steigen lässt. Ältere Systeme schließen das aus dem Druckverlust: Der GM-Duramax 2009 vergleicht den Strömungswiderstand kurz nach einer Regeneration (innerhalb 600 s bzw. 18,6 Meilen, Beladung höchstens 40 g) mit einer Tabelle und zielt auf einen Filter, der das Achtfache des Grenzwerts durchlässt. Neuere Systeme nutzen einen resistiven Partikelsensor hinter dem Filter: Beim Cruze 2.0 Diesel 2014, in GMs Dieselgruppe 2018 und bei Fords Dieseln 2023 setzt der Code, wenn der Sensorstrom 12 µA übersteigt, bevor die modellierte Rußmenge durch ist, die einen intakten Sensor auslösen würde. Ford nennt gerissene Filterkörper bei Transit 3.2, F-150 3.0 und Super Duty 6.7 und tauscht den Filter; GM schreibt, dass ein Filter mit P2002 nicht per Service-Regeneration zu reinigen ist. Regenerieren behebt den Fehler nicht."
   affected_components:
     - diesel_particulate_filter
+    - particulate_matter_sensor
     - dpf_differential_pressure_sensor
-    - dpf_temperature_sensor
   common_causes:
-    - id: dpf_loaded_failed_regen
+    - id: dpf_substrate_cracked
       likelihood: high
       label:
-        en: DPF heavily loaded — repeated short trips prevent regeneration
-        de: DPF stark beladen — viele Kurzstrecken verhindern die Regeneration
-    - id: dpf_substrate_damaged
+        en: Filter substrate cracked or melted, often after an uncontrolled regeneration
+        de: Filterkörper gerissen oder angeschmolzen, oft nach unkontrollierter Regeneration
+    - id: dpf_removed_or_emptied
       likelihood: medium
       label:
-        en: Filter substrate cracked or melted from runaway regeneration
-        de: Filtermaterial gerissen oder geschmolzen durch unkontrollierte Regeneration
-    - id: dpf_pressure_sensor_drift
+        en: Filter removed, emptied or bypassed
+        de: Filter ausgebaut, ausgeräumt oder umgangen
+    - id: dp_sensor_or_hoses
       likelihood: medium
       label:
-        en: Differential pressure sensor drift
-        de: Differenzdrucksensor driftet
-    - id: dpf_housing_leak
-      likelihood: low
-      label:
-        en: Leak around DPF housing
-        de: Undichtigkeit am DPF-Gehäuse
+        en: Faulty differential pressure sensor or leaking sensor hoses on pressure-based systems
+        de: Defekter Differenzdrucksensor oder undichte Messschläuche bei druckbasierten Systemen
   symptoms:
-    - en: 'Check engine light or DPF warning light on'
-      de: 'Motorkontrollleuchte oder DPF-Warnleuchte an'
-    - en: 'Power loss / limp mode'
-      de: 'Leistungsverlust / Notlauf'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
-    - en: 'Failed forced regeneration attempts'
-      de: 'Fehlgeschlagene Zwangsregenerationsversuche'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: Usually no change in driveability
+      de: Fahrverhalten meist unverändert
+    - en: Visible soot at the tailpipe in severe cases
+      de: In schweren Fällen sichtbarer Ruß am Endrohr
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur: [400, 4000]
-    estimated_hours: [2.0, 8.0]
+    estimated_cost_eur: [100, 3500]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
-    limp_mode_possible: true
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P2003]
+  related_codes: [P2003, P2463, P2453, P24AF]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_particulate_filter
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2009/09OBDG01%20DURAMAX%20Engine%20Diagnostics.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2014/14OBDG04%20Engine%20Diagnostics.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG04%20Engine%20Diagnostics.pdf
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10179149-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2015/MC-10246536-9999.pdf
+  reviewed: '2026-11-03'
 
 - code: P2003
   category: powertrain
@@ -213,43 +213,53 @@
     en: Intake Manifold Runner Control Stuck Open (Bank 1)
     de: Saugrohrumschaltung hängt offen (Bank 1)
   description:
-    en: The intake manifold runner control (IMRC) flap on bank 1 is stuck in the open position. The IMRC swirls or tumbles intake charge at low rpm by closing one runner per cylinder; when stuck open, low-end torque drops and the engine may misfire on cold starts.
-    de: Die Saugrohrumschaltklappe (IMRC) an Bank 1 hängt offen. Die IMRC erzeugt bei niedriger Drehzahl Drall oder Tumble, indem sie pro Zylinder einen Kanal schliesst; offen festhängend bricht das Drehmoment unten ein und der Motor kann beim Kaltstart Aussetzer zeigen.
+    en: Intake manifold runner control (IMRC) uses flaps in the intake manifold; petrol engines switch runner length or tumble, diesels close swirl flaps at low load. P2004 means the flaps on bank 1 stay open when the ECM has commanded them closed, judged from the position feedback. Ford checks commanded against actual plate position after coolant exceeds 40 °F (about 4 °C) and needs four events to set the stuck code; its 2012 summary covers both vacuum and electric actuators. Volkswagen's 2024 bulletin for Golf GTI, Golf R and Arteon lists P2004 as stuck open alongside P2006, P2014 and P2015, caused by contamination in the runner control valve N316. Volkswagen's 2017 bulletin for the 2.0T (BPY, CCTA, CBFA), by contrast, labels P2004 as flap stuck closed, so the manufacturer text in the scan tool may differ from the generic title. Typical causes are a sticking or broken flap shaft, a vacuum leak or a failed control valve.
+    de: Die Saugrohrumschaltung (IMRC) arbeitet mit Klappen im Saugrohr; Benziner schalten Rohrlänge oder Tumble, Diesel schließen bei niedriger Last die Drallklappen. P2004 heißt, dass die Klappen auf Bank 1 offen bleiben, obwohl das Steuergerät sie geschlossen hat, erkannt an der Positionsrückmeldung. Ford vergleicht Soll- und Ist-Stellung der Klappen ab einer Kühlmitteltemperatur von 40 °F (etwa 4 °C) und braucht vier Ereignisse bis zum Code; die Übersicht von 2012 deckt Unterdruck- und elektrische Steller ab. Volkswagens Bulletin 2024 für Golf GTI, Golf R und Arteon führt P2004 als „hängt offen“ neben P2006, P2014 und P2015, verursacht durch Verschmutzung im Umschaltventil N316. Volkswagens Bulletin 2017 zum 2.0T (BPY, CCTA, CBFA) dagegen bezeichnet P2004 als „Klappe hängt geschlossen“ – der Herstellertext im Tester kann also vom generischen Titel abweichen. Typisch sind eine schwergängige oder gebrochene Klappenwelle, ein Unterdruckleck oder ein defektes Umschaltventil.
   affected_components:
     - intake_manifold_runner
     - imrc_actuator
+    - imrc_control_valve
     - intake_manifold
   common_causes:
-    - id: imrc_carbon_buildup
+    - id: flap_shaft_sticking_broken
       likelihood: high
       label:
-        en: Carbon buildup blocks flap travel
-        de: Verkokung blockiert Klappenweg
-    - id: imrc_actuator_failed
+        en: Flap shaft sticking, worn or separated inside the manifold
+        de: Klappenwelle schwergängig, verschlissen oder im Saugrohr abgerissen
+    - id: control_valve_fault
       likelihood: medium
       label:
-        en: IMRC actuator or vacuum motor failed
-        de: IMRC-Steller oder Unterdruckdose defekt
-    - id: imrc_linkage_broken
+        en: Runner control valve contaminated or corroded
+        de: Umschaltventil verschmutzt oder korrodiert
+    - id: vacuum_leak
       likelihood: medium
       label:
-        en: Linkage rod broken or disconnected
-        de: Gestänge gebrochen oder ausgehakt
+        en: Vacuum hose or actuator diaphragm leaking
+        de: Unterdruckschlauch oder Stellermembran undicht
+  symptoms:
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: Weaker low-speed torque
+      de: Schwächeres Drehmoment bei niedriger Drehzahl
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [80, 600]
-    estimated_hours: [1.0, 4.0]
+    estimated_cost_eur: [30, 700]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P2005]
+  related_codes: [P2005, P2006, P2008, P2014, P2015]
   sources:
-    - https://en.wikipedia.org/wiki/Inlet_manifold
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBD-Operations-Summary-Gasoline-2020-2023.pdf
+    - https://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11026171-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2017/MC-10121024-9999.pdf
+  reviewed: '2026-11-03'
 
 - code: P2005
   category: powertrain
@@ -300,42 +310,54 @@
     en: Intake Manifold Runner Control Stuck Closed (Bank 1)
     de: Saugrohrumschaltung hängt geschlossen (Bank 1)
   description:
-    en: The IMRC flap on bank 1 is stuck in the closed position and cannot open at higher rpm. Top-end power suffers because the runner is restricted, and the engine may breathe poorly above mid-range.
-    de: Die IMRC-Klappe an Bank 1 hängt geschlossen und kann bei höherer Drehzahl nicht öffnen. Die Spitzenleistung leidet, weil der Kanal eingeschnürt bleibt, und der Motor atmet oberhalb des mittleren Drehzahlbereichs schlecht.
+    en: P2006 means the intake manifold runner or swirl flaps on bank 1 stay closed when the ECM has commanded them open. Closed flaps choke the engine at higher load, so this is the case that costs power. On GM's 2018 diesels, with swirl flaps driven by a smart actuator that reports its position, the code sets at once (Type A, one trip) when the position after the P20F8 check exceeds the limit, with coolant at 60 °C or more and the actuator powered for at least 5 s. Ford checks commanded against actual plate position after coolant exceeds 40 °F and needs four events. Volkswagen's 2024 bulletin for Golf GTI, Golf R and Arteon traced P2006 to contamination inside the runner control valve N316 that made it stick closed, fixed in production by a better vacuum hose and valve assembly.
+    de: P2006 heißt, dass die Saugrohr- bzw. Drallklappen auf Bank 1 geschlossen bleiben, obwohl das Steuergerät sie geöffnet hat. Geschlossene Klappen drosseln den Motor bei höherer Last, dieser Fall kostet also Leistung. Bei GMs Dieseln 2018 mit Drallklappen und einem Steller, der seine Position zurückmeldet, setzt der Code sofort (Typ A, eine Fahrt), wenn die Stellung nach der P20F8-Prüfung die Grenze überschreitet, bei Kühlmittel ab 60 °C und mindestens 5 s bestromtem Steller. Ford vergleicht Soll- und Ist-Stellung ab 40 °F Kühlmitteltemperatur und braucht vier Ereignisse. Volkswagens Bulletin 2024 für Golf GTI, Golf R und Arteon führt P2006 auf Verschmutzung im Umschaltventil N316 zurück, durch die es geschlossen hängen blieb; in der Fertigung half eine bessere Montage von Unterdruckschlauch und Ventil.
   affected_components:
     - intake_manifold_runner
-    - imrc_actuator
+    - swirl_flap_actuator
+    - imrc_control_valve
+    - intake_manifold
   common_causes:
-    - id: imrc_carbon_seized
-      likelihood: high
-      label:
-        en: Carbon deposits seize flap closed
-        de: Verkokung verklemmt Klappe geschlossen
-    - id: imrc_actuator_stuck
+    - id: flaps_seized
       likelihood: medium
       label:
-        en: Actuator stuck or vacuum line collapsed
-        de: Steller hängt oder Unterdruckleitung kollabiert
-    - id: stuck_carbon_buildup
-      likelihood: low
+        en: Flaps or shafts seized by deposits or wear
+        de: Klappen oder Wellen durch Ablagerungen oder Verschleiß festgesetzt
+    - id: control_valve_stuck
+      likelihood: medium
       label:
-        en: 'Carbon or debris buildup preventing free movement'
-        de: 'Verkokung oder Ablagerungen verhindern freies Bewegen'
+        en: Runner control valve stuck from contamination
+        de: Umschaltventil durch Verschmutzung hängend
+    - id: actuator_failed
+      likelihood: medium
+      label:
+        en: Electric actuator or its linkage failed
+        de: Elektrischer Steller oder Gestänge defekt
+  symptoms:
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: Loss of power at higher rpm
+      de: Leistungsmangel bei höheren Drehzahlen
+    - en: Limp mode on some diesels
+      de: Bei manchen Dieseln Notlauf
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [80, 600]
-    estimated_hours: [1.0, 4.0]
+    estimated_cost_eur: [50, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2004, P2007]
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [P2004, P2007, P2008, P2015, P20F8]
   sources:
-    - https://en.wikipedia.org/wiki/Inlet_manifold
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG04%20Engine%20Diagnostics.pdf
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBD-Operations-Summary-Gasoline-2020-2023.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11026171-0001.pdf
+  reviewed: '2026-11-03'
 
 - code: P2007
   category: powertrain
@@ -932,45 +954,64 @@
 - code: P2015
   category: powertrain
   title:
-    en: Intake Manifold Runner Position Sensor/Switch Range/Performance (Bank 1)
-    de: Saugrohrumschaltung Positionssensor Bereich/Plausibilität (Bank 1)
+    en: Intake Manifold Runner Position Sensor/Switch Circuit Range/Performance (Bank 1)
+    de: Saugrohrumschaltung Positionssensor/-schalter Stromkreis Bereich/Funktion (Bank 1)
   description:
-    en: The IMRC position sensor on bank 1 reports a value, but it does not match the commanded flap state — for example, the flap is commanded closed yet the sensor still reads open. Common on engines where the connector pin clip wears out and the sensor reads erratic positions.
-    de: Der IMRC-Positionssensor an Bank 1 liefert ein Signal, das aber nicht zur kommandierten Klappenstellung passt — etwa bei kommandierter Schliessstellung meldet er weiter offen. Häufig bei Motoren, deren Steckerklemme verschleisst und der Sensor wechselnde Stellungen meldet.
+    en: "P2015 means the position feedback of the intake manifold runner or swirl flaps on bank 1 is electrically present but implausible. How it is judged depends on the design. Diesels with a smart swirl actuator send position as a pulse-width signal: GM's 2018 diesels fail a pulse period below 0 or above 64 ms in 52 of 62 samples (Type B), and on the Opel/GM 2.0 CDTi in the Saab 9-5 (2010) the ECM flags a wrong frequency from the actuator, with sub-codes for period and high and low time (Type A). Ford's petrol engines call it position sensor over travel. Audi and Volkswagen use it widely on 2.0 TFSI: a corroded flap valve N316, a flap that separated inside the manifold, and on the 4.2 FSI a deformed seal behind the flap potentiometer that made the linkage stick. After a manifold or valve replacement the flap adaptation has to be run, or the code returns."
+    de: "P2015 bedeutet, dass die Positionsrückmeldung der Saugrohr- bzw. Drallklappen auf Bank 1 elektrisch vorhanden, aber unplausibel ist. Wie das bewertet wird, hängt von der Bauart ab. Diesel mit intelligentem Drallsteller senden die Stellung als Pulsweitensignal: GMs Diesel 2018 melden eine Periodendauer unter 0 oder über 64 ms bei 52 von 62 Proben (Typ B), und beim Opel/GM 2.0 CDTi im Saab 9-5 (2010) erkennt das Steuergerät eine falsche Frequenz des Stellers, mit Untercodes für Periode, High- und Low-Zeit (Typ A). Bei Fords Benzinern heißt es Positionssensor-Überweg. Audi und Volkswagen nutzen den Code häufig beim 2.0 TFSI: ein korrodiertes Klappenventil N316, eine im Saugrohr abgerissene Klappe und beim 4.2 FSI eine verformte Dichtung hinter dem Klappenpotentiometer, durch die das Gestänge klemmte. Nach dem Tausch von Saugrohr oder Ventil muss die Klappenadaption laufen, sonst kehrt der Code zurück."
   affected_components:
     - imrc_position_sensor
-    - imrc_actuator
+    - swirl_flap_actuator
+    - imrc_control_valve
+    - intake_manifold
   common_causes:
-    - id: imrc_pos_connector_worn
+    - id: flap_mechanism_fault
       likelihood: high
       label:
-        en: Connector clip worn — intermittent contact
-        de: Steckerklemme verschlissen — Wackelkontakt
-    - id: imrc_flap_sticking
+        en: Flap linkage sticking or flap separated inside the manifold
+        de: Klappengestänge klemmt oder Klappe im Saugrohr abgerissen
+    - id: control_valve_corrosion
       likelihood: medium
       label:
-        en: Flap sticking due to carbon
-        de: Klappe klemmt durch Verkokung
-    - id: sensor_aged
+        en: Corroded or faulty flap control valve
+        de: Korrodiertes oder defektes Klappenventil
+    - id: actuator_feedback_fault
+      likelihood: medium
+      label:
+        en: Actuator electronics or position sensor faulty
+        de: Stellerelektronik oder Positionssensor defekt
+    - id: adaptation_missing
       likelihood: low
       label:
-        en: 'Sensor element aged beyond calibration window'
-        de: 'Sensorelement gealtert über Kalibrierfenster hinaus'
+        en: Flap adaptation not performed after repair
+        de: Klappenadaption nach Reparatur nicht durchgeführt
+  symptoms:
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: Rough idle or weaker low-speed torque
+      de: Unruhiger Leerlauf oder schwächeres Drehmoment unten herum
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [60, 500]
-    estimated_hours: [0.5, 3.0]
+    estimated_cost_eur: [50, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2014, P2019]
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2014, P2016, P2017, P2004, P2020]
   sources:
-    - https://en.wikipedia.org/wiki/Inlet_manifold
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG04%20Engine%20Diagnostics.pdf
+    - https://saabwisonline.com/9-5-9650/2010/2-engine/engine-management-and-fuel-system-4-cyl-diesel/fault-diagnosis-diagnostic-trouble-codes/dtc-p2015
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBD-Operations-Summary-Gasoline-2020-2023.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2016/SB-10093588-0699.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2017/MC-10121024-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2013/MC-10121996-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10176771-0001.pdf
+  reviewed: '2026-11-03'
 
 - code: P2016
   category: powertrain
@@ -2188,124 +2229,157 @@
     en: Exhaust Gas Temperature Sensor Circuit (Bank 1 Sensor 2)
     de: Abgastemperatursensor Stromkreis (Bank 1 Sensor 2)
   description:
-    en: The exhaust gas temperature (EGT) sensor at position 2 on bank 1 — typically downstream of the catalyst or before the DPF — reports an implausible signal. EGT sensors protect the turbocharger and DPF from over-temperature and time the regeneration cycle.
-    de: Der Abgastemperatursensor (EGT) an Position 2 auf Bank 1 — meist nach dem Katalysator oder vor dem DPF — liefert ein unplausibles Signal. EGT-Sensoren schützen Turbolader und DPF vor Übertemperatur und steuern den Regenerationszyklus.
+    en: "Exhaust gas temperature sensor 2 on bank 1 usually sits between the oxidation catalyst and the particulate filter, where the ECM uses it to control regeneration temperature. Under the generic circuit title, manufacturers set P2031 for different faults. On Ford's 2023 diesels it is a plausibility test: after at least 6 hours off, all sensors must agree within 50 °C at key-on, and while driving each must stay within ±80 °C of the modelled temperature for 200 to 400 s, with the fault confirmed after 20 s. Mack and Volvo trucks use P2031 with a failure mode identifier for open or shorted wiring, connector faults and failed sensors, and note that regeneration is then not possible. Stellantis found water and corrosion in the sensor and harness connectors and replaces both. P2032 and P2033 are the dedicated low and high signal codes."
+    de: "Der Abgastemperatursensor 2 auf Bank 1 sitzt meist zwischen Oxidationskatalysator und Partikelfilter; das Steuergerät regelt damit die Regenerationstemperatur. Unter dem allgemeinen Stromkreis-Titel setzen die Hersteller P2031 für verschiedene Fehler. Bei Fords Dieseln 2023 ist es eine Plausibilitätsprüfung: Nach mindestens 6 Stunden Stillstand müssen alle Sensoren beim Einschalten auf 50 °C übereinstimmen, und während der Fahrt muss jeder für 200 bis 400 s innerhalb ±80 °C der modellierten Temperatur bleiben; bestätigt wird nach 20 s. Mack- und Volvo-Lkw nutzen P2031 mit einer Fehlerart-Kennung für Unterbrechungen oder Schlüsse, Steckerfehler und defekte Sensoren und vermerken, dass dann keine Regeneration möglich ist. Stellantis fand Wasser und Korrosion in Sensor- und Kabelsteckern und tauscht beides. P2032 und P2033 sind die eigenen Codes für zu niedriges und zu hohes Signal."
   affected_components:
-    - egt_sensor
+    - exhaust_gas_temperature_sensor
     - egt_wiring
+    - ecm
   common_causes:
-    - id: egt_sensor_failed
+    - id: sensor_failed
       likelihood: high
       label:
-        en: EGT sensor failed
-        de: EGT-Sensor defekt
-    - id: egt_wiring_damaged
+        en: Sensor failed or reading off from the model
+        de: Sensor defekt oder weicht vom Modell ab
+    - id: connector_water_corrosion
       likelihood: medium
       label:
-        en: Wiring damaged by heat
-        de: Verkabelung durch Hitze beschädigt
+        en: Water or corrosion in the sensor or harness connector
+        de: Wasser oder Korrosion im Sensor- oder Kabelstecker
+    - id: wiring_damage
+      likelihood: medium
+      label:
+        en: Wiring open or shorted near the hot exhaust
+        de: Leitung am heißen Abgasstrang unterbrochen oder kurzgeschlossen
+  symptoms:
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: DPF regeneration inhibited
+      de: DPF-Regeneration gesperrt
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [80, 400]
-    estimated_hours: [0.5, 2.0]
+    estimated_cost_eur: [60, 300]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P2034]
+  related_codes: [P2032, P2033, P2084, P0544, P2034]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_particulate_filter
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10175319-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2024/MC-11001018-0002.pdf
+  reviewed: '2026-11-03'
 
 - code: P2032
   category: powertrain
   title:
     en: Exhaust Gas Temperature Sensor Circuit Low (Bank 1 Sensor 2)
-    de: Abgastemperatursensor Signal zu niedrig (Bank 1 Sensor 2)
+    de: Abgastemperatursensor Stromkreis zu niedrig (Bank 1 Sensor 2)
   description:
-    en: The EGT sensor at bank 1 position 2 reads below the lower limit. Common when the signal is shorted to ground or the sensor element is open.
-    de: Der EGT-Sensor an Bank 1 Position 2 liegt unter dem unteren Grenzwert. Häufig durch Kurzschluss nach Masse oder ein offenes Sensorelement.
+    en: P2032 means the signal of exhaust gas temperature sensor 2 on bank 1 is below its valid range. What that means electrically depends on the sensor type. On the Opel/GM 2.0 CDTi in the Saab 9-5 (2010) sensor 2 sits in the particulate filter and its voltage falls as it gets hotter, so a reading below 0.4 V for more than 1 s points to a short to ground; the code is Type A there. GM's 2009 Duramax uses the opposite characteristic and fails below 0.307 V, equivalent to -40 °C, for 300 s, which is typical of an open or grounded signal. GM's 2018 diesels compare against a resistance-equivalent limit below 142 Ω as a Type B code, Ford's 2023 diesels against 0.10 V within 2 s. So check the wiring diagram before deciding whether low means a short or an open. Without the sensor the ECM cannot control filter temperature and usually blocks regeneration.
+    de: P2032 heißt, dass das Signal des Abgastemperatursensors 2 auf Bank 1 unter seinem gültigen Bereich liegt. Was das elektrisch bedeutet, hängt vom Sensortyp ab. Beim Opel/GM 2.0 CDTi im Saab 9-5 (2010) sitzt Sensor 2 im Partikelfilter, seine Spannung sinkt mit steigender Temperatur; unter 0,4 V für mehr als 1 s deutet daher auf einen Masseschluss, dort als Typ-A-Code. Der GM-Duramax 2009 hat die umgekehrte Kennlinie und meldet unter 0,307 V, entsprechend -40 °C, für 300 s – typisch für eine unterbrochene oder auf Masse liegende Signalleitung. GMs Diesel 2018 vergleichen mit einem Widerstandsäquivalent unter 142 Ω als Typ-B-Code, Fords Diesel 2023 mit 0,10 V binnen 2 s. Vor der Entscheidung, ob niedrig Schluss oder Unterbrechung bedeutet, also den Schaltplan prüfen. Ohne den Sensor kann das Steuergerät die Filtertemperatur nicht regeln und sperrt meist die Regeneration.
   affected_components:
-    - egt_sensor
+    - exhaust_gas_temperature_sensor
     - egt_wiring
+    - ecm
   common_causes:
-    - id: signal_short_to_ground
+    - id: signal_short_ground
       likelihood: high
       label:
-        en: Signal wire shorted to ground
-        de: Signalleitung gegen Masse kurzgeschlossen
-    - id: egt_sensor_open
+        en: Signal wire chafed to ground on the exhaust
+        de: Signalleitung am Abgasstrang nach Masse durchgescheuert
+    - id: sensor_internal
       likelihood: medium
       label:
-        en: Sensor element open
-        de: Sensorelement unterbrochen
-    - id: connector_corrosion
-      likelihood: low
+        en: Internal sensor failure
+        de: Interner Sensordefekt
+    - id: connector_fault
+      likelihood: medium
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Damaged or corroded connector
+        de: Beschädigter oder korrodierter Stecker
+  symptoms:
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: DPF regeneration inhibited, soot load rises
+      de: DPF-Regeneration gesperrt, Rußbeladung steigt
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [80, 400]
-    estimated_hours: [0.5, 2.0]
+    estimated_cost_eur: [60, 300]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2031, P2035]
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2031, P2033, P2035, P0545]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_particulate_filter
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://saabwisonline.com/9-5-9650/2010/2-engine/engine-management-and-fuel-system-4-cyl-diesel/fault-diagnosis-diagnostic-trouble-codes/dtc-p2032-or-p2033-lby
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2009/09OBDG01%20DURAMAX%20Engine%20Diagnostics.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG04%20Engine%20Diagnostics.pdf
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
+  reviewed: '2026-11-03'
 
 - code: P2033
   category: powertrain
   title:
     en: Exhaust Gas Temperature Sensor Circuit High (Bank 1 Sensor 2)
-    de: Abgastemperatursensor Signal zu hoch (Bank 1 Sensor 2)
+    de: Abgastemperatursensor Stromkreis zu hoch (Bank 1 Sensor 2)
   description:
-    en: The EGT sensor at bank 1 position 2 reads above the upper limit. Usually a short to supply, an open ground or a sensor that drifted high — risk of false DPF over-temperature limp.
-    de: Der EGT-Sensor an Bank 1 Position 2 liegt über dem oberen Grenzwert. Meist ein Kurzschluss nach Plus, offene Masseleitung oder driftender Sensor — Risiko eines unberechtigten DPF-Übertemperatur-Notlaufs.
+    en: P2033 means the signal of exhaust gas temperature sensor 2 on bank 1 is above its valid range. On the Opel/GM 2.0 CDTi in the Saab 9-5 (2010) the sensor in the particulate filter reads high voltage when cold, so more than 1.6 V for over 1 s means an open circuit, an unplugged connector or a short to voltage; it is Type A. GM's 2009 Duramax sets it above 3.37 V, equivalent to 1000 °C, for 300 s, which on that sensor is a short to voltage rather than an open. GM's 2018 diesels use a resistance-equivalent limit above 922 Ω (Type B), Ford's 2023 diesels 2.66 V within 2 s. Sensors near the filter see repeated heat cycles, and their leads and connectors are exposed to road water. The ECM loses the filter temperature and normally stops regeneration, so soot builds up until the fault is fixed.
+    de: P2033 bedeutet, dass das Signal des Abgastemperatursensors 2 auf Bank 1 über seinem gültigen Bereich liegt. Beim Opel/GM 2.0 CDTi im Saab 9-5 (2010) liefert der Sensor im Partikelfilter kalt eine hohe Spannung; mehr als 1,6 V für über 1 s heißt daher Unterbrechung, abgezogener Stecker oder Schluss nach Plus, als Typ-A-Code. Der GM-Duramax 2009 meldet über 3,37 V, entsprechend 1000 °C, für 300 s – bei diesem Sensor ein Schluss nach Spannung, keine Unterbrechung. GMs Diesel 2018 nutzen ein Widerstandsäquivalent über 922 Ω (Typ B), Fords Diesel 2023 2,66 V binnen 2 s. Sensoren am Filter durchlaufen viele Hitzezyklen, ihre Leitungen und Stecker bekommen Spritzwasser ab. Das Steuergerät verliert die Filtertemperatur und stoppt meist die Regeneration, sodass sich bis zur Reparatur Ruß ansammelt.
   affected_components:
-    - egt_sensor
+    - exhaust_gas_temperature_sensor
     - egt_wiring
+    - ecm
   common_causes:
-    - id: signal_short_to_supply
+    - id: sensor_open
       likelihood: high
       label:
-        en: Signal wire shorted to supply
-        de: Signalleitung gegen Plus kurzgeschlossen
-    - id: egt_sensor_drift_high
+        en: Sensor element open after heat cycling
+        de: Sensorelement nach Hitzezyklen unterbrochen
+    - id: connector_unplugged_corroded
       likelihood: medium
       label:
-        en: Sensor drift to high reading
-        de: Sensor driftet ins Hohe
-    - id: connector_corrosion
+        en: Connector unplugged, loose or corroded
+        de: Stecker abgezogen, locker oder korrodiert
+    - id: signal_short_voltage
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Signal wire shorted to voltage
+        de: Signalleitung mit Schluss nach Spannung
+  symptoms:
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: DPF regeneration inhibited, soot load rises
+      de: DPF-Regeneration gesperrt, Rußbeladung steigt
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [80, 400]
-    estimated_hours: [0.5, 2.0]
+    estimated_cost_eur: [60, 300]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-    limp_mode_possible: true
-  related_codes: [P2031, P2036]
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2031, P2032, P2036, P0546]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_particulate_filter
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://saabwisonline.com/9-5-9650/2010/2-engine/engine-management-and-fuel-system-4-cyl-diesel/fault-diagnosis-diagnostic-trouble-codes/dtc-p2032-or-p2033-lby
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2009/09OBDG01%20DURAMAX%20Engine%20Diagnostics.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG04%20Engine%20Diagnostics.pdf
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
+  reviewed: '2026-11-03'
 
 - code: P2034
   category: powertrain
@@ -6874,195 +6948,213 @@
   category: powertrain
   title:
     en: Post Catalyst Fuel Trim System Too Lean (Bank 1)
-    de: Nachkat-Kraftstofftrim System zu mager (Bank 1)
+    de: Nachkat-Kraftstofftrimmung System zu mager (Bank 1)
   description:
-    en: Long-term fuel trim derived from the downstream oxygen sensor on bank 1 has reached the lean limit. The downstream-trim correction is a fine adjustment that runs after the main trim from the upstream sensor; persistent excursion suggests a degraded catalyst, an exhaust leak after the catalyst, or a drifting downstream sensor.
-    de: Die aus der nachgeschalteten Lambdasonde auf Bank 1 abgeleitete Langzeit-Kraftstofftrimmung hat ihren mageren Anschlag erreicht. Diese Nach-Kat-Trimmung ist eine Feinkorrektur, die zusätzlich zur Haupttrimmung der Vorsonde läuft; ein dauerhaft mageres Auslenken weist auf einen degradierten Katalysator, ein Abgasleck nach dem Katalysator oder eine driftende Nachsonde hin.
+    en: "Petrol engines run a slow outer control loop on the oxygen sensor behind the catalyst that shifts the mixture target of the front sensor. P2096 means this post-catalyst trim on bank 1 has hit its limit in the lean direction. The name describes the correction, not the engine: the rear sensor keeps reporting rich exhaust, so the loop keeps taking fuel away. GM's Bosch-based 2005 V6 calls it a rich shift with a correction below -0.03 lambda; GM's 2018 four-cylinders list it as the low limit, with the integral offset at -99 % and the total offset at -50 % or less (Type B); Ford's 2020 to 2023 engines set it 5 s after reaching a rear bias trim of -0.083. Causes are therefore a skewed rear sensor or an upstream sensor reading lean. Audi found a contaminated reference air duct in the rear sensor on 4.0 TFSI engines and warns against replacing the front sensor; GM saw P2096 on new Encore and Trax 1.4 catalysts before break-in and fixed a 2017 Malibu 1.5 by software."
+    de: "Benzinmotoren regeln mit der Lambdasonde hinter dem Katalysator in einem langsamen äußeren Regelkreis, der den Gemisch-Sollwert der vorderen Sonde verschiebt. P2096 heißt, dass diese Nachkat-Trimmung auf Bank 1 an ihre Grenze in Richtung mager gelaufen ist. Der Name beschreibt die Korrektur, nicht den Motor: Die hintere Sonde meldet dauernd fettes Abgas, der Regelkreis nimmt also immer weiter Kraftstoff weg. GMs Bosch-basierter V6 von 2005 nennt das eine Fettverschiebung mit einer Korrektur unter -0,03 Lambda; GMs Vierzylinder 2018 führen es als untere Grenze, mit Integral-Offset bei -99 % und Gesamt-Offset ab -50 % (Typ B); Fords Motoren 2020 bis 2023 setzen den Code 5 s nach Erreichen einer hinteren Trimmung von -0,083. Ursachen sind also eine verschobene hintere Sonde oder eine vordere, die zu mager misst. Audi fand beim 4.0 TFSI einen verschmutzten Referenzluftkanal in der hinteren Sonde und warnt davor, die vordere zu tauschen; GM sah P2096 bei neuen Katalysatoren von Encore und Trax 1.4 vor dem Einfahren und behob ihn beim Malibu 1.5 2017 per Software."
   affected_components:
     - oxygen_sensor_downstream
+    - oxygen_sensor_upstream
     - catalytic_converter
-    - exhaust_pipe_post_cat
+    - ecm
   common_causes:
-    - id: exhaust_leak_post_cat
+    - id: rear_sensor_skewed
       likelihood: high
       label:
-        en: Exhaust leak after catalyst (post-cat sensor sees ambient air)
-        de: Abgasleck nach Katalysator (Nach-Sonde sieht Umgebungsluft)
-    - id: o2_downstream_drift
+        en: Rear oxygen sensor skewed rich, for example a contaminated reference air duct
+        de: Hintere Lambdasonde in Richtung fett verschoben, etwa durch verschmutzten Referenzluftkanal
+    - id: front_sensor_lean_bias
       likelihood: medium
       label:
-        en: Downstream sensor drifting
-        de: Nachsonde driftet
-    - id: catalyst_degraded
+        en: Front sensor reading lean, so the engine actually runs rich
+        de: Vordere Sonde misst zu mager, der Motor läuft tatsächlich fett
+    - id: ecm_calibration
       likelihood: low
       label:
-        en: Catalyst lightly degraded
-        de: Katalysator leicht degradiert
+        en: Calibration issue fixed by an ECM update
+        de: Kalibrierfehler, behoben durch Steuergeräte-Update
+    - id: new_catalyst_break_in
+      likelihood: low
+      label:
+        en: New catalyst not yet broken in
+        de: Neuer Katalysator noch nicht eingefahren
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Failed emissions inspection'
-      de: 'Abgasuntersuchung fehlgeschlagen'
-    - en: 'Possibly slightly increased fuel consumption'
-      de: 'Möglicherweise leicht erhöhter Verbrauch'
-    - en: 'Sulfur (rotten egg) smell from exhaust under load'
-      de: 'Schwefliger Geruch (faules Ei) aus dem Auspuff unter Last'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: Usually no noticeable change in driveability
+      de: Meist keine spürbare Änderung im Fahrverhalten
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [60, 700]
-    estimated_hours: [0.5, 4.0]
+    estimated_cost_eur: [0, 300]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P2098]
+  related_codes: [P2097, P2098, P0420, P0136, P0172]
   sources:
-    - https://en.wikipedia.org/wiki/Oxygen_sensor
-    - https://en.wikipedia.org/wiki/Catalytic_converter
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBD-Operations-Summary-Gasoline-2020-2023.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG03A%20Engine%20Diagnostics.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2005/2005file14.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2018/MC-10149108-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2013/SB-10071632-5448.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2019/MC-10154624-9999.pdf
+  reviewed: '2026-11-03'
 
 - code: P2097
   category: powertrain
   title:
     en: Post Catalyst Fuel Trim System Too Rich (Bank 1)
-    de: Nachkat-Kraftstofftrim System zu fett (Bank 1)
+    de: Nachkat-Kraftstofftrimmung System zu fett (Bank 1)
   description:
-    en: Long-term post-catalyst fuel trim on bank 1 has reached its rich limit. The downstream sensor sees more reductant than expected, often pointing to a degraded catalyst that no longer stores oxygen, or a failing downstream sensor biased rich.
-    de: Die Langzeit-Nachkat-Kraftstofftrimmung auf Bank 1 hat ihren fetten Anschlag erreicht. Die Nachsonde misst mehr Reduktionsmittel als erwartet, was häufig auf einen degradierten Katalysator ohne Sauerstoffspeicher oder eine ins Fette driftende Nachsonde hindeutet.
+    en: "P2097 is the opposite limit of the post-catalyst trim on bank 1: the rear oxygen sensor keeps reporting lean exhaust, so the outer loop keeps adding fuel until it reaches its rich limit. GM's Bosch-based 2005 V6 sets it for a correction above +0.03 lambda; GM's 2018 four-cylinders list it as the high limit, with the integral offset at +99 % and total offset at +50 % or more (Type B); Ford's 2020 to 2023 engines set it 5 s after reaching a rear bias trim of +0.087. Air drawn in through an exhaust leak ahead of the rear sensor, a rear sensor skewed lean, or a front sensor reading rich all produce this pattern. Several manufacturers have issued software fixes: GM for the 2013 ATS and Malibu 2.5 (only when long-term trim stays within ±13 %) and for the 2017 Malibu 1.5, Mitsubishi for the 2014 Outlander V6 after a wrong threshold. Subaru's 2025 bulletin corrects the service manual steps for P2096 and P2097 across its range."
+    de: "P2097 ist die entgegengesetzte Grenze der Nachkat-Trimmung auf Bank 1: Die hintere Lambdasonde meldet dauernd mageres Abgas, der äußere Regelkreis gibt also immer mehr Kraftstoff zu, bis er seine Fettgrenze erreicht. GMs Bosch-basierter V6 von 2005 setzt den Code bei einer Korrektur über +0,03 Lambda; GMs Vierzylinder 2018 führen ihn als obere Grenze, mit Integral-Offset bei +99 % und Gesamt-Offset ab +50 % (Typ B); Fords Motoren 2020 bis 2023 setzen ihn 5 s nach Erreichen einer hinteren Trimmung von +0,087. Falschluft durch ein Abgasleck vor der hinteren Sonde, eine nach mager verschobene hintere Sonde oder eine zu fett messende vordere Sonde erzeugen dieses Bild. Mehrere Hersteller haben Software nachgeliefert: GM für ATS und Malibu 2.5 2013 (nur wenn die Langzeittrimmung innerhalb ±13 % bleibt) und für den Malibu 1.5 2017, Mitsubishi für den Outlander V6 2014 nach einem falschen Schwellwert. Subarus Bulletin 2025 berichtigt die Werkstatthandbuch-Schritte für P2096 und P2097 über die ganze Palette."
   affected_components:
     - oxygen_sensor_downstream
-    - catalytic_converter
+    - oxygen_sensor_upstream
+    - exhaust_pipe_post_cat
+    - ecm
   common_causes:
-    - id: catalyst_degraded
-      likelihood: high
-      label:
-        en: Catalyst oxygen storage exhausted
-        de: Sauerstoffspeicher des Katalysators erschöpft
-    - id: o2_downstream_drift_rich
+    - id: exhaust_leak_before_rear_sensor
       likelihood: medium
       label:
-        en: Downstream sensor biased rich
-        de: Nachsonde fett verstellt
+        en: Exhaust leak ahead of the rear oxygen sensor drawing in air
+        de: Abgasleck vor der hinteren Lambdasonde, das Luft ansaugt
+    - id: rear_sensor_lean_skew
+      likelihood: medium
+      label:
+        en: Rear oxygen sensor skewed lean or aged
+        de: Hintere Lambdasonde nach mager verschoben oder gealtert
+    - id: ecm_calibration
+      likelihood: medium
+      label:
+        en: Calibration issue fixed by an ECM update
+        de: Kalibrierfehler, behoben durch Steuergeräte-Update
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Failed emissions inspection'
-      de: 'Abgasuntersuchung fehlgeschlagen'
-    - en: 'Possibly slightly increased fuel consumption'
-      de: 'Möglicherweise leicht erhöhter Verbrauch'
-    - en: 'Sulfur (rotten egg) smell from exhaust under load'
-      de: 'Schwefliger Geruch (faules Ei) aus dem Auspuff unter Last'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: Slightly higher fuel consumption
+      de: Leicht höherer Kraftstoffverbrauch
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [60, 1500]
-    estimated_hours: [0.5, 4.0]
+    estimated_cost_eur: [0, 300]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
-  related_codes: [P2096, P2099]
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2096, P2099, P0420, P0137, P0171]
   sources:
-    - https://en.wikipedia.org/wiki/Oxygen_sensor
-    - https://en.wikipedia.org/wiki/Catalytic_converter
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBD-Operations-Summary-Gasoline-2020-2023.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG03A%20Engine%20Diagnostics.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2005/2005file14.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2016/MC-10111739-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2013/SB-10053648-8968.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11025790-0001.pdf
+  reviewed: '2026-11-03'
 
 - code: P2098
   category: powertrain
   title:
     en: Post Catalyst Fuel Trim System Too Lean (Bank 2)
-    de: Nachkat-Kraftstofftrim System zu mager (Bank 2)
+    de: Nachkat-Kraftstofftrimmung System zu mager (Bank 2)
   description:
-    en: Bank 2 counterpart of P2096. The post-catalyst fuel trim correction on bank 2 has reached its lean limit, suggesting an exhaust leak after the bank 2 catalyst, a drifting downstream sensor, or a degraded catalyst.
-    de: Bank-2-Pendant zu P2096. Die Nachkat-Trimmung an Bank 2 hat den mageren Anschlag erreicht — Hinweis auf ein Abgasleck hinter dem Bank-2-Katalysator, eine driftende Nachsonde oder einen degradierten Katalysator.
+    en: "P2098 is the bank 2 version of P2096 on V and flat engines with a catalyst and rear oxygen sensor per bank. The post-catalyst trim of bank 2 has reached its lean-side limit because the rear sensor of that bank keeps reporting rich exhaust. Ford monitors both banks the same way and sets the code 5 s after the bank 2 rear bias trim reaches -0.083; GM's Bosch-based 2005 2.8 and 3.6 V6 and the 2008 3.6 LLT list it as a rich shift of the secondary trim beyond its calibrated limit. If only one bank reports it, compare the two banks' rear sensor signals and the front sensor readings: a fault on one side points to that bank's sensors or its exhaust, whereas both banks together hint at a common cause such as fuel or calibration. Audi saw P2098 with P2096 on 2013 to 2016 A8, S6, S7, S8, RS 6 and RS 7 4.0 TFSI, caused by contaminated reference air ducts in the rear sensors, not by the front sensors the guided test suggests."
+    de: "P2098 ist die Bank-2-Variante von P2096 bei V- und Boxermotoren mit Katalysator und hinterer Lambdasonde je Bank. Die Nachkat-Trimmung von Bank 2 hat ihre Grenze auf der Magerseite erreicht, weil die hintere Sonde dieser Bank dauernd fettes Abgas meldet. Ford überwacht beide Bänke gleich und setzt den Code 5 s nach Erreichen einer hinteren Trimmung von -0,083 auf Bank 2; GMs Bosch-basierte 2.8- und 3.6-V6 von 2005 und der 3.6 LLT von 2008 führen es als Fettverschiebung der Sekundärtrimmung über ihre kalibrierte Grenze hinaus. Meldet nur eine Bank, die Signale der hinteren und vorderen Sonden beider Bänke vergleichen: Ein einseitiger Fehler weist auf Sonden oder Abgasanlage dieser Bank, beide Bänke zugleich eher auf eine gemeinsame Ursache wie Kraftstoff oder Kalibrierung. Audi sah P2098 mit P2096 bei A8, S6, S7, S8, RS 6 und RS 7 4.0 TFSI 2013 bis 2016, verursacht durch verschmutzte Referenzluftkanäle der hinteren Sonden, nicht durch die vorderen, die die geführte Fehlersuche nahelegt."
   affected_components:
     - oxygen_sensor_downstream
+    - oxygen_sensor_upstream
     - catalytic_converter
   common_causes:
-    - id: exhaust_leak_post_cat
+    - id: rear_sensor_skewed
       likelihood: high
       label:
-        en: Exhaust leak after bank 2 catalyst
-        de: Abgasleck nach Bank-2-Katalysator
-    - id: o2_downstream_drift
+        en: Bank 2 rear oxygen sensor skewed rich
+        de: Hintere Lambdasonde Bank 2 nach fett verschoben
+    - id: front_sensor_lean_bias
       likelihood: medium
       label:
-        en: Bank 2 downstream sensor drifting
-        de: Bank-2-Nachsonde driftet
+        en: Bank 2 front sensor reading lean
+        de: Vordere Sonde Bank 2 misst zu mager
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Failed emissions inspection'
-      de: 'Abgasuntersuchung fehlgeschlagen'
-    - en: 'Possibly slightly increased fuel consumption'
-      de: 'Möglicherweise leicht erhöhter Verbrauch'
-    - en: 'Sulfur (rotten egg) smell from exhaust under load'
-      de: 'Schwefliger Geruch (faules Ei) aus dem Auspuff unter Last'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: Usually no noticeable change in driveability
+      de: Meist keine spürbare Änderung im Fahrverhalten
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [60, 700]
-    estimated_hours: [0.5, 4.0]
+    estimated_cost_eur: [0, 300]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
-  related_codes: [P2096]
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2096, P2099, P0430, P0175]
   sources:
-    - https://en.wikipedia.org/wiki/Oxygen_sensor
-    - https://en.wikipedia.org/wiki/Catalytic_converter
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBD-Operations-Summary-Gasoline-2020-2023.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2005/2005file14.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2008/08%20GRP02%20LLT%20Engine.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2018/MC-10149108-9999.pdf
+  reviewed: '2026-11-03'
 
 - code: P2099
   category: powertrain
   title:
     en: Post Catalyst Fuel Trim System Too Rich (Bank 2)
-    de: Nachkat-Kraftstofftrim System zu fett (Bank 2)
+    de: Nachkat-Kraftstofftrimmung System zu fett (Bank 2)
   description:
-    en: Bank 2 counterpart of P2097. Post-catalyst trim on bank 2 has reached the rich limit — usually a depleted catalyst or a downstream sensor biased rich on the bank 2 side.
-    de: Bank-2-Pendant zu P2097. Die Nachkat-Trimmung an Bank 2 hat den fetten Anschlag erreicht — meist erschöpfter Katalysator oder fett driftende Nachsonde auf Bank 2.
+    en: "P2099 is the bank 2 counterpart of P2097: the rear oxygen sensor of bank 2 keeps reporting lean exhaust, so the post-catalyst trim of that bank adds fuel until it reaches its rich-side limit. Ford sets it 5 s after the bank 2 rear bias trim reaches +0.087, with the closed loop running, coolant between 160 and 250 °F and at least 15 % fuel in the tank; GM's Bosch-based 2005 2.8 and 3.6 V6 and the 2008 3.6 LLT list it as a lean shift of the secondary trim beyond its calibrated limit, over two trips. A typical physical cause is air drawn into the exhaust ahead of the bank 2 rear sensor, at a cracked manifold, a leaking flange or a loose sensor, which makes that sensor read lean. A rear sensor that has aged lean or a front sensor reading rich gives the same result. Check fuel trims and front sensor data of both banks before replacing a sensor."
+    de: "P2099 ist das Bank-2-Gegenstück zu P2097: Die hintere Lambdasonde von Bank 2 meldet dauernd mageres Abgas, die Nachkat-Trimmung dieser Bank gibt also Kraftstoff zu, bis sie ihre Fettgrenze erreicht. Ford setzt den Code 5 s nach Erreichen einer hinteren Trimmung von +0,087 auf Bank 2, bei geschlossenem Regelkreis, Kühlmittel zwischen 160 und 250 °F und mindestens 15 % Tankinhalt; GMs Bosch-basierte 2.8- und 3.6-V6 von 2005 und der 3.6 LLT von 2008 führen ihn als Magerverschiebung der Sekundärtrimmung über ihre kalibrierte Grenze hinaus, über zwei Fahrten. Eine typische mechanische Ursache ist Falschluft im Abgas vor der hinteren Sonde von Bank 2, an einem gerissenen Krümmer, einem undichten Flansch oder einer lockeren Sonde, wodurch diese Sonde mager misst. Eine nach mager gealterte hintere oder eine zu fett messende vordere Sonde ergibt das gleiche Bild. Vor einem Sondentausch Trimmwerte und Daten der vorderen Sonden beider Bänke prüfen."
   affected_components:
     - oxygen_sensor_downstream
-    - catalytic_converter
+    - oxygen_sensor_upstream
+    - exhaust_manifold
   common_causes:
-    - id: catalyst_degraded
-      likelihood: high
-      label:
-        en: Bank 2 catalyst oxygen storage exhausted
-        de: Sauerstoffspeicher des Bank-2-Katalysators erschöpft
-    - id: o2_downstream_drift_rich
+    - id: exhaust_leak_before_rear_sensor
       likelihood: medium
       label:
-        en: Bank 2 downstream sensor biased rich
-        de: Bank-2-Nachsonde fett verstellt
+        en: Exhaust leak ahead of the bank 2 rear sensor
+        de: Abgasleck vor der hinteren Sonde von Bank 2
+    - id: rear_sensor_lean_skew
+      likelihood: medium
+      label:
+        en: Bank 2 rear oxygen sensor skewed lean or aged
+        de: Hintere Lambdasonde Bank 2 nach mager verschoben oder gealtert
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Failed emissions inspection'
-      de: 'Abgasuntersuchung fehlgeschlagen'
-    - en: 'Possibly slightly increased fuel consumption'
-      de: 'Möglicherweise leicht erhöhter Verbrauch'
-    - en: 'Sulfur (rotten egg) smell from exhaust under load'
-      de: 'Schwefliger Geruch (faules Ei) aus dem Auspuff unter Last'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: Slightly higher fuel consumption
+      de: Leicht höherer Kraftstoffverbrauch
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [60, 1500]
-    estimated_hours: [0.5, 4.0]
+    estimated_cost_eur: [0, 300]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
-  related_codes: [P2097]
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2097, P2098, P0430, P0174]
   sources:
-    - https://en.wikipedia.org/wiki/Oxygen_sensor
-    - https://en.wikipedia.org/wiki/Catalytic_converter
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBD-Operations-Summary-Gasoline-2020-2023.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2005/2005file14.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2008/08%20GRP02%20LLT%20Engine.pdf
+  reviewed: '2026-11-03'
 
 - code: P209A
   category: powertrain
@@ -18272,48 +18364,55 @@
     en: System Too Lean at Idle (Bank 1)
     de: System zu mager im Leerlauf (Bank 1)
   description:
-    en: Fuel trim on bank 1 hits the lean limit only at idle, while trim returns to normal at higher load. This pattern strongly indicates a vacuum leak — leaks become a larger fraction of total airflow at idle and so dominate the trim, but disappear into background noise above idle.
-    de: Die Kraftstofftrimmung auf Bank 1 erreicht nur im Leerlauf den mageren Anschlag, bei höherer Last normalisiert sie sich. Dieses Muster weist sehr stark auf Falschluft hin — Lecks machen im Leerlauf einen großen Anteil am Gesamtluftstrom aus und prägen die Trimmung, oberhalb des Leerlaufs gehen sie im Rauschen unter.
+    en: P2187 means the long-term fuel trim of bank 1 has to add more fuel than allowed in the idle and low-load range. Many systems, especially Bosch ones, split mixture adaptation into an additive part, which dominates at low airflow, and a multiplicative part for load. An air leak adds a fixed amount of unmeasured air, which matters most at idle, so it shows up in the additive part. GM's 3.6 V6 engines set the code above 7 % (2005) or 6.1 % (2008 LLT, at 520 to 1120 rpm, 1.7 to 7.8 g/s and coolant above 60 °C), and GM's 2024 tables above about 5.5 %, over two trips. On the Opel/GM 2.0 turbo in the Saab 9-5 (2010) the weighted long-term trim must exceed its limit for 4 s continuously or 50 s in total (Type B). Audi traced P2187 with P2279 on 2.0 TFSI engines to a crankcase ventilation valve that let boost into the crankcase; Mazda found A/F sensor wiring on the CX-7 2.3 turbo shorted after brake fluid was spilled on it.
+    de: P2187 heißt, dass die Langzeittrimmung von Bank 1 im Leerlauf- und Niedriglastbereich mehr Kraftstoff zugeben muss als erlaubt. Viele Systeme, besonders von Bosch, teilen die Gemischadaption in einen additiven Anteil, der bei kleinem Luftstrom überwiegt, und einen multiplikativen für die Last. Ein Luftleck bringt eine feste Menge ungemessener Luft, die im Leerlauf am stärksten wirkt, und zeigt sich daher im additiven Anteil. GMs 3.6-V6 setzen den Code über 7 % (2005) bzw. 6,1 % (LLT 2008, bei 520 bis 1120 1/min, 1,7 bis 7,8 g/s und Kühlmittel über 60 °C), GMs Tabellen 2024 über etwa 5,5 %, über zwei Fahrten. Beim Opel/GM 2.0 Turbo im Saab 9-5 (2010) muss die gewichtete Langzeittrimmung ihre Grenze 4 s am Stück oder 50 s insgesamt überschreiten (Typ B). Audi führte P2187 mit P2279 bei 2.0-TFSI-Motoren auf ein Kurbelgehäuse-Entlüftungsventil zurück, das Ladedruck ins Kurbelgehäuse ließ; Mazda fand beim CX-7 2.3 Turbo eine Leitung der Breitbandsonde, die nach verschütteter Bremsflüssigkeit kurzgeschlossen war.
   affected_components:
     - intake_manifold
     - pcv_valve
-    - brake_booster
     - vacuum_hose
+    - mass_air_flow_sensor
+    - oxygen_sensor_upstream
   common_causes:
-    - id: intake_vacuum_leak_idle
+    - id: vacuum_or_pcv_leak
       likelihood: high
       label:
-        en: Vacuum leak (intake gasket, brake booster, hoses)
-        de: Falschluft (Saugrohrdichtung, Bremskraftverstärker, Schläuche)
-    - id: pcv_stuck_open
-      likelihood: medium
+        en: Air leak after the air mass sensor, often at the crankcase ventilation
+        de: Luftleck hinter dem Luftmassenmesser, oft an der Kurbelgehäuseentlüftung
+    - id: a_f_sensor_wiring
+      likelihood: low
       label:
-        en: PCV valve stuck open
-        de: PCV-Ventil hängt offen
+        en: Damaged front oxygen or A/F sensor wiring
+        de: Beschädigte Leitung der vorderen Lambda- bzw. Breitbandsonde
+    - id: low_fuel_pressure
+      likelihood: low
+      label:
+        en: Fuel pressure too low
+        de: Kraftstoffdruck zu niedrig
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Rough idle, possible stalling'
-      de: 'Rauer Leerlauf, evtl. Absterben'
-    - en: 'Hesitation or hard cold start'
-      de: 'Aussetzer oder schwerer Kaltstart'
-    - en: 'Power loss under load'
-      de: 'Leistungsverlust unter Last'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: Rough or hunting idle, hissing from the engine bay
+      de: Unruhiger oder pendelnder Leerlauf, Zischen im Motorraum
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [20, 600]
-    estimated_hours: [0.3, 4.0]
+    estimated_cost_eur: [10, 400]
+    estimated_hours: [0.5, 2.5]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P0171, P2189]
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2189, P2177, P0171, P2279, P2188]
   sources:
-    - https://en.wikipedia.org/wiki/Engine_control_unit
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2008/08%20GRP02%20LLT%20Engine.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2005/2005file14.pdf
+    - https://saabwisonline.com/9-5-9650/2010/2-engine/engine-management-and-fuel-system-4-cyl-petrol/fault-diagnosis-diagnostic-trouble-codes/dtc-p2177-or-p2187
+    - https://static.nhtsa.gov/odi/tsbs/2012/SB-10043872-9159.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2013/SB-10097317-2532.pdf
+  reviewed: '2026-11-03'
 
 - code: P2188
   category: powertrain
@@ -18321,47 +18420,54 @@
     en: System Too Rich at Idle (Bank 1)
     de: System zu fett im Leerlauf (Bank 1)
   description:
-    en: Fuel trim on bank 1 hits the rich limit only at idle. Often a leaking injector dribbling fuel at low load, a sticky purge valve dumping fuel vapour, or fuel pressure regulator that fails to relieve pressure when intake vacuum is high.
-    de: Die Kraftstofftrimmung auf Bank 1 erreicht nur im Leerlauf den fetten Anschlag. Häufig ein undichter Injektor, der bei geringer Last Kraftstoff abgibt, ein hängendes Tankentlüftungsventil, das Benzindämpfe einleitet, oder ein Kraftstoffdruckregler, der bei hohem Saugrohrunterdruck den Druck nicht abbaut.
+    en: "P2188 means the long-term fuel trim of bank 1 has to remove more fuel than allowed in the idle and low-load range, the additive part of the mixture adaptation on Bosch-type systems. GM's 2008 3.6 LLT sets it below -6.0 % at 520 to 1120 rpm and 1.7 to 7.8 g/s, with closed loop and coolant above 60 °C. On the Opel/GM 2.0 turbo in the Saab 9-5 (2010) the weighted long-term trim must stay below its limit for 4 s or 50 s in total (Type B); Saab's test gives -22 to 0 % as normal trim and 19 to 42 kPa manifold pressure at idle. At idle the extra fuel typically comes from sources the ECM does not meter: Mercedes lists for the M132 engine a leaking PCV valve, leaking injectors or excessive fuel pressure, wrong intake pressure readings, a restricted or worn throttle and a contaminated oxygen sensor. A saturated charcoal canister purging at idle has the same effect. Stellantis found an airflow straightener in the air box clipped in wrong, which disturbed the air mass reading and set P2188 and P2190."
+    de: "P2188 bedeutet, dass die Langzeittrimmung von Bank 1 im Leerlauf- und Niedriglastbereich mehr Kraftstoff wegnehmen muss als erlaubt, bei Bosch-artigen Systemen der additive Anteil der Gemischadaption. GMs 3.6 LLT von 2008 setzt den Code unter -6,0 % bei 520 bis 1120 1/min und 1,7 bis 7,8 g/s, mit geschlossenem Regelkreis und Kühlmittel über 60 °C. Beim Opel/GM 2.0 Turbo im Saab 9-5 (2010) muss die gewichtete Langzeittrimmung 4 s bzw. 50 s insgesamt unter ihrer Grenze bleiben (Typ B); Saabs Prüfung nennt -22 bis 0 % als normale Trimmung und 19 bis 42 kPa Saugrohrdruck im Leerlauf. Im Leerlauf stammt der zusätzliche Kraftstoff meist aus Quellen, die das Steuergerät nicht zumisst: Mercedes nennt für den M132 ein undichtes PCV-Ventil, undichte Injektoren oder zu hohen Kraftstoffdruck, falsche Saugrohrdruckwerte, eine verengte oder ausgeschlagene Drosselklappe und eine verschmutzte Lambdasonde. Ein gesättigter Aktivkohlebehälter, der im Leerlauf gespült wird, wirkt genauso. Stellantis fand einen falsch eingeclipsten Strömungsgleichrichter im Luftfilterkasten, der die Luftmassenmessung störte und P2188 und P2190 setzte."
   affected_components:
     - fuel_injector
-    - evap_purge_valve
     - fuel_pressure_regulator
+    - evap_purge_valve
+    - pcv_valve
+    - mass_air_flow_sensor
   common_causes:
-    - id: injector_leaking_idle
-      likelihood: high
-      label:
-        en: Leaking injector at idle
-        de: Undichter Injektor im Leerlauf
-    - id: purge_valve_stuck_open
+    - id: leaking_injector_or_high_pressure
       likelihood: medium
       label:
-        en: Purge valve stuck open
-        de: Tankentlüftungsventil hängt offen
+        en: Leaking injector or fuel pressure too high
+        de: Undichter Injektor oder zu hoher Kraftstoffdruck
+    - id: purge_or_pcv_fuel
+      likelihood: medium
+      label:
+        en: Fuel vapour from the purge valve or oil-diluted crankcase gases
+        de: Kraftstoffdampf über das Spülventil oder kraftstoffhaltige Kurbelgehäusegase
+    - id: air_measurement_error
+      likelihood: medium
+      label:
+        en: Air mass or manifold pressure reading wrong
+        de: Luftmasse oder Saugrohrdruck falsch gemessen
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
-    - en: 'Black smoke from exhaust on acceleration'
-      de: 'Schwarzer Rauch beim Beschleunigen'
-    - en: 'Smell of unburned fuel, fouled spark plugs'
-      de: 'Geruch unverbrannten Kraftstoffs, verrußte Zündkerzen'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: Rough idle, fuel smell
+      de: Unruhiger Leerlauf, Kraftstoffgeruch
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [40, 500]
-    estimated_hours: [0.5, 3.5]
+    estimated_cost_eur: [20, 600]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P0172, P2190]
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2190, P2178, P0172, P2187]
   sources:
-    - https://en.wikipedia.org/wiki/Engine_control_unit
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2008/08%20GRP02%20LLT%20Engine.pdf
+    - https://saabwisonline.com/9-5-9650/2010/2-engine/engine-management-and-fuel-system-4-cyl-petrol/fault-diagnosis-diagnostic-trouble-codes/dtc-p2178-or-p2188
+    - https://static.nhtsa.gov/odi/tsbs/2013/SB-10062589-2280.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11021579-0001.pdf
+  reviewed: '2026-11-03'
 
 - code: P2189
   category: powertrain
@@ -18369,47 +18475,52 @@
     en: System Too Lean at Idle (Bank 2)
     de: System zu mager im Leerlauf (Bank 2)
   description:
-    en: 'Fuel trim on bank 2 hits the lean limit only at idle, while trim returns to normal at higher load. This pattern strongly indicates a vacuum leak — leaks become a larger fraction of total airflow at idle and so dominate the trim, but disappear into background noise above idle.'
-    de: 'Die Kraftstofftrimmung auf Bank 2 erreicht nur im Leerlauf den mageren Anschlag, bei höherer Last normalisiert sie sich. Dieses Muster weist sehr stark auf Falschluft hin — Lecks machen im Leerlauf einen großen Anteil am Gesamtluftstrom aus und prägen die Trimmung, oberhalb des Leerlaufs gehen sie im Rauschen unter.'
+    en: "P2189 is the bank 2 version of P2187: on engines with a front oxygen sensor per bank, the long-term trim of bank 2 has to add more fuel than allowed at idle and low load. GM's 2005 2.8 and 3.6 V6 set it when the additive correction exceeds 7 %, the 2008 3.6 LLT above 6.1 % at 520 to 1120 rpm, airflow of 1.7 to 7.8 g/s, engine load of 11 to 45 % and coolant above 60 °C, and GM's 2024 tables above about 5.5 % over two trips. Because both banks share the throttle, crankcase ventilation and brake booster vacuum, a leak there normally lifts the idle trim on both banks, setting P2187 and P2189 together. A code on bank 2 alone points to something only that bank sees: an intake manifold gasket or runner leak on that side, an injector on that bank, or the bank 2 front sensor or its wiring. Comparing both banks' trims at idle and at 2500 rpm narrows it down."
+    de: "P2189 ist die Bank-2-Variante von P2187: Bei Motoren mit vorderer Lambdasonde je Bank muss die Langzeittrimmung von Bank 2 im Leerlauf und bei niedriger Last mehr Kraftstoff zugeben als erlaubt. GMs 2.8- und 3.6-V6 von 2005 setzen den Code, wenn die additive Korrektur 7 % übersteigt, der 3.6 LLT von 2008 über 6,1 % bei 520 bis 1120 1/min, 1,7 bis 7,8 g/s Luftmasse, 11 bis 45 % Last und Kühlmittel über 60 °C, GMs Tabellen 2024 über etwa 5,5 % in zwei Fahrten. Weil sich beide Bänke Drosselklappe, Kurbelgehäuseentlüftung und Bremskraftverstärker-Unterdruck teilen, hebt ein Leck dort normalerweise die Leerlauftrimmung beider Bänke, und P2187 und P2189 erscheinen zusammen. Ein Code nur auf Bank 2 weist auf etwas, das nur diese Bank sieht: eine undichte Saugrohrdichtung oder ein Ansaugkanal auf dieser Seite, ein Injektor dieser Bank oder die vordere Sonde von Bank 2 samt Leitung. Der Vergleich der Trimmwerte beider Bänke im Leerlauf und bei 2500 1/min grenzt ein."
   affected_components:
     - intake_manifold
-    - pcv_valve
-    - vacuum_hose
+    - intake_manifold_gasket
+    - fuel_injector
+    - oxygen_sensor_upstream
   common_causes:
-    - id: intake_vacuum_leak_idle
-      likelihood: high
-      label:
-        en: Vacuum leak on bank 2
-        de: Falschluft auf Bank 2
-    - id: pcv_stuck_open
+    - id: bank2_intake_leak
       likelihood: medium
       label:
-        en: PCV valve stuck open
-        de: PCV-Ventil hängt offen
+        en: Intake gasket or runner leak on the bank 2 side
+        de: Undichte Saugrohrdichtung oder Ansaugkanal auf der Seite von Bank 2
+    - id: shared_vacuum_leak
+      likelihood: medium
+      label:
+        en: Shared vacuum leak, usually with P2187 present too
+        de: Gemeinsames Unterdruckleck, meist zusammen mit P2187
+    - id: bank2_sensor_or_injector
+      likelihood: low
+      label:
+        en: Bank 2 front sensor, its wiring or an injector on that bank
+        de: Vordere Sonde Bank 2, deren Leitung oder ein Injektor dieser Bank
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Rough idle, possible stalling'
-      de: 'Rauer Leerlauf, evtl. Absterben'
-    - en: 'Hesitation or hard cold start'
-      de: 'Aussetzer oder schwerer Kaltstart'
-    - en: 'Power loss under load'
-      de: 'Leistungsverlust unter Last'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: Rough or hunting idle
+      de: Unruhiger oder pendelnder Leerlauf
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [20, 600]
-    estimated_hours: [0.3, 4.0]
+    estimated_cost_eur: [10, 500]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2187, P0174]
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2187, P2190, P0174, P2179]
   sources:
-    - https://en.wikipedia.org/wiki/Engine_control_unit
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2005/2005file14.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2008/08%20GRP02%20LLT%20Engine.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2024/24OBDG07.pdf
+  reviewed: '2026-11-03'
 
 - code: P218A
   category: powertrain
@@ -18663,47 +18774,52 @@
     en: System Too Rich at Idle (Bank 2)
     de: System zu fett im Leerlauf (Bank 2)
   description:
-    en: 'Fuel trim on bank 2 hits the rich limit only at idle. Often a leaking injector dribbling fuel at low load, a sticky purge valve dumping fuel vapour, or fuel pressure regulator that fails to relieve pressure when intake vacuum is high.'
-    de: 'Die Kraftstofftrimmung auf Bank 2 erreicht nur im Leerlauf den fetten Anschlag. Häufig ein undichter Injektor, der bei geringer Last Kraftstoff abgibt, ein hängendes Tankentlüftungsventil, das Benzindämpfe einleitet, oder ein Kraftstoffdruckregler, der bei hohem Saugrohrunterdruck den Druck nicht abbaut.'
+    en: "P2190 is the bank 2 counterpart of P2188: the long-term trim of bank 2 has to remove more fuel than allowed at idle and low load. GM's 2008 3.6 LLT sets it below -6.0 % in the same window it uses for P2188 (520 to 1120 rpm, 1.7 to 7.8 g/s, closed loop, coolant above 60 °C, catalyst heating not active), and GM's 2005 2.8 and 3.6 V6 treat it in the same additive adaptation range. A rich fault on bank 2 only usually lies in that bank: a leaking injector, or a bank 2 front sensor reading lean so the ECM keeps leaning the mixture. Fuel pressure, purge vapour and air-mass errors act on both banks and tend to set P2188 and P2190 together. Stellantis is an example: an airflow straightener clipped in wrong in the air box upset the air mass reading and logged P2188 and P2190 together, sometimes with P0111 and an unstable idle; refitting it correctly cured it."
+    de: "P2190 ist das Bank-2-Gegenstück zu P2188: Die Langzeittrimmung von Bank 2 muss im Leerlauf und bei niedriger Last mehr Kraftstoff wegnehmen als erlaubt. GMs 3.6 LLT von 2008 setzt den Code unter -6,0 % im gleichen Fenster wie für P2188 (520 bis 1120 1/min, 1,7 bis 7,8 g/s, geschlossener Regelkreis, Kühlmittel über 60 °C, keine Katalysatorheizung), GMs 2.8- und 3.6-V6 von 2005 werten ihn im selben additiven Adaptionsbereich. Ein Fettfehler nur auf Bank 2 liegt meist in dieser Bank: ein undichter Injektor oder eine vordere Sonde von Bank 2, die zu mager misst, sodass das Steuergerät das Gemisch weiter abmagert. Kraftstoffdruck, Spüldampf und Luftmassenfehler wirken auf beide Bänke und setzen eher P2188 und P2190 zusammen. Ein Beispiel liefert Stellantis: Ein falsch eingeclipster Strömungsgleichrichter im Luftfilterkasten störte die Luftmassenmessung und setzte P2188 und P2190 gemeinsam, teils mit P0111 und unruhigem Leerlauf; richtig eingesetzt war der Fehler behoben."
   affected_components:
     - fuel_injector
+    - oxygen_sensor_upstream
+    - mass_air_flow_sensor
     - evap_purge_valve
-    - fuel_pressure_regulator
   common_causes:
-    - id: injector_leaking_idle
-      likelihood: high
-      label:
-        en: Leaking injector at idle on bank 2
-        de: Undichter Injektor im Leerlauf auf Bank 2
-    - id: purge_valve_stuck_open
+    - id: bank2_injector_leak
       likelihood: medium
       label:
-        en: Purge valve stuck open
-        de: Tankentlüftungsventil hängt offen
+        en: Leaking injector on bank 2
+        de: Undichter Injektor auf Bank 2
+    - id: shared_cause_both_banks
+      likelihood: medium
+      label:
+        en: Shared cause such as air mass error or purge vapour, usually with P2188 too
+        de: Gemeinsame Ursache wie Luftmassenfehler oder Spüldampf, meist mit P2188
+    - id: bank2_sensor_bias
+      likelihood: low
+      label:
+        en: Bank 2 front sensor reading lean
+        de: Vordere Sonde Bank 2 misst zu mager
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
-    - en: 'Black smoke from exhaust on acceleration'
-      de: 'Schwarzer Rauch beim Beschleunigen'
-    - en: 'Smell of unburned fuel, fouled spark plugs'
-      de: 'Geruch unverbrannten Kraftstoffs, verrußte Zündkerzen'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: Rough idle, fuel smell
+      de: Unruhiger Leerlauf, Kraftstoffgeruch
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [40, 500]
-    estimated_hours: [0.5, 3.5]
+    estimated_cost_eur: [20, 600]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2188, P0175]
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2188, P2189, P0175, P2180]
   sources:
-    - https://en.wikipedia.org/wiki/Engine_control_unit
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2008/08%20GRP02%20LLT%20Engine.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2005/2005file14.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11021579-0001.pdf
+  reviewed: '2026-11-03'
 
 - code: P2191
   category: powertrain
@@ -18911,174 +19027,193 @@
 - code: P2195
   category: powertrain
   title:
-    en: O2 Sensor Signal Stuck Lean (Bank 1, Sensor 1)
-    de: Lambdasonde Signal hängt mager (Bank 1, Sonde 1)
+    en: O2 Sensor Signal Biased/Stuck Lean (Bank 1, Sensor 1)
+    de: Lambdasonde Signal verschoben/hängt mager (Bank 1, Sonde 1)
   description:
-    en: The upstream oxygen sensor on bank 1 returns a constant lean signal during conditions where rich content is expected (for example after a deceleration fuel cut-off recovery). Usually a sensor that has lost its rich-side response or a slow heater warm-up.
-    de: Die vorgeschaltete Lambdasonde auf Bank 1 meldet dauerhaft mager unter Bedingungen, in denen ein fettes Signal erwartet wird (z.B. nach Wiedereinsetzen nach Schubabschalten). Meist eine Sonde, die das fette Spektrum nicht mehr abbildet, oder ein zu langsam aufheizendes Heizelement.
+    en: P2195 means the front oxygen or air-fuel sensor on bank 1 reports a lean mixture that the ECM does not believe, either because it stays lean or because it disagrees with other evidence. On GM's Bosch-based 2005 V6 the rear sensor has to read rich (above 0.85 V) while the front A/F sensor reads leaner than lambda 1.08 and the short-term trim sits at its maximum of 1.25, for about 100 s or 50 s in total. Ford checks narrow-band sensors for fewer than 5 switches in 30 s and wide-band sensors for 30 s at the short-term trim limit; from 2019 a sensor whose filtered lambda changes by less than 0.0001 for 30 s sets P2195 if the value is at or above 1. On the Opel/GM 2.0 turbo in the Saab 9-5 (2010) the code sets within 4 s continuously or 50 s in total. Ford replaced the heated oxygen sensors for P2195 and P2197 on 2015 to 2017 Explorer and F-150 3.5 GTDI. An exhaust leak ahead of the sensor can also make it read lean.
+    de: P2195 bedeutet, dass die vordere Lambda- oder Breitbandsonde auf Bank 1 ein mageres Gemisch meldet, das das Steuergerät nicht glaubt, weil das Signal mager bleibt oder anderen Werten widerspricht. Beim Bosch-basierten GM-V6 von 2005 muss die hintere Sonde fett zeigen (über 0,85 V), während die vordere Breitbandsonde magerer als Lambda 1,08 misst und die Kurzzeittrimmung am Maximum von 1,25 steht, für etwa 100 s bzw. 50 s insgesamt. Ford prüft Sprungsonden auf weniger als 5 Wechsel in 30 s und Breitbandsonden auf 30 s an der Grenze der Kurzzeittrimmung; ab 2019 setzt eine Sonde, deren gefiltertes Lambda sich 30 s lang um weniger als 0,0001 ändert, P2195, wenn der Wert bei 1 oder darüber liegt. Beim Opel/GM 2.0 Turbo im Saab 9-5 (2010) setzt der Code nach 4 s am Stück oder 50 s insgesamt. Ford tauschte bei Explorer und F-150 3.5 GTDI 2015 bis 2017 für P2195 und P2197 die Lambdasonden. Auch ein Abgasleck vor der Sonde lässt sie mager messen.
   affected_components:
     - oxygen_sensor_upstream
-    - oxygen_sensor_heater
+    - oxygen_sensor_wiring
+    - exhaust_manifold
   common_causes:
-    - id: o2_upstream_failed_lean
+    - id: front_sensor_degraded
       likelihood: high
       label:
-        en: Upstream sensor failed stuck lean
-        de: Vorsonde defekt, hängt mager
-    - id: o2_heater_slow
+        en: Front oxygen or A/F sensor aged or contaminated
+        de: Vordere Lambda- bzw. Breitbandsonde gealtert oder vergiftet
+    - id: exhaust_leak_upstream
       likelihood: medium
       label:
-        en: Sensor heater slow to warm up
-        de: Sondenheizung heizt zu langsam auf
+        en: Exhaust leak ahead of the sensor
+        de: Abgasleck vor der Sonde
+    - id: sensor_wiring
+      likelihood: low
+      label:
+        en: Sensor signal or reference wiring fault
+        de: Fehler in Signal- oder Referenzleitung der Sonde
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
-    - en: 'Possible rough idle or hesitation'
-      de: 'Möglicherweise unrunder Leerlauf oder Aussetzer'
-    - en: 'Failed emissions test'
-      de: 'Abgasuntersuchung fehlgeschlagen'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: Possible rough running or higher consumption from wrong fuelling
+      de: Ggf. unrunder Lauf oder Mehrverbrauch durch falsche Gemischbildung
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [80, 500]
-    estimated_hours: [0.3, 2.0]
+    estimated_cost_eur: [60, 300]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P2197, P2270, P2272]
+  related_codes: [P2196, P2197, P0131, P0171, P2270]
   sources:
-    - https://en.wikipedia.org/wiki/Oxygen_sensor
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBD-Operations-Summary-Gasoline-2020-2023.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2005/2005file14.pdf
+    - https://saabwisonline.com/9-5-9650/2010/2-engine/engine-management-and-fuel-system-4-cyl-petrol/fault-diagnosis-diagnostic-trouble-codes/dtc-p0130-p0133-p2195-p2196-p2231-or-p2297-ldk-with-turbocharger
+    - https://static.nhtsa.gov/odi/tsbs/2017/MC-10115945-9999.pdf
+  reviewed: '2026-11-03'
 
 - code: P2196
   category: powertrain
   title:
-    en: O2 Sensor Signal Stuck Rich (Bank 1, Sensor 1)
-    de: Lambdasonde Signal hängt fett (Bank 1, Sonde 1)
+    en: O2 Sensor Signal Biased/Stuck Rich (Bank 1, Sensor 1)
+    de: Lambdasonde Signal verschoben/hängt fett (Bank 1, Sonde 1)
   description:
-    en: The upstream oxygen sensor on bank 1 returns a constant rich signal under deceleration fuel cut-off where lean is expected. Often a contaminated sensor (silicone, oil, coolant) or short to ground that pulls the signal high in some sensor types.
-    de: Die vorgeschaltete Lambdasonde auf Bank 1 meldet im Schubabschalten dauerhaft fett, obwohl mager erwartet wird. Häufig eine verunreinigte Sonde (Silikon, Öl, Kühlmittel) oder ein Kurzschluss nach Masse, der bei manchen Sondentypen das Signal hochzieht.
+    en: "P2196 means the front oxygen or air-fuel sensor on bank 1 reports a rich mixture that the ECM does not accept. On GM's Bosch-based 2005 V6 this is a cross-check with the rear sensor: the rear sensor reads lean (below 0.15 V) while the front A/F sensor reads richer than lambda 0.92 and the short-term trim has pulled to its minimum of 0.75, for about 100 s or 50 s in total. Ford sets it for a narrow-band sensor that hardly switches and stays rich, a wide-band sensor that sits 30 s at the short-term trim limit, or, from 2019, a filtered lambda below 1 that changes by less than 0.0001 for 30 s; Ford blocks the stuck-rich test while fuel is boiling off the oil after a cold start. On the Opel/GM 2.0 turbo in the Saab 9-5 (2010) the code sets within 4 s continuously or 50 s in total. Because the ECM leans the engine to follow the false signal, a rear sensor reading lean and a lean real mixture often accompany it."
+    de: "P2196 heißt, dass die vordere Lambda- oder Breitbandsonde auf Bank 1 ein fettes Gemisch meldet, das das Steuergerät nicht akzeptiert. Beim Bosch-basierten GM-V6 von 2005 ist das ein Abgleich mit der hinteren Sonde: Diese zeigt mager (unter 0,15 V), während die vordere Breitbandsonde fetter als Lambda 0,92 misst und die Kurzzeittrimmung auf ihr Minimum von 0,75 gefallen ist, für etwa 100 s bzw. 50 s insgesamt. Ford setzt den Code für eine Sprungsonde, die kaum wechselt und fett bleibt, eine Breitbandsonde, die 30 s an der Grenze der Kurzzeittrimmung steht, oder ab 2019 für ein gefiltertes Lambda unter 1, das sich 30 s um weniger als 0,0001 ändert; den Fett-Test sperrt Ford, solange nach einem Kaltstart Kraftstoff aus dem Öl ausdampft. Beim Opel/GM 2.0 Turbo im Saab 9-5 (2010) setzt der Code nach 4 s am Stück oder 50 s insgesamt. Weil das Steuergerät dem falschen Signal folgend abmagert, treten oft eine mager messende hintere Sonde und ein tatsächlich mageres Gemisch dazu."
   affected_components:
     - oxygen_sensor_upstream
+    - oxygen_sensor_wiring
   common_causes:
-    - id: o2_upstream_contaminated
+    - id: front_sensor_degraded
       likelihood: high
       label:
-        en: Upstream sensor contaminated
-        de: Vorsonde verunreinigt
-    - id: o2_upstream_failed_rich
-      likelihood: medium
+        en: Front oxygen or A/F sensor contaminated or aged
+        de: Vordere Lambda- bzw. Breitbandsonde verschmutzt oder gealtert
+    - id: sensor_wiring
+      likelihood: low
       label:
-        en: Upstream sensor failed stuck rich
-        de: Vorsonde defekt, hängt fett
+        en: Sensor signal shorted or reference circuit fault
+        de: Signalleitung mit Schluss oder Fehler im Referenzkreis
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
-    - en: 'Possible rough idle or hesitation'
-      de: 'Möglicherweise unrunder Leerlauf oder Aussetzer'
-    - en: 'Failed emissions test'
-      de: 'Abgasuntersuchung fehlgeschlagen'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: Possible hesitation or lean running
+      de: Ggf. Ruckeln oder magerer Lauf
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [80, 500]
-    estimated_hours: [0.3, 2.0]
+    estimated_cost_eur: [60, 300]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P2198, P2271, P2273]
+  related_codes: [P2195, P2198, P0132, P0172, P2271]
   sources:
-    - https://en.wikipedia.org/wiki/Oxygen_sensor
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBD-Operations-Summary-Gasoline-2020-2023.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2005/2005file14.pdf
+    - https://saabwisonline.com/9-5-9650/2010/2-engine/engine-management-and-fuel-system-4-cyl-petrol/fault-diagnosis-diagnostic-trouble-codes/dtc-p0130-p0133-p2195-p2196-p2231-or-p2297-ldk-with-turbocharger
+  reviewed: '2026-11-03'
 
 - code: P2197
   category: powertrain
   title:
-    en: O2 Sensor Signal Stuck Lean (Bank 2, Sensor 1)
-    de: Lambdasonde Signal hängt mager (Bank 2, Sonde 1)
+    en: O2 Sensor Signal Biased/Stuck Lean (Bank 2, Sensor 1)
+    de: Lambdasonde Signal verschoben/hängt mager (Bank 2, Sonde 1)
   description:
-    en: 'The upstream oxygen sensor on bank 2 returns a constant lean signal during conditions where rich content is expected (for example after a deceleration fuel cut-off recovery). Usually a sensor that has lost its rich-side response or a slow heater warm-up.'
-    de: 'Die vorgeschaltete Lambdasonde auf Bank 2 meldet dauerhaft mager unter Bedingungen, in denen ein fettes Signal erwartet wird (z.B. nach Wiedereinsetzen nach Schubabschalten). Meist eine Sonde, die das fette Spektrum nicht mehr abbildet, oder ein zu langsam aufheizendes Heizelement.'
+    en: "P2197 is the bank 2 version of P2195 on engines with a front sensor per bank: the bank 2 front oxygen or A/F sensor keeps reporting lean in a way the ECM rejects. GM's Bosch-based 2005 2.8 and 3.6 V6 flag it when the bank 2 rear sensor reads rich (above 0.85 V) while the front sensor reads leaner than lambda 1.08 with short-term trim at its 1.25 maximum, a contradiction a real lean mixture would not produce. Ford applies its switching, trim-limit and, from 2019, stuck-lambda tests to bank 2 the same way, with a 30 s window. Ford's 2017 bulletin for 2015 to 2017 Explorer and 2015 to 2016 F-150 3.5 GTDI lists P2195 and P2197 with P2626 and P2629, the pumping-current trim circuits of the A/F sensors, and fixes them with new heated oxygen sensors. If only bank 2 is affected, an exhaust manifold leak on that side ahead of the sensor is worth ruling out before replacing the sensor."
+    de: "P2197 ist die Bank-2-Variante von P2195 bei Motoren mit vorderer Sonde je Bank: Die vordere Lambda- oder Breitbandsonde von Bank 2 meldet dauerhaft mager, auf eine Weise, die das Steuergerät verwirft. GMs Bosch-basierte 2.8- und 3.6-V6 von 2005 melden, wenn die hintere Sonde von Bank 2 fett zeigt (über 0,85 V), während die vordere magerer als Lambda 1,08 misst und die Kurzzeittrimmung am Maximum von 1,25 steht – ein Widerspruch, den ein echtes mageres Gemisch nicht erzeugt. Ford wendet seine Prüfungen auf Wechsel, Trimmgrenze und ab 2019 festhängendes Lambda gleichermaßen auf Bank 2 an, mit 30-s-Fenster. Fords Bulletin von 2017 für Explorer 2015 bis 2017 und F-150 2015 bis 2016 mit 3.5 GTDI führt P2195 und P2197 mit P2626 und P2629, den Pumpstrom-Abgleichkreisen der Breitbandsonden, und behebt sie mit neuen Lambdasonden. Betrifft es nur Bank 2, lohnt es, vor dem Sondentausch ein Krümmerleck auf dieser Seite vor der Sonde auszuschließen."
   affected_components:
     - oxygen_sensor_upstream
-    - oxygen_sensor_heater
+    - oxygen_sensor_wiring
+    - exhaust_manifold
   common_causes:
-    - id: o2_upstream_failed_lean
+    - id: front_sensor_degraded
       likelihood: high
       label:
-        en: Upstream sensor failed stuck lean
-        de: Vorsonde defekt, hängt mager
+        en: Bank 2 front oxygen or A/F sensor aged or contaminated
+        de: Vordere Lambda- bzw. Breitbandsonde Bank 2 gealtert oder vergiftet
+    - id: exhaust_leak_upstream
+      likelihood: medium
+      label:
+        en: Exhaust manifold leak on bank 2 ahead of the sensor
+        de: Krümmerleck auf Bank 2 vor der Sonde
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
-    - en: 'Possible rough idle or hesitation'
-      de: 'Möglicherweise unrunder Leerlauf oder Aussetzer'
-    - en: 'Failed emissions test'
-      de: 'Abgasuntersuchung fehlgeschlagen'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: Possible rough running or higher consumption
+      de: Ggf. unrunder Lauf oder Mehrverbrauch
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [80, 500]
-    estimated_hours: [0.3, 2.0]
+    estimated_cost_eur: [60, 300]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2195, P2270, P2272]
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2195, P2198, P0151, P0174, P2629]
   sources:
-    - https://en.wikipedia.org/wiki/Oxygen_sensor
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBD-Operations-Summary-Gasoline-2020-2023.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2005/2005file14.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2017/MC-10115945-9999.pdf
+  reviewed: '2026-11-03'
 
 - code: P2198
   category: powertrain
   title:
-    en: O2 Sensor Signal Stuck Rich (Bank 2, Sensor 1)
-    de: Lambdasonde Signal hängt fett (Bank 2, Sonde 1)
+    en: O2 Sensor Signal Biased/Stuck Rich (Bank 2, Sensor 1)
+    de: Lambdasonde Signal verschoben/hängt fett (Bank 2, Sonde 1)
   description:
-    en: 'The upstream oxygen sensor on bank 2 returns a constant rich signal under deceleration fuel cut-off where lean is expected. Often a contaminated sensor (silicone, oil, coolant) or short to ground that pulls the signal high in some sensor types.'
-    de: 'Die vorgeschaltete Lambdasonde auf Bank 2 meldet im Schubabschalten dauerhaft fett, obwohl mager erwartet wird. Häufig eine verunreinigte Sonde (Silikon, Öl, Kühlmittel) oder ein Kurzschluss nach Masse, der bei manchen Sondentypen das Signal hochzieht.'
+    en: "P2198 is the bank 2 counterpart of P2196: the bank 2 front oxygen or A/F sensor reports rich in a way the ECM does not accept. On GM's Bosch-based 2005 2.8 and 3.6 V6 the bank 2 rear sensor must read lean (below 0.15 V) while the front sensor reads richer than lambda 0.92 and the short-term trim has dropped to its 0.75 minimum; the code then sets after about 100 s, or 50 s cumulatively, over two trips. Ford uses the same lack-of-switching, trim-limit and stuck-lambda logic as on bank 1, sets the stuck-rich code when the frozen lambda value is below 1, and suspends the stuck-rich test during cold starts while fuel boils off the oil through the crankcase ventilation. A sensor contaminated by oil or coolant, or one whose signal or reference wiring has a fault, gives this pattern; since the ECM leans bank 2 to follow the false reading, the rear sensor of that bank usually shows lean at the same time."
+    de: "P2198 ist das Bank-2-Gegenstück zu P2196: Die vordere Lambda- oder Breitbandsonde von Bank 2 meldet fett, auf eine Weise, die das Steuergerät nicht akzeptiert. Bei GMs Bosch-basierten 2.8- und 3.6-V6 von 2005 muss die hintere Sonde von Bank 2 mager zeigen (unter 0,15 V), während die vordere fetter als Lambda 0,92 misst und die Kurzzeittrimmung auf ihr Minimum von 0,75 gefallen ist; der Code setzt dann nach etwa 100 s bzw. 50 s insgesamt, über zwei Fahrten. Ford nutzt dieselbe Logik aus fehlenden Wechseln, Trimmgrenze und festhängendem Lambda wie auf Bank 1, setzt den Fett-Code, wenn der eingefrorene Lambdawert unter 1 liegt, und setzt den Fett-Test bei Kaltstarts aus, solange Kraftstoff über die Kurbelgehäuseentlüftung aus dem Öl ausdampft. Eine durch Öl oder Kühlmittel vergiftete Sonde oder ein Fehler in Signal- oder Referenzleitung ergibt dieses Bild; weil das Steuergerät Bank 2 dem falschen Wert folgend abmagert, zeigt die hintere Sonde dieser Bank meist zugleich mager."
   affected_components:
     - oxygen_sensor_upstream
+    - oxygen_sensor_wiring
   common_causes:
-    - id: o2_upstream_contaminated
+    - id: front_sensor_degraded
       likelihood: high
       label:
-        en: Upstream sensor contaminated
-        de: Vorsonde verunreinigt
+        en: Bank 2 front oxygen or A/F sensor contaminated or aged
+        de: Vordere Lambda- bzw. Breitbandsonde Bank 2 vergiftet oder gealtert
+    - id: sensor_wiring
+      likelihood: low
+      label:
+        en: Sensor signal or reference wiring fault
+        de: Fehler in Signal- oder Referenzleitung der Sonde
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
-    - en: 'Possible rough idle or hesitation'
-      de: 'Möglicherweise unrunder Leerlauf oder Aussetzer'
-    - en: 'Failed emissions test'
-      de: 'Abgasuntersuchung fehlgeschlagen'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: Possible hesitation or lean running
+      de: Ggf. Ruckeln oder magerer Lauf
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [80, 500]
-    estimated_hours: [0.3, 2.0]
+    estimated_cost_eur: [60, 300]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2196, P2271, P2273]
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2196, P2197, P0152, P0175]
   sources:
-    - https://en.wikipedia.org/wiki/Oxygen_sensor
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBD-Operations-Summary-Gasoline-2020-2023.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2005/2005file14.pdf
+  reviewed: '2026-11-03'
 
 - code: P2199
   category: powertrain
@@ -27765,56 +27900,66 @@
 - code: P2263
   category: powertrain
   title:
-    en: Turbo/Super Charger Boost System Performance
-    de: Turbolader/Kompressor Ladedrucksystem Funktion
+    en: Turbocharger/Supercharger A Boost System Performance
+    de: Turbolader/Kompressor A Ladedrucksystem Funktion
   description:
-    en: Boost pressure does not match the requested target during normal operation. The deviation between commanded and measured boost exceeds the calibrated tolerance, often due to leaks, sticking actuators or sensor errors.
-    de: Der Ladedruck entspricht im normalen Betrieb nicht der angeforderten Sollvorgabe. Die Abweichung zwischen Soll- und Istladedruck ueberschreitet die kalibrierte Toleranz, oft wegen Leckagen, klemmenden Aktuatoren oder Sensorfehlern.
+    en: P2263 means boost pressure measured in the intake manifold stays too far from the target set by the closed-loop boost control. CARB requires diesel OBD to detect underboost, overboost and slow response of the boost control. On the 2014 Cruze 2.0 diesel the allowed underboost deviation runs from 35 to 85 kPa with injection quantity and speed, and the code sets as Type A once the condition holds for 15 s; GM's 2018 diesels need 400 failures in 500 samples and name leaks after the compressor or in the manifolds, and exhaust obstructions, as targets. Ford's 2023 diesels count deviations above 35 kPa at 1500 rpm or more, typically over 100 s. The Opel/GM 2.0 CDTi in the Saab 9-5 (2010) waits for more than 200 s out of range and stores it as Type C. GM's Cruze bulletin found a charge-air cooler duct pulled off the throttle body, with P0299, P2002 and P2463 alongside. The engine usually limits torque.
+    de: P2263 heißt, dass der im Saugrohr gemessene Ladedruck zu weit vom Sollwert der geregelten Ladedruckregelung abweicht. CARB verlangt, dass Diesel-OBD zu niedrigen, zu hohen und zu langsam folgenden Ladedruck erkennt. Beim Cruze 2.0 Diesel 2014 liegt die zulässige Unterschreitung je nach Einspritzmenge und Drehzahl zwischen 35 und 85 kPa; hält der Zustand 15 s an, setzt ein Typ-A-Code. GMs Diesel 2018 brauchen 400 Fehler in 500 Proben und nennen Lecks nach dem Verdichter oder an den Krümmern sowie Hindernisse im Abgasweg als Ziel. Fords Diesel 2023 zählen Abweichungen über 35 kPa ab 1500 1/min, typisch über 100 s. Der Opel/GM 2.0 CDTi im Saab 9-5 (2010) wartet mehr als 200 s außerhalb des Bereichs und speichert einen Typ-C-Code. GMs Cruze-Bulletin fand einen vom Drosselklappenstutzen gerutschten Ladeluftschlauch, zusammen mit P0299, P2002 und P2463. Der Motor begrenzt meist das Drehmoment.
   affected_components:
     - turbocharger
-    - boost_pressure_sensor
     - vnt_actuator
     - charge_air_pipe
+    - charge_air_cooler
+    - boost_pressure_sensor
   common_causes:
-    - id: boost_leak
+    - id: charge_air_leak
       likelihood: high
       label:
-        en: Charge-air leak
-        de: Ladeluftleck
-    - id: vnt_sticking
-      likelihood: high
-      label:
-        en: VNT vanes sticking with soot
-        de: Festsitzende VTG-Schaufeln durch Russ
-    - id: boost_sensor_drift
+        en: Charge-air hose or cooler duct leaking or pulled off
+        de: Ladeluftschlauch oder Ladeluftkühlerleitung undicht oder abgerutscht
+    - id: vgt_sticking
       likelihood: medium
       label:
-        en: Boost pressure sensor drift
-        de: Drift des Ladedrucksensors
+        en: Variable-geometry vanes or actuator sticking
+        de: VTG-Leitschaufeln oder Steller schwergängig
+    - id: exhaust_restriction
+      likelihood: low
+      label:
+        en: Restricted exhaust, for example a heavily loaded particulate filter
+        de: Verengter Abgasweg, etwa ein stark beladener Partikelfilter
+    - id: boost_sensor
+      likelihood: low
+      label:
+        en: Boost pressure sensor reading wrong
+        de: Ladedrucksensor misst falsch
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Significant power loss / limp mode'
-      de: 'Deutlicher Leistungsverlust / Notlauf'
-    - en: 'Possible blue or black smoke from exhaust'
-      de: 'Möglicherweise blauer oder schwarzer Rauch'
-    - en: 'Whistling or hissing sound from intake'
-      de: 'Pfeifen oder Zischen aus der Ansaugung'
+    - en: Power loss or limp mode
+      de: Leistungsverlust oder Notlauf
+    - en: Hissing or whistling from the charge-air system
+      de: Zischen oder Pfeifen aus dem Ladeluftsystem
+    - en: Black smoke under load
+      de: Schwarzer Rauch unter Last
   repair:
-    difficulty: hard
+    difficulty: medium
     diy_possible: false
-    estimated_cost_eur: [200, 2500]
-    estimated_hours: [1, 6]
+    estimated_cost_eur: [30, 2500]
+    estimated_hours: [0.5, 6]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [P0299, P0234, P2563, P2002, P2463]
   sources:
-    - https://en.wikipedia.org/wiki/Variable-geometry_turbocharger
-    - https://en.wikipedia.org/wiki/Turbocharger
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2014/14OBDG04%20Engine%20Diagnostics.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG04%20Engine%20Diagnostics.pdf
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
+    - https://saabwisonline.com/9-5-9650/2010/2-engine/engine-management-and-fuel-system-4-cyl-diesel/fault-diagnosis-diagnostic-trouble-codes/dtc-p2263
+    - https://static.nhtsa.gov/odi/tsbs/2015/MC-10246536-9999.pdf
+  reviewed: '2026-11-03'
 
 - code: P2264
   category: powertrain
@@ -28653,37 +28798,61 @@
     en: Intake Air System Leak
     de: Leck im Ansaugsystem
   description:
-    en: The ECU has detected a discrepancy between commanded throttle/intake conditions and the resulting MAP/MAF that points to unmetered air entering after the throttle body. On turbocharged engines this often means a cracked or disconnected boost pipe between turbo and intake; on naturally aspirated engines, a hole in the intake manifold or hose.
-    de: Die Motorsteuerung erkennt eine Differenz zwischen angeforderter Drosselklappenstellung und dem resultierenden MAP/MAF, die auf ungemessene Luft hinter der Drosselklappe hindeutet. Auf aufgeladenen Motoren häufig ein gerissenes oder abgefallenes Ladeluftrohr zwischen Turbolader und Ansaugtrakt; auf Saugmotoren ein Loch im Saugrohr oder Schlauch.
+    en: "P2279 means the ECM has concluded that air enters the engine without being measured or expected, for example because the air mass sensor, manifold pressure and throttle position no longer agree with its air model. Volkswagen and Audi use it widely. On the 2013 to 2016 Audi A6, A7 and A8 4.0 TFSI, a leaking pressure-regulating valve in the crankcase breather module set P2279 with P0507 and a metallic whistle at warm idle; a fabric-reinforced membrane fixed it. On 2.0 TFSI engines (BPY, CCTA and others) a check valve that did not seal under boost let pressure into the crankcase, logging P2279, P2187 and P1297 with oil leaking at the filler cap. For the 2.5 litre five-cylinder Volkswagen advises checking cam timing first, since a timing offset changes the air the engine draws. Diesels set it too: the Mercedes OM651 2.2 in the international Jeep Compass and Patriot logged it with limp mode and got a new air filter and software."
+    de: "P2279 heißt, dass das Steuergerät auf Luft schließt, die ungemessen oder unerwartet in den Motor gelangt, etwa weil Luftmassenmesser, Saugrohrdruck und Drosselklappenstellung nicht mehr zu seinem Luftmodell passen. Volkswagen und Audi nutzen den Code häufig. Beim Audi A6, A7 und A8 4.0 TFSI 2013 bis 2016 setzte ein undichtes Druckregelventil im Kurbelgehäuse-Entlüftungsmodul P2279 mit P0507 und einem metallischen Pfeifen im warmen Leerlauf; eine gewebeverstärkte Membran behob das. Bei 2.0-TFSI-Motoren (BPY, CCTA u. a.) ließ ein unter Ladedruck undichtes Rückschlagventil Druck ins Kurbelgehäuse, mit P2279, P2187 und P1297 und Öl am Einfülldeckel. Beim 2,5-l-Fünfzylinder rät Volkswagen, zuerst die Steuerzeiten zu prüfen, weil ein Versatz die angesaugte Luftmenge ändert. Auch Diesel setzen ihn: Der Mercedes OM651 2.2 im Jeep Compass und Patriot (Exportmärkte) zeigte ihn mit Notlauf und bekam einen neuen Luftfilter und neue Software."
   affected_components:
     - intake_manifold
-    - intercooler_pipe
-    - throttle_body
+    - pcv_valve
+    - crankcase_breather
+    - charge_air_pipe
+    - mass_air_flow_sensor
   common_causes:
-    - id: boost_pipe_disconnected
+    - id: crankcase_breather_leak
       likelihood: high
       label:
-        en: Boost pipe disconnected or cracked
-        de: Ladeluftrohr abgefallen oder rissig
-    - id: intake_hose_split
-      likelihood: high
+        en: Leaking crankcase breather or PCV pressure-regulating valve
+        de: Undichte Kurbelgehäuseentlüftung bzw. deren Druckregelventil
+    - id: intake_leak
+      likelihood: medium
       label:
-        en: Intake hose split
-        de: Ansaugschlauch eingerissen
+        en: Leak at intake manifold, hoses or seals after the air mass sensor
+        de: Leck an Saugrohr, Schläuchen oder Dichtungen hinter dem Luftmassenmesser
+    - id: cam_timing_offset
+      likelihood: low
+      label:
+        en: Camshaft timing offset
+        de: Versatz der Nockenwellen-Steuerzeiten
+    - id: ecm_calibration
+      likelihood: low
+      label:
+        en: ECM calibration needing an update
+        de: Steuergerätesoftware braucht ein Update
+  symptoms:
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: Whistling at idle, unstable or high idle speed
+      de: Pfeifen im Leerlauf, unruhige oder erhöhte Leerlaufdrehzahl
+    - en: Limp mode on some engines
+      de: Bei manchen Motoren Notlauf
   repair:
-    difficulty: easy
+    difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [20, 400]
-    estimated_hours: [0.3, 2.5]
+    estimated_cost_eur: [20, 600]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [P0507, P2187, P0171, P2073, P0101]
   sources:
-    - https://en.wikipedia.org/wiki/Inlet_manifold
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://static.nhtsa.gov/odi/tsbs/2016/MC-10118395-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2012/SB-10043872-9159.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2013/MC-10070095-3639.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2013/SB-10063359-0335.pdf
+  reviewed: '2026-11-03'
 
 - code: P227A
   category: powertrain
@@ -48563,200 +48732,219 @@
 - code: P2452
   category: powertrain
   title:
-    en: Diesel Particulate Filter Pressure Sensor Circuit
-    de: Dieselpartikelfilter Drucksensor Stromkreis
+    en: Diesel Particulate Filter Pressure Sensor A Circuit
+    de: Dieselpartikelfilter Drucksensor A Stromkreis
   description:
-    en: A general electrical fault on the DPF differential-pressure sensor circuit. Without a valid pressure reading the ECU cannot estimate soot load and may inhibit regeneration.
-    de: Allgemeiner elektrischer Fehler im Stromkreis des DPF-Differenzdrucksensors. Ohne gültiges Drucksignal kann die Motorsteuerung die Rußbeladung nicht abschätzen und unterbindet ggf. die Regeneration.
+    en: The pressure sensor A of the particulate filter, usually a differential sensor with hoses to the filter inlet and outlet, tells the ECM how loaded the filter is. Despite its generic circuit title, P2452 is in practice an offset check made when no exhaust flows. Ford's 2023 diesels run it in after-run and set the code when the sensor still reads more than 1 kPa. GM's 2018 diesels check the filter inlet pressure at the start of the drive cycle, after at least 10 s engine off, and set it as a Type B code when the offset is too big. A sensor that has drifted, moisture inside it or a hose holding pressure all give such an offset. Audi saw P2452 together with P2453, P2454, P2456 and P2002 on the 2009 to 2011 Q7 TDI and traced it to moisture entering the differential pressure sensor G505 through poor internal sealing; the fix was a sensor with better sealing. The soot model then works with wrong values, so regeneration timing suffers.
+    de: Der Drucksensor A des Partikelfilters, meist ein Differenzdrucksensor mit Schläuchen zu Filtereingang und -ausgang, meldet dem Steuergerät die Filterbeladung. Trotz des allgemeinen Titels ist P2452 in der Praxis eine Nullpunktprüfung bei stehendem Abgasstrom. Fords Diesel 2023 prüfen im Nachlauf und setzen den Code, wenn der Sensor noch mehr als 1 kPa zeigt. GMs Diesel 2018 prüfen den Druck am Filtereingang zu Beginn des Fahrzyklus nach mindestens 10 s Motorstillstand und setzen bei zu großem Offset einen Typ-B-Code. Ein gedrifteter Sensor, Feuchtigkeit im Sensor oder ein Schlauch, der Druck hält, ergeben einen solchen Offset. Audi sah P2452 zusammen mit P2453, P2454, P2456 und P2002 beim Q7 TDI 2009 bis 2011 und führte es auf Feuchtigkeit zurück, die durch mangelhafte innere Abdichtung in den Differenzdrucksensor G505 drang; Abhilfe schuf ein besser abgedichteter Sensor. Das Rußmodell rechnet dann mit falschen Werten, der Regenerationszeitpunkt leidet.
   affected_components:
     - dpf_differential_pressure_sensor
+    - dpf_pressure_sensor_hoses
     - dpf_pressure_sensor_wiring
   common_causes:
-    - id: dpf_pressure_sensor_failed
+    - id: sensor_offset_drift
       likelihood: high
       label:
-        en: DPF pressure sensor failed
-        de: DPF-Drucksensor defekt
-    - id: dpf_pressure_hose_clogged
+        en: Sensor offset drifted or moisture inside the sensor
+        de: Sensor-Nullpunkt gedriftet oder Feuchtigkeit im Sensor
+    - id: hose_blocked_water
       likelihood: medium
       label:
-        en: Sensor sample hoses clogged with soot
-        de: Mess-Schläuche zum Sensor mit Ruß verstopft
+        en: Sensor hose blocked by soot or condensate
+        de: Messschlauch durch Ruß oder Kondensat verstopft
+    - id: connector_corrosion
+      likelihood: low
+      label:
+        en: Corroded connector or terminals
+        de: Korrodierter Stecker oder Kontakte
   symptoms:
-    - en: 'Check engine light or DPF warning light on'
-      de: 'Motorkontrollleuchte oder DPF-Warnleuchte an'
-    - en: 'Power loss / limp mode'
-      de: 'Leistungsverlust / Notlauf'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
-    - en: 'Failed forced regeneration attempts'
-      de: 'Fehlgeschlagene Zwangsregenerationsversuche'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: Regeneration too early, too late or inhibited
+      de: Regeneration zu früh, zu spät oder gesperrt
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [80, 350]
+    estimated_cost_eur: [60, 350]
     estimated_hours: [0.3, 1.5]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2453, P2454, P2455, P2456]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_particulate_filter
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG04%20Engine%20Diagnostics.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2013/SB-10065349-6903.pdf
+  reviewed: '2026-11-03'
 
 - code: P2453
   category: powertrain
   title:
-    en: Diesel Particulate Filter Pressure Sensor Circuit Range/Performance
-    de: DPF Drucksensor Stromkreis Bereich/Plausibilität
+    en: Diesel Particulate Filter Pressure Sensor A Circuit Range/Performance
+    de: Dieselpartikelfilter Drucksensor A Stromkreis Bereich/Funktion
   description:
-    en: The DPF differential-pressure sensor produces a value that is electrically valid but does not match expectations — for example a non-zero reading with engine off or no change between idle and load.
-    de: Der DPF-Differenzdrucksensor liefert ein elektrisch gültiges Signal, das aber nicht zu den Betriebsbedingungen passt — etwa ein Wert ungleich null bei Motor aus oder keine Änderung zwischen Leerlauf und Last.
+    en: "P2453 means the particulate filter pressure signal is electrically fine but does not behave like a real filter pressure. Manufacturers use two kinds of test. With the engine off there should be almost no pressure difference: GM's 2009 Duramax fails above 4.1 kPa, the 2014 Cruze 2.0 diesel above 3.2 kPa in after-run, and the Opel/GM 2.0 CDTi in the Saab 9-5 (2010) checks once at least 60 s after shutdown. With the engine running the signal has to follow changes in exhaust flow: the Duramax expects it to rise and fall when the flow changes by more than 200 m³/h per second, and Ford's 2023 diesels fail a reading under 1 kPa at 500 m³/h or more, which points to a disconnected or split hose. Saab adds that kinked braided hoses do not recover their shape. Audi (Q7 TDI) found moisture in sensor G505, Chrysler (2.8 diesel) checked sensor and connector, and Stellantis found open circuits and bad PCM grounds. Without a valid signal the soot load is estimated, often followed by P2463."
+    de: "P2453 bedeutet, dass das Drucksignal des Partikelfilters elektrisch in Ordnung ist, sich aber nicht wie ein echter Filterdruck verhält. Die Hersteller prüfen auf zwei Arten. Bei stehendem Motor darf kaum Differenzdruck anliegen: Der GM-Duramax 2009 meldet ab 4,1 kPa, der Cruze 2.0 Diesel 2014 ab 3,2 kPa im Nachlauf, und der Opel/GM 2.0 CDTi im Saab 9-5 (2010) prüft einmal frühestens 60 s nach dem Abstellen. Bei laufendem Motor muss das Signal Änderungen des Abgasstroms folgen: Der Duramax erwartet Anstieg und Abfall bei Stromänderungen über 200 m³/h pro Sekunde, Fords Diesel 2023 melden einen Wert unter 1 kPa ab 500 m³/h, was auf einen abgezogenen oder gerissenen Schlauch deutet. Saab ergänzt, dass geknickte Gewebeschläuche ihre Form nicht wiederfinden. Audi (Q7 TDI) fand Feuchtigkeit im Sensor G505, Chrysler (2.8 Diesel) prüft Sensor und Stecker, Stellantis fand Unterbrechungen und schlechte PCM-Massen. Ohne gültiges Signal wird die Beladung geschätzt, oft folgt P2463."
   affected_components:
     - dpf_differential_pressure_sensor
+    - dpf_pressure_sensor_hoses
     - dpf_pressure_sensor_wiring
   common_causes:
-    - id: dpf_pressure_hose_clogged
+    - id: hose_disconnected_kinked
       likelihood: high
       label:
-        en: Sample hoses clogged or kinked
-        de: Mess-Schläuche verstopft oder geknickt
-    - id: dpf_pressure_sensor_drift
+        en: Sensor hose disconnected, split, kinked or blocked
+        de: Messschlauch abgezogen, gerissen, geknickt oder verstopft
+    - id: sensor_skewed
       likelihood: medium
       label:
-        en: Sensor drift
-        de: Sensor driftet
-    - id: sensor_aged
+        en: Sensor skewed or stuck, for example from moisture ingress
+        de: Sensor verschoben oder festsitzend, etwa durch eingedrungene Feuchtigkeit
+    - id: wiring_ground
       likelihood: low
       label:
-        en: 'Sensor element aged beyond calibration window'
-        de: 'Sensorelement gealtert über Kalibrierfenster hinaus'
+        en: High resistance in sensor wiring or ECM grounds
+        de: Hoher Widerstand in Sensorleitungen oder Steuergerätemassen
   symptoms:
-    - en: 'Check engine light or DPF warning light on'
-      de: 'Motorkontrollleuchte oder DPF-Warnleuchte an'
-    - en: 'Power loss / limp mode'
-      de: 'Leistungsverlust / Notlauf'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
-    - en: 'Failed forced regeneration attempts'
-      de: 'Fehlgeschlagene Zwangsregenerationsversuche'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: DPF warning, regeneration inhibited or too frequent
+      de: DPF-Warnung, Regeneration gesperrt oder zu häufig
+    - en: Reduced power on some vehicles
+      de: Bei manchen Fahrzeugen Leistungsreduzierung
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [80, 350]
-    estimated_hours: [0.3, 1.5]
+    estimated_cost_eur: [20, 350]
+    estimated_hours: [0.3, 2]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2452]
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [P2452, P2454, P2455, P2463, P2002]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_particulate_filter
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2009/09OBDG01%20DURAMAX%20Engine%20Diagnostics.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2014/14OBDG04%20Engine%20Diagnostics.pdf
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
+    - https://saabwisonline.com/9-5-9650/2010/2-engine/engine-management-and-fuel-system-4-cyl-diesel/fault-diagnosis-diagnostic-trouble-codes/dtc-p2453
+    - https://static.nhtsa.gov/odi/tsbs/2013/SB-10065349-6903.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2015/MC-10150621-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10175699-9999.pdf
+  reviewed: '2026-11-03'
 
 - code: P2454
   category: powertrain
   title:
-    en: Diesel Particulate Filter Pressure Sensor Circuit Low
-    de: DPF Drucksensor Stromkreis Signal zu niedrig
+    en: Diesel Particulate Filter Pressure Sensor A Circuit Low
+    de: Dieselpartikelfilter Drucksensor A Stromkreis zu niedrig
   description:
-    en: Voltage on the DPF differential-pressure sensor signal line is below the lower threshold. Typically a short to ground or an open in the supply line.
-    de: Die Spannung auf der Signalleitung des DPF-Differenzdrucksensors liegt unter dem Schwellwert. Typisch ein Kurzschluss nach Masse oder eine Unterbrechung der Versorgungsleitung.
+    en: "The particulate filter pressure sensor is a three-wire part: the ECM feeds it 5 V and ground and reads a signal that rises with the pressure difference across the filter. P2454 means that signal sits below the lowest plausible value. Ford's 2023 diesels fail below 0.10 V within 2 s, where 0.45 V corresponds to zero pressure difference; GM's 2018 diesels fail below 3 % of the supply with 80 of 160 samples. On the Opel/GM 2.0 CDTi in the Saab 9-5 (2010) an open circuit sets P2454 as well as a short to ground, after 2 s, so a disconnected plug reads low there. A shorted 5 V reference can also pull the signal down and usually sets P0641 alongside. Audi (Q7 TDI 2009 to 2011) saw P2454 from moisture inside sensor G505, and Chrysler lists it on the 2.8 diesel Town and Country with a sensor and connector check. Without the signal the filter load is estimated and regeneration may be limited."
+    de: "Der Drucksensor des Partikelfilters hat drei Leitungen: Das Steuergerät versorgt ihn mit 5 V und Masse und liest ein Signal, das mit dem Differenzdruck über dem Filter steigt. P2454 heißt, dass dieses Signal unter dem kleinsten plausiblen Wert liegt. Fords Diesel 2023 melden unter 0,10 V binnen 2 s, wobei 0,45 V null Differenzdruck entspricht; GMs Diesel 2018 melden unter 3 % der Versorgung bei 80 von 160 Proben. Beim Opel/GM 2.0 CDTi im Saab 9-5 (2010) setzt eine Unterbrechung P2454 ebenso wie ein Masseschluss, nach 2 s – ein abgezogener Stecker liest dort also niedrig. Auch eine kurzgeschlossene 5-V-Referenz zieht das Signal herunter und setzt meist zusätzlich P0641. Audi (Q7 TDI 2009 bis 2011) sah P2454 durch Feuchtigkeit im Sensor G505, Chrysler führt ihn beim Town and Country 2.8 Diesel mit Prüfung von Sensor und Stecker. Ohne Signal wird die Beladung geschätzt, die Regeneration ist ggf. eingeschränkt."
   affected_components:
     - dpf_differential_pressure_sensor
     - dpf_pressure_sensor_wiring
+    - ecm
   common_causes:
-    - id: signal_short_to_ground
+    - id: signal_open_or_short_ground
       likelihood: high
       label:
-        en: Signal wire shorted to ground
-        de: Signalleitung gegen Masse kurzgeschlossen
-    - id: supply_open
+        en: Signal wire open or shorted to ground, connector unplugged
+        de: Signalleitung unterbrochen oder mit Masse verbunden, Stecker ab
+    - id: sensor_internal
       likelihood: medium
       label:
-        en: Reference voltage line open
-        de: Versorgungsleitung unterbrochen
-    - id: connector_corrosion
+        en: Internal sensor failure, for example from moisture
+        de: Interner Sensordefekt, etwa durch Feuchtigkeit
+    - id: reference_short
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: 5 V reference shorted by another sensor on the same supply
+        de: 5-V-Referenz durch einen anderen Sensor am gleichen Versorgungskreis kurzgeschlossen
   symptoms:
-    - en: 'Check engine light or DPF warning light on'
-      de: 'Motorkontrollleuchte oder DPF-Warnleuchte an'
-    - en: 'Power loss / limp mode'
-      de: 'Leistungsverlust / Notlauf'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
-    - en: 'Failed forced regeneration attempts'
-      de: 'Fehlgeschlagene Zwangsregenerationsversuche'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: DPF warning or regeneration inhibited
+      de: DPF-Warnung oder Regeneration gesperrt
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [60, 300]
+    estimated_cost_eur: [30, 300]
     estimated_hours: [0.3, 1.5]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2452]
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2452, P2453, P2455, P0641]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_particulate_filter
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG04%20Engine%20Diagnostics.pdf
+    - https://saabwisonline.com/9-5-9650/2010/2-engine/engine-management-and-fuel-system-4-cyl-diesel/fault-diagnosis-diagnostic-trouble-codes/dtc-p2454-or-p2455
+    - https://static.nhtsa.gov/odi/tsbs/2013/SB-10065349-6903.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2015/MC-10150621-9999.pdf
+  reviewed: '2026-11-03'
 
 - code: P2455
   category: powertrain
   title:
-    en: Diesel Particulate Filter Pressure Sensor Circuit High
-    de: DPF Drucksensor Stromkreis Signal zu hoch
+    en: Diesel Particulate Filter Pressure Sensor A Circuit High
+    de: Dieselpartikelfilter Drucksensor A Stromkreis zu hoch
   description:
-    en: Voltage on the DPF pressure sensor line exceeds the upper threshold. Usually a short to supply or an open ground on the sensor.
-    de: Die Spannung auf der DPF-Drucksensor-Leitung übersteigt den oberen Schwellwert. Meist ein Kurzschluss nach Plus oder eine unterbrochene Masseleitung am Sensor.
+    en: P2455 means the particulate filter pressure sensor signal sits above the highest plausible value, at the top of the 5 V range. Ford's 2023 diesels and the Opel/GM 2.0 CDTi in the Saab 9-5 (2010) both use 4.9 V as the limit, Ford within 2 s and Saab after 1 s; on Ford's 6.7 L the signal follows roughly 0.082 V per kPa above 0.45 V, so 4.9 V would be about 54 kPa. Typical faults are a signal wire shorted to the 5 V reference or to battery voltage, or an open low-reference (ground) circuit, which Saab lists among the circuit faults for this code. A real pressure that high from a blocked filter is unusual and would normally first raise soot codes such as P2463. Chrysler lists P2455 on the 2.8 diesel Town and Country with a sensor and connector check. The ECM falls back to a modelled soot load and may limit regeneration.
+    de: P2455 bedeutet, dass das Signal des Partikelfilter-Drucksensors über dem größten plausiblen Wert am oberen Ende des 5-V-Bereichs liegt. Fords Diesel 2023 und der Opel/GM 2.0 CDTi im Saab 9-5 (2010) nutzen beide 4,9 V als Grenze, Ford binnen 2 s, Saab nach 1 s; beim 6,7-l-Ford steigt das Signal etwa um 0,082 V je kPa über 0,45 V, 4,9 V wären also rund 54 kPa. Typische Fehler sind eine Signalleitung mit Schluss zur 5-V-Referenz oder zur Batteriespannung oder eine unterbrochene Masseleitung, die Saab unter den Kreisfehlern dieses Codes führt. Ein echter so hoher Druck durch einen verstopften Filter ist ungewöhnlich und würde zuerst Rußcodes wie P2463 auslösen. Chrysler führt P2455 beim Town and Country 2.8 Diesel mit Prüfung von Sensor und Stecker. Das Steuergerät rechnet dann mit einer modellierten Beladung und begrenzt ggf. die Regeneration.
   affected_components:
     - dpf_differential_pressure_sensor
     - dpf_pressure_sensor_wiring
+    - ecm
   common_causes:
-    - id: signal_short_to_power
+    - id: signal_short_voltage
       likelihood: high
       label:
-        en: Signal shorted to supply
-        de: Signal gegen Versorgung kurzgeschlossen
+        en: Signal wire shorted to 5 V reference or battery voltage
+        de: Signalleitung mit Schluss zur 5-V-Referenz oder Batteriespannung
     - id: ground_open
       likelihood: medium
       label:
-        en: Sensor ground open
-        de: Sensormasse unterbrochen
-    - id: connector_corrosion
-      likelihood: low
+        en: Sensor low-reference (ground) circuit open
+        de: Masseleitung des Sensors unterbrochen
+    - id: sensor_internal
+      likelihood: medium
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Internal sensor failure
+        de: Interner Sensordefekt
   symptoms:
-    - en: 'Check engine light or DPF warning light on'
-      de: 'Motorkontrollleuchte oder DPF-Warnleuchte an'
-    - en: 'Power loss / limp mode'
-      de: 'Leistungsverlust / Notlauf'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
-    - en: 'Failed forced regeneration attempts'
-      de: 'Fehlgeschlagene Zwangsregenerationsversuche'
+    - en: Malfunction indicator lamp on
+      de: Motorkontrollleuchte an
+    - en: DPF warning or regeneration inhibited
+      de: DPF-Warnung oder Regeneration gesperrt
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [60, 300]
+    estimated_cost_eur: [30, 300]
     estimated_hours: [0.3, 1.5]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-  related_codes: [P2452]
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2452, P2453, P2454, P2463]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_particulate_filter
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
+    - https://saabwisonline.com/9-5-9650/2010/2-engine/engine-management-and-fuel-system-4-cyl-diesel/fault-diagnosis-diagnostic-trouble-codes/dtc-p2454-or-p2455
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2009/09OBDG01%20DURAMAX%20Engine%20Diagnostics.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2015/MC-10150621-9999.pdf
+  reviewed: '2026-11-03'
 
 - code: P2456
   category: powertrain
@@ -48859,49 +49047,58 @@
 - code: P2458
   category: powertrain
   title:
-    en: DPF Regeneration Duration
-    de: DPF-Regeneration Dauer
+    en: Diesel Particulate Filter Regeneration Duration
+    de: Dieselpartikelfilter Regenerationsdauer
   description:
-    en: The DPF regeneration cycle takes longer than the calibrated maximum. The ECU sets this code when the soot load is not being burned off within the expected window — common after many short trips or with degraded post-injection.
-    de: Der DPF-Regenerationszyklus dauert länger als das kalibrierte Maximum. Die Motorsteuerung setzt diesen Code, wenn die Rußbeladung nicht im erwarteten Zeitfenster abgebrannt wird — häufig nach vielen Kurzstrecken oder bei schwacher Nacheinspritzung.
+    en: During a regeneration the engine raises exhaust temperature, mostly by late post-injection burned in the oxidation catalyst, until the soot in the particulate filter oxidises. P2458 means a regeneration took longer than the calibrated limit, so the filter was not cleaned in the expected time. CARB asks diesel OBD to detect regenerations that do not complete as intended. On the Opel/GM 2.0 CDTi in the Saab 9-5 (2010) the ECM runs the check with coolant at 73 to 96 °C and sets the code when regeneration times are too long; it is a Type C code there, stored without the MIL. Volkswagen saw P2458 with the MIL on 2011 Jetta and Golf 2.0 TDI (CJAA) and fixed it with an ECM software update, so the calibration is worth checking before parts are replaced. Otherwise the regeneration is slowed by low exhaust temperature, a weak oxidation catalyst, faulty temperature or pressure readings, or trips too short to finish. P2459 covers regenerations that happen too often.
+    de: Bei einer Regeneration hebt der Motor die Abgastemperatur, meist durch späte Nacheinspritzung, die im Oxidationskatalysator verbrennt, bis der Ruß im Partikelfilter abbrennt. P2458 heißt, dass eine Regeneration länger dauerte als die kalibrierte Grenze und der Filter nicht in der erwarteten Zeit frei wurde. CARB verlangt, dass Diesel-OBD nicht wie vorgesehen abgeschlossene Regenerationen erkennt. Beim Opel/GM 2.0 CDTi im Saab 9-5 (2010) prüft das Steuergerät bei Kühlmitteltemperatur zwischen 73 und 96 °C und setzt den Code bei zu langen Regenerationszeiten; dort ist er ein Typ-C-Code und wird ohne Kontrollleuchte gespeichert. Volkswagen hatte P2458 mit Kontrollleuchte bei Jetta und Golf 2.0 TDI (CJAA) 2011 und behob es per Software-Update – die Kalibrierung lohnt also eine Prüfung, bevor Teile getauscht werden. Sonst bremsen zu niedrige Abgastemperatur, ein schwacher Oxidationskatalysator, falsche Temperatur- oder Druckwerte oder zu kurze Fahrten die Regeneration. Zu häufige Regenerationen meldet P2459.
   affected_components:
     - diesel_particulate_filter
-    - dpf_temperature_sensor
-    - fuel_injectors
+    - diesel_oxidation_catalyst
+    - exhaust_gas_temperature_sensor
+    - dpf_differential_pressure_sensor
+    - ecm
   common_causes:
-    - id: dpf_loaded_failed_regen
-      likelihood: high
-      label:
-        en: Heavy soot load, short trips
-        de: Hohe Russbeladung, Kurzstrecken
-    - id: post_injection_weak
+    - id: ecm_calibration
       likelihood: medium
       label:
-        en: Post-injection insufficient
-        de: Nacheinspritzung zu schwach
+        en: ECM calibration that needs an update (documented by Volkswagen)
+        de: Steuergerätesoftware, die ein Update braucht (bei Volkswagen dokumentiert)
+    - id: short_trips_interrupted_regen
+      likelihood: medium
+      label:
+        en: Short trips that keep regenerations from finishing
+        de: Kurzstrecken, auf denen Regenerationen nicht fertig werden
+    - id: doc_low_activity
+      likelihood: low
+      label:
+        en: Oxidation catalyst too weak to reach regeneration temperature
+        de: Oxidationskatalysator erreicht die Regenerationstemperatur nicht mehr
   symptoms:
-    - en: 'Check engine light or DPF warning light on'
-      de: 'Motorkontrollleuchte oder DPF-Warnleuchte an'
-    - en: 'Power loss / limp mode'
-      de: 'Leistungsverlust / Notlauf'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
-    - en: 'Failed forced regeneration attempts'
-      de: 'Fehlgeschlagene Zwangsregenerationsversuche'
+    - en: DPF warning or MIL, depending on the manufacturer
+      de: DPF-Warnung oder Motorkontrollleuchte, je nach Hersteller
+    - en: Cooling fan and raised idle running on after shutdown
+      de: Lüfter und erhöhte Leerlaufdrehzahl laufen nach dem Abstellen nach
+    - en: Higher fuel consumption
+      de: Höherer Kraftstoffverbrauch
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur: [150, 1500]
-    estimated_hours: [0.5, 4.0]
+    estimated_cost_eur: [0, 1500]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
-    limp_mode_possible: true
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2459, P2463, P2002, P24A2]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_particulate_filter
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://saabwisonline.com/9-5-9650/2010/2-engine/engine-management-and-fuel-system-4-cyl-diesel/fault-diagnosis-diagnostic-trouble-codes/dtc-p2458
+    - https://static.nhtsa.gov/odi/tsbs/2013/MC-10125823-9999.pdf
+  reviewed: '2026-11-03'
 
 - code: P2459
   category: powertrain
@@ -48909,50 +49106,58 @@
     en: Diesel Particulate Filter Regeneration Frequency
     de: Dieselpartikelfilter Regenerationshäufigkeit
   description:
-    en: Active DPF regenerations are being requested more often than the calibration window allows. Indicates that soot accumulates faster than the filter can burn it off — typically due to short-trip use, leaking injectors, or excessive engine oil consumption.
-    de: Aktive DPF-Regenerationen werden häufiger angefordert als das Kalibrierungsfenster zulässt. Hinweis darauf, dass Ruß schneller anfällt als der Filter ihn abbrennen kann — typisch bei Kurzstreckenbetrieb, undichten Injektoren oder hohem Motorölverbrauch.
+    en: P2459 means the particulate filter is being regenerated more often than the calibration expects. CARB requires diesel OBD to flag regeneration so frequent that emissions would exceed the limit; frequent regeneration also dilutes oil and costs fuel. Ford's 2023 diesels set it when the average distance between completed regenerations falls below about 40 km. GM's 2014 Cruze 2.0 diesel compares the soot load that triggered a regeneration with a table built from the engine-out soot model, and GM's 2018 diesels flag a ratio of 10 or more between the pressure-based soot estimate and the engine-out model, citing dirty combustion, a leak in the intake or exhaust, or an inefficient filter. The Opel/GM 2.0 CDTi in the Saab 9-5 (2010) instead counts too many interrupted regenerations, as a Type C code. Stellantis replaced the filter on 2022 to 2023 Ram 2500/3500 6.7 Cummins over a manufacturing issue; left alone, the engine eventually derates.
+    de: P2459 bedeutet, dass der Partikelfilter häufiger regeneriert wird, als die Kalibrierung erwartet. CARB verlangt, dass Diesel-OBD so häufige Regenerationen meldet, dass die Emissionen den Grenzwert überschreiten würden; häufiges Regenerieren verdünnt zudem das Öl und kostet Kraftstoff. Fords Diesel 2023 setzen den Code, wenn der mittlere Abstand zwischen abgeschlossenen Regenerationen unter etwa 40 km fällt. GMs Cruze 2.0 Diesel 2014 vergleicht die Rußbeladung beim Auslösen mit einer Tabelle aus dem Rohemissionsmodell, GMs Diesel 2018 werten ein Verhältnis ab 10 zwischen druckbasierter Rußschätzung und Rohemissionsmodell und nennen schmutzige Verbrennung, ein Leck in Ansaugung oder Abgasanlage oder einen ineffizienten Filter. Der Opel/GM 2.0 CDTi im Saab 9-5 (2010) zählt stattdessen zu viele abgebrochene Regenerationen, als Typ-C-Code. Stellantis tauschte bei Ram 2500/3500 6.7 Cummins 2022 bis 2023 wegen eines Fertigungsproblems den Filter; bleibt der Code stehen, nimmt der Motor irgendwann Leistung zurück.
   affected_components:
     - diesel_particulate_filter
+    - dpf_differential_pressure_sensor
     - fuel_injector
-    - turbocharger
+    - egr_valve
+    - ecm
   common_causes:
-    - id: short_trip_usage
-      likelihood: high
-      label:
-        en: Predominantly short-trip operation
-        de: Überwiegend Kurzstreckenbetrieb
-    - id: injector_leaking
+    - id: high_engine_out_soot
       likelihood: medium
       label:
-        en: Leaking injector raises soot output
-        de: Undichter Injektor erhöht Rußausstoß
-    - id: oil_consumption_high
+        en: High soot output from the engine (injectors, EGR, air leaks)
+        de: Hoher Rußausstoß des Motors (Injektoren, AGR, Luftlecks)
+    - id: dp_sensing_error
       likelihood: medium
       label:
-        en: High engine oil consumption (turbo seals, valve stems)
-        de: Hoher Motorölverbrauch (Turbo-Dichtungen, Ventilschäfte)
+        en: Differential pressure reading too high (sensor, blocked or swapped hoses)
+        de: Differenzdruck zu hoch gemessen (Sensor, verstopfte oder vertauschte Schläuche)
+    - id: dpf_ash_or_defect
+      likelihood: low
+      label:
+        en: Filter loaded with ash or defective from manufacture
+        de: Filter mit Asche beladen oder ab Werk fehlerhaft
   symptoms:
-    - en: 'Check engine light or DPF warning light on'
-      de: 'Motorkontrollleuchte oder DPF-Warnleuchte an'
-    - en: 'Power loss / limp mode'
-      de: 'Leistungsverlust / Notlauf'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
-    - en: 'Failed forced regeneration attempts'
-      de: 'Fehlgeschlagene Zwangsregenerationsversuche'
+    - en: MIL or DPF warning
+      de: Motorkontrollleuchte oder DPF-Warnung
+    - en: Higher fuel consumption and rising oil level
+      de: Höherer Kraftstoffverbrauch und steigender Ölstand
+    - en: Reduced engine power if the fault persists
+      de: Leistungsreduzierung, wenn der Fehler bestehen bleibt
   repair:
-    difficulty: medium
+    difficulty: hard
     diy_possible: false
-    estimated_cost_eur: [100, 1500]
-    estimated_hours: [1.0, 6.0]
+    estimated_cost_eur: [100, 3000]
+    estimated_hours: [1, 5]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [P2458, P2463, P2453, P2002]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_particulate_filter
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2014/14OBDG04%20Engine%20Diagnostics.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG04%20Engine%20Diagnostics.pdf
+    - https://saabwisonline.com/9-5-9650/2010/2-engine/engine-management-and-fuel-system-4-cyl-diesel/fault-diagnosis-diagnostic-trouble-codes/dtc-p2459
+    - https://static.nhtsa.gov/odi/tsbs/2024/MC-11009479-0001.pdf
+  reviewed: '2026-11-03'
 
 - code: P245A
   category: powertrain
@@ -49361,54 +49566,61 @@
 - code: P2463
   category: powertrain
   title:
-    en: Diesel Particulate Filter Restriction — Soot Accumulation
-    de: Dieselpartikelfilter Verstopfung — Rußbeladung
+    en: Diesel Particulate Filter Restriction - Soot Accumulation (Bank 1)
+    de: Dieselpartikelfilter Verstopfung – Rußbeladung (Bank 1)
   description:
-    en: The estimated soot mass in the DPF has crossed the upper limit and the ECU could not complete a regeneration to bring it back down. Very common on cars used on short trips. Continued driving in this state risks a runaway regeneration that destroys the filter.
-    de: Die geschätzte Rußmasse im DPF hat den oberen Grenzwert überschritten und die Motorsteuerung konnte sie nicht durch eine Regeneration zurückführen. Sehr häufig bei Fahrzeugen mit Kurzstreckenprofil. Weiterfahren in diesem Zustand birgt das Risiko einer unkontrollierten Regeneration, die den Filter zerstört.
+    en: "P2463 means the soot load in the particulate filter has passed the level at which the engine still regenerates it on its own. GM's 2009 Duramax sets it at 70 g or more for 5 minutes, the 2014 Cruze 2.0 diesel at more than 32 g for 30 s, both as Type A codes; GM's 2018 diesels use the pressure-based soot model with 120 failures in 150 samples. On the Cruze the ECM then turns on the MIL, reduces engine power and blocks normal regeneration, so a dealer service regeneration is needed. GM's bulletin on the related driver messages notes that the filter cleans itself about once per tank and needs driving above 50 km/h; extended idling and stop-and-go traffic keep it from finishing. The underlying cause is not always the driving: Stellantis traced P2463 with P2453 to broken differential pressure sensor wiring and PCM grounds, Mack to a failed aftertreatment fuel doser. Check those before regenerating, or the code returns."
+    de: "P2463 heißt, dass die Rußbeladung im Partikelfilter die Grenze überschritten hat, bis zu der der Motor ihn noch selbst regeneriert. Der GM-Duramax 2009 setzt den Code ab 70 g für 5 Minuten, der Cruze 2.0 Diesel 2014 ab mehr als 32 g für 30 s, beide als Typ-A-Codes; GMs Diesel 2018 nutzen das druckbasierte Rußmodell mit 120 Fehlern in 150 Proben. Beim Cruze schaltet das Steuergerät dann die Kontrollleuchte ein, reduziert die Leistung und sperrt die normale Regeneration, sodass eine Service-Regeneration in der Werkstatt nötig ist. GMs Bulletin zu den zugehörigen Fahrermeldungen nennt eine Selbstreinigung etwa einmal pro Tankfüllung, die Fahrt über 50 km/h braucht; langes Leerlaufen und Stop-and-go verhindern den Abschluss. Die Ursache liegt nicht immer im Fahrprofil: Stellantis fand bei P2463 mit P2453 unterbrochene Leitungen des Differenzdrucksensors und schlechte PCM-Massen, Mack einen defekten Kraftstoffdosierer der Abgasnachbehandlung. Das vor der Regeneration prüfen, sonst kommt der Code wieder."
   affected_components:
     - diesel_particulate_filter
     - dpf_differential_pressure_sensor
-    - exhaust_temperature_sensor
+    - exhaust_gas_temperature_sensor
+    - aftertreatment_fuel_doser
   common_causes:
-    - id: dpf_loaded_failed_regen
+    - id: regen_not_completed
       likelihood: high
       label:
-        en: DPF heavily loaded after multiple aborted regenerations
-        de: DPF stark beladen nach mehrfach abgebrochenen Regenerationen
-    - id: short_trip_usage
-      likelihood: high
+        en: Regenerations not completed because of short trips or long idling
+        de: Regenerationen wegen Kurzstrecken oder langem Leerlauf nicht abgeschlossen
+    - id: dp_sensor_circuit
+      likelihood: medium
       label:
-        en: Predominantly short-trip operation
-        de: Überwiegend Kurzstreckenbetrieb
-    - id: dpf_pressure_sensor_drift
+        en: Differential pressure sensor, its hoses or wiring reading too high
+        de: Differenzdrucksensor, Schläuche oder Leitungen liefern zu hohe Werte
+    - id: regen_hardware_fault
       likelihood: low
       label:
-        en: Differential pressure sensor reading drifted high
-        de: Differenzdrucksensor liest zu hoch
+        en: Fault that prevents regeneration (fuel doser, temperature sensor)
+        de: Fehler, der die Regeneration verhindert (Kraftstoffdosierer, Temperatursensor)
   symptoms:
-    - en: 'Check engine light or DPF warning light on'
-      de: 'Motorkontrollleuchte oder DPF-Warnleuchte an'
-    - en: 'Power loss / limp mode'
-      de: 'Leistungsverlust / Notlauf'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
-    - en: 'Failed forced regeneration attempts'
-      de: 'Fehlgeschlagene Zwangsregenerationsversuche'
+    - en: DPF full or exhaust filter message in the cluster
+      de: Meldung Partikelfilter voll bzw. Abgasfilter reinigen im Kombiinstrument
+    - en: MIL on and reduced engine power
+      de: Motorkontrollleuchte an und Leistungsreduzierung
+    - en: Higher fuel consumption
+      de: Höherer Kraftstoffverbrauch
   repair:
-    difficulty: hard
+    difficulty: medium
     diy_possible: false
-    estimated_cost_eur: [150, 3500]
-    estimated_hours: [1.0, 8.0]
+    estimated_cost_eur: [100, 2500]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [P2453, P2459, P2458, P2002, P242F]
   sources:
-    - https://en.wikipedia.org/wiki/Diesel_particulate_filter
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2009/09OBDG01%20DURAMAX%20Engine%20Diagnostics.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2014/14OBDG04%20Engine%20Diagnostics.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG04%20Engine%20Diagnostics.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10135226-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2019/MC-10168209-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10175699-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11023376-0001.pdf
+  reviewed: '2026-11-03'
 
 - code: P2464
   category: powertrain
