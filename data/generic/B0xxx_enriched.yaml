@@ -195,8 +195,8 @@
 - code: B0005
   category: body
   title:
-    en: Driver Frontal Deployment Loop Open
-    de: Fahrer-Frontairbag Auslösekreis unterbrochen
+    en: Collapsible Steering Column Deployment Control
+    de: Auslösekreis der zusammenschiebbaren Lenksäule
   description:
     en: The SRS module detects an open circuit in the driver frontal airbag deployment loop. The airbag will not deploy in a crash and the SRS warning lamp is illuminated.
     de: Das SRS-Steuergerät erkennt eine Unterbrechung im Auslösekreis des Fahrer-Frontairbags. Der Airbag löst im Crashfall nicht aus und die SRS-Warnleuchte leuchtet.
@@ -221,15 +221,15 @@
         en: Wiring harness break in steering column
         de: Kabelbruch im Lenksäulenstrang
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [150, 1100]
-    estimated_hours: [0.8, 3.0]
+    estimated_hours: [0.8, 3]
   flags:
     mil: false
     emissions_relevant: false
@@ -688,8 +688,8 @@
 - code: B0018
   category: body
   title:
-    en: Right Front/Passenger Frontal Deployment Loop Resistance High
-    de: Beifahrer-Frontairbag Auslösekreis Widerstand zu hoch
+    en: Center Frontal Stage 1 Deployment Control
+    de: Frontairbag Mitte Stufe 1 Auslösekreis
   description:
     en: The SRS module measures a higher than expected resistance in the passenger frontal deployment loop, indicating partial corrosion or damage. The airbag may not deploy reliably.
     de: Das SRS-Steuergerät misst einen zu hohen Widerstand im Auslösekreis des Beifahrer-Frontairbags, was auf Korrosion oder Beschädigung hinweist. Der Airbag kann unzuverlässig auslösen.
@@ -708,10 +708,10 @@
         en: High resistance from cable damage
         de: Hoher Widerstand durch Kabelschaden
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
@@ -729,8 +729,8 @@
 - code: B0019
   category: body
   title:
-    en: Right Front/Passenger Frontal Deployment Loop Resistance Low
-    de: Beifahrer-Frontairbag Auslösekreis Widerstand zu niedrig
+    en: Center Frontal Stage 2 Deployment Control
+    de: Frontairbag Mitte Stufe 2 Auslösekreis
   description:
     en: The SRS module detects too low a resistance in the front passenger airbag deployment loop, suggesting a partial short. Deployment of that stage is inhibited.
     de: Das SRS-Steuergerät erkennt einen zu niedrigen Widerstand im Auslösekreis des Beifahrer-Frontairbags, was auf einen Teilkurzschluss hindeutet. Die Auslösung dieser Stufe wird gesperrt.
@@ -749,15 +749,15 @@
         en: Bridged connector pins by debris
         de: Pins durch Schmutz überbrückt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [150, 1000]
-    estimated_hours: [0.8, 3.0]
+    estimated_hours: [0.8, 3]
   flags:
     mil: false
     emissions_relevant: false
@@ -1289,8 +1289,8 @@
 - code: B0031
   category: body
   title:
-    en: Passenger Side Curtain Airbag Stage 2
-    de: Beifahrer-Kopfairbag Stufe 2
+    en: Second Row Left Frontal Stage 1 Deployment Control
+    de: Zweite Reihe links Frontairbag Stufe 1 Auslösekreis
   description:
     en: The SRS module has detected a fault in the passenger-side curtain airbag stage 2 deployment circuit. Same fault profile as B0030 but for the passenger side.
     de: Das SRS-Steuergerät hat einen Fehler im Auslösekreis der zweiten Stufe des Beifahrer-Kopfairbags erkannt. Gleiches Fehlerbild wie B0030, jedoch für die Beifahrerseite.
@@ -1310,15 +1310,15 @@
         en: Roof rail connector loose
         de: Dachrahmen-Stecker lose
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [300, 2000]
-    estimated_hours: [1.0, 5.0]
+    estimated_hours: [1, 5]
   flags:
     mil: false
     emissions_relevant: false
@@ -1331,8 +1331,8 @@
 - code: B0032
   category: body
   title:
-    en: Right Side Deployment Stage 1 Loop Open
-    de: Seitenairbag rechts Stufe 1 Auslösekreis unterbrochen
+    en: Second Row Left Frontal Stage 2 Deployment Control
+    de: Zweite Reihe links Frontairbag Stufe 2 Auslösekreis
   description:
     en: An open circuit is detected in the right side (passenger) airbag stage 1 deployment loop.
     de: Im Auslösekreis des rechten Seitenairbags (Beifahrerseite) Stufe 1 ist eine Unterbrechung erkannt worden.
@@ -1351,10 +1351,10 @@
         en: Wire break in passenger seat harness
         de: Kabelbruch im Beifahrersitz-Strang
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
@@ -1372,8 +1372,8 @@
 - code: B0033
   category: body
   title:
-    en: Right Side Deployment Stage 1 Loop Short to Ground
-    de: Seitenairbag rechts Stufe 1 Auslösekreis Kurzschluss nach Masse
+    en: Second Row Left Frontal Stage 3 Deployment Control
+    de: Zweite Reihe links Frontairbag Stufe 3 Auslösekreis
   description:
     en: The deployment loop for the right side airbag stage 1 is shorted to ground; deployment is inhibited.
     de: Der Auslösekreis des rechten Seitenairbags Stufe 1 ist nach Masse kurzgeschlossen; die Auslösung ist gesperrt.
@@ -1392,10 +1392,10 @@
         en: Water intrusion at connector
         de: Wassereintritt am Stecker
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
@@ -1642,8 +1642,8 @@
 - code: B0040
   category: body
   title:
-    en: Outside Temperature Sensor Circuit
-    de: Außentemperatursensor Schaltung
+    en: Third Row Left Side Airbag Deployment Control
+    de: Dritte Reihe links Seitenairbag Auslösekreis
   description:
     en: The HVAC or body control module has detected an implausible signal from the outside (ambient) temperature sensor. The displayed outside temperature may be wrong or missing and automatic climate control may behave incorrectly.
     de: Das Klima- oder Karosserie-Steuergerät hat ein unplausibles Signal vom Außentemperatursensor erkannt. Die Anzeige der Außentemperatur kann fehlerhaft sein und die Klimaautomatik kann falsch regeln.
@@ -1663,15 +1663,15 @@
         en: Wiring or connector fault to sensor
         de: Verkabelungs- oder Steckerfehler am Sensor
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: easy
     diy_possible: true
     estimated_cost_eur: [30, 150]
-    estimated_hours: [0.3, 1.0]
+    estimated_hours: [0.3, 1]
   flags:
     mil: false
     emissions_relevant: false
@@ -1722,8 +1722,8 @@
 - code: B0042
   category: body
   title:
-    en: Side Deployment Loop Open (Generic)
-    de: Seiten-Auslösekreis unterbrochen (allgemein)
+    en: Third Row Left Frontal Stage 2 Deployment Control
+    de: Dritte Reihe links Frontairbag Stufe 2 Auslösekreis
   description:
     en: A generic open-circuit fault has been reported in a side airbag deployment loop. Refer to vehicle service data to determine the affected side and stage.
     de: Eine allgemeine Unterbrechung im Auslösekreis eines Seitenairbags wurde gemeldet. Detaillierte Service-Daten klären die betroffene Seite und Stufe.
@@ -1742,10 +1742,10 @@
         en: Broken wire in seat harness
         de: Kabelbruch im Sitzstrang
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
@@ -2077,8 +2077,8 @@
 - code: B0051
   category: body
   title:
-    en: Driver Frontal Deployment Control Open
-    de: Fahrer-Frontairbag Auslösekreis offen
+    en: First Row Center Seat Belt Sensor
+    de: Erste Reihe Mitte Gurtsensor
   description:
     en: The SRS module has detected an open circuit in the driver frontal airbag deployment loop. Resistance is above the upper threshold, indicating broken wiring or a disconnected igniter.
     de: Das SRS-Steuergerät hat eine Unterbrechung im Auslösekreis des Fahrer-Frontairbags erkannt. Der Widerstand liegt über dem oberen Schwellwert, was auf eine unterbrochene Verkabelung oder einen abgezogenen Zünder hinweist.
@@ -2104,15 +2104,15 @@
         en: Wiring open between module and squib
         de: Verkabelung zwischen Steuergerät und Zünder unterbrochen
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [200, 1200]
-    estimated_hours: [1.0, 3.0]
+    estimated_hours: [1, 3]
   flags:
     mil: false
     emissions_relevant: false
@@ -2163,11 +2163,11 @@
 - code: B0053
   category: body
   title:
-    en: Passenger Pretensioner Deployment Control
-    de: Beifahrer-Gurtstraffer Auslösekreis
+    en: Second Row Left Seat Belt Sensor
+    de: Zweite Reihe links Gurtsensor
   description:
-    en: 'Passenger Pretensioner Deployment Control: the restraints module has detected a fault in this airbag/pretensioner deployment circuit, which may prevent correct deployment in a crash. Safety-critical.'
-    de: 'Beifahrer-Gurtstraffer Auslösekreis: das Rückhaltesystem-Steuergerät hat einen Fehler in diesem Airbag-/Gurtstraffer-Auslösekreis erkannt, der die korrekte Auslösung im Crash verhindern kann. Sicherheitskritisch.'
+    en: "Passenger Pretensioner Deployment Control: the restraints module has detected a fault in this airbag/pretensioner deployment circuit, which may prevent correct deployment in a crash. Safety-critical."
+    de: "Beifahrer-Gurtstraffer Auslösekreis: das Rückhaltesystem-Steuergerät hat einen Fehler in diesem Airbag-/Gurtstraffer-Auslösekreis erkannt, der die korrekte Auslösung im Crash verhindern kann. Sicherheitskritisch."
   affected_components:
     - passenger_pretensioner
     - srs_control_module
@@ -2189,10 +2189,10 @@
         en: SRS control module fault
         de: Fehler im SRS-Steuergerät
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
@@ -2286,8 +2286,8 @@
 - code: B0056
   category: body
   title:
-    en: Right Curtain Deployment Loop Open
-    de: Kopfairbag rechts Auslösekreis unterbrochen
+    en: Third Row Left Seat Belt Sensor
+    de: Dritte Reihe links Gurtsensor
   description:
     en: The right curtain airbag deployment circuit shows an open condition; the curtain on the passenger side cannot deploy.
     de: Der Auslösekreis des rechten Kopfairbags ist unterbrochen; der Kopfairbag auf der Beifahrerseite kann nicht auslösen.
@@ -2306,15 +2306,15 @@
         en: Unseated curtain connector
         de: Nicht eingerasteter Kopfairbag-Stecker
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [200, 1500]
-    estimated_hours: [1.5, 5.0]
+    estimated_hours: [1.5, 5]
   flags:
     mil: false
     emissions_relevant: false
@@ -2327,8 +2327,8 @@
 - code: B0057
   category: body
   title:
-    en: Right Curtain Deployment Loop Short to Ground
-    de: Kopfairbag rechts Auslösekreis Kurzschluss nach Masse
+    en: Third Row Center Seat Belt Sensor
+    de: Dritte Reihe Mitte Gurtsensor
   description:
     en: The right curtain airbag deployment loop is shorted to ground.
     de: Der Auslösekreis des rechten Kopfairbags ist nach Masse kurzgeschlossen.
@@ -2342,15 +2342,15 @@
         en: Chafed pillar wiring
         de: Aufgescheuerte Säulen-Verkabelung
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [200, 1400]
-    estimated_hours: [1.5, 5.0]
+    estimated_hours: [1.5, 5]
   flags:
     mil: false
     emissions_relevant: false
@@ -2401,8 +2401,8 @@
 - code: B0060
   category: body
   title:
-    en: Knee Airbag Deployment Control
-    de: Knieairbag Auslösesteuerung
+    en: Driver Seat Belt Tension Sensor
+    de: Fahrer Gurtspannungssensor
   description:
     en: The SRS module has detected a fault in the deployment control circuit of a knee airbag. Knee protection in a frontal collision may be reduced.
     de: Das SRS-Steuergerät hat einen Fehler im Auslösekreis eines Knieairbags erkannt. Der Knieschutz bei einem Frontalaufprall kann eingeschränkt sein.
@@ -2422,15 +2422,15 @@
         en: Wiring damaged behind lower trim
         de: Verkabelung hinter Unterverkleidung beschädigt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [150, 1000]
-    estimated_hours: [1.0, 3.0]
+    estimated_hours: [1, 3]
   flags:
     mil: false
     emissions_relevant: false
@@ -2443,8 +2443,8 @@
 - code: B0061
   category: body
   title:
-    en: Knee Airbag Deployment Loop Open
-    de: Knieairbag Auslösekreis unterbrochen
+    en: Passenger Seat Belt Tension Sensor
+    de: Beifahrer Gurtspannungssensor
   description:
     en: An open is detected in the knee airbag deployment loop.
     de: Im Auslösekreis des Knieairbags wurde eine Unterbrechung erkannt.
@@ -2463,10 +2463,10 @@
         en: Wire break in lower harness
         de: Kabelbruch im unteren Strang
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
@@ -2562,8 +2562,8 @@
 - code: B0070
   category: body
   title:
-    en: Vehicle Rollover Sensor
-    de: Überschlagsensor
+    en: Driver Seat Belt Pretensioner A Deployment Control
+    de: Fahrer Gurtstraffer A Auslösekreis
   description:
     en: The SRS module has detected a fault in the rollover sensor circuit. The rollover sensor triggers curtain airbags and seat belt pretensioners when the vehicle approaches a tip-over angle.
     de: Das SRS-Steuergerät hat einen Fehler im Stromkreis des Überschlagsensors erkannt. Der Sensor löst Kopfairbags und Gurtstraffer aus, wenn sich das Fahrzeug einem Kippwinkel nähert.
@@ -2588,10 +2588,10 @@
         en: SRS control module fault
         de: Fehler im SRS-Steuergerät
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
@@ -2647,8 +2647,8 @@
 - code: B0072
   category: body
   title:
-    en: Driver Seatbelt Pretensioner Loop Open
-    de: Gurtstraffer Fahrer Auslösekreis unterbrochen
+    en: Passenger Seat Belt Pretensioner A Deployment Control
+    de: Beifahrer Gurtstraffer A Auslösekreis
   description:
     en: The SRS module detects an open circuit in the driver seatbelt pretensioner deployment loop. The pretensioner cannot fire and the airbag warning lamp is on.
     de: Das SRS-Steuergerät erkennt eine Unterbrechung im Auslösekreis des Fahrer-Gurtstraffers. Der Straffer kann nicht auslösen und die Airbag-Warnleuchte leuchtet.
@@ -2667,10 +2667,10 @@
         en: Wire break in B-pillar
         de: Kabelbruch in der B-Säule
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
@@ -2688,8 +2688,8 @@
 - code: B0073
   category: body
   title:
-    en: Driver Seatbelt Pretensioner Loop Short to Ground
-    de: Gurtstraffer Fahrer Auslösekreis Kurzschluss nach Masse
+    en: Second Row Left Seat Belt Pretensioner Deployment Control
+    de: Zweite Reihe links Gurtstraffer Auslösekreis
   description:
     en: The driver seatbelt pretensioner deployment circuit is shorted to ground.
     de: Der Auslösekreis des Fahrer-Gurtstraffers ist nach Masse kurzgeschlossen.
@@ -2703,10 +2703,10 @@
         en: Chafed wire in B-pillar
         de: Aufgescheuerter Draht in der B-Säule
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
@@ -2724,8 +2724,8 @@
 - code: B0074
   category: body
   title:
-    en: Driver Seatbelt Pretensioner Loop Short to Battery
-    de: Gurtstraffer Fahrer Auslösekreis Kurzschluss nach Plus
+    en: Second Row Center Seat Belt Pretensioner Deployment Control
+    de: Zweite Reihe Mitte Gurtstraffer Auslösekreis
   description:
     en: The driver seatbelt pretensioner deployment circuit is shorted to battery voltage, risking unintended firing.
     de: Der Auslösekreis des Fahrer-Gurtstraffers ist auf Batteriespannung kurzgeschlossen, was eine ungewollte Auslösung riskiert.
@@ -2739,15 +2739,15 @@
         en: Wire shorted to powered conductor
         de: Draht mit spannungsführender Leitung kurzgeschlossen
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [200, 900]
-    estimated_hours: [1.0, 3.0]
+    estimated_hours: [1, 3]
   flags:
     mil: false
     emissions_relevant: false
@@ -2798,8 +2798,8 @@
 - code: B0076
   category: body
   title:
-    en: Driver Seatbelt Pretensioner Resistance Low
-    de: Gurtstraffer Fahrer Widerstand zu niedrig
+    en: Third Row Left Seat Belt Pretensioner Deployment Control
+    de: Dritte Reihe links Gurtstraffer Auslösekreis
   description:
     en: The pretensioner deployment loop resistance is below the expected window, suggesting a partial short.
     de: Der Widerstand im Auslösekreis des Gurtstraffers liegt unter dem erwarteten Bereich, was auf einen Teilkurzschluss hindeutet.
@@ -2813,10 +2813,10 @@
         en: Partial short between leads
         de: Teilkurzschluss zwischen Leitungen
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
@@ -2834,8 +2834,8 @@
 - code: B0077
   category: body
   title:
-    en: Driver Seatbelt Pretensioner Resistance High
-    de: Gurtstraffer Fahrer Widerstand zu hoch
+    en: Third Row Center Seat Belt Pretensioner Deployment Control
+    de: Dritte Reihe Mitte Gurtstraffer Auslösekreis
   description:
     en: The driver seatbelt pretensioner loop resistance is above the expected window. The pretensioner may not fire reliably.
     de: Der Widerstand im Auslösekreis des Fahrer-Gurtstraffers liegt über dem erwarteten Bereich. Der Straffer kann unzuverlässig auslösen.
@@ -2849,10 +2849,10 @@
         en: Corroded pretensioner connector
         de: Korrodierter Gurtstraffer-Stecker
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
@@ -3219,8 +3219,8 @@
 - code: B0081
   category: body
   title:
-    en: Front Passenger Belt Switch Circuit
-    de: Beifahrer-Gurtschloss-Schalter Schaltung
+    en: First Row Center Seat Belt Load Limiter Deployment Control
+    de: Erste Reihe Mitte Gurtkraftbegrenzer Auslösekreis
   description:
     en: The SRS or body control module has detected a fault in the front passenger seat belt buckle switch circuit. The switch reports whether the belt is fastened and is used for the belt warning lamp and for restraint logic.
     de: Das SRS- oder Karosserie-Steuergerät hat einen Fehler im Stromkreis des Beifahrer-Gurtschloss-Schalters erkannt. Der Schalter meldet, ob der Gurt angelegt ist, und wird für die Gurtwarnleuchte sowie die Rückhaltelogik genutzt.
@@ -3240,15 +3240,15 @@
         en: Wiring under seat damaged
         de: Verkabelung unter dem Sitz beschädigt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: medium
     diy_possible: true
     estimated_cost_eur: [80, 400]
-    estimated_hours: [0.5, 2.0]
+    estimated_hours: [0.5, 2]
   flags:
     mil: false
     emissions_relevant: false
@@ -3261,8 +3261,8 @@
 - code: B0082
   category: body
   title:
-    en: Passenger Seatbelt Pretensioner Loop Open
-    de: Gurtstraffer Beifahrer Auslösekreis unterbrochen
+    en: Passenger Seat Belt Load Limiter Deployment Control
+    de: Beifahrer Gurtkraftbegrenzer Auslösekreis
   description:
     en: The passenger seatbelt pretensioner deployment loop is open; the pretensioner will not fire.
     de: Der Auslösekreis des Beifahrer-Gurtstraffers ist unterbrochen; der Straffer löst nicht aus.
@@ -3281,10 +3281,10 @@
         en: Wire break in B-pillar
         de: Kabelbruch in der B-Säule
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
@@ -3302,8 +3302,8 @@
 - code: B0083
   category: body
   title:
-    en: Passenger Seatbelt Pretensioner Loop Short to Ground
-    de: Gurtstraffer Beifahrer Auslösekreis Kurzschluss nach Masse
+    en: Second Row Left Seat Belt Load Limiter Deployment Control
+    de: Zweite Reihe links Gurtkraftbegrenzer Auslösekreis
   description:
     en: The passenger pretensioner deployment circuit is shorted to ground.
     de: Der Auslösekreis des Beifahrer-Gurtstraffers ist nach Masse kurzgeschlossen.
@@ -3317,10 +3317,10 @@
         en: Chafed wire in pillar trim
         de: Aufgescheuerter Draht in der Säulenverkleidung
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
@@ -3338,8 +3338,8 @@
 - code: B0084
   category: body
   title:
-    en: Driver Belt Buckle Switch Circuit
-    de: Fahrer-Gurtschloss Schalter Stromkreis
+    en: Second Row Center Seat Belt Load Limiter Deployment Control
+    de: Zweite Reihe Mitte Gurtkraftbegrenzer Auslösekreis
   description:
     en: The SRS module has detected a fault in the driver belt buckle switch circuit. The fastened-state of the seat belt cannot be reliably read — affects belt warning and airbag deployment logic.
     de: Das SRS-Steuergerät hat einen Fehler im Stromkreis des Fahrer-Gurtschlossschalters erkannt. Der Anschnallzustand des Gurts kann nicht zuverlässig erkannt werden — betrifft Gurtwarnung und Airbag-Auslöselogik.
@@ -3359,10 +3359,10 @@
         en: Wiring under seat open
         de: Verkabelung unter dem Sitz unterbrochen
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: medium
     diy_possible: false
@@ -3380,8 +3380,8 @@
 - code: B0085
   category: body
   title:
-    en: Passenger Belt Buckle Switch Circuit
-    de: Beifahrer-Gurtschloss Schalter Stromkreis
+    en: Second Row Right Seat Belt Load Limiter Deployment Control
+    de: Zweite Reihe rechts Gurtkraftbegrenzer Auslösekreis
   description:
     en: The SRS module has detected a fault in the passenger belt buckle switch circuit. Same fault profile as B0084 but for the passenger side.
     de: Das SRS-Steuergerät hat einen Fehler im Stromkreis des Beifahrer-Gurtschlossschalters erkannt. Gleiches Fehlerbild wie B0084, jedoch für die Beifahrerseite.
@@ -3401,10 +3401,10 @@
         en: Wiring under seat open
         de: Verkabelung unter dem Sitz unterbrochen
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: medium
     diy_possible: false
@@ -3422,8 +3422,8 @@
 - code: B0086
   category: body
   title:
-    en: Passenger Seatbelt Pretensioner Resistance Low
-    de: Gurtstraffer Beifahrer Widerstand zu niedrig
+    en: Third Row Left Seat Belt Load Limiter Deployment Control
+    de: Dritte Reihe links Gurtkraftbegrenzer Auslösekreis
   description:
     en: The passenger seatbelt pretensioner loop has below-normal resistance, indicating a partial short.
     de: Der Widerstand im Auslösekreis des Beifahrer-Gurtstraffers ist zu niedrig, was auf einen Teilkurzschluss hindeutet.
@@ -3437,10 +3437,10 @@
         en: Partial short in pretensioner leads
         de: Teilkurzschluss in den Strafferleitungen
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
@@ -3458,8 +3458,8 @@
 - code: B0087
   category: body
   title:
-    en: Passenger Seatbelt Pretensioner Resistance High
-    de: Gurtstraffer Beifahrer Widerstand zu hoch
+    en: Third Row Center Seat Belt Load Limiter Deployment Control
+    de: Dritte Reihe Mitte Gurtkraftbegrenzer Auslösekreis
   description:
     en: The passenger pretensioner loop resistance is too high, suggesting corroded contacts or partial breaks.
     de: Der Widerstand im Auslösekreis des Beifahrer-Gurtstraffers ist zu hoch, was auf korrodierte Kontakte oder Teilbrüche hindeutet.
@@ -3473,10 +3473,10 @@
         en: Corroded pretensioner connector
         de: Korrodierter Gurtstraffer-Stecker
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
@@ -3532,11 +3532,11 @@
 - code: B0090
   category: body
   title:
-    en: Driver Side Pretensioner Stage 2 Deployment Control
-    de: Fahrer-Gurtstraffer Stufe 2 Auslösekreis
+    en: Left Frontal Restraints Sensor
+    de: Crashsensor vorne links
   description:
-    en: 'Driver Side Pretensioner Stage 2 Deployment Control: the restraints module has detected a fault in this airbag/pretensioner deployment circuit, which may prevent correct deployment in a crash. Safety-critical.'
-    de: 'Fahrer-Gurtstraffer Stufe 2 Auslösekreis: das Rückhaltesystem-Steuergerät hat einen Fehler in diesem Airbag-/Gurtstraffer-Auslösekreis erkannt, der die korrekte Auslösung im Crash verhindern kann. Sicherheitskritisch.'
+    en: "Driver Side Pretensioner Stage 2 Deployment Control: the restraints module has detected a fault in this airbag/pretensioner deployment circuit, which may prevent correct deployment in a crash. Safety-critical."
+    de: "Fahrer-Gurtstraffer Stufe 2 Auslösekreis: das Rückhaltesystem-Steuergerät hat einen Fehler in diesem Airbag-/Gurtstraffer-Auslösekreis erkannt, der die korrekte Auslösung im Crash verhindern kann. Sicherheitskritisch."
   affected_components:
     - driver_pretensioner
     - srs_control_module
@@ -3558,10 +3558,10 @@
         en: SRS control module fault
         de: Fehler im SRS-Steuergerät
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
@@ -3579,11 +3579,11 @@
 - code: B0091
   category: body
   title:
-    en: Passenger Side Pretensioner Stage 2 Deployment Control
-    de: Beifahrer-Gurtstraffer Stufe 2 Auslösekreis
+    en: Left Side Restraints Sensor 1
+    de: Seitencrashsensor links 1
   description:
-    en: 'Passenger Side Pretensioner Stage 2 Deployment Control: the restraints module has detected a fault in this airbag/pretensioner deployment circuit, which may prevent correct deployment in a crash. Safety-critical.'
-    de: 'Beifahrer-Gurtstraffer Stufe 2 Auslösekreis: das Rückhaltesystem-Steuergerät hat einen Fehler in diesem Airbag-/Gurtstraffer-Auslösekreis erkannt, der die korrekte Auslösung im Crash verhindern kann. Sicherheitskritisch.'
+    en: "Passenger Side Pretensioner Stage 2 Deployment Control: the restraints module has detected a fault in this airbag/pretensioner deployment circuit, which may prevent correct deployment in a crash. Safety-critical."
+    de: "Beifahrer-Gurtstraffer Stufe 2 Auslösekreis: das Rückhaltesystem-Steuergerät hat einen Fehler in diesem Airbag-/Gurtstraffer-Auslösekreis erkannt, der die korrekte Auslösung im Crash verhindern kann. Sicherheitskritisch."
   affected_components:
     - passenger_pretensioner
     - srs_control_module
@@ -3605,10 +3605,10 @@
         en: SRS control module fault
         de: Fehler im SRS-Steuergerät
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
@@ -3718,8 +3718,8 @@
 - code: B0094
   category: body
   title:
-    en: Side Impact Sensor Right Front Malfunction
-    de: Seitenaufprallsensor vorn rechts Fehlfunktion
+    en: Center Frontal Restraints Sensor
+    de: Crashsensor vorne Mitte
   description:
     en: The right front side impact sensor reports a malfunction or fails plausibility checks against the SRS module.
     de: Der vordere rechte Seitenaufprallsensor meldet eine Fehlfunktion oder besteht die Plausibilitätsprüfung des SRS-Steuergeräts nicht.
@@ -3738,15 +3738,15 @@
         en: Water intrusion at sensor
         de: Wassereintritt am Sensor
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [120, 500]
-    estimated_hours: [0.5, 2.0]
+    estimated_hours: [0.5, 2]
   flags:
     mil: false
     emissions_relevant: false
@@ -3759,8 +3759,8 @@
 - code: B0095
   category: body
   title:
-    en: Occupant Classification System Performance
-    de: Insassenerkennungssystem Funktionsbereich
+    en: Right Frontal Restraints Sensor
+    de: Crashsensor vorne rechts
   description:
     en: The SRS module reports that the occupant classification system (OCS) on the passenger seat does not behave plausibly. The OCS detects whether the seat is empty, occupied by a small person, or by an adult — and adapts airbag deployment accordingly.
     de: Das SRS-Steuergerät meldet, dass das Insassenerkennungssystem (OCS) auf dem Beifahrersitz unplausibel arbeitet. Das OCS erkennt, ob der Sitz leer, von einer kleinen Person oder von einem Erwachsenen besetzt ist, und passt die Airbag-Auslösung an.
@@ -3785,15 +3785,15 @@
         en: SRS control module fault
         de: Fehler im SRS-Steuergerät
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [200, 1500]
-    estimated_hours: [1.0, 4.0]
+    estimated_hours: [1, 4]
   flags:
     mil: false
     emissions_relevant: false
@@ -3806,8 +3806,8 @@
 - code: B0096
   category: body
   title:
-    en: Side Impact Sensor Left Rear Malfunction
-    de: Seitenaufprallsensor hinten links Fehlfunktion
+    en: Right Side Restraints Sensor 1
+    de: Seitencrashsensor rechts 1
   description:
     en: The left rear side impact sensor is reporting a fault.
     de: Der hintere linke Seitenaufprallsensor meldet einen Fehler.
@@ -3826,15 +3826,15 @@
         en: Water in connector
         de: Wasser im Stecker
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [120, 500]
-    estimated_hours: [0.5, 2.0]
+    estimated_hours: [0.5, 2]
   flags:
     mil: false
     emissions_relevant: false
@@ -3888,8 +3888,8 @@
 - code: B0098
   category: body
   title:
-    en: Occupant Detection Sensor
-    de: Insassenerkennungssensor
+    en: Right Side Restraints Sensor 3
+    de: Seitencrashsensor rechts 3
   description:
     en: The SRS module has detected a fault in the occupant detection sensor on the passenger seat. The sensor input is missing or out of range so passenger airbag enable/disable logic cannot be evaluated.
     de: Das SRS-Steuergerät hat einen Fehler am Insassenerkennungssensor auf dem Beifahrersitz erkannt. Das Sensorsignal fehlt oder liegt außerhalb des Bereichs, sodass die Logik zur Aktivierung/Deaktivierung des Beifahrer-Airbags nicht ausgewertet werden kann.
@@ -3909,15 +3909,15 @@
         en: Seat harness connector under passenger seat damaged
         de: Sitzkabelbaum-Stecker unter dem Beifahrersitz beschädigt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [200, 1200]
-    estimated_hours: [1.0, 3.0]
+    estimated_hours: [1, 3]
   flags:
     mil: false
     emissions_relevant: false
@@ -3930,8 +3930,8 @@
 - code: B0099
   category: body
   title:
-    en: Occupant Detection Module Internal Fault
-    de: Insassenerkennungs-Steuergerät interner Fehler
+    en: Roll Over Sensor
+    de: Überschlagsensor
   description:
     en: The occupant detection module reports an internal fault detected by self-test. The module typically processes seat sensor data and reports occupancy status to the SRS module.
     de: Das Insassenerkennungs-Steuergerät meldet einen durch den Selbsttest erkannten internen Fehler. Das Modul verarbeitet meist Sitzsensordaten und meldet den Belegungsstatus an das SRS-Steuergerät.
@@ -3950,15 +3950,15 @@
         en: Power supply or ground fault to module
         de: Versorgungs- oder Massefehler am Steuergerät
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [300, 1500]
-    estimated_hours: [1.0, 3.0]
+    estimated_hours: [1, 3]
   flags:
     mil: false
     emissions_relevant: false
@@ -6132,8 +6132,8 @@
 - code: B0100
   category: body
   title:
-    en: Driver Door Lock Cylinder Switch Circuit
-    de: Fahrertür-Schließzylinderschalter Schaltung
+    en: Sensor Cleaning Air Blower Actuator A
+    de: Sensorreinigung Luftgebläse-Aktuator A
   description:
     en: The body control module has detected a fault in the driver door lock cylinder switch circuit. This switch detects key rotation in the door lock and is used for keyless functions and the alarm system.
     de: Das Karosserie-Steuergerät hat einen Fehler im Stromkreis des Schließzylinderschalters der Fahrertür erkannt. Dieser Schalter erkennt die Schlüsseldrehung im Türschloss und wird für Keyless-Funktionen und die Alarmanlage genutzt.
@@ -6153,15 +6153,15 @@
         en: Door harness broken in door hinge area
         de: Türkabelbaum im Türscharnierbereich gebrochen
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: medium
     diy_possible: true
     estimated_cost_eur: [50, 300]
-    estimated_hours: [0.5, 2.0]
+    estimated_hours: [0.5, 2]
   flags:
     mil: false
     emissions_relevant: false
@@ -6174,8 +6174,8 @@
 - code: B0101
   category: body
   title:
-    en: Front Crash Sensor Circuit Malfunction
-    de: Frontcrash-Sensor Stromkreis Fehlfunktion
+    en: Sensor Cleaning Air Blower Actuator B
+    de: Sensorreinigung Luftgebläse-Aktuator B
   description:
     en: A fault has been detected in the front crash sensor circuit, used to detect frontal impacts and trigger airbags/pretensioners.
     de: Im Frontcrash-Sensor-Stromkreis wurde ein Fehler erkannt; dieser dient der Erkennung von Frontalaufprall und der Auslösung von Airbags/Gurtstraffern.
@@ -6194,10 +6194,10 @@
         en: Corroded sensor connector behind bumper
         de: Korrodierter Sensorstecker hinter Stoßstange
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: medium
     diy_possible: false
@@ -6215,8 +6215,8 @@
 - code: B0102
   category: body
   title:
-    en: Power Mirror Switch Circuit
-    de: Außenspiegel-Verstellschalter Stromkreis
+    en: Sensor Cleaning Air Blower Actuator A Control
+    de: Sensorreinigung Luftgebläse-Aktuator A Ansteuerung
   description:
     en: The body control module has detected a fault in the power mirror switch circuit. The switch input does not match a valid pattern — mirror adjustment may be inoperative.
     de: Das Karosserie-Steuergerät hat einen Fehler im Stromkreis des Außenspiegel-Verstellschalters erkannt. Das Schaltersignal entspricht keinem gültigen Muster — die Spiegelverstellung kann ausfallen.
@@ -6236,10 +6236,10 @@
         en: Wiring or connector open
         de: Verkabelung oder Stecker unterbrochen
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: easy
     diy_possible: true
@@ -6257,8 +6257,8 @@
 - code: B0103
   category: body
   title:
-    en: Front Crash Sensor Left Communication Lost
-    de: Frontcrash-Sensor links Kommunikation verloren
+    en: Sensor Cleaning Air Blower Actuator B Control
+    de: Sensorreinigung Luftgebläse-Aktuator B Ansteuerung
   description:
     en: Communication with the left front crash sensor has been lost; SRS deployment logic for frontal impacts is degraded.
     de: Die Kommunikation mit dem linken Frontcrash-Sensor ist verloren; die SRS-Auslöselogik für Frontalaufprall ist eingeschränkt.
@@ -6274,18 +6274,18 @@
     - id: gateway_module_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Gateway module routing CAN messages incorrectly
+        de: Gateway-Modul leitet CAN-Botschaften fehlerhaft
     - id: terminator_resistor_drift
       likelihood: low
       label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: CAN terminating resistor (120 Ω) drifted out of spec
+        de: CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: medium
     diy_possible: false
@@ -6303,8 +6303,8 @@
 - code: B0104
   category: body
   title:
-    en: Driver Mirror Adjust Switch Circuit
-    de: Fahrer-Außenspiegelverstellschalter Stromkreis
+    en: Sensor Cleaning Air Blower Actuator A Control Relay
+    de: Sensorreinigung Luftgebläse-Aktuator A Steuerrelais
   description:
     en: The body control module has detected a fault in the driver-side mirror adjust switch circuit. The mirror cannot be moved via the switch on the driver door.
     de: Das Karosserie-Steuergerät hat einen Fehler im Stromkreis des fahrerseitigen Spiegelverstellschalters erkannt. Der Spiegel kann über den Schalter in der Fahrertür nicht bewegt werden.
@@ -6323,10 +6323,10 @@
         en: Wiring open or shorted
         de: Verkabelung unterbrochen oder kurzgeschlossen
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: easy
     diy_possible: true
@@ -6344,8 +6344,8 @@
 - code: B0105
   category: body
   title:
-    en: Front Crash Sensor Right Communication Lost
-    de: Frontcrash-Sensor rechts Kommunikation verloren
+    en: Sensor Cleaning Air Blower Actuator B Control Relay
+    de: Sensorreinigung Luftgebläse-Aktuator B Steuerrelais
   description:
     en: Communication with the right front crash sensor has been lost.
     de: Die Kommunikation mit dem rechten Frontcrash-Sensor ist verloren.
@@ -6361,18 +6361,18 @@
     - id: gateway_module_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Gateway module routing CAN messages incorrectly
+        de: Gateway-Modul leitet CAN-Botschaften fehlerhaft
     - id: terminator_resistor_drift
       likelihood: low
       label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: CAN terminating resistor (120 Ω) drifted out of spec
+        de: CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: medium
     diy_possible: false
@@ -6390,8 +6390,8 @@
 - code: B0106
   category: body
   title:
-    en: Passenger Mirror Adjust Switch Circuit
-    de: Beifahrer-Außenspiegelverstellschalter Stromkreis
+    en: LIDAR Washer Actuator A
+    de: LIDAR-Reinigungsaktuator A
   description:
     en: The body control module has detected a fault in the passenger-side mirror adjust switch circuit. Same fault profile as B0104 but for the passenger mirror.
     de: Das Karosserie-Steuergerät hat einen Fehler im Stromkreis des beifahrerseitigen Spiegelverstellschalters erkannt. Gleiches Fehlerbild wie B0104, jedoch für den Beifahrerspiegel.
@@ -6410,10 +6410,10 @@
         en: Wiring open or shorted
         de: Verkabelung unterbrochen oder kurzgeschlossen
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: easy
     diy_possible: true
@@ -6431,8 +6431,8 @@
 - code: B0107
   category: body
   title:
-    en: Rollover Sensor Malfunction
-    de: Überschlagssensor Fehlfunktion
+    en: LIDAR Washer Actuator B
+    de: LIDAR-Reinigungsaktuator B
   description:
     en: The rollover sensor used to deploy curtain airbags or trigger fuel cutoff in a rollover event has failed plausibility checks.
     de: Der Überschlagssensor, der zur Auslösung von Kopfairbags oder Kraftstoffabschaltung im Überschlagsfall dient, hat die Plausibilitätsprüfung nicht bestanden.
@@ -6451,15 +6451,15 @@
         en: Loose sensor mounting
         de: Lose Sensorbefestigung
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [150, 700]
-    estimated_hours: [0.5, 2.0]
+    estimated_hours: [0.5, 2]
   flags:
     mil: false
     emissions_relevant: false
@@ -6472,8 +6472,8 @@
 - code: B0108
   category: body
   title:
-    en: Mirror Folder Switch Circuit
-    de: Spiegelanklappschalter Stromkreis
+    en: LIDAR Washer Actuator C
+    de: LIDAR-Reinigungsaktuator C
   description:
     en: The body control module has detected a fault in the mirror folder switch circuit. Power-folding mirrors cannot be folded or unfolded via the switch.
     de: Das Karosserie-Steuergerät hat einen Fehler im Stromkreis des Spiegelanklappschalters erkannt. Elektrisch anklappbare Spiegel können über den Schalter nicht angeklappt oder ausgeklappt werden.
@@ -6492,10 +6492,10 @@
         en: Wiring open
         de: Verkabelung unterbrochen
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: easy
     diy_possible: true
@@ -6855,43 +6855,53 @@
 - code: B0110
   category: body
   title:
-    en: Driver Pelvic/Thorax Airbag Deployment Control
-    de: Fahrer Becken-/Thorax-Airbag Auslösesteuerung
+    en: Camera Washer Actuator G
+    de: Kamera-Reinigungsaktuator G
   description:
-    en: The SRS module has detected a deployment control fault for the driver pelvic/thorax airbag commonly integrated into the seat backrest.
-    de: Das SRS-Steuergerät hat einen Auslösefehler des Fahrer-Becken-/Thorax-Airbags festgestellt, der üblicherweise in der Sitzlehne integriert ist.
+    en: Fault on camera washer actuator G. Such an actuator is usually a small solenoid valve or a dedicated pump outlet that releases washer fluid to the nozzle of one camera, for example a rear-view, surround-view or driver-assistance camera; the letter only tells which actuator the manufacturer assigned to which camera. When it fails, that lens can no longer be rinsed on demand, and dirt on it can blur the image or make the systems that rely on the camera switch off.
+    de: Fehler am Kamera-Reinigungsaktuator G. Ein solcher Aktuator ist meist ein kleines Magnetventil oder ein eigener Pumpenausgang, der Waschflüssigkeit zur Düse einer einzelnen Kamera freigibt, etwa einer Rückfahr-, Rundumsicht- oder Assistenzkamera; der Buchstabe gibt nur an, welchen Aktuator der Hersteller welcher Kamera zugeordnet hat. Fällt er aus, lässt sich diese Linse nicht mehr gezielt spülen, und Schmutz darauf kann das Bild verschleiern oder die Systeme abschalten, die auf die Kamera angewiesen sind.
   affected_components:
-    - driver_thorax_airbag
-    - srs_seat_wiring
+    - camera_washer_actuator_g
+    - actuator_wiring
   common_causes:
-    - id: seat_connector_loose
+    - id: actuator_failed
       likelihood: high
       label:
-        en: Loose connector under seat
-        de: Loser Stecker unter dem Sitz
-    - id: wiring_pinched
+        en: Washer actuator failed
+        de: Reinigungsaktuator defekt
+    - id: wiring_fault
       likelihood: medium
       label:
-        en: Wiring pinched in seat frame
-        de: Verkabelung im Sitzgestell eingeklemmt
+        en: Open or shorted actuator wiring, or corroded connector
+        de: Unterbrochene oder kurzgeschlossene Aktuatorleitung oder korrodierter Stecker
+    - id: nozzle_line_blocked
+      likelihood: low
+      label:
+        en: Blocked or frozen nozzle or supply hose
+        de: Verstopfte oder eingefrorene Düse oder Zuleitung
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Camera lens is not cleaned when washing is requested
+      de: Kameralinse wird bei Waschanforderung nicht gereinigt
+    - en: Blurred or obstructed camera image
+      de: Unscharfes oder verdecktes Kamerabild
+    - en: Message that a camera is blocked or a driver-assistance function is unavailable
+      de: Meldung, dass eine Kamera verdeckt oder eine Assistenzfunktion nicht verfügbar ist
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [150, 1000]
-    estimated_hours: [0.8, 3.0]
+    estimated_hours: [0.8, 3]
   flags:
     mil: false
     emissions_relevant: false
   references:
     - sae:J2012
+  related_codes: [B010F, B0111, B0112]
   sources:
-    - https://en.wikipedia.org/wiki/Airbag
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://github.com/Wal33D/dtc-database
+    - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
+    - https://patents.google.com/patent/US9333949
+    - https://patents.google.com/patent/US11814016
 
 - code: B0111
   category: body
@@ -7635,8 +7645,8 @@
 - code: B0120
   category: body
   title:
-    en: Passenger Pelvic/Thorax Airbag Deployment Control
-    de: Beifahrer Becken-/Thorax-Airbag Auslösesteuerung
+    en: Fluid Reservoir Level Sensor E
+    de: Flüssigkeitsbehälter Füllstandsensor E
   description:
     en: The SRS module has detected a deployment control fault for the passenger pelvic/thorax airbag.
     de: Das SRS-Steuergerät hat einen Auslösefehler des Beifahrer-Becken-/Thorax-Airbags festgestellt.
@@ -7655,15 +7665,15 @@
         en: Wiring damaged in seat track
         de: Verkabelung an Sitzschiene beschädigt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [150, 1000]
-    estimated_hours: [0.8, 3.0]
+    estimated_hours: [0.8, 3]
   flags:
     mil: false
     emissions_relevant: false
@@ -7831,8 +7841,8 @@
 - code: B0125
   category: body
   title:
-    en: Driver Side Mirror Position Sensor
-    de: Fahrer-Außenspiegel Positionssensor
+    en: Night Vision Control Module
+    de: Nachtsicht-Steuergerät
   description:
     en: The body control module has detected a fault in the driver-side mirror position sensor. Memory mirror positions cannot be saved or restored reliably.
     de: Das Karosserie-Steuergerät hat einen Fehler im Positionssensor des Fahrer-Außenspiegels erkannt. Memory-Spiegelpositionen können nicht zuverlässig gespeichert oder abgerufen werden.
@@ -7851,15 +7861,15 @@
         en: Water ingress into mirror assembly
         de: Wassereintritt in das Spiegelgehäuse
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [80, 400]
-    estimated_hours: [0.5, 2.0]
+    estimated_hours: [0.5, 2]
   flags:
     mil: false
     emissions_relevant: false
@@ -7872,8 +7882,8 @@
 - code: B0126
   category: body
   title:
-    en: Passenger Side Mirror Position Sensor
-    de: Beifahrer-Außenspiegel Positionssensor
+    en: Driver Monitoring Camera
+    de: Fahrerüberwachungskamera
   description:
     en: The body control module has detected a fault in the passenger-side mirror position sensor. Same fault profile as B0125 but for the passenger mirror.
     de: Das Karosserie-Steuergerät hat einen Fehler im Positionssensor des Beifahrer-Außenspiegels erkannt. Gleiches Fehlerbild wie B0125, jedoch für den Beifahrerspiegel.
@@ -7892,15 +7902,15 @@
         en: Water ingress into mirror assembly
         de: Wassereintritt in das Spiegelgehäuse
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [80, 400]
-    estimated_hours: [0.5, 2.0]
+    estimated_hours: [0.5, 2]
   flags:
     mil: false
     emissions_relevant: false
@@ -7962,8 +7972,8 @@
 - code: B0128
   category: body
   title:
-    en: Passenger Occupant Detection System Malfunction
-    de: Beifahrer-Sitzbelegungserkennung Fehlfunktion
+    en: DC/AC Converter A High Voltage Power Outlet "B" Circuit/Open
+    de: DC/AC-Wandler A Hochvolt-Steckdose "B" Stromkreis/unterbrochen
   description:
     en: The passenger occupant detection system (ODS), used to enable/disable the passenger airbag based on weight, has reported a malfunction.
     de: Die Beifahrer-Sitzbelegungserkennung (ODS), die den Beifahrerairbag gewichtsabhängig aktiviert oder deaktiviert, meldet eine Fehlfunktion.
@@ -7988,15 +7998,15 @@
         en: Loose ODS connector
         de: Loser ODS-Stecker
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [200, 1200]
-    estimated_hours: [1.0, 4.0]
+    estimated_hours: [1, 4]
   flags:
     mil: false
     emissions_relevant: false
@@ -8309,8 +8319,8 @@
 - code: B0130
   category: body
   title:
-    en: Driver Seatbelt Tension Sensor Circuit
-    de: Fahrer-Gurtspannungssensor Stromkreis
+    en: A/V Sensor Washer Fluid B Control Circuit
+    de: A/V-Sensor Waschflüssigkeit B Steuerkreis
   description:
     en: The driver seatbelt tension sensor circuit is faulty. This sensor is used by the SRS to adjust deployment based on belt usage.
     de: Der Stromkreis des Fahrer-Gurtspannungssensors ist defekt. Dieser Sensor wird vom SRS zur belastungsabhängigen Auslösung verwendet.
@@ -8329,15 +8339,15 @@
         en: Corroded sensor connector
         de: Korrodierter Sensorstecker
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Warning light or symbol related to the affected system
+      de: Warnleuchte oder Symbol zum betroffenen System
+    - en: Comfort or safety function impaired
+      de: Komfort- oder Sicherheitsfunktion beeinträchtigt
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [120, 500]
-    estimated_hours: [0.5, 2.0]
+    estimated_hours: [0.5, 2]
   flags:
     mil: false
     emissions_relevant: false

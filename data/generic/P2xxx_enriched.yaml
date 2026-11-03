@@ -10429,6 +10429,7 @@
     - https://github.com/fabiovila/OBDIICodes
     - https://github.com/tekseport/obd2-codes
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://partsavatar.ca/p20df-obd-ii-trouble-code-exhaust-aftertreatment-fuel-pressure-sensor-circuit-low-solution
 
 - code: P20E1
   category: powertrain
@@ -10478,6 +10479,7 @@
     - https://github.com/fabiovila/OBDIICodes
     - https://github.com/tekseport/obd2-codes
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://partsavatar.ca/p20e1-obd-ii-trouble-code-exhaust-after-treatment-fuel-pressure-sensor-circuit-intermittent-erratic
 
 - code: P20E2
   category: powertrain
@@ -10820,8 +10822,8 @@
 - code: P20EA
   category: powertrain
   title:
-    en: Reductant Pump Control Circuit Open
-    de: AdBlue-Pumpe Ansteuerung offen
+    en: Reductant Control Module Power Relay De-Energized Performance - Too Early
+    de: Reduktionsmittel-Steuergerät Leistungsrelais Abfallverhalten - zu früh
   description:
     en: The control circuit to the reductant (DEF) dosing pump is open — no current flow detected. Without pump pressure no AdBlue reaches the SCR catalyst and NOx reduction stops.
     de: Der Ansteuerkreis der AdBlue-Dosierpumpe ist offen — kein Stromfluss erkannt. Ohne Pumpendruck erreicht kein AdBlue den SCR-Katalysator und die NOx-Reduktion bricht zusammen.
@@ -10842,22 +10844,22 @@
     - id: connector_back_out
       likelihood: low
       label:
-        en: 'Pin pushed back out of connector body'
-        de: 'Pin aus dem Steckergehäuse zurückgedrückt'
+        en: Pin pushed back out of connector body
+        de: Pin aus dem Steckergehäuse zurückgedrückt
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light or NOx warning on
+      de: Motorkontrollleuchte oder NOx-Warnung an
+    - en: AdBlue/DEF level or quality warning
+      de: AdBlue-/DEF-Stand- oder Qualitätswarnung
+    - en: Possible no-start countdown after ignore period
+      de: Möglicherweise Startsperre nach Ignorieren-Frist
+    - en: Failed emissions inspection (NOx)
+      de: Abgasuntersuchung fehlgeschlagen (NOx)
   repair:
     difficulty: hard
     diy_possible: false
     estimated_cost_eur: [200, 1200]
-    estimated_hours: [1.0, 4.0]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: true
@@ -10870,8 +10872,8 @@
 - code: P20EB
   category: powertrain
   title:
-    en: Reductant Reservoir Heater "A" Control Circuit
-    de: Reagenztank-Heizung "A" Steuerkreis
+    en: Reductant Control Module Power Relay De-Energized Performance - Too Late
+    de: Reduktionsmittel-Steuergerät Leistungsrelais Abfallverhalten - zu spät
   description:
     en: A general electrical fault on the reductant tank heater "A" control circuit. AdBlue freezes at -11 C, so the tank heater must work for cold-start dosing.
     de: Allgemeiner elektrischer Fehler im Steuerkreis der Reagenztankheizung "A". AdBlue gefriert bei -11 C, deshalb muss die Tankheizung für die Dosierung beim Kaltstart funktionieren.
@@ -10890,19 +10892,19 @@
         en: Wiring open or connector loose
         de: Leitung unterbrochen oder Stecker locker
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light or NOx warning on
+      de: Motorkontrollleuchte oder NOx-Warnung an
+    - en: AdBlue/DEF level or quality warning
+      de: AdBlue-/DEF-Stand- oder Qualitätswarnung
+    - en: Possible no-start countdown after ignore period
+      de: Möglicherweise Startsperre nach Ignorieren-Frist
+    - en: Failed emissions inspection (NOx)
+      de: Abgasuntersuchung fehlgeschlagen (NOx)
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [200, 1200]
-    estimated_hours: [1.0, 4.0]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: true
@@ -10961,6 +10963,7 @@
     - https://github.com/tekseport/obd2-codes
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://partsavatar.ca/p20ec-obd-ii-trouble-code-scr-nox-catalyst-over-temperature-bank-1-solution-sensor-injector-fluid
 
 - code: P20ED
   category: powertrain
@@ -11010,6 +11013,7 @@
     - https://github.com/tekseport/obd2-codes
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://partsavatar.ca/p20ed-obd-ii-trouble-code-scr-nox-pre-catalyst-over-temperature-bank-1-solution-control-module-exhaust-fluid
 
 - code: P20EE
   category: powertrain
@@ -11114,6 +11118,7 @@
     - https://github.com/tekseport/obd2-codes
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://en.wikipedia.org/wiki/Selective_catalytic_reduction
+    - https://partsavatar.ca/p20ef-obd-ii-trouble-code-scr-nox-pre-catalyst-efficiency-below-threshold-bank-1-fluid-pump-control-module
 
 - code: P20F0
   category: powertrain
@@ -13747,6 +13752,7 @@
     - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
     - https://github.com/tekseport/obd2-codes
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://partsavatar.ca/p2124-obd-ii-trouble-code-throttle-position-sensor-switch-d-circuit-high-intermittent-solution-plate
 
 - code: P2125
   category: powertrain
@@ -17351,6 +17357,7 @@
     - https://github.com/fabiovila/OBDIICodes
     - https://github.com/tekseport/obd2-codes
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://partsavatar.ca/p2173-obd-ii-trouble-code-throttle-actuator-control-system-high-air-flow-detected-egr-gasket-tps
 
 - code: P2174
   category: powertrain
@@ -34204,8 +34211,8 @@
 - code: P22F1
   category: powertrain
   title:
-    en: Particulate Matter Sensor Heater Performance
-    de: Partikelsensor-Heizung Funktion
+    en: Cylinder 7 Alternative Fuel Injector Control Circuit/Open
+    de: Zylinder 7 Alternativkraftstoff-Einspritzventil Steuerkreis/unterbrochen
   description:
     en: The particulate matter (PM) sensor heater on diesel after-DPF systems does not reach or hold the calibrated operating temperature within the expected time. Without proper heating the PM sensor cannot be regenerated and read correctly.
     de: Die Heizung des Partikelsensors (PM-Sensor) im Dieselsystem nach dem DPF erreicht oder haelt die kalibrierte Betriebstemperatur nicht innerhalb der erwarteten Zeit. Ohne korrekte Heizung kann der PM-Sensor nicht regeneriert und korrekt ausgelesen werden.
@@ -38553,8 +38560,8 @@
 - code: P2359
   category: powertrain
   title:
-    en: Ignition Coil L Secondary Circuit
-    de: Zuendspule L Sekundaerkreis
+    en: Cylinder 10 Pressure Variation Low
+    de: Zylinder 10 Druckschwankung zu gering
   description:
     en: The ECU detects a secondary-circuit fault on ignition coil L (cylinder 12 on a V12 or another high-numbered cylinder). The cylinder will misfire if the spark output is insufficient.
     de: Die Motorsteuerung erkennt einen Sekundaerkreisfehler an Zuendspule L (Zylinder 12 bei einem V12 oder einem anderen hochnummerierten Zylinder). Bei unzureichender Zuendung kommt es zu Aussetzern.
@@ -38883,8 +38890,8 @@
 - code: P2362
   category: powertrain
   title:
-    en: Glow Plug Module Control Module Power Circuit Low
-    de: Vorgluehzeitsteuergeraet Versorgungs-Stromkreis niedrig
+    en: Cylinder 11 Pressure Too High
+    de: Zylinder 11 Druck zu hoch
   description:
     en: The diesel glow plug control module reports a power-supply voltage below the operating threshold. Glow plug heating may be partially or fully disabled, causing hard cold start.
     de: Das Vorgluehzeitsteuergeraet meldet eine Versorgungsspannung unter dem Betriebsschwellenwert. Die Gluehkerzenheizung kann teilweise oder ganz deaktiviert sein, was zu schlechtem Kaltstart fuehrt.
@@ -38906,15 +38913,15 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
   symptoms:
-    - en: 'Glow plug warning light on (often orange coil symbol)'
-      de: 'Glühkerzen-Warnleuchte an (oft orange Spule-Symbol)'
-    - en: 'Hard cold start or no start in cold weather'
-      de: 'Schwerer Kaltstart oder kein Start bei Kälte'
-    - en: 'White smoke from exhaust during warm-up'
-      de: 'Weißer Rauch aus dem Auspuff während der Warmlaufphase'
+    - en: Glow plug warning light on (often orange coil symbol)
+      de: Glühkerzen-Warnleuchte an (oft orange Spule-Symbol)
+    - en: Hard cold start or no start in cold weather
+      de: Schwerer Kaltstart oder kein Start bei Kälte
+    - en: White smoke from exhaust during warm-up
+      de: Weißer Rauch aus dem Auspuff während der Warmlaufphase
   repair:
     difficulty: medium
     diy_possible: true
@@ -38932,8 +38939,8 @@
 - code: P2363
   category: powertrain
   title:
-    en: Glow Plug Module Control Module Power Circuit High
-    de: Vorgluehzeitsteuergeraet Versorgungs-Stromkreis hoch
+    en: Cylinder 11 Pressure Variation Low
+    de: Zylinder 11 Druckschwankung zu gering
   description:
     en: The voltage at the glow plug control module supply line is above the upper threshold. Indicates wiring or charging-system overvoltage condition.
     de: Die Spannung an der Versorgungsleitung des Vorgluehzeitsteuergeraets liegt oberhalb des oberen Schwellenwerts. Hinweis auf Verkabelungsfehler oder Ueberspannung im Ladesystem.
@@ -38954,15 +38961,15 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
   symptoms:
-    - en: 'Glow plug warning light on (often orange coil symbol)'
-      de: 'Glühkerzen-Warnleuchte an (oft orange Spule-Symbol)'
-    - en: 'Hard cold start or no start in cold weather'
-      de: 'Schwerer Kaltstart oder kein Start bei Kälte'
-    - en: 'White smoke from exhaust during warm-up'
-      de: 'Weißer Rauch aus dem Auspuff während der Warmlaufphase'
+    - en: Glow plug warning light on (often orange coil symbol)
+      de: Glühkerzen-Warnleuchte an (oft orange Spule-Symbol)
+    - en: Hard cold start or no start in cold weather
+      de: Schwerer Kaltstart oder kein Start bei Kälte
+    - en: White smoke from exhaust during warm-up
+      de: Weißer Rauch aus dem Auspuff während der Warmlaufphase
   repair:
     difficulty: medium
     diy_possible: true
@@ -40091,8 +40098,8 @@
 - code: P2380
   category: powertrain
   title:
-    en: Wait to Start Lamp Control Circuit
-    de: Vorgluehkontrollleuchte Steuerkreis
+    en: EGR Sensor D Circuit
+    de: AGR-Sensor D Stromkreis
   description:
     en: The ECU detects an electrical fault on the wait-to-start indicator output of the diesel preheat system. The driver may not get a correct preheat indication.
     de: Die Motorsteuerung erkennt einen elektrischen Fehler am Ausgang fuer die Vorgluehkontrollleuchte des Dieselsystems. Der Fahrer erhaelt moeglicherweise keine korrekte Vorgluehanzeige.
@@ -49418,6 +49425,7 @@
     - https://github.com/tekseport/obd2-codes
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://en.wikipedia.org/wiki/Diesel_particulate_filter
+    - https://partsavatar.ca/p2460-obd-ii-trouble-code-diesel-particulate-filter-pressure-sensor-b-circuit-low-solution-pcm
 
 - code: P2461
   category: powertrain
@@ -49468,6 +49476,7 @@
     - https://github.com/tekseport/obd2-codes
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://en.wikipedia.org/wiki/Diesel_particulate_filter
+    - https://www.emanualonline.com/blog/?p=79794
 
 - code: P2462
   category: powertrain
@@ -49518,6 +49527,7 @@
     - https://github.com/tekseport/obd2-codes
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://en.wikipedia.org/wiki/Diesel_particulate_filter
+    - https://partsavatar.ca/p2462-obd-ii-trouble-code-diesel-particulate-filter-pressure-sensor-b-circuit-intermittent-erratic
 
 - code: P2463
   category: powertrain
@@ -49994,8 +50004,8 @@
 - code: P246F
   category: powertrain
   title:
-    en: Reductant System Cold Start Performance
-    de: Reduktionsmittel-System Kaltstart Plausibilität
+    en: Exhaust Gas Temperature Sensor Circuit Range/Performance Bank 1 Sensor 4
+    de: Abgastemperatursensor Stromkreis Bereich/Funktion Bank 1 Sensor 4
   description:
     en: At cold start the SCR system is unable to begin reductant dosing within the required time. Typical cause on diesel cars in winter — frozen AdBlue in the tank or lines, failed tank heater, or a slow-warming SCR catalyst.
     de: Beim Kaltstart kann das SCR-System die Reduktionsmittel-Dosierung nicht innerhalb der geforderten Zeit aufnehmen. Typische Ursache bei Dieseln im Winter — gefrorenes AdBlue im Tank oder in den Leitungen, defekte Tankheizung oder ein langsam aufheizender SCR-Katalysator.
@@ -50015,19 +50025,19 @@
         en: SCR catalyst slow to reach light-off
         de: SCR-Katalysator erreicht Light-off zu langsam
   symptoms:
-    - en: 'Check engine light or NOx warning on'
-      de: 'Motorkontrollleuchte oder NOx-Warnung an'
-    - en: 'AdBlue/DEF level or quality warning'
-      de: 'AdBlue-/DEF-Stand- oder Qualitätswarnung'
-    - en: 'Possible no-start countdown after ignore period'
-      de: 'Möglicherweise Startsperre nach Ignorieren-Frist'
-    - en: 'Failed emissions inspection (NOx)'
-      de: 'Abgasuntersuchung fehlgeschlagen (NOx)'
+    - en: Check engine light or NOx warning on
+      de: Motorkontrollleuchte oder NOx-Warnung an
+    - en: AdBlue/DEF level or quality warning
+      de: AdBlue-/DEF-Stand- oder Qualitätswarnung
+    - en: Possible no-start countdown after ignore period
+      de: Möglicherweise Startsperre nach Ignorieren-Frist
+    - en: Failed emissions inspection (NOx)
+      de: Abgasuntersuchung fehlgeschlagen (NOx)
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [200, 1500]
-    estimated_hours: [1.0, 4.0]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: true
@@ -119700,6 +119710,7 @@
     - https://github.com/tekseport/obd2-codes
     - https://eur-lex.europa.eu/eli/reg/2011/582/oj
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://partsavatar.ca/p2baa-obd-ii-trouble-code-nox-exceedence-low-reagent-consumption-solution-mass-air-flow-sensor
 
 - code: P2BAB
   category: powertrain
@@ -119789,6 +119800,7 @@
     - https://github.com/tekseport/obd2-codes
     - https://eur-lex.europa.eu/eli/reg/2011/582/oj
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://partsavatar.ca/p2bac-obd-ii-trouble-code-nox-exceedence-deactivation-of-egr-dpf-nox-sensor-o2-sensor-ecm-egr-pcm
 
 - code: P2BAD
   category: powertrain

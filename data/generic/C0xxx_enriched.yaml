@@ -1927,6 +1927,7 @@
   sources:
     - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Electronic_stability_control
+    - https://www.fs1inc.com/blog/dtc-c0045-brake-pressure-sensor-b/
 - code: C0046
   category: chassis
   title:
@@ -2515,6 +2516,7 @@
   sources:
     - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Electronic_stability_control
+    - http://www.dtcsearch.com/C0052/Generic/
 - code: C0053
   category: chassis
   title:
@@ -2559,6 +2561,7 @@
   sources:
     - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Electronic_stability_control
+    - http://www.dtcsearch.com/C0053/Generic/
 - code: C0054
   category: chassis
   title:
@@ -2789,6 +2792,8 @@
   sources:
     - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Electronic_stability_control
+    - http://www.dtcsearch.com/C0061/Generic/
+    - https://mazda6.neocities.org/esicont/srvc/html/id0402b2901200.html
 - code: C0062
   category: chassis
   title:
@@ -2833,6 +2838,8 @@
   sources:
     - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Electronic_stability_control
+    - http://www.dtcsearch.com/C0062/Generic/
+    - https://mazda6.neocities.org/esicont/srvc/html/id0402b2901200.html
 - code: C0063
   category: chassis
   title:
@@ -2877,6 +2884,8 @@
   sources:
     - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Electronic_stability_control
+    - http://www.dtcsearch.com/C0063/Generic/
+    - https://mazda6.neocities.org/esicont/srvc/html/id0402b2901200.html
 - code: C0064
   category: chassis
   title:
@@ -2921,6 +2930,7 @@
   sources:
     - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Electronic_stability_control
+    - http://www.dtcsearch.com/C0064/Generic/
 - code: C0065
   category: chassis
   title:
@@ -2965,6 +2975,7 @@
   sources:
     - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Electronic_stability_control
+    - https://www.fs1inc.com/blog/?p=516931
 - code: C0066
   category: chassis
   title:
@@ -3687,11 +3698,11 @@
 - code: C0081
   category: chassis
   title:
-    en: Wheel Speed Mismatch (Rear Axle)
-    de: Raddrehzahl-Abweichung Hinterachse
+    en: ABS Malfunction Indicator
+    de: ABS-Warnleuchte
   description:
-    en: 'Rear axle wheel speeds differ beyond the plausibility threshold. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.'
-    de: 'Die Raddrehzahlen der Hinterachse weichen ueber dem Plausibilitaetsschwellwert ab. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.'
+    en: Rear axle wheel speeds differ beyond the plausibility threshold. Wheel-speed signals feed ABS, ESC, traction control, transmission and odometer — a single dropped signal disables all of these safety functions until repaired.
+    de: Die Raddrehzahlen der Hinterachse weichen ueber dem Plausibilitaetsschwellwert ab. Raddrehzahl-Signale speisen ABS, ESP, Traktionskontrolle, Getriebe und Tachometer — ein einziges ausgefallenes Signal deaktiviert all diese Sicherheitsfunktionen bis zur Reparatur.
   affected_components:
     - wheel_speed_sensor_rl
     - wheel_speed_sensor_rr
@@ -3708,23 +3719,19 @@
         en: Sensor drift
         de: Sensor-Drift
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur:
-      - 0
-      - 400
-    estimated_hours:
-      - 0.3
-      - 2
+    estimated_cost_eur: [0, 400]
+    estimated_hours: [0.3, 2]
   flags:
     mil: false
   references:
@@ -4042,8 +4049,8 @@
 - code: C0090
   category: chassis
   title:
-    en: Hydraulic Brake Pressure Sensor Circuit
-    de: Bremsdrucksensor Stromkreis
+    en: 4WD/AWD Power Transfer Unit Actuator
+    de: 4WD/AWD Verteilergetriebe-Aktuator
   description:
     en: The brake pressure sensor in the master cylinder or hydraulic block reports an implausible signal or no signal. The fault disables ABS, stability control and brake assist.
     de: Der Bremsdrucksensor im Hauptbremszylinder oder Hydraulikblock meldet ein unplausibles oder fehlendes Signal. Der Fehler deaktiviert ABS, Stabilitaetsregelung und Bremsassistent.
@@ -4063,23 +4070,19 @@
         en: Sensor wiring fault
         de: Sensorleitungsfehler
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur:
-      - 200
-      - 900
-    estimated_hours:
-      - 1
-      - 3.5
+    estimated_cost_eur: [200, 900]
+    estimated_hours: [1, 3.5]
   flags:
     mil: false
   references:
@@ -4089,11 +4092,11 @@
 - code: C0091
   category: chassis
   title:
-    en: Hydraulic Brake Pressure Sensor Circuit Range/Performance
-    de: Bremsdrucksensor Bereich/Leistung
+    en: 4WD/AWD Power Transfer Unit Position Sensor A
+    de: 4WD/AWD Verteilergetriebe Positionssensor A
   description:
-    en: 'The brake pressure sensor signal is outside the plausibility band relative to pedal application. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'Das Signal des Bremsdrucksensors liegt im Verhaeltnis zur Pedalbetaetigung ausserhalb des Plausibilitaetsbandes. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: The brake pressure sensor signal is outside the plausibility band relative to pedal application. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.
+    de: Das Signal des Bremsdrucksensors liegt im Verhaeltnis zur Pedalbetaetigung ausserhalb des Plausibilitaetsbandes. Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.
   affected_components:
     - brake_pressure_sensor
     - abs_control_module
@@ -4111,26 +4114,22 @@
     - id: sensor_aged
       likelihood: low
       label:
-        en: 'Sensor element aged beyond calibration window'
-        de: 'Sensorelement gealtert über Kalibrierfenster hinaus'
+        en: Sensor element aged beyond calibration window
+        de: Sensorelement gealtert über Kalibrierfenster hinaus
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur:
-      - 200
-      - 1100
-    estimated_hours:
-      - 1
-      - 4
+    estimated_cost_eur: [200, 1100]
+    estimated_hours: [1, 4]
   flags:
     mil: false
   references:
@@ -4452,8 +4451,8 @@
 - code: C0099
   category: chassis
   title:
-    en: ABS Control Module Internal Fault
-    de: ABS-Steuergeraet interner Fehler
+    en: 4WD/AWD Rear Differential Unit Actuator A Position Sensor A
+    de: 4WD/AWD Hinterachsdifferenzial Aktuator A Positionssensor A
   description:
     en: The ABS control module fails its internal self-test (RAM, ROM or processor watchdog). ABS and stability control are disabled.
     de: Das ABS-Steuergeraet besteht den internen Selbsttest nicht (RAM, ROM oder Prozessor-Watchdog). ABS und Stabilitaetsregelung werden deaktiviert.
@@ -4471,23 +4470,19 @@
         en: Power supply undervoltage during operation
         de: Spannungsversorgung im Betrieb zu niedrig
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur:
-      - 400
-      - 1600
-    estimated_hours:
-      - 1
-      - 4
+    estimated_cost_eur: [400, 1600]
+    estimated_hours: [1, 4]
   flags:
     mil: false
   references:
@@ -9738,8 +9733,8 @@
 - code: C0500
   category: chassis
   title:
-    en: Anti-lock Brake System Disabled
-    de: Antiblockiersystem deaktiviert
+    en: Left Front Wheel Speed Sensor A Circuit/Open
+    de: Vorne links Radgeschwindigkeitssensor A Stromkreis/unterbrochen
   description:
     en: A general status code indicating that ABS function has been disabled by the brake control module. It is set in addition to the underlying root-cause code that disabled ABS.
     de: Allgemeiner Statuscode — die ABS-Funktion wurde vom Bremssteuergerät deaktiviert. Er wird zusätzlich zum eigentlichen Ursachencode abgelegt.
@@ -9759,23 +9754,19 @@
         en: Communication bus fault to ABS module
         de: Kommunikationsbusfehler zum ABS-Steuergerät
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 50
-      - 1200
-    estimated_hours:
-      - 0.3
-      - 4
+    estimated_cost_eur: [50, 1200]
+    estimated_hours: [0.3, 4]
   flags:
     mil: false
     emissions_relevant: false
@@ -9786,8 +9777,8 @@
 - code: C0501
   category: chassis
   title:
-    en: ESC Active Performance
-    de: ESC-Eingriff Leistung
+    en: Left Front Wheel Speed Sensor A Range/Performance
+    de: Vorne links Radgeschwindigkeitssensor A Bereich/Funktion
   description:
     en: ESC interventions occur but do not produce the expected vehicle response. May indicate hydraulic or mechanical limitation.
     de: ESC-Eingriffe erfolgen, fuehren aber nicht zur erwarteten Fahrzeugreaktion. Hinweis auf hydraulische oder mechanische Einschraenkung.
@@ -9807,23 +9798,19 @@
         en: Hydraulic block internal wear
         de: Innenverschleiss im Hydraulikblock
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur:
-      - 200
-      - 1600
-    estimated_hours:
-      - 1
-      - 5
+    estimated_cost_eur: [200, 1600]
+    estimated_hours: [1, 5]
   flags:
     mil: false
   references:
@@ -10001,8 +9988,8 @@
 - code: C0505
   category: chassis
   title:
-    en: ESC Switch Circuit
-    de: ESC-Schalter Stromkreis
+    en: Left Front Wheel Speed Sensor A Correlation
+    de: Vorne links Radgeschwindigkeitssensor A Korrelation
   description:
     en: The ESC on/off switch reports an implausible state.
     de: Der ESC-Ein/Aus-Schalter meldet einen unplausiblen Zustand.
@@ -10021,23 +10008,19 @@
         en: Wiring shorted
         de: Verkabelung kurzgeschlossen
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur:
-      - 30
-      - 200
-    estimated_hours:
-      - 0.3
-      - 1.5
+    estimated_cost_eur: [30, 200]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: false
   references:
@@ -10593,8 +10576,8 @@
 - code: C0510
   category: chassis
   title:
-    en: Hill Hold Function Disabled
-    de: Berganfahrhilfe deaktiviert
+    en: Left Rear Wheel Speed Sensor A Intermittent/Erratic
+    de: Hinten links Radgeschwindigkeitssensor A sporadisch/unregelmäßig
   description:
     en: The brake or stability control module has disabled the hill hold (auto-hold) function due to a related fault. Hill start assist is unavailable until the underlying fault is repaired.
     de: Das Brems- bzw. ESP-Steuergerät hat die Berganfahrhilfe (Auto-Hold) wegen eines damit verbundenen Fehlers deaktiviert. Die Funktion ist erst nach Behebung des Ursachenfehlers wieder verfügbar.
@@ -10614,23 +10597,19 @@
         en: Communication bus fault to brake systems
         de: Kommunikationsbusfehler zu Bremssystemen
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 50
-      - 1000
-    estimated_hours:
-      - 0.3
-      - 3
+    estimated_cost_eur: [50, 1000]
+    estimated_hours: [0.3, 3]
   flags:
     mil: false
     emissions_relevant: false
@@ -11390,8 +11369,8 @@
 - code: C0520
   category: chassis
   title:
-    en: Brake Pedal Force Sensor Circuit
-    de: Bremspedalkraft-Sensor Stromkreis
+    en: Multi-axis Acceleration Sensor Module A
+    de: Mehrachsen-Beschleunigungssensormodul A
   description:
     en: On systems with brake force sensing the dedicated sensor reports an implausible signal.
     de: Bei Systemen mit Bremskrafterfassung meldet der entsprechende Sensor ein unplausibles Signal.
@@ -11410,23 +11389,19 @@
         en: Wiring open
         de: Leitung unterbrochen
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 120
-      - 600
-    estimated_hours:
-      - 0.8
-      - 2.5
+    estimated_cost_eur: [120, 600]
+    estimated_hours: [0.8, 2.5]
   flags:
     mil: false
   references:
@@ -13062,8 +13037,8 @@
 - code: C0540
   category: chassis
   title:
-    en: Hill Hold Control Performance
-    de: Berganfahrhilfe Leistung
+    en: Brake Pressure Sensor A Circuit/Open
+    de: Bremsdrucksensor A Stromkreis/unterbrochen
   description:
     en: The hill hold control function does not behave as expected during a hill start, often because brake pressure is not held long enough.
     de: Die Berganfahrhilfe verhaelt sich beim Anfahren am Berg nicht wie erwartet; haeufig wird der Bremsdruck nicht lange genug gehalten.
@@ -13083,23 +13058,19 @@
         en: Pressure sensor drift
         de: Drucksensor-Drift
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur:
-      - 400
-      - 1600
-    estimated_hours:
-      - 1.5
-      - 5
+    estimated_cost_eur: [400, 1600]
+    estimated_hours: [1.5, 5]
   flags:
     mil: false
   references:
@@ -13909,8 +13880,8 @@
 - code: C0550
   category: chassis
   title:
-    en: Encoder Position Switch Circuit
-    de: Encoder-Positionsschalter Schaltung
+    en: Vacuum Sensor B Circuit High
+    de: Unterdrucksensor B Stromkreis hoch
   description:
     en: The transfer case control module has detected a circuit fault on the encoder position switch — the contact pack reporting which range the encoder motor has reached. A fault disables 4WD shifting until the switch or wiring is repaired.
     de: Das Verteilergetriebe-Steuergerät hat einen Schaltungsfehler am Encoder-Positionsschalter erkannt — dem Kontaktblock, der die erreichte Stellung des Encoder-Motors meldet. Ein Fehler deaktiviert das 4WD-Umschalten bis zur Reparatur von Schalter oder Verkabelung.
@@ -13935,23 +13906,19 @@
         en: Internal control module fault
         de: Interner Steuergerät-Fehler
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 150
-      - 900
-    estimated_hours:
-      - 0.5
-      - 3
+    estimated_cost_eur: [150, 900]
+    estimated_hours: [0.5, 3]
   flags:
     mil: false
     emissions_relevant: false
@@ -14181,8 +14148,8 @@
 - code: C0555
   category: chassis
   title:
-    en: Lateral Accelerometer Voltage Out of Range
-    de: Querbeschleunigungs-Sensor Spannung ausserhalb Bereich
+    en: Left Front Wheel Speed Sensor A Incorrect Component Installed
+    de: Vorne links Radgeschwindigkeitssensor A falsches Bauteil verbaut
   description:
     en: Supply or signal voltage of the lateral accelerometer is out of the expected range.
     de: Versorgungs- oder Signalspannung des Querbeschleunigungssensors liegt ausserhalb des erwarteten Bereichs.
@@ -14201,23 +14168,19 @@
         en: Sensor internal failure
         de: Sensor intern defekt
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 200
-      - 700
-    estimated_hours:
-      - 1
-      - 2.5
+    estimated_cost_eur: [200, 700]
+    estimated_hours: [1, 2.5]
   flags:
     mil: false
   references:
@@ -14227,8 +14190,8 @@
 - code: C0556
   category: chassis
   title:
-    en: Brake Booster Pressure Sensor Performance
-    de: Bremskraftverstaerker-Drucksensor Leistung
+    en: Right Front Wheel Speed Sensor A Incorrect Component Installed
+    de: Vorne rechts Radgeschwindigkeitssensor A falsches Bauteil verbaut
   description:
     en: The brake booster vacuum or pressure sensor signal does not respond plausibly to engine vacuum or electric booster activity.
     de: Das Signal des Vakuum- bzw. Drucksensors am Bremskraftverstaerker reagiert nicht plausibel auf Motorvakuum bzw. elektrische Booster-Aktivitaet.
@@ -14249,26 +14212,22 @@
     - id: sensor_aged
       likelihood: low
       label:
-        en: 'Sensor element aged beyond calibration window'
-        de: 'Sensorelement gealtert über Kalibrierfenster hinaus'
+        en: Sensor element aged beyond calibration window
+        de: Sensorelement gealtert über Kalibrierfenster hinaus
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur:
-      - 60
-      - 600
-    estimated_hours:
-      - 0.5
-      - 3
+    estimated_cost_eur: [60, 600]
+    estimated_hours: [0.5, 3]
   flags:
     mil: false
   references:
@@ -15546,8 +15505,8 @@
 - code: C0571
   category: chassis
   title:
-    en: Active Brake Assist Performance
-    de: Aktiver Bremsassistent Funktionsbereich
+    en: Brake Pressure Sensor C Circuit Low
+    de: Bremsdrucksensor C Stromkreis niedrig
   description:
     en: The brake assist or driver assistance module has detected that brake assist performance is degraded. The system may fail to autonomously build pressure during emergency braking and emergency brake assist functions are limited.
     de: Das Bremsassistent- oder Fahrerassistenz-Steuergerät hat eine eingeschränkte Bremsassistent-Funktion erkannt. Das System kann bei Notbremsungen den Druck nicht eigenständig aufbauen und Notbremsassistent-Funktionen sind eingeschränkt.
@@ -15572,23 +15531,19 @@
         en: System calibration required after repair
         de: Systemkalibrierung nach Reparatur erforderlich
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur:
-      - 200
-      - 2500
-    estimated_hours:
-      - 1
-      - 5
+    estimated_cost_eur: [200, 2500]
+    estimated_hours: [1, 5]
   flags:
     mil: false
     emissions_relevant: false
@@ -15655,8 +15610,8 @@
 - code: C0573
   category: chassis
   title:
-    en: Electric Park Brake Switch Circuit Malfunction
-    de: EPB-Schalter Stromkreis-Fehlfunktion
+    en: Brake Pressure Sensor C Circuit/Open
+    de: Bremsdrucksensor C Stromkreis/unterbrochen
   description:
     en: The electric park brake (EPB) module has detected an implausible signal from the operator switch. The EPB cannot be reliably applied or released by the driver until the fault is corrected.
     de: Das EPB-Steuergerät hat ein unplausibles Signal des Bedienschalters erkannt. Bis zur Behebung kann der Fahrer die elektrische Feststellbremse nicht zuverlässig betätigen oder lösen.
@@ -15676,23 +15631,19 @@
         en: Wiring or connector fault
         de: Kabel- oder Steckerfehler
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur:
-      - 60
-      - 300
-    estimated_hours:
-      - 0.3
-      - 1.5
+    estimated_cost_eur: [60, 300]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: false
     emissions_relevant: false
@@ -15758,8 +15709,8 @@
 - code: C0575
   category: chassis
   title:
-    en: Park Brake Actuator Position Signal Malfunction
-    de: Feststellbremsen-Stellantrieb Positionssignal Fehlfunktion
+    en: Brake Pressure Sensor D Circuit Low
+    de: Bremsdrucksensor D Stromkreis niedrig
   description:
     en: The EPB module has detected an out-of-range position signal from a caliper actuator. The module cannot determine whether the brake is fully applied or released.
     de: Das EPB-Steuergerät hat ein Positionssignal eines Sattelmotors außerhalb des gültigen Bereichs erkannt. Es kann nicht sicher bestimmt werden, ob die Bremse vollständig angelegt oder gelöst ist.
@@ -15779,23 +15730,19 @@
         en: Actuator mechanically jammed (corrosion)
         de: Stellmotor mechanisch blockiert (Korrosion)
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 200
-      - 900
-    estimated_hours:
-      - 0.8
-      - 2.5
+    estimated_cost_eur: [200, 900]
+    estimated_hours: [0.8, 2.5]
   flags:
     mil: false
     emissions_relevant: false
@@ -15862,8 +15809,8 @@
 - code: C0577
   category: chassis
   title:
-    en: Park Brake Force Sensor Circuit Malfunction
-    de: Feststellbremsen-Kraftsensor Stromkreis-Fehlfunktion
+    en: Brake Pressure Sensor D Circuit/Open
+    de: Bremsdrucksensor D Stromkreis/unterbrochen
   description:
     en: The EPB module has detected an electrical fault in the clamp-force sensor circuit. Without this signal, regulated clamping force cannot be ensured and a fallback strategy is used.
     de: Das EPB-Steuergerät hat einen elektrischen Fehler im Stromkreis des Spannkraftsensors erkannt. Ohne dieses Signal kann die Spannkraft nicht geregelt werden und es greift eine Notstrategie.
@@ -15883,23 +15830,19 @@
         en: Wiring or connector fault
         de: Kabel- oder Steckerfehler
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur:
-      - 200
-      - 900
-    estimated_hours:
-      - 1
-      - 3
+    estimated_cost_eur: [200, 900]
+    estimated_hours: [1, 3]
   flags:
     mil: false
     emissions_relevant: false
@@ -15910,8 +15853,8 @@
 - code: C0578
   category: chassis
   title:
-    en: Park Brake Switch Stuck Open
-    de: Feststellbremsenschalter offen blockiert
+    en: Brake Pressure Sensor D Circuit Range/Performance
+    de: Bremsdrucksensor D Stromkreis Bereich/Funktion
   description:
     en: The EPB module has detected that the park brake operator switch remains in the open (released) state when an apply request is expected. Operation of the EPB by the driver is restricted.
     de: Das EPB-Steuergerät hat festgestellt, dass der Bedienschalter dauerhaft im offenen (gelösten) Zustand verbleibt, obwohl eine Anlegeanforderung erwartet wird. Die Bedienung der EPB durch den Fahrer ist eingeschränkt.
@@ -15933,26 +15876,22 @@
     - id: stuck_carbon_buildup
       likelihood: low
       label:
-        en: 'Carbon or debris buildup preventing free movement'
-        de: 'Verkokung oder Ablagerungen verhindern freies Bewegen'
+        en: Carbon or debris buildup preventing free movement
+        de: Verkokung oder Ablagerungen verhindern freies Bewegen
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur:
-      - 60
-      - 300
-    estimated_hours:
-      - 0.3
-      - 1.5
+    estimated_cost_eur: [60, 300]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: false
     emissions_relevant: false
@@ -16374,8 +16313,8 @@
 - code: C0581
   category: chassis
   title:
-    en: Park Brake Apply Performance
-    de: Feststellbremse Anlegeleistung
+    en: Brake Booster Motor A Phase U-V-W Circuit High
+    de: Bremskraftverstärker Motor A Phase U-V-W Stromkreis hoch
   description:
     en: The EPB module has detected that the apply operation took longer than expected or did not reach the target clamp force. Causes include corroded actuators, low battery voltage or worn brake pads.
     de: Das EPB-Steuergerät hat festgestellt, dass das Anlegen länger als erwartet dauerte oder die Soll-Spannkraft nicht erreicht wurde. Ursachen sind u. a. korrodierte Stellantriebe, schwache Bordnetzspannung oder abgenutzte Beläge.
@@ -16401,23 +16340,19 @@
         en: Low system voltage during apply
         de: Niedrige Bordnetzspannung beim Anlegen
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 150
-      - 900
-    estimated_hours:
-      - 0.8
-      - 3
+    estimated_cost_eur: [150, 900]
+    estimated_hours: [0.8, 3]
   flags:
     mil: false
     emissions_relevant: false
@@ -16483,8 +16418,8 @@
 - code: C0583
   category: chassis
   title:
-    en: Park Brake Release Performance
-    de: Feststellbremse Löseleistung
+    en: Brake Booster Motor B Phase U-V-W Circuit/Open
+    de: Bremskraftverstärker Motor B Phase U-V-W Stromkreis/unterbrochen
   description:
     en: The EPB module has detected that the release operation took longer than expected or did not fully release. The vehicle should not be driven until the brake is fully released to avoid pad damage.
     de: Das EPB-Steuergerät hat festgestellt, dass das Lösen länger als erwartet dauerte oder unvollständig erfolgte. Bis zum vollständigen Lösen sollte das Fahrzeug nicht bewegt werden, um Belagschäden zu vermeiden.
@@ -16510,23 +16445,19 @@
         en: Low system voltage during release
         de: Niedrige Bordnetzspannung beim Lösen
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 150
-      - 900
-    estimated_hours:
-      - 0.8
-      - 3
+    estimated_cost_eur: [150, 900]
+    estimated_hours: [0.8, 3]
   flags:
     mil: false
     emissions_relevant: false
@@ -17365,8 +17296,8 @@
 - code: C0594
   category: chassis
   title:
-    en: Brake Pedal Travel Sensor
-    de: Bremspedalweg-Sensor
+    en: Brake Booster Motor A Performance
+    de: Bremskraftverstärker Motor A Funktion
   description:
     en: The brake control module has detected an implausible signal from the brake pedal travel sensor. Pedal travel is used by brake assist, regenerative braking and adaptive cruise control to estimate driver intent.
     de: Das Brems-Steuergerät hat ein unplausibles Signal vom Bremspedalweg-Sensor erkannt. Der Pedalweg wird von Bremsassistent, Rekuperation und adaptiver Geschwindigkeitsregelung zur Bestimmung der Fahrerabsicht genutzt.
@@ -17391,23 +17322,19 @@
         en: Wiring or connector fault
         de: Verkabelungs- oder Steckerfehler
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 120
-      - 700
-    estimated_hours:
-      - 0.5
-      - 2.5
+    estimated_cost_eur: [120, 700]
+    estimated_hours: [0.5, 2.5]
   flags:
     mil: false
     emissions_relevant: false
@@ -22967,8 +22894,8 @@
 - code: C0605
   category: chassis
   title:
-    en: ESC Internal Performance
-    de: ESC interne Leistung
+    en: Steering Wheel Angle Sensor Circuit/Open
+    de: Lenkwinkelsensor Stromkreis/unterbrochen
   description:
     en: The ESC function fails its plausibility check during operation.
     de: Die ESC-Funktion besteht die Plausibilitaetspruefung im Betrieb nicht.
@@ -22981,23 +22908,19 @@
         en: Module internal failure
         de: Steuergeraet intern defekt
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur:
-      - 400
-      - 1600
-    estimated_hours:
-      - 1.5
-      - 5
+    estimated_cost_eur: [400, 1600]
+    estimated_hours: [1.5, 5]
   flags:
     mil: false
   references:
@@ -23518,8 +23441,8 @@
 - code: C0610
   category: chassis
   title:
-    en: Vehicle Communication Bus E (Chassis Bus)
-    de: Fahrzeug-Kommunikationsbus E (Fahrwerksbus)
+    en: Right Park Brake Actuator Control Circuit/Open
+    de: Feststellbremse rechts Aktuator Steuerkreis/unterbrochen
   description:
     en: Communication on the chassis CAN bus is lost or noisy. Multiple chassis modules may report consequential faults.
     de: Die Kommunikation auf dem Fahrwerks-CAN-Bus ist unterbrochen oder gestoert. Mehrere Fahrwerksmodule koennen Folgefehler melden.
@@ -23541,26 +23464,22 @@
     - id: gateway_module_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Gateway module routing CAN messages incorrectly
+        de: Gateway-Modul leitet CAN-Botschaften fehlerhaft
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur:
-      - 120
-      - 1200
-    estimated_hours:
-      - 1
-      - 5
+    estimated_cost_eur: [120, 1200]
+    estimated_hours: [1, 5]
   flags:
     mil: false
   references:
@@ -23786,8 +23705,8 @@
 - code: C0615
   category: chassis
   title:
-    en: ESC Calibration Required
-    de: ESC-Kalibrierung erforderlich
+    en: Park Brake Control Module Control Circuit/Open
+    de: Feststellbremse Steuergerät Steuerkreis/unterbrochen
   description:
     en: ESC calibration values are missing or implausible after sensor or module replacement.
     de: ESC-Kalibrierwerte fehlen oder sind nach Sensor- oder Steuergeraetewechsel unplausibel.
@@ -23803,23 +23722,19 @@
         en: Calibration not performed after repair
         de: Kalibrierung nach Reparatur nicht durchgefuehrt
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: easy
     diy_possible: false
-    estimated_cost_eur:
-      - 40
-      - 250
-    estimated_hours:
-      - 0.3
-      - 1.5
+    estimated_cost_eur: [40, 250]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: false
   references:
@@ -24324,8 +24239,8 @@
 - code: C0620
   category: chassis
   title:
-    en: Park Assist Module Communication
-    de: Park-Assistent Steuergerät Kommunikation
+    en: Variable Effort Steering Lock/Safety Actuator Control Circuit/Open
+    de: Variable Lenkunterstützung Sperr-/Sicherheitsaktuator Steuerkreis/unterbrochen
   description:
     en: The chassis control module has detected a communication fault with the park assist module. Parking sensors, surround view and automatic parking functions are unavailable until communication is restored.
     de: Das Fahrwerks-Steuergerät hat einen Kommunikationsfehler mit dem Park-Assistent-Steuergerät erkannt. Einparksensoren, Umgebungssicht und automatisches Einparken stehen bis zur Wiederherstellung der Kommunikation nicht zur Verfügung.
@@ -24350,23 +24265,19 @@
         en: Power supply or ground fault to module
         de: Versorgungs- oder Masseschluss am Steuergerät
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 100
-      - 1000
-    estimated_hours:
-      - 0.5
-      - 3
+    estimated_cost_eur: [100, 1000]
+    estimated_hours: [0.5, 3]
   flags:
     mil: false
     emissions_relevant: false
@@ -27671,8 +27582,8 @@
 - code: C0660
   category: chassis
   title:
-    en: Park Brake Switch Circuit
-    de: Feststellbremsschalter Stromkreis
+    en: Left Rear Wheel Speed Sensor B Range/Performance
+    de: Hinten links Radgeschwindigkeitssensor B Bereich/Funktion
   description:
     en: The electric park brake switch reports an implausible signal.
     de: Der Schalter der elektrischen Feststellbremse meldet ein unplausibles Signal.
@@ -27691,23 +27602,19 @@
         en: Wiring shorted
         de: Verkabelung kurzgeschlossen
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: ABS warning light on
+      de: ABS-Warnleuchte an
+    - en: ESC/stability control deactivated
+      de: ESP/Stabilitätskontrolle deaktiviert
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Speedometer may behave erratically
+      de: Tachometer kann sich auffällig verhalten
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur:
-      - 40
-      - 250
-    estimated_hours:
-      - 0.3
-      - 1.5
+    estimated_cost_eur: [40, 250]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: false
   references:

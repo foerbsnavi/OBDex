@@ -1480,6 +1480,7 @@
     - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
     - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
+    - https://www.hella.com/hotsecdocs/OBDII/dtc_db/codelists/en_u-codes.htm
 
 - code: U0031
   category: network
@@ -2005,6 +2006,9 @@
     - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
     - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
+    - https://www.hella.com/hotsecdocs/OBDII/dtc_db/codelists/en_u-codes.htm
+    - https://www.aa1car.com/trouble-codes/can_codes.htm
+    - https://ucode.neocities.org/u0040-vehicle-communication-bus-b-low
 
 - code: U0041
   category: network
@@ -2520,6 +2524,8 @@
     - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
     - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
+    - https://www.hella.com/hotsecdocs/OBDII/dtc_db/codelists/en_u-codes.htm
+    - https://www.aa1car.com/trouble-codes/can_codes.htm
 
 - code: U0051
   category: network
@@ -3555,6 +3561,8 @@
     - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
     - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
+    - https://www.hella.com/hotsecdocs/OBDII/dtc_db/codelists/en_u-codes.htm
+    - https://www.aa1car.com/trouble-codes/can_codes.htm
 
 - code: U0071
   category: network
@@ -6952,6 +6960,9 @@
     - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
     - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
+    - https://www.hella.com/hotsecdocs/OBDII/dtc_db/codelists/en_u-codes.htm
+    - https://www.aa1car.com/trouble-codes/can_codes.htm
+    - https://ucode.neocities.org/u0113-lost-communication-with-emissions-critical-control-information
 
 - code: U0114
   category: network
@@ -13292,6 +13303,8 @@
   sources:
     - https://en.wikipedia.org/wiki/Bluetooth
     - https://en.wikipedia.org/wiki/CAN_bus
+    - https://www.hella.com/hotsecdocs/OBDII/dtc_db/codelists/en_u-codes.htm
+    - https://www.aa1car.com/trouble-codes/can_codes.htm
 
 - code: U0198
   category: network
@@ -16439,6 +16452,8 @@
     - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
     - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
+    - https://www.hella.com/hotsecdocs/OBDII/dtc_db/codelists/en_u-codes.htm
+    - https://ucode.neocities.org/u0215-lost-communication-with-door-switch-a
 
 - code: U0216
   category: network
@@ -16492,6 +16507,7 @@
     - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
     - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
+    - https://www.hella.com/hotsecdocs/OBDII/dtc_db/codelists/en_u-codes.htm
 
 - code: U0217
   category: network
@@ -16545,6 +16561,7 @@
     - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
     - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
+    - https://www.hella.com/hotsecdocs/OBDII/dtc_db/codelists/en_u-codes.htm
 
 - code: U0218
   category: network
@@ -16598,6 +16615,7 @@
     - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
     - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
+    - https://www.hella.com/hotsecdocs/OBDII/dtc_db/codelists/en_u-codes.htm
 
 - code: U0219
   category: network
@@ -16709,6 +16727,7 @@
     - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
     - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
+    - https://www.hella.com/hotsecdocs/OBDII/dtc_db/codelists/en_u-codes.htm
 
 - code: U0221
   category: network
@@ -16762,6 +16781,7 @@
     - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
     - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
+    - https://www.hella.com/hotsecdocs/OBDII/dtc_db/codelists/en_u-codes.htm
 
 - code: U0222
   category: network
@@ -16810,6 +16830,9 @@
     - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/Local_Interconnect_Network
     - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-u0100-u02ff
+    - https://www.hella.com/hotsecdocs/OBDII/dtc_db/codelists/en_u-codes.htm
+    - https://www.aa1car.com/trouble-codes/can_codes.htm
+    - https://en.avtotachki.com/u0222-utrachena-svyaz-s-dvigatelem-a-okna-dveri/
 
 - code: U0223
   category: network
@@ -30501,6 +30524,8 @@
     - https://github.com/brendan-w/python-OBD/blob/master/obd/codes.py
     - https://github.com/tekseport/obd2-codes
     - https://en.wikipedia.org/wiki/CAN_bus
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11024003-0001.pdf
+    - https://ucode.neocities.org/u0423-invalid-data-received-from-instrument-panel-control-module
 
 - code: U0424
   category: network

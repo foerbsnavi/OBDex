@@ -206792,8 +206792,8 @@
 - code: P0E6E
   category: powertrain
   title:
-    en: Generator Torque Delivered Performance
-    de: Generator geliefertes Drehmoment Verhalten
+    en: Battery Charging System Precharge Contactor Control Circuit Range/Performance
+    de: Batterieladesystem Vorladeschütz Steuerkreis Bereich/Funktion
   description:
     en: The generator delivered torque does not match the commanded value within calibration. Inverter, sensor or generator fault.
     de: Das vom Generator gelieferte Drehmoment stimmt nicht mit dem angeforderten Wert innerhalb der Kalibrierung überein. Wechselrichter-, Sensor- oder Generator-Fehler.
@@ -206832,8 +206832,8 @@
 - code: P0E6F
   category: powertrain
   title:
-    en: Control Pilot Signal Frequency Range/Performance
-    de: Steuerpilot-Signal Frequenz Bereich/Leistung
+    en: Battery Charging System Precharge Contactor Control Circuit Low
+    de: Batterieladesystem Vorladeschütz Steuerkreis niedrig
   description:
     en: The control pilot PWM frequency from the EVSE is range/performance. SAE J1772 requires 1 kHz +/- tolerance.
     de: Die Steuerpilot-PWM-Frequenz von der EVSE ist "Bereich/Leistung". SAE J1772 fordert 1 kHz +/- Toleranz.
@@ -206854,15 +206854,15 @@
     - id: sensor_aged
       likelihood: low
       label:
-        en: 'Sensor element aged beyond calibration window'
-        de: 'Sensorelement gealtert über Kalibrierfenster hinaus'
+        en: Sensor element aged beyond calibration window
+        de: Sensorelement gealtert über Kalibrierfenster hinaus
   symptoms:
-    - en: 'Charge status indicator shows fault'
-      de: 'Ladestatus-Anzeige zeigt Fehler'
-    - en: 'Charging may not start or interrupts'
-      de: 'Ladevorgang startet nicht oder bricht ab'
-    - en: 'Slower-than-expected charge rate'
-      de: 'Langsamerer Ladevorgang als erwartet'
+    - en: Charge status indicator shows fault
+      de: Ladestatus-Anzeige zeigt Fehler
+    - en: Charging may not start or interrupts
+      de: Ladevorgang startet nicht oder bricht ab
+    - en: Slower-than-expected charge rate
+      de: Langsamerer Ladevorgang als erwartet
   repair:
     difficulty: medium
     diy_possible: false
@@ -206882,11 +206882,11 @@
 - code: P0E70
   category: powertrain
   title:
-    en: Control Pilot Signal Frequency Too Low
-    de: Steuerpilot-Signal Frequenz zu niedrig
+    en: Battery Charging System Precharge Contactor Control Circuit High
+    de: Batterieladesystem Vorladeschütz Steuerkreis hoch
   description:
-    en: 'The control pilot PWM frequency from the EVSE is too low. SAE J1772 requires 1 kHz +/- tolerance. The on-board charger negotiates voltage, current and safety with the EVSE; a fault interrupts charging or limits it to AC slow-charge despite a DC fast charger being attached.'
-    de: 'Die Steuerpilot-PWM-Frequenz von der EVSE ist "zu niedrig". SAE J1772 fordert 1 kHz +/- Toleranz. Das Bordladegerät verhandelt Spannung, Strom und Sicherheit mit der EVSE; ein Fehler unterbricht das Laden oder begrenzt es auf AC-Langsamladen trotz angeschlossener DC-Schnellladesäule.'
+    en: The control pilot PWM frequency from the EVSE is too low. SAE J1772 requires 1 kHz +/- tolerance. The on-board charger negotiates voltage, current and safety with the EVSE; a fault interrupts charging or limits it to AC slow-charge despite a DC fast charger being attached.
+    de: Die Steuerpilot-PWM-Frequenz von der EVSE ist "zu niedrig". SAE J1772 fordert 1 kHz +/- Toleranz. Das Bordladegerät verhandelt Spannung, Strom und Sicherheit mit der EVSE; ein Fehler unterbricht das Laden oder begrenzt es auf AC-Langsamladen trotz angeschlossener DC-Schnellladesäule.
   affected_components:
     - control_pilot_signal
     - evse
@@ -206902,12 +206902,12 @@
         en: Filter capacitor too large
         de: Filter-Kondensator zu groß
   symptoms:
-    - en: 'Charge status indicator shows fault'
-      de: 'Ladestatus-Anzeige zeigt Fehler'
-    - en: 'Charging may not start or interrupts'
-      de: 'Ladevorgang startet nicht oder bricht ab'
-    - en: 'Slower-than-expected charge rate'
-      de: 'Langsamerer Ladevorgang als erwartet'
+    - en: Charge status indicator shows fault
+      de: Ladestatus-Anzeige zeigt Fehler
+    - en: Charging may not start or interrupts
+      de: Ladevorgang startet nicht oder bricht ab
+    - en: Slower-than-expected charge rate
+      de: Langsamerer Ladevorgang als erwartet
   repair:
     difficulty: medium
     diy_possible: false
@@ -206927,11 +206927,11 @@
 - code: P0E71
   category: powertrain
   title:
-    en: Control Pilot Signal Frequency Too High
-    de: Steuerpilot-Signal Frequenz zu hoch
+    en: Generator Torque Delivered Performance
+    de: Generator abgegebenes Drehmoment Funktion
   description:
-    en: 'The control pilot PWM frequency from the EVSE is too high. SAE J1772 requires 1 kHz +/- tolerance. The on-board charger negotiates voltage, current and safety with the EVSE; a fault interrupts charging or limits it to AC slow-charge despite a DC fast charger being attached.'
-    de: 'Die Steuerpilot-PWM-Frequenz von der EVSE ist "zu hoch". SAE J1772 fordert 1 kHz +/- Toleranz. Das Bordladegerät verhandelt Spannung, Strom und Sicherheit mit der EVSE; ein Fehler unterbricht das Laden oder begrenzt es auf AC-Langsamladen trotz angeschlossener DC-Schnellladesäule.'
+    en: The control pilot PWM frequency from the EVSE is too high. SAE J1772 requires 1 kHz +/- tolerance. The on-board charger negotiates voltage, current and safety with the EVSE; a fault interrupts charging or limits it to AC slow-charge despite a DC fast charger being attached.
+    de: Die Steuerpilot-PWM-Frequenz von der EVSE ist "zu hoch". SAE J1772 fordert 1 kHz +/- Toleranz. Das Bordladegerät verhandelt Spannung, Strom und Sicherheit mit der EVSE; ein Fehler unterbricht das Laden oder begrenzt es auf AC-Langsamladen trotz angeschlossener DC-Schnellladesäule.
   affected_components:
     - control_pilot_signal
     - evse
@@ -206947,12 +206947,12 @@
         en: EVSE oscillator drift
         de: EVSE-Oszillator-Drift
   symptoms:
-    - en: 'Charge status indicator shows fault'
-      de: 'Ladestatus-Anzeige zeigt Fehler'
-    - en: 'Charging may not start or interrupts'
-      de: 'Ladevorgang startet nicht oder bricht ab'
-    - en: 'Slower-than-expected charge rate'
-      de: 'Langsamerer Ladevorgang als erwartet'
+    - en: Charge status indicator shows fault
+      de: Ladestatus-Anzeige zeigt Fehler
+    - en: Charging may not start or interrupts
+      de: Ladevorgang startet nicht oder bricht ab
+    - en: Slower-than-expected charge rate
+      de: Langsamerer Ladevorgang als erwartet
   repair:
     difficulty: medium
     diy_possible: false
@@ -206972,8 +206972,8 @@
 - code: P0E72
   category: powertrain
   title:
-    en: Hybrid/EV Battery Internal Isolation Performance
-    de: Hybrid/EV-Batterie interne Isolation Verhalten
+    en: Control Pilot Signal Low Frequency
+    de: Control-Pilot-Signal Frequenz zu niedrig
   description:
     en: The BMS detects degraded internal isolation between HV bus and battery enclosure. Insulation resistance below safety threshold.
     de: Das BMS erkennt verschlechterte interne Isolation zwischen HV-Bus und Batterie-Gehäuse. Isolationswiderstand unter Sicherheitsschwelle.
@@ -206995,17 +206995,17 @@
     - id: cell_imbalance
       likelihood: low
       label:
-        en: 'Pack cell imbalance approaching service threshold'
-        de: 'Pack-Zell-Ungleichgewicht nahe Wartungsschwelle'
+        en: Pack cell imbalance approaching service threshold
+        de: Pack-Zell-Ungleichgewicht nahe Wartungsschwelle
   symptoms:
-    - en: 'EV/hybrid system warning light on'
-      de: 'EV-/Hybrid-Warnleuchte an'
-    - en: 'Reduced power output or limp mode'
-      de: 'Reduzierte Leistung oder Notlauf'
-    - en: 'Charging may fail or be slowed'
-      de: 'Ladevorgang kann fehlschlagen oder verlangsamt sein'
-    - en: 'Reduced electric range'
-      de: 'Reduzierte elektrische Reichweite'
+    - en: EV/hybrid system warning light on
+      de: EV-/Hybrid-Warnleuchte an
+    - en: Reduced power output or limp mode
+      de: Reduzierte Leistung oder Notlauf
+    - en: Charging may fail or be slowed
+      de: Ladevorgang kann fehlschlagen oder verlangsamt sein
+    - en: Reduced electric range
+      de: Reduzierte elektrische Reichweite
   repair:
     difficulty: hard
     diy_possible: false
@@ -207025,8 +207025,8 @@
 - code: P0E73
   category: powertrain
   title:
-    en: Coolant Bypass Valve A Control Circuit/Open
-    de: Kühlmittel-Bypass-Ventil A Steuerkreis offen
+    en: Control Pilot Signal High Frequency
+    de: Control-Pilot-Signal Frequenz zu hoch
   description:
     en: The coolant bypass valve A reports a control circuit/open condition.
     de: Das Kühlmittel-Bypass-Ventil A meldet einen Zustand "Steuerkreis offen".
@@ -207047,8 +207047,8 @@
     - id: connector_back_out
       likelihood: low
       label:
-        en: 'Pin pushed back out of connector body'
-        de: 'Pin aus dem Steckergehäuse zurückgedrückt'
+        en: Pin pushed back out of connector body
+        de: Pin aus dem Steckergehäuse zurückgedrückt
   repair:
     difficulty: medium
     diy_possible: false
@@ -207069,11 +207069,11 @@
 - code: P0E74
   category: powertrain
   title:
-    en: Coolant Bypass Valve A Control Circuit Low
-    de: Kühlmittel-Bypass-Ventil A Steuerkreis niedrig
+    en: Hybrid/EV Battery Voltage Internal Isolation Fault
+    de: Hybrid-/EV-Batterie Spannung interner Isolationsfehler
   description:
-    en: 'The coolant bypass valve A reports a control circuit low condition. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'Das Kühlmittel-Bypass-Ventil A meldet einen Zustand "Steuerkreis niedrig". Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: The coolant bypass valve A reports a control circuit low condition. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.
+    de: Das Kühlmittel-Bypass-Ventil A meldet einen Zustand "Steuerkreis niedrig". Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.
   affected_components:
     - coolant_bypass_valve_a
     - wiring_harness
@@ -207091,8 +207091,8 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
   repair:
     difficulty: medium
     diy_possible: false
@@ -207367,8 +207367,8 @@
 - code: P0E7B
   category: powertrain
   title:
-    en: Auxiliary Cooling Coolant Temperature Sensor A Circuit
-    de: Hilfs-Kühlung Kühlmittel-Temperatursensor A Stromkreis
+    en: Coolant Bypass Valve B Control Circuit/Open
+    de: Kühlmittel-Bypassventil B Steuerkreis/unterbrochen
   description:
     en: The ECM detects a circuit fault on the auxiliary cooling coolant temperature sensor a circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "Stromkreis" am Hilfs-Kühlung Kühlmittel-Temperatursensor A Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -207405,8 +207405,8 @@
 - code: P0E7C
   category: powertrain
   title:
-    en: Auxiliary Cooling Coolant Temperature Sensor A Circuit Range/Performance
-    de: Hilfs-Kühlung Kühlmittel-Temperatursensor A Stromkreis Bereich/Leistung
+    en: Coolant Bypass Valve B Control Circuit Low
+    de: Kühlmittel-Bypassventil B Steuerkreis niedrig
   description:
     en: The ECM detects a range/performance fault on the auxiliary cooling coolant temperature sensor a circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "Bereich/Leistung" am Hilfs-Kühlung Kühlmittel-Temperatursensor A Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -207427,8 +207427,8 @@
     - id: sensor_aged
       likelihood: low
       label:
-        en: 'Sensor element aged beyond calibration window'
-        de: 'Sensorelement gealtert über Kalibrierfenster hinaus'
+        en: Sensor element aged beyond calibration window
+        de: Sensorelement gealtert über Kalibrierfenster hinaus
   repair:
     difficulty: medium
     diy_possible: false
@@ -207448,8 +207448,8 @@
 - code: P0E7D
   category: powertrain
   title:
-    en: Auxiliary Cooling Coolant Temperature Sensor A Circuit Low
-    de: Hilfs-Kühlung Kühlmittel-Temperatursensor A Stromkreis niedrig
+    en: Coolant Bypass Valve B Control Circuit High
+    de: Kühlmittel-Bypassventil B Steuerkreis hoch
   description:
     en: The ECM detects a low fault on the auxiliary cooling coolant temperature sensor a circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "niedrig" am Hilfs-Kühlung Kühlmittel-Temperatursensor A Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -207470,8 +207470,8 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
   repair:
     difficulty: medium
     diy_possible: false
@@ -207491,8 +207491,8 @@
 - code: P0E7E
   category: powertrain
   title:
-    en: Auxiliary Cooling Coolant Temperature Sensor A Circuit High
-    de: Hilfs-Kühlung Kühlmittel-Temperatursensor A Stromkreis hoch
+    en: Coolant Bypass Valve B Control Circuit Range/Performance
+    de: Kühlmittel-Bypassventil B Steuerkreis Bereich/Funktion
   description:
     en: The ECM detects a high fault on the auxiliary cooling coolant temperature sensor a circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "hoch" am Hilfs-Kühlung Kühlmittel-Temperatursensor A Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -207513,8 +207513,8 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
   repair:
     difficulty: medium
     diy_possible: false
@@ -207534,8 +207534,8 @@
 - code: P0E7F
   category: powertrain
   title:
-    en: Auxiliary Cooling Coolant Temperature Sensor A Circuit Intermittent/Erratic
-    de: Hilfs-Kühlung Kühlmittel-Temperatursensor A Stromkreis sporadisch/unsauber
+    en: Coolant Bypass Valve B Control Stuck Open
+    de: Kühlmittel-Bypassventil B Ansteuerung klemmt offen
   description:
     en: The ECM detects a intermittent/erratic fault on the auxiliary cooling coolant temperature sensor a circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "sporadisch/unsauber" am Hilfs-Kühlung Kühlmittel-Temperatursensor A Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -207556,8 +207556,8 @@
     - id: connector_intermittent
       likelihood: low
       label:
-        en: 'Connector with intermittent contact under vibration'
-        de: 'Stecker mit sporadischem Kontakt unter Vibration'
+        en: Connector with intermittent contact under vibration
+        de: Stecker mit sporadischem Kontakt unter Vibration
   repair:
     difficulty: medium
     diy_possible: false
@@ -207577,8 +207577,8 @@
 - code: P0E80
   category: powertrain
   title:
-    en: Battery Charger B Temperature Sensor Circuit
-    de: Batterielader B Temperatursensor Stromkreis
+    en: Coolant Bypass Valve B Control Stuck Closed
+    de: Kühlmittel-Bypassventil B Ansteuerung klemmt geschlossen
   description:
     en: The ECM detects a circuit fault on the battery charger b temperature sensor circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "Stromkreis" am Batterielader B Temperatursensor Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -207598,12 +207598,12 @@
         en: Wiring or connector fault
         de: Verkabelungs- oder Steckerfehler
   symptoms:
-    - en: 'Charge status indicator shows fault'
-      de: 'Ladestatus-Anzeige zeigt Fehler'
-    - en: 'Charging may not start or interrupts'
-      de: 'Ladevorgang startet nicht oder bricht ab'
-    - en: 'Slower-than-expected charge rate'
-      de: 'Langsamerer Ladevorgang als erwartet'
+    - en: Charge status indicator shows fault
+      de: Ladestatus-Anzeige zeigt Fehler
+    - en: Charging may not start or interrupts
+      de: Ladevorgang startet nicht oder bricht ab
+    - en: Slower-than-expected charge rate
+      de: Langsamerer Ladevorgang als erwartet
   repair:
     difficulty: medium
     diy_possible: false
@@ -207623,8 +207623,8 @@
 - code: P0E81
   category: powertrain
   title:
-    en: Battery Charger B Temperature Sensor Circuit Range/Performance
-    de: Batterielader B Temperatursensor Stromkreis Bereich/Leistung
+    en: Auxiliary Cooling System Coolant Temperature Sensor A Circuit
+    de: Zusatzkühlsystem Kühlmitteltemperatursensor A Stromkreis
   description:
     en: The ECM detects a range/performance fault on the battery charger b temperature sensor circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "Bereich/Leistung" am Batterielader B Temperatursensor Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -207646,15 +207646,15 @@
     - id: sensor_aged
       likelihood: low
       label:
-        en: 'Sensor element aged beyond calibration window'
-        de: 'Sensorelement gealtert über Kalibrierfenster hinaus'
+        en: Sensor element aged beyond calibration window
+        de: Sensorelement gealtert über Kalibrierfenster hinaus
   symptoms:
-    - en: 'Charge status indicator shows fault'
-      de: 'Ladestatus-Anzeige zeigt Fehler'
-    - en: 'Charging may not start or interrupts'
-      de: 'Ladevorgang startet nicht oder bricht ab'
-    - en: 'Slower-than-expected charge rate'
-      de: 'Langsamerer Ladevorgang als erwartet'
+    - en: Charge status indicator shows fault
+      de: Ladestatus-Anzeige zeigt Fehler
+    - en: Charging may not start or interrupts
+      de: Ladevorgang startet nicht oder bricht ab
+    - en: Slower-than-expected charge rate
+      de: Langsamerer Ladevorgang als erwartet
   repair:
     difficulty: medium
     diy_possible: false
@@ -207674,8 +207674,8 @@
 - code: P0E82
   category: powertrain
   title:
-    en: Battery Charger B Temperature Sensor Circuit Low
-    de: Batterielader B Temperatursensor Stromkreis niedrig
+    en: Auxiliary Cooling System Coolant Temperature Sensor A Circuit Range/Performance
+    de: Zusatzkühlsystem Kühlmitteltemperatursensor A Stromkreis Bereich/Funktion
   description:
     en: The ECM detects a low fault on the battery charger b temperature sensor circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "niedrig" am Batterielader B Temperatursensor Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -207697,15 +207697,15 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
   symptoms:
-    - en: 'Charge status indicator shows fault'
-      de: 'Ladestatus-Anzeige zeigt Fehler'
-    - en: 'Charging may not start or interrupts'
-      de: 'Ladevorgang startet nicht oder bricht ab'
-    - en: 'Slower-than-expected charge rate'
-      de: 'Langsamerer Ladevorgang als erwartet'
+    - en: Charge status indicator shows fault
+      de: Ladestatus-Anzeige zeigt Fehler
+    - en: Charging may not start or interrupts
+      de: Ladevorgang startet nicht oder bricht ab
+    - en: Slower-than-expected charge rate
+      de: Langsamerer Ladevorgang als erwartet
   repair:
     difficulty: medium
     diy_possible: false
@@ -207725,8 +207725,8 @@
 - code: P0E83
   category: powertrain
   title:
-    en: Battery Charger B Temperature Sensor Circuit High
-    de: Batterielader B Temperatursensor Stromkreis hoch
+    en: Auxiliary Cooling System Coolant Temperature Sensor A Circuit Low
+    de: Zusatzkühlsystem Kühlmitteltemperatursensor A Stromkreis niedrig
   description:
     en: The ECM detects a high fault on the battery charger b temperature sensor circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "hoch" am Batterielader B Temperatursensor Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -207748,15 +207748,15 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
   symptoms:
-    - en: 'Charge status indicator shows fault'
-      de: 'Ladestatus-Anzeige zeigt Fehler'
-    - en: 'Charging may not start or interrupts'
-      de: 'Ladevorgang startet nicht oder bricht ab'
-    - en: 'Slower-than-expected charge rate'
-      de: 'Langsamerer Ladevorgang als erwartet'
+    - en: Charge status indicator shows fault
+      de: Ladestatus-Anzeige zeigt Fehler
+    - en: Charging may not start or interrupts
+      de: Ladevorgang startet nicht oder bricht ab
+    - en: Slower-than-expected charge rate
+      de: Langsamerer Ladevorgang als erwartet
   repair:
     difficulty: medium
     diy_possible: false
@@ -207776,8 +207776,8 @@
 - code: P0E84
   category: powertrain
   title:
-    en: Battery Charger B Temperature Sensor Circuit Intermittent/Erratic
-    de: Batterielader B Temperatursensor Stromkreis sporadisch/unsauber
+    en: Auxiliary Cooling System Coolant Temperature Sensor A Circuit High
+    de: Zusatzkühlsystem Kühlmitteltemperatursensor A Stromkreis hoch
   description:
     en: The ECM detects a intermittent/erratic fault on the battery charger b temperature sensor circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "sporadisch/unsauber" am Batterielader B Temperatursensor Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -207799,15 +207799,15 @@
     - id: connector_intermittent
       likelihood: low
       label:
-        en: 'Connector with intermittent contact under vibration'
-        de: 'Stecker mit sporadischem Kontakt unter Vibration'
+        en: Connector with intermittent contact under vibration
+        de: Stecker mit sporadischem Kontakt unter Vibration
   symptoms:
-    - en: 'Charge status indicator shows fault'
-      de: 'Ladestatus-Anzeige zeigt Fehler'
-    - en: 'Charging may not start or interrupts'
-      de: 'Ladevorgang startet nicht oder bricht ab'
-    - en: 'Slower-than-expected charge rate'
-      de: 'Langsamerer Ladevorgang als erwartet'
+    - en: Charge status indicator shows fault
+      de: Ladestatus-Anzeige zeigt Fehler
+    - en: Charging may not start or interrupts
+      de: Ladevorgang startet nicht oder bricht ab
+    - en: Slower-than-expected charge rate
+      de: Langsamerer Ladevorgang als erwartet
   repair:
     difficulty: medium
     diy_possible: false
@@ -208174,8 +208174,8 @@
 - code: P0E8C
   category: powertrain
   title:
-    en: Battery Charger B Current Sensor Circuit Low
-    de: Batterielader B Stromsensor Stromkreis niedrig
+    en: Drive Motor A Inverter Voltage Sensor B Circuit
+    de: Antriebsmotor A Wechselrichter Spannungssensor B Stromkreis
   description:
     en: The ECM detects a low fault on the battery charger b current sensor circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "niedrig" am Batterielader B Stromsensor Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -208197,15 +208197,15 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
   symptoms:
-    - en: 'Charge status indicator shows fault'
-      de: 'Ladestatus-Anzeige zeigt Fehler'
-    - en: 'Charging may not start or interrupts'
-      de: 'Ladevorgang startet nicht oder bricht ab'
-    - en: 'Slower-than-expected charge rate'
-      de: 'Langsamerer Ladevorgang als erwartet'
+    - en: Charge status indicator shows fault
+      de: Ladestatus-Anzeige zeigt Fehler
+    - en: Charging may not start or interrupts
+      de: Ladevorgang startet nicht oder bricht ab
+    - en: Slower-than-expected charge rate
+      de: Langsamerer Ladevorgang als erwartet
   repair:
     difficulty: medium
     diy_possible: false
@@ -208225,8 +208225,8 @@
 - code: P0E8D
   category: powertrain
   title:
-    en: Battery Charger B Current Sensor Circuit High
-    de: Batterielader B Stromsensor Stromkreis hoch
+    en: Drive Motor A Inverter Voltage Sensor B Circuit Range/Performance
+    de: Antriebsmotor A Wechselrichter Spannungssensor B Stromkreis Bereich/Funktion
   description:
     en: The ECM detects a high fault on the battery charger b current sensor circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "hoch" am Batterielader B Stromsensor Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -208248,15 +208248,15 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
   symptoms:
-    - en: 'Charge status indicator shows fault'
-      de: 'Ladestatus-Anzeige zeigt Fehler'
-    - en: 'Charging may not start or interrupts'
-      de: 'Ladevorgang startet nicht oder bricht ab'
-    - en: 'Slower-than-expected charge rate'
-      de: 'Langsamerer Ladevorgang als erwartet'
+    - en: Charge status indicator shows fault
+      de: Ladestatus-Anzeige zeigt Fehler
+    - en: Charging may not start or interrupts
+      de: Ladevorgang startet nicht oder bricht ab
+    - en: Slower-than-expected charge rate
+      de: Langsamerer Ladevorgang als erwartet
   repair:
     difficulty: medium
     diy_possible: false
@@ -208276,8 +208276,8 @@
 - code: P0E8E
   category: powertrain
   title:
-    en: Battery Charger B Current Sensor Circuit Intermittent/Erratic
-    de: Batterielader B Stromsensor Stromkreis sporadisch/unsauber
+    en: Drive Motor A Inverter Voltage Sensor B Circuit Low
+    de: Antriebsmotor A Wechselrichter Spannungssensor B Stromkreis niedrig
   description:
     en: The ECM detects a intermittent/erratic fault on the battery charger b current sensor circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "sporadisch/unsauber" am Batterielader B Stromsensor Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -208299,15 +208299,15 @@
     - id: connector_intermittent
       likelihood: low
       label:
-        en: 'Connector with intermittent contact under vibration'
-        de: 'Stecker mit sporadischem Kontakt unter Vibration'
+        en: Connector with intermittent contact under vibration
+        de: Stecker mit sporadischem Kontakt unter Vibration
   symptoms:
-    - en: 'Charge status indicator shows fault'
-      de: 'Ladestatus-Anzeige zeigt Fehler'
-    - en: 'Charging may not start or interrupts'
-      de: 'Ladevorgang startet nicht oder bricht ab'
-    - en: 'Slower-than-expected charge rate'
-      de: 'Langsamerer Ladevorgang als erwartet'
+    - en: Charge status indicator shows fault
+      de: Ladestatus-Anzeige zeigt Fehler
+    - en: Charging may not start or interrupts
+      de: Ladevorgang startet nicht oder bricht ab
+    - en: Slower-than-expected charge rate
+      de: Langsamerer Ladevorgang als erwartet
   repair:
     difficulty: medium
     diy_possible: false
@@ -208681,8 +208681,8 @@
 - code: P0E96
   category: powertrain
   title:
-    en: Drive Motor B Inverter Voltage Sensor B Circuit Low
-    de: Antriebsmotor B Wechselrichter-Spannungssensor B Stromkreis niedrig
+    en: DC/DC Converter Voltage Sensor C Circuit
+    de: DC/DC-Wandler Spannungssensor C Stromkreis
   description:
     en: The ECM detects a low fault on the drive motor b inverter voltage sensor b circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "niedrig" am Antriebsmotor B Wechselrichter-Spannungssensor B Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -208704,15 +208704,15 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
   symptoms:
-    - en: 'EV/hybrid system warning light on'
-      de: 'EV-/Hybrid-Warnleuchte an'
-    - en: 'Reduced motor power or torque'
-      de: 'Reduzierte Motorleistung oder -drehmoment'
-    - en: 'Possible limp mode or vehicle shutdown'
-      de: 'Möglicherweise Notlauf oder Fahrzeug-Abschaltung'
+    - en: EV/hybrid system warning light on
+      de: EV-/Hybrid-Warnleuchte an
+    - en: Reduced motor power or torque
+      de: Reduzierte Motorleistung oder -drehmoment
+    - en: Possible limp mode or vehicle shutdown
+      de: Möglicherweise Notlauf oder Fahrzeug-Abschaltung
   repair:
     difficulty: medium
     diy_possible: false
@@ -208733,8 +208733,8 @@
 - code: P0E97
   category: powertrain
   title:
-    en: Drive Motor B Inverter Voltage Sensor B Circuit High
-    de: Antriebsmotor B Wechselrichter-Spannungssensor B Stromkreis hoch
+    en: DC/DC Converter Voltage Sensor C Circuit Range/Performance
+    de: DC/DC-Wandler Spannungssensor C Stromkreis Bereich/Funktion
   description:
     en: The ECM detects a high fault on the drive motor b inverter voltage sensor b circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "hoch" am Antriebsmotor B Wechselrichter-Spannungssensor B Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -208756,15 +208756,15 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
   symptoms:
-    - en: 'EV/hybrid system warning light on'
-      de: 'EV-/Hybrid-Warnleuchte an'
-    - en: 'Reduced motor power or torque'
-      de: 'Reduzierte Motorleistung oder -drehmoment'
-    - en: 'Possible limp mode or vehicle shutdown'
-      de: 'Möglicherweise Notlauf oder Fahrzeug-Abschaltung'
+    - en: EV/hybrid system warning light on
+      de: EV-/Hybrid-Warnleuchte an
+    - en: Reduced motor power or torque
+      de: Reduzierte Motorleistung oder -drehmoment
+    - en: Possible limp mode or vehicle shutdown
+      de: Möglicherweise Notlauf oder Fahrzeug-Abschaltung
   repair:
     difficulty: medium
     diy_possible: false
@@ -208785,8 +208785,8 @@
 - code: P0E98
   category: powertrain
   title:
-    en: Drive Motor B Inverter Voltage Sensor B Circuit Intermittent/Erratic
-    de: Antriebsmotor B Wechselrichter-Spannungssensor B Stromkreis sporadisch/unsauber
+    en: DC/DC Converter Voltage Sensor C Circuit Low
+    de: DC/DC-Wandler Spannungssensor C Stromkreis niedrig
   description:
     en: The ECM detects a intermittent/erratic fault on the drive motor b inverter voltage sensor b circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "sporadisch/unsauber" am Antriebsmotor B Wechselrichter-Spannungssensor B Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -208808,15 +208808,15 @@
     - id: connector_intermittent
       likelihood: low
       label:
-        en: 'Connector with intermittent contact under vibration'
-        de: 'Stecker mit sporadischem Kontakt unter Vibration'
+        en: Connector with intermittent contact under vibration
+        de: Stecker mit sporadischem Kontakt unter Vibration
   symptoms:
-    - en: 'EV/hybrid system warning light on'
-      de: 'EV-/Hybrid-Warnleuchte an'
-    - en: 'Reduced motor power or torque'
-      de: 'Reduzierte Motorleistung oder -drehmoment'
-    - en: 'Possible limp mode or vehicle shutdown'
-      de: 'Möglicherweise Notlauf oder Fahrzeug-Abschaltung'
+    - en: EV/hybrid system warning light on
+      de: EV-/Hybrid-Warnleuchte an
+    - en: Reduced motor power or torque
+      de: Reduzierte Motorleistung oder -drehmoment
+    - en: Possible limp mode or vehicle shutdown
+      de: Möglicherweise Notlauf oder Fahrzeug-Abschaltung
   repair:
     difficulty: medium
     diy_possible: false
@@ -209447,8 +209447,8 @@
 - code: P0EA7
   category: powertrain
   title:
-    en: DC/DC Converter Current Sensor C Circuit Intermittent/Erratic
-    de: DC/DC-Wandler Stromsensor C Stromkreis sporadisch/unsauber
+    en: Auxiliary Cooling System Performance
+    de: Zusatzkühlsystem Funktion
   description:
     en: The ECM detects a intermittent/erratic fault on the dc/dc converter current sensor c circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "sporadisch/unsauber" am DC/DC-Wandler Stromsensor C Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -209470,8 +209470,8 @@
     - id: connector_intermittent
       likelihood: low
       label:
-        en: 'Connector with intermittent contact under vibration'
-        de: 'Stecker mit sporadischem Kontakt unter Vibration'
+        en: Connector with intermittent contact under vibration
+        de: Stecker mit sporadischem Kontakt unter Vibration
   repair:
     difficulty: medium
     diy_possible: false
@@ -209492,8 +209492,8 @@
 - code: P0EA8
   category: powertrain
   title:
-    en: DC/DC Converter B Performance
-    de: DC/DC-Wandler B Verhalten
+    en: A/C Compressor Motor Voltage Sensor B Circuit
+    de: Klimakompressormotor Spannungssensor B Stromkreis
   description:
     en: The DC/DC converter B output performance is outside calibration. Output voltage tracking error or efficiency too low.
     de: Die DC/DC-Wandler-B-Ausgangs-Leistung liegt außerhalb der Kalibrierung. Ausgangs-Spannungs-Folgefehler oder Wirkungsgrad zu niedrig.
@@ -210348,11 +210348,11 @@
 - code: P0EBC
   category: powertrain
   title:
-    en: A/C Compressor Motor Phase V Current Sensor Circuit High
-    de: Klima-Verdichter-Motor Phase V Stromsensor Stromkreis hoch
+    en: A/C Refrigerant Temperature Sensor A Circuit
+    de: Kältemittel-Temperatursensor A Stromkreis
   description:
-    en: 'A/C Compressor Motor Phase V Current Sensor Circuit High: the signal voltage is above the expected range. Often an open circuit or a short to supply voltage.'
-    de: 'Klima-Verdichter-Motor Phase V Stromsensor Stromkreis hoch: die Signalspannung liegt über dem erwarteten Bereich. Oft Unterbrechung oder Kurzschluss gegen die Versorgungsspannung.'
+    en: "A/C Compressor Motor Phase V Current Sensor Circuit High: the signal voltage is above the expected range. Often an open circuit or a short to supply voltage."
+    de: "Klima-Verdichter-Motor Phase V Stromsensor Stromkreis hoch: die Signalspannung liegt über dem erwarteten Bereich. Oft Unterbrechung oder Kurzschluss gegen die Versorgungsspannung."
   affected_components:
     - ac_compressor_motor_phase_v_current_sensor
     - wiring_harness
@@ -210370,8 +210370,8 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
   repair:
     difficulty: hard
     diy_possible: false
@@ -210393,11 +210393,11 @@
 - code: P0EBD
   category: powertrain
   title:
-    en: A/C Compressor Motor Phase V Current Sensor Circuit Intermittent/Erratic
-    de: Klima-Verdichter-Motor Phase V Stromsensor Stromkreis sporadisch/unsauber
+    en: A/C Refrigerant Temperature Sensor A Circuit High
+    de: Kältemittel-Temperatursensor A Stromkreis hoch
   description:
-    en: 'A/C Compressor Motor Phase V Current Sensor Circuit Intermittent/Erratic: the signal is intermittent or erratic. Often a loose connector or chafed wiring; a wiggle test often locates it.'
-    de: 'Klima-Verdichter-Motor Phase V Stromsensor Stromkreis sporadisch/unsauber: das Signal ist sporadisch oder unsauber. Oft loser Stecker oder gescheuerte Leitung; ein Wackeltest lokalisiert ihn oft.'
+    en: "A/C Compressor Motor Phase V Current Sensor Circuit Intermittent/Erratic: the signal is intermittent or erratic. Often a loose connector or chafed wiring; a wiggle test often locates it."
+    de: "Klima-Verdichter-Motor Phase V Stromsensor Stromkreis sporadisch/unsauber: das Signal ist sporadisch oder unsauber. Oft loser Stecker oder gescheuerte Leitung; ein Wackeltest lokalisiert ihn oft."
   affected_components:
     - ac_compressor_motor_phase_v_current_sensor
     - wiring_harness
@@ -210415,8 +210415,8 @@
     - id: connector_intermittent
       likelihood: low
       label:
-        en: 'Connector with intermittent contact under vibration'
-        de: 'Stecker mit sporadischem Kontakt unter Vibration'
+        en: Connector with intermittent contact under vibration
+        de: Stecker mit sporadischem Kontakt unter Vibration
   repair:
     difficulty: hard
     diy_possible: false
@@ -210438,8 +210438,8 @@
 - code: P0EBE
   category: powertrain
   title:
-    en: A/C Compressor Motor Phase W Current Sensor Circuit
-    de: Klima-Verdichter-Motor Phase W Stromsensor Stromkreis
+    en: A/C Refrigerant Temperature Sensor A Circuit Low
+    de: Kältemittel-Temperatursensor A Stromkreis niedrig
   description:
     en: The A/C compressor motor phase W current sensor reports a fault.
     de: Der Klima-Verdichter-Motor-Phase-W-Stromsensor meldet einen Fehler.
@@ -210568,11 +210568,11 @@
 - code: P0EC1
   category: powertrain
   title:
-    en: A/C Compressor Motor Phase W Current Sensor Circuit High
-    de: Klima-Verdichter-Motor Phase W Stromsensor Stromkreis hoch
+    en: A/C Refrigerant Temperature Sensor B Circuit
+    de: Kältemittel-Temperatursensor B Stromkreis
   description:
-    en: 'A/C Compressor Motor Phase W Current Sensor Circuit High: the signal voltage is above the expected range. Often an open circuit or a short to supply voltage.'
-    de: 'Klima-Verdichter-Motor Phase W Stromsensor Stromkreis hoch: die Signalspannung liegt über dem erwarteten Bereich. Oft Unterbrechung oder Kurzschluss gegen die Versorgungsspannung.'
+    en: "A/C Compressor Motor Phase W Current Sensor Circuit High: the signal voltage is above the expected range. Often an open circuit or a short to supply voltage."
+    de: "Klima-Verdichter-Motor Phase W Stromsensor Stromkreis hoch: die Signalspannung liegt über dem erwarteten Bereich. Oft Unterbrechung oder Kurzschluss gegen die Versorgungsspannung."
   affected_components:
     - ac_compressor_motor_phase_w_current_sensor
     - wiring_harness
@@ -210590,8 +210590,8 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
   repair:
     difficulty: hard
     diy_possible: false
@@ -210613,11 +210613,11 @@
 - code: P0EC2
   category: powertrain
   title:
-    en: A/C Compressor Motor Phase W Current Sensor Circuit Intermittent/Erratic
-    de: Klima-Verdichter-Motor Phase W Stromsensor Stromkreis sporadisch/unsauber
+    en: A/C Refrigerant Temperature Sensor B Circuit High
+    de: Kältemittel-Temperatursensor B Stromkreis hoch
   description:
-    en: 'A/C Compressor Motor Phase W Current Sensor Circuit Intermittent/Erratic: the signal is intermittent or erratic. Often a loose connector or chafed wiring; a wiggle test often locates it.'
-    de: 'Klima-Verdichter-Motor Phase W Stromsensor Stromkreis sporadisch/unsauber: das Signal ist sporadisch oder unsauber. Oft loser Stecker oder gescheuerte Leitung; ein Wackeltest lokalisiert ihn oft.'
+    en: "A/C Compressor Motor Phase W Current Sensor Circuit Intermittent/Erratic: the signal is intermittent or erratic. Often a loose connector or chafed wiring; a wiggle test often locates it."
+    de: "Klima-Verdichter-Motor Phase W Stromsensor Stromkreis sporadisch/unsauber: das Signal ist sporadisch oder unsauber. Oft loser Stecker oder gescheuerte Leitung; ein Wackeltest lokalisiert ihn oft."
   affected_components:
     - ac_compressor_motor_phase_w_current_sensor
     - wiring_harness
@@ -210635,8 +210635,8 @@
     - id: connector_intermittent
       likelihood: low
       label:
-        en: 'Connector with intermittent contact under vibration'
-        de: 'Stecker mit sporadischem Kontakt unter Vibration'
+        en: Connector with intermittent contact under vibration
+        de: Stecker mit sporadischem Kontakt unter Vibration
   repair:
     difficulty: hard
     diy_possible: false
@@ -211044,8 +211044,8 @@
 - code: P0ECC
   category: powertrain
   title:
-    en: A/C Refrigerant Temperature Sensor B Circuit Intermittent/Erratic
-    de: Klima-Kältemittel-Temperatursensor B Stromkreis sporadisch/unsauber
+    en: Hybrid/EV Battery E Voltage
+    de: Hybrid-/EV-Batterie E Spannung
   description:
     en: The ECM detects a intermittent/erratic fault on the a/c refrigerant temperature sensor b circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "sporadisch/unsauber" am Klima-Kältemittel-Temperatursensor B Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -211066,8 +211066,8 @@
     - id: connector_intermittent
       likelihood: low
       label:
-        en: 'Connector with intermittent contact under vibration'
-        de: 'Stecker mit sporadischem Kontakt unter Vibration'
+        en: Connector with intermittent contact under vibration
+        de: Stecker mit sporadischem Kontakt unter Vibration
   repair:
     difficulty: medium
     diy_possible: false
@@ -211088,8 +211088,8 @@
 - code: P0ECD
   category: powertrain
   title:
-    en: A/C Refrigerant Distribution Valve A Control Circuit/Open
-    de: Klima-Kältemittel-Verteilventil A Steuerkreis offen
+    en: Hybrid/EV Battery E Voltage Unstable
+    de: Hybrid-/EV-Batterie E Spannung instabil
   description:
     en: The A/C refrigerant distribution valve A reports a control circuit/open condition.
     de: Das Klima-Kältemittel-Verteilventil A meldet einen Zustand "Steuerkreis offen".
@@ -211110,8 +211110,8 @@
     - id: connector_back_out
       likelihood: low
       label:
-        en: 'Pin pushed back out of connector body'
-        de: 'Pin aus dem Steckergehäuse zurückgedrückt'
+        en: Pin pushed back out of connector body
+        de: Pin aus dem Steckergehäuse zurückgedrückt
   repair:
     difficulty: medium
     diy_possible: false
@@ -211132,11 +211132,11 @@
 - code: P0ECE
   category: powertrain
   title:
-    en: A/C Refrigerant Distribution Valve A Control Circuit Low
-    de: Klima-Kältemittel-Verteilventil A Steuerkreis niedrig
+    en: Hybrid/EV Battery E Voltage Low
+    de: Hybrid-/EV-Batterie E Spannung niedrig
   description:
-    en: 'The A/C refrigerant distribution valve A reports a control circuit low condition. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'Das Klima-Kältemittel-Verteilventil A meldet einen Zustand "Steuerkreis niedrig". Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: The A/C refrigerant distribution valve A reports a control circuit low condition. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.
+    de: Das Klima-Kältemittel-Verteilventil A meldet einen Zustand "Steuerkreis niedrig". Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.
   affected_components:
     - ac_refrigerant_distribution_valve_a
     - wiring_harness
@@ -211154,8 +211154,8 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
   repair:
     difficulty: medium
     diy_possible: false
@@ -211176,11 +211176,11 @@
 - code: P0ECF
   category: powertrain
   title:
-    en: A/C Refrigerant Distribution Valve A Control Circuit High
-    de: Klima-Kältemittel-Verteilventil A Steuerkreis hoch
+    en: Hybrid/EV Battery E Voltage High
+    de: Hybrid-/EV-Batterie E Spannung hoch
   description:
-    en: 'The A/C refrigerant distribution valve A reports a control circuit high condition. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.'
-    de: 'Das Klima-Kältemittel-Verteilventil A meldet einen Zustand "Steuerkreis hoch". Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.'
+    en: The A/C refrigerant distribution valve A reports a control circuit high condition. Wiring faults of this kind typically come from chafing, water ingress at connector seals, or pin push-back — a wiggle test on the harness while the code is active often confirms the location.
+    de: Das Klima-Kältemittel-Verteilventil A meldet einen Zustand "Steuerkreis hoch". Verkabelungsfehler dieser Art kommen typischerweise von Scheuern, Wassereintritt an Steckerdichtungen oder zurückgedrückten Pins — ein Wackeltest am Kabelbaum bei aktivem Code lokalisiert den Fehler oft.
   affected_components:
     - ac_refrigerant_distribution_valve_a
     - wiring_harness
@@ -211198,8 +211198,8 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
   repair:
     difficulty: medium
     diy_possible: false
@@ -211220,8 +211220,8 @@
 - code: P0ED0
   category: powertrain
   title:
-    en: A/C Refrigerant Distribution Valve A Performance
-    de: Klima-Kältemittel-Verteilventil A Verhalten
+    en: Hybrid/EV Battery F Voltage
+    de: Hybrid-/EV-Batterie F Spannung
   description:
     en: The A/C refrigerant distribution valve A reports a performance condition.
     de: Das Klima-Kältemittel-Verteilventil A meldet einen Zustand "Verhalten".
@@ -211419,8 +211419,8 @@
 - code: P0ED4
   category: powertrain
   title:
-    en: Hybrid/EV Battery Pack E Voltage Sensor Circuit Low
-    de: Hybrid/EV-Batteriepaket E Spannungssensor Stromkreis niedrig
+    en: Generator Phase X Current
+    de: Generator Phase X Strom
   description:
     en: The ECM detects a low fault on the hybrid/ev battery pack e voltage sensor circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "niedrig" am Hybrid/EV-Batteriepaket E Spannungssensor Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -211442,17 +211442,17 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
   symptoms:
-    - en: 'EV/hybrid system warning light on'
-      de: 'EV-/Hybrid-Warnleuchte an'
-    - en: 'Reduced power output or limp mode'
-      de: 'Reduzierte Leistung oder Notlauf'
-    - en: 'Charging may fail or be slowed'
-      de: 'Ladevorgang kann fehlschlagen oder verlangsamt sein'
-    - en: 'Reduced electric range'
-      de: 'Reduzierte elektrische Reichweite'
+    - en: EV/hybrid system warning light on
+      de: EV-/Hybrid-Warnleuchte an
+    - en: Reduced power output or limp mode
+      de: Reduzierte Leistung oder Notlauf
+    - en: Charging may fail or be slowed
+      de: Ladevorgang kann fehlschlagen oder verlangsamt sein
+    - en: Reduced electric range
+      de: Reduzierte elektrische Reichweite
   repair:
     difficulty: medium
     diy_possible: false
@@ -211473,8 +211473,8 @@
 - code: P0ED5
   category: powertrain
   title:
-    en: Hybrid/EV Battery Pack E Voltage Sensor Circuit High
-    de: Hybrid/EV-Batteriepaket E Spannungssensor Stromkreis hoch
+    en: Generator Phase X Current Low
+    de: Generator Phase X Strom niedrig
   description:
     en: The ECM detects a high fault on the hybrid/ev battery pack e voltage sensor circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "hoch" am Hybrid/EV-Batteriepaket E Spannungssensor Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -211496,17 +211496,17 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
   symptoms:
-    - en: 'EV/hybrid system warning light on'
-      de: 'EV-/Hybrid-Warnleuchte an'
-    - en: 'Reduced power output or limp mode'
-      de: 'Reduzierte Leistung oder Notlauf'
-    - en: 'Charging may fail or be slowed'
-      de: 'Ladevorgang kann fehlschlagen oder verlangsamt sein'
-    - en: 'Reduced electric range'
-      de: 'Reduzierte elektrische Reichweite'
+    - en: EV/hybrid system warning light on
+      de: EV-/Hybrid-Warnleuchte an
+    - en: Reduced power output or limp mode
+      de: Reduzierte Leistung oder Notlauf
+    - en: Charging may fail or be slowed
+      de: Ladevorgang kann fehlschlagen oder verlangsamt sein
+    - en: Reduced electric range
+      de: Reduzierte elektrische Reichweite
   repair:
     difficulty: medium
     diy_possible: false
@@ -211527,8 +211527,8 @@
 - code: P0ED6
   category: powertrain
   title:
-    en: Hybrid/EV Battery Pack E Voltage Sensor Circuit Intermittent/Erratic
-    de: Hybrid/EV-Batteriepaket E Spannungssensor Stromkreis sporadisch/unsauber
+    en: Generator Phase X Current High
+    de: Generator Phase X Strom hoch
   description:
     en: The ECM detects a intermittent/erratic fault on the hybrid/ev battery pack e voltage sensor circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "sporadisch/unsauber" am Hybrid/EV-Batteriepaket E Spannungssensor Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -211550,17 +211550,17 @@
     - id: connector_intermittent
       likelihood: low
       label:
-        en: 'Connector with intermittent contact under vibration'
-        de: 'Stecker mit sporadischem Kontakt unter Vibration'
+        en: Connector with intermittent contact under vibration
+        de: Stecker mit sporadischem Kontakt unter Vibration
   symptoms:
-    - en: 'EV/hybrid system warning light on'
-      de: 'EV-/Hybrid-Warnleuchte an'
-    - en: 'Reduced power output or limp mode'
-      de: 'Reduzierte Leistung oder Notlauf'
-    - en: 'Charging may fail or be slowed'
-      de: 'Ladevorgang kann fehlschlagen oder verlangsamt sein'
-    - en: 'Reduced electric range'
-      de: 'Reduzierte elektrische Reichweite'
+    - en: EV/hybrid system warning light on
+      de: EV-/Hybrid-Warnleuchte an
+    - en: Reduced power output or limp mode
+      de: Reduzierte Leistung oder Notlauf
+    - en: Charging may fail or be slowed
+      de: Ladevorgang kann fehlschlagen oder verlangsamt sein
+    - en: Reduced electric range
+      de: Reduzierte elektrische Reichweite
   repair:
     difficulty: medium
     diy_possible: false
@@ -211581,8 +211581,8 @@
 - code: P0ED7
   category: powertrain
   title:
-    en: Hybrid/EV Battery Pack F Voltage Sensor Circuit
-    de: Hybrid/EV-Batteriepaket F Spannungssensor Stromkreis
+    en: Generator Phase Y Current
+    de: Generator Phase Y Strom
   description:
     en: The ECM detects a circuit fault on the hybrid/ev battery pack f voltage sensor circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "Stromkreis" am Hybrid/EV-Batteriepaket F Spannungssensor Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -211604,17 +211604,17 @@
     - id: cell_imbalance
       likelihood: low
       label:
-        en: 'Pack cell imbalance approaching service threshold'
-        de: 'Pack-Zell-Ungleichgewicht nahe Wartungsschwelle'
+        en: Pack cell imbalance approaching service threshold
+        de: Pack-Zell-Ungleichgewicht nahe Wartungsschwelle
   symptoms:
-    - en: 'EV/hybrid system warning light on'
-      de: 'EV-/Hybrid-Warnleuchte an'
-    - en: 'Reduced power output or limp mode'
-      de: 'Reduzierte Leistung oder Notlauf'
-    - en: 'Charging may fail or be slowed'
-      de: 'Ladevorgang kann fehlschlagen oder verlangsamt sein'
-    - en: 'Reduced electric range'
-      de: 'Reduzierte elektrische Reichweite'
+    - en: EV/hybrid system warning light on
+      de: EV-/Hybrid-Warnleuchte an
+    - en: Reduced power output or limp mode
+      de: Reduzierte Leistung oder Notlauf
+    - en: Charging may fail or be slowed
+      de: Ladevorgang kann fehlschlagen oder verlangsamt sein
+    - en: Reduced electric range
+      de: Reduzierte elektrische Reichweite
   repair:
     difficulty: medium
     diy_possible: false
@@ -211635,8 +211635,8 @@
 - code: P0ED8
   category: powertrain
   title:
-    en: Hybrid/EV Battery Pack F Voltage Sensor Circuit Range/Performance
-    de: Hybrid/EV-Batteriepaket F Spannungssensor Stromkreis Bereich/Leistung
+    en: Generator Phase Y Current Low
+    de: Generator Phase Y Strom niedrig
   description:
     en: The ECM detects a range/performance fault on the hybrid/ev battery pack f voltage sensor circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "Bereich/Leistung" am Hybrid/EV-Batteriepaket F Spannungssensor Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -211658,17 +211658,17 @@
     - id: sensor_aged
       likelihood: low
       label:
-        en: 'Sensor element aged beyond calibration window'
-        de: 'Sensorelement gealtert über Kalibrierfenster hinaus'
+        en: Sensor element aged beyond calibration window
+        de: Sensorelement gealtert über Kalibrierfenster hinaus
   symptoms:
-    - en: 'EV/hybrid system warning light on'
-      de: 'EV-/Hybrid-Warnleuchte an'
-    - en: 'Reduced power output or limp mode'
-      de: 'Reduzierte Leistung oder Notlauf'
-    - en: 'Charging may fail or be slowed'
-      de: 'Ladevorgang kann fehlschlagen oder verlangsamt sein'
-    - en: 'Reduced electric range'
-      de: 'Reduzierte elektrische Reichweite'
+    - en: EV/hybrid system warning light on
+      de: EV-/Hybrid-Warnleuchte an
+    - en: Reduced power output or limp mode
+      de: Reduzierte Leistung oder Notlauf
+    - en: Charging may fail or be slowed
+      de: Ladevorgang kann fehlschlagen oder verlangsamt sein
+    - en: Reduced electric range
+      de: Reduzierte elektrische Reichweite
   repair:
     difficulty: medium
     diy_possible: false
@@ -211689,8 +211689,8 @@
 - code: P0ED9
   category: powertrain
   title:
-    en: Hybrid/EV Battery Pack F Voltage Sensor Circuit Low
-    de: Hybrid/EV-Batteriepaket F Spannungssensor Stromkreis niedrig
+    en: Generator Phase Y Current High
+    de: Generator Phase Y Strom hoch
   description:
     en: The ECM detects a low fault on the hybrid/ev battery pack f voltage sensor circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "niedrig" am Hybrid/EV-Batteriepaket F Spannungssensor Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -211712,17 +211712,17 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
   symptoms:
-    - en: 'EV/hybrid system warning light on'
-      de: 'EV-/Hybrid-Warnleuchte an'
-    - en: 'Reduced power output or limp mode'
-      de: 'Reduzierte Leistung oder Notlauf'
-    - en: 'Charging may fail or be slowed'
-      de: 'Ladevorgang kann fehlschlagen oder verlangsamt sein'
-    - en: 'Reduced electric range'
-      de: 'Reduzierte elektrische Reichweite'
+    - en: EV/hybrid system warning light on
+      de: EV-/Hybrid-Warnleuchte an
+    - en: Reduced power output or limp mode
+      de: Reduzierte Leistung oder Notlauf
+    - en: Charging may fail or be slowed
+      de: Ladevorgang kann fehlschlagen oder verlangsamt sein
+    - en: Reduced electric range
+      de: Reduzierte elektrische Reichweite
   repair:
     difficulty: medium
     diy_possible: false
@@ -211743,8 +211743,8 @@
 - code: P0EDA
   category: powertrain
   title:
-    en: Hybrid/EV Battery Pack F Voltage Sensor Circuit High
-    de: Hybrid/EV-Batteriepaket F Spannungssensor Stromkreis hoch
+    en: Generator Phase Z Current
+    de: Generator Phase Z Strom
   description:
     en: The ECM detects a high fault on the hybrid/ev battery pack f voltage sensor circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "hoch" am Hybrid/EV-Batteriepaket F Spannungssensor Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -211766,17 +211766,17 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
   symptoms:
-    - en: 'EV/hybrid system warning light on'
-      de: 'EV-/Hybrid-Warnleuchte an'
-    - en: 'Reduced power output or limp mode'
-      de: 'Reduzierte Leistung oder Notlauf'
-    - en: 'Charging may fail or be slowed'
-      de: 'Ladevorgang kann fehlschlagen oder verlangsamt sein'
-    - en: 'Reduced electric range'
-      de: 'Reduzierte elektrische Reichweite'
+    - en: EV/hybrid system warning light on
+      de: EV-/Hybrid-Warnleuchte an
+    - en: Reduced power output or limp mode
+      de: Reduzierte Leistung oder Notlauf
+    - en: Charging may fail or be slowed
+      de: Ladevorgang kann fehlschlagen oder verlangsamt sein
+    - en: Reduced electric range
+      de: Reduzierte elektrische Reichweite
   repair:
     difficulty: medium
     diy_possible: false
@@ -211797,8 +211797,8 @@
 - code: P0EDB
   category: powertrain
   title:
-    en: Hybrid/EV Battery Pack F Voltage Sensor Circuit Intermittent/Erratic
-    de: Hybrid/EV-Batteriepaket F Spannungssensor Stromkreis sporadisch/unsauber
+    en: Generator Phase Z Current Low
+    de: Generator Phase Z Strom niedrig
   description:
     en: The ECM detects a intermittent/erratic fault on the hybrid/ev battery pack f voltage sensor circuit. Reading cannot be used reliably for control.
     de: Das Steuergerät erkennt einen Fehler "sporadisch/unsauber" am Hybrid/EV-Batteriepaket F Spannungssensor Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
@@ -211820,17 +211820,17 @@
     - id: connector_intermittent
       likelihood: low
       label:
-        en: 'Connector with intermittent contact under vibration'
-        de: 'Stecker mit sporadischem Kontakt unter Vibration'
+        en: Connector with intermittent contact under vibration
+        de: Stecker mit sporadischem Kontakt unter Vibration
   symptoms:
-    - en: 'EV/hybrid system warning light on'
-      de: 'EV-/Hybrid-Warnleuchte an'
-    - en: 'Reduced power output or limp mode'
-      de: 'Reduzierte Leistung oder Notlauf'
-    - en: 'Charging may fail or be slowed'
-      de: 'Ladevorgang kann fehlschlagen oder verlangsamt sein'
-    - en: 'Reduced electric range'
-      de: 'Reduzierte elektrische Reichweite'
+    - en: EV/hybrid system warning light on
+      de: EV-/Hybrid-Warnleuchte an
+    - en: Reduced power output or limp mode
+      de: Reduzierte Leistung oder Notlauf
+    - en: Charging may fail or be slowed
+      de: Ladevorgang kann fehlschlagen oder verlangsamt sein
+    - en: Reduced electric range
+      de: Reduzierte elektrische Reichweite
   repair:
     difficulty: medium
     diy_possible: false
@@ -211891,8 +211891,8 @@
 - code: P0EDD
   category: powertrain
   title:
-    en: Generator Phase Y Current Sensor Circuit
-    de: Generator Phase Y Stromsensor Stromkreis
+    en: Hybrid/EV Battery Pack B Deterioration
+    de: Hybrid-/EV-Batteriepaket B Alterung
   description:
     en: The secondary generator phase Y current sensor circuit reports a fault.
     de: Der Stromkreis des sekundären Generator-Phase-Y-Stromsensors meldet einen Fehler.
@@ -211931,8 +211931,8 @@
 - code: P0EDE
   category: powertrain
   title:
-    en: Generator Phase Z Current Sensor Circuit
-    de: Generator Phase Z Stromsensor Stromkreis
+    en: Hybrid/EV Battery Pack C Deterioration
+    de: Hybrid-/EV-Batteriepaket C Alterung
   description:
     en: The secondary generator phase Z current sensor circuit reports a fault.
     de: Der Stromkreis des sekundären Generator-Phase-Z-Stromsensors meldet einen Fehler.
@@ -212130,8 +212130,8 @@
 - code: P0EE2
   category: powertrain
   title:
-    en: Hybrid/EV Battery Pack E Deterioration
-    de: Hybrid/EV-Batteriepaket E Verschlechterung
+    en: A/C Refrigerant Distribution Valve B Stuck Open
+    de: Kältemittel-Verteilventil B klemmt offen
   description:
     en: The BMS detects deterioration in HV battery pack section E. Capacity or internal resistance outside service limits.
     de: Das BMS erkennt Verschlechterung im HV-Batteriepaket-Abschnitt E. Kapazität oder Innenwiderstand außerhalb der Wartungsgrenzen.
@@ -212152,17 +212152,17 @@
     - id: cell_imbalance
       likelihood: low
       label:
-        en: 'Pack cell imbalance approaching service threshold'
-        de: 'Pack-Zell-Ungleichgewicht nahe Wartungsschwelle'
+        en: Pack cell imbalance approaching service threshold
+        de: Pack-Zell-Ungleichgewicht nahe Wartungsschwelle
   symptoms:
-    - en: 'EV/hybrid system warning light on'
-      de: 'EV-/Hybrid-Warnleuchte an'
-    - en: 'Reduced power output or limp mode'
-      de: 'Reduzierte Leistung oder Notlauf'
-    - en: 'Charging may fail or be slowed'
-      de: 'Ladevorgang kann fehlschlagen oder verlangsamt sein'
-    - en: 'Reduced electric range'
-      de: 'Reduzierte elektrische Reichweite'
+    - en: EV/hybrid system warning light on
+      de: EV-/Hybrid-Warnleuchte an
+    - en: Reduced power output or limp mode
+      de: Reduzierte Leistung oder Notlauf
+    - en: Charging may fail or be slowed
+      de: Ladevorgang kann fehlschlagen oder verlangsamt sein
+    - en: Reduced electric range
+      de: Reduzierte elektrische Reichweite
   repair:
     difficulty: hard
     diy_possible: false
@@ -212183,8 +212183,8 @@
 - code: P0EE3
   category: powertrain
   title:
-    en: Hybrid/EV Battery Pack F Deterioration
-    de: Hybrid/EV-Batteriepaket F Verschlechterung
+    en: A/C Refrigerant Distribution Valve B Control Circuit/Open
+    de: Kältemittel-Verteilventil B Steuerkreis/unterbrochen
   description:
     en: The BMS detects deterioration in HV battery pack section F. Capacity or internal resistance outside service limits.
     de: Das BMS erkennt Verschlechterung im HV-Batteriepaket-Abschnitt F. Kapazität oder Innenwiderstand außerhalb der Wartungsgrenzen.
@@ -212205,17 +212205,17 @@
     - id: cell_imbalance
       likelihood: low
       label:
-        en: 'Pack cell imbalance approaching service threshold'
-        de: 'Pack-Zell-Ungleichgewicht nahe Wartungsschwelle'
+        en: Pack cell imbalance approaching service threshold
+        de: Pack-Zell-Ungleichgewicht nahe Wartungsschwelle
   symptoms:
-    - en: 'EV/hybrid system warning light on'
-      de: 'EV-/Hybrid-Warnleuchte an'
-    - en: 'Reduced power output or limp mode'
-      de: 'Reduzierte Leistung oder Notlauf'
-    - en: 'Charging may fail or be slowed'
-      de: 'Ladevorgang kann fehlschlagen oder verlangsamt sein'
-    - en: 'Reduced electric range'
-      de: 'Reduzierte elektrische Reichweite'
+    - en: EV/hybrid system warning light on
+      de: EV-/Hybrid-Warnleuchte an
+    - en: Reduced power output or limp mode
+      de: Reduzierte Leistung oder Notlauf
+    - en: Charging may fail or be slowed
+      de: Ladevorgang kann fehlschlagen oder verlangsamt sein
+    - en: Reduced electric range
+      de: Reduzierte elektrische Reichweite
   repair:
     difficulty: hard
     diy_possible: false
@@ -212368,8 +212368,8 @@
 - code: P0EE7
   category: powertrain
   title:
-    en: A/C Refrigerant Distribution Valve B Performance
-    de: Klima-Kältemittel-Verteilventil B Verhalten
+    en: Battery Charger Coupler Temperature Sensor B Circuit
+    de: Ladedose Temperatursensor B Stromkreis
   description:
     en: The A/C refrigerant distribution valve B reports a performance condition.
     de: Das Klima-Kältemittel-Verteilventil B meldet einen Zustand "Verhalten".
@@ -212662,8 +212662,8 @@
 - code: P0EED
   category: powertrain
   title:
-    en: Battery Energy Control Module B
-    de: Batterie-Energie-Steuermodul B
+    en: Hybrid/EV Battery System Discharge Circuit Performance
+    de: Hybrid-/EV-Batteriesystem Entladekreis Funktion
   description:
     en: The battery energy control module B reports a generic internal fault.
     de: Das Batterie-Energie-Steuermodul B meldet einen allgemeinen internen Fehler.
@@ -212699,8 +212699,8 @@
 - code: P0EEE
   category: powertrain
   title:
-    en: Hybrid/EV Battery Discharge Circuit Performance
-    de: Hybrid/EV-Batterie-Entladekreis Verhalten
+    en: Battery Charger Coupler Temperature B Too High
+    de: Ladedose Temperatur B zu hoch
   description:
     en: The HV battery discharge circuit performance is outside calibration. Discharge resistor or contactor fault.
     de: Die Leistung des HV-Batterie-Entladekreises liegt außerhalb der Kalibrierung. Entladewiderstand oder Schütz-Fehler.
@@ -212722,17 +212722,17 @@
     - id: cell_imbalance
       likelihood: low
       label:
-        en: 'Pack cell imbalance approaching service threshold'
-        de: 'Pack-Zell-Ungleichgewicht nahe Wartungsschwelle'
+        en: Pack cell imbalance approaching service threshold
+        de: Pack-Zell-Ungleichgewicht nahe Wartungsschwelle
   symptoms:
-    - en: 'EV/hybrid system warning light on'
-      de: 'EV-/Hybrid-Warnleuchte an'
-    - en: 'Reduced power output or limp mode'
-      de: 'Reduzierte Leistung oder Notlauf'
-    - en: 'Charging may fail or be slowed'
-      de: 'Ladevorgang kann fehlschlagen oder verlangsamt sein'
-    - en: 'Reduced electric range'
-      de: 'Reduzierte elektrische Reichweite'
+    - en: EV/hybrid system warning light on
+      de: EV-/Hybrid-Warnleuchte an
+    - en: Reduced power output or limp mode
+      de: Reduzierte Leistung oder Notlauf
+    - en: Charging may fail or be slowed
+      de: Ladevorgang kann fehlschlagen oder verlangsamt sein
+    - en: Reduced electric range
+      de: Reduzierte elektrische Reichweite
   repair:
     difficulty: hard
     diy_possible: false
@@ -212753,11 +212753,11 @@
 - code: P0EEF
   category: powertrain
   title:
-    en: Battery Charger Coupler Temperature B Too High
-    de: Batterielade-Kopplungs-Temperatur B zu hoch
+    en: Drive Motor A Control Module Overtemperature
+    de: Antriebsmotor A Steuergerät Übertemperatur
   description:
-    en: 'The coupler B temperature exceeds the safety threshold during charging. The on-board charger negotiates voltage, current and safety with the EVSE; a fault interrupts charging or limits it to AC slow-charge despite a DC fast charger being attached.'
-    de: 'Die Kopplungs-B-Temperatur überschreitet die Sicherheitsschwelle während des Ladens. Das Bordladegerät verhandelt Spannung, Strom und Sicherheit mit der EVSE; ein Fehler unterbricht das Laden oder begrenzt es auf AC-Langsamladen trotz angeschlossener DC-Schnellladesäule.'
+    en: The coupler B temperature exceeds the safety threshold during charging. The on-board charger negotiates voltage, current and safety with the EVSE; a fault interrupts charging or limits it to AC slow-charge despite a DC fast charger being attached.
+    de: Die Kopplungs-B-Temperatur überschreitet die Sicherheitsschwelle während des Ladens. Das Bordladegerät verhandelt Spannung, Strom und Sicherheit mit der EVSE; ein Fehler unterbricht das Laden oder begrenzt es auf AC-Langsamladen trotz angeschlossener DC-Schnellladesäule.
   affected_components:
     - battery_charger_coupler_b
   common_causes:
@@ -212772,12 +212772,12 @@
         en: Charging current above coupler rating
         de: Ladestrom über Kopplungs-Nennwert
   symptoms:
-    - en: 'Charge status indicator shows fault'
-      de: 'Ladestatus-Anzeige zeigt Fehler'
-    - en: 'Charging may not start or interrupts'
-      de: 'Ladevorgang startet nicht oder bricht ab'
-    - en: 'Slower-than-expected charge rate'
-      de: 'Langsamerer Ladevorgang als erwartet'
+    - en: Charge status indicator shows fault
+      de: Ladestatus-Anzeige zeigt Fehler
+    - en: Charging may not start or interrupts
+      de: Ladevorgang startet nicht oder bricht ab
+    - en: Slower-than-expected charge rate
+      de: Langsamerer Ladevorgang als erwartet
   repair:
     difficulty: medium
     diy_possible: false
@@ -212798,11 +212798,11 @@
 - code: P0EF0
   category: powertrain
   title:
-    en: Drive Motor A Control Module Overtemperature
-    de: Antriebsmotor A Steuermodul Übertemperatur
+    en: Battery Charger Coupler Unlock Disabled - High Voltage Present
+    de: Ladedose Entriegelung gesperrt - Hochspannung anliegend
   description:
-    en: 'The drive motor A control module reports overtemperature. Cooling insufficient or load excessive. The drive motor''s position, current and temperature are watched continuously; a fault here downgrades the inverter to a safe operating point or triggers torque reduction.'
-    de: 'Das Antriebsmotor-A-Steuermodul meldet Übertemperatur. Kühlung unzureichend oder Last zu hoch. Position, Strom und Temperatur des Antriebsmotors werden kontinuierlich überwacht; ein Fehler stuft den Wechselrichter auf einen sicheren Betriebspunkt zurück oder löst Drehmomentreduktion aus.'
+    en: The drive motor A control module reports overtemperature. Cooling insufficient or load excessive. The drive motor's position, current and temperature are watched continuously; a fault here downgrades the inverter to a safe operating point or triggers torque reduction.
+    de: Das Antriebsmotor-A-Steuermodul meldet Übertemperatur. Kühlung unzureichend oder Last zu hoch. Position, Strom und Temperatur des Antriebsmotors werden kontinuierlich überwacht; ein Fehler stuft den Wechselrichter auf einen sicheren Betriebspunkt zurück oder löst Drehmomentreduktion aus.
   affected_components:
     - drive_motor_a_cm
     - cooling_system
@@ -212818,12 +212818,12 @@
         en: Load excessive
         de: Last zu hoch
   symptoms:
-    - en: 'EV/hybrid system warning light on'
-      de: 'EV-/Hybrid-Warnleuchte an'
-    - en: 'Reduced motor power or torque'
-      de: 'Reduzierte Motorleistung oder -drehmoment'
-    - en: 'Possible limp mode or vehicle shutdown'
-      de: 'Möglicherweise Notlauf oder Fahrzeug-Abschaltung'
+    - en: EV/hybrid system warning light on
+      de: EV-/Hybrid-Warnleuchte an
+    - en: Reduced motor power or torque
+      de: Reduzierte Motorleistung oder -drehmoment
+    - en: Possible limp mode or vehicle shutdown
+      de: Möglicherweise Notlauf oder Fahrzeug-Abschaltung
   repair:
     difficulty: medium
     diy_possible: false
@@ -212843,8 +212843,8 @@
 - code: P0EF1
   category: powertrain
   title:
-    en: Battery Charger Coupler Unlock Disabled
-    de: Batterielade-Kopplung Entriegeln deaktiviert
+    en: Drive Motor C Temperature Sensor Circuit
+    de: Antriebsmotor C Temperatursensor Stromkreis
   description:
     en: The battery charger coupler unlock is disabled - safety condition prevents unlocking. HV active or charging in progress.
     de: Die Batterielade-Kopplungs-Entriegelung ist deaktiviert - Sicherheitsbedingung verhindert das Entriegeln. HV aktiv oder Ladevorgang läuft.
@@ -212863,12 +212863,12 @@
         en: Charge session not terminated
         de: Ladesitzung nicht beendet
   symptoms:
-    - en: 'Charge status indicator shows fault'
-      de: 'Ladestatus-Anzeige zeigt Fehler'
-    - en: 'Charging may not start or interrupts'
-      de: 'Ladevorgang startet nicht oder bricht ab'
-    - en: 'Slower-than-expected charge rate'
-      de: 'Langsamerer Ladevorgang als erwartet'
+    - en: Charge status indicator shows fault
+      de: Ladestatus-Anzeige zeigt Fehler
+    - en: Charging may not start or interrupts
+      de: Ladevorgang startet nicht oder bricht ab
+    - en: Slower-than-expected charge rate
+      de: Langsamerer Ladevorgang als erwartet
   repair:
     difficulty: easy
     diy_possible: true
