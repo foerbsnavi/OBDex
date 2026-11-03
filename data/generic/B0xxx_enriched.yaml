@@ -6593,8 +6593,8 @@
     en: Camera Washer Actuator B
     de: Kamera-Reinigungsaktuator B
   description:
-    en: 'Fault on camera washer actuator B. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
-    de: 'Fehler am Kamera-Reinigungsaktuator B. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
+    en: Fault on camera washer actuator B. Such an actuator is usually a small solenoid valve or a dedicated pump outlet that releases washer fluid to the nozzle of one camera, for example a rear-view, surround-view or driver-assistance camera; the letter only tells which actuator the manufacturer assigned to which camera. When it fails, that lens can no longer be rinsed on demand, and dirt on it can blur the image or make the systems that rely on the camera switch off.
+    de: Fehler am Kamera-Reinigungsaktuator B. Ein solcher Aktuator ist meist ein kleines Magnetventil oder ein eigener Pumpenausgang, der Waschflüssigkeit zur Düse einer einzelnen Kamera freigibt, etwa einer Rückfahr-, Rundumsicht- oder Assistenzkamera; der Buchstabe gibt nur an, welchen Aktuator der Hersteller welcher Kamera zugeordnet hat. Fällt er aus, lässt sich diese Linse nicht mehr gezielt spülen, und Schmutz darauf kann das Bild verschleiern oder die Systeme abschalten, die auf die Kamera angewiesen sind.
   affected_components:
     - camera_washer_actuator_b
     - actuator_wiring
@@ -6604,11 +6604,23 @@
       label:
         en: Washer actuator failed
         de: Reinigungsaktuator defekt
+    - id: wiring_fault
+      likelihood: medium
+      label:
+        en: Open or shorted actuator wiring, or corroded connector
+        de: Unterbrochene oder kurzgeschlossene Aktuatorleitung oder korrodierter Stecker
+    - id: nozzle_line_blocked
+      likelihood: low
+      label:
+        en: Blocked or frozen nozzle or supply hose
+        de: Verstopfte oder eingefrorene Düse oder Zuleitung
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Camera lens is not cleaned when washing is requested
+      de: Kameralinse wird bei Waschanforderung nicht gereinigt
+    - en: Blurred or obstructed camera image
+      de: Unscharfes oder verdecktes Kamerabild
+    - en: Message that a camera is blocked or a driver-assistance function is unavailable
+      de: Meldung, dass eine Kamera verdeckt oder eine Assistenzfunktion nicht verfügbar ist
   repair:
     difficulty: medium
     diy_possible: true
@@ -6625,6 +6637,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
+    - https://patents.google.com/patent/US9333949
+    - https://patents.google.com/patent/US11814016
 
 - code: B010C
   category: body
@@ -6632,8 +6646,8 @@
     en: Camera Washer Actuator C
     de: Kamera-Reinigungsaktuator C
   description:
-    en: 'Fault on camera washer actuator C. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
-    de: 'Fehler am Kamera-Reinigungsaktuator C. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
+    en: Fault on camera washer actuator C. Such an actuator is usually a small solenoid valve or a dedicated pump outlet that releases washer fluid to the nozzle of one camera, for example a rear-view, surround-view or driver-assistance camera; the letter only tells which actuator the manufacturer assigned to which camera. When it fails, that lens can no longer be rinsed on demand, and dirt on it can blur the image or make the systems that rely on the camera switch off.
+    de: Fehler am Kamera-Reinigungsaktuator C. Ein solcher Aktuator ist meist ein kleines Magnetventil oder ein eigener Pumpenausgang, der Waschflüssigkeit zur Düse einer einzelnen Kamera freigibt, etwa einer Rückfahr-, Rundumsicht- oder Assistenzkamera; der Buchstabe gibt nur an, welchen Aktuator der Hersteller welcher Kamera zugeordnet hat. Fällt er aus, lässt sich diese Linse nicht mehr gezielt spülen, und Schmutz darauf kann das Bild verschleiern oder die Systeme abschalten, die auf die Kamera angewiesen sind.
   affected_components:
     - camera_washer_actuator_c
     - actuator_wiring
@@ -6643,11 +6657,23 @@
       label:
         en: Washer actuator failed
         de: Reinigungsaktuator defekt
+    - id: wiring_fault
+      likelihood: medium
+      label:
+        en: Open or shorted actuator wiring, or corroded connector
+        de: Unterbrochene oder kurzgeschlossene Aktuatorleitung oder korrodierter Stecker
+    - id: nozzle_line_blocked
+      likelihood: low
+      label:
+        en: Blocked or frozen nozzle or supply hose
+        de: Verstopfte oder eingefrorene Düse oder Zuleitung
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Camera lens is not cleaned when washing is requested
+      de: Kameralinse wird bei Waschanforderung nicht gereinigt
+    - en: Blurred or obstructed camera image
+      de: Unscharfes oder verdecktes Kamerabild
+    - en: Message that a camera is blocked or a driver-assistance function is unavailable
+      de: Meldung, dass eine Kamera verdeckt oder eine Assistenzfunktion nicht verfügbar ist
   repair:
     difficulty: medium
     diy_possible: true
@@ -6664,6 +6690,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
+    - https://patents.google.com/patent/US9333949
+    - https://patents.google.com/patent/US11814016
 
 - code: B010D
   category: body
@@ -6671,8 +6699,8 @@
     en: Camera Washer Actuator D
     de: Kamera-Reinigungsaktuator D
   description:
-    en: 'Fault on camera washer actuator D. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
-    de: 'Fehler am Kamera-Reinigungsaktuator D. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
+    en: Fault on camera washer actuator D. Such an actuator is usually a small solenoid valve or a dedicated pump outlet that releases washer fluid to the nozzle of one camera, for example a rear-view, surround-view or driver-assistance camera; the letter only tells which actuator the manufacturer assigned to which camera. When it fails, that lens can no longer be rinsed on demand, and dirt on it can blur the image or make the systems that rely on the camera switch off.
+    de: Fehler am Kamera-Reinigungsaktuator D. Ein solcher Aktuator ist meist ein kleines Magnetventil oder ein eigener Pumpenausgang, der Waschflüssigkeit zur Düse einer einzelnen Kamera freigibt, etwa einer Rückfahr-, Rundumsicht- oder Assistenzkamera; der Buchstabe gibt nur an, welchen Aktuator der Hersteller welcher Kamera zugeordnet hat. Fällt er aus, lässt sich diese Linse nicht mehr gezielt spülen, und Schmutz darauf kann das Bild verschleiern oder die Systeme abschalten, die auf die Kamera angewiesen sind.
   affected_components:
     - camera_washer_actuator_d
     - actuator_wiring
@@ -6682,11 +6710,23 @@
       label:
         en: Washer actuator failed
         de: Reinigungsaktuator defekt
+    - id: wiring_fault
+      likelihood: medium
+      label:
+        en: Open or shorted actuator wiring, or corroded connector
+        de: Unterbrochene oder kurzgeschlossene Aktuatorleitung oder korrodierter Stecker
+    - id: nozzle_line_blocked
+      likelihood: low
+      label:
+        en: Blocked or frozen nozzle or supply hose
+        de: Verstopfte oder eingefrorene Düse oder Zuleitung
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Camera lens is not cleaned when washing is requested
+      de: Kameralinse wird bei Waschanforderung nicht gereinigt
+    - en: Blurred or obstructed camera image
+      de: Unscharfes oder verdecktes Kamerabild
+    - en: Message that a camera is blocked or a driver-assistance function is unavailable
+      de: Meldung, dass eine Kamera verdeckt oder eine Assistenzfunktion nicht verfügbar ist
   repair:
     difficulty: medium
     diy_possible: true
@@ -6703,6 +6743,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
+    - https://patents.google.com/patent/US9333949
+    - https://patents.google.com/patent/US11814016
 
 - code: B010E
   category: body
@@ -6710,8 +6752,8 @@
     en: Camera Washer Actuator E
     de: Kamera-Reinigungsaktuator E
   description:
-    en: 'Fault on camera washer actuator E. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
-    de: 'Fehler am Kamera-Reinigungsaktuator E. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
+    en: Fault on camera washer actuator E. Such an actuator is usually a small solenoid valve or a dedicated pump outlet that releases washer fluid to the nozzle of one camera, for example a rear-view, surround-view or driver-assistance camera; the letter only tells which actuator the manufacturer assigned to which camera. When it fails, that lens can no longer be rinsed on demand, and dirt on it can blur the image or make the systems that rely on the camera switch off.
+    de: Fehler am Kamera-Reinigungsaktuator E. Ein solcher Aktuator ist meist ein kleines Magnetventil oder ein eigener Pumpenausgang, der Waschflüssigkeit zur Düse einer einzelnen Kamera freigibt, etwa einer Rückfahr-, Rundumsicht- oder Assistenzkamera; der Buchstabe gibt nur an, welchen Aktuator der Hersteller welcher Kamera zugeordnet hat. Fällt er aus, lässt sich diese Linse nicht mehr gezielt spülen, und Schmutz darauf kann das Bild verschleiern oder die Systeme abschalten, die auf die Kamera angewiesen sind.
   affected_components:
     - camera_washer_actuator_e
     - actuator_wiring
@@ -6721,11 +6763,23 @@
       label:
         en: Washer actuator failed
         de: Reinigungsaktuator defekt
+    - id: wiring_fault
+      likelihood: medium
+      label:
+        en: Open or shorted actuator wiring, or corroded connector
+        de: Unterbrochene oder kurzgeschlossene Aktuatorleitung oder korrodierter Stecker
+    - id: nozzle_line_blocked
+      likelihood: low
+      label:
+        en: Blocked or frozen nozzle or supply hose
+        de: Verstopfte oder eingefrorene Düse oder Zuleitung
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Camera lens is not cleaned when washing is requested
+      de: Kameralinse wird bei Waschanforderung nicht gereinigt
+    - en: Blurred or obstructed camera image
+      de: Unscharfes oder verdecktes Kamerabild
+    - en: Message that a camera is blocked or a driver-assistance function is unavailable
+      de: Meldung, dass eine Kamera verdeckt oder eine Assistenzfunktion nicht verfügbar ist
   repair:
     difficulty: medium
     diy_possible: true
@@ -6742,6 +6796,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
+    - https://patents.google.com/patent/US9333949
+    - https://patents.google.com/patent/US11814016
 
 - code: B010F
   category: body
@@ -6749,8 +6805,8 @@
     en: Camera Washer Actuator F
     de: Kamera-Reinigungsaktuator F
   description:
-    en: 'Fault on camera washer actuator F. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
-    de: 'Fehler am Kamera-Reinigungsaktuator F. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
+    en: Fault on camera washer actuator F. Such an actuator is usually a small solenoid valve or a dedicated pump outlet that releases washer fluid to the nozzle of one camera, for example a rear-view, surround-view or driver-assistance camera; the letter only tells which actuator the manufacturer assigned to which camera. When it fails, that lens can no longer be rinsed on demand, and dirt on it can blur the image or make the systems that rely on the camera switch off.
+    de: Fehler am Kamera-Reinigungsaktuator F. Ein solcher Aktuator ist meist ein kleines Magnetventil oder ein eigener Pumpenausgang, der Waschflüssigkeit zur Düse einer einzelnen Kamera freigibt, etwa einer Rückfahr-, Rundumsicht- oder Assistenzkamera; der Buchstabe gibt nur an, welchen Aktuator der Hersteller welcher Kamera zugeordnet hat. Fällt er aus, lässt sich diese Linse nicht mehr gezielt spülen, und Schmutz darauf kann das Bild verschleiern oder die Systeme abschalten, die auf die Kamera angewiesen sind.
   affected_components:
     - camera_washer_actuator_f
     - actuator_wiring
@@ -6760,11 +6816,23 @@
       label:
         en: Washer actuator failed
         de: Reinigungsaktuator defekt
+    - id: wiring_fault
+      likelihood: medium
+      label:
+        en: Open or shorted actuator wiring, or corroded connector
+        de: Unterbrochene oder kurzgeschlossene Aktuatorleitung oder korrodierter Stecker
+    - id: nozzle_line_blocked
+      likelihood: low
+      label:
+        en: Blocked or frozen nozzle or supply hose
+        de: Verstopfte oder eingefrorene Düse oder Zuleitung
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Camera lens is not cleaned when washing is requested
+      de: Kameralinse wird bei Waschanforderung nicht gereinigt
+    - en: Blurred or obstructed camera image
+      de: Unscharfes oder verdecktes Kamerabild
+    - en: Message that a camera is blocked or a driver-assistance function is unavailable
+      de: Meldung, dass eine Kamera verdeckt oder eine Assistenzfunktion nicht verfügbar ist
   repair:
     difficulty: medium
     diy_possible: true
@@ -6781,6 +6849,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
+    - https://patents.google.com/patent/US9333949
+    - https://patents.google.com/patent/US11814016
 
 - code: B0110
   category: body
@@ -6829,8 +6899,8 @@
     en: Camera Washer Actuator H
     de: Kamera-Reinigungsaktuator H
   description:
-    en: 'Fault on camera washer actuator H. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
-    de: 'Fehler am Kamera-Reinigungsaktuator H. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
+    en: Fault on camera washer actuator H. Such an actuator is usually a small solenoid valve or a dedicated pump outlet that releases washer fluid to the nozzle of one camera, for example a rear-view, surround-view or driver-assistance camera; the letter only tells which actuator the manufacturer assigned to which camera. When it fails, that lens can no longer be rinsed on demand, and dirt on it can blur the image or make the systems that rely on the camera switch off.
+    de: Fehler am Kamera-Reinigungsaktuator H. Ein solcher Aktuator ist meist ein kleines Magnetventil oder ein eigener Pumpenausgang, der Waschflüssigkeit zur Düse einer einzelnen Kamera freigibt, etwa einer Rückfahr-, Rundumsicht- oder Assistenzkamera; der Buchstabe gibt nur an, welchen Aktuator der Hersteller welcher Kamera zugeordnet hat. Fällt er aus, lässt sich diese Linse nicht mehr gezielt spülen, und Schmutz darauf kann das Bild verschleiern oder die Systeme abschalten, die auf die Kamera angewiesen sind.
   affected_components:
     - camera_washer_actuator_h
     - actuator_wiring
@@ -6840,11 +6910,23 @@
       label:
         en: Washer actuator failed
         de: Reinigungsaktuator defekt
+    - id: wiring_fault
+      likelihood: medium
+      label:
+        en: Open or shorted actuator wiring, or corroded connector
+        de: Unterbrochene oder kurzgeschlossene Aktuatorleitung oder korrodierter Stecker
+    - id: nozzle_line_blocked
+      likelihood: low
+      label:
+        en: Blocked or frozen nozzle or supply hose
+        de: Verstopfte oder eingefrorene Düse oder Zuleitung
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Camera lens is not cleaned when washing is requested
+      de: Kameralinse wird bei Waschanforderung nicht gereinigt
+    - en: Blurred or obstructed camera image
+      de: Unscharfes oder verdecktes Kamerabild
+    - en: Message that a camera is blocked or a driver-assistance function is unavailable
+      de: Meldung, dass eine Kamera verdeckt oder eine Assistenzfunktion nicht verfügbar ist
   repair:
     difficulty: medium
     diy_possible: true
@@ -6861,6 +6943,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
+    - https://patents.google.com/patent/US9333949
+    - https://patents.google.com/patent/US11814016
 
 - code: B0112
   category: body
@@ -6868,8 +6952,8 @@
     en: Camera Washer Actuator J
     de: Kamera-Reinigungsaktuator J
   description:
-    en: 'Fault on camera washer actuator J. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
-    de: 'Fehler am Kamera-Reinigungsaktuator J. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
+    en: Fault on camera washer actuator J. Such an actuator is usually a small solenoid valve or a dedicated pump outlet that releases washer fluid to the nozzle of one camera, for example a rear-view, surround-view or driver-assistance camera; the letter only tells which actuator the manufacturer assigned to which camera. When it fails, that lens can no longer be rinsed on demand, and dirt on it can blur the image or make the systems that rely on the camera switch off.
+    de: Fehler am Kamera-Reinigungsaktuator J. Ein solcher Aktuator ist meist ein kleines Magnetventil oder ein eigener Pumpenausgang, der Waschflüssigkeit zur Düse einer einzelnen Kamera freigibt, etwa einer Rückfahr-, Rundumsicht- oder Assistenzkamera; der Buchstabe gibt nur an, welchen Aktuator der Hersteller welcher Kamera zugeordnet hat. Fällt er aus, lässt sich diese Linse nicht mehr gezielt spülen, und Schmutz darauf kann das Bild verschleiern oder die Systeme abschalten, die auf die Kamera angewiesen sind.
   affected_components:
     - camera_washer_actuator_j
     - actuator_wiring
@@ -6879,11 +6963,23 @@
       label:
         en: Washer actuator failed
         de: Reinigungsaktuator defekt
+    - id: wiring_fault
+      likelihood: medium
+      label:
+        en: Open or shorted actuator wiring, or corroded connector
+        de: Unterbrochene oder kurzgeschlossene Aktuatorleitung oder korrodierter Stecker
+    - id: nozzle_line_blocked
+      likelihood: low
+      label:
+        en: Blocked or frozen nozzle or supply hose
+        de: Verstopfte oder eingefrorene Düse oder Zuleitung
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Camera lens is not cleaned when washing is requested
+      de: Kameralinse wird bei Waschanforderung nicht gereinigt
+    - en: Blurred or obstructed camera image
+      de: Unscharfes oder verdecktes Kamerabild
+    - en: Message that a camera is blocked or a driver-assistance function is unavailable
+      de: Meldung, dass eine Kamera verdeckt oder eine Assistenzfunktion nicht verfügbar ist
   repair:
     difficulty: medium
     diy_possible: true
@@ -6900,6 +6996,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
+    - https://patents.google.com/patent/US9333949
+    - https://patents.google.com/patent/US11814016
 
 - code: B0113
   category: body
@@ -6907,8 +7005,8 @@
     en: Camera Washer Actuator K
     de: Kamera-Reinigungsaktuator K
   description:
-    en: 'Fault on camera washer actuator K. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
-    de: 'Fehler am Kamera-Reinigungsaktuator K. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
+    en: Fault on camera washer actuator K. Such an actuator is usually a small solenoid valve or a dedicated pump outlet that releases washer fluid to the nozzle of one camera, for example a rear-view, surround-view or driver-assistance camera; the letter only tells which actuator the manufacturer assigned to which camera. When it fails, that lens can no longer be rinsed on demand, and dirt on it can blur the image or make the systems that rely on the camera switch off.
+    de: Fehler am Kamera-Reinigungsaktuator K. Ein solcher Aktuator ist meist ein kleines Magnetventil oder ein eigener Pumpenausgang, der Waschflüssigkeit zur Düse einer einzelnen Kamera freigibt, etwa einer Rückfahr-, Rundumsicht- oder Assistenzkamera; der Buchstabe gibt nur an, welchen Aktuator der Hersteller welcher Kamera zugeordnet hat. Fällt er aus, lässt sich diese Linse nicht mehr gezielt spülen, und Schmutz darauf kann das Bild verschleiern oder die Systeme abschalten, die auf die Kamera angewiesen sind.
   affected_components:
     - camera_washer_actuator_k
     - actuator_wiring
@@ -6918,11 +7016,23 @@
       label:
         en: Washer actuator failed
         de: Reinigungsaktuator defekt
+    - id: wiring_fault
+      likelihood: medium
+      label:
+        en: Open or shorted actuator wiring, or corroded connector
+        de: Unterbrochene oder kurzgeschlossene Aktuatorleitung oder korrodierter Stecker
+    - id: nozzle_line_blocked
+      likelihood: low
+      label:
+        en: Blocked or frozen nozzle or supply hose
+        de: Verstopfte oder eingefrorene Düse oder Zuleitung
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Camera lens is not cleaned when washing is requested
+      de: Kameralinse wird bei Waschanforderung nicht gereinigt
+    - en: Blurred or obstructed camera image
+      de: Unscharfes oder verdecktes Kamerabild
+    - en: Message that a camera is blocked or a driver-assistance function is unavailable
+      de: Meldung, dass eine Kamera verdeckt oder eine Assistenzfunktion nicht verfügbar ist
   repair:
     difficulty: medium
     diy_possible: true
@@ -6939,6 +7049,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
+    - https://patents.google.com/patent/US9333949
+    - https://patents.google.com/patent/US11814016
 
 - code: B0114
   category: body
@@ -6946,8 +7058,8 @@
     en: Camera Washer Actuator L
     de: Kamera-Reinigungsaktuator L
   description:
-    en: 'Fault on camera washer actuator L. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
-    de: 'Fehler am Kamera-Reinigungsaktuator L. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
+    en: Fault on camera washer actuator L. Such an actuator is usually a small solenoid valve or a dedicated pump outlet that releases washer fluid to the nozzle of one camera, for example a rear-view, surround-view or driver-assistance camera; the letter only tells which actuator the manufacturer assigned to which camera. When it fails, that lens can no longer be rinsed on demand, and dirt on it can blur the image or make the systems that rely on the camera switch off.
+    de: Fehler am Kamera-Reinigungsaktuator L. Ein solcher Aktuator ist meist ein kleines Magnetventil oder ein eigener Pumpenausgang, der Waschflüssigkeit zur Düse einer einzelnen Kamera freigibt, etwa einer Rückfahr-, Rundumsicht- oder Assistenzkamera; der Buchstabe gibt nur an, welchen Aktuator der Hersteller welcher Kamera zugeordnet hat. Fällt er aus, lässt sich diese Linse nicht mehr gezielt spülen, und Schmutz darauf kann das Bild verschleiern oder die Systeme abschalten, die auf die Kamera angewiesen sind.
   affected_components:
     - camera_washer_actuator_l
     - actuator_wiring
@@ -6957,11 +7069,23 @@
       label:
         en: Washer actuator failed
         de: Reinigungsaktuator defekt
+    - id: wiring_fault
+      likelihood: medium
+      label:
+        en: Open or shorted actuator wiring, or corroded connector
+        de: Unterbrochene oder kurzgeschlossene Aktuatorleitung oder korrodierter Stecker
+    - id: nozzle_line_blocked
+      likelihood: low
+      label:
+        en: Blocked or frozen nozzle or supply hose
+        de: Verstopfte oder eingefrorene Düse oder Zuleitung
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Camera lens is not cleaned when washing is requested
+      de: Kameralinse wird bei Waschanforderung nicht gereinigt
+    - en: Blurred or obstructed camera image
+      de: Unscharfes oder verdecktes Kamerabild
+    - en: Message that a camera is blocked or a driver-assistance function is unavailable
+      de: Meldung, dass eine Kamera verdeckt oder eine Assistenzfunktion nicht verfügbar ist
   repair:
     difficulty: medium
     diy_possible: true
@@ -6978,6 +7102,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
+    - https://patents.google.com/patent/US9333949
+    - https://patents.google.com/patent/US11814016
 
 - code: B0115
   category: body
@@ -6985,8 +7111,8 @@
     en: Camera Washer Actuator M
     de: Kamera-Reinigungsaktuator M
   description:
-    en: 'Fault on camera washer actuator M. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
-    de: 'Fehler am Kamera-Reinigungsaktuator M. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
+    en: Fault on camera washer actuator M. Such an actuator is usually a small solenoid valve or a dedicated pump outlet that releases washer fluid to the nozzle of one camera, for example a rear-view, surround-view or driver-assistance camera; the letter only tells which actuator the manufacturer assigned to which camera. When it fails, that lens can no longer be rinsed on demand, and dirt on it can blur the image or make the systems that rely on the camera switch off.
+    de: Fehler am Kamera-Reinigungsaktuator M. Ein solcher Aktuator ist meist ein kleines Magnetventil oder ein eigener Pumpenausgang, der Waschflüssigkeit zur Düse einer einzelnen Kamera freigibt, etwa einer Rückfahr-, Rundumsicht- oder Assistenzkamera; der Buchstabe gibt nur an, welchen Aktuator der Hersteller welcher Kamera zugeordnet hat. Fällt er aus, lässt sich diese Linse nicht mehr gezielt spülen, und Schmutz darauf kann das Bild verschleiern oder die Systeme abschalten, die auf die Kamera angewiesen sind.
   affected_components:
     - camera_washer_actuator_m
     - actuator_wiring
@@ -6996,11 +7122,23 @@
       label:
         en: Washer actuator failed
         de: Reinigungsaktuator defekt
+    - id: wiring_fault
+      likelihood: medium
+      label:
+        en: Open or shorted actuator wiring, or corroded connector
+        de: Unterbrochene oder kurzgeschlossene Aktuatorleitung oder korrodierter Stecker
+    - id: nozzle_line_blocked
+      likelihood: low
+      label:
+        en: Blocked or frozen nozzle or supply hose
+        de: Verstopfte oder eingefrorene Düse oder Zuleitung
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Camera lens is not cleaned when washing is requested
+      de: Kameralinse wird bei Waschanforderung nicht gereinigt
+    - en: Blurred or obstructed camera image
+      de: Unscharfes oder verdecktes Kamerabild
+    - en: Message that a camera is blocked or a driver-assistance function is unavailable
+      de: Meldung, dass eine Kamera verdeckt oder eine Assistenzfunktion nicht verfügbar ist
   repair:
     difficulty: medium
     diy_possible: true
@@ -7017,6 +7155,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
+    - https://patents.google.com/patent/US9333949
+    - https://patents.google.com/patent/US11814016
 
 - code: B0116
   category: body
@@ -7024,8 +7164,8 @@
     en: Camera Washer Actuator N
     de: Kamera-Reinigungsaktuator N
   description:
-    en: 'Fault on camera washer actuator N. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
-    de: 'Fehler am Kamera-Reinigungsaktuator N. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
+    en: Fault on camera washer actuator N. Such an actuator is usually a small solenoid valve or a dedicated pump outlet that releases washer fluid to the nozzle of one camera, for example a rear-view, surround-view or driver-assistance camera; the letter only tells which actuator the manufacturer assigned to which camera. When it fails, that lens can no longer be rinsed on demand, and dirt on it can blur the image or make the systems that rely on the camera switch off.
+    de: Fehler am Kamera-Reinigungsaktuator N. Ein solcher Aktuator ist meist ein kleines Magnetventil oder ein eigener Pumpenausgang, der Waschflüssigkeit zur Düse einer einzelnen Kamera freigibt, etwa einer Rückfahr-, Rundumsicht- oder Assistenzkamera; der Buchstabe gibt nur an, welchen Aktuator der Hersteller welcher Kamera zugeordnet hat. Fällt er aus, lässt sich diese Linse nicht mehr gezielt spülen, und Schmutz darauf kann das Bild verschleiern oder die Systeme abschalten, die auf die Kamera angewiesen sind.
   affected_components:
     - camera_washer_actuator_n
     - actuator_wiring
@@ -7035,11 +7175,23 @@
       label:
         en: Washer actuator failed
         de: Reinigungsaktuator defekt
+    - id: wiring_fault
+      likelihood: medium
+      label:
+        en: Open or shorted actuator wiring, or corroded connector
+        de: Unterbrochene oder kurzgeschlossene Aktuatorleitung oder korrodierter Stecker
+    - id: nozzle_line_blocked
+      likelihood: low
+      label:
+        en: Blocked or frozen nozzle or supply hose
+        de: Verstopfte oder eingefrorene Düse oder Zuleitung
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Camera lens is not cleaned when washing is requested
+      de: Kameralinse wird bei Waschanforderung nicht gereinigt
+    - en: Blurred or obstructed camera image
+      de: Unscharfes oder verdecktes Kamerabild
+    - en: Message that a camera is blocked or a driver-assistance function is unavailable
+      de: Meldung, dass eine Kamera verdeckt oder eine Assistenzfunktion nicht verfügbar ist
   repair:
     difficulty: medium
     diy_possible: true
@@ -7056,6 +7208,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
+    - https://patents.google.com/patent/US9333949
+    - https://patents.google.com/patent/US11814016
 
 - code: B0117
   category: body
@@ -7063,8 +7217,8 @@
     en: Camera Washer Actuator O
     de: Kamera-Reinigungsaktuator O
   description:
-    en: 'Fault on camera washer actuator O. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
-    de: 'Fehler am Kamera-Reinigungsaktuator O. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
+    en: Fault on camera washer actuator O. Such an actuator is usually a small solenoid valve or a dedicated pump outlet that releases washer fluid to the nozzle of one camera, for example a rear-view, surround-view or driver-assistance camera; the letter only tells which actuator the manufacturer assigned to which camera. When it fails, that lens can no longer be rinsed on demand, and dirt on it can blur the image or make the systems that rely on the camera switch off.
+    de: Fehler am Kamera-Reinigungsaktuator O. Ein solcher Aktuator ist meist ein kleines Magnetventil oder ein eigener Pumpenausgang, der Waschflüssigkeit zur Düse einer einzelnen Kamera freigibt, etwa einer Rückfahr-, Rundumsicht- oder Assistenzkamera; der Buchstabe gibt nur an, welchen Aktuator der Hersteller welcher Kamera zugeordnet hat. Fällt er aus, lässt sich diese Linse nicht mehr gezielt spülen, und Schmutz darauf kann das Bild verschleiern oder die Systeme abschalten, die auf die Kamera angewiesen sind.
   affected_components:
     - camera_washer_actuator_o
     - actuator_wiring
@@ -7074,11 +7228,23 @@
       label:
         en: Washer actuator failed
         de: Reinigungsaktuator defekt
+    - id: wiring_fault
+      likelihood: medium
+      label:
+        en: Open or shorted actuator wiring, or corroded connector
+        de: Unterbrochene oder kurzgeschlossene Aktuatorleitung oder korrodierter Stecker
+    - id: nozzle_line_blocked
+      likelihood: low
+      label:
+        en: Blocked or frozen nozzle or supply hose
+        de: Verstopfte oder eingefrorene Düse oder Zuleitung
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Camera lens is not cleaned when washing is requested
+      de: Kameralinse wird bei Waschanforderung nicht gereinigt
+    - en: Blurred or obstructed camera image
+      de: Unscharfes oder verdecktes Kamerabild
+    - en: Message that a camera is blocked or a driver-assistance function is unavailable
+      de: Meldung, dass eine Kamera verdeckt oder eine Assistenzfunktion nicht verfügbar ist
   repair:
     difficulty: medium
     diy_possible: true
@@ -7095,6 +7261,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
+    - https://patents.google.com/patent/US9333949
+    - https://patents.google.com/patent/US11814016
 
 - code: B0118
   category: body
@@ -7102,8 +7270,8 @@
     en: Camera Washer Actuator P
     de: Kamera-Reinigungsaktuator P
   description:
-    en: 'Fault on camera washer actuator P. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
-    de: 'Fehler am Kamera-Reinigungsaktuator P. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
+    en: Fault on camera washer actuator P. Such an actuator is usually a small solenoid valve or a dedicated pump outlet that releases washer fluid to the nozzle of one camera, for example a rear-view, surround-view or driver-assistance camera; the letter only tells which actuator the manufacturer assigned to which camera. When it fails, that lens can no longer be rinsed on demand, and dirt on it can blur the image or make the systems that rely on the camera switch off.
+    de: Fehler am Kamera-Reinigungsaktuator P. Ein solcher Aktuator ist meist ein kleines Magnetventil oder ein eigener Pumpenausgang, der Waschflüssigkeit zur Düse einer einzelnen Kamera freigibt, etwa einer Rückfahr-, Rundumsicht- oder Assistenzkamera; der Buchstabe gibt nur an, welchen Aktuator der Hersteller welcher Kamera zugeordnet hat. Fällt er aus, lässt sich diese Linse nicht mehr gezielt spülen, und Schmutz darauf kann das Bild verschleiern oder die Systeme abschalten, die auf die Kamera angewiesen sind.
   affected_components:
     - camera_washer_actuator_p
     - actuator_wiring
@@ -7113,11 +7281,23 @@
       label:
         en: Washer actuator failed
         de: Reinigungsaktuator defekt
+    - id: wiring_fault
+      likelihood: medium
+      label:
+        en: Open or shorted actuator wiring, or corroded connector
+        de: Unterbrochene oder kurzgeschlossene Aktuatorleitung oder korrodierter Stecker
+    - id: nozzle_line_blocked
+      likelihood: low
+      label:
+        en: Blocked or frozen nozzle or supply hose
+        de: Verstopfte oder eingefrorene Düse oder Zuleitung
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Camera lens is not cleaned when washing is requested
+      de: Kameralinse wird bei Waschanforderung nicht gereinigt
+    - en: Blurred or obstructed camera image
+      de: Unscharfes oder verdecktes Kamerabild
+    - en: Message that a camera is blocked or a driver-assistance function is unavailable
+      de: Meldung, dass eine Kamera verdeckt oder eine Assistenzfunktion nicht verfügbar ist
   repair:
     difficulty: medium
     diy_possible: true
@@ -7134,6 +7314,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
+    - https://patents.google.com/patent/US9333949
+    - https://patents.google.com/patent/US11814016
 
 - code: B0119
   category: body
@@ -7141,8 +7323,8 @@
     en: Camera Washer Actuator Q
     de: Kamera-Reinigungsaktuator Q
   description:
-    en: 'Fault on camera washer actuator Q. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
-    de: 'Fehler am Kamera-Reinigungsaktuator Q. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
+    en: Fault on camera washer actuator Q. Such an actuator is usually a small solenoid valve or a dedicated pump outlet that releases washer fluid to the nozzle of one camera, for example a rear-view, surround-view or driver-assistance camera; the letter only tells which actuator the manufacturer assigned to which camera. When it fails, that lens can no longer be rinsed on demand, and dirt on it can blur the image or make the systems that rely on the camera switch off.
+    de: Fehler am Kamera-Reinigungsaktuator Q. Ein solcher Aktuator ist meist ein kleines Magnetventil oder ein eigener Pumpenausgang, der Waschflüssigkeit zur Düse einer einzelnen Kamera freigibt, etwa einer Rückfahr-, Rundumsicht- oder Assistenzkamera; der Buchstabe gibt nur an, welchen Aktuator der Hersteller welcher Kamera zugeordnet hat. Fällt er aus, lässt sich diese Linse nicht mehr gezielt spülen, und Schmutz darauf kann das Bild verschleiern oder die Systeme abschalten, die auf die Kamera angewiesen sind.
   affected_components:
     - camera_washer_actuator_q
     - actuator_wiring
@@ -7152,11 +7334,23 @@
       label:
         en: Washer actuator failed
         de: Reinigungsaktuator defekt
+    - id: wiring_fault
+      likelihood: medium
+      label:
+        en: Open or shorted actuator wiring, or corroded connector
+        de: Unterbrochene oder kurzgeschlossene Aktuatorleitung oder korrodierter Stecker
+    - id: nozzle_line_blocked
+      likelihood: low
+      label:
+        en: Blocked or frozen nozzle or supply hose
+        de: Verstopfte oder eingefrorene Düse oder Zuleitung
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Camera lens is not cleaned when washing is requested
+      de: Kameralinse wird bei Waschanforderung nicht gereinigt
+    - en: Blurred or obstructed camera image
+      de: Unscharfes oder verdecktes Kamerabild
+    - en: Message that a camera is blocked or a driver-assistance function is unavailable
+      de: Meldung, dass eine Kamera verdeckt oder eine Assistenzfunktion nicht verfügbar ist
   repair:
     difficulty: medium
     diy_possible: true
@@ -7173,6 +7367,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
+    - https://patents.google.com/patent/US9333949
+    - https://patents.google.com/patent/US11814016
 
 - code: B011A
   category: body
@@ -7180,8 +7376,8 @@
     en: Camera Washer Actuator R
     de: Kamera-Reinigungsaktuator R
   description:
-    en: 'Fault on camera washer actuator R. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
-    de: 'Fehler am Kamera-Reinigungsaktuator R. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
+    en: Fault on camera washer actuator R. Such an actuator is usually a small solenoid valve or a dedicated pump outlet that releases washer fluid to the nozzle of one camera, for example a rear-view, surround-view or driver-assistance camera; the letter only tells which actuator the manufacturer assigned to which camera. When it fails, that lens can no longer be rinsed on demand, and dirt on it can blur the image or make the systems that rely on the camera switch off.
+    de: Fehler am Kamera-Reinigungsaktuator R. Ein solcher Aktuator ist meist ein kleines Magnetventil oder ein eigener Pumpenausgang, der Waschflüssigkeit zur Düse einer einzelnen Kamera freigibt, etwa einer Rückfahr-, Rundumsicht- oder Assistenzkamera; der Buchstabe gibt nur an, welchen Aktuator der Hersteller welcher Kamera zugeordnet hat. Fällt er aus, lässt sich diese Linse nicht mehr gezielt spülen, und Schmutz darauf kann das Bild verschleiern oder die Systeme abschalten, die auf die Kamera angewiesen sind.
   affected_components:
     - camera_washer_actuator_r
     - actuator_wiring
@@ -7191,11 +7387,23 @@
       label:
         en: Washer actuator failed
         de: Reinigungsaktuator defekt
+    - id: wiring_fault
+      likelihood: medium
+      label:
+        en: Open or shorted actuator wiring, or corroded connector
+        de: Unterbrochene oder kurzgeschlossene Aktuatorleitung oder korrodierter Stecker
+    - id: nozzle_line_blocked
+      likelihood: low
+      label:
+        en: Blocked or frozen nozzle or supply hose
+        de: Verstopfte oder eingefrorene Düse oder Zuleitung
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Camera lens is not cleaned when washing is requested
+      de: Kameralinse wird bei Waschanforderung nicht gereinigt
+    - en: Blurred or obstructed camera image
+      de: Unscharfes oder verdecktes Kamerabild
+    - en: Message that a camera is blocked or a driver-assistance function is unavailable
+      de: Meldung, dass eine Kamera verdeckt oder eine Assistenzfunktion nicht verfügbar ist
   repair:
     difficulty: medium
     diy_possible: true
@@ -7212,6 +7420,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
+    - https://patents.google.com/patent/US9333949
+    - https://patents.google.com/patent/US11814016
 
 - code: B011B
   category: body
@@ -7219,8 +7429,8 @@
     en: Camera Washer Actuator S
     de: Kamera-Reinigungsaktuator S
   description:
-    en: 'Fault on camera washer actuator S. The cam phaser actuator adjusts intake/exhaust timing under load — a stuck or slow phaser kills mid-rpm torque and can throw correlation codes between cam and crank.'
-    de: 'Fehler am Kamera-Reinigungsaktuator S. Der Nockenwellen-Versteller passt Einlass-/Auslass-Steuerzeiten unter Last an — ein klemmender oder träger Versteller kostet Drehmoment im mittleren Drehzahlbereich und kann Korrelations-Codes zwischen Nocken- und Kurbelwelle auslösen.'
+    en: Fault on camera washer actuator S. Such an actuator is usually a small solenoid valve or a dedicated pump outlet that releases washer fluid to the nozzle of one camera, for example a rear-view, surround-view or driver-assistance camera; the letter only tells which actuator the manufacturer assigned to which camera. When it fails, that lens can no longer be rinsed on demand, and dirt on it can blur the image or make the systems that rely on the camera switch off.
+    de: Fehler am Kamera-Reinigungsaktuator S. Ein solcher Aktuator ist meist ein kleines Magnetventil oder ein eigener Pumpenausgang, der Waschflüssigkeit zur Düse einer einzelnen Kamera freigibt, etwa einer Rückfahr-, Rundumsicht- oder Assistenzkamera; der Buchstabe gibt nur an, welchen Aktuator der Hersteller welcher Kamera zugeordnet hat. Fällt er aus, lässt sich diese Linse nicht mehr gezielt spülen, und Schmutz darauf kann das Bild verschleiern oder die Systeme abschalten, die auf die Kamera angewiesen sind.
   affected_components:
     - camera_washer_actuator_s
     - actuator_wiring
@@ -7230,11 +7440,23 @@
       label:
         en: Washer actuator failed
         de: Reinigungsaktuator defekt
+    - id: wiring_fault
+      likelihood: medium
+      label:
+        en: Open or shorted actuator wiring, or corroded connector
+        de: Unterbrochene oder kurzgeschlossene Aktuatorleitung oder korrodierter Stecker
+    - id: nozzle_line_blocked
+      likelihood: low
+      label:
+        en: Blocked or frozen nozzle or supply hose
+        de: Verstopfte oder eingefrorene Düse oder Zuleitung
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Camera lens is not cleaned when washing is requested
+      de: Kameralinse wird bei Waschanforderung nicht gereinigt
+    - en: Blurred or obstructed camera image
+      de: Unscharfes oder verdecktes Kamerabild
+    - en: Message that a camera is blocked or a driver-assistance function is unavailable
+      de: Meldung, dass eine Kamera verdeckt oder eine Assistenzfunktion nicht verfügbar ist
   repair:
     difficulty: medium
     diy_possible: true
@@ -7251,6 +7473,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
+    - https://patents.google.com/patent/US9333949
+    - https://patents.google.com/patent/US11814016
 
 - code: B011C
   category: body
