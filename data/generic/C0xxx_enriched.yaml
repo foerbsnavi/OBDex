@@ -2157,8 +2157,8 @@
     en: Brake Booster Pressure Sensor
     de: Bremskraftverstärker Drucksensor
   description:
-    en: 'Generic fault on brake booster pressure sensor. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Allgemeiner Fehler am Drucksensor des Bremskraftverstärkers. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Generic fault on brake booster pressure sensor. This sensor reports the pressure the booster works with, vacuum in a conventional vacuum booster, and the brake control module uses it to judge how much assist is available, to run an electric vacuum pump where fitted, and to support functions such as hydraulic brake assist. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Allgemeiner Fehler am Drucksensor des Bremskraftverstärkers. Dieser Sensor meldet den Druck, mit dem der Verstärker arbeitet, beim klassischen Unterdruck-Bremskraftverstärker also den Unterdruck; das Bremssteuergerät schätzt damit die verfügbare Unterstützung ab, steuert gegebenenfalls eine elektrische Vakuumpumpe und stützt Funktionen wie den hydraulischen Bremsassistenten. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_pressure_sensor
   common_causes:
@@ -2168,23 +2168,19 @@
         en: Sensor failed
         de: Sensor defekt
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 150
-      - 1200
-    estimated_hours:
-      - 1
-      - 4
+    estimated_cost_eur: [150, 1200]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: false
@@ -2195,14 +2191,16 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG03A%20Engine%20Diagnostics.pdf
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C0048
   category: chassis
   title:
     en: Brake Booster Travel Sensor
     de: Bremskraftverstärker Hubsensor
   description:
-    en: 'Generic fault on brake booster travel/position sensor. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Allgemeiner Fehler am Weg-/Positionssensor des Bremskraftverstärkers. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Generic fault on brake booster travel/position sensor. The travel sensor measures how far the booster input rod, and with it the brake pedal, has moved; on an electromechanical booster such as Bosch's iBooster this signal is what the control unit turns into a motor command, so a faulty signal reduces or removes power assist. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Allgemeiner Fehler am Weg-/Positionssensor des Bremskraftverstärkers. Der Wegsensor misst, wie weit sich die Eingangsstange des Verstärkers und damit das Bremspedal bewegt hat; bei einem elektromechanischen Verstärker wie dem Bosch iBooster rechnet das Steuergerät genau dieses Signal in einen Motorbefehl um, ein fehlerhaftes Signal verringert oder streicht daher die Unterstützung. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_travel_sensor
   common_causes:
@@ -2212,23 +2210,19 @@
         en: Sensor failed
         de: Sensor defekt
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 150
-      - 1200
-    estimated_hours:
-      - 1
-      - 4
+    estimated_cost_eur: [150, 1200]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: false
@@ -2239,6 +2233,7 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C0049
   category: chassis
   title:
@@ -2387,8 +2382,8 @@
     en: Brake Booster Motor A Position Sensor Exceeded Learning Limit
     de: Bremskraftverstärker Motor A Positionssensor Lerngrenze überschritten
   description:
-    en: 'Brake booster motor A position sensor learned offset exceeded the allowed range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Gelernter Offset des Positionssensors am Booster-Motor A überschreitet zulässigen Bereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Brake booster motor A position sensor learned offset exceeded the allowed range. The motor position sensor reports the rotor angle of the booster's electric motor; after replacement or calibration the module learns its reference position, and if that learned value lies outside the permitted window it no longer trusts the signal and limits assist. A relearn with a scan tool is usually part of the repair. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Gelernter Offset des Positionssensors am Booster-Motor A überschreitet zulässigen Bereich. Der Motorpositionssensor meldet den Rotorwinkel des Elektromotors im Verstärker; nach einem Tausch oder einer Kalibrierung lernt das Steuergerät dessen Bezugsposition ein, und liegt der gelernte Wert außerhalb des zulässigen Fensters, vertraut es dem Signal nicht mehr und begrenzt die Unterstützung. Zur Reparatur gehört meist ein erneutes Anlernen mit dem Diagnosegerät. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - booster_motor_a_pos_sensor
   common_causes:
@@ -2398,23 +2393,19 @@
         en: Calibration not performed after replacement
         de: Kalibrierung nach Tausch fehlt
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 80
-      - 500
-    estimated_hours:
-      - 0.5
-      - 2
+    estimated_cost_eur: [80, 500]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
     emissions_relevant: false
@@ -2425,6 +2416,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11017174-0001.pdf
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C004D
   category: chassis
   title:
@@ -7567,8 +7560,8 @@
     en: Brake Booster Vacuum Sensor Circuit
     de: Bremskraftverstaerker-Vakuumsensor Stromkreis
   description:
-    en: 'The brake booster vacuum sensor reports an implausible signal; brake assist functions are reduced. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Der Vakuumsensor des Bremskraftverstaerkers meldet ein unplausibles Signal; Bremsassistent-Funktionen werden reduziert. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: The brake booster vacuum sensor reports an implausible signal; brake assist functions are reduced. The vacuum sensor tells the brake control module how much vacuum is stored in the booster; with too little vacuum the assist drops, so the module uses the signal to request more vacuum (electric pump or engine intervention) or to add hydraulic brake assist. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Der Vakuumsensor des Bremskraftverstaerkers meldet ein unplausibles Signal; Bremsassistent-Funktionen werden reduziert. Der Unterdrucksensor teilt dem Bremssteuergerät mit, wie viel Unterdruck im Verstärker ansteht; bei zu wenig Unterdruck sinkt die Unterstützung, daher fordert das Steuergerät anhand des Signals mehr Unterdruck an (elektrische Pumpe oder Motoreingriff) oder ergänzt die Bremskraft hydraulisch. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_vacuum_sensor
     - vacuum_hose
@@ -7584,29 +7577,26 @@
         en: Sensor failed
         de: Sensor defekt
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur:
-      - 60
-      - 400
-    estimated_hours:
-      - 0.5
-      - 2
+    estimated_cost_eur: [60, 400]
+    estimated_hours: [0.5, 2]
   flags:
     mil: false
   references:
     - sae:J2012
   sources:
     - https://en.wikipedia.org/wiki/Vacuum_servo
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG03A%20Engine%20Diagnostics.pdf
 - code: C0265
   category: chassis
   title:
@@ -15252,8 +15242,8 @@
     en: Brake Booster Solenoid Circuit/Open
     de: Bremskraftverstärker-Magnetventil Schaltkreis unterbrochen
   description:
-    en: 'Open circuit on brake booster solenoid. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Unterbrochener Schaltkreis am Magnetventil des Bremskraftverstärkers. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Open circuit on brake booster solenoid. The booster solenoid is an electrically operated valve on the brake booster that lets the control module build up or increase assist without driver input, for example for emergency brake assist or automatic braking. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Unterbrochener Schaltkreis am Magnetventil des Bremskraftverstärkers. Das Magnetventil des Bremskraftverstärkers ist ein elektrisch betätigtes Ventil, mit dem das Steuergerät auch ohne Pedaleingriff Unterstützung aufbauen oder verstärken kann, etwa für den Notbremsassistenten oder automatische Bremseingriffe. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_solenoid
   common_causes:
@@ -15265,31 +15255,27 @@
     - id: connector_back_out
       likelihood: low
       label:
-        en: 'Pin pushed back out of connector body'
-        de: 'Pin aus dem Steckergehäuse zurückgedrückt'
+        en: Pin pushed back out of connector body
+        de: Pin aus dem Steckergehäuse zurückgedrückt
     - id: solder_joint_cracked
       likelihood: low
       label:
-        en: 'Cracked solder joint inside the module or sensor'
-        de: 'Gerissene Lötstelle im Modul oder Sensor'
+        en: Cracked solder joint inside the module or sensor
+        de: Gerissene Lötstelle im Modul oder Sensor
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 150
-      - 1500
-    estimated_hours:
-      - 1
-      - 5
+    estimated_cost_eur: [150, 1500]
+    estimated_hours: [1, 5]
   flags:
     mil: true
     emissions_relevant: false
@@ -15300,14 +15286,15 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C0567
   category: chassis
   title:
     en: Brake Booster Solenoid Circuit Low
     de: Bremskraftverstärker-Magnetventil Schaltkreis niedrig
   description:
-    en: 'Brake booster solenoid control voltage below expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Steuerspannung Magnetventil unter Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Brake booster solenoid control voltage below expected range. The booster solenoid is an electrically operated valve on the brake booster that lets the control module build up or increase assist without driver input, for example for emergency brake assist or automatic braking. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Steuerspannung Magnetventil unter Sollbereich. Das Magnetventil des Bremskraftverstärkers ist ein elektrisch betätigtes Ventil, mit dem das Steuergerät auch ohne Pedaleingriff Unterstützung aufbauen oder verstärken kann, etwa für den Notbremsassistenten oder automatische Bremseingriffe. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_solenoid
   common_causes:
@@ -15319,31 +15306,27 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: harness_chafe
       likelihood: low
       label:
-        en: 'Harness chafing through insulation'
-        de: 'Kabelbaum scheuert sich durch die Isolation'
+        en: Harness chafing through insulation
+        de: Kabelbaum scheuert sich durch die Isolation
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 150
-      - 1500
-    estimated_hours:
-      - 1
-      - 5
+    estimated_cost_eur: [150, 1500]
+    estimated_hours: [1, 5]
   flags:
     mil: true
     emissions_relevant: false
@@ -15354,14 +15337,15 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C0568
   category: chassis
   title:
     en: Brake Booster Solenoid Circuit High
     de: Bremskraftverstärker-Magnetventil Schaltkreis hoch
   description:
-    en: 'Brake booster solenoid control voltage above expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Steuerspannung Magnetventil über Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Brake booster solenoid control voltage above expected range. The booster solenoid is an electrically operated valve on the brake booster that lets the control module build up or increase assist without driver input, for example for emergency brake assist or automatic braking. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Steuerspannung Magnetventil über Sollbereich. Das Magnetventil des Bremskraftverstärkers ist ein elektrisch betätigtes Ventil, mit dem das Steuergerät auch ohne Pedaleingriff Unterstützung aufbauen oder verstärken kann, etwa für den Notbremsassistenten oder automatische Bremseingriffe. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_solenoid
   common_causes:
@@ -15373,31 +15357,27 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: supply_pinch
       likelihood: low
       label:
-        en: 'Supply wire pinched against B+ source'
-        de: 'Versorgungsleitung gegen B+-Quelle eingeklemmt'
+        en: Supply wire pinched against B+ source
+        de: Versorgungsleitung gegen B+-Quelle eingeklemmt
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 150
-      - 1500
-    estimated_hours:
-      - 1
-      - 5
+    estimated_cost_eur: [150, 1500]
+    estimated_hours: [1, 5]
   flags:
     mil: true
     emissions_relevant: false
@@ -15408,14 +15388,15 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C0569
   category: chassis
   title:
     en: Brake Booster Solenoid Circuit Performance
     de: Bremskraftverstärker-Magnetventil Schaltkreis Leistung
   description:
-    en: 'Brake booster solenoid does not respond mechanically as expected. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Magnetventil reagiert mechanisch nicht erwartungsgemäß. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Brake booster solenoid does not respond mechanically as expected. The booster solenoid is an electrically operated valve on the brake booster that lets the control module build up or increase assist without driver input, for example for emergency brake assist or automatic braking. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Magnetventil reagiert mechanisch nicht erwartungsgemäß. Das Magnetventil des Bremskraftverstärkers ist ein elektrisch betätigtes Ventil, mit dem das Steuergerät auch ohne Pedaleingriff Unterstützung aufbauen oder verstärken kann, etwa für den Notbremsassistenten oder automatische Bremseingriffe. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_solenoid
   common_causes:
@@ -15425,23 +15406,19 @@
         en: Solenoid stuck mechanically
         de: Magnetventil mechanisch klemmend
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 150
-      - 1500
-    estimated_hours:
-      - 1
-      - 5
+    estimated_cost_eur: [150, 1500]
+    estimated_hours: [1, 5]
   flags:
     mil: true
     emissions_relevant: false
@@ -15452,14 +15429,15 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C056A
   category: chassis
   title:
     en: Brake Booster Pressure Sensor Power Supply Circuit
     de: Bremskraftverstärker Drucksensor Versorgungsspannung
   description:
-    en: 'Fault on brake booster pressure sensor power supply circuit. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Fehler an der Versorgungsspannung des Bremskraftverstärker-Drucksensors. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Fault on brake booster pressure sensor power supply circuit. This sensor reports the pressure the booster works with, vacuum in a conventional vacuum booster, and the brake control module uses it to judge how much assist is available, to run an electric vacuum pump where fitted, and to support functions such as hydraulic brake assist. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Fehler an der Versorgungsspannung des Bremskraftverstärker-Drucksensors. Dieser Sensor meldet den Druck, mit dem der Verstärker arbeitet, beim klassischen Unterdruck-Bremskraftverstärker also den Unterdruck; das Bremssteuergerät schätzt damit die verfügbare Unterstützung ab, steuert gegebenenfalls eine elektrische Vakuumpumpe und stützt Funktionen wie den hydraulischen Bremsassistenten. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_pressure_sensor
   common_causes:
@@ -15469,23 +15447,19 @@
         en: Supply wiring fault
         de: Versorgungsleitung defekt
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur:
-      - 50
-      - 400
-    estimated_hours:
-      - 0.5
-      - 2
+    estimated_cost_eur: [50, 400]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
     emissions_relevant: false
@@ -15496,6 +15470,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG03A%20Engine%20Diagnostics.pdf
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C056B
   category: chassis
   title:
@@ -15722,8 +15698,8 @@
     en: Brake Booster Travel Sensor Circuit Low
     de: Bremskraftverstärker Wegsensor Schaltkreis niedrig
   description:
-    en: 'Brake booster travel sensor signal voltage below expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Signalspannung Wegsensor unter Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Brake booster travel sensor signal voltage below expected range. The travel sensor measures how far the booster input rod, and with it the brake pedal, has moved; on an electromechanical booster such as Bosch's iBooster this signal is what the control unit turns into a motor command, so a faulty signal reduces or removes power assist. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Signalspannung Wegsensor unter Sollbereich. Der Wegsensor misst, wie weit sich die Eingangsstange des Verstärkers und damit das Bremspedal bewegt hat; bei einem elektromechanischen Verstärker wie dem Bosch iBooster rechnet das Steuergerät genau dieses Signal in einen Motorbefehl um, ein fehlerhaftes Signal verringert oder streicht daher die Unterstützung. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_travel_sensor
   common_causes:
@@ -15735,31 +15711,27 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: harness_chafe
       likelihood: low
       label:
-        en: 'Harness chafing through insulation'
-        de: 'Kabelbaum scheuert sich durch die Isolation'
+        en: Harness chafing through insulation
+        de: Kabelbaum scheuert sich durch die Isolation
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur:
-      - 150
-      - 1200
-    estimated_hours:
-      - 1
-      - 4
+    estimated_cost_eur: [150, 1200]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: false
@@ -15770,14 +15742,15 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C0570
   category: chassis
   title:
     en: Brake Booster Travel Sensor Circuit High
     de: Bremskraftverstärker Wegsensor Schaltkreis hoch
   description:
-    en: 'Brake booster travel sensor signal voltage above expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Signalspannung Wegsensor über Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Brake booster travel sensor signal voltage above expected range. The travel sensor measures how far the booster input rod, and with it the brake pedal, has moved; on an electromechanical booster such as Bosch's iBooster this signal is what the control unit turns into a motor command, so a faulty signal reduces or removes power assist. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Signalspannung Wegsensor über Sollbereich. Der Wegsensor misst, wie weit sich die Eingangsstange des Verstärkers und damit das Bremspedal bewegt hat; bei einem elektromechanischen Verstärker wie dem Bosch iBooster rechnet das Steuergerät genau dieses Signal in einen Motorbefehl um, ein fehlerhaftes Signal verringert oder streicht daher die Unterstützung. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_travel_sensor
   common_causes:
@@ -15789,31 +15762,27 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: supply_pinch
       likelihood: low
       label:
-        en: 'Supply wire pinched against B+ source'
-        de: 'Versorgungsleitung gegen B+-Quelle eingeklemmt'
+        en: Supply wire pinched against B+ source
+        de: Versorgungsleitung gegen B+-Quelle eingeklemmt
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur:
-      - 150
-      - 1200
-    estimated_hours:
-      - 1
-      - 4
+    estimated_cost_eur: [150, 1200]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: false
@@ -15824,6 +15793,7 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C0571
   category: chassis
   title:
@@ -16247,8 +16217,8 @@
     en: Brake Booster Temperature Sensor B Circuit Low
     de: Bremskraftverstärker Temperatursensor B niedrig
   description:
-    en: 'Brake booster temperature sensor B signal voltage below expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Signalspannung Temperatursensor B unter Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Brake booster temperature sensor B signal voltage below expected range. Electromechanical boosters watch the temperature of their motor and electronics with several sensors so they can reduce assist before anything overheats; the letter identifies which of these sensors is affected. Without a plausible reading the module falls back to a conservative strategy. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Signalspannung Temperatursensor B unter Sollbereich. Elektromechanische Bremskraftverstärker überwachen die Temperatur von Motor und Elektronik mit mehreren Sensoren, um die Unterstützung zu drosseln, bevor etwas überhitzt; der Buchstabe gibt an, welcher dieser Sensoren betroffen ist. Ohne plausiblen Messwert schaltet das Steuergerät auf eine vorsichtige Ersatzstrategie. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_temp_sensor_b
   common_causes:
@@ -16260,31 +16230,27 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: harness_chafe
       likelihood: low
       label:
-        en: 'Harness chafing through insulation'
-        de: 'Kabelbaum scheuert sich durch die Isolation'
+        en: Harness chafing through insulation
+        de: Kabelbaum scheuert sich durch die Isolation
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 150
-      - 1200
-    estimated_hours:
-      - 1
-      - 4
+    estimated_cost_eur: [150, 1200]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: false
@@ -16296,14 +16262,15 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C057A
   category: chassis
   title:
     en: Brake Booster Temperature Sensor B Circuit High
     de: Bremskraftverstärker Temperatursensor B hoch
   description:
-    en: 'Brake booster temperature sensor B signal voltage above expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Signalspannung Temperatursensor B über Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Brake booster temperature sensor B signal voltage above expected range. Electromechanical boosters watch the temperature of their motor and electronics with several sensors so they can reduce assist before anything overheats; the letter identifies which of these sensors is affected. Without a plausible reading the module falls back to a conservative strategy. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Signalspannung Temperatursensor B über Sollbereich. Elektromechanische Bremskraftverstärker überwachen die Temperatur von Motor und Elektronik mit mehreren Sensoren, um die Unterstützung zu drosseln, bevor etwas überhitzt; der Buchstabe gibt an, welcher dieser Sensoren betroffen ist. Ohne plausiblen Messwert schaltet das Steuergerät auf eine vorsichtige Ersatzstrategie. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_temp_sensor_b
   common_causes:
@@ -16315,31 +16282,27 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: supply_pinch
       likelihood: low
       label:
-        en: 'Supply wire pinched against B+ source'
-        de: 'Versorgungsleitung gegen B+-Quelle eingeklemmt'
+        en: Supply wire pinched against B+ source
+        de: Versorgungsleitung gegen B+-Quelle eingeklemmt
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 150
-      - 1200
-    estimated_hours:
-      - 1
-      - 4
+    estimated_cost_eur: [150, 1200]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: false
@@ -16351,14 +16314,15 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C057B
   category: chassis
   title:
     en: Brake Booster Temperature Sensor B Circuit/Open
     de: Bremskraftverstärker Temperatursensor B unterbrochen
   description:
-    en: 'Open circuit on brake booster temperature sensor B. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Unterbrochener Schaltkreis am Temperatursensor B. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Open circuit on brake booster temperature sensor B. Electromechanical boosters watch the temperature of their motor and electronics with several sensors so they can reduce assist before anything overheats; the letter identifies which of these sensors is affected. Without a plausible reading the module falls back to a conservative strategy. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Unterbrochener Schaltkreis am Temperatursensor B. Elektromechanische Bremskraftverstärker überwachen die Temperatur von Motor und Elektronik mit mehreren Sensoren, um die Unterstützung zu drosseln, bevor etwas überhitzt; der Buchstabe gibt an, welcher dieser Sensoren betroffen ist. Ohne plausiblen Messwert schaltet das Steuergerät auf eine vorsichtige Ersatzstrategie. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_temp_sensor_b
   common_causes:
@@ -16370,31 +16334,27 @@
     - id: connector_back_out
       likelihood: low
       label:
-        en: 'Pin pushed back out of connector body'
-        de: 'Pin aus dem Steckergehäuse zurückgedrückt'
+        en: Pin pushed back out of connector body
+        de: Pin aus dem Steckergehäuse zurückgedrückt
     - id: solder_joint_cracked
       likelihood: low
       label:
-        en: 'Cracked solder joint inside the module or sensor'
-        de: 'Gerissene Lötstelle im Modul oder Sensor'
+        en: Cracked solder joint inside the module or sensor
+        de: Gerissene Lötstelle im Modul oder Sensor
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 150
-      - 1200
-    estimated_hours:
-      - 1
-      - 4
+    estimated_cost_eur: [150, 1200]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: false
@@ -16406,14 +16366,15 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C057C
   category: chassis
   title:
     en: Brake Booster Temperature Sensor B Circuit Range/Performance
     de: Bremskraftverstärker Temperatursensor B Bereich/Leistung
   description:
-    en: 'Brake booster temperature sensor B reading implausible. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Wert des Temperatursensors B unstimmig. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Brake booster temperature sensor B reading implausible. Electromechanical boosters watch the temperature of their motor and electronics with several sensors so they can reduce assist before anything overheats; the letter identifies which of these sensors is affected. Without a plausible reading the module falls back to a conservative strategy. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Wert des Temperatursensors B unstimmig. Elektromechanische Bremskraftverstärker überwachen die Temperatur von Motor und Elektronik mit mehreren Sensoren, um die Unterstützung zu drosseln, bevor etwas überhitzt; der Buchstabe gibt an, welcher dieser Sensoren betroffen ist. Ohne plausiblen Messwert schaltet das Steuergerät auf eine vorsichtige Ersatzstrategie. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_temp_sensor_b
   common_causes:
@@ -16425,31 +16386,27 @@
     - id: sensor_aged
       likelihood: low
       label:
-        en: 'Sensor element aged beyond calibration window'
-        de: 'Sensorelement gealtert über Kalibrierfenster hinaus'
+        en: Sensor element aged beyond calibration window
+        de: Sensorelement gealtert über Kalibrierfenster hinaus
     - id: mounting_loose
       likelihood: low
       label:
-        en: 'Sensor mounting loose - signal damping'
-        de: 'Sensorbefestigung lose - Signaldämpfung'
+        en: Sensor mounting loose - signal damping
+        de: Sensorbefestigung lose - Signaldämpfung
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 150
-      - 1200
-    estimated_hours:
-      - 1
-      - 4
+    estimated_cost_eur: [150, 1200]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: false
@@ -16461,14 +16418,15 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C057D
   category: chassis
   title:
     en: Brake Booster Temperature Sensor Circuit B Intermittent/Erratic
     de: Bremskraftverstärker Temperatursensor B sporadisch/unstetig
   description:
-    en: 'Intermittent signal from brake booster temp sensor B. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Sporadisches Signal vom Temperatursensor B. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Intermittent signal from brake booster temp sensor B. Electromechanical boosters watch the temperature of their motor and electronics with several sensors so they can reduce assist before anything overheats; the letter identifies which of these sensors is affected. Without a plausible reading the module falls back to a conservative strategy. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Sporadisches Signal vom Temperatursensor B. Elektromechanische Bremskraftverstärker überwachen die Temperatur von Motor und Elektronik mit mehreren Sensoren, um die Unterstützung zu drosseln, bevor etwas überhitzt; der Buchstabe gibt an, welcher dieser Sensoren betroffen ist. Ohne plausiblen Messwert schaltet das Steuergerät auf eine vorsichtige Ersatzstrategie. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_temp_sensor_b
   common_causes:
@@ -16480,31 +16438,27 @@
     - id: connector_intermittent
       likelihood: low
       label:
-        en: 'Connector with intermittent contact under vibration'
-        de: 'Stecker mit sporadischem Kontakt unter Vibration'
+        en: Connector with intermittent contact under vibration
+        de: Stecker mit sporadischem Kontakt unter Vibration
     - id: harness_vibration
       likelihood: low
       label:
-        en: 'Harness routed against vibrating component'
-        de: 'Kabelbaum verläuft an vibrierender Komponente'
+        en: Harness routed against vibrating component
+        de: Kabelbaum verläuft an vibrierender Komponente
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 80
-      - 800
-    estimated_hours:
-      - 0.5
-      - 3
+    estimated_cost_eur: [80, 800]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
     emissions_relevant: false
@@ -16515,14 +16469,15 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C057E
   category: chassis
   title:
     en: Brake Booster Temperature Sensor A/B Correlation
     de: Bremskraftverstärker Temperatursensor A/B Korrelation
   description:
-    en: 'Brake booster temperature sensors A and B disagree beyond plausible deviation. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Temperatursensoren A und B des Bremskraftverstärkers weichen über plausibles Maß ab. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Brake booster temperature sensors A and B disagree beyond plausible deviation. Electromechanical boosters watch the temperature of their motor and electronics with several sensors so they can reduce assist before anything overheats; the letter identifies which of these sensors is affected. Without a plausible reading the module falls back to a conservative strategy. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Temperatursensoren A und B des Bremskraftverstärkers weichen über plausibles Maß ab. Elektromechanische Bremskraftverstärker überwachen die Temperatur von Motor und Elektronik mit mehreren Sensoren, um die Unterstützung zu drosseln, bevor etwas überhitzt; der Buchstabe gibt an, welcher dieser Sensoren betroffen ist. Ohne plausiblen Messwert schaltet das Steuergerät auf eine vorsichtige Ersatzstrategie. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_temp_sensors
   common_causes:
@@ -16532,23 +16487,19 @@
         en: One sensor drifted
         de: Einer der Sensoren verschoben
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 150
-      - 1200
-    estimated_hours:
-      - 1
-      - 4
+    estimated_cost_eur: [150, 1200]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: false
@@ -16559,6 +16510,7 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C057F
   category: chassis
   title:
@@ -16895,8 +16847,8 @@
     en: Brake Booster Motor B Phase U-V-W Circuit High
     de: Bremskraftverstärker Motor B Phase U-V-W hoch
   description:
-    en: 'Brake booster motor B phase voltage above expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Phasenspannung am Booster-Motor B über Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Brake booster motor B phase voltage above expected range. In an electromechanical booster an electric motor drives a gear stage that pushes on the master cylinder piston; some designs split the motor into two windings or channels, A and B, so that one can keep working if the other fails. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Phasenspannung am Booster-Motor B über Sollbereich. In einem elektromechanischen Bremskraftverstärker treibt ein Elektromotor über ein Getriebe den Kolben des Hauptbremszylinders an; manche Ausführungen teilen den Motor in zwei Wicklungen oder Kanäle A und B auf, damit einer weiterarbeiten kann, wenn der andere ausfällt. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_motor_b
     - motor_phase_wiring
@@ -16909,31 +16861,27 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: supply_pinch
       likelihood: low
       label:
-        en: 'Supply wire pinched against B+ source'
-        de: 'Versorgungsleitung gegen B+-Quelle eingeklemmt'
+        en: Supply wire pinched against B+ source
+        de: Versorgungsleitung gegen B+-Quelle eingeklemmt
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur:
-      - 400
-      - 2500
-    estimated_hours:
-      - 2
-      - 6
+    estimated_cost_eur: [400, 2500]
+    estimated_hours: [2, 6]
   flags:
     mil: true
     emissions_relevant: false
@@ -16944,6 +16892,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11017174-0001.pdf
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C0586
   category: chassis
   title:
@@ -17722,8 +17672,8 @@
     en: Brake Booster Internal Power Driver Range/Performance
     de: Bremskraftverstärker interne Endstufe Bereich/Leistung
   description:
-    en: 'Internal power driver in brake booster controller does not respond as expected. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Interne Endstufe im Booster-Controller reagiert nicht erwartungsgemäß. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Internal power driver in brake booster controller does not respond as expected. The internal power driver is the output stage in the booster module that switches current to the electric motor; when it does not respond as expected the module cannot control the motor reliably and limits or stops assist. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Interne Endstufe im Booster-Controller reagiert nicht erwartungsgemäß. Der interne Leistungstreiber ist die Endstufe im Verstärker-Steuergerät, die den Strom zum Elektromotor schaltet; reagiert er nicht wie erwartet, kann das Steuergerät den Motor nicht zuverlässig ansteuern und begrenzt oder beendet die Unterstützung. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - booster_internal_driver
   common_causes:
@@ -17732,34 +17682,30 @@
       label:
         en: Power driver internal fault
         de: Endstufe intern defekt
-    - id: sensor_aged
+    - id: motor_or_wiring_overload
+      likelihood: medium
+      label:
+        en: Shorted motor winding or phase wiring overloading the driver
+        de: Kurzschluss in Motorwicklung oder Phasenleitung überlastet den Treiber
+    - id: supply_voltage_low
       likelihood: low
       label:
-        en: 'Sensor element aged beyond calibration window'
-        de: 'Sensorelement gealtert über Kalibrierfenster hinaus'
-    - id: mounting_loose
-      likelihood: low
-      label:
-        en: 'Sensor mounting loose - signal damping'
-        de: 'Sensorbefestigung lose - Signaldämpfung'
+        en: Low or unstable supply voltage to the booster module
+        de: Zu niedrige oder instabile Versorgungsspannung am Verstärker-Steuergerät
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur:
-      - 400
-      - 2500
-    estimated_hours:
-      - 2
-      - 6
+    estimated_cost_eur: [400, 2500]
+    estimated_hours: [2, 6]
   flags:
     mil: true
     emissions_relevant: false
@@ -17770,6 +17716,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11017174-0001.pdf
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C0596
   category: chassis
   title:
@@ -17921,8 +17869,8 @@
     en: Brake Booster Control Module Missing Calibration
     de: Bremskraftverstärker-Steuermodul Kalibrierung fehlt
   description:
-    en: 'Brake booster control module not calibrated — typically required after replacement. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Booster-Steuermodul nicht kalibriert — meist nach Tausch erforderlich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Brake booster control module not calibrated — typically required after replacement. Without valid calibration or configuration data the module cannot adapt the assist characteristic to the vehicle; this usually follows a module replacement or an interrupted programming session, and assist stays limited until the module is programmed. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Booster-Steuermodul nicht kalibriert — meist nach Tausch erforderlich. Ohne gültige Kalibrier- oder Konfigurationsdaten kann das Steuergerät die Unterstützungskennlinie nicht an das Fahrzeug anpassen; meist folgt das auf einen Steuergerätetausch oder eine abgebrochene Programmierung, und die Unterstützung bleibt eingeschränkt, bis das Steuergerät programmiert ist. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_module
   common_causes:
@@ -17932,23 +17880,19 @@
         en: Calibration not performed
         de: Kalibrierung fehlt
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 80
-      - 500
-    estimated_hours:
-      - 0.5
-      - 2
+    estimated_cost_eur: [80, 500]
+    estimated_hours: [0.5, 2]
   flags:
     mil: true
     emissions_relevant: false
@@ -17959,6 +17903,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11017174-0001.pdf
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C059A
   category: chassis
   title:
@@ -19202,8 +19148,8 @@
     en: Brake Booster Temperature Sensor C Circuit Low
     de: Bremskraftverstärker Temperatursensor C niedrig
   description:
-    en: 'Brake booster temperature sensor C signal voltage below expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Signalspannung Temperatursensor C unter Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Brake booster temperature sensor C signal voltage below expected range. Electromechanical boosters watch the temperature of their motor and electronics with several sensors so they can reduce assist before anything overheats; the letter identifies which of these sensors is affected. Without a plausible reading the module falls back to a conservative strategy. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Signalspannung Temperatursensor C unter Sollbereich. Elektromechanische Bremskraftverstärker überwachen die Temperatur von Motor und Elektronik mit mehreren Sensoren, um die Unterstützung zu drosseln, bevor etwas überhitzt; der Buchstabe gibt an, welcher dieser Sensoren betroffen ist. Ohne plausiblen Messwert schaltet das Steuergerät auf eine vorsichtige Ersatzstrategie. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_temp_sensor_c
   common_causes:
@@ -19215,31 +19161,27 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: harness_chafe
       likelihood: low
       label:
-        en: 'Harness chafing through insulation'
-        de: 'Kabelbaum scheuert sich durch die Isolation'
+        en: Harness chafing through insulation
+        de: Kabelbaum scheuert sich durch die Isolation
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 150
-      - 1200
-    estimated_hours:
-      - 1
-      - 4
+    estimated_cost_eur: [150, 1200]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: false
@@ -19251,14 +19193,15 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C05B4
   category: chassis
   title:
     en: Brake Booster Temperature Sensor C Circuit High
     de: Bremskraftverstärker Temperatursensor C hoch
   description:
-    en: 'Brake booster temperature sensor C signal voltage above expected range. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Signalspannung Temperatursensor C über Sollbereich. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Brake booster temperature sensor C signal voltage above expected range. Electromechanical boosters watch the temperature of their motor and electronics with several sensors so they can reduce assist before anything overheats; the letter identifies which of these sensors is affected. Without a plausible reading the module falls back to a conservative strategy. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Signalspannung Temperatursensor C über Sollbereich. Elektromechanische Bremskraftverstärker überwachen die Temperatur von Motor und Elektronik mit mehreren Sensoren, um die Unterstützung zu drosseln, bevor etwas überhitzt; der Buchstabe gibt an, welcher dieser Sensoren betroffen ist. Ohne plausiblen Messwert schaltet das Steuergerät auf eine vorsichtige Ersatzstrategie. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_temp_sensor_c
   common_causes:
@@ -19270,31 +19213,27 @@
     - id: connector_corrosion
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Connector pins corroded - high contact resistance
+        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
     - id: supply_pinch
       likelihood: low
       label:
-        en: 'Supply wire pinched against B+ source'
-        de: 'Versorgungsleitung gegen B+-Quelle eingeklemmt'
+        en: Supply wire pinched against B+ source
+        de: Versorgungsleitung gegen B+-Quelle eingeklemmt
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 150
-      - 1200
-    estimated_hours:
-      - 1
-      - 4
+    estimated_cost_eur: [150, 1200]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: false
@@ -19306,14 +19245,15 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C05B5
   category: chassis
   title:
     en: Brake Booster Temperature Sensor C Circuit/Open
     de: Bremskraftverstärker Temperatursensor C unterbrochen
   description:
-    en: 'Open circuit on brake booster temperature sensor C. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Unterbrochener Schaltkreis am Temperatursensor C. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Open circuit on brake booster temperature sensor C. Electromechanical boosters watch the temperature of their motor and electronics with several sensors so they can reduce assist before anything overheats; the letter identifies which of these sensors is affected. Without a plausible reading the module falls back to a conservative strategy. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Unterbrochener Schaltkreis am Temperatursensor C. Elektromechanische Bremskraftverstärker überwachen die Temperatur von Motor und Elektronik mit mehreren Sensoren, um die Unterstützung zu drosseln, bevor etwas überhitzt; der Buchstabe gibt an, welcher dieser Sensoren betroffen ist. Ohne plausiblen Messwert schaltet das Steuergerät auf eine vorsichtige Ersatzstrategie. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_temp_sensor_c
   common_causes:
@@ -19325,31 +19265,27 @@
     - id: connector_back_out
       likelihood: low
       label:
-        en: 'Pin pushed back out of connector body'
-        de: 'Pin aus dem Steckergehäuse zurückgedrückt'
+        en: Pin pushed back out of connector body
+        de: Pin aus dem Steckergehäuse zurückgedrückt
     - id: solder_joint_cracked
       likelihood: low
       label:
-        en: 'Cracked solder joint inside the module or sensor'
-        de: 'Gerissene Lötstelle im Modul oder Sensor'
+        en: Cracked solder joint inside the module or sensor
+        de: Gerissene Lötstelle im Modul oder Sensor
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 150
-      - 1200
-    estimated_hours:
-      - 1
-      - 4
+    estimated_cost_eur: [150, 1200]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: false
@@ -19361,14 +19297,15 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C05B6
   category: chassis
   title:
     en: Brake Booster Temperature Sensor C Circuit Range/Performance
     de: Bremskraftverstärker Temperatursensor C Bereich/Leistung
   description:
-    en: 'Brake booster temperature sensor C reading implausible. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Wert des Temperatursensors C unstimmig. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Brake booster temperature sensor C reading implausible. Electromechanical boosters watch the temperature of their motor and electronics with several sensors so they can reduce assist before anything overheats; the letter identifies which of these sensors is affected. Without a plausible reading the module falls back to a conservative strategy. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Wert des Temperatursensors C unstimmig. Elektromechanische Bremskraftverstärker überwachen die Temperatur von Motor und Elektronik mit mehreren Sensoren, um die Unterstützung zu drosseln, bevor etwas überhitzt; der Buchstabe gibt an, welcher dieser Sensoren betroffen ist. Ohne plausiblen Messwert schaltet das Steuergerät auf eine vorsichtige Ersatzstrategie. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_temp_sensor_c
   common_causes:
@@ -19380,31 +19317,27 @@
     - id: sensor_aged
       likelihood: low
       label:
-        en: 'Sensor element aged beyond calibration window'
-        de: 'Sensorelement gealtert über Kalibrierfenster hinaus'
+        en: Sensor element aged beyond calibration window
+        de: Sensorelement gealtert über Kalibrierfenster hinaus
     - id: mounting_loose
       likelihood: low
       label:
-        en: 'Sensor mounting loose - signal damping'
-        de: 'Sensorbefestigung lose - Signaldämpfung'
+        en: Sensor mounting loose - signal damping
+        de: Sensorbefestigung lose - Signaldämpfung
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 150
-      - 1200
-    estimated_hours:
-      - 1
-      - 4
+    estimated_cost_eur: [150, 1200]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: false
@@ -19416,14 +19349,15 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C05B7
   category: chassis
   title:
     en: Brake Booster Temperature Sensor C Circuit Intermittent/Erratic
     de: Bremskraftverstärker Temperatursensor C sporadisch/unstetig
   description:
-    en: 'Intermittent signal from brake booster temperature sensor C. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Sporadisches Signal vom Temperatursensor C. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Intermittent signal from brake booster temperature sensor C. Electromechanical boosters watch the temperature of their motor and electronics with several sensors so they can reduce assist before anything overheats; the letter identifies which of these sensors is affected. Without a plausible reading the module falls back to a conservative strategy. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Sporadisches Signal vom Temperatursensor C. Elektromechanische Bremskraftverstärker überwachen die Temperatur von Motor und Elektronik mit mehreren Sensoren, um die Unterstützung zu drosseln, bevor etwas überhitzt; der Buchstabe gibt an, welcher dieser Sensoren betroffen ist. Ohne plausiblen Messwert schaltet das Steuergerät auf eine vorsichtige Ersatzstrategie. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_temp_sensor_c
   common_causes:
@@ -19435,31 +19369,27 @@
     - id: connector_intermittent
       likelihood: low
       label:
-        en: 'Connector with intermittent contact under vibration'
-        de: 'Stecker mit sporadischem Kontakt unter Vibration'
+        en: Connector with intermittent contact under vibration
+        de: Stecker mit sporadischem Kontakt unter Vibration
     - id: harness_vibration
       likelihood: low
       label:
-        en: 'Harness routed against vibrating component'
-        de: 'Kabelbaum verläuft an vibrierender Komponente'
+        en: Harness routed against vibrating component
+        de: Kabelbaum verläuft an vibrierender Komponente
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 80
-      - 800
-    estimated_hours:
-      - 0.5
-      - 3
+    estimated_cost_eur: [80, 800]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
     emissions_relevant: false
@@ -19471,6 +19401,7 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C05B8
   category: chassis
   title:
@@ -20007,8 +19938,8 @@
     en: Brake Booster Motor A Over Temperature
     de: Bremskraftverstärker Motor A Übertemperatur
   description:
-    en: 'Brake booster motor A exceeded its safe operating temperature. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Booster-Motor A hat die zulässige Betriebstemperatur überschritten. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Brake booster motor A exceeded its safe operating temperature. In an electromechanical booster an electric motor drives a gear stage that pushes on the master cylinder piston; some designs split the motor into two windings or channels, A and B, so that one can keep working if the other fails. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Booster-Motor A hat die zulässige Betriebstemperatur überschritten. In einem elektromechanischen Bremskraftverstärker treibt ein Elektromotor über ein Getriebe den Kolben des Hauptbremszylinders an; manche Ausführungen teilen den Motor in zwei Wicklungen oder Kanäle A und B auf, damit einer weiterarbeiten kann, wenn der andere ausfällt. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_motor_a
   common_causes:
@@ -20018,23 +19949,19 @@
         en: Thermal overload from extended braking
         de: Thermische Überlast bei langem Bremsen
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 200
-      - 1500
-    estimated_hours:
-      - 1
-      - 5
+    estimated_cost_eur: [200, 1500]
+    estimated_hours: [1, 5]
   flags:
     mil: true
     emissions_relevant: false
@@ -20045,14 +19972,16 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11017174-0001.pdf
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C05C3
   category: chassis
   title:
     en: Brake Booster Motor A Supply Circuit
     de: Bremskraftverstärker Motor A Versorgung
   description:
-    en: 'Generic fault on brake booster motor A supply circuit. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Allgemeiner Fehler an der Versorgung des Booster-Motors A. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Generic fault on brake booster motor A supply circuit. In an electromechanical booster an electric motor drives a gear stage that pushes on the master cylinder piston; some designs split the motor into two windings or channels, A and B, so that one can keep working if the other fails. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Allgemeiner Fehler an der Versorgung des Booster-Motors A. In einem elektromechanischen Bremskraftverstärker treibt ein Elektromotor über ein Getriebe den Kolben des Hauptbremszylinders an; manche Ausführungen teilen den Motor in zwei Wicklungen oder Kanäle A und B auf, damit einer weiterarbeiten kann, wenn der andere ausfällt. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_motor_a_supply
     - fuse
@@ -20063,23 +19992,19 @@
         en: Supply wiring or fuse fault
         de: Versorgungsleitung oder Sicherung defekt
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur:
-      - 50
-      - 600
-    estimated_hours:
-      - 0.3
-      - 2
+    estimated_cost_eur: [50, 600]
+    estimated_hours: [0.3, 2]
   flags:
     mil: true
     emissions_relevant: false
@@ -20090,6 +20015,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11017174-0001.pdf
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C05C4
   category: chassis
   title:
@@ -25248,8 +25175,8 @@
     en: Brake Booster Motor B Performance
     de: Bremskraftverstärker Motor B Leistung
   description:
-    en: 'Brake booster motor B does not deliver expected performance. Boost control tracks commanded vs. actual manifold pressure; persistent deviation means wastegate, vanes, hose or actuator are not delivering the requested pressure.'
-    de: 'Bremskraftverstärker-Motor B liefert nicht die erwartete Leistung. Die Ladedruck-Regelung vergleicht Soll- und Ist-Saugrohrdruck; anhaltende Abweichung bedeutet, dass Wastegate, VTG-Schaufeln, Schlauch oder Aktuator nicht den geforderten Druck liefern.'
+    en: Brake booster motor B does not deliver expected performance. In an electromechanical booster an electric motor drives a gear stage that pushes on the master cylinder piston; some designs split the motor into two windings or channels, A and B, so that one can keep working if the other fails. If power assist is lost, the brakes still work through the master cylinder, but a much higher pedal force is needed.
+    de: Bremskraftverstärker-Motor B liefert nicht die erwartete Leistung. In einem elektromechanischen Bremskraftverstärker treibt ein Elektromotor über ein Getriebe den Kolben des Hauptbremszylinders an; manche Ausführungen teilen den Motor in zwei Wicklungen oder Kanäle A und B auf, damit einer weiterarbeiten kann, wenn der andere ausfällt. Fällt die Unterstützung aus, bremst das Fahrzeug weiterhin über den Hauptbremszylinder, allerdings mit deutlich höherer Pedalkraft.
   affected_components:
     - brake_booster_motor_b
   common_causes:
@@ -25259,23 +25186,19 @@
         en: Motor worn or weak
         de: Motor verschlissen oder schwach
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Brake system warning lamp or message
+      de: Warnleuchte oder Meldung zum Bremssystem
+    - en: Possible reduced brake assist
+      de: Möglicherweise reduzierte Bremskraftunterstützung
+    - en: Firmer brake pedal, longer pedal travel or higher pedal force
+      de: Härteres Bremspedal, längerer Pedalweg oder höhere Pedalkraft
+    - en: Driver-assistance functions such as automatic emergency braking or adaptive cruise control may be disabled
+      de: Assistenzfunktionen wie Notbremsassistent oder Abstandstempomat können abgeschaltet sein
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur:
-      - 400
-      - 3000
-    estimated_hours:
-      - 2
-      - 6
+    estimated_cost_eur: [400, 3000]
+    estimated_hours: [2, 6]
   flags:
     mil: true
     emissions_relevant: false
@@ -25286,6 +25209,8 @@
   sources:
     - https://github.com/Wal33D/dtc-database
     - https://en.wikipedia.org/wiki/Power_brake
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11017174-0001.pdf
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 - code: C062D
   category: chassis
   title:
