@@ -215730,205 +215730,222 @@
 - code: P0EFB
   category: powertrain
   title:
-    en: Battery Charger A Input Voltage Sensor B Circuit Intermittent/Erratic
-    de: Batterielader A Eingangs-Spannungssensor B Stromkreis sporadisch/unsauber
+    en: Battery Charger A Input Voltage Sensor C Circuit
+    de: Ladegerät A Eingangsspannungssensor C Stromkreis
   description:
-    en: The ECM detects a intermittent/erratic fault on the battery charger a input voltage sensor b circuit. Reading cannot be used reliably for control.
-    de: Das Steuergerät erkennt einen Fehler "sporadisch/unsauber" am Batterielader A Eingangs-Spannungssensor B Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
+    en: P0EFB flags an electrical fault on the third AC input voltage channel of on-board charger A, sensor C. Channel A reports through P0D3D to P0D41, channel B through P0EF7 to P0EFA; a third channel fits chargers that read each phase of a three-phase supply separately. This is the catch-all circuit code, used when the signal is unusable without being sorted into range, low or high (P0EFC, P0EFD, P0EFE). No manufacturer documents P0EFB publicly, and GM's hybrid tables for 2011, 2012 and 2014 to 2019 never list the matching circuit code P0D3D either, catching wiring faults on sensor A only through its low and high checks. In TI's 11 kW reference design every phase is scaled by a resistor chain and centred at 1.65 V in a 3.3 V converter, so a dead channel is easy to spot. AC charging is refused or limited.
+    de: "Gemeldet wird ein elektrischer Fehler am dritten Messkanal für die Netzspannung im Bordlader A, dem Eingangsspannungssensor C. Kanal A meldet sich über P0D3D bis P0D41, Kanal B über P0EF7 bis P0EFA; ein dritter Kanal passt zu Ladern, die jede Phase eines Drehstromanschlusses einzeln erfassen. P0EFB ist der Sammelcode für ein unbrauchbares Signal, das keiner der Gruppen Bereich, niedrig oder hoch (P0EFC, P0EFD, P0EFE) zugeordnet wird. Öffentlich beschreibt ihn kein Hersteller; auch GM führt in seinen Hybridtabellen 2011, 2012 und 2014 bis 2019 den Kreiscode P0D3D für Sensor A nicht und erkennt Leitungsfehler dort nur über die Niedrig- und Hochprüfung. Im 11-kW-Referenzentwurf von TI wird jede Phase per Widerstandskette geteilt und auf 1,65 V in der Mitte eines 3,3-V-Wandlers gelegt. Folge: AC-Laden wird abgelehnt oder gedrosselt."
   affected_components:
-    - battery_charger_a_input_voltage_sensor_b
+    - battery_charger_a_input_voltage_sensor_c
     - wiring_harness
-    - bms
+    - on_board_charger
   common_causes:
-    - id: connector_loose
+    - id: sensing_channel_failed
       likelihood: high
       label:
-        en: Sensor connector not seated
-        de: Sensorstecker nicht eingerastet
-    - id: ground_noisy
+        en: Failed measuring channel C on the charger board (divider, amplifier or converter input)
+        de: Ausgefallener Messkanal C auf der Laderplatine (Teiler, Verstärker oder Wandlereingang)
+    - id: phase_sense_line_open
       likelihood: medium
       label:
-        en: Noisy ground reference
-        de: Verrauschte Masse-Referenz
-    - id: connector_intermittent
+        en: Open or loose sense connection for this phase inside the charger or at the AC inlet harness
+        de: Unterbrochene oder lockere Messverbindung dieser Phase im Lader oder am Kabelstrang der AC-Ladedose
+    - id: charger_software_fault
       likelihood: low
       label:
-        en: 'Connector with intermittent contact under vibration'
-        de: 'Stecker mit sporadischem Kontakt unter Vibration'
+        en: Charger software marking a valid channel as faulty
+        de: Ladersoftware stuft einen intakten Kanal als fehlerhaft ein
   symptoms:
-    - en: 'Charge status indicator shows fault'
-      de: 'Ladestatus-Anzeige zeigt Fehler'
-    - en: 'Charging may not start or interrupts'
-      de: 'Ladevorgang startet nicht oder bricht ab'
-    - en: 'Slower-than-expected charge rate'
-      de: 'Langsamerer Ladevorgang als erwartet'
+    - en: AC charging does not start or is limited
+      de: AC-Laden startet nicht oder nur eingeschränkt
+    - en: Possible reduced charging power on three-phase stations
+      de: An Drehstrom-Ladepunkten eventuell verringerte Ladeleistung
+    - en: Charging fault shown in the cluster or app
+      de: Ladefehler im Kombiinstrument oder in der App
   repair:
-    difficulty: medium
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1, 5]
+    estimated_cost_eur: [80, 2500]
+    estimated_hours: [0.5, 4]
   flags:
-    mil: true
+    mil: false
     emissions_relevant: false
     drive_cycle_required: false
-    limp_mode_possible: true
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P0D41]
+  related_codes: [P0EFC, P0EFD, P0EFE, P0EF7, P0D3D]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Battery_charger
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2011/11OBDG01%20HYBRID%20Diagnostics.pdf
+    - https://www.ti.com/lit/ug/tidue53j/tidue53j.pdf
+  reviewed: '2026-11-03'
 
 - code: P0EFC
   category: powertrain
   title:
-    en: Battery Charger A Input Voltage Sensor C Circuit
-    de: Batterielader A Eingangs-Spannungssensor C Stromkreis
+    en: Battery Charger A Input Voltage Sensor C Circuit Range/Performance
+    de: Ladegerät A Eingangsspannungssensor C Stromkreis Bereich/Funktion
   description:
-    en: The ECM detects a circuit fault on the battery charger a input voltage sensor c circuit. Reading cannot be used reliably for control.
-    de: Das Steuergerät erkennt einen Fehler "Stromkreis" am Batterielader A Eingangs-Spannungssensor C Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
+    en: "With P0EFC, sensor C of charger A delivers an electrically sound signal whose value conflicts with the charger's other readings. No manufacturer documents P0EFC publicly. For sensor A, GM shows such a cross-check on the 2011 Volt: the charger module compares the AC peak voltage with two independent bulk voltage readings, and if both differ by more than 34 V for 512 ms within 640 ms, P0D3E is stored as Type A. GM preliminary information PIC5803 (Volt 2011 to 2013, Spark EV 2014) adds a warning: P0D3E together with P1E00 after an interrupted charge usually came from a brown-out, a power cut or a faulty cord set, not from the car. CARB likewise does not demand detection of faults that look the same as a weak supply. Check the outlet and station before blaming the charger."
+    de: "Bei P0EFC liefert Sensor C des Laders A ein elektrisch einwandfreies Signal, dessen Wert aber nicht zu den übrigen Messgrößen des Laders passt. Kein Hersteller dokumentiert P0EFC öffentlich. Wie eine solche Gegenprüfung aussieht, zeigt GM für Sensor A im Volt 2011: Das Lademodul stellt die AC-Spitzenspannung zwei unabhängig gemessenen Zwischenkreisspannungen gegenüber; weichen beide länger als 512 ms innerhalb von 640 ms um mehr als 34 V ab, wird P0D3E als Typ A gespeichert. Die GM-Vorabinformation PIC5803 (Volt 2011–2013, Spark EV 2014) mahnt zur Vorsicht: P0D3E mit P1E00 nach abgebrochenem Laden ging meist auf Spannungseinbrüche, Stromausfall oder ein defektes Ladekabel zurück. Auch CARB verlangt keine Erkennung von Fehlern, die sich von schlechter Netzversorgung nicht unterscheiden lassen. Erst Steckdose und Ladepunkt prüfen."
   affected_components:
     - battery_charger_a_input_voltage_sensor_c
-    - wiring_harness
-    - bms
+    - on_board_charger
   common_causes:
-    - id: sensor_failed
+    - id: supply_disturbance
       likelihood: high
       label:
-        en: Sensor failed
-        de: Sensor defekt
-    - id: wiring_fault
+        en: Voltage dips, brown-out or power cut at the outlet or station during charging (GM PIC5803 for the sensor A code)
+        de: Spannungseinbrüche oder Stromausfall an Steckdose bzw. Ladepunkt während des Ladens (GM PIC5803 zum Code für Sensor A)
+    - id: faulty_evse
       likelihood: medium
       label:
-        en: Wiring or connector fault
-        de: Verkabelungs- oder Steckerfehler
+        en: Faulty or poorly calibrated charging cord set or wallbox
+        de: Defektes oder falsch abgestimmtes Ladekabel bzw. Wallbox
+    - id: sensing_drift
+      likelihood: medium
+      label:
+        en: Gain or offset drift of measuring channel C in the charger
+        de: Verstärkungs- oder Nullpunktdrift des Messkanals C im Lader
+    - id: charger_software
+      likelihood: low
+      label:
+        en: Charger software needing an update
+        de: Ladersoftware braucht ein Update
   symptoms:
-    - en: 'Charge status indicator shows fault'
-      de: 'Ladestatus-Anzeige zeigt Fehler'
-    - en: 'Charging may not start or interrupts'
-      de: 'Ladevorgang startet nicht oder bricht ab'
-    - en: 'Slower-than-expected charge rate'
-      de: 'Langsamerer Ladevorgang als erwartet'
+    - en: Charging stops part-way or does not reach full charge
+      de: Laden bricht mittendrin ab oder erreicht nicht den vollen Ladestand
+    - en: Fault appears only at certain outlets or stations
+      de: Fehler tritt nur an bestimmten Steckdosen oder Ladepunkten auf
+    - en: Charging fault message, sometimes with a warning lamp
+      de: Ladefehler-Meldung, teils mit Warnleuchte
   repair:
-    difficulty: medium
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1, 5]
+    estimated_cost_eur: [0, 2500]
+    estimated_hours: [0.3, 4]
   flags:
-    mil: true
+    mil: false
     emissions_relevant: false
     drive_cycle_required: false
-    limp_mode_possible: true
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P0EF7, P0D3D]
+  related_codes: [P0EFB, P0EFD, P0EFE, P0EF8, P0D3E]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Battery_charger
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2011/11OBDG01%20HYBRID%20Diagnostics.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2013/MC-10112753-9999.pdf
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+  reviewed: '2026-11-03'
 
 - code: P0EFD
   category: powertrain
   title:
-    en: Battery Charger A Input Voltage Sensor C Circuit Range/Performance
-    de: Batterielader A Eingangs-Spannungssensor C Stromkreis Bereich/Leistung
+    en: Battery Charger A Input Voltage Sensor C Circuit Low
+    de: Ladegerät A Eingangsspannungssensor C Stromkreis niedrig
   description:
-    en: The ECM detects a range/performance fault on the battery charger a input voltage sensor c circuit. Reading cannot be used reliably for control.
-    de: Das Steuergerät erkennt einen Fehler "Bereich/Leistung" am Batterielader A Eingangs-Spannungssensor C Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
+    en: "P0EFD reports that the reading of input voltage sensor C in charger A sits below its plausible band. No manufacturer documents P0EFD publicly. GM's 2011 Volt charger module gives a reference for sensor A: once AC is detected at the inlet, a peak value under 90 V for 1500 ms within a 1875 ms window sets P0D3F, Type A with the warning lamp after one trip. Causes on the measuring side are a short to ground on the sense path, a shorted lower divider resistor or a missing reference for the converter. A phase that is genuinely dead at the supply, such as a tripped breaker on one leg of a three-phase station, can produce the same picture, so the incoming voltage is measured first. Mains undervoltage proper has its own codes such as P0D27; the high counterpart is P0EFE."
+    de: "P0EFD bedeutet, dass der Messwert von Eingangsspannungssensor C im Lader A unter seinem plausiblen Band liegt. Öffentlich führt kein Hersteller diesen Code. Einen Anhaltspunkt liefert das Lademodul des Volt 2011 für Sensor A: Sobald an der Ladedose Wechselspannung erkannt ist, setzen weniger als 90 V Spitzenwert über 1500 ms in einem Fenster von 1875 ms den Code P0D3F, Typ A, Warnleuchte schon nach einer Fahrt. Messseitig kommen ein Masseschluss im Messpfad, ein kurzgeschlossener unterer Teilerwiderstand oder eine fehlende Referenz des Wandlers in Frage. Eine tatsächlich ausgefallene Phase, etwa durch eine ausgelöste Sicherung an einem Drehstrom-Ladepunkt, sieht genauso aus – deshalb zuerst die ankommende Spannung messen. Echte Netzunterspannung meldet der Lader über eigene Codes wie P0D27, das Gegenstück für zu hohe Werte ist P0EFE."
   affected_components:
     - battery_charger_a_input_voltage_sensor_c
     - wiring_harness
-    - bms
+    - on_board_charger
   common_causes:
-    - id: sensor_drift
-      likelihood: high
-      label:
-        en: Sensor characteristic drifted
-        de: Sensorkennlinie driftet
-    - id: mounting_displaced
+    - id: dead_supply_phase
       likelihood: medium
       label:
-        en: Sensor mounting displaced
-        de: Sensorbefestigung versetzt
-    - id: sensor_aged
-      likelihood: low
+        en: One phase missing at the supply (tripped breaker or fault in the station or cable)
+        de: Eine Phase fehlt am Anschluss (ausgelöste Sicherung oder Fehler in Ladepunkt bzw. Kabel)
+    - id: sense_short_to_ground
+      likelihood: medium
       label:
-        en: 'Sensor element aged beyond calibration window'
-        de: 'Sensorelement gealtert über Kalibrierfenster hinaus'
+        en: Sense path of channel C shorted to ground
+        de: Messpfad von Kanal C mit Masseschluss
+    - id: charger_measuring_stage
+      likelihood: high
+      label:
+        en: Defective divider or converter input for channel C in the charger
+        de: Defekter Teiler oder Wandlereingang für Kanal C im Lader
   symptoms:
-    - en: 'Charge status indicator shows fault'
-      de: 'Ladestatus-Anzeige zeigt Fehler'
-    - en: 'Charging may not start or interrupts'
-      de: 'Ladevorgang startet nicht oder bricht ab'
-    - en: 'Slower-than-expected charge rate'
-      de: 'Langsamerer Ladevorgang als erwartet'
+    - en: AC charging refused right after plugging in
+      de: AC-Laden wird direkt nach dem Einstecken verweigert
+    - en: Charging works on a different station or outlet
+      de: An einem anderen Ladepunkt oder einer anderen Steckdose klappt das Laden
+    - en: Charging fault message
+      de: Ladefehler-Meldung
   repair:
-    difficulty: medium
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1, 5]
+    estimated_cost_eur: [0, 2500]
+    estimated_hours: [0.3, 4]
   flags:
-    mil: true
+    mil: false
     emissions_relevant: false
     drive_cycle_required: false
-    limp_mode_possible: true
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P0EF8, P0D3E]
+  related_codes: [P0EFE, P0EFB, P0EFC, P0EF9, P0D3F, P0D27]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Battery_charger
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2011/11OBDG01%20HYBRID%20Diagnostics.pdf
+    - https://www.ti.com/lit/ug/tidue53j/tidue53j.pdf
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+  reviewed: '2026-11-03'
 
 - code: P0EFE
   category: powertrain
   title:
-    en: Battery Charger A Input Voltage Sensor C Circuit Low
-    de: Batterielader A Eingangs-Spannungssensor C Stromkreis niedrig
+    en: Battery Charger A Input Voltage Sensor C Circuit High
+    de: Ladegerät A Eingangsspannungssensor C Stromkreis hoch
   description:
-    en: The ECM detects a low fault on the battery charger a input voltage sensor c circuit. Reading cannot be used reliably for control.
-    de: Das Steuergerät erkennt einen Fehler "niedrig" am Batterielader A Eingangs-Spannungssensor C Stromkreis. Der Messwert kann nicht zuverlässig zur Regelung herangezogen werden.
+    en: P0EFE is stored when channel C of charger A reports more input voltage than a household or station supply can deliver. No manufacturer documents P0EFE publicly. For sensor A, GM's 2011 Volt charger module trips P0D40 when the measured AC peak exceeds 422 V for 160 ms of a 200 ms window, rated Type A; this window is far shorter than the one for the low code, presumably because overvoltage endangers the input stage. In a divider front end like the one in TI's 11 kW design, an open lower resistor or a short to the converter reference pushes the signal toward the 3.3 V limit and causes exactly this reading. Real overvoltage from the grid is rare, so the measuring channel inside the charger is the main suspect once plugs have been checked. AC charging stops at once.
+    de: P0EFE wird gespeichert, wenn Kanal C des Laders A mehr Eingangsspannung meldet, als ein Hausanschluss oder Ladepunkt überhaupt liefern kann. Kein Hersteller hat P0EFE öffentlich beschrieben. Für Sensor A setzt das Lademodul im GM Volt 2011 den Code P0D40, wenn der gemessene Spitzenwert 160 ms innerhalb von 200 ms über 422 V liegt, bewertet als Typ A. Das Zeitfenster ist viel kürzer als beim Niedrig-Code, vermutlich weil Überspannung die Eingangsstufe gefährdet. Bei einer Teilerschaltung wie im 11-kW-Entwurf von TI treiben ein offener unterer Widerstand oder ein Schluss gegen die Wandlerreferenz das Signal an die 3,3-V-Grenze und erzeugen genau dieses Bild. Echte Überspannung aus dem Netz kommt selten vor; nach geprüften Steckverbindungen steht deshalb der Messkanal im Lader im Verdacht. Das AC-Laden endet sofort.
   affected_components:
     - battery_charger_a_input_voltage_sensor_c
     - wiring_harness
-    - bms
+    - on_board_charger
   common_causes:
-    - id: short_to_ground
+    - id: divider_resistor_open
       likelihood: high
       label:
-        en: Signal wire shorted to ground
-        de: Signalleitung mit Masse kurzgeschlossen
-    - id: sensor_internal_short
+        en: Open lower resistor in the voltage divider of channel C
+        de: Unterbrochener unterer Widerstand im Spannungsteiler von Kanal C
+    - id: short_to_reference
       likelihood: medium
       label:
-        en: Internal sensor short
-        de: Interner Sensor-Kurzschluss
-    - id: connector_corrosion
+        en: Sense signal shorted to the converter reference or a supply rail
+        de: Messsignal hat Schluss gegen die Wandlerreferenz oder eine Versorgungsschiene
+    - id: grid_overvoltage
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Actual overvoltage or surge from the supply
+        de: Tatsächliche Überspannung oder Spannungsspitze aus dem Netz
   symptoms:
-    - en: 'Charge status indicator shows fault'
-      de: 'Ladestatus-Anzeige zeigt Fehler'
-    - en: 'Charging may not start or interrupts'
-      de: 'Ladevorgang startet nicht oder bricht ab'
-    - en: 'Slower-than-expected charge rate'
-      de: 'Langsamerer Ladevorgang als erwartet'
+    - en: AC charging stops within seconds of starting
+      de: AC-Laden endet wenige Sekunden nach dem Start
+    - en: Displayed supply voltage unrealistically high
+      de: Angezeigte Netzspannung unrealistisch hoch
+    - en: Charging fault message
+      de: Ladefehler-Meldung
   repair:
-    difficulty: medium
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1, 5]
+    estimated_cost_eur: [80, 2500]
+    estimated_hours: [0.5, 4]
   flags:
-    mil: true
+    mil: false
     emissions_relevant: false
     drive_cycle_required: false
-    limp_mode_possible: true
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P0EF9, P0D3F]
+  related_codes: [P0EFD, P0EFB, P0EFC, P0EFA, P0D40]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Battery_charger
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2011/11OBDG01%20HYBRID%20Diagnostics.pdf
+    - https://www.ti.com/lit/ug/tidue53j/tidue53j.pdf
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+  reviewed: '2026-11-03'
 
 - code: P0FFF
   category: powertrain
