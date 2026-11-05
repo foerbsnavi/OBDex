@@ -44991,8 +44991,8 @@
     en: Invalid Data Received From Off-Board Charger Control Module
     de: Ungültige Daten vom Steuergerät des externen Ladegeräts empfangen
   description:
-    en: "An off-board charger is the DC fast charger outside the car. During DC charging it exchanges data with the vehicle: with CHAdeMO over a CAN link in the connector, where the car sends target voltage, current request and stop conditions and the station reports its own state; with CCS over power line communication on the control pilot contact according to ISO 15118 or DIN 70121. U057D is stored when the charger's messages reach the vehicle's charging controller but are implausible, for example a reported voltage that contradicts the vehicle's own measurement or a sequence error. No manufacturer documents U057D publicly. A station fault is at least as likely as a vehicle fault. DC charging stops; AC charging normally still works."
-    de: "Ein externes Ladegerät ist die DC-Schnellladesäule außerhalb des Fahrzeugs. Beim Gleichstromladen tauscht sie Daten mit dem Auto aus: bei CHAdeMO über eine CAN-Verbindung im Stecker, über die das Fahrzeug Zielspannung, Stromwunsch und Abbruchbedingungen schickt und die Säule ihren Zustand meldet; bei CCS per Powerline-Kommunikation über den Control-Pilot-Kontakt nach ISO 15118 bzw. DIN 70121. U057D wird gespeichert, wenn Botschaften der Säule das Ladesteuergerät erreichen, aber unplausibel sind, etwa eine gemeldete Spannung, die der eigenen Messung widerspricht, oder ein Ablauffehler. Öffentlich dokumentiert kein Hersteller U057D. Ein Fehler der Säule ist mindestens so wahrscheinlich wie einer am Auto. DC-Laden bricht ab, AC-Laden geht meist weiter."
+    en: "Despite its name, the off-board charger control module sits inside the vehicle: it conducts the dialogue with an external DC fast charger, which under CCS runs as power line communication on the control pilot contact (ISO 15118, DIN 70121) and under CHAdeMO over a CAN link in the connector. Ford calls this unit the off-board charger controller (OBCC) on the Mustang Mach-E and E-Transit; SSM 50923 had new OBCC software fix interrupted DC fast charging at some EVgo stations. U057D is stored when another module in the car receives frames from this controller but rejects them, for instance because of a wrong counter, a failed checksum or implausible values. No manufacturer documents U057D itself. DC fast charging is likely to stop or refuse to start, while AC charging normally still works."
+    de: "Trotz des Namens sitzt das Steuergerät für externes Laden im Fahrzeug: Es führt die Kommunikation mit der DC-Schnellladesäule, die bei CCS als Powerline-Signal über den Control-Pilot-Kontakt läuft (ISO 15118, DIN 70121) und bei CHAdeMO über eine CAN-Verbindung im Stecker. Ford nennt die Einheit bei Mustang Mach-E und E-Transit Off-Board Charger Controller (OBCC); mit SSM 50923 wurden abbrechende Schnellladevorgänge an bestimmten EVgo-Säulen durch neue OBCC-Software behoben. U057D wird gespeichert, wenn ein anderes Steuergerät im Auto Botschaften dieses Moduls erhält, sie aber verwirft, etwa wegen eines falschen Zählers, einer fehlerhaften Prüfsumme oder unplausibler Werte. U057D selbst beschreibt kein Hersteller. Schnellladen bricht dann vermutlich ab oder startet nicht; AC-Laden funktioniert meist weiter."
   affected_components:
     - off_board_charger_module
   common_causes:
@@ -45030,6 +45030,7 @@
     - sae:J2012
   related_codes: [U027C, U049C, P0CF4]
   sources:
+    - https://static.nhtsa.gov/odi/tsbs/2022/MC-10216042-0001.pdf
     - https://en.wikipedia.org/wiki/CHAdeMO
     - https://en.wikipedia.org/wiki/Combined_Charging_System
   reviewed: '2026-11-05'
