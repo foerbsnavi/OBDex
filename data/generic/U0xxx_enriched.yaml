@@ -43384,8 +43384,8 @@
     en: Invalid Data Received From Image Processing Sensor B
     de: Ungültige Daten vom Bildverarbeitungssensor B empfangen
   description:
-    en: Image processing sensors are cameras that interpret their own picture and send results, not raw video, onto the bus. U0567 is set when frames from sensor B arrive but fail the receiver's checks, for instance a wrong CRC or a counter that jumps or repeats. No manufacturer documents U0567 or its lost-communication partner U0266 publicly, so it is unknown which camera a given brand calls B. Vehicles can carry more than one forward image sensor; one example is an infrared night-vision camera that senses the heat of pedestrians and animals farther ahead than the headlamps shine. Typically only the function fed by sensor B is disabled with a message, while the car drives normally. A MIL is not expected.
-    de: Bildverarbeitungssensoren sind Kameras, die ihr Bild selbst auswerten und Ergebnisse statt Rohvideo auf den Bus legen. U0567 entsteht, wenn Botschaften von Sensor B ankommen, die Prüfungen des Empfängers aber nicht bestehen – etwa eine falsche CRC oder ein Zähler, der springt oder sich wiederholt. Weder U0567 noch der Verlust-Partner U0266 ist von einem Hersteller öffentlich beschrieben; welche Kamera eine Marke als B führt, bleibt offen. Fahrzeuge können mehrere nach vorn gerichtete Bildsensoren haben, zum Beispiel eine Infrarot-Nachtsichtkamera, die Fußgänger und Tiere jenseits der Scheinwerferreichweite erfasst. Meist wird nur die von Sensor B versorgte Funktion mit einer Meldung abgeschaltet; das Fahrzeug fährt normal. Eine MIL ist nicht zu erwarten.
+    en: "Image processing sensors are cameras that interpret their own picture and send results, not raw video, onto the bus. U0567 is set when frames from sensor B arrive but fail the receiver's checks, for instance a wrong CRC or a counter that jumps or repeats. No public manufacturer text names U0567 itself, but its lost-communication partner U0266 appears in a Stellantis case: on a 2022 Ram 1500 it stood for the left camera of the surround view, so there sensor B is the driver-side mirror camera; other brands may assign B differently. Some cars also carry an infrared night-vision camera that sees warm objects beyond headlamp range. Typically only the function fed by sensor B is disabled with a message, while the car drives normally. A MIL is not expected."
+    de: "Bildverarbeitungssensoren sind Kameras, die ihr Bild selbst auswerten und Ergebnisse statt Rohvideo auf den Bus legen. U0567 entsteht, wenn Botschaften von Sensor B ankommen, die Prüfungen des Empfängers aber nicht bestehen – etwa eine falsche CRC oder ein Zähler, der springt oder sich wiederholt. U0567 selbst nennt kein öffentlicher Herstellertext, wohl aber den Verlust-Partner U0266: Bei Stellantis steht er am Ram 1500 von 2022 für die linke Kamera der Rundumsicht, Sensor B ist dort also die Kamera im Fahrerspiegel; andere Marken können B anders vergeben. Manche Fahrzeuge haben zusätzlich eine Infrarot-Nachtsichtkamera, die warme Objekte jenseits der Scheinwerferreichweite erkennt. Meist wird nur die von Sensor B versorgte Funktion mit einer Meldung abgeschaltet; das Fahrzeug fährt normal. Eine MIL ist nicht zu erwarten."
   affected_components:
     - image_processing_sensor_b
   common_causes:
@@ -43423,6 +43423,7 @@
     - sae:J2012
   related_codes: [U0266, U0566, U0568]
   sources:
+    - https://static.nhtsa.gov/odi/tsbs/2022/MC-10221396-9999.pdf
     - https://en.wikipedia.org/wiki/Automotive_night_vision
     - https://www.autosar.org/fileadmin/standards/R22-11/FO/AUTOSAR_PRS_E2EProtocol.pdf
   reviewed: '2026-11-05'
