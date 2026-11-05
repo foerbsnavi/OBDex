@@ -56607,260 +56607,271 @@
   category: network
   title:
     en: Lost Communication With Exhaust Gas Temperature Sensor Bank 2 Sensor 3
-    de: Kommunikationsverlust zum Abgastemperatursensor Bank 2 Sensor 3
+    de: Kommunikation mit Abgastemperatursensor Bank 2 Sensor 3 verloren
   description:
-    en: The vehicle bus reports loss of communication with smart exhaust gas temperature sensor bank 2 sensor 3. Catalyst protection and DPF regeneration logic switch to model-based estimates.
-    de: Der Fahrzeugbus meldet Kommunikationsverlust zum smarten Abgastemperatursensor Bank 2 Sensor 3. Katalysator-Schutz und DPF-Regenerationslogik wechseln auf modellbasierte Schätzungen.
+    en: U069C refers to the third temperature probe in the bank 2 exhaust path, so it can only occur where each cylinder bank feeds its own aftertreatment line, as on some V engines. Such a probe is a digital unit that reports its reading as SENT or CAN frames; the code is stored when those frames stop or keep failing their checks. No manufacturer documents U069C publicly. GM's 2025 diesels have one bank and test only the bank 1 positions, declaring a probe lost after 19 bad samples within 25 and rating it Type A. Bentley's V8 bulletin 2065698/1 proves that digital bank 2 probes are in use, yet names only the first position (U0621). An analog probe at this spot reports through P2466 to P246A, and the fourth probe on bank 2 has U069D. The MIL and a postponed filter regeneration are the likely consequences.
+    de: "U069C gehört zum dritten Temperaturfühler im Abgasstrang von Bank 2 und kann daher nur auftreten, wenn jede Zylinderbank eine eigene Nachbehandlungslinie hat, wie bei manchen V-Motoren. Der Fühler ist ein digitaler Baustein, der seinen Messwert als SENT- oder CAN-Botschaft sendet; der Code entsteht, wenn diese Botschaften ausbleiben oder wiederholt die Prüfung nicht bestehen. Öffentlich beschreibt kein Hersteller U069C. GMs Diesel 2025 haben nur eine Bank und prüfen nur die Stellen von Bank 1: 19 schlechte Proben aus 25 gelten dort als Ausfall, Typ A. Bentleys V8-Bulletin 2065698/1 zeigt, dass digitale Fühler an Bank 2 verbaut werden, nennt aber nur Stelle 1 (U0621). Ein analoger Fühler an dieser Stelle meldet sich über P2466 bis P246A; der vierte Fühler der Bank hat U069D. Zu erwarten sind Warnleuchte und verschobene Filterregeneration."
   affected_components:
     - egt_sensor_bank_2_sensor_3
     - vehicle_bus_wiring
   common_causes:
-    - id: bus_wiring_fault
+    - id: harness_chafed_bank2
       likelihood: high
       label:
-        en: Bus wiring open or shorted
-        de: Bus-Verkabelung unterbrochen oder kurzgeschlossen
-    - id: module_unpowered
+        en: Sensor harness on the bank 2 exhaust side chafed or heat-damaged
+        de: Fühlerleitung auf der Abgasseite von Bank 2 durchgescheuert oder hitzegeschädigt
+    - id: sensor_electronics_failed
       likelihood: medium
       label:
-        en: Module without power or ground
-        de: Modul ohne Spannung oder Masse
-    - id: module_failed
+        en: Electronics box of the probe failed
+        de: Elektronikteil des Fühlers ausgefallen
+    - id: supply_or_ground_lost
       likelihood: medium
       label:
-        en: Module failed
-        de: Modul defekt
+        en: Probe has lost its supply or ground
+        de: Fühler hat keine Versorgung oder Masse mehr
+    - id: connector_corroded
+      likelihood: low
+      label:
+        en: Connector corroded or not latched
+        de: Stecker korrodiert oder nicht eingerastet
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Check engine light
+      de: Motorkontrollleuchte
+    - en: Filter regeneration on bank 2 postponed or blocked
+      de: Filterregeneration an Bank 2 verschoben oder gesperrt
+    - en: Probe shows no value in live data
+      de: Fühler zeigt in den Messwerten keinen Wert
   repair:
     difficulty: medium
-    diy_possible: false
-    estimated_cost_eur: [120, 800]
+    diy_possible: true
+    estimated_cost_eur: [60, 450]
     estimated_hours: [0.5, 2]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
     limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [U069B, U069D, U069A, U0622, U0621, U0620, U061F]
+  related_codes: [U069D, U069A, U0621, U0622, P2466, P2467, P2468, P2469, P246A, P247E]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Catalytic_converter
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2025/25OBDG04A.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2022/MC-10210183-0001.pdf
+  reviewed: '2026-11-05'
 
 - code: U069D
   category: network
   title:
     en: Lost Communication With Exhaust Gas Temperature Sensor Bank 2 Sensor 4
-    de: Kommunikationsverlust zum Abgastemperatursensor Bank 2 Sensor 4
+    de: Kommunikation mit Abgastemperatursensor Bank 2 Sensor 4 verloren
   description:
-    en: The vehicle bus reports loss of communication with smart exhaust gas temperature sensor bank 2 sensor 4. Catalyst protection and DPF regeneration logic switch to model-based estimates.
-    de: Der Fahrzeugbus meldet Kommunikationsverlust zum smarten Abgastemperatursensor Bank 2 Sensor 4. Katalysator-Schutz und DPF-Regenerationslogik wechseln auf modellbasierte Schätzungen.
+    en: Sensor 4 is normally the final measuring position in the bank 2 exhaust, often placed further down the aftertreatment where the controller judges how hot the gas leaves the filter or catalyst stages. U069D reports that this digital probe has gone silent on its data link. Code-level documentation from a maker is not public; CARB only demands that a coded digital input which stops talking gets a code of its own. Sensience builds such probes from a type N thermocouple and a control module that handles up to four probes on J1939 CAN or one or two on SENT, so one failed module can silence several positions at once. On bank 1 only GM's 25OBDG04A contains the matching code U069B, rated Type A. Wiring faults of an analog probe at this point use P2473 to P2477, while U069C is the third probe. Expect a lit MIL and regeneration being delayed.
+    de: "Sensor 4 ist meist die letzte Temperaturmessstelle im Abgasweg von Bank 2, oft weiter hinten in der Nachbehandlung, wo das Steuergerät die Austrittstemperatur von Filter oder Katalysator erfasst. U069D: Dieser digitale Fühler ist auf seiner Datenleitung verstummt. Codegenaue Herstellerunterlagen gibt es öffentlich nicht; CARB schreibt nur vor, dass ein schweigender digitaler Eingang gesondert erkannt wird. Sensience fertigt solche Sonden aus einem Thermoelement Typ N und einem Steuermodul, das per J1939-CAN bis zu vier, per SENT ein oder zwei Fühler bedient – fällt das Modul aus, können mehrere Stellen zugleich verstummen. Für Bank 1 steht der Partner U069B nur in GMs 25OBDG04A, dort als Typ A. Analoge Kreisfehler an dieser Stelle: P2473 bis P2477; der dritte Fühler hat U069C. Folgen: Warnleuchte, verzögerte Regeneration."
   affected_components:
     - egt_sensor_bank_2_sensor_4
     - vehicle_bus_wiring
   common_causes:
-    - id: bus_wiring_fault
+    - id: lead_melted_downstream
       likelihood: high
       label:
-        en: Bus wiring open or shorted
-        de: Bus-Verkabelung unterbrochen oder kurzgeschlossen
-    - id: module_unpowered
+        en: Probe lead melted or torn near the rear aftertreatment
+        de: Fühlerleitung nahe der hinteren Abgasnachbehandlung geschmolzen oder abgerissen
+    - id: probe_electronics_dead
       likelihood: medium
       label:
-        en: Module without power or ground
-        de: Modul ohne Spannung oder Masse
-    - id: module_failed
-      likelihood: medium
+        en: Electronics unit of the probe dead
+        de: Elektronikeinheit des Fühlers ohne Funktion
+    - id: supply_fuse_or_wire
+      likelihood: low
       label:
-        en: Module failed
-        de: Modul defekt
+        en: Supply fuse or feed wire of the probe faulty
+        de: Sicherung oder Versorgungsleitung des Fühlers defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Check engine light
+      de: Motorkontrollleuchte
+    - en: Regeneration delayed or cancelled
+      de: Regeneration verzögert oder abgebrochen
   repair:
     difficulty: medium
-    diy_possible: false
-    estimated_cost_eur: [120, 800]
+    diy_possible: true
+    estimated_cost_eur: [60, 450]
     estimated_hours: [0.5, 2]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
     limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [U069C, U069B, U069A, U0622, U0621, U0620, U061F]
+  related_codes: [U069C, U069B, U0622, P2473, P2474, P2475, P2476, P2477, P247F]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Catalytic_converter
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2025/25OBDG04A.pdf
+    - https://www.sensience.com/wp-content/uploads/2024/03/EGT-Sensor-Datasheet.pdf
+  reviewed: '2026-11-05'
 
 - code: U069E
   category: network
   title:
     en: Lost Communication With Coolant Heater A
-    de: Kommunikationsverlust zur Kühlmittelheizung A
+    de: Kommunikation mit Kühlmittelheizung A verloren
   description:
-    en: The vehicle bus reports loss of communication with smart coolant heater A (PTC or fuel-fired booster). Cabin/coolant warm-up assistance cannot be commanded.
-    de: Der Fahrzeugbus meldet Kommunikationsverlust zur smarten Kühlmittelheizung A (PTC oder Standheizungs-Booster). Innenraum-/Kühlmittel-Aufwärm-Unterstützung kann nicht angefordert werden.
+    en: "Coolant heater A is an electric heater with its own control electronics that warms coolant for the cabin and, in some designs, for the traction battery – usually a high-voltage PTC unit in hybrids and EVs. The vehicle commands it over a data link, mostly LIN: DBK's 400 V heater is driven via LIN 2.0 plus a PWM input, and Webasto's 800 V range adds CAN on its larger models. U069E is stored when the commanding module stops getting answers from the heater. No manufacturer documents U069E publicly. The 2013–2014 Chevrolet Volt shows the layout with a separate coolant heater control module; GM diagnosed it with its own code B101D (PIC5943), and heat returned once the engine ran. Circuit and internal faults of this heater are P2B72–P2B75 and P2DA4–P2DA7. The driver mainly notices little or no heat in electric mode."
+    de: "Die Kühlmittelheizung A ist ein elektrischer Heizer mit eigener Steuerelektronik, der Kühlmittel für den Innenraum und je nach Auslegung auch für die Antriebsbatterie erwärmt – bei Hybrid- und Elektroautos meist ein Hochvolt-PTC-Gerät. Angesteuert wird er meist per LIN: DBKs 400-V-Heizer erhält PWM- und LIN-2.0-Befehle, Webastos 800-V-Baureihe bietet bei den größeren Modellen zusätzlich CAN. U069E entsteht, wenn das ansteuernde Steuergerät keine Antwort des Heizers mehr bekommt. Kein Hersteller beschreibt U069E öffentlich. Der Chevrolet Volt 2013–2014 zeigt den Aufbau mit eigenem Heizungssteuergerät; GM nutzte dort den eigenen Code B101D (PIC5943), und mit laufendem Motor kam die Wärme zurück. Kreis- und interne Fehler: P2B72–P2B75, P2DA4–P2DA7. Spürbar ist vor allem fehlende Wärme im E-Betrieb."
   affected_components:
     - coolant_heater_a
     - vehicle_bus_wiring
   common_causes:
-    - id: bus_wiring_fault
+    - id: lin_line_fault
       likelihood: high
       label:
-        en: Bus wiring open or shorted
-        de: Bus-Verkabelung unterbrochen oder kurzgeschlossen
-    - id: module_unpowered
+        en: LIN or CAN line to the heater broken, shorted or connector loose
+        de: LIN- oder CAN-Leitung zum Heizer unterbrochen, kurzgeschlossen oder Stecker lose
+    - id: heater_low_voltage_supply
       likelihood: medium
       label:
-        en: Module without power or ground
-        de: Modul ohne Spannung oder Masse
-    - id: module_failed
+        en: 12 V supply or ground of the heater electronics missing
+        de: 12-V-Versorgung oder Masse der Heizerelektronik fehlt
+    - id: heater_electronics_failed
       likelihood: medium
       label:
-        en: Module failed
-        de: Modul defekt
+        en: Control electronics inside the heater failed
+        de: Steuerelektronik im Heizer ausgefallen
+    - id: heater_software
+      likelihood: low
+      label:
+        en: Heater or master module software fault
+        de: Softwarefehler im Heizer oder im ansteuernden Steuergerät
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Little or no cabin heat in electric mode
+      de: Wenig oder keine Heizleistung im Elektrobetrieb
+    - en: Engine starts more often in cold weather to supply heat (hybrids)
+      de: Motor springt bei Kälte häufiger zum Heizen an (Hybride)
+    - en: Slow battery warm-up or reduced charging power in frost, where the heater serves the battery
+      de: Langsame Batterieerwärmung oder geringere Ladeleistung bei Frost, wenn der Heizer die Batterie mitversorgt
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur: [200, 2000]
-    estimated_hours: [0.5, 4]
+    estimated_cost_eur: [100, 1500]
+    estimated_hours: [0.5, 3]
   flags:
-    mil: true
+    mil: false
     emissions_relevant: false
-    drive_cycle_required: true
+    drive_cycle_required: false
     limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [P2B72, P2B73, P2B74, P2B75, P2DA4, P2DA5, P2DA6, P2DA7, P0E12]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Engine_block_heater
+    - https://static.nhtsa.gov/odi/tsbs/2013/SB-10063994-2273.pdf
+    - https://www.en.dbk-group.com/automotive-products/high-voltage-coolant-heater
+    - https://www.webasto.com/en-us/heating/high-voltage-heaters/800v-hvh.html
+  reviewed: '2026-11-05'
 
 - code: U069F
   category: network
   title:
     en: Lost Communication With Exhaust Pressure Sensor C
-    de: Kommunikationsverlust zum Abgasdrucksensor C
+    de: Kommunikation mit Abgasdrucksensor C verloren
   description:
-    en: The vehicle bus reports loss of communication with smart exhaust pressure sensor C. Pressure-based diagnostics switch to a model-based estimate.
-    de: Der Fahrzeugbus meldet Kommunikationsverlust zum smarten Abgasdrucksensor C. Druck-basierte Diagnosen wechseln auf eine modellbasierte Schätzung.
+    en: "Exhaust pressure sensor C is a third pressure measuring point in the exhaust; where it sits is up to the manufacturer, for example behind the turbine or on a second exhaust branch. U069F: this digital sensor, typically a SENT device, no longer supplies usable frames. No manufacturer documents U069F publicly. The nearest documented case is sensor A on Ford's 2023 diesels (6.7 L, 3.0 L): Ford stores U0691 for a transmission error or data gap, a signal wire pinned at one level, or a self-reported sensor fault, watched continuously over 5 s. Letters differ between makers, so these limits are not transferable. CARB requires a coded digital input that falls silent to have a code of its own. Wired analog versions of sensor C report P2E54 to P2E57. Expect the MIL and substitute values for boost or EGR control."
+    de: "Der Abgasdrucksensor C ist eine dritte Druckmessstelle im Abgas, vom Hersteller platziert, etwa hinter der Turbine oder an einem zweiten Abgaszweig. U069F: Dieser digitale Sensor, meist ein SENT-Baustein, schickt keine verwertbaren Botschaften mehr. Kein Hersteller dokumentiert U069F öffentlich. Am nächsten liegt Sensor A der Ford-Diesel 2023 (6,7/3,0 l): Ford setzt U0691 bei Übertragungsfehler oder Datenlücke, bei einer auf einem Pegel festhängenden Signalleitung oder bei einem vom Sensor selbst gemeldeten Fehler; überwacht wird ständig, 5 s Zeitfenster. Die Buchstaben vergibt jeder Hersteller selbst, die Werte sind also nicht übertragbar. Nach CARB braucht ein verstummter digitaler Eingang einen gesonderten Code. Analoge Kreisfehler von Sensor C: P2E54–P2E57. Wahrscheinlich: Warnleuchte, Ersatzwerte für Ladedruck- und AGR-Regelung."
   affected_components:
     - exhaust_pressure_sensor_c
     - vehicle_bus_wiring
   common_causes:
-    - id: bus_wiring_fault
+    - id: sent_wire_damaged
       likelihood: high
       label:
-        en: Bus wiring open or shorted
-        de: Bus-Verkabelung unterbrochen oder kurzgeschlossen
-    - id: module_unpowered
+        en: Signal, supply or ground wire of sensor C damaged by exhaust heat
+        de: Signal-, Versorgungs- oder Masseleitung von Sensor C durch Abgashitze beschädigt
+    - id: sensor_c_internal
       likelihood: medium
       label:
-        en: Module without power or ground
-        de: Modul ohne Spannung oder Masse
-    - id: module_failed
-      likelihood: medium
+        en: Sensor C reports an internal fault or stops sending
+        de: Sensor C meldet einen internen Fehler oder sendet nicht mehr
+    - id: connector_moisture
+      likelihood: low
       label:
-        en: Module failed
-        de: Modul defekt
+        en: Moisture or corrosion in the sensor connector
+        de: Feuchtigkeit oder Korrosion im Sensorstecker
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Check engine light
+      de: Motorkontrollleuchte
+    - en: Possibly less boost or power
+      de: Möglicherweise weniger Ladedruck oder Leistung
+    - en: Pressure value missing or frozen in live data
+      de: Druckwert in den Messwerten fehlt oder steht still
   repair:
     difficulty: medium
-    diy_possible: false
-    estimated_cost_eur: [120, 800]
+    diy_possible: true
+    estimated_cost_eur: [60, 400]
     estimated_hours: [0.5, 2]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-    limp_mode_possible: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [U0692, U0691]
+  related_codes: [U0691, U0692, P2E54, P2E55, P2E56, P2E57]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Diesel_particulate_filter
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://en.wikipedia.org/wiki/SENT_(protocol)
+  reviewed: '2026-11-05'
 
 - code: U0901
   category: network
   title:
     en: Invalid Data from Ion Sense Module
-    de: Ungültige Daten vom Ionenstrom-Modul
+    de: Ungültige Daten vom Ionenstrommodul
   description:
-    en: A receiving module detected implausible data from the ion sense module (used for misfire/knock detection via ionisation current at the spark plug). Per-cylinder ion current values fail plausibility checks and are rejected.
-    de: Ein empfangendes Steuergerät erkennt unstimmige Daten vom Ionenstrom-Modul (Misfire-/Klopf-Erkennung über Zündkerzen-Ionisationsstrom). Zylinderspezifische Ionenstrom-Werte bestehen Plausibilitätsprüfungen nicht und werden verworfen.
+    en: "An ion sense module evaluates the tiny current that the burning mixture conducts between the plug electrodes after ignition for the engine controller, which uses it to spot misfire, knock and poor combustion; Ford's patent US20170030322A1 places such a module in the ignition system. U0901 means the module's messages still arrive but their content is rejected – a value out of range, an implausible signal or a wrong checksum or counter. No manufacturer documents U0901 publicly. Stellantis' 3.0 L Hurricane six runs a networked ion sense system: its bulletins name U0673 (module silent) and P2F64 (ion sense feedback circuit A), both cured by PCM software. Saab's Trionic T8 module still fed knock and combustion pulses to the controller over separate wires. With bad ion data, misfire and knock detection lose their basis."
+    de: "Ein Ionenstrommodul wertet den winzigen Strom aus, den das brennende Gemisch nach der Zündung über den Kerzenspalt leitet, für das Motorsteuergerät, das daraus Aussetzer, Klopfen und schlechte Verbrennung erkennt; Fords Patent US20170030322A1 verortet ein solches Modul in der Zündanlage. U0901 heißt: Botschaften des Moduls kommen an, werden aber verworfen – Wert außerhalb des Bereichs, unplausibles Signal, falsche Prüfsumme oder falscher Zähler. Öffentlich beschreibt kein Hersteller U0901. Stellantis’ 3,0-l-Hurricane-Reihensechser hat ein vernetztes Ionenstromsystem; die Bulletins nennen U0673 (Modul stumm) und P2F64 (Rückmeldekreis A), beide per PCM-Software behoben. Saabs Trionic-T8-Modul gab Klopf- und Verbrennungsimpulse noch über Einzelleitungen aus. Ohne gültige Ionendaten fehlt der Aussetzer- und Klopferkennung die Basis."
   affected_components:
     - ion_sense_module
   common_causes:
-    - id: module_internal_fault
+    - id: controller_software
       likelihood: high
       label:
-        en: Module internal fault or sensor input drift
-        de: Interner Modulfehler oder Driften des Sensoreingangs
-    - id: software_mismatch
+        en: Software of the engine controller or ion sense module (update available)
+        de: Software von Motorsteuergerät oder Ionenstrommodul (Update vorhanden)
+    - id: bus_interference
       likelihood: medium
       label:
-        en: Software version mismatch after replacement
-        de: Software-Versionskonflikt nach Tausch
-    - id: gateway_module_fault
+        en: Disturbed data line, for example from ignition interference or a poor ground
+        de: Gestörte Datenleitung, etwa durch Zündstörungen oder schlechte Masse
+    - id: module_internal_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
+        en: Ion sense module internally faulty
+        de: Ionenstrommodul intern defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Check engine light
+      de: Motorkontrollleuchte
+    - en: Possibly reduced power from knock protection
+      de: Möglicherweise weniger Leistung durch Klopfschutz
+    - en: Misfire or ion sense codes stored alongside
+      de: Zusätzlich Aussetzer- oder Ionenstromcodes gespeichert
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur: [120, 1200]
-    estimated_hours: [0.5, 3]
+    estimated_cost_eur: [0, 600]
+    estimated_hours: [0.2, 2]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
-    limp_mode_possible: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U0673, U0353, P034C, P28C0, P0300]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Ignition_system
+    - https://patents.google.com/patent/US20170030322A1/en
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11026796-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2024/MC-11006243-0001.pdf
+    - https://saabwisonline.com/9-3-9440/2006/2-engine/4-cylinder-petrol/engine-management-system-trionic-t8/technical-description/ionization-current-measurement
+  reviewed: '2026-11-05'
