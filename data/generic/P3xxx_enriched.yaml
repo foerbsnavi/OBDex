@@ -6,89 +6,130 @@
   category: powertrain
   title:
     en: Cylinder Deactivation System Bank 1
-    de: Zylinderabschaltung Bank 1
+    de: Zylinderabschaltsystem Bank 1
   description:
-    en: The engine control module has detected a fault in the cylinder deactivation system on bank 1. Variable displacement engines shut off cylinders under low load to save fuel — a fault here disables the function.
-    de: Das Motorsteuergerät hat einen Fehler im Zylinderabschaltsystem auf Bank 1 erkannt. Motoren mit variablem Hubraum schalten Zylinder unter geringer Last ab, um Kraftstoff zu sparen — ein Fehler deaktiviert die Funktion.
+    en: "P3400 is the bank-level verdict: the engine computer has concluded that cylinder deactivation on bank 1 as a whole does not behave as commanded, without blaming a single circuit. Makers fill it differently. On the 2019 LT4 Corvette, GM compares a manifold pressure model with all cylinders firing against the same model while cylinders are off; 100 failed samples out of 200 give a Type B code. Mazda's 2.5 l four-cylinders store it when a deactivation oil control valve is clogged, for example by plastic from the filter wrapper (SA-061/20). In Honda's VCM V6 it stems from a rocker arm oil pressure switch, and the Hemi Ram 1500 got a PCM update for it. Bank 2 is P3497. The lamp comes on; misfires or rough running may follow."
+    de: "Mit P3400 urteilt das Steuergerät über die ganze Bank 1: Die Zylinderabschaltung dort arbeitet nicht wie befohlen, ein bestimmter Stromkreis wird aber nicht benannt. Die Hersteller belegen den Code unterschiedlich. GM vergleicht beim LT4 der Corvette (2019) ein Saugrohrdruck-Modell mit allen Zylindern gegen dasselbe Modell bei abgeschalteten Zylindern; 100 Fehlproben von 200 ergeben einen Type-B-Code. Mazda kennt ihn bei den 2,5-l-Vierzylindern, wenn ein Ölsteuerventil der Abschaltung verstopft ist, etwa durch Plastikfetzen der Filterhülle (SA-061/20). Bei Honda hängt er am Öldruckschalter der VCM-Kipphebel, Ram bietet für den Hemi ein PCM-Update. Bank 2 meldet P3497. Die Leuchte geht an, oft mit Fehlzündungen oder unrundem Lauf."
   affected_components:
     - cylinder_deactivation_solenoid
     - lifter
     - oil_control_valve
   common_causes:
-    - id: deactivation_solenoid_failed
+    - id: oil_control_valve_blocked
       likelihood: high
       label:
-        en: Deactivation solenoid or oil control valve failed
-        de: Abschalt-Magnetventil oder Öldruckventil defekt
-    - id: lifter_stuck
+        en: Deactivation oil control valve or its screen clogged by debris
+        de: Ölsteuerventil der Abschaltung oder sein Sieb durch Fremdkörper verstopft
+    - id: low_or_degraded_oil
+      likelihood: high
+      label:
+        en: Low oil level, wrong grade or overdue oil change
+        de: Zu wenig Öl, falsche Sorte oder überfälliger Ölwechsel
+    - id: switching_element_failed
       likelihood: medium
       label:
-        en: Collapsing lifter stuck
-        de: Schaltstößel klemmt
-    - id: low_oil_pressure
-      likelihood: medium
+        en: Switchable rocker arm or lifter broken, dislodged or not latching
+        de: Schaltbarer Kipphebel oder Stößel gebrochen, verrutscht oder rastet nicht
+    - id: oil_pressure_out_of_range
+      likelihood: low
       label:
-        en: Low oil pressure prevents activation
-        de: Zu niedriger Öldruck verhindert Schaltung
+        en: Oil pressure too high on cold start, e.g. weak relief valve spring
+        de: Zu hoher Öldruck beim Kaltstart, etwa durch schwache Überdruckventilfeder
+    - id: ecm_software
+      likelihood: low
+      label:
+        en: Engine control software needing an update
+        de: Motorsteuergeräte-Software, die ein Update braucht
+  symptoms:
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
+    - en: Rough idle or misfire codes on the deactivating cylinders
+      de: Unruhiger Leerlauf oder Fehlzündungscodes auf den abschaltbaren Zylindern
+    - en: Ticking or clattering from the valve train
+      de: Ticken oder Klappern aus dem Ventiltrieb
+    - en: Reduced-cylinder mode no longer used, higher fuel use
+      de: Teilzylinderbetrieb entfällt, höherer Verbrauch
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1.5, 8.0]
+    estimated_cost_eur: [80, 4000]
+    estimated_hours: [0.5, 12]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3410, P3497]
+  related_codes: [P3497, P3401, P3498, P349B, P2652, P341A, P0300]
   sources:
-    - https://en.wikipedia.org/wiki/Variable_displacement
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03A%20Diagnostics.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10180714-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10128532-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11013168-0001.pdf
+  reviewed: '2026-11-06'
 
 - code: P3401
   category: powertrain
   title:
-    en: Cylinder 1 Deactivation/Intake Valve Control Circuit Open
-    de: Zylinder 1 Abschalt-/Einlassventilsteuerkreis offen
+    en: Cylinder 1 Deactivation/Intake Valve Control Circuit/Open
+    de: Zylinder 1 Abschaltung/Einlassventil Steuerkreis/Unterbrechung
   description:
-    en: The engine control module has detected an open circuit at the cylinder 1 deactivation or intake valve control solenoid. Without a valid circuit, cylinder 1 cannot be deactivated.
-    de: Das Motorsteuergerät hat eine Unterbrechung im Steuerkreis des Abschalt- oder Einlassventil-Magnetventils von Zylinder 1 erkannt. Ohne gültigen Stromkreis kann Zylinder 1 nicht abgeschaltet werden.
+    en: "P3401 points to a broken control path to the solenoid that switches off cylinder 1, a cylinder that GM and Chrysler V8s and Ford's 1.5 l three-cylinder EcoBoost all deactivate. On the 2019 L84 and L86 V8s, GM looks at the low-side output while it is off: over 200 kilohm to ground counts as open, and 20 failures among 25 readings at 250 ms intervals make it a Type B fault. GM adds that some controllers store P3403 alongside. Ford's VDE monitor relies on the fault status of its smart driver and decides within 5 seconds. For the 5.7 l Hemi, a Chrysler STAR case describes a deformed manifold heat shield that rubs the MDS solenoid harness open. P3403 and P3404 cover shorts, P3402 the mechanical function. Deactivation is then locked out."
+    de: "P3401 weist auf einen unterbrochenen Steuerweg zum Magnetventil hin, das Zylinder 1 abschaltet – diesen Zylinder legen die V8 von GM und Chrysler ebenso still wie Fords 1,5-l-Dreizylinder-EcoBoost. GM prüft bei den V8-Motoren L84 und L86 (2019) die Low-Side-Endstufe im ausgeschalteten Zustand: Mehr als 200 Kiloohm nach Masse gelten als Unterbrechung, 20 Fehler unter 25 Messungen im Abstand von 250 ms setzen einen Type-B-Code; manche Steuergeräte legen dabei zusätzlich P3403 ab. Ford entscheidet über den Fehlerstatus der Smart-Endstufe binnen 5 Sekunden. Beim 5,7-l-Hemi beschreibt ein STAR-Fall ein verbogenes Krümmer-Hitzeschild, das den Kabelbaum der MDS-Ventile durchscheuert. Kurzschlüsse sind P3403/P3404, die Mechanik P3402. Die Abschaltung bleibt gesperrt."
   affected_components:
     - cylinder_deactivation_solenoid
-    - engine_wiring_harness
+    - wiring_harness
     - ecm
   common_causes:
-    - id: solenoid_coil_open
+    - id: wiring_open_or_chafed
       likelihood: high
       label:
-        en: Solenoid coil open
-        de: Magnetventilspule unterbrochen
-    - id: wiring_open
+        en: Control wire broken or worn through, e.g. by a hot exhaust heat shield
+        de: Steuerleitung gerissen oder durchgescheuert, etwa am Abgas-Hitzeschild
+    - id: connector_corrosion
       likelihood: medium
       label:
-        en: Wiring or connector open
-        de: Verkabelung oder Stecker unterbrochen
-    - id: connector_back_out
+        en: Loose, corroded or oil-soaked solenoid connector
+        de: Lockerer, korrodierter oder verölter Stecker am Magnetventil
+    - id: solenoid_coil_open
+      likelihood: medium
+      label:
+        en: Open coil in the cylinder 1 deactivation solenoid
+        de: Unterbrochene Spule im Abschalt-Magnetventil von Zylinder 1
+    - id: ecm_driver_fault
       likelihood: low
       label:
-        en: 'Pin pushed back out of connector body'
-        de: 'Pin aus dem Steckergehäuse zurückgedrückt'
+        en: Faulty output stage in the engine control module
+        de: Defekte Endstufe im Motorsteuergerät
+  symptoms:
+    - en: Check engine lamp on, on GM after the second trip
+      de: Motorkontrollleuchte an, bei GM nach der zweiten Fahrt
+    - en: Engine stays in all-cylinder mode
+      de: Motor bleibt im Vollzylinderbetrieb
+    - en: Slightly higher fuel consumption
+      de: Etwas höherer Kraftstoffverbrauch
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [150, 1200]
-    estimated_hours: [1.0, 6.0]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3425]
+  related_codes: [P3402, P3403, P3404, P3405, P3400, P3498]
   sources:
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03B%20Diagnostics.pdf
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBD-Operations-Summary-Gasoline-2020-2023.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10176548-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11013168-0001.pdf
+  reviewed: '2026-11-06'
 
 - code: P3402
   category: powertrain
@@ -539,173 +580,228 @@
   category: powertrain
   title:
     en: Deactivation/Intake Valve Control Circuit Bank 1
-    de: Zylinderabschaltung/Einlassventil-Steuerschaltkreis Bank 1
+    de: Abschaltung/Einlassventil Steuerkreis Bank 1
   description:
-    en: Generic electrical fault on the cylinder deactivation/intake valve control circuit on bank 1. The mechanism that switches off intake valves on selected cylinders cannot be commanded.
-    de: Allgemeiner elektrischer Fehler am Schaltkreis der Zylinderabschaltung/Einlassventilsteuerung Bank 1. Der Mechanismus, der die Einlassventile einzelner Zylinder abschaltet, kann nicht angesteuert werden.
+    en: "P340A is meant for engines that switch the intake valves of a whole bank through a shared control circuit, rather than one solenoid per cylinder. It reports an electrical fault in that bank 1 circuit, without saying whether it is open or shorted. No manufacturer documents this code publicly, which leaves it without known limits; CARB merely demands that outputs of this kind be monitored for breaks and shorts. The common systems are built per cylinder: GM's DFM V8 has one solenoid per cylinder in the valley, so faults go to codes such as P3401. Honda's VCM V6 reports bank-level trouble as P3400. Bank 2 is P340B, the exhaust side P340C, the bank 1 function check P341A. Expect a warning lamp and no reduced-cylinder mode."
+    de: "P340A ist für Motoren gedacht, die die Einlassventile einer ganzen Bank über einen gemeinsamen Steuerkreis schalten statt über je ein Magnetventil pro Zylinder. Der Code meldet einen elektrischen Fehler in diesem Kreis von Bank 1, ohne zwischen Unterbrechung und Kurzschluss zu trennen. Kein Hersteller dokumentiert ihn öffentlich, veröffentlichte Schwellen fehlen daher; CARB verlangt lediglich, solche Ausgangskreise auf Unterbrechung und Kurzschluss zu prüfen. Die verbreiteten Systeme arbeiten zylinderweise: GMs DFM-V8 hat im V des Blocks ein Ventil je Zylinder und meldet Fehler etwa als P3401, Hondas VCM-V6 legt Bankfehler als P3400 ab. Bank 2 ist P340B, die Auslassseite P340C, die Funktionsprüfung P341A. Zu erwarten: Warnleuchte, kein Teilzylinderbetrieb."
   affected_components:
     - cylinder_deactivation_solenoid
-    - actuator_wiring
+    - wiring_harness
+    - ecm
   common_causes:
-    - id: solenoid_failed
-      likelihood: high
-      label:
-        en: Deactivation solenoid failed
-        de: Abschalt-Magnetventil defekt
-    - id: open_wiring
+    - id: wiring_fault
       likelihood: medium
       label:
-        en: Wiring break or unplugged connector
-        de: Kabelbruch oder loser Stecker
+        en: Damaged, open or shorted wire in the bank 1 control circuit
+        de: Beschädigte, unterbrochene oder kurzgeschlossene Leitung im Steuerkreis von Bank 1
+    - id: connector_corrosion
+      likelihood: medium
+      label:
+        en: Corroded or loose connector at the bank 1 actuator
+        de: Korrodierter oder lockerer Stecker am Stellglied von Bank 1
+    - id: actuator_coil_fault
+      likelihood: medium
+      label:
+        en: Bank 1 intake deactivation actuator with open or shorted coil
+        de: Einlass-Abschaltstellglied von Bank 1 mit unterbrochener oder kurzgeschlossener Spule
+    - id: ecm_driver_fault
+      likelihood: low
+      label:
+        en: Output stage fault in the engine control module
+        de: Endstufenfehler im Motorsteuergerät
+  symptoms:
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
+    - en: Cylinder deactivation disabled on bank 1
+      de: Zylinderabschaltung auf Bank 1 gesperrt
+    - en: Higher fuel consumption at light load
+      de: Höherer Verbrauch bei geringer Last
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1.5, 6]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
     limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P340B]
+  related_codes: [P340B, P340C, P341A, P3400, P3401]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/inv/2025/INRD-PE25001-11969.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10128532-9999.pdf
+  reviewed: '2026-11-06'
 
 - code: P340B
   category: powertrain
   title:
     en: Deactivation/Intake Valve Control Circuit Bank 2
-    de: Zylinderabschaltung/Einlassventil-Steuerschaltkreis Bank 2
+    de: Abschaltung/Einlassventil Steuerkreis Bank 2
   description:
-    en: Generic electrical fault on the cylinder deactivation/intake valve control circuit on bank 2.
-    de: Allgemeiner elektrischer Fehler am Schaltkreis der Zylinderabschaltung/Einlassventilsteuerung Bank 2.
+    en: P340B mirrors P340A for bank 2, the bank that does not contain cylinder 1, so it only applies to V or boxer engines. It marks an electrical fault in a control circuit that switches the intake valves of that whole bank at once. No manufacturer documents this code publicly. The widespread V8 systems put the deactivating cylinders of bank 2, cylinders 4 and 6 on GM and Chrysler engines, on their own solenoids and report them as P3425 or P3441. Honda's VCM V6 watches bank 2 via a rocker arm oil pressure switch and stores P3497. CARB asks for circuit checks of such outputs. The bank 1 counterpart is P340A, the bank 2 exhaust circuit P340D, the function code P341B. Usually the only effects are the lamp and lost economy.
+    de: P340B ist das Gegenstück zu P340A für Bank 2, also die Bank ohne Zylinder 1 – er betrifft nur V- oder Boxermotoren. Gemeldet wird ein elektrischer Fehler in einem Steuerkreis, der die Einlassventile dieser ganzen Bank gemeinsam schaltet. Kein Hersteller dokumentiert den Code öffentlich. Die verbreiteten V8-Systeme versorgen die abschaltbaren Zylinder der Bank 2, bei GM und Chrysler die Zylinder 4 und 6, mit eigenen Ventilen und melden sie als P3425 oder P3441. Hondas VCM-V6 überwacht Bank 2 über einen Öldruckschalter der Kipphebel und speichert dann P3497. CARB fordert für solche Ausgänge eine Kreisprüfung. Bank 1 ist P340A, der Auslasskreis von Bank 2 P340D, der Funktionscode P341B. Meist bleibt es bei Leuchte und Mehrverbrauch.
   affected_components:
     - cylinder_deactivation_solenoid
-    - actuator_wiring
+    - wiring_harness
+    - ecm
   common_causes:
-    - id: solenoid_failed
-      likelihood: high
-      label:
-        en: Deactivation solenoid failed
-        de: Abschalt-Magnetventil defekt
-    - id: open_wiring
+    - id: wiring_fault
       likelihood: medium
       label:
-        en: Wiring break or unplugged connector
-        de: Kabelbruch oder loser Stecker
+        en: Chafed, open or shorted wire to the bank 2 actuator
+        de: Durchgescheuerte, unterbrochene oder kurzgeschlossene Leitung zum Stellglied von Bank 2
+    - id: connector_corrosion
+      likelihood: medium
+      label:
+        en: Oil or moisture in the bank 2 actuator connector
+        de: Öl oder Feuchtigkeit im Stecker des Stellglieds von Bank 2
+    - id: actuator_coil_fault
+      likelihood: medium
+      label:
+        en: Defective bank 2 intake deactivation actuator coil
+        de: Defekte Spule des Einlass-Abschaltstellglieds von Bank 2
+    - id: ecm_driver_fault
+      likelihood: low
+      label:
+        en: Engine control module output stage fault
+        de: Fehler in der Endstufe des Motorsteuergeräts
+  symptoms:
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
+    - en: Engine runs on all cylinders permanently
+      de: Motor läuft dauerhaft mit allen Zylindern
+    - en: Slightly higher fuel consumption
+      de: Leicht erhöhter Verbrauch
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1.5, 6]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
     limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P340A]
+  related_codes: [P340A, P340D, P341B, P3497, P3425]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10128532-9999.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03A%20Diagnostics.pdf
+  reviewed: '2026-11-06'
 
 - code: P340C
   category: powertrain
   title:
     en: Deactivation/Exhaust Valve Control Circuit Bank 1
-    de: Zylinderabschaltung/Auslassventil-Steuerschaltkreis Bank 1
+    de: Abschaltung/Auslassventil Steuerkreis Bank 1
   description:
-    en: Generic electrical fault on the cylinder deactivation/exhaust valve control circuit on bank 1. On engines with cylinder deactivation the exhaust valves of a switched-off cylinder are held closed together with its intake valves, typically by switchable rocker arms or lifters that oil-pressure solenoids control; this code covers the bank's control circuit for the exhaust-side actuators. While it is faulty the module stops deactivating cylinders on that bank, so the engine runs on all cylinders and uses slightly more fuel.
-    de: Allgemeiner elektrischer Fehler am Schaltkreis der Zylinderabschaltung/Auslassventilsteuerung Bank 1. Bei Motoren mit Zylinderabschaltung werden die Auslassventile eines abgeschalteten Zylinders zusammen mit den Einlassventilen geschlossen gehalten, meist über schaltbare Schlepphebel oder Stößel, die von Öldruck-Magnetventilen gesteuert werden; dieser Code betrifft den Steuerkreis der auslassseitigen Aktuatoren dieser Bank. Solange er gestört ist, schaltet das Steuergerät auf dieser Bank keine Zylinder mehr ab, der Motor läuft auf allen Zylindern und verbraucht etwas mehr Kraftstoff.
+    en: "P340C concerns a separate electrical circuit that disables the exhaust valves of bank 1 as a group. A fault in its wiring, connector or actuator coil sets the code. No manufacturer documents it publicly, and none of the known production systems needs it: GM's DFM engines feed the intake and exhaust lifters of each cylinder from one shared solenoid, and a GM patent application describes one hydraulic valve per pair of cylinders that drops the exhaust valves before the intake valves purely by cam timing. Under CARB rules every output of this type needs an electrical integrity test. The intake-side circuit is P340A, bank 2 exhaust P340D, the bank 1 exhaust function P341C. Drivers mainly see the lamp; deactivation is suspended."
+    de: "P340C betrifft einen eigenen Stromkreis, der die Auslassventile von Bank 1 gemeinsam abschaltet. Ein Fehler in Leitung, Stecker oder Spule des Stellglieds setzt den Code. Kein Hersteller dokumentiert ihn öffentlich, und die bekannten Serienlösungen kommen ohne ihn aus: GMs DFM-Motoren steuern Ein- und Auslassventil eines Zylinders über ein gemeinsames Magnetventil, und eine GM-Patentanmeldung beschreibt ein Hydraulikventil je Zylinderpaar, bei dem allein die Nockenstellung dafür sorgt, dass die Auslassventile vor den Einlassventilen stillgelegt werden. CARB verlangt für jeden solchen Ausgang eine Prüfung auf Unterbrechung und Kurzschluss. Einlassseitig gilt P340A, Bank 2 Auslass P340D, die Funktion auf Bank 1 P341C. Spürbar ist meist nur die Leuchte, die Abschaltung ruht."
   affected_components:
     - cylinder_deactivation_solenoid
-    - actuator_wiring
+    - wiring_harness
+    - ecm
   common_causes:
-    - id: solenoid_failed
-      likelihood: high
-      label:
-        en: Deactivation solenoid failed
-        de: Abschalt-Magnetventil defekt
-    - id: open_wiring
+    - id: wiring_fault
       likelihood: medium
       label:
-        en: Wiring break or unplugged connector
-        de: Kabelbruch oder loser Stecker
+        en: Open or shorted wire in the bank 1 exhaust actuator circuit
+        de: Unterbrochene oder kurzgeschlossene Leitung im Kreis des Auslass-Stellglieds von Bank 1
+    - id: actuator_coil_fault
+      likelihood: medium
+      label:
+        en: Exhaust deactivation actuator coil open or shorted
+        de: Spule des Auslass-Abschaltstellglieds unterbrochen oder kurzgeschlossen
+    - id: connector_heat_damage
+      likelihood: low
+      label:
+        en: Connector or wiring damaged by heat near the exhaust side
+        de: Stecker oder Leitung durch Hitze an der Auslassseite beschädigt
+    - id: ecm_driver_fault
+      likelihood: low
+      label:
+        en: Engine control module output stage fault
+        de: Endstufenfehler im Motorsteuergerät
   symptoms:
-    - en: Check engine light on
+    - en: Check engine lamp on
       de: Motorkontrollleuchte an
-    - en: Cylinder deactivation inactive, slightly higher fuel consumption
-      de: Zylinderabschaltung inaktiv, etwas höherer Verbrauch
+    - en: Reduced-cylinder mode not available
+      de: Teilzylinderbetrieb nicht verfügbar
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1.5, 6]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
     limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P340D]
+  related_codes: [P340A, P340D, P341C, P3400, P3405]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
-    - https://www.mobilityengineeringtech.com/component/content/article/41966-sae-ma-01159
     - https://patents.google.com/patent/US20070240659A1/en
+    - https://static.nhtsa.gov/odi/inv/2025/INRD-PE25001-11969.pdf
+  reviewed: '2026-11-06'
 
 - code: P340D
   category: powertrain
   title:
     en: Deactivation/Exhaust Valve Control Circuit Bank 2
-    de: Zylinderabschaltung/Auslassventil-Steuerschaltkreis Bank 2
+    de: Abschaltung/Auslassventil Steuerkreis Bank 2
   description:
-    en: Generic electrical fault on the cylinder deactivation/exhaust valve control circuit on bank 2. On engines with cylinder deactivation the exhaust valves of a switched-off cylinder are held closed together with its intake valves, typically by switchable rocker arms or lifters that oil-pressure solenoids control; this code covers the bank's control circuit for the exhaust-side actuators. While it is faulty the module stops deactivating cylinders on that bank, so the engine runs on all cylinders and uses slightly more fuel.
-    de: Allgemeiner elektrischer Fehler am Schaltkreis der Zylinderabschaltung/Auslassventilsteuerung Bank 2. Bei Motoren mit Zylinderabschaltung werden die Auslassventile eines abgeschalteten Zylinders zusammen mit den Einlassventilen geschlossen gehalten, meist über schaltbare Schlepphebel oder Stößel, die von Öldruck-Magnetventilen gesteuert werden; dieser Code betrifft den Steuerkreis der auslassseitigen Aktuatoren dieser Bank. Solange er gestört ist, schaltet das Steuergerät auf dieser Bank keine Zylinder mehr ab, der Motor läuft auf allen Zylindern und verbraucht etwas mehr Kraftstoff.
+    en: "P340D is the bank 2 version of the exhaust-side group circuit: the engine computer sees an electrical fault on the line that is supposed to disable the exhaust valves of the bank without cylinder 1. No manufacturer documents this code publicly. Separate exhaust control matters because a cylinder can only act as a gas spring if its exhaust valves stay shut too; a Ford patent shows how an exhaust valve that keeps opening can be detected from exhaust pressure. On known engines, though, intake and exhaust are switched together per cylinder, as with GM's DFM. CARB rules call for monitoring of outputs like this one. Related: P340C for bank 1, P340B for the bank 2 intake side, P341D for the function check. Deactivation stays off."
+    de: "P340D ist die Bank-2-Fassung des auslassseitigen Sammelkreises: Das Steuergerät erkennt einen elektrischen Fehler an der Leitung, die die Auslassventile der Bank ohne Zylinder 1 stilllegen soll. Kein Hersteller dokumentiert den Code öffentlich. Eine eigene Auslasssteuerung ist von Bedeutung, weil ein Zylinder nur dann als Gasfeder arbeitet, wenn auch seine Auslassventile geschlossen bleiben; ein Ford-Patent zeigt, wie sich ein weiter öffnendes Auslassventil am Abgasdruck erkennen lässt. Bei bekannten Motoren werden Ein- und Auslass jedoch je Zylinder gemeinsam geschaltet, so bei GMs DFM. CARB verlangt die Überwachung solcher Ausgangskreise. Verwandt: P340C für Bank 1, P340B für den Einlass von Bank 2, P341D für die Funktion. Die Abschaltung bleibt aus."
   affected_components:
     - cylinder_deactivation_solenoid
-    - actuator_wiring
+    - wiring_harness
+    - ecm
   common_causes:
-    - id: solenoid_failed
-      likelihood: high
-      label:
-        en: Deactivation solenoid failed
-        de: Abschalt-Magnetventil defekt
-    - id: open_wiring
+    - id: wiring_fault
       likelihood: medium
       label:
-        en: Wiring break or unplugged connector
-        de: Kabelbruch oder loser Stecker
+        en: Damaged wiring to the bank 2 exhaust deactivation actuator
+        de: Beschädigte Leitung zum Auslass-Abschaltstellglied von Bank 2
+    - id: actuator_coil_fault
+      likelihood: medium
+      label:
+        en: Faulty coil in the bank 2 exhaust actuator
+        de: Defekte Spule im Auslass-Stellglied von Bank 2
+    - id: ecm_driver_fault
+      likelihood: low
+      label:
+        en: Output stage fault in the engine control module
+        de: Fehler in der Endstufe des Motorsteuergeräts
   symptoms:
-    - en: Check engine light on
+    - en: Check engine lamp on
       de: Motorkontrollleuchte an
-    - en: Cylinder deactivation inactive, slightly higher fuel consumption
-      de: Zylinderabschaltung inaktiv, etwas höherer Verbrauch
+    - en: Engine no longer drops cylinders at light load
+      de: Motor schaltet bei geringer Last keine Zylinder mehr ab
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1.5, 6]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
     limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P340C]
+  related_codes: [P340C, P340B, P341D, P3497]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
-    - https://www.mobilityengineeringtech.com/component/content/article/41966-sae-ma-01159
-    - https://patents.google.com/patent/US20070240659A1/en
+    - https://patents.google.com/patent/US8006670B2/en
+    - https://static.nhtsa.gov/odi/inv/2025/INRD-PE25001-11969.pdf
+  reviewed: '2026-11-06'
 
 - code: P3410
   category: powertrain
@@ -981,250 +1077,327 @@
   category: powertrain
   title:
     en: Cylinder 2 Exhaust Valve Control Circuit Low
-    de: Zylinder 2 Auslassventil-Steuerkreis niedrig
+    de: Zylinder 2 Auslassventil Steuerkreis niedrig
   description:
-    en: The engine control module has detected a low-side voltage fault (short to ground) on the cylinder 2 exhaust valve deactivation solenoid circuit. The system disables further cylinder deactivation requests until the circuit is repaired.
-    de: Das Motorsteuergerät hat einen Spannungsfehler nach Masse im Steuerkreis des Abschalt-Magnetventils für das Auslassventil von Zylinder 2 erkannt. Das System deaktiviert weitere Abschaltanforderungen, bis der Stromkreis instand gesetzt ist.
+    en: "P3415 describes a control circuit for a dedicated cylinder 2 exhaust valve actuator that is pulled toward ground. No manufacturer documents this code publicly. Cylinder 2 itself is a common deactivation candidate: GM switches it off on its 3.6 l and 3.0 l V6 engines (bulletin 21-NA-036) and on DFM V8s, but there one oil control valve serves the whole cylinder, so wiring faults land on the intake-side codes P3409, P3411 and P3412. On the L84, GM treats a resistance to ground below 0.5 ohm, read while the output stage is inactive, as a short. CARB wants these outputs tested for shorts. Siblings: P3413 open, P3414 function, P3416 short to power; cylinder 1 uses P3407. The engine keeps running on all cylinders."
+    de: "P3415 beschreibt einen Steuerkreis für ein eigenes Auslassventil-Stellglied an Zylinder 2, der nach Masse gezogen wird. Kein Hersteller dokumentiert diesen Code öffentlich. Zylinder 2 selbst wird oft abgeschaltet: GM legt ihn bei den 3,6- und 3,0-l-V6 (Bulletin 21-NA-036) und bei den DFM-V8 still, dort bedient aber ein Ölsteuerventil den ganzen Zylinder, Leitungsfehler erscheinen deshalb als Einlass-Codes P3409, P3411 und P3412. Beim L84 wertet GM weniger als 0,5 Ohm nach Masse bei abgeschalteter Endstufe als Kurzschluss. CARB verlangt, solche Ausgangskreise auf Schlüsse zu prüfen. Geschwister: P3413 Unterbrechung, P3414 Funktion, P3416 Plusschluss; Zylinder 1 nutzt P3407. Der Motor läuft auf allen Zylindern weiter."
   affected_components:
     - cylinder_deactivation_solenoid
-    - engine_wiring_harness
+    - wiring_harness
     - ecm
   common_causes:
-    - id: wiring_short_ground
-      likelihood: high
-      label:
-        en: Wiring shorted to ground
-        de: Verkabelung mit Masseschluss
-    - id: solenoid_internal_short
+    - id: wiring_short_to_ground
       likelihood: medium
       label:
-        en: Solenoid internal short
-        de: Interner Kurzschluss im Magnetventil
-    - id: connector_corrosion
+        en: Control wire of the cylinder 2 exhaust actuator touching ground
+        de: Steuerleitung des Auslass-Stellglieds von Zylinder 2 hat Masseschluss
+    - id: actuator_internal_short
+      likelihood: medium
+      label:
+        en: Internal short in the cylinder 2 exhaust actuator
+        de: Innerer Kurzschluss im Auslass-Stellglied von Zylinder 2
+    - id: ecm_driver_fault
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Damaged output stage in the engine control module
+        de: Beschädigte Endstufe im Motorsteuergerät
+  symptoms:
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
+    - en: Cylinder deactivation inhibited
+      de: Zylinderabschaltung unterbunden
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [150, 1200]
-    estimated_hours: [1.0, 6.0]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3423, P3431, P3438, P3446, P3453, P3454, P3455, P3462, P3487]
+  related_codes: [P3413, P3414, P3416, P3411, P3407]
   sources:
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03B%20Diagnostics.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2022/MC-10209400-0001.pdf
+  reviewed: '2026-11-06'
 
 - code: P3416
   category: powertrain
   title:
     en: Cylinder 2 Exhaust Valve Control Circuit High
-    de: Zylinder 2 Auslassventil-Steuerkreis hoch
+    de: Zylinder 2 Auslassventil Steuerkreis hoch
   description:
-    en: The engine control module has detected a high-side voltage fault (short to power) on the cylinder 2 exhaust valve deactivation solenoid circuit. Cylinder deactivation is disabled while the fault is present.
-    de: Das Motorsteuergerät hat einen Spannungsfehler nach Plus im Steuerkreis des Abschalt-Magnetventils für das Auslassventil von Zylinder 2 erkannt. Bei aktivem Fehler ist die Zylinderabschaltung deaktiviert.
+    en: "P3416 means the control line of a separate cylinder 2 exhaust valve actuator sits too high, typically because it touches a supply voltage or the coil has shorted turns. No manufacturer documents this code publicly. The closest published test is GM's for the intake-side P3412 on the L84: once the output stage is active, any resistance to supply below 0.5 ohm is a failure, and 20 hits out of 25 lead to a Type B entry. NHTSA's review of GM's DFM V8 describes one valve lifter oil solenoid per cylinder that serves intake and exhaust alike, which is why such engines need no exhaust-only code. CARB requires shorts in outputs to be detected. Related: P3413 open, P3415 short to ground, P3408 for cylinder 1."
+    de: "P3416 bedeutet, dass die Steuerleitung eines eigenen Auslassventil-Stellglieds an Zylinder 2 zu hoch liegt, meist weil sie eine Versorgungsspannung berührt oder die Spule Windungsschluss hat. Kein Hersteller dokumentiert diesen Code öffentlich. Die nächstliegende veröffentlichte Prüfung ist GMs Test für das einlassseitige P3412 am L84: Bei eingeschalteter Endstufe gelten weniger als 0,5 Ohm zur Versorgung als Fehler, 20 von 25 Messungen setzen einen Type-B-Code. Die NHTSA-Untersuchung zu GMs DFM-V8 beschreibt je Zylinder ein Stößel-Öl-Magnetventil, das Ein- und Auslass gleichermaßen bedient – deshalb brauchen solche Motoren keinen reinen Auslass-Code. CARB verlangt, Kurzschlüsse an Ausgängen zu erkennen. Verwandt: P3413 Unterbrechung, P3415 Masseschluss, P3408 für Zylinder 1."
   affected_components:
     - cylinder_deactivation_solenoid
-    - engine_wiring_harness
+    - wiring_harness
     - ecm
   common_causes:
-    - id: wiring_short_power
-      likelihood: high
-      label:
-        en: Wiring shorted to power
-        de: Verkabelung mit Schluss nach Plus
-    - id: solenoid_internal_short
+    - id: wiring_short_to_voltage
       likelihood: medium
       label:
-        en: Solenoid internal short
-        de: Interner Kurzschluss im Magnetventil
-    - id: connector_corrosion
+        en: Actuator control wire shorted to a supply line
+        de: Steuerleitung des Stellglieds mit einer Versorgungsleitung verbunden
+    - id: actuator_coil_shorted
+      likelihood: medium
+      label:
+        en: Shorted turns in the cylinder 2 exhaust actuator coil
+        de: Windungsschluss in der Spule des Auslass-Stellglieds von Zylinder 2
+    - id: ecm_driver_fault
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Engine control module output stage fault
+        de: Fehler in der Endstufe des Motorsteuergeräts
+  symptoms:
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
+    - en: Engine stays in full-cylinder mode
+      de: Motor bleibt im Vollzylinderbetrieb
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [150, 1200]
-    estimated_hours: [1.0, 6.0]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3424, P3432, P3439, P3447, P3463, P3464, P3488]
+  related_codes: [P3413, P3414, P3415, P3412, P3408]
   sources:
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03B%20Diagnostics.pdf
+    - https://static.nhtsa.gov/odi/inv/2025/INRD-PE25001-11969.pdf
+  reviewed: '2026-11-06'
 
 - code: P3417
   category: powertrain
   title:
     en: Cylinder 3 Deactivation/Intake Valve Control Circuit/Open
-    de: Zylinder 3 Abschalt-/Einlassventil-Steuerkreis/offen
+    de: Zylinder 3 Abschaltung/Einlassventil Steuerkreis/Unterbrechung
   description:
-    en: The engine control module has detected an open or out-of-range circuit at the cylinder 3 deactivation or intake valve control solenoid. Cylinder 3 cannot be deactivated until the circuit is restored.
-    de: Das Motorsteuergerät hat eine Unterbrechung oder einen Bereichsfehler im Steuerkreis des Abschalt- oder Einlassventil-Magnetventils von Zylinder 3 erkannt. Zylinder 3 kann nicht abgeschaltet werden, bis der Stromkreis wiederhergestellt ist.
+    en: "P3417 flags a broken path in the drive circuit of the cylinder 3 deactivation solenoid. GM documents it twice: its 2007 Displacement on Demand table covers solenoid circuits on cylinder 1, 3 and 5 and needs 30 bad readings in 100 with the engine turning faster than 800 rpm; for the 2019 DFM engine L84, the ECM expects over 200 kohm whenever its low-side output rests, 20 of 25 checks, Type B. That controller also watches a high-side driver for the same solenoid under separate codes, and GM warns that P3419 may appear alongside. The LTA and LT2 V8s also put cylinder 3 to rest, together with 2, 5 and 8 (bulletin 20-NA-038). As long as the circuit is open, every cylinder keeps firing."
+    de: "P3417 meldet einen unterbrochenen Ansteuerkreis des Abschalt-Magnetventils von Zylinder 3. GM belegt den Code zweimal: Die Tabelle 2007 für Displacement on Demand deckt die Ventilkreise an Zylinder 1, 3 und 5 ab und wertet 30 fehlerhafte Messungen aus 100 oberhalb von 800 U/min. Für den DFM-Motor L84 (2019) erwartet das Steuergerät über 200 kOhm, solange sein Low-Side-Treiber ruht, 20 von 25 Prüfungen, Type B. Dasselbe Steuergerät überwacht zusätzlich einen High-Side-Treiber dieses Ventils unter eigenen Codes, und GM weist darauf hin, dass P3419 mit auftreten kann. Auch die V8 LTA und LT2 legen Zylinder 3 still (Bulletin 20-NA-038). Bei offenem Kreis läuft der Motor dauerhaft mit allen Zylindern."
   affected_components:
     - cylinder_deactivation_solenoid
-    - engine_wiring_harness
+    - wiring_harness
     - ecm
   common_causes:
-    - id: solenoid_coil_open
+    - id: wiring_open_or_chafed
       likelihood: high
       label:
-        en: Solenoid coil open
-        de: Magnetventilspule unterbrochen
-    - id: wiring_open
+        en: Broken or chafed wire between control module and cylinder 3 solenoid
+        de: Gebrochene oder durchgescheuerte Leitung zwischen Steuergerät und Ventil von Zylinder 3
+    - id: solenoid_coil_open
       likelihood: medium
       label:
-        en: Wiring or connector open
-        de: Verkabelung oder Stecker unterbrochen
-    - id: connector_back_out
+        en: Open winding in the cylinder 3 deactivation solenoid
+        de: Unterbrochene Wicklung im Abschalt-Magnetventil von Zylinder 3
+    - id: connector_corrosion
+      likelihood: medium
+      label:
+        en: Loose, oily or corroded solenoid connector
+        de: Lockerer, verölter oder korrodierter Ventilstecker
+    - id: ecm_driver_fault
       likelihood: low
       label:
-        en: 'Pin pushed back out of connector body'
-        de: 'Pin aus dem Steckergehäuse zurückgedrückt'
+        en: Failed output stage in the engine control module
+        de: Ausgefallene Endstufe im Motorsteuergerät
+  symptoms:
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
+    - en: Reduced-cylinder mode no longer engages
+      de: Teilzylinderbetrieb schaltet nicht mehr zu
+    - en: Slightly higher fuel consumption
+      de: Etwas höherer Verbrauch
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [150, 1200]
-    estimated_hours: [1.0, 6.0]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3440, P3448, P3456]
+  related_codes: [P3418, P3419, P3420, P3421, P349A, P3401, P3433, P3400]
   sources:
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03B%20Diagnostics.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2007/07_GRP12_All%20Engines.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10172811-9999.pdf
+  reviewed: '2026-11-06'
 
 - code: P3418
   category: powertrain
   title:
     en: Cylinder 3 Deactivation/Intake Valve Control Performance
-    de: Zylinder 3 Abschaltung/Einlassventilsteuerung Funktion
+    de: Zylinder 3 Abschaltung/Einlassventil Steuerung Funktion
   description:
-    en: The engine control module has detected a performance fault on the cylinder 3 deactivation or intake valve control system — the response of the actuator does not match the commanded state.
-    de: Das Motorsteuergerät hat einen Funktionsfehler in der Abschalt- oder Einlassventilsteuerung von Zylinder 3 erkannt — die Reaktion des Stellglieds entspricht nicht dem angeforderten Zustand.
+    en: "P3418 is meant for a cylinder 3 deactivation that is wired correctly yet does not respond as requested: the cylinder keeps breathing when it should rest, or fails to come back. No manufacturer documents this code publicly. GM tests the hardware of cylinder 3 under its own code P349A; bulletin 20-NA-204 for the 2021 L84 and L87 notes that a voltage dip during cranking can briefly disable the outputs and set that code without a real fault. Honda shows the same failure pattern in another form: in bulletin 13-055 excess cold-start oil pressure pushed cylinders 1 to 4 into cut mode uncommanded, logged as P3400/P3497 with misfires. Circuit faults belong to P3417, P3419 and P3420. Expect rough running and a misfire code."
+    de: "P3418 ist für eine Abschaltung von Zylinder 3 gedacht, die elektrisch in Ordnung ist, aber nicht wie verlangt reagiert: Der Zylinder atmet weiter, wenn er ruhen soll, oder kommt nicht zurück. Kein Hersteller dokumentiert diesen Code öffentlich. Die Mechanik von Zylinder 3 testet GM stattdessen unter P349A; Bulletin 20-NA-204 zu L84 und L87 (2021) beschreibt, dass ein Spannungseinbruch beim Anlassen die Ausgänge kurz abschalten und diesen Code ohne echten Defekt setzen kann. Honda zeigt dasselbe Fehlerbild in anderer Form: Laut Bulletin 13-055 drückte zu hoher Öldruck beim Kaltstart die Zylinder 1 bis 4 ungewollt in die Abschaltung, gemeldet als P3400/P3497 mit Fehlzündungen. Kreisfehler gehören zu P3417, P3419 und P3420. Typisch sind unruhiger Lauf und ein Fehlzündungscode."
   affected_components:
     - cylinder_deactivation_solenoid
     - lifter
-    - oil_control_valve
+    - engine_oil
   common_causes:
-    - id: lifter_stuck_collapsed
+    - id: low_or_degraded_oil
       likelihood: high
       label:
-        en: Lifter stuck collapsed
-        de: Schaltstößel hängt eingeklappt
-    - id: oil_pressure_low
+        en: Low oil level, wrong viscosity or aged oil
+        de: Zu wenig Öl, falsche Viskosität oder gealtertes Öl
+    - id: switching_element_stuck
       likelihood: medium
       label:
-        en: Engine oil pressure too low
-        de: Motoröldruck zu niedrig
-    - id: oil_passage_blocked
+        en: Lifter or rocker of cylinder 3 not locking or unlocking
+        de: Stößel oder Kipphebel von Zylinder 3 verriegelt oder entriegelt nicht
+    - id: solenoid_sticking
       likelihood: medium
       label:
-        en: Oil passage blocked or contaminated
-        de: Ölkanal verstopft oder verschmutzt
+        en: Cylinder 3 control valve sticking or its screen blocked
+        de: Steuerventil von Zylinder 3 klemmt oder sein Sieb ist zugesetzt
+    - id: oil_pressure_out_of_range
+      likelihood: low
+      label:
+        en: Oil pressure too high or too low for the switching window
+        de: Öldruck zu hoch oder zu niedrig für das Schaltfenster
+  symptoms:
+    - en: Misfire code for cylinder 3 (P0303)
+      de: Fehlzündungscode für Zylinder 3 (P0303)
+    - en: Shudder when the engine changes between modes
+      de: Ruckeln beim Wechsel der Betriebsart
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur: [400, 2000]
-    estimated_hours: [3.0, 8.0]
+    estimated_cost_eur: [100, 3500]
+    estimated_hours: [0.5, 12]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3426]
+  related_codes: [P3417, P3419, P3420, P3422, P349A, P0303, P3400, P3426]
   sources:
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10183203-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10128532-9999.pdf
+  reviewed: '2026-11-06'
 
 - code: P3419
   category: powertrain
   title:
     en: Cylinder 3 Deactivation/Intake Valve Control Circuit Low
-    de: Zylinder 3 Abschalt-/Einlassventil-Steuerkreis niedrig
+    de: Zylinder 3 Abschaltung/Einlassventil Steuerkreis niedrig
   description:
-    en: The engine control module has detected a low-side voltage fault (short to ground) on the cylinder 3 deactivation or intake valve solenoid circuit. Cylinder deactivation is disabled while the fault is present.
-    de: Das Motorsteuergerät hat einen Spannungsfehler nach Masse im Steuerkreis des Abschalt- oder Einlassventil-Magnetventils von Zylinder 3 erkannt. Bei aktivem Fehler ist die Zylinderabschaltung deaktiviert.
+    en: "P3419 says the line feeding the cylinder 3 deactivation solenoid is dragged toward ground. The L84 V8 in GM's 2019 OBD documents shows the test: while the low-side output rests, a resistance to chassis ground under half an ohm is wrong, and once 20 out of 25 readings, one every 250 ms, agree, with the powertrain relay above 11 V and the engine at 425 rpm or faster, a Type B fault is logged. The lamp therefore follows on the second trip, and some controllers add P3417 at the same moment. The older 2007 Displacement on Demand table still merged short and open for cylinder 3 into one solenoid test. P3420 is the opposite fault, P3427 the cylinder 4 equivalent. Driving stays normal apart from the lost fuel saving."
+    de: "P3419 besagt, dass die Leitung zum Abschalt-Magnetventil von Zylinder 3 nach Masse gezogen wird. Wie GM das beim V8 L84 prüft, steht in den OBD-Unterlagen 2019: Ruht der Low-Side-Ausgang, ist ein Widerstand unter einem halben Ohm zur Masse unzulässig, sobald 20 von 25 Proben im 250-ms-Takt übereinstimmen – vorausgesetzt, das Antriebsrelais liefert mindestens 11 V und der Motor dreht mit 425 U/min oder mehr. Es entsteht ein Type-B-Code, die Leuchte geht also nach zwei Fahrten an; bei manchen Steuergeräten wird P3417 mit abgelegt. Die ältere Tabelle 2007 für Displacement on Demand fasste Schluss und Unterbrechung für Zylinder 3 noch in einem Ventiltest zusammen. P3420 ist der Gegenfehler, P3427 das Pendant für Zylinder 4. Fahren lässt sich normal, nur die Spritersparnis entfällt."
   affected_components:
     - cylinder_deactivation_solenoid
-    - engine_wiring_harness
+    - wiring_harness
     - ecm
   common_causes:
-    - id: wiring_short_ground
+    - id: wiring_short_to_ground
       likelihood: high
       label:
-        en: Wiring shorted to ground
-        de: Verkabelung mit Masseschluss
+        en: Insulation of the cylinder 3 control wire worn through to ground
+        de: Isolierung der Steuerleitung von Zylinder 3 bis auf Masse durchgescheuert
     - id: solenoid_internal_short
       likelihood: medium
       label:
-        en: Solenoid internal short
-        de: Interner Kurzschluss im Magnetventil
-    - id: connector_corrosion
+        en: Internal short of the cylinder 3 solenoid to its housing
+        de: Innerer Schluss des Ventils von Zylinder 3 gegen das Gehäuse
+    - id: connector_water
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Oil or water bridging pins in the connector
+        de: Öl oder Wasser überbrückt Kontakte im Stecker
+    - id: ecm_driver_fault
+      likelihood: low
+      label:
+        en: Defective driver in the engine control module
+        de: Defekter Treiber im Motorsteuergerät
+  symptoms:
+    - en: Check engine lamp after two drives
+      de: Motorkontrollleuchte nach zwei Fahrten
+    - en: Engine no longer drops cylinders under light load
+      de: Motor schaltet bei geringer Last keine Zylinder mehr ab
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [150, 1200]
-    estimated_hours: [1.0, 6.0]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3427, P3442, P3450, P3458]
+  related_codes: [P3417, P3418, P3420, P3423, P3427, P3411]
   sources:
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03B%20Diagnostics.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2007/07_GRP12_All%20Engines.pdf
+  reviewed: '2026-11-06'
 
 - code: P341A
   category: powertrain
   title:
     en: Deactivation/Intake Valve Control Circuit Performance Bank 1
-    de: Zylinderabschaltung/Einlassventil-Steuerschaltkreis Leistung Bank 1
+    de: Abschaltung/Einlassventil Steuerkreis Funktion Bank 1
   description:
-    en: The intake valve deactivation system on bank 1 is electrically active but the mechanical response does not match commanded state. Often hydraulic pin sticking from sludge or low oil pressure.
-    de: Die Einlassventil-Abschaltung Bank 1 ist elektrisch aktiv, die mechanische Reaktion folgt jedoch nicht dem Sollwert. Häufig hängender Hydraulikpin durch Schlamm oder zu geringer Öldruck.
+    en: "P341A is the function check behind P340A: the bank 1 intake deactivation circuit is electrically sound, yet the valves do not end up where they were commanded. No manufacturer documents this code publicly. Comparable checks exist under other numbers. GM's LT4 compares a modeled and a measured manifold pressure with and without deactivation and reports the bank result as P3400; per-cylinder failures on DFM engines go to P3498 onward. A Delphi patent notes why averaged manifold pressure alone separates working and failed intake deactivation poorly and cannot name the cylinder. Typical causes are hydraulic: low or dirty oil, a sticking control valve, lifters that do not latch. Misfires and rough running are possible."
+    de: "P341A ist die Funktionsprüfung hinter P340A: Der Einlass-Abschaltkreis von Bank 1 ist elektrisch in Ordnung, die Ventile landen aber nicht dort, wo sie hinsollen. Kein Hersteller dokumentiert den Code öffentlich. Vergleichbare Prüfungen gibt es unter anderen Nummern: GM vergleicht beim LT4 gemessenen und berechneten Saugrohrdruck mit und ohne Abschaltung und meldet das Ergebnis für die Bank als P3400; zylinderweise Fehler der DFM-Motoren laufen ab P3498. Ein Delphi-Patent erklärt, warum ein gemittelter Saugrohrdruck allein funktionierende und gestörte Einlassabschaltung nur schlecht trennt und den Zylinder nicht benennen kann. Die Ursachen sind meist hydraulisch: wenig oder verschmutztes Öl, ein klemmendes Steuerventil, nicht einrastende Stößel. Fehlzündungen und unrunder Lauf sind möglich."
   affected_components:
     - cylinder_deactivation_solenoid
-    - hydraulic_pin
+    - lifter
     - engine_oil
   common_causes:
-    - id: oil_sludge
+    - id: low_or_degraded_oil
       likelihood: high
       label:
-        en: Oil sludge blocks deactivation pin
-        de: Ölschlamm blockiert Abschalt-Pin
-    - id: low_oil_pressure
+        en: Low oil level or aged, contaminated oil
+        de: Zu wenig Öl oder gealtertes, verschmutztes Öl
+    - id: control_valve_sticking
       likelihood: medium
       label:
-        en: Low oil pressure
-        de: Zu geringer Öldruck
+        en: Bank 1 deactivation control valve sticking or screen blocked
+        de: Abschalt-Steuerventil von Bank 1 klemmt oder Sieb zugesetzt
+    - id: switching_element_stuck
+      likelihood: medium
+      label:
+        en: Switchable lifters or rockers on bank 1 not latching or releasing
+        de: Schaltbare Stößel oder Kipphebel auf Bank 1 rasten nicht ein oder aus
+    - id: oil_pressure_low
+      likelihood: low
+      label:
+        en: Insufficient oil pressure from a worn pump or leaking seal
+        de: Zu geringer Öldruck durch verschlissene Pumpe oder undichte Dichtung
+  symptoms:
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
+    - en: Jerk or vibration when cylinders switch off or on
+      de: Ruck oder Vibration beim Ab- und Zuschalten der Zylinder
+    - en: Misfire codes on bank 1
+      de: Fehlzündungscodes auf Bank 1
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur: [300, 2500]
-    estimated_hours: [2, 8]
+    estimated_cost_eur: [100, 3500]
+    estimated_hours: [0.5, 12]
   flags:
     mil: true
     emissions_relevant: true
@@ -1232,39 +1405,53 @@
     limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P341B]
+  related_codes: [P340A, P341B, P341C, P3400, P3498]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03A%20Diagnostics.pdf
+    - https://patents.google.com/patent/US7314034B1/en
+  reviewed: '2026-11-06'
 
 - code: P341B
   category: powertrain
   title:
     en: Deactivation/Intake Valve Control Circuit Performance Bank 2
-    de: Zylinderabschaltung/Einlassventil-Steuerschaltkreis Leistung Bank 2
+    de: Abschaltung/Einlassventil Steuerkreis Funktion Bank 2
   description:
-    en: The intake valve deactivation system on bank 2 is electrically active but the mechanical response does not match commanded state.
-    de: Die Einlassventil-Abschaltung Bank 2 ist elektrisch aktiv, die mechanische Reaktion folgt jedoch nicht dem Sollwert.
+    en: "With P341B the controller judges that intake deactivation on bank 2 is not doing its job even though no circuit fault is present: cylinders keep breathing when they should be sealed, or stay sealed after reactivation. No manufacturer documents this code publicly. One way to catch it is described in a Delphi patent: pressure pulses in the intake are timed against crank angle, and a missing or extra pulse shows which cylinder misbehaves. In practice, makers use their own codes instead, such as GM's P3498 series per cylinder or Honda's bank code P3497. CARB requires a functional check of such outputs. Electrical faults on the same bank are P340B; bank 1 is P341A. Oil level and quality are the first things to check."
+    de: "Bei P341B kommt das Steuergerät zu dem Schluss, dass die Einlassabschaltung auf Bank 2 ihre Aufgabe nicht erfüllt, obwohl kein Kreisfehler vorliegt: Zylinder atmen weiter, obwohl sie dicht sein sollten, oder bleiben nach dem Zuschalten verschlossen. Kein Hersteller dokumentiert den Code öffentlich. Ein Erkennungsweg steht in einem Delphi-Patent: Druckpulse im Ansaugtrakt werden gegen den Kurbelwinkel getaktet, und ein fehlender oder zusätzlicher Puls verrät den betroffenen Zylinder. In der Praxis nehmen die Hersteller eigene Codes, etwa GMs Reihe ab P3498 je Zylinder oder Hondas Bankcode P3497. CARB verlangt eine Funktionsprüfung solcher Stellglieder. Elektrische Fehler derselben Bank laufen unter P340B, Bank 1 unter P341A. Zuerst Ölstand und Ölzustand prüfen."
   affected_components:
     - cylinder_deactivation_solenoid
-    - hydraulic_pin
+    - lifter
     - engine_oil
   common_causes:
-    - id: oil_sludge
+    - id: low_or_degraded_oil
       likelihood: high
       label:
-        en: Oil sludge blocks deactivation pin
-        de: Ölschlamm blockiert Abschalt-Pin
-    - id: low_oil_pressure
+        en: Oil level too low or oil past its service life
+        de: Ölstand zu niedrig oder Öl über die Wechselfrist hinaus
+    - id: switching_element_stuck
       likelihood: medium
       label:
-        en: Low oil pressure
-        de: Zu geringer Öldruck
+        en: Lifter or rocker on bank 2 stuck in one switching state
+        de: Stößel oder Kipphebel auf Bank 2 hängt in einer Schaltstellung
+    - id: control_valve_leak
+      likelihood: medium
+      label:
+        en: Control valve on bank 2 sticking or leaking past its seal
+        de: Steuerventil auf Bank 2 klemmt oder ist an der Dichtung undicht
+  symptoms:
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
+    - en: Rough running, mostly at light load
+      de: Unrunder Lauf, vor allem bei geringer Last
+    - en: Misfire codes on bank 2
+      de: Fehlzündungscodes auf Bank 2
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur: [300, 2500]
-    estimated_hours: [2, 8]
+    estimated_cost_eur: [100, 3500]
+    estimated_hours: [0.5, 12]
   flags:
     mil: true
     emissions_relevant: true
@@ -1272,34 +1459,53 @@
     limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P341A]
+  related_codes: [P340B, P341A, P341D, P3497, P3499]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://patents.google.com/patent/US7314034B1/en
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10128532-9999.pdf
+  reviewed: '2026-11-06'
 
 - code: P341C
   category: powertrain
   title:
     en: Deactivation/Exhaust Valve Control Circuit Performance Bank 1
-    de: Zylinderabschaltung/Auslassventil-Steuerschaltkreis Leistung Bank 1
+    de: Abschaltung/Auslassventil Steuerkreis Funktion Bank 1
   description:
-    en: The exhaust valve deactivation system on bank 1 is electrically active but the mechanical response does not match commanded state.
-    de: Die Auslassventil-Abschaltung Bank 1 ist elektrisch aktiv, die mechanische Reaktion folgt jedoch nicht dem Sollwert.
+    en: "P341C covers exhaust valves on bank 1 that ignore a deactivation command while their wiring and actuator coil check out. No manufacturer documents this code publicly. A Ford patent explains why it matters and how to spot it: a sealed cylinder whose exhaust valve keeps lifting leaves a trace in exhaust pressure, and the controller can respond by reactivating the cylinder, blocking further deactivation and storing a fault. Production engines control both valve sets per cylinder jointly, so GM, for instance, files such faults under its own per-cylinder codes from P3498. Electrically this circuit reports P340C; intake function on bank 1 is P341A, bank 2 exhaust P341D."
+    de: "P341C erfasst Auslassventile auf Bank 1, die einem Abschaltbefehl nicht folgen, obwohl ihr Steuerkreis elektrisch einwandfrei ist. Kein Hersteller dokumentiert den Code öffentlich. Warum das zählt und wie man es bemerkt, zeigt ein Ford-Patent: Öffnet an einem eigentlich verschlossenen Zylinder das Auslassventil weiter, zeichnet sich das im Abgasdruck ab; das Steuergerät kann den Zylinder dann wieder zuschalten, weitere Abschaltungen sperren und einen Fehler speichern. Bekannte Motoren schalten beide Ventile eines Zylinders gemeinsam, GM etwa legt solche Fehler unter eigenen Zylindercodes ab P3498 ab. Elektrisch gehört zu diesem Kreis P340C, die Funktion der Einlassseite ist P341A, Bank 2 P341D."
   affected_components:
     - cylinder_deactivation_solenoid
-    - hydraulic_pin
+    - lifter
     - engine_oil
   common_causes:
-    - id: oil_sludge
-      likelihood: high
+    - id: switching_element_stuck
+      likelihood: medium
       label:
-        en: Oil sludge blocks deactivation pin
-        de: Ölschlamm blockiert Abschalt-Pin
+        en: Exhaust-side lifter or rocker on bank 1 not switching
+        de: Auslassseitiger Stößel oder Kipphebel auf Bank 1 schaltet nicht
+    - id: low_or_degraded_oil
+      likelihood: medium
+      label:
+        en: Low oil pressure or foaming oil
+        de: Zu wenig Öldruck oder aufgeschäumtes Öl
+    - id: actuator_sticking
+      likelihood: low
+      label:
+        en: Bank 1 exhaust deactivation actuator sticking
+        de: Auslass-Abschaltstellglied von Bank 1 klemmt
+  symptoms:
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
+    - en: Popping or uneven exhaust note in reduced-cylinder mode
+      de: Unruhiger Abgasklang im Teilzylinderbetrieb
+    - en: Deactivation suspended
+      de: Abschaltung ausgesetzt
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur: [300, 2500]
-    estimated_hours: [2, 8]
+    estimated_cost_eur: [100, 3500]
+    estimated_hours: [0.5, 12]
   flags:
     mil: true
     emissions_relevant: true
@@ -1307,34 +1513,53 @@
     limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P341D]
+  related_codes: [P340C, P341A, P341D, P3400, P3498]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://patents.google.com/patent/US8006670B2/en
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03B%20Diagnostics.pdf
+  reviewed: '2026-11-06'
 
 - code: P341D
   category: powertrain
   title:
     en: Deactivation/Exhaust Valve Control Circuit Performance Bank 2
-    de: Zylinderabschaltung/Auslassventil-Steuerschaltkreis Leistung Bank 2
+    de: Abschaltung/Auslassventil Steuerkreis Funktion Bank 2
   description:
-    en: The exhaust valve deactivation system on bank 2 is electrically active but the mechanical response does not match commanded state.
-    de: Die Auslassventil-Abschaltung Bank 2 ist elektrisch aktiv, die mechanische Reaktion folgt jedoch nicht dem Sollwert.
+    en: "P341D appears once the bank 2 exhaust valves respond wrongly to a deactivation or reactivation request while the electrical side is intact. No manufacturer documents this code publicly. Timing is the critical part: a GM patent application has the exhaust valves stop before the intake valves when a cylinder is switched off and resume before them when it comes back, so that burnt gas is expelled and no fresh charge is trapped. GM's DFM V8, as NHTSA describes it, reverses this and stops the intake side first. If the exhaust side lags, the planned order breaks. CARB expects outputs like this to be checked for proper function. The circuit code for this bank is P340D, the bank 1 equivalent P341C, the intake function on bank 2 P341B. Expect a lamp, harsh mode changes and higher fuel use."
+    de: "P341D wird gesetzt, wenn die Auslassventile von Bank 2 falsch auf eine Ab- oder Zuschaltanforderung reagieren, obwohl die elektrische Seite intakt ist. Kein Hersteller dokumentiert den Code öffentlich. Entscheidend ist die Reihenfolge: In einer GM-Patentanmeldung hören die Auslassventile beim Abschalten vor den Einlassventilen auf zu arbeiten und setzen beim Zuschalten auch vor ihnen wieder ein, damit verbranntes Gas hinausgeschoben und keine Frischladung eingesperrt wird. GMs DFM-V8 legt laut NHTSA umgekehrt zuerst die Einlassseite still. Hinkt die Auslassseite hinterher, gerät die geplante Abfolge durcheinander. CARB verlangt eine Funktionsprüfung solcher Stellglieder. Der Kreiscode dieser Bank ist P340D, Bank 1 P341C, die Einlassfunktion auf Bank 2 P341B. Zu erwarten sind Leuchte, harte Moduswechsel und Mehrverbrauch."
   affected_components:
     - cylinder_deactivation_solenoid
-    - hydraulic_pin
+    - lifter
     - engine_oil
   common_causes:
-    - id: oil_sludge
-      likelihood: high
+    - id: switching_element_stuck
+      likelihood: medium
       label:
-        en: Oil sludge blocks deactivation pin
-        de: Ölschlamm blockiert Abschalt-Pin
+        en: Exhaust lifter or rocker on bank 2 switching late or not at all
+        de: Auslassstößel oder -kipphebel auf Bank 2 schaltet spät oder gar nicht
+    - id: low_or_degraded_oil
+      likelihood: medium
+      label:
+        en: Oil too thin, too old or too low for fast switching
+        de: Öl zu dünn, zu alt oder zu wenig für schnelles Umschalten
+    - id: actuator_sticking
+      likelihood: low
+      label:
+        en: Sluggish bank 2 exhaust actuator valve
+        de: Träges Ventil des Auslass-Stellglieds von Bank 2
+  symptoms:
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
+    - en: Bump or shudder during mode changes
+      de: Stoß oder Schütteln beim Moduswechsel
+    - en: Higher fuel consumption
+      de: Höherer Kraftstoffverbrauch
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur: [300, 2500]
-    estimated_hours: [2, 8]
+    estimated_cost_eur: [100, 3500]
+    estimated_hours: [0.5, 12]
   flags:
     mil: true
     emissions_relevant: true
@@ -1342,225 +1567,275 @@
     limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P341C]
+  related_codes: [P340D, P341C, P341B, P3497]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://patents.google.com/patent/US20070240659A1/en
+    - https://static.nhtsa.gov/odi/inv/2025/INRD-PE25001-11969.pdf
+  reviewed: '2026-11-06'
 
 - code: P3420
   category: powertrain
   title:
     en: Cylinder 3 Deactivation/Intake Valve Control Circuit High
-    de: Zylinder 3 Abschalt-/Einlassventil-Steuerkreis hoch
+    de: Zylinder 3 Abschaltung/Einlassventil Steuerkreis hoch
   description:
-    en: The engine control module has detected a high-side voltage fault (short to power) on the cylinder 3 deactivation or intake valve solenoid circuit. Cylinder deactivation is disabled while the fault is present.
-    de: Das Motorsteuergerät hat einen Spannungsfehler nach Plus im Steuerkreis des Abschalt- oder Einlassventil-Magnetventils von Zylinder 3 erkannt. Bei aktivem Fehler ist die Zylinderabschaltung deaktiviert.
+    en: "P3420 reports that the cylinder 3 deactivation control line carries supply voltage where the module expects to pull it low. On GM's L84 the test runs only while the low-side output is switched on: a connection to battery voltage below 0.5 ohm, confirmed in 20 out of 25 samples, sets a Type B code. According to NHTSA's 2025 investigation into GM's DFM V8s, every cylinder has exactly one lifter oil solenoid, run by a peak-and-hold driver, so a single short disables the whole cylinder's switching. The Gen IV controller also has a separate high-side stage for this solenoid with its own codes, which helps tell which half of the circuit failed. P3419 covers the short to ground. The engine just keeps all eight cylinders working."
+    de: "P3420 meldet, dass an der Steuerleitung für die Abschaltung von Zylinder 3 Versorgungsspannung liegt, wo das Steuergerät sie nach Masse ziehen will. Beim L84 von GM läuft der Test nur bei eingeschaltetem Low-Side-Ausgang: Eine Verbindung zur Batteriespannung unter 0,5 Ohm, bestätigt in 20 von 25 Proben, setzt einen Type-B-Code. Laut NHTSA-Untersuchung 2025 zu GMs DFM-V8 hat jeder Zylinder genau ein Öl-Magnetventil für die Stößel, angesteuert nach dem Peak-and-Hold-Prinzip; ein einziger Schluss legt also die Umschaltung des ganzen Zylinders lahm. Das Gen-IV-Steuergerät hat für dieses Ventil zusätzlich eine High-Side-Stufe mit eigenen Codes, was hilft, die defekte Kreishälfte einzugrenzen. P3419 deckt den Masseschluss ab. Der Motor arbeitet einfach mit allen acht Zylindern weiter."
   affected_components:
     - cylinder_deactivation_solenoid
-    - engine_wiring_harness
+    - wiring_harness
     - ecm
   common_causes:
-    - id: wiring_short_power
+    - id: wiring_short_to_voltage
       likelihood: high
       label:
-        en: Wiring shorted to power
-        de: Verkabelung mit Schluss nach Plus
-    - id: solenoid_internal_short
+        en: Control wire of cylinder 3 touching a powered conductor
+        de: Steuerleitung von Zylinder 3 berührt einen spannungsführenden Leiter
+    - id: solenoid_coil_shorted
       likelihood: medium
       label:
-        en: Solenoid internal short
-        de: Interner Kurzschluss im Magnetventil
-    - id: connector_corrosion
+        en: Shorted turns in the cylinder 3 solenoid winding
+        de: Windungsschluss in der Wicklung des Ventils von Zylinder 3
+    - id: ecm_driver_fault
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Output transistor in the engine control module damaged
+        de: Ausgangstransistor im Motorsteuergerät beschädigt
+  symptoms:
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
+    - en: Fuel economy mode unavailable
+      de: Sparbetrieb nicht verfügbar
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [150, 1200]
-    estimated_hours: [1.0, 6.0]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3428, P3443, P3451, P3459]
+  related_codes: [P3417, P3418, P3419, P3424, P3428, P3412]
   sources:
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03B%20Diagnostics.pdf
+    - https://static.nhtsa.gov/odi/inv/2025/INRD-PE25001-11969.pdf
+  reviewed: '2026-11-06'
 
 - code: P3421
   category: powertrain
   title:
     en: Cylinder 3 Exhaust Valve Control Circuit/Open
-    de: Zylinder 3 Auslassventil-Steuerkreis/offen
+    de: Zylinder 3 Auslassventil Steuerkreis/Unterbrechung
   description:
-    en: The engine control module has detected an open or out-of-range circuit at the cylinder 3 exhaust valve deactivation solenoid. Cylinder 3 cannot be deactivated on the exhaust side until the circuit is restored.
-    de: Das Motorsteuergerät hat eine Unterbrechung oder einen Bereichsfehler im Steuerkreis des Abschalt-Magnetventils für das Auslassventil von Zylinder 3 erkannt. Zylinder 3 kann auslassseitig nicht abgeschaltet werden, bis der Stromkreis wiederhergestellt ist.
+    en: P3421 opens the exhaust group of cylinder 3 and stands for an interrupted circuit to an actuator that would switch only the exhaust valves. No manufacturer documents this code publicly. Engines that are known to idle cylinder 3, such as GM's LTA and LT2 V8s (bulletin 20-NA-038) and the L84, let one lifter control both valves of the cylinder, so an open circuit there shows up as P3417. A GM patent application on deactivation hardware keeps a single oil-switching valve and only shapes the cam timing so that the exhaust side drops out first and returns first. Should a design ever give the exhaust side its own actuator, CARB's continuity check for outputs would apply to it. The owner would see a warning lamp and lose the economy mode.
+    de: P3421 eröffnet die Auslassgruppe von Zylinder 3 und steht für einen unterbrochenen Kreis zu einem Stellglied, das nur die Auslassventile schaltet. Kein Hersteller dokumentiert diesen Code öffentlich. Motoren, die Zylinder 3 nachweislich stilllegen – etwa GMs V8 LTA und LT2 (Bulletin 20-NA-038) und der L84 –, lassen beide Ventile des Zylinders über einen Stößel schalten; eine Unterbrechung erscheint dort als P3417. Eine GM-Patentanmeldung zur Abschalt-Hardware behält ein einziges Öl-Schaltventil und legt nur die Nockensteuerzeiten so, dass die Auslassseite zuerst aussetzt und zuerst wiederkommt. Ein eigenes Auslass-Stellglied bräuchte die Durchgangsprüfung, die CARB für Ausgänge verlangt. Der Fahrer sähe eine Warnleuchte, und der Sparbetrieb fiele weg.
   affected_components:
     - cylinder_deactivation_solenoid
-    - engine_wiring_harness
+    - wiring_harness
     - ecm
   common_causes:
-    - id: solenoid_coil_open
-      likelihood: high
-      label:
-        en: Solenoid coil open
-        de: Magnetventilspule unterbrochen
     - id: wiring_open
       likelihood: medium
       label:
-        en: Wiring or connector open
-        de: Verkabelung oder Stecker unterbrochen
-    - id: connector_back_out
+        en: Broken lead or loose terminal at the cylinder 3 exhaust actuator
+        de: Gebrochene Ader oder lockerer Kontakt am Auslass-Stellglied von Zylinder 3
+    - id: actuator_coil_open
+      likelihood: medium
+      label:
+        en: Exhaust actuator winding interrupted
+        de: Wicklung des Auslass-Stellglieds unterbrochen
+    - id: ecm_driver_fault
       likelihood: low
       label:
-        en: 'Pin pushed back out of connector body'
-        de: 'Pin aus dem Steckergehäuse zurückgedrückt'
+        en: Fault in the control module output
+        de: Fehler im Ausgang des Steuergeräts
+  symptoms:
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
+    - en: Cylinder deactivation locked out
+      de: Zylinderabschaltung gesperrt
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [150, 1200]
-    estimated_hours: [1.0, 6.0]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3429, P3414, P3436, P3444, P3452, P3460]
+  related_codes: [P3422, P3423, P3424, P3417, P3413, P3429]
   sources:
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10172811-9999.pdf
+    - https://patents.google.com/patent/US20070240659A1/en
+  reviewed: '2026-11-06'
 
 - code: P3422
   category: powertrain
   title:
     en: Cylinder 3 Exhaust Valve Control Performance
-    de: Zylinder 3 Auslassventilsteuerung Funktion
+    de: Zylinder 3 Auslassventil Steuerung Funktion
   description:
-    en: The engine control module has detected a performance fault on the cylinder 3 exhaust valve deactivation system — the actuator response does not match the commanded state.
-    de: Das Motorsteuergerät hat einen Funktionsfehler in der Auslassventil-Abschaltung von Zylinder 3 erkannt — die Reaktion des Stellglieds entspricht nicht dem angeforderten Zustand.
+    en: "P3422 would apply if cylinder 3's exhaust valves disregard an order to stop or restart even though the wiring checks out. No manufacturer documents this code publicly. How such a fault can be spotted is shown in patents: Ford patented a way to catch an exhaust valve still lifting after shutdown by its mark in the exhaust pressure trace; the engine then brings the cylinder back, blocks further deactivation and may store a code. A Delphi patent does the same for the intake side by timing pressure pulses against crank angle. GM folds both valves of cylinder 3 into one mechanical check, P349A. A leaking exhaust valve pumps air through the cold cylinder, which upsets fuel trim and can cause a misfire count on cylinder 3."
+    de: "P3422 käme zum Zug, falls bei Zylinder 3 die Auslassventile einen Befehl zum Abschalten oder Zuschalten übergehen, obwohl der Kreis fehlerfrei arbeitet. Kein Hersteller dokumentiert diesen Code öffentlich. Wie sich ein solcher Fehler erkennen lässt, zeigen Patente: In einem Ford-Patent verrät sich ein Auslassventil, das trotz Abschaltung weiter hebt, über den Verlauf des Abgasdrucks; die Steuerung schaltet den Zylinder dann wieder zu, sperrt weitere Abschaltungen und kann einen Code ablegen. Ein Delphi-Patent macht Ähnliches für die Einlassseite, indem es Druckpulse zeitlich mit dem Kurbelwinkel vergleicht. GM fasst beide Ventile von Zylinder 3 in einer mechanischen Prüfung zusammen, P349A. Ein undichtes Auslassventil pumpt Luft durch den kalten Zylinder, stört so die Gemischregelung und kann Fehlzündungen auf Zylinder 3 zählen lassen."
   affected_components:
     - cylinder_deactivation_solenoid
     - lifter
-    - oil_control_valve
+    - engine_oil
   common_causes:
-    - id: lifter_stuck_collapsed
-      likelihood: high
-      label:
-        en: Lifter stuck collapsed
-        de: Schaltstößel hängt eingeklappt
-    - id: oil_pressure_low
+    - id: exhaust_switching_element_stuck
       likelihood: medium
       label:
-        en: Engine oil pressure too low
-        de: Motoröldruck zu niedrig
+        en: Exhaust-side switching lifter or rocker of cylinder 3 stuck
+        de: Auslassseitiger Schaltstößel oder Kipphebel von Zylinder 3 hängt
+    - id: low_or_degraded_oil
+      likelihood: medium
+      label:
+        en: Oil level or quality outside specification
+        de: Ölstand oder Ölqualität außerhalb der Vorgabe
+    - id: oil_passage_restricted
+      likelihood: low
+      label:
+        en: Restricted oil passage to the exhaust switching element
+        de: Verengter Ölkanal zum Auslass-Schaltelement
+  symptoms:
+    - en: Uneven running in reduced-cylinder mode
+      de: Unrunder Lauf im Teilzylinderbetrieb
+    - en: Fuel trim or misfire codes alongside
+      de: Gemischregel- oder Fehlzündungscodes zusätzlich
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur: [400, 2000]
-    estimated_hours: [3.0, 8.0]
+    estimated_cost_eur: [100, 3500]
+    estimated_hours: [0.5, 12]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3430, P3437, P3445, P3461]
+  related_codes: [P3421, P3423, P3424, P3418, P349A, P0303, P3430]
   sources:
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://patents.google.com/patent/US8006670B2/en
+    - https://patents.google.com/patent/US7314034B1/en
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10183203-9999.pdf
+  reviewed: '2026-11-06'
 
 - code: P3423
   category: powertrain
   title:
     en: Cylinder 3 Exhaust Valve Control Circuit Low
-    de: Zylinder 3 Auslassventil-Steuerkreis niedrig
+    de: Zylinder 3 Auslassventil Steuerkreis niedrig
   description:
-    en: The engine control module has detected a low-side voltage fault (short to ground) on the cylinder 3 exhaust valve deactivation solenoid circuit. Cylinder deactivation is disabled while the fault is present.
-    de: Das Motorsteuergerät hat einen Spannungsfehler nach Masse im Steuerkreis des Abschalt-Magnetventils für das Auslassventil von Zylinder 3 erkannt. Bei aktivem Fehler ist die Zylinderabschaltung deaktiviert.
+    en: "P3423 points to a grounded control wire at a dedicated cylinder 3 exhaust actuator. No manufacturer documents this code publicly, and NHTSA's 2025 look at GM's DFM engines shows why: each cylinder has just one lifter oil solenoid, and it feeds both lifters, intake and exhaust, so there is no separate exhaust output that could fail. For that same solenoid on cylinder 3, GM's L84 table flags a resistance to ground under half an ohm at rest and files it as P3419. The 2007 Displacement on Demand application likewise lists only one solenoid circuit for cylinder 3. Any design with its own exhaust output would fall under the CARB duty to detect shorts. Effect: warning lamp, cylinder 3 stays active."
+    de: "P3423 weist auf einen Masseschluss in der Steuerleitung eines eigenen Auslass-Stellglieds an Zylinder 3 hin. Kein Hersteller dokumentiert diesen Code öffentlich; den Grund zeigt die NHTSA-Untersuchung 2025 zu GMs DFM-V8: Ein einziges Stößel-Öl-Magnetventil je Zylinder versorgt beide Stößel, Einlass und Auslass, einen getrennten Auslass-Ausgang gibt es also nicht. Für eben dieses Ventil an Zylinder 3 wertet GMs L84-Tabelle einen Widerstand unter einem halben Ohm zur Masse bei ruhendem Treiber als Fehler und nutzt dafür P3419. Auch GMs Displacement-on-Demand-Tabelle aus dem Jahr 2007 führt für Zylinder 3 nur einen Ventilkreis. Eine Bauart mit eigenem Auslass-Ausgang fiele unter die CARB-Pflicht, Kurzschlüsse zu erkennen. Folge: Warnleuchte, Zylinder 3 bleibt aktiv."
   affected_components:
     - cylinder_deactivation_solenoid
-    - engine_wiring_harness
+    - wiring_harness
     - ecm
   common_causes:
-    - id: wiring_short_ground
-      likelihood: high
-      label:
-        en: Wiring shorted to ground
-        de: Verkabelung mit Masseschluss
-    - id: solenoid_internal_short
+    - id: wiring_short_to_ground
       likelihood: medium
       label:
-        en: Solenoid internal short
-        de: Interner Kurzschluss im Magnetventil
-    - id: connector_corrosion
+        en: Exhaust actuator wire of cylinder 3 shorted to engine ground
+        de: Leitung des Auslass-Stellglieds von Zylinder 3 mit Motormasse verbunden
+    - id: actuator_internal_short
+      likelihood: medium
+      label:
+        en: Actuator winding shorted to its housing
+        de: Wicklung des Stellglieds hat Schluss zum Gehäuse
+    - id: ecm_driver_fault
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Faulty output stage in the control module
+        de: Fehlerhafte Endstufe im Steuergerät
+  symptoms:
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
+    - en: No switch to reduced-cylinder operation
+      de: Kein Wechsel in den Teilzylinderbetrieb
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [150, 1200]
-    estimated_hours: [1.0, 6.0]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3415, P3431, P3438, P3446, P3453, P3454, P3455, P3462, P3487]
+  related_codes: [P3421, P3422, P3424, P3419, P3431, P3415]
   sources:
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/inv/2025/INRD-PE25001-11969.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03B%20Diagnostics.pdf
+  reviewed: '2026-11-06'
 
 - code: P3424
   category: powertrain
   title:
     en: Cylinder 3 Exhaust Valve Control Circuit High
-    de: Zylinder 3 Auslassventil-Steuerkreis hoch
+    de: Zylinder 3 Auslassventil Steuerkreis hoch
   description:
-    en: The engine control module has detected a high-side voltage fault (short to power) on the cylinder 3 exhaust valve deactivation solenoid circuit. Cylinder deactivation is disabled while the fault is present.
-    de: Das Motorsteuergerät hat einen Spannungsfehler nach Plus im Steuerkreis des Abschalt-Magnetventils für das Auslassventil von Zylinder 3 erkannt. Bei aktivem Fehler ist die Zylinderabschaltung deaktiviert.
+    en: "P3424 closes the cylinder 3 block and stands for an exhaust actuator control line that is held at supply voltage. No manufacturer documents this code publicly. The L84 from GM shows how far one shared solenoid can be monitored without it: for cylinder 3 the ECM checks a low-side driver under P3417, P3419 and P3420 and a high-side driver under extra codes of its own, yet none of them is exhaust-only. A GM patent application explains why: one hydraulic switching valve per cylinder pair serves intake and exhaust, the order being set by the cam lobes. The nearest documented test is the one behind P3420, in which a supply connection of less than half an ohm, seen with the output active, is judged a short. A driver would notice only the lamp."
+    de: "P3424 ist der Schlusspunkt für Zylinder 3 und steht für eine Steuerleitung eines Auslass-Stellglieds, die auf Versorgungsspannung liegt. Kein Hersteller dokumentiert diesen Code öffentlich. Am L84 von GM sieht man, wie weit sich ein gemeinsames Ventil auch ohne ihn überwachen lässt: Für Zylinder 3 prüft das Steuergerät einen Low-Side-Treiber unter P3417, P3419 und P3420 und einen High-Side-Treiber unter weiteren eigenen Codes – keiner davon betrifft nur den Auslass. Eine GM-Patentanmeldung erklärt den Grund: Ein hydraulisches Schaltventil je Zylinderpaar bedient Ein- und Auslass, die Reihenfolge legen die Nocken fest. Die nächstliegende dokumentierte Prüfung ist die hinter P3420, bei der eine Verbindung zur Versorgung unter einem halben Ohm bei aktivem Ausgang als Schluss gilt. Bemerkbar wäre nur die Leuchte."
   affected_components:
     - cylinder_deactivation_solenoid
-    - engine_wiring_harness
+    - wiring_harness
     - ecm
   common_causes:
-    - id: wiring_short_power
-      likelihood: high
-      label:
-        en: Wiring shorted to power
-        de: Verkabelung mit Schluss nach Plus
-    - id: solenoid_internal_short
+    - id: wiring_short_to_voltage
       likelihood: medium
       label:
-        en: Solenoid internal short
-        de: Interner Kurzschluss im Magnetventil
-    - id: connector_corrosion
+        en: Exhaust actuator wire chafed against a supply line
+        de: Leitung des Auslass-Stellglieds an einer Versorgungsleitung durchgescheuert
+    - id: actuator_coil_shorted
+      likelihood: medium
+      label:
+        en: Shorted turns in the exhaust actuator of cylinder 3
+        de: Windungsschluss im Auslass-Stellglied von Zylinder 3
+    - id: ecm_driver_fault
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Engine control module output fault
+        de: Ausgangsfehler im Motorsteuergerät
+  symptoms:
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
+    - en: Engine runs on all cylinders permanently
+      de: Motor läuft dauerhaft auf allen Zylindern
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [150, 1200]
-    estimated_hours: [1.0, 6.0]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3416, P3432, P3439, P3447, P3463, P3464, P3488]
+  related_codes: [P3421, P3422, P3423, P3420, P3432, P3416]
   sources:
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03B%20Diagnostics.pdf
+    - https://patents.google.com/patent/US20070240659A1/en
+  reviewed: '2026-11-06'
 
 - code: P3425
   category: powertrain
@@ -1627,299 +1902,386 @@
   category: powertrain
   title:
     en: Cylinder 4 Deactivation/Intake Valve Control Performance
-    de: Zylinder 4 Abschaltung/Einlassventilsteuerung Funktion
+    de: Zylinder 4 Abschaltung/Einlassventil Steuerung Funktion
   description:
-    en: The engine control module has detected a performance fault on the cylinder 4 deactivation or intake valve control system — the actuator response does not match the commanded state.
-    de: Das Motorsteuergerät hat einen Funktionsfehler in der Abschalt- oder Einlassventilsteuerung von Zylinder 4 erkannt — die Reaktion des Stellglieds entspricht nicht dem angeforderten Zustand.
+    en: "P3426 is one of the few performance codes in this range that makers really use. FCA calls it Cylinder 4 Deactivation Control Performance on the 6.4 l Heavy Duty Hemi with MDS; bulletins 18-082-16 and 18-036-20 list it with P3402, P3442 and P3450 and fix it with new PCM software. Ford stores it on the 2025 F-150 5.0 l: bulletin 25-2487, replaced by 26-2093, traces P3402 and P3426 to a restricted oil feed tube for the right-bank deactivation solenoids, which is replaced under the valve cover. GM checks cylinder 4 mechanically under P349B instead. Circuit faults are P3425, P3427 and P3428. The lamp comes on, and the engine may run rough or stay in full-cylinder mode."
+    de: "P3426 gehört zu den wenigen Funktionscodes dieses Bereichs, die Hersteller tatsächlich verwenden. FCA nennt ihn beim 6,4-l-Heavy-Duty-Hemi mit MDS Cylinder 4 Deactivation Control Performance; die Bulletins 18-082-16 und 18-036-20 führen ihn zusammen mit P3402, P3442 und P3450 und beheben ihn mit neuer PCM-Software. Ford legt ihn beim F-150 5,0 l (2025) ab: Bulletin 25-2487, ersetzt durch 26-2093, führt P3402 und P3426 auf ein verengtes Ölzulaufrohr der Abschaltventile der rechten Bank zurück, das unter dem Ventildeckel getauscht wird. GM prüft Zylinder 4 mechanisch stattdessen unter P349B. Kreisfehler sind P3425, P3427 und P3428. Die Leuchte geht an, der Motor kann unruhig laufen oder im Vollzylinderbetrieb bleiben."
   affected_components:
     - cylinder_deactivation_solenoid
     - lifter
-    - oil_control_valve
+    - engine_oil
   common_causes:
-    - id: lifter_stuck_collapsed
+    - id: oil_feed_tube_restricted
       likelihood: high
       label:
-        en: Lifter stuck collapsed
-        de: Schaltstößel hängt eingeklappt
-    - id: oil_pressure_low
+        en: Restricted oil feed tube to the deactivation solenoids (Ford 5.0 l, TSB 26-2093)
+        de: Verengtes Ölzulaufrohr zu den Abschaltventilen (Ford 5,0 l, TSB 26-2093)
+    - id: pcm_software
       likelihood: medium
       label:
-        en: Engine oil pressure too low
-        de: Motoröldruck zu niedrig
+        en: Control software needing an update (FCA 6.4 l Hemi)
+        de: Steuergeräte-Software mit Update-Bedarf (FCA 6,4-l-Hemi)
+    - id: low_or_degraded_oil
+      likelihood: medium
+      label:
+        en: Low or worn-out engine oil
+        de: Zu wenig oder verbrauchtes Motoröl
+    - id: lifter_stuck
+      likelihood: low
+      label:
+        en: Deactivating lifter of cylinder 4 sticking
+        de: Abschaltbarer Stößel von Zylinder 4 klemmt
+  symptoms:
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
+    - en: Misfire on cylinder 4 or rough running
+      de: Fehlzündung auf Zylinder 4 oder unruhiger Lauf
+    - en: Drone or shudder at light throttle
+      de: Dröhnen oder Ruckeln bei wenig Gas
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur: [400, 2000]
-    estimated_hours: [3.0, 8.0]
+    estimated_cost_eur: [100, 3500]
+    estimated_hours: [0.5, 12]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3418]
+  related_codes: [P3425, P3427, P3428, P3402, P3442, P3450, P349B, P0304]
   sources:
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2016/MC-10121651-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10175723-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11024415-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2026/MC-11030102-0001.pdf
+  reviewed: '2026-11-06'
 
 - code: P3427
   category: powertrain
   title:
     en: Cylinder 4 Deactivation/Intake Valve Control Circuit Low
-    de: Zylinder 4 Abschalt-/Einlassventil-Steuerkreis niedrig
+    de: Zylinder 4 Abschaltung/Einlassventil Steuerkreis niedrig
   description:
-    en: The engine control module has detected a low-side voltage fault (short to ground) on the cylinder 4 deactivation or intake valve solenoid circuit. Cylinder deactivation is disabled while the fault is present.
-    de: Das Motorsteuergerät hat einen Spannungsfehler nach Masse im Steuerkreis des Abschalt- oder Einlassventil-Magnetventils von Zylinder 4 erkannt. Bei aktivem Fehler ist die Zylinderabschaltung deaktiviert.
+    en: "P3427 is set when the cylinder 4 deactivation solenoid circuit has a path to ground. GM uses it on several 2019 V8s: the DFM engine L84, the AFM engine L86 and the LT4 of the Corvette. Once the low-side output is switched off, less than half an ohm toward ground fails the check; 20 of 25 samples, relay voltage at least 11 V, 425 rpm (L84) or 400 rpm (L86, LT4), Type B. In all three tables the criteria column names cylinder 1, an apparent copy slip. For the MDS-equipped Hemi from Chrysler, one STAR case documents an exhaust manifold shield that rubs the solenoid harness open; a bared wire touching metal there can end up as this kind of short. P3428 covers the opposite short, to battery voltage."
+    de: "P3427 wird gesetzt, wenn der Kreis des Abschalt-Magnetventils von Zylinder 4 einen Weg nach Masse hat. GM nutzt ihn bei mehreren V8 des Jahrgangs 2019: DFM-Motor L84, AFM-Motor L86 und LT4 der Corvette. Bei ausgeschaltetem Low-Side-Ausgang fällt jeder Massewiderstand unter einem halben Ohm durch die Prüfung; 20 von 25 Proben, Relaisspannung mindestens 11 V, 425 U/min (L84) bzw. 400 U/min (L86, LT4), Type B. In allen drei Tabellen nennt die Spalte mit den Fehlerkriterien Zylinder 1 – offenbar ein Kopierfehler. Für Chryslers Hemi mit MDS dokumentiert ein STAR-Fall ein Krümmer-Hitzeschild, das den Ventil-Kabelbaum aufreibt; berührt eine blanke Ader dort Metall, kann genau so ein Schluss entstehen. P3428 ist der Plusschluss."
   affected_components:
     - cylinder_deactivation_solenoid
-    - engine_wiring_harness
+    - wiring_harness
     - ecm
   common_causes:
-    - id: wiring_short_ground
+    - id: wiring_short_to_ground
       likelihood: high
       label:
-        en: Wiring shorted to ground
-        de: Verkabelung mit Masseschluss
+        en: Control wire to the cylinder 4 solenoid rubbed through to ground, e.g. by a heat shield
+        de: Steuerleitung zum Ventil von Zylinder 4 bis auf Masse durchgescheuert, etwa am Hitzeschild
     - id: solenoid_internal_short
       likelihood: medium
       label:
-        en: Solenoid internal short
-        de: Interner Kurzschluss im Magnetventil
-    - id: connector_corrosion
+        en: Cylinder 4 solenoid shorted internally
+        de: Ventil von Zylinder 4 mit innerem Schluss
+    - id: connector_water
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Moisture or oil in the solenoid connector
+        de: Feuchtigkeit oder Öl im Ventilstecker
+    - id: ecm_driver_fault
+      likelihood: low
+      label:
+        en: Damaged driver in the engine control module
+        de: Beschädigter Treiber im Motorsteuergerät
+  symptoms:
+    - en: Check engine lamp after two drives
+      de: Motorkontrollleuchte nach zwei Fahrten
+    - en: V4 or reduced mode never engages
+      de: V4- bzw. Sparbetrieb schaltet nie zu
+    - en: Further circuit codes on other deactivating cylinders if the harness is damaged
+      de: Weitere Kreiscodes anderer abschaltbarer Zylinder bei beschädigtem Kabelbaum
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [150, 1200]
-    estimated_hours: [1.0, 6.0]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3419, P3442, P3450, P3458]
+  related_codes: [P3425, P3426, P3428, P3431, P3419, P3403]
   sources:
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03B%20Diagnostics.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03A%20Diagnostics.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10176548-9999.pdf
+  reviewed: '2026-11-06'
 
 - code: P3428
   category: powertrain
   title:
     en: Cylinder 4 Deactivation/Intake Valve Control Circuit High
-    de: Zylinder 4 Abschalt-/Einlassventil-Steuerkreis hoch
+    de: Zylinder 4 Abschaltung/Einlassventil Steuerkreis hoch
   description:
-    en: The engine control module has detected a high-side voltage fault (short to power) on the cylinder 4 deactivation or intake valve solenoid circuit. Cylinder deactivation is disabled while the fault is present.
-    de: Das Motorsteuergerät hat einen Spannungsfehler nach Plus im Steuerkreis des Abschalt- oder Einlassventil-Magnetventils von Zylinder 4 erkannt. Bei aktivem Fehler ist die Zylinderabschaltung deaktiviert.
+    en: "P3428 means the wire that switches cylinder 4's deactivation solenoid is tied to voltage. GM's bulletin 20-NA-038 lists cylinders 1, 4, 6 and 7 as the ones its AFM V8s switch to V4 mode, which makes cylinder 4 a standard candidate. In the 2019 documents for L84, L86 and the Corvette LT4, GM judges the circuit with the low-side stage switched on: a supply path of less than half an ohm counts as a short, and 20 bad results within 25 produce a Type B entry and the lamp after two trips. Because the low-side stage sinks the current, a line stuck at battery voltage can push the output into overcurrent, so after repair the module should be checked too. P3427 is the short to ground, P3425 the open. The truck or car keeps all cylinders running."
+    de: "P3428 bedeutet, dass die Steuerleitung des Abschalt-Magnetventils von Zylinder 4 auf Spannung liegt. GMs Bulletin 20-NA-038 nennt die Zylinder 1, 4, 6 und 7 als jene, die seine AFM-V8 für den V4-Betrieb stilllegen – Zylinder 4 ist also ein Standardkandidat. Die Tabellen 2019 für L84, L86 und LT4 der Corvette bewerten den Kreis bei eingeschaltetem Low-Side-Treiber: Ein Weg zur Versorgung unter einem halben Ohm gilt als Schluss, 20 Fehler in 25 Proben ergeben einen Type-B-Eintrag und die Leuchte nach zwei Fahrten. Weil die Low-Side-Stufe den Strom nach Masse führt, kann eine auf Batteriespannung hängende Leitung den Ausgang überlasten; nach der Reparatur gehört daher auch das Steuergerät geprüft. P3427 ist der Masseschluss, P3425 die Unterbrechung. Bis zur Reparatur arbeiten alle Zylinder."
   affected_components:
     - cylinder_deactivation_solenoid
-    - engine_wiring_harness
+    - wiring_harness
     - ecm
   common_causes:
-    - id: wiring_short_power
+    - id: wiring_short_to_voltage
       likelihood: high
       label:
-        en: Wiring shorted to power
-        de: Verkabelung mit Schluss nach Plus
-    - id: solenoid_internal_short
+        en: Cylinder 4 control wire shorted to a 12 V feed
+        de: Steuerleitung von Zylinder 4 mit einer 12-V-Leitung verbunden
+    - id: solenoid_coil_shorted
       likelihood: medium
       label:
-        en: Solenoid internal short
-        de: Interner Kurzschluss im Magnetventil
-    - id: connector_corrosion
+        en: Low-resistance winding in the cylinder 4 solenoid
+        de: Zu niederohmige Wicklung im Ventil von Zylinder 4
+    - id: ecm_driver_fault
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Overloaded output stage in the engine control module
+        de: Überlastete Endstufe im Motorsteuergerät
+  symptoms:
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
+    - en: No V4 or reduced-cylinder operation
+      de: Kein V4- oder Teilzylinderbetrieb
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [150, 1200]
-    estimated_hours: [1.0, 6.0]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3420, P3443, P3451, P3459]
+  related_codes: [P3425, P3426, P3427, P3432, P3420, P3404]
   sources:
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03B%20Diagnostics.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03A%20Diagnostics.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10172811-9999.pdf
+  reviewed: '2026-11-06'
 
 - code: P3429
   category: powertrain
   title:
     en: Cylinder 4 Exhaust Valve Control Circuit/Open
-    de: Zylinder 4 Auslassventil-Steuerkreis/offen
+    de: Zylinder 4 Auslassventil Steuerkreis/Unterbrechung
   description:
-    en: The engine control module has detected an open or out-of-range circuit at the cylinder 4 exhaust valve deactivation solenoid. Cylinder 4 cannot be deactivated on the exhaust side until the circuit is restored.
-    de: Das Motorsteuergerät hat eine Unterbrechung oder einen Bereichsfehler im Steuerkreis des Abschalt-Magnetventils für das Auslassventil von Zylinder 4 erkannt. Zylinder 4 kann auslassseitig nicht abgeschaltet werden, bis der Stromkreis wiederhergestellt ist.
+    en: "P3429 stands for an open circuit to an actuator that would switch nothing but cylinder 4's exhaust valves. No manufacturer documents this code publicly, although few cylinders are deactivated as often: GM's AFM V8s (bulletin 20-NA-038), the Hemi with MDS and Mazda CX-5 and Mazda6 four-cylinders with deactivation all idle cylinder 4; Mazda's alert SA-041/18 names cylinders 1 and 4 as the deactivation area where rocker arms can fall out. In the GM design reviewed by NHTSA in 2025, one solenoid per cylinder works the intake and exhaust lifter together, so interrupted wiring is reported as P3425. A layout with a separate exhaust output would still owe CARB a continuity test. P3430 to P3432 complete this exhaust group."
+    de: "P3429 bezeichnet eine Unterbrechung im Kreis eines Stellglieds, das nur die Auslassventile von Zylinder 4 schaltet. Kein Hersteller dokumentiert diesen Code öffentlich, obwohl kaum ein Zylinder so oft abgeschaltet wird: GMs AFM-V8 (Bulletin 20-NA-038), der Hemi mit MDS und die Vierzylinder von Mazda CX-5 und Mazda6 mit Abschaltung legen Zylinder 4 still; Mazdas Hinweis SA-041/18 nennt die Zylinder 1 und 4 als Abschaltbereich, in dem Kipphebel herausfallen können. Bei der GM-Bauart, die NHTSA 2025 untersucht hat, betätigt ein Magnetventil pro Zylinder beide Stößel, Ein- wie Auslass,, eine unterbrochene Leitung wird daher als P3425 gemeldet. Eine Anordnung mit eigenem Auslass-Ausgang schuldete CARB dennoch eine Durchgangsprüfung. P3430 bis P3432 ergänzen diese Auslassgruppe."
   affected_components:
     - cylinder_deactivation_solenoid
-    - engine_wiring_harness
+    - wiring_harness
     - ecm
   common_causes:
-    - id: solenoid_coil_open
-      likelihood: high
-      label:
-        en: Solenoid coil open
-        de: Magnetventilspule unterbrochen
     - id: wiring_open
       likelihood: medium
       label:
-        en: Wiring or connector open
-        de: Verkabelung oder Stecker unterbrochen
-    - id: connector_back_out
+        en: Open conductor or pushed-out pin to the cylinder 4 exhaust actuator
+        de: Unterbrochener Leiter oder herausgedrückter Pin zum Auslass-Stellglied von Zylinder 4
+    - id: actuator_coil_open
+      likelihood: medium
+      label:
+        en: Exhaust actuator coil burnt open
+        de: Spule des Auslass-Stellglieds durchgebrannt
+    - id: ecm_driver_fault
       likelihood: low
       label:
-        en: 'Pin pushed back out of connector body'
-        de: 'Pin aus dem Steckergehäuse zurückgedrückt'
+        en: Control module output not switching
+        de: Ausgang des Steuergeräts schaltet nicht
+  symptoms:
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
+    - en: Fuel-saving mode inactive
+      de: Sparmodus inaktiv
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [150, 1200]
-    estimated_hours: [1.0, 6.0]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3421, P3436, P3414, P3444, P3452, P3460]
+  related_codes: [P3430, P3431, P3432, P3425, P3421, P3437]
   sources:
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10172811-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2018/MC-10153295-9999.pdf
+    - https://static.nhtsa.gov/odi/inv/2025/INRD-PE25001-11969.pdf
+  reviewed: '2026-11-06'
 
 - code: P3430
   category: powertrain
   title:
     en: Cylinder 4 Exhaust Valve Control Performance
-    de: Zylinder 4 Auslassventilsteuerung Funktion
+    de: Zylinder 4 Auslassventil Steuerung Funktion
   description:
-    en: The engine control module has detected a performance fault on the cylinder 4 exhaust valve deactivation system — the actuator response does not match the commanded state.
-    de: Das Motorsteuergerät hat einen Funktionsfehler in der Auslassventil-Abschaltung von Zylinder 4 erkannt — die Reaktion des Stellglieds entspricht nicht dem angeforderten Zustand.
+    en: "P3430 would cover exhaust valves on cylinder 4 that keep opening, or stay shut, against the command while the circuit itself is sound. No manufacturer documents this code publicly. Ford shows both sides of the problem: a Ford patent recognises an exhaust valve opening after shutdown from changes in exhaust pressure and responds by reactivating the cylinder and storing a code, while in practice the 2025 F-150 5.0 l reports a cylinder 4 switching fault as P3426 and traces it to a restricted solenoid oil feed tube (bulletin 26-2093). An exhaust valve that does not stay closed lets fresh air reach the catalyst and the oxygen sensors, which can show up as fuel trim errors, misfire counts and vibration."
+    de: "P3430 deckte Auslassventile an Zylinder 4 ab, die gegen den Befehl weiter öffnen oder geschlossen bleiben, bei elektrisch intaktem Kreis. Kein Hersteller dokumentiert diesen Code öffentlich. Ford zeigt beide Seiten des Problems: In einem Ford-Patent fällt ein Auslassventil, das trotz Abschaltung öffnet, durch veränderten Abgasdruck auf; die Steuerung schaltet den Zylinder daraufhin wieder zu und legt einen Code ab; in der Praxis meldet der F-150 5,0 l (2025) einen Schaltfehler an Zylinder 4 aber als P3426 und führt ihn auf ein verengtes Ölzulaufrohr der Ventile zurück (Bulletin 26-2093). Bleibt ein Auslassventil nicht zu, gelangt Frischluft zu Katalysator und Lambdasonden – sichtbar als Gemischfehler, Fehlzündungszähler und Vibrationen."
   affected_components:
     - cylinder_deactivation_solenoid
     - lifter
-    - oil_control_valve
+    - engine_oil
   common_causes:
-    - id: lifter_stuck_collapsed
-      likelihood: high
-      label:
-        en: Lifter stuck collapsed
-        de: Schaltstößel hängt eingeklappt
-    - id: oil_pressure_low
+    - id: oil_feed_restricted
       likelihood: medium
       label:
-        en: Engine oil pressure too low
-        de: Motoröldruck zu niedrig
+        en: Restricted oil supply to the cylinder 4 switching elements
+        de: Behinderte Ölversorgung der Schaltelemente von Zylinder 4
+    - id: exhaust_switching_element_stuck
+      likelihood: medium
+      label:
+        en: Exhaust lifter or rocker of cylinder 4 not changing state
+        de: Auslassstößel oder Kipphebel von Zylinder 4 wechselt den Zustand nicht
+    - id: low_or_degraded_oil
+      likelihood: low
+      label:
+        en: Oil too thin, too old or too low
+        de: Öl zu dünn, zu alt oder zu wenig
+  symptoms:
+    - en: Vibration in reduced-cylinder mode
+      de: Vibrationen im Teilzylinderbetrieb
+    - en: Lean or rich fuel trim codes
+      de: Codes für mageres oder fettes Gemisch
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur: [400, 2000]
-    estimated_hours: [3.0, 8.0]
+    estimated_cost_eur: [100, 3500]
+    estimated_hours: [0.5, 12]
   flags:
     mil: true
     emissions_relevant: true
     drive_cycle_required: true
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3437, P3422, P3445, P3461]
+  related_codes: [P3429, P3431, P3432, P3426, P349B, P0304, P3438]
   sources:
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://patents.google.com/patent/US8006670B2/en
+    - https://static.nhtsa.gov/odi/tsbs/2026/MC-11030102-0001.pdf
+  reviewed: '2026-11-06'
 
 - code: P3431
   category: powertrain
   title:
     en: Cylinder 4 Exhaust Valve Control Circuit Low
-    de: Zylinder 4 Auslassventil-Steuerkreis niedrig
+    de: Zylinder 4 Auslassventil Steuerkreis niedrig
   description:
-    en: The engine control module has detected a low-side voltage fault (short to ground) on the cylinder 4 exhaust valve deactivation solenoid circuit. Cylinder deactivation is disabled while the fault is present.
-    de: Das Motorsteuergerät hat einen Spannungsfehler nach Masse im Steuerkreis des Abschalt-Magnetventils für das Auslassventil von Zylinder 4 erkannt. Bei aktivem Fehler ist die Zylinderabschaltung deaktiviert.
+    en: "P3431 reports a cylinder 4 exhaust actuator line shorted to ground. No manufacturer documents this code publicly. Cylinder 4 is switched off by Chrysler's MDS Hemi as well as by GM's V8s with AFM or DFM, but each of them runs a single solenoid per cylinder, so their bulletins and tables only list intake-side circuit codes: Ram's 2025 software bulletin 18-002-25 names P3425 next to P3401, P3441 and P3449, and for GM's 2019 L84, P3427 handles a grounded line of under half an ohm, checked while the output rests and confirmed 20 times in 25 (Type B). That is the closest documented test; CARB would demand the same kind of short detection for a separate exhaust output. Drivers would see the lamp, and cylinder shutdown would cease."
+    de: "P3431 meldet eine Leitung zum Auslass-Stellglied von Zylinder 4 mit Masseschluss. Kein Hersteller dokumentiert diesen Code öffentlich. Zylinder 4 wird zwar beim Hemi mit MDS von Chrysler ebenso abgeschaltet wie bei GMs V8 mit AFM oder DFM, doch diese Motoren arbeiten mit einem einzigen Magnetventil je Zylinder; ihre Bulletins und Tabellen führen deshalb nur einlassseitige Kreiscodes: Das Ram-Software-Bulletin 18-002-25 von 2025 nennt P3425 neben P3401, P3441 und P3449, und GMs L84-Tabelle 2019 nutzt P3427 für einen Masseschluss unter 0,5 Ohm bei ausgeschaltetem Treiber, 20 von 25 Proben, Type B. Das ist die nächstliegende dokumentierte Prüfung; für einen eigenen Auslass-Ausgang verlangte CARB dieselbe Art der Schlusserkennung. Sichtbar wären eine Warnleuchte und keine Zylinderabschaltung."
   affected_components:
     - cylinder_deactivation_solenoid
-    - engine_wiring_harness
+    - wiring_harness
     - ecm
   common_causes:
-    - id: wiring_short_ground
-      likelihood: high
-      label:
-        en: Wiring shorted to ground
-        de: Verkabelung mit Masseschluss
-    - id: solenoid_internal_short
+    - id: wiring_short_to_ground
       likelihood: medium
       label:
-        en: Solenoid internal short
-        de: Interner Kurzschluss im Magnetventil
-    - id: connector_corrosion
+        en: Cylinder 4 exhaust actuator lead grounded on the block or a bracket
+        de: Leitung des Auslass-Stellglieds von Zylinder 4 liegt an Block oder Halter auf Masse
+    - id: actuator_internal_short
+      likelihood: medium
+      label:
+        en: Internal short to ground in the exhaust actuator
+        de: Innerer Masseschluss im Auslass-Stellglied
+    - id: ecm_driver_fault
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Control module driver fault
+        de: Treiberfehler im Steuergerät
+  symptoms:
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
+    - en: Engine stays on all cylinders
+      de: Motor bleibt auf allen Zylindern
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [150, 1200]
-    estimated_hours: [1.0, 6.0]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3438, P3423, P3446, P3415, P3453, P3454, P3455, P3462, P3487]
+  related_codes: [P3429, P3430, P3432, P3427, P3423, P3439]
   sources:
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03B%20Diagnostics.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11013168-0001.pdf
+  reviewed: '2026-11-06'
 
 - code: P3432
   category: powertrain
   title:
     en: Cylinder 4 Exhaust Valve Control Circuit High
-    de: Zylinder 4 Auslassventil-Steuerkreis hoch
+    de: Zylinder 4 Auslassventil Steuerkreis hoch
   description:
-    en: The engine control module has detected a high-side voltage fault (short to power) on the cylinder 4 exhaust valve deactivation solenoid circuit. Cylinder deactivation is disabled while the fault is present.
-    de: Das Motorsteuergerät hat einen Spannungsfehler nach Plus im Steuerkreis des Abschalt-Magnetventils für das Auslassventil von Zylinder 4 erkannt. Bei aktivem Fehler ist die Zylinderabschaltung deaktiviert.
+    en: "P3432 is the last code of the cylinder 4 block and denotes an exhaust actuator control line sitting at supply voltage. No manufacturer documents this code publicly. The intake-side counterpart P3428 is well covered: For GM's L84, L86 and Corvette LT4 of model year 2019, a supply path below half an ohm, measured while the low-side stage conducts, is logged as a Type B short. Exhaust valves are not forgotten in those engines, they simply switch with the same lifter oil. A GM patent application lets a single hydraulic valve serve both sides, and the cam timing makes the exhaust side drop out earlier than the intake side and also come back sooner. Without a separate exhaust output, this code has nothing to watch. Expect only the lamp."
+    de: "P3432 ist der letzte Code des Blocks für Zylinder 4 und meint ein Auslass-Stellglied, dessen Ansteuerung an Versorgungsspannung hängt. Kein Hersteller dokumentiert diesen Code öffentlich. Das einlassseitige Gegenstück P3428 ist gut belegt: In GMs Unterlagen 2019 zu L84, L86 und dem LT4 der Corvette gilt ein Versorgungsweg unter einem halben Ohm bei leitendem Low-Side-Treiber als Schluss und wird als Type B abgelegt. Die Auslassventile sind bei diesen Motoren nicht vergessen, sie schalten schlicht mit demselben Stößelöl. In einer GM-Patentanmeldung bedient ein einziges Hydraulikventil beide Seiten; die Nockensteuerzeiten lassen die Auslassseite früher aussetzen und auch früher wieder arbeiten als die Einlassseite. Ohne eigenen Auslass-Ausgang hat dieser Code nichts zu überwachen. Zu erwarten ist nur die Leuchte."
   affected_components:
     - cylinder_deactivation_solenoid
-    - engine_wiring_harness
+    - wiring_harness
     - ecm
   common_causes:
-    - id: wiring_short_power
-      likelihood: high
-      label:
-        en: Wiring shorted to power
-        de: Verkabelung mit Schluss nach Plus
-    - id: solenoid_internal_short
+    - id: wiring_short_to_voltage
       likelihood: medium
       label:
-        en: Solenoid internal short
-        de: Interner Kurzschluss im Magnetventil
-    - id: connector_corrosion
+        en: Exhaust actuator wire of cylinder 4 in contact with battery voltage
+        de: Leitung des Auslass-Stellglieds von Zylinder 4 hat Kontakt zur Batteriespannung
+    - id: actuator_coil_shorted
+      likelihood: medium
+      label:
+        en: Exhaust actuator coil with shorted windings
+        de: Spule des Auslass-Stellglieds mit Windungsschluss
+    - id: ecm_driver_fault
       likelihood: low
       label:
-        en: 'Connector pins corroded - high contact resistance'
-        de: 'Steckerkontakte korrodiert - hoher Übergangswiderstand'
+        en: Output stage of the engine control module defective
+        de: Endstufe des Motorsteuergeräts defekt
+  symptoms:
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
+    - en: Deactivation unavailable
+      de: Abschaltung nicht verfügbar
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [150, 1200]
-    estimated_hours: [1.0, 6.0]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3439, P3424, P3447, P3416, P3463, P3464, P3488]
+  related_codes: [P3429, P3430, P3431, P3428, P3424, P3440]
   sources:
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
-    - https://en.wikipedia.org/wiki/On-board_diagnostics
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03A%20Diagnostics.pdf
+    - https://patents.google.com/patent/US20070240659A1/en
+  reviewed: '2026-11-06'
 
 - code: P3433
   category: powertrain
