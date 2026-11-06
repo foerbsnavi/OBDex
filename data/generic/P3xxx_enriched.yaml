@@ -8305,38 +8305,46 @@
   category: powertrain
   title:
     en: A Camshaft Position Actuator Control Circuit Driver Current/Temperature Too High Bank 1
-    de: A-Nockenwellenversteller Endstufen-Strom/Temperatur zu hoch Bank 1
+    de: Nockenwellenversteller A Steuerkreis Treiberstrom/-temperatur zu hoch Bank 1
   description:
-    en: The driver stage controlling the intake cam position actuator on bank 1 reports overcurrent or overtemperature, triggering thermal shutdown to protect the electronics.
-    de: Die Endstufe zur Ansteuerung des Einlass-Nockenwellenverstellers Bank 1 meldet Überstrom oder Übertemperatur und schaltet zum Schutz der Elektronik thermisch ab.
+    en: "P34C4 is logged when the output stage feeding the bank 1 intake actuator A reports that its current or its own temperature has passed the permitted limit. The code belongs to electric phasers, where a small motor instead of an oil valve turns the camshaft. An Aisin patent shows the protective logic: a current sensor and a board temperature sensor sit on the motor driver, and if the board stays hot the controller first eases the motor off its end stop and later cuts the current. NTN-SNR files P34C4 under inlet adjustment, bank 1. Nissan drives both intake cams of the 2018 Pathfinder electrically from a separate module (NTB18-016), yet no public manufacturer text covers P34C4 itself. A binding phaser, sludged oil or a shorted motor winding are typical triggers. Bank 2 is P34C5."
+    de: "P34C4 steht, wenn die Endstufe des Einlassverstellers A (Bank 1) meldet, dass ihr Strom oder ihre eigene Temperatur über der Grenze liegt. Gemeint sind elektrische Versteller, bei denen ein kleiner Motor statt eines Ölventils die Nockenwelle verdreht. Ein Aisin-Patent beschreibt den Schutz: Auf der Treiberplatine sitzen ein Stromsensor und ein Temperaturfühler; bleibt die Platine heiß, löst das Steuergerät den Versteller zuerst vom Anschlag und nimmt später den Strom ganz weg. NTN-SNR ordnet P34C4 der Einlassverstellung von Bank 1 zu. Nissan verstellt beim Pathfinder 2018 beide Einlassnocken elektrisch über ein eigenes Steuergerät (NTB18-016); eine öffentliche Herstellerbeschreibung zu P34C4 gibt es aber nicht. Häufige Auslöser sind ein schwergängiger Versteller, verschlammtes Öl oder eine Windung mit Schluss. Bank 2 meldet P34C5."
   affected_components:
     - cam_actuator_a_driver_b1
     - cam_actuator_a_b1
   common_causes:
-    - id: short_circuit
+    - id: actuator_binding
       likelihood: high
       label:
-        en: Short circuit in actuator wiring or coil
-        de: Kurzschluss in Aktuator-Verkabelung oder Spule
-    - id: actuator_seized
+        en: Phaser stiff or held against its stop, motor draws high current for long
+        de: Versteller schwergängig oder am Anschlag, Motor zieht lange hohen Strom
+    - id: oil_condition
       likelihood: medium
       label:
-        en: Actuator mechanically seized, drawing high current
-        de: Aktuator mechanisch festgefressen, hoher Strom
+        en: Low or sludged engine oil making the phaser hard to turn
+        de: Zu wenig oder verschlammtes Motoröl, Versteller dreht schwer
+    - id: motor_winding_short
+      likelihood: medium
+      label:
+        en: Winding or motor lead of the bank 1 actuator shorted
+        de: Windung oder Motorleitung des Stellers auf Bank 1 mit Schluss
+    - id: driver_module
+      likelihood: low
+      label:
+        en: Output stage or its sensors in the phaser control module faulty
+        de: Endstufe oder deren Sensoren im Verstellersteuergerät defekt
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Power loss especially in mid-rpm range'
-      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
-    - en: 'Possible rough idle or stalling'
-      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: Intake timing on bank 1 no longer adjusted, held at a fixed angle
+      de: Einlasssteuerzeit auf Bank 1 wird nicht mehr verstellt, bleibt fest
+    - en: Weaker pull at low revs, rougher idle on a cold engine
+      de: Weniger Zug untenherum, unruhigerer Leerlauf bei kaltem Motor
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur: [200, 2000]
-    estimated_hours: [1.5, 8]
+    estimated_cost_eur: [80, 1200]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
@@ -8344,42 +8352,58 @@
     limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [P34C5, P34C6, P34C7]
+  related_codes: [P34C5, P34C6, P34C8, P34A4, P34AC, P0010]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Variable_valve_timing
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.ntn-snr.com/sites/default/files/2025-07/TECHinfo_CMP_UK.pdf
+    - https://patents.google.com/patent/US20220003132A1/en
+    - https://static.nhtsa.gov/odi/tsbs/2018/MC-10130502-9999.pdf
+  reviewed: '2026-11-06'
 
 - code: P34C5
   category: powertrain
   title:
     en: A Camshaft Position Actuator Control Circuit Driver Current/Temperature Too High Bank 2
-    de: A-Nockenwellenversteller Endstufen-Strom/Temperatur zu hoch Bank 2
+    de: Nockenwellenversteller A Steuerkreis Treiberstrom/-temperatur zu hoch Bank 2
   description:
-    en: 'Driver stage controlling the intake cam position actuator on bank 2 reports overcurrent or overtemperature. The camshaft position sensor identifies which cylinder is on the compression stroke — without it the ECM cannot run sequential injection or coil-on-plug ignition correctly.'
-    de: 'Endstufe des Einlass-Nockenwellenverstellers Bank 2 meldet Überstrom oder Übertemperatur. Der Nockenwellen-Positionssensor erkennt, welcher Zylinder sich im Verdichtungstakt befindet — ohne ihn kann das Steuergerät weder sequentielle Einspritzung noch Coil-on-Plug-Zündung sauber steuern.'
+    en: "P34C5 mirrors P34C4 on bank 2 for intake actuator A: the driver powering the electric phaser motor on the second cylinder bank has measured too much current or run too hot and protects itself. Only V or boxer engines with one electric intake phaser per bank can log it. Two banks give a handy cross-check: if the fault stays on bank 2 after the motors trade places, wiring or the module are to blame; if it moves with the motor, the motor is. The Aisin patent explains why heat and current are judged together, as pressing the phaser hard against its stop lifts both at once. NTN-SNR places it on the bank 2 inlet side. No carmaker publishes P34C5; Nissan's module bulletin NTB18-016 for the 2018 Pathfinder only shows the hardware type. Bank 1: P34C4."
+    de: "P34C5 ist das Gegenstück auf Bank 2: Die Endstufe, die den elektrischen Einlassversteller A der zweiten Zylinderbank antreibt, hat zu viel Strom gemessen oder ist zu warm geworden und schützt sich. Möglich ist das nur bei V- oder Boxermotoren mit je einem elektrischen Einlassversteller pro Bank. Zwei Bänke erlauben einen einfachen Gegentest: Bleibt der Fehler nach dem Tausch der Stellmotoren auf Bank 2, liegen Leitungen oder Steuergerät nahe; wandert er mit, ist es der Motor. Warum Wärme und Strom gemeinsam bewertet werden, zeigt das Aisin-Patent: Drückt der Motor den Versteller fest an den Anschlag, steigen beide zugleich. NTN-SNR führt den Code für die Einlassseite von Bank 2. Kein Autohersteller veröffentlicht P34C5; Nissans Bulletin NTB18-016 zum Pathfinder 2018 zeigt nur die Bauart. Bank 1: P34C4."
   affected_components:
     - cam_actuator_a_driver_b2
     - cam_actuator_a_b2
   common_causes:
-    - id: short_circuit
+    - id: actuator_binding
       likelihood: high
       label:
-        en: Short circuit in actuator wiring or coil
-        de: Kurzschluss in Aktuator-Verkabelung oder Spule
+        en: Bank 2 phaser stiff or stuck at an end stop
+        de: Versteller auf Bank 2 schwergängig oder am Endanschlag fest
+    - id: motor_lead_short
+      likelihood: medium
+      label:
+        en: Motor lead to the bank 2 actuator chafed or shorted
+        de: Motorleitung zum Steller auf Bank 2 durchgescheuert oder kurzgeschlossen
+    - id: actuator_motor
+      likelihood: medium
+      label:
+        en: Electric motor of the bank 2 actuator worn or internally shorted
+        de: Elektromotor des Stellers auf Bank 2 verschlissen oder innen kurzgeschlossen
+    - id: driver_module
+      likelihood: low
+      label:
+        en: Bank 2 output stage in the phaser control module faulty
+        de: Endstufe für Bank 2 im Verstellersteuergerät defekt
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Power loss especially in mid-rpm range'
-      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
-    - en: 'Possible rough idle or stalling'
-      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: Bank 2 intake timing frozen, banks run unevenly
+      de: Einlasssteuerzeit von Bank 2 eingefroren, Bänke laufen ungleich
+    - en: Slightly rough idle and less torque at low engine speed
+      de: Leicht unruhiger Leerlauf, weniger Drehmoment bei niedriger Drehzahl
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur: [200, 2000]
-    estimated_hours: [1.5, 8]
+    estimated_cost_eur: [80, 1200]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
@@ -8387,42 +8411,53 @@
     limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [P34C4, P34C6, P34C7]
+  related_codes: [P34C4, P34C7, P34C8, P34A8, P34A9, P0020]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Variable_valve_timing
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.ntn-snr.com/sites/default/files/2025-07/TECHinfo_CMP_UK.pdf
+    - https://patents.google.com/patent/US20220003132A1/en
+    - https://static.nhtsa.gov/odi/tsbs/2018/MC-10130502-9999.pdf
+  reviewed: '2026-11-06'
 
 - code: P34C6
   category: powertrain
   title:
     en: B Camshaft Position Actuator Control Circuit Driver Current/Temperature Too High Bank 1
-    de: B-Nockenwellenversteller Endstufen-Strom/Temperatur zu hoch Bank 1
+    de: Nockenwellenversteller B Steuerkreis Treiberstrom/-temperatur zu hoch Bank 1
   description:
-    en: 'Driver stage controlling the exhaust cam position actuator on bank 1 reports overcurrent or overtemperature. The camshaft position sensor identifies which cylinder is on the compression stroke — without it the ECM cannot run sequential injection or coil-on-plug ignition correctly.'
-    de: 'Endstufe des Auslass-Nockenwellenverstellers Bank 1 meldet Überstrom oder Übertemperatur. Der Nockenwellen-Positionssensor erkennt, welcher Zylinder sich im Verdichtungstakt befindet — ohne ihn kann das Steuergerät weder sequentielle Einspritzung noch Coil-on-Plug-Zündung sauber steuern.'
+    en: "P34C6 concerns actuator B, which NTN-SNR assigns to the exhaust camshaft, on bank 1: the stage driving it signals overcurrent or overheating. That presumes an electrically powered exhaust phaser, and none is documented in public sources. The 2022 Mitsubishi Outlander shifts its exhaust camshaft hydraulically via a solenoid valve, which fail-safe holds at a reference angle, and Mercedes-Benz uses B-side codes on its M176/M177 V8 only for CAMTRONIC position feedback, not for driver load. So no manufacturer is known for this code. Should it appear, the logic of the Aisin patent applies: a hot driver board or a motor fighting a stiff phaser pushes current up, and the controller backs off or switches the motor off. Exhaust timing then rests at its default, which mainly costs smoothness and some economy. Bank 2: P34C7."
+    de: "P34C6 betrifft Versteller B, den NTN-SNR der Auslassnockenwelle zuordnet, auf Bank 1: Dessen Endstufe meldet Überstrom oder Übertemperatur. Voraussetzung wäre ein Auslassversteller mit Elektromotor, und ein solcher ist in öffentlichen Quellen nicht beschrieben. Der Mitsubishi Outlander 2022 verstellt die Auslassnocke über ein Ölsteuerventil, das im Notlauf in Referenzlage bleibt; Mercedes-Benz nutzt beim V8 M176/M177 Codes der B-Seite nur für die Lagerückmeldung von CAMTRONIC, nicht für die Belastung einer Endstufe. Ein Anwender ist daher nicht bekannt. Tritt der Code auf, gilt das Prinzip aus dem Aisin-Patent: Eine heiße Treiberplatine oder ein Motor gegen einen schwergängigen Versteller treibt den Strom hoch, worauf das Steuergerät zurückregelt oder abschaltet. Die Auslasssteuerzeit bleibt dann in Grundstellung. Bank 2: P34C7."
   affected_components:
     - cam_actuator_b_driver_b1
     - cam_actuator_b_b1
   common_causes:
-    - id: short_circuit
-      likelihood: high
+    - id: actuator_binding
+      likelihood: medium
       label:
-        en: Short circuit in actuator wiring or coil
-        de: Kurzschluss in Aktuator-Verkabelung oder Spule
+        en: Exhaust phaser on bank 1 stiff, motor overloaded
+        de: Auslassversteller auf Bank 1 schwergängig, Motor überlastet
+    - id: wiring_short
+      likelihood: medium
+      label:
+        en: Short in the motor wiring of actuator B, bank 1
+        de: Schluss in der Motorleitung von Steller B, Bank 1
+    - id: driver_module
+      likelihood: low
+      label:
+        en: Output stage for actuator B damaged or overheated
+        de: Endstufe für Steller B beschädigt oder überhitzt
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Power loss especially in mid-rpm range'
-      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
-    - en: 'Possible rough idle or stalling'
-      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: Exhaust cam timing on bank 1 fixed in its default position
+      de: Auslasssteuerzeit auf Bank 1 in Grundstellung festgehalten
+    - en: Slightly higher fuel use, minor loss of smoothness
+      de: Etwas höherer Verbrauch, leicht unruhigerer Lauf
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur: [200, 2000]
-    estimated_hours: [1.5, 8]
+    estimated_cost_eur: [80, 1300]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
@@ -8430,42 +8465,54 @@
     limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [P34C5, P34C7, P34C4]
+  related_codes: [P34C7, P34C4, P34C8, P34B4, P34BC, P0013]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Variable_valve_timing
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.ntn-snr.com/sites/default/files/2025-07/TECHinfo_CMP_UK.pdf
+    - https://patents.google.com/patent/US20220003132A1/en
+    - https://mitsubishitechinfo.com/data/DG/2022/02/HTML/N5020401U0011Z00USA.htm
+    - https://static.nhtsa.gov/odi/tsbs/2026/MC-11027678-0001.pdf
+  reviewed: '2026-11-06'
 
 - code: P34C7
   category: powertrain
   title:
     en: B Camshaft Position Actuator Control Circuit Driver Current/Temperature Too High Bank 2
-    de: B-Nockenwellenversteller Endstufen-Strom/Temperatur zu hoch Bank 2
+    de: Nockenwellenversteller B Steuerkreis Treiberstrom/-temperatur zu hoch Bank 2
   description:
-    en: 'Driver stage controlling the exhaust cam position actuator on bank 2 reports overcurrent or overtemperature. The camshaft position sensor identifies which cylinder is on the compression stroke — without it the ECM cannot run sequential injection or coil-on-plug ignition correctly.'
-    de: 'Endstufe des Auslass-Nockenwellenverstellers Bank 2 meldet Überstrom oder Übertemperatur. Der Nockenwellen-Positionssensor erkennt, welcher Zylinder sich im Verdichtungstakt befindet — ohne ihn kann das Steuergerät weder sequentielle Einspritzung noch Coil-on-Plug-Zündung sauber steuern.'
+    en: "P34C7 closes the group of four driver-load codes: on bank 2 the power stage of the exhaust-side actuator B reports current or temperature above its limit. NTN-SNR ties it to outlet adjustment on the second bank. It is the rarest of the set, because electric phasers have so far appeared on the intake side; no public manufacturer document names P34C7. The fault type means the module is guarding itself, not that a sensor reads wrong, since position and temperature sensor faults of this actuator have their own codes (P34C0 to P34C3, P34B8). Plausible triggers are a motor working against a seized or poorly oiled phaser, a short in its wiring, or a driver that runs hot because it sits close to the exhaust side. CARB treats such phasers as monitored outputs. Driving continues, just with exhaust timing locked. Bank 1: P34C6."
+    de: "P34C7 schließt die Vierergruppe der Endstufencodes ab: Für Bank 2 meldet der Treiber des auslassseitigen Verstellers B Strom oder Temperatur über dem Grenzwert. NTN-SNR führt ihn unter der Auslassverstellung der zweiten Bank. Er ist der seltenste der Gruppe, denn elektrische Versteller gibt es bislang auf der Einlassseite; ein öffentliches Herstellerdokument zu P34C7 existiert nicht. Der Fehlertyp zeigt Selbstschutz an; fehlerhafte Lage- oder Temperaturfühler dieses Verstellers haben eigene Codes (P34C0 bis P34C3, P34B8). Denkbar sind ein Motor, der gegen einen festsitzenden oder schlecht geschmierten Versteller arbeitet, ein Schluss in seiner Leitung oder ein Treiber, der nahe der heißen Auslassseite überhitzt. Der Motor läuft mit fester Auslasssteuerzeit weiter. Bank 1: P34C6."
   affected_components:
     - cam_actuator_b_driver_b2
     - cam_actuator_b_b2
   common_causes:
-    - id: short_circuit
-      likelihood: high
+    - id: actuator_seized
+      likelihood: medium
       label:
-        en: Short circuit in actuator wiring or coil
-        de: Kurzschluss in Aktuator-Verkabelung oder Spule
+        en: Bank 2 exhaust phaser seized or poorly lubricated
+        de: Auslassversteller auf Bank 2 festsitzend oder schlecht geschmiert
+    - id: wiring_short
+      likelihood: medium
+      label:
+        en: Motor wiring of actuator B, bank 2, shorted or heat-damaged
+        de: Motorleitung von Steller B, Bank 2, kurzgeschlossen oder hitzegeschädigt
+    - id: driver_overheat
+      likelihood: low
+      label:
+        en: Driver overheating from poor cooling or a module fault
+        de: Treiber überhitzt wegen schlechter Kühlung oder Steuergerätefehler
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Power loss especially in mid-rpm range'
-      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
-    - en: 'Possible rough idle or stalling'
-      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: Bank 2 exhaust timing no longer varied
+      de: Auslasssteuerzeit von Bank 2 wird nicht mehr verändert
+    - en: Usually only small changes in how the engine runs
+      de: Meist nur geringe Änderungen im Motorlauf
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur: [200, 2000]
-    estimated_hours: [1.5, 8]
+    estimated_cost_eur: [80, 1300]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
@@ -8473,51 +8520,53 @@
     limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [P34C6, P34C5, P34C4]
+  related_codes: [P34C6, P34C5, P34C8, P34B8, P34C0, P0023]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Variable_valve_timing
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.ntn-snr.com/sites/default/files/2025-07/TECHinfo_CMP_UK.pdf
+    - https://patents.google.com/patent/US20220003132A1/en
+  reviewed: '2026-11-06'
 
 - code: P34C8
   category: powertrain
   title:
     en: Camshaft Position Control Module Performance
-    de: Nockenwellenpositions-Steuermodul Leistung
+    de: Steuergerät Nockenwellenverstellung Funktion
   description:
-    en: The dedicated camshaft position control module reports an internal performance fault — self-diagnostic flagged an issue with internal computation, drivers or sensor interfaces.
-    de: Das dedizierte Nockenwellenpositions-Steuermodul meldet einen internen Leistungsfehler — Eigendiagnose hat einen Fehler an interner Berechnung, Endstufen oder Sensorschnittstellen erkannt.
+    en: "P34C8 does not point at one actuator or bank; it says the separate controller for cam adjustment is not working properly in itself. Mitsubishi defines it for the 2022 Outlander: with the ignition on, the controller of the electric intake phaser detects an internal CPU error, and the module is the only listed cause. Fail-safe then parks the electric intake motor and the exhaust oil control solenoid at their reference angle, lets the runner flap open, stops EGR, drops stratified cold starts and runs idle at a set speed. Mercedes-Benz lists P34C800 for M176/M177 V8s as a general CAMTRONIC fault (LI05.20-P-080192), with a software update, newer actuators and a check for heat-damaged harness as remedy. Unlike P34C4 to P34C7, which judge one output stage, this code concerns the module as a whole."
+    de: "P34C8 betrifft keinen einzelnen Versteller, sondern das eigene Steuergerät der Nockenwellenverstellung, das intern gestört ist. Mitsubishi dokumentiert ihn im Outlander 2022: Bei eingeschalteter Zündung erkennt das Modul des elektrischen Einlassverstellers einen Fehler seines Prozessors; als Ursache steht allein dieses Steuergerät. Im Notlauf bleiben elektrischer Einlassmotor und Ölsteuerventil der Auslassseite in Referenzlage, die Saugrohrklappe geht auf, die AGR wird abgeschaltet, der geschichtete Kaltstart entfällt und der Leerlauf läuft mit fester Drehzahl. Mercedes-Benz führt P34C800 bei den V8 M176/M177 als allgemeinen CAMTRONIC-Fehler (LI05.20-P-080192) und nennt Software-Update, neuere Steller und eine Prüfung des Kabelbaums auf Hitzeschäden. Anders als P34C4 bis P34C7 betrifft der Code das Steuergerät insgesamt."
   affected_components:
     - cam_position_control_module
   common_causes:
-    - id: module_internal_fault
+    - id: module_internal
       likelihood: high
       label:
-        en: Module internal fault
-        de: Interner Modulfehler
-    - id: needs_reflash
+        en: Internal processor fault in the cam adjustment control module
+        de: Interner Prozessorfehler im Steuergerät der Nockenwellenverstellung
+    - id: module_software
+      likelihood: medium
+      label:
+        en: "Outdated control software (Mercedes M176/M177: update)"
+        de: "Veraltete Steuersoftware (Mercedes M176/M177: Update)"
+    - id: supply_harness
       likelihood: low
       label:
-        en: 'Module software outdated, reflash may resolve'
-        de: 'Modul-Software veraltet, Reflash kann helfen'
-    - id: voltage_supply_issue
-      likelihood: low
-      label:
-        en: 'Supply voltage outside specification'
-        de: 'Versorgungsspannung außerhalb der Spezifikation'
+        en: Module supply or harness heat-damaged or with poor contact
+        de: Versorgung oder Kabelbaum des Steuergeräts hitzegeschädigt bzw. mit schlechtem Kontakt
   symptoms:
-    - en: 'Check engine light on'
-      de: 'Motorkontrollleuchte an'
-    - en: 'Power loss especially in mid-rpm range'
-      de: 'Leistungsverlust besonders im mittleren Drehzahlbereich'
-    - en: 'Possible rough idle or stalling'
-      de: 'Möglicherweise unrunder Leerlauf oder Absterben'
-    - en: 'Increased fuel consumption'
-      de: 'Erhöhter Kraftstoffverbrauch'
+    - en: Check engine light on
+      de: Motorkontrollleuchte an
+    - en: Cam phasing held at its reference position
+      de: Nockenwellenverstellung in Referenzlage festgehalten
+    - en: Rougher cold start and fixed idle speed
+      de: Rauerer Kaltstart und fest eingestellte Leerlaufdrehzahl
+    - en: Noticeably less torque, higher fuel use
+      de: Spürbar weniger Drehmoment, höherer Verbrauch
   repair:
-    difficulty: hard
+    difficulty: medium
     diy_possible: false
-    estimated_cost_eur: [400, 2500]
-    estimated_hours: [1, 5]
+    estimated_cost_eur: [100, 1000]
+    estimated_hours: [0.5, 2.5]
   flags:
     mil: true
     emissions_relevant: true
@@ -8525,6 +8574,10 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [P34C4, P34C5, P34C6, P34C7, P0606, P34AC]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Variable_valve_timing
+    - https://mitsubishitechinfo.com/data/DG/2022/02/HTML/N5020401U0011Z00USA.htm
+    - https://static.nhtsa.gov/odi/tsbs/2026/MC-11027678-0001.pdf
+    - https://www.ntn-snr.com/sites/default/files/2025-07/TECHinfo_CMP_UK.pdf
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+  reviewed: '2026-11-06'
