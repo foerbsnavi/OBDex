@@ -8112,157 +8112,158 @@
   category: network
   title:
     en: Cathode Backpressure Valve Control Circuit
-    de: Kathoden-Gegendruckventil Steuerschaltkreis
+    de: Kathoden-Gegendruckventil Steuerkreis
   description:
-    en: Generic electrical fault on the cathode back-pressure valve control. The valve regulates pressure on the cathode (air) side of the fuel cell stack.
-    de: Allgemeiner elektrischer Fehler an der Steuerung des Kathoden-Gegendruckventils. Das Ventil regelt den Druck auf der Kathodenseite (Luft) des Stacks.
+    en: "U355F reports a wiring or output stage fault on the actuator of the valve at the cathode outlet, which throttles the air leaving the stack and thereby sets the pressure the air side runs at. GM moves such a valve in closed loop on a pressure reading, in steps or continuously. U355F itself is absent from public maker documents. For the 2021–22 Mirai, Toyota bulletin T-SB-0043-23 ties a lit MIL to a stuck air pressure regulating valve (P1F6E71), fixed by new EV control software or, since the 2025 revision, a new valve. In a Toyota patent air pressure that repeatedly exceeds about 270 kPa counts as a fault: compressor stopped, air routed into the bypass, valve opened. An open or shorted drive leaves cathode pressure uncontrolled; expect a warning and cut power. Position feedback has its own code, U3560."
+    de: Der Code betrifft die Ansteuerung des Ventils am Kathodenaustritt. Es drosselt die abströmende Luft und legt so fest, unter welchem Druck die Luftseite des Stacks arbeitet; GM verstellt es laut Patent stufig oder stufenlos anhand eines Drucksensors. Ist der Ansteuerkreis unterbrochen oder kurzgeschlossen, lässt sich der Kathodendruck nicht mehr führen. Öffentlich nennt kein Hersteller U355F. Toyota belegt beim Mirai 2021–22 für ein klemmendes Luftdruck-Regelventil (P1F6E71) die MIL und hilft mit neuer Software ab, seit der Revision 2025 notfalls mit einem neuen Ventil (T-SB-0043-23). Steigt der Luftdruck wiederholt über etwa 270 kPa, schaltet Toyota laut Patent den Verdichter ab, lenkt die Luft in den Bypass und öffnet das Ventil. Für den Fahrer heißt das Warnmeldung und weniger Leistung. Die Stellungsrückmeldung meldet U3560.
   affected_components:
     - cathode_backpressure_valve
     - valve_wiring
   common_causes:
-    - id: solenoid_failed
+    - id: harness_connector_cathode_outlet
       likelihood: high
       label:
-        en: Valve actuator failed
-        de: Ventil-Aktuator defekt
-    - id: gateway_module_fault
+        en: Open, short or corrosion in wiring or connector of the valve actuator (wet exhaust area)
+        de: Unterbrechung, Kurzschluss oder Korrosion an Leitung oder Stecker des Ventilantriebs (feuchter Abluftbereich)
+    - id: valve_actuator_motor_fault
+      likelihood: medium
+      label:
+        en: Valve motor or actuator winding faulty
+        de: Ventilmotor oder Antriebswicklung defekt
+    - id: fuel_cell_controller_driver
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Driver stage of the fuel cell control unit faulty or software outdated
+        de: Endstufe des Brennstoffzellen-Steuergeräts defekt oder Software veraltet
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Noticeably reduced power
+      de: Spürbar weniger Leistung
+    - en: Fuel cell system shuts down or vehicle does not reach READY
+      de: Brennstoffzellensystem schaltet ab oder Fahrzeug wird nicht fahrbereit
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [300, 2500]
-    estimated_hours: [1.5, 6]
+    estimated_cost_eur: [150, 1200]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: false
-    drive_cycle_required: true
+    drive_cycle_required: false
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U3560, U3561, U3562, U355D]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
+    - https://patents.google.com/patent/US9397354B2/en
+    - https://patents.google.com/patent/US9960437B2/en
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11015506-0001.pdf
+  reviewed: '2026-11-06'
 
 - code: U3560
   category: network
   title:
     en: Cathode Backpressure Valve Position Sensor Circuit
-    de: Kathoden-Gegendruckventil Positionssensor Schaltkreis
+    de: Kathoden-Gegendruckventil Positionssensor Stromkreis
   description:
-    en: Generic fault on the position sensor of the cathode back-pressure valve (closed-loop position feedback).
-    de: Allgemeiner Fehler am Positionssensor des Kathoden-Gegendruckventils (Positionsrückführung im Regelkreis).
+    en: "U3560 is set when the signal of the position sensor on the cathode backpressure valve is missing, shorted or outside its electrical range. Outlet valves of this kind are often throttle flaps whose angle is reported back, as a Hydrogenics patent shows for the cathode and purge valves of a stack. The reading matters beyond the valve: in a GM patent the controller turns the valve position into an expected air-side pressure and compares it with the measured one to reveal leaks or blockages in the air path, so without a believable angle that check loses its footing. No manufacturer publishes U3560. The controller may carry on regulating from pressure alone or park the flap in a safe position; a warning and limited output are likely. Faults in powering the same valve are logged as U355F."
+    de: "Gemeldet wird ein Fehler im Signalkreis des Stellungsgebers am Kathoden-Gegendruckventil: Das Signal fehlt, ist kurzgeschlossen oder liegt außerhalb des zulässigen Spannungsbereichs. Viele dieser Ventile sind Drosselklappen mit Winkelrückmeldung – ein Hydrogenics-Patent zeigt das für Kathoden- und Spülventile. Die Rückmeldung dient nicht nur der Ventilregelung: GM errechnet laut Patent aus der Klappenstellung den zu erwartenden Druck im Luftpfad und erkennt im Vergleich mit dem Messwert Undichtigkeiten oder Verstopfungen. Ohne plausible Stellung fehlt dieser Prüfung die Grundlage. Öffentliche Herstellerunterlagen zu U3560 gibt es nicht. Denkbar ist, dass das Steuergerät nur noch nach Druck regelt oder die Klappe in eine sichere Lage fährt; Mit Warnmeldung und Leistungsrücknahme ist zu rechnen. Den Ansteuerkreis meldet U355F."
   affected_components:
     - cathode_backpressure_valve_position_sensor
     - sensor_wiring
   common_causes:
-    - id: sensor_failed
+    - id: sensor_connector_wiring
       likelihood: high
       label:
-        en: Position sensor failed
-        de: Positionssensor defekt
-    - id: gateway_module_fault
+        en: Open, short or moisture in the position sensor wiring or connector
+        de: Unterbrechung, Kurzschluss oder Feuchtigkeit an Leitung oder Stecker des Stellungsgebers
+    - id: position_sensor_internal_fault
+      likelihood: medium
+      label:
+        en: Position sensor faulty (often only available with the valve unit)
+        de: Stellungsgeber defekt (oft nur mit der Ventileinheit erhältlich)
+    - id: sensor_supply_ground_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Sensor 5 V supply or ground missing
+        de: 5-V-Versorgung oder Masse des Gebers fehlt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Reduced power
+      de: Weniger Leistung
+    - en: Further air path codes stored at the same time
+      de: Weitere Codes des Luftpfads gleichzeitig gespeichert
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1, 4]
+    estimated_cost_eur: [150, 1200]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
     emissions_relevant: false
-    drive_cycle_required: true
-    limp_mode_possible: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U355F, U3563, U3561, U355D]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
+    - https://patents.google.com/patent/US11855320B2/en
+    - https://patents.google.com/patent/US9397354B2/en
+  reviewed: '2026-11-06'
 
 - code: U3561
   category: network
   title:
     en: Cathode Bypass Valve Control Circuit
-    de: Kathoden-Bypassventil Steuerschaltkreis
+    de: Kathoden-Bypassventil Steuerkreis
   description:
-    en: Generic electrical fault on the cathode bypass valve control. Bypass routes air around the stack during startup or low-load operation.
-    de: Allgemeiner elektrischer Fehler an der Steuerung des Kathoden-Bypassventils. Der Bypass leitet Luft am Stack vorbei bei Start oder Niedriglast.
+    en: "U3561 points to a break, a short or an output stage fault in the actuator circuit of the cathode bypass valve. This valve lets part of the compressor delivery skip the stack and flow straight into the exhaust. Nissan gives two reasons: keeping the compressor clear of surge when the stack needs little air, and putting enough air into the exhaust to dilute the hydrogen released when the anode is purged. Because opening the bypass lowers stack pressure, Nissan closes the pressure control valve a little further at the same moment. Toyota uses a three-way valve that can send the entire flow into the bypass when air pressure has to be dumped. No public maker document lists U3561. If the valve cannot be driven, a fuel cell warning is likely, along with limited power and possibly no start. Its mechanical behaviour is judged under U3562."
+    de: "Hier geht es um den elektrischen Ansteuerkreis des Kathoden-Bypassventils – Unterbrechung, Kurzschluss oder ein Fehler der Endstufe. Das Ventil schickt einen Teil der Verdichterluft am Stack vorbei direkt in den Abgasstrang. Nissan nennt dafür zwei Gründe: Der Verdichter soll bei geringem Luftbedarf des Stacks nicht in die Pumpgrenze geraten, und beim Spülen der Anode muss genug Luft im Abgas sein, um den austretenden Wasserstoff zu verdünnen. Weil der Stackdruck beim Öffnen des Bypasses sinkt, schließt Nissan zugleich das Druckregelventil etwas weiter. Toyota setzt ein Dreiwegeventil ein, das im Notfall die gesamte Luft in den Bypass lenkt. U3561 findet sich in keiner öffentlichen Herstellerunterlage. Folgen: Warnmeldung, gedrosselte Leistung, unter Umständen kein Start. Die mechanische Funktion bewertet U3562."
   affected_components:
     - cathode_bypass_valve
     - valve_wiring
   common_causes:
-    - id: solenoid_failed
+    - id: harness_connector_bypass_valve
       likelihood: high
       label:
-        en: Valve actuator failed
-        de: Ventil-Aktuator defekt
-    - id: gateway_module_fault
+        en: Open, short or corrosion in wiring or connector of the bypass valve
+        de: Unterbrechung, Kurzschluss oder Korrosion an Leitung oder Stecker des Bypassventils
+    - id: valve_actuator_motor_fault
+      likelihood: medium
+      label:
+        en: Bypass valve motor or actuator faulty
+        de: Motor oder Antrieb des Bypassventils defekt
+    - id: fuel_cell_controller_driver
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Driver stage of the fuel cell control unit faulty
+        de: Endstufe des Brennstoffzellen-Steuergeräts defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Reduced power, compressor speed fluctuating at low load
+      de: Weniger Leistung, schwankende Verdichterdrehzahl bei geringer Last
+    - en: Fuel cell system does not start
+      de: Brennstoffzellensystem startet nicht
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [300, 2500]
-    estimated_hours: [1.5, 6]
+    estimated_cost_eur: [150, 1200]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
     emissions_relevant: false
-    drive_cycle_required: true
+    drive_cycle_required: false
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U3562, U3563, U355F, U3559]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
+    - https://patents.google.com/patent/US10141587B2/en
+    - https://patents.google.com/patent/US9960437B2/en
+  reviewed: '2026-11-06'
 
 - code: U3562
   category: network
@@ -8270,40 +8271,43 @@
     en: Cathode Bypass Valve
     de: Kathoden-Bypassventil
   description:
-    en: 'Generic fault on the cathode bypass valve — combines circuit and mechanical performance. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Allgemeiner Fehler am Kathoden-Bypassventil — fasst Schaltkreis- und mechanische Leistung zusammen. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: "Unlike U3561, this code concerns how the cathode bypass valve itself behaves: it does not reach or hold the opening the controller asks for, for instance because it sticks. A Toyota patent shows why a valve stuck shut is serious. While a cold stack is warmed by deliberately inefficient generation, bypass air is supposed to thin out hydrogen in the exhaust; if ice holds the valve closed, all of that air enters the stack, which then produces more power than intended. Toyota spots this from compressor outlet pressure above a limit or from stack current straying from its command, then opens the backpressure valve and slows the compressor. A valve stuck open costs stack pressure instead, as Nissan notes. No maker publishes U3562; that stuck air valves switch on the MIL is documented by Toyota for the Mirai (T-SB-0043-23)."
+    de: "Anders als bei U3561 ist hier nicht der Stromkreis, sondern das Verhalten des Kathoden-Bypassventils auffällig: Es erreicht oder hält die verlangte Öffnung nicht, etwa weil es klemmt. Warum ein geschlossen hängendes Ventil heikel ist, zeigt ein Toyota-Patent. Beim Aufwärmen eines kalten Stacks mit absichtlich schlechtem Wirkungsgrad soll Bypassluft den Wasserstoff im Abgas verdünnen; hält Eis das Ventil zu, strömt die ganze Luft durch den Stack, der dann zu viel Leistung abgibt. Toyota erkennt das an zu hohem Druck hinter dem Verdichter oder an einem Stackstrom, der vom Sollwert abweicht, öffnet das Gegendruckventil und senkt die Verdichterdrehzahl. Hängt es offen, fehlt laut Nissan Stackdruck. U3562 ist öffentlich nicht dokumentiert; dass klemmende Luftventile die MIL schalten, belegt Toyota beim Mirai (T-SB-0043-23)."
   affected_components:
     - cathode_bypass_valve
   common_causes:
-    - id: valve_failed
-      likelihood: high
+    - id: valve_frozen
+      likelihood: medium
       label:
-        en: Valve electrical or mechanical failure
-        de: Ventil elektrisch oder mechanisch defekt
-    - id: gateway_module_fault
+        en: Valve frozen in place after a cold soak
+        de: Ventil nach Frostnacht festgefroren
+    - id: valve_sticking_deposits
+      likelihood: medium
+      label:
+        en: Valve sticking from deposits or wear
+        de: Ventil klemmt durch Ablagerungen oder Verschleiß
+    - id: actuator_weak
+      likelihood: medium
+      label:
+        en: Actuator too weak or gear damaged
+        de: Antrieb zu schwach oder Getriebe beschädigt
+    - id: position_feedback_misreading
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Position feedback reading wrong, valve itself fine
+        de: Stellungsrückmeldung falsch, Ventil selbst in Ordnung
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Reduced power or failed start in frost
+      de: Weniger Leistung oder Startabbruch bei Frost
+    - en: Unusual compressor or air noise
+      de: Ungewohntes Verdichter- oder Luftgeräusch
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [300, 2500]
-    estimated_hours: [1.5, 6]
+    estimated_cost_eur: [300, 1500]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: false
@@ -8311,325 +8315,334 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U3561, U3563, U355F, U3559]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
+    - https://patents.google.com/patent/KR101224527B1/en
+    - https://patents.google.com/patent/US10141587B2/en
+    - https://static.nhtsa.gov/odi/tsbs/2023/MC-10241392-9999.pdf
+  reviewed: '2026-11-06'
 
 - code: U3563
   category: network
   title:
     en: Cathode Bypass Valve Position Sensor Circuit
-    de: Kathoden-Bypassventil Positionssensor Schaltkreis
+    de: Kathoden-Bypassventil Positionssensor Stromkreis
   description:
-    en: 'Generic fault on the position sensor of the cathode bypass valve. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Allgemeiner Fehler am Positionssensor des Kathoden-Bypassventils. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: U3563 means the position sensor on the cathode bypass valve delivers no usable signal because of a broken wire, a short or a voltage outside its window. Toyota's patent mounts such a valve body position sensor right at the bypass valve, with pressure sensors before and after it; the angle tells the controller how the compressor air is really being split between stack and bypass. A Hydrogenics patent likewise fits angle sensors to the throttle-type valves of its stack. No public manufacturer source names U3563. Without the feedback, the controller has to infer the valve state indirectly, for example from compressor outlet pressure or stack current as Toyota describes, and will usually restrict operation. Drive faults of the valve are U3561, a mechanically misbehaving valve U3562.
+    de: Der Stellungsgeber am Kathoden-Bypassventil liefert kein verwertbares Signal – wegen Unterbrechung, Kurzschluss oder einer Spannung außerhalb des erlaubten Fensters. Im Toyota-Patent sitzt ein solcher Geber direkt am Bypassventil, flankiert von Drucksensoren davor und dahinter; über die Stellung weiß das Steuergerät, wie sich die Verdichterluft tatsächlich auf Stack und Bypass verteilt. Auch Hydrogenics stattet die Drosselventile seines Systems mit Winkelgebern aus. Eine öffentliche Herstellerquelle für U3563 existiert nicht. Fehlt die Rückmeldung, muss das Steuergerät den Ventilzustand indirekt erschließen, etwa wie bei Toyota über den Druck hinter dem Verdichter oder den Stackstrom, und schränkt den Betrieb in der Regel ein. Ansteuerfehler meldet U3561, eine mechanische Fehlfunktion U3562.
   affected_components:
     - cathode_bypass_valve_position_sensor
     - sensor_wiring
   common_causes:
-    - id: sensor_failed
+    - id: sensor_connector_wiring
       likelihood: high
       label:
-        en: Position sensor failed
-        de: Positionssensor defekt
-    - id: gateway_module_fault
+        en: Open, short or moisture in the position sensor wiring or connector
+        de: Unterbrechung, Kurzschluss oder Feuchtigkeit an Leitung oder Stecker des Stellungsgebers
+    - id: position_sensor_internal_fault
+      likelihood: medium
+      label:
+        en: Position sensor in the valve unit faulty
+        de: Stellungsgeber in der Ventileinheit defekt
+    - id: sensor_supply_ground_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Shared 5 V supply or ground faulty (often with other sensor codes)
+        de: Gemeinsame 5-V-Versorgung oder Masse gestört (oft mit weiteren Sensorcodes)
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Reduced power, especially at low load
+      de: Weniger Leistung, vor allem bei geringer Last
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1, 4]
+    estimated_cost_eur: [150, 1200]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
     emissions_relevant: false
-    drive_cycle_required: true
-    limp_mode_possible: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U3561, U3562, U3560, U355F]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
+    - https://patents.google.com/patent/KR101224527B1/en
+    - https://patents.google.com/patent/US11855320B2/en
+  reviewed: '2026-11-06'
 
 - code: U3564
   category: network
   title:
     en: Hydrogen Supply Line A Pressure Sensor 1 Circuit
-    de: Wasserstoff-Versorgungsleitung A Drucksensor 1 Schaltkreis
+    de: Wasserstoffzufuhrleitung A Drucksensor 1 Stromkreis
   description:
-    en: Generic fault on the pressure sensor 1 in hydrogen supply line A — feeds the fuel cell anode after the tank's pressure regulator.
-    de: Allgemeiner Fehler am Drucksensor 1 in der Wasserstoff-Versorgungsleitung A — speist die Anode des Stacks nach dem Druckregler des Tanks.
+    en: "U3564 deals with the wiring of pressure sensor 1 on hydrogen supply line A, most likely the medium-pressure section behind the tank regulator; J2012 does not fix the spot. Toyota's patent shows such a layout: a mechanical reducing valve brings tank hydrogen down to roughly 1.1–1.6 MPa, an intermediate pressure sensor watches that section, and the injector then lowers the pressure to about 200–300 kPa for the stack. To find an offset, Toyota closes the tank valve, lets the injector draw the line down until the reducer stands wide open, and compares readings up- and downstream of it. Hyundai's Nexo has two hydrogen pressure sensors, numbered 1 and 2, with their own codes (P315200/P315300) and renewed both in campaign T4E; U3564 itself is in no public document. Without the value, regulator monitoring suffers and power may be limited."
+    de: "Der Code gilt dem Stromkreis des ersten Drucksensors in der Wasserstoffzufuhrleitung A – vermutlich im Mitteldruckabschnitt hinter dem Druckminderer; J2012 legt die Stelle nicht fest. Toyota beschreibt einen solchen Aufbau im Patent: Ein mechanischer Minderer senkt den Tankdruck auf rund 1,1 bis 1,6 MPa, ein Mitteldrucksensor überwacht diesen Abschnitt, der Injektor regelt danach auf etwa 200 bis 300 kPa für den Stack herunter. Einen Versatz erkennt Toyota, indem das Tankventil schließt, der Injektor die Leitung leert, bis der Minderer ganz offen steht, und die Werte davor und dahinter verglichen werden. Hyundai führt beim Nexo Wasserstoffdrucksensor 1 und 2 mit eigenen Codes (P315200/P315300). U3564 selbst taucht in öffentlichen Unterlagen nicht auf. Ohne Messwert leidet die Überwachung des Minderers; Leistungsbegrenzung ist möglich."
   affected_components:
     - h2_supply_a_pressure_sensor_1
     - sensor_wiring
   common_causes:
-    - id: sensor_failed
+    - id: sensor_connector_wiring
       likelihood: high
       label:
-        en: Sensor failed
-        de: Sensor defekt
-    - id: gateway_module_fault
+        en: Open, short or corrosion in wiring or connector of pressure sensor 1
+        de: Unterbrechung, Kurzschluss oder Korrosion an Leitung oder Stecker von Drucksensor 1
+    - id: sensor_internal_fault
+      likelihood: medium
+      label:
+        en: Pressure sensor 1 faulty internally (maker may supply a revised part)
+        de: Drucksensor 1 intern defekt (Hersteller liefert ggf. ein geändertes Teil)
+    - id: sensor_supply_ground_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
+        en: 5 V supply or ground of the sensor missing
+        de: 5-V-Versorgung oder Masse des Sensors fehlt
+    - id: fuel_cell_controller_fault
       likelihood: low
       label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Fuel cell control unit faulty or needing a software update
+        de: Brennstoffzellen-Steuergerät defekt oder Software veraltet
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Reduced power
+      de: Weniger Leistung
+    - en: Fuel cell system may refuse to start
+      de: Brennstoffzellensystem startet unter Umständen nicht
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1, 4]
+    estimated_cost_eur: [200, 1200]
+    estimated_hours: [1, 3]
   flags:
     mil: true
     emissions_relevant: false
-    drive_cycle_required: true
-    limp_mode_possible: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [U3565]
+  related_codes: [U3565, U3549, U3566, U3550]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
+    - https://patents.google.com/patent/US10096853B2/en
+    - https://static.nhtsa.gov/odi/tsbs/2019/MC-10169383-9999.pdf
+  reviewed: '2026-11-06'
 
 - code: U3565
   category: network
   title:
     en: Hydrogen Supply Line A Pressure Sensor 2 Circuit
-    de: Wasserstoff-Versorgungsleitung A Drucksensor 2 Schaltkreis
+    de: Wasserstoffzufuhrleitung A Drucksensor 2 Stromkreis
   description:
-    en: 'Generic fault on the pressure sensor 2 in hydrogen supply line A — feeds the fuel cell anode after the tank''s pressure regulator.'
-    de: 'Allgemeiner Fehler am Drucksensor 2 in der Wasserstoff-Versorgungsleitung A — speist die Anode des Stacks nach dem Druckregler des Tanks.'
+    en: "U3565 signals that the second pressure sensor of hydrogen supply line A has a wiring problem. Two sensors on one line let the controller cross-check them, and Hyundai's Nexo shows how such a pair is handled in service: when hydrogen pressure sensor 1 or 2 (P315200, P315300) set codes, campaign T4E from 2019 had both swapped for a revised part at an outdoor venting spot, followed by an offset reset and a leak test; the thin metal membrane of the sensors must touch nothing. A later Hyundai update (20-01-029H) reworked the MIL logic in the Nexo's fuel cell controller and names the sensor 1 code P315292 in that context. No maker documents U3565. A warning is likely; relying on sensor 1 alone, the system may keep running, perhaps with less power. Sensor 1 on this line is U3564."
+    de: "Betroffen ist der Stromkreis des zweiten Drucksensors in Zufuhrleitung A. Zwei Sensoren an derselben Leitung erlauben dem Steuergerät einen Gegencheck. Wie mit so einem Paar in der Werkstatt umgegangen wird, zeigt Hyundai beim Nexo: Meldeten Wasserstoffdrucksensor 1 oder 2 Fehler (P315200, P315300), wurden in der Kampagne T4E von 2019 beide gegen ein geändertes Teil getauscht – im Freien an einem Ablassplatz, mit anschließendem Offset-Abgleich und Dichtheitsprüfung. Die dünne Metallmembran der Sensoren darf dabei nichts berühren. Ein späteres Software-Update (20-01-029H) überarbeitete die MIL-Logik des Brennstoffzellen-Steuergeräts und nennt dabei den Code P315292. Öffentlich dokumentiert ist U3565 nicht. Zu erwarten ist eine Warnung; mit Sensor 1 allein läuft das System womöglich weiter, eventuell gedrosselt. Sensor 1 meldet U3564."
   affected_components:
     - h2_supply_a_pressure_sensor_2
     - sensor_wiring
   common_causes:
-    - id: sensor_failed
+    - id: sensor_connector_wiring
       likelihood: high
       label:
-        en: Sensor failed
-        de: Sensor defekt
-    - id: gateway_module_fault
+        en: Open, short or corrosion in wiring or connector of pressure sensor 2
+        de: Unterbrechung, Kurzschluss oder Korrosion an Leitung oder Stecker von Drucksensor 2
+    - id: sensor_internal_fault
+      likelihood: medium
+      label:
+        en: Pressure sensor 2 faulty internally
+        de: Drucksensor 2 intern defekt
+    - id: membrane_damaged_on_installation
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
+        en: Sensor membrane damaged during a previous repair
+        de: Sensormembran bei einer früheren Reparatur beschädigt
+    - id: fuel_cell_controller_fault
       likelihood: low
       label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Fuel cell control unit faulty or needing a software update
+        de: Brennstoffzellen-Steuergerät defekt oder Software veraltet
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Often no noticeable change while sensor 1 still works
+      de: Oft keine spürbare Änderung, solange Sensor 1 arbeitet
+    - en: Reduced power
+      de: Weniger Leistung
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1, 4]
+    estimated_cost_eur: [200, 1200]
+    estimated_hours: [1, 3]
   flags:
     mil: true
     emissions_relevant: false
-    drive_cycle_required: true
-    limp_mode_possible: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [U3564]
+  related_codes: [U3564, U3567, U3566, U3549]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
+    - https://static.nhtsa.gov/odi/tsbs/2019/MC-10169385-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10178167-0001.pdf
+    - https://patents.google.com/patent/US10096853B2/en
+  reviewed: '2026-11-06'
 
 - code: U3566
   category: network
   title:
     en: Anode Inlet Pressure Sensor 1 Circuit
-    de: Anoden-Eingangsdrucksensor 1 Schaltkreis
+    de: Anodeneintritt Drucksensor 1 Stromkreis
   description:
-    en: 'Generic fault on the anode inlet pressure sensor 1 (hydrogen pressure into the stack). A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Allgemeiner Fehler am Anoden-Eingangsdrucksensor 1 (Wasserstoffdruck am Stack-Eingang). Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: "U3566 is set for an electrical fault at anode inlet pressure sensor 1, sitting between hydrogen injector and stack. A GM patent explains why this value is central: it closes the loop for the injector and also feeds anode valve control and the handling of hydrogen in the exhaust. A wrong value derails that loop; in GM's example the injector is held at full duty because a 200 kPa target never shows on a sensor stuck at 100 kPa. GM flags such a sensor when its readings vary by less than 6 kPa over a time window and then runs the anode open loop, about 50 kPa above cathode pressure. Hyundai checks its stack supply pressure sensor against recirculation blower speed and warns in the cluster. As a circuit code U3566 covers opens and shorts; no public source uses it. Expect a warning and reduced power."
+    de: "Betroffen ist der Stromkreis von Drucksensor 1 am Anodeneintritt zwischen Wasserstoff-Injektor und Stack. Dieser Wert ist laut GM-Patent zentral: Er schließt den Regelkreis des Injektors und fließt in die Steuerung der Anodenventile und des Wasserstoffs im Abgas ein. Ein falscher Wert führt die Regelung in die Irre: Im GM-Beispiel bleibt der Injektor voll angesteuert, weil der Sollwert von 200 kPa am bei 100 kPa festhängenden Sensor nie erscheint. GM erkennt das, wenn die Messwerte über ein Zeitfenster weniger als 6 kPa schwanken, und regelt die Anode dann ohne Rückführung etwa 50 kPa über dem Kathodendruck. Hyundai prüft den Sensor über die Gebläsedrehzahl der Rezirkulation und warnt im Kombiinstrument. U3566 selbst erfasst Unterbrechung und Kurzschluss und ist öffentlich nicht belegt; Warnung und weniger Leistung sind zu erwarten."
   affected_components:
     - anode_inlet_pressure_sensor_1
     - sensor_wiring
   common_causes:
-    - id: sensor_failed
+    - id: sensor_connector_wiring_stack_area
       likelihood: high
       label:
-        en: Sensor failed
-        de: Sensor defekt
-    - id: gateway_module_fault
+        en: Open, short or corrosion in wiring or connector of sensor 1 at the stack
+        de: Unterbrechung, Kurzschluss oder Korrosion an Leitung oder Stecker von Sensor 1 am Stack
+    - id: sensor_internal_fault
+      likelihood: medium
+      label:
+        en: Anode inlet pressure sensor 1 faulty internally
+        de: Anodeneintritts-Drucksensor 1 intern defekt
+    - id: sensor_supply_ground_fault
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Shared 5 V supply or ground faulty (often with other sensor codes)
+        de: Gemeinsame 5-V-Versorgung oder Masse gestört (oft mit weiteren Sensorcodes)
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Noticeably reduced power
+      de: Spürbar weniger Leistung
+    - en: Rough or interrupted fuel cell start
+      de: Unruhiger oder abgebrochener Start des Brennstoffzellensystems
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1, 4]
+    estimated_cost_eur: [150, 1000]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
     emissions_relevant: false
-    drive_cycle_required: true
-    limp_mode_possible: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [U3567]
+  related_codes: [U3567, U3564, U3576, U3568]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
+    - https://patents.google.com/patent/US9080938B2/en
+    - https://patents.google.com/patent/KR101646382B1/en
+  reviewed: '2026-11-06'
 
 - code: U3567
   category: network
   title:
     en: Anode Inlet Pressure Sensor 2 Circuit
-    de: Anoden-Eingangsdrucksensor 2 Schaltkreis
+    de: Anodeneintritt Drucksensor 2 Stromkreis
   description:
-    en: 'Generic fault on the anode inlet pressure sensor 2 (hydrogen pressure into the stack). A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Allgemeiner Fehler am Anoden-Eingangsdrucksensor 2 (Wasserstoffdruck am Stack-Eingang). Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: "U3567 belongs to the second pressure sensor at the anode inlet. Its signal carries safety weight: GM uses anode pressure to catch an injector stuck open, then shuts the tank valves, opens the anode bleed valve, lifts cathode pressure with compressor and backpressure valve and opens the cathode bypass so hydrogen in the exhaust stays diluted. Another GM patent treats a gap of more than a calibrated margin, typically 3 kPa, between actual and desired pressure as an injector fault. Sensors in this wet zone can ice up, so GM checks the anode sensor before start against ambient pressure plus the anode-to-cathode differential. A second sensor allows a similar comparison while driving. No maker publishes U3567. Expect a warning; with sensor 1 as the only source, power may be reduced. Sensor 1 is U3566."
+    de: "U3567 gehört zum zweiten Drucksensor am Anodeneintritt. Sein Signal hat Sicherheitsrang: GM erkennt am Anodendruck einen offen hängenden Injektor, schließt dann die Tankventile, öffnet das Anoden-Spülventil, hebt mit Verdichter und Gegendruckventil den Kathodendruck an und öffnet den Kathoden-Bypass, damit der Wasserstoff im Abgas verdünnt bleibt. Ein weiteres GM-Patent wertet eine Abweichung zwischen Ist- und Solldruck jenseits einer kalibrierten Grenze, typisch 3 kPa, als Injektordefekt. In der Nässe am Stack können Sensoren vereisen; GM prüft den Anodensensor deshalb vor dem Start gegen Umgebungsdruck plus Differenzdruck zur Kathode. Ein zweiter Sensor erlaubt einen vergleichbaren Abgleich während der Fahrt. Öffentlich nennt kein Hersteller U3567. Folge: Warnung, mit Sensor 1 allein evtl. weniger Leistung. Sensor 1 meldet U3566."
   affected_components:
     - anode_inlet_pressure_sensor_2
     - sensor_wiring
   common_causes:
-    - id: sensor_failed
+    - id: sensor_connector_wiring_stack_area
       likelihood: high
       label:
-        en: Sensor failed
-        de: Sensor defekt
-    - id: gateway_module_fault
+        en: Open, short or corrosion in wiring or connector of sensor 2 at the stack
+        de: Unterbrechung, Kurzschluss oder Korrosion an Leitung oder Stecker von Sensor 2 am Stack
+    - id: sensor_internal_fault
+      likelihood: medium
+      label:
+        en: Anode inlet pressure sensor 2 faulty internally
+        de: Anodeneintritts-Drucksensor 2 intern defekt
+    - id: water_in_connector_frost
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Water in the connector, fault mainly after frost
+        de: Wasser im Stecker, Fehler vor allem nach Frost
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Often no noticeable change while sensor 1 still works
+      de: Oft keine spürbare Änderung, solange Sensor 1 arbeitet
+    - en: Reduced power
+      de: Weniger Leistung
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1, 4]
+    estimated_cost_eur: [150, 1000]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
     emissions_relevant: false
-    drive_cycle_required: true
-    limp_mode_possible: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [U3566]
+  related_codes: [U3566, U3565, U3576, U3568]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
+    - https://patents.google.com/patent/US20210135256A1/en
+    - https://patents.google.com/patent/US9263751B2/en
+    - https://patents.google.com/patent/US8192878B2/en
+  reviewed: '2026-11-06'
 
 - code: U3568
   category: network
   title:
     en: Anode Multifunction Valve Control Circuit
-    de: Anoden-Multifunktionsventil Steuerschaltkreis
+    de: Anoden-Multifunktionsventil Steuerkreis
   description:
-    en: Generic electrical fault on the anode multifunction valve. This valve combines shut-off, pressure regulation and recirculation control on the hydrogen side.
-    de: Allgemeiner elektrischer Fehler am Anoden-Multifunktionsventil. Das Ventil kombiniert Absperrung, Druckregelung und Rezirkulationssteuerung auf der Wasserstoffseite.
+    en: "U3568 flags trouble in the electrical drive of the anode multifunction valve: an open wire, a short against ground or battery voltage, or a failed output stage. The code title does not say which duties the valve combines; known designs merge draining water and purging nitrogen in one solenoid below the anode water separator. GM routes such a combined valve into the cathode inlet so that escaping hydrogen reacts on the catalyst, and Hyundai calls its version an integrated discharge valve. If the controller cannot switch it, the anode loses both its water outlet and its nitrogen outlet; in Hyundai's patent the system stops when no gas leaves the valve. No manufacturer documents U3568 publicly. A fuel cell warning with lost drive power is the likely result. Mechanical misbehaviour of the valve is U3569."
+    de: "Der Ansteuerkreis des Anoden-Multifunktionsventils ist gestört – Leitungsbruch, Kurzschluss gegen Masse bzw. Versorgung oder eine defekte Endstufe. Welche Aufgaben das Ventil bündelt, sagt der Codetitel nicht. Bekannte Bauformen vereinen Wasserablass und Stickstoffspülung in einem Magnetventil unter dem Wasserabscheider der Anode: GM leitet ein solches Kombiventil in den Kathodeneintritt, damit entweichender Wasserstoff am Katalysator abreagiert; Hyundai spricht vom integrierten Auslassventil. Lässt es sich nicht schalten, fehlt der Anode der Weg für Wasser und Stickstoff zugleich – im Hyundai-Patent wird das System abgestellt, wenn nichts aus dem Ventil austritt. Öffentliche Herstellerunterlagen zu U3568 gibt es nicht. Zu rechnen ist mit Warnmeldung und Leistungsverlust. Mechanische Fehler des Ventils meldet U3569."
   affected_components:
     - anode_multifunction_valve
     - valve_wiring
   common_causes:
-    - id: solenoid_failed
+    - id: harness_connector_valve
       likelihood: high
       label:
-        en: Valve actuator failed
-        de: Ventil-Aktuator defekt
-    - id: gateway_module_fault
+        en: Open, short or corrosion in wiring or connector of the valve (wet area below the stack)
+        de: Unterbrechung, Kurzschluss oder Korrosion an Leitung oder Stecker des Ventils (nasser Bereich unter dem Stack)
+    - id: solenoid_coil_open_shorted
+      likelihood: medium
+      label:
+        en: Solenoid coil of the valve open or shorted
+        de: Magnetspule des Ventils unterbrochen oder kurzgeschlossen
+    - id: fuel_cell_controller_driver
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Driver stage of the fuel cell control unit faulty
+        de: Endstufe des Brennstoffzellen-Steuergeräts defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Power dropping off the longer the drive lasts
+      de: Leistung lässt mit zunehmender Fahrtdauer nach
+    - en: Fuel cell system shuts down or does not start
+      de: Brennstoffzellensystem schaltet ab oder startet nicht
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [400, 3000]
-    estimated_hours: [2, 6]
+    estimated_cost_eur: [150, 1200]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
     emissions_relevant: false
-    drive_cycle_required: true
+    drive_cycle_required: false
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U3569, U356A, U356C, U3566]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
+    - https://patents.google.com/patent/US9105888B2/en
+    - https://patents.google.com/patent/US12519118B2/en
+  reviewed: '2026-11-06'
 
 - code: U3569
   category: network
@@ -8637,40 +8650,45 @@
     en: Anode Multifunction Valve
     de: Anoden-Multifunktionsventil
   description:
-    en: 'Generic fault on the anode multifunction valve — combines circuit and mechanical issues. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Allgemeiner Fehler am Anoden-Multifunktionsventil — fasst Schaltkreis- und mechanische Probleme zusammen. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: "With U3569 the multifunction valve can be driven but does not do what it is told: it stays shut, leaks or reacts too slowly. A solenoid of this kind usually lacks position feedback, so its state is inferred. For an integrated drain and purge valve Hyundai lifts anode pressure a fixed amount over ambient while no current is drawn and the air path is closed, opens the valve and checks after the expected drain time plus a settling period whether pressure has dropped to ambient; if not, the valve counts as stuck closed. GM reads the injector duty instead, which climbs once gas rather than water passes. Stuck shut, the valve lets water flood the anode and nitrogen dilute the hydrogen; stuck open, hydrogen escapes. No public source names U3569. Typical results are a warning, less power or a shutdown."
+    de: "Das Ventil ist elektrisch erreichbar, gehorcht aber nicht: Es bleibt zu, ist undicht oder reagiert zu träge. Solche Magnetventile haben meist keine Stellungsrückmeldung, ihr Zustand wird daher indirekt bestimmt. Hyundai hebt für sein integriertes Ablass- und Spülventil den Anodendruck ohne Stromabgabe und bei geschlossenem Luftpfad um einen festen Betrag über den Umgebungsdruck, öffnet und prüft nach Ablass- plus Beruhigungszeit, ob der Druck auf Umgebungsniveau gefallen ist – sonst gilt das Ventil als geschlossen hängend. GM wertet das Tastverhältnis des Injektors aus, das steigt, sobald Gas statt Wasser durchströmt. Klemmt das Ventil zu, flutet Wasser die Anode und Stickstoff verdünnt den Wasserstoff; klemmt es offen, entweicht Wasserstoff. Öffentliche Belege für U3569 fehlen; Warnung, Leistungsrücknahme oder Abschaltung sind die Regel."
   affected_components:
     - anode_multifunction_valve
   common_causes:
-    - id: valve_failed
-      likelihood: high
+    - id: valve_frozen
+      likelihood: medium
       label:
-        en: Valve electrical or mechanical failure
-        de: Ventil elektrisch oder mechanisch defekt
-    - id: gateway_module_fault
+        en: Valve frozen shut after parking in frost
+        de: Ventil nach Abstellen bei Frost zugefroren
+    - id: valve_sticking_deposits
+      likelihood: medium
+      label:
+        en: Valve sticking or leaking from deposits or worn seat
+        de: Ventil klemmt oder ist undicht durch Ablagerungen oder verschlissenen Sitz
+    - id: water_level_sensor_misleading
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
+        en: Water level sensor of the separator reads wrong, valve itself fine
+        de: Füllstandsensor des Abscheiders misst falsch, Ventil selbst in Ordnung
+    - id: fuel_cell_controller_software
       likelihood: low
       label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Control software needs an update
+        de: Steuergerätesoftware benötigt ein Update
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Reduced power, uneven fuel cell output
+      de: Weniger Leistung, unruhige Abgabe des Brennstoffzellensystems
+    - en: Start refused or shutdown, mainly after frost
+      de: Startverweigerung oder Abschaltung, vor allem nach Frost
+    - en: Higher hydrogen consumption
+      de: Höherer Wasserstoffverbrauch
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [400, 3000]
-    estimated_hours: [2, 6]
+    estimated_cost_eur: [300, 1500]
+    estimated_hours: [1, 4]
   flags:
     mil: true
     emissions_relevant: false
@@ -8678,61 +8696,64 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U3568, U356B, U356D, U3567]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
+    - https://patents.google.com/patent/US12519118B2/en
+    - https://patents.google.com/patent/US9105888B2/en
+    - https://patents.google.com/patent/US10811709B2/en
+  reviewed: '2026-11-06'
 
 - code: U356A
   category: network
   title:
     en: Anode Drain Valve Control Circuit
-    de: Anoden-Ablassventil Steuerschaltkreis
+    de: Anoden-Ablassventil Steuerkreis
   description:
-    en: Generic electrical fault on the anode drain valve control. The drain valve releases liquid water and inert gases that accumulate in the anode loop.
-    de: Allgemeiner elektrischer Fehler an der Steuerung des Anoden-Ablassventils. Das Ablassventil lässt flüssiges Wasser und Inertgase aus dem Anodenkreis ab.
+    en: "U356A concerns the electrical drive of the solenoid sitting under the anode water trap, which lets condensate leave the hydrogen loop. Hyundai opens it when a level sensor reports a full trap and closes it at a low mark so no hydrogen follows; if that sensor fails, the valve is closed as soon as anode pressure falls faster than a set rate. GM also gives the drain valve an emergency role: after an injector sticks open, hydrogen may be let out through it until the concentration in the exhaust reaches a limit. A broken or shorted drive circuit takes away both jobs. No maker documents U356A publicly. Since water keeps collecting in the anode, a warning and reduced or interrupted operation are plausible. The valve's mechanical state is U356B, the header drain circuit U356C."
+    de: "Gemeint ist die Ansteuerung des Anoden-Ablassventils, des Magnetventils am Boden des Wasserabscheiders, durch das Kondensat den Wasserstoffkreis verlässt. Hyundai öffnet es, wenn ein Füllstandsensor einen vollen Abscheider meldet, und schließt es bei einer unteren Marke, damit kein Wasserstoff nachströmt; fällt der Sensor aus, schließt es, sobald der Anodendruck schneller als vorgegeben sinkt. Bei GM hat das Ventil zudem eine Notfallrolle: Hängt ein Injektor offen, darf darüber Wasserstoff entweichen, bis seine Konzentration im Abgas eine Grenze erreicht. Ein unterbrochener oder kurzgeschlossener Kreis nimmt beides weg. Öffentlich nennt kein Hersteller U356A. Da sich Wasser in der Anode sammelt, sind Warnung und gedrosselter oder unterbrochener Betrieb wahrscheinlich. Das Ventilverhalten meldet U356B, den Sammlerkreis U356C."
   affected_components:
     - anode_drain_valve
     - valve_wiring
   common_causes:
-    - id: solenoid_failed
+    - id: harness_connector_drain_valve
       likelihood: high
       label:
-        en: Valve actuator failed
-        de: Ventil-Aktuator defekt
-    - id: gateway_module_fault
+        en: Open, short or corrosion in wiring or connector of the drain valve
+        de: Unterbrechung, Kurzschluss oder Korrosion an Leitung oder Stecker des Ablassventils
+    - id: solenoid_coil_open_shorted
+      likelihood: medium
+      label:
+        en: Drain valve solenoid coil open or shorted
+        de: Magnetspule des Ablassventils unterbrochen oder kurzgeschlossen
+    - id: fuel_cell_controller_driver
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Driver stage of the fuel cell control unit faulty
+        de: Endstufe des Brennstoffzellen-Steuergeräts defekt
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Reduced power after some driving time
+      de: Weniger Leistung nach einiger Fahrzeit
+    - en: Fuel cell system shuts down
+      de: Brennstoffzellensystem schaltet ab
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1, 4]
+    estimated_cost_eur: [150, 1000]
+    estimated_hours: [0.5, 3]
   flags:
     mil: true
     emissions_relevant: false
-    drive_cycle_required: true
-    limp_mode_possible: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U356B, U356C, U356E, U3568]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
+    - https://patents.google.com/patent/US20200136158A1/en
+    - https://patents.google.com/patent/US20210135256A1/en
+  reviewed: '2026-11-06'
 
 - code: U356B
   category: network
@@ -8740,612 +8761,43 @@
     en: Anode Drain Valve
     de: Anoden-Ablassventil
   description:
-    en: 'Generic fault on the anode drain valve — combines circuit and mechanical issues. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Allgemeiner Fehler am Anoden-Ablassventil — fasst Schaltkreis- und mechanische Probleme zusammen. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
+    en: "U356B is about how the drain valve behaves, not its wiring. Hyundai shows how such faults are separated: if the level in the trap fails to drop within a set time after an open command while the position sensor still reports closed, the valve is judged stuck shut; the system then limits current, drains on a schedule derived from accumulated charge and runs the stack warmer so water leaves as vapour. If the level stays low after a close command and the sensor reports open, hydrogen could escape, so the system is shut down. A dead level sensor can mimic a jammed valve; another Hyundai patent forces the valve open and watches whether a sagging cell voltage recovers to tell the two apart. In winter frozen condensate is a likely cause. No public source cites U356B; expect a warning plus reduced power or a shutdown."
+    de: "Hier zählt das Verhalten des Ablassventils, nicht die Verkabelung. Hyundai trennt die Fehlerbilder so: Sinkt der Wasserstand nach einem Öffnungsbefehl nicht rechtzeitig und meldet der Stellungsgeber weiter „zu“, gilt das Ventil als geschlossen hängend. Dann begrenzt das System den Strom, lässt nach einem aus der umgesetzten Ladung berechneten Takt ab und fährt den Stack wärmer, damit Wasser als Dampf abzieht. Bleibt der Pegel nach einem Schließbefehl niedrig und der Geber meldet „offen“, droht Wasserstoffaustritt – das System schaltet ab. Ein toter Füllstandsensor kann ein klemmendes Ventil vortäuschen; ein weiteres Hyundai-Patent öffnet dann zwangsweise und prüft, ob sich eine eingebrochene Zellspannung erholt. Im Winter liegt Eis nahe. U356B ist öffentlich nicht belegt; es folgen Warnung und Leistungsrücknahme oder Abschaltung."
   affected_components:
     - anode_drain_valve
   common_causes:
-    - id: valve_failed
-      likelihood: high
+    - id: valve_frozen
+      likelihood: medium
       label:
-        en: Valve electrical or mechanical failure
-        de: Ventil elektrisch oder mechanisch defekt
-    - id: gateway_module_fault
+        en: Drain valve frozen after parking in frost
+        de: Ablassventil nach Abstellen bei Frost eingefroren
+    - id: valve_sticking_deposits
+      likelihood: medium
+      label:
+        en: Valve sticking or not sealing due to deposits or a worn seat
+        de: Ventil klemmt oder dichtet nicht durch Ablagerungen oder verschlissenen Sitz
+    - id: water_level_sensor_fault
+      likelihood: medium
+      label:
+        en: Water level sensor of the trap faulty, valve itself fine
+        de: Füllstandsensor des Wasserabscheiders defekt, Ventil selbst in Ordnung
+    - id: drain_line_blocked
       likelihood: low
       label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
+        en: Drain line downstream of the valve blocked or iced
+        de: Ablassleitung hinter dem Ventil verstopft oder vereist
   symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Power limited, fuel cell running hotter than usual
+      de: Leistung begrenzt, Brennstoffzelle läuft wärmer als üblich
+    - en: System shutdown if the valve stays open
+      de: Abschaltung des Systems, wenn das Ventil offen hängt
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur: [200, 1500]
+    estimated_cost_eur: [250, 1300]
     estimated_hours: [1, 4]
-  flags:
-    mil: true
-    emissions_relevant: false
-    drive_cycle_required: true
-    limp_mode_possible: false
-  references:
-    - sae:J2012
-  sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
-
-- code: U356C
-  category: network
-  title:
-    en: Anode Header Drain Valve Control Circuit
-    de: Anoden-Sammler-Ablassventil Steuerschaltkreis
-  description:
-    en: Generic electrical fault on the control of the anode header drain valve (drains the manifold/header line).
-    de: Allgemeiner elektrischer Fehler an der Steuerung des Anoden-Sammler-Ablassventils (entwässert die Sammelleitung).
-  affected_components:
-    - anode_header_drain_valve
-    - valve_wiring
-  common_causes:
-    - id: solenoid_failed
-      likelihood: high
-      label:
-        en: Valve actuator failed
-        de: Ventil-Aktuator defekt
-    - id: gateway_module_fault
-      likelihood: low
-      label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
-  symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
-  repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1, 4]
-  flags:
-    mil: true
-    emissions_relevant: false
-    drive_cycle_required: true
-    limp_mode_possible: false
-  references:
-    - sae:J2012
-  sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
-
-- code: U356D
-  category: network
-  title:
-    en: Anode Header Drain Valve
-    de: Anoden-Sammler-Ablassventil
-  description:
-    en: 'Generic fault on the anode header drain valve. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Allgemeiner Fehler am Anoden-Sammler-Ablassventil. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
-  affected_components:
-    - anode_header_drain_valve
-  common_causes:
-    - id: valve_failed
-      likelihood: high
-      label:
-        en: Valve electrical or mechanical failure
-        de: Ventil elektrisch oder mechanisch defekt
-    - id: gateway_module_fault
-      likelihood: low
-      label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
-  symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
-  repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1, 4]
-  flags:
-    mil: true
-    emissions_relevant: false
-    drive_cycle_required: true
-    limp_mode_possible: false
-  references:
-    - sae:J2012
-  sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
-
-- code: U356E
-  category: network
-  title:
-    en: Anode Drain Valve Heater Relay Control Circuit
-    de: Anoden-Ablassventil-Heizung Relais-Steuerschaltkreis
-  description:
-    en: 'Anode Drain Valve Heater Relay Control Circuit: the control circuit has an electrical fault.'
-    de: 'Anoden-Ablassventil-Heizung Relais-Steuerschaltkreis: im Steuerkreis liegt ein elektrischer Fehler vor.'
-  affected_components:
-    - anode_drain_heater_relay
-    - relay_wiring
-  common_causes:
-    - id: relay_failed
-      likelihood: high
-      label:
-        en: Heater relay failed
-        de: Heizungsrelais defekt
-    - id: gateway_module_fault
-      likelihood: low
-      label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
-  symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
-  repair:
-    difficulty: medium
-    diy_possible: false
-    estimated_cost_eur: [100, 600]
-    estimated_hours: [0.5, 2]
-  flags:
-    mil: true
-    emissions_relevant: false
-    drive_cycle_required: false
-    limp_mode_possible: false
-  references:
-    - sae:J2012
-  sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
-
-- code: U356F
-  category: network
-  title:
-    en: Anode Header Drain Valve Heater Relay Control Circuit
-    de: Anoden-Sammler-Ablassventil-Heizung Relais-Steuerschaltkreis
-  description:
-    en: 'Anode Header Drain Valve Heater Relay Control Circuit: the control circuit has an electrical fault.'
-    de: 'Anoden-Sammler-Ablassventil-Heizung Relais-Steuerschaltkreis: im Steuerkreis liegt ein elektrischer Fehler vor.'
-  affected_components:
-    - anode_header_drain_heater_relay
-    - relay_wiring
-  common_causes:
-    - id: relay_failed
-      likelihood: high
-      label:
-        en: Heater relay failed
-        de: Heizungsrelais defekt
-    - id: gateway_module_fault
-      likelihood: low
-      label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
-  symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
-  repair:
-    difficulty: medium
-    diy_possible: false
-    estimated_cost_eur: [100, 600]
-    estimated_hours: [0.5, 2]
-  flags:
-    mil: true
-    emissions_relevant: false
-    drive_cycle_required: false
-    limp_mode_possible: false
-  references:
-    - sae:J2012
-  sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
-
-- code: U3570
-  category: network
-  title:
-    en: Stack Inlet Coolant Temperature Sensor Circuit
-    de: Stack-Eingang Kühlmitteltemperatursensor Schaltkreis
-  description:
-    en: Generic fault on the coolant temperature sensor at the fuel cell stack inlet (deionized coolant cools the membrane electrode assemblies).
-    de: Allgemeiner Fehler am Kühlmitteltemperatursensor am Stack-Eingang (deionisiertes Kühlmittel kühlt die Membran-Elektroden-Einheiten).
-  affected_components:
-    - stack_inlet_coolant_temp_sensor
-    - sensor_wiring
-  common_causes:
-    - id: sensor_failed
-      likelihood: high
-      label:
-        en: Sensor failed
-        de: Sensor defekt
-    - id: gateway_module_fault
-      likelihood: low
-      label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
-  symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
-  repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1, 4]
-  flags:
-    mil: true
-    emissions_relevant: false
-    drive_cycle_required: true
-    limp_mode_possible: false
-  references:
-    - sae:J2012
-  sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
-
-- code: U3571
-  category: network
-  title:
-    en: Stack Outlet Coolant Temperature Sensor 1 Circuit
-    de: Stack-Ausgang Kühlmitteltemperatursensor 1 Schaltkreis
-  description:
-    en: Generic fault on coolant temperature sensor 1 at the fuel cell stack outlet (used to monitor stack thermal output).
-    de: Allgemeiner Fehler am Kühlmitteltemperatursensor 1 am Stack-Ausgang (überwacht die Wärmeabgabe des Stacks).
-  affected_components:
-    - stack_outlet_coolant_temp_sensor_1
-    - sensor_wiring
-  common_causes:
-    - id: sensor_failed
-      likelihood: high
-      label:
-        en: Sensor failed
-        de: Sensor defekt
-    - id: gateway_module_fault
-      likelihood: low
-      label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
-  symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
-  repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1, 4]
-  flags:
-    mil: true
-    emissions_relevant: false
-    drive_cycle_required: true
-    limp_mode_possible: false
-  references:
-    - sae:J2012
-  related_codes: [U3572]
-  sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
-
-- code: U3572
-  category: network
-  title:
-    en: Stack Outlet Coolant Temperature Sensor 2 Circuit
-    de: Stack-Ausgang Kühlmitteltemperatursensor 2 Schaltkreis
-  description:
-    en: 'Generic fault on coolant temperature sensor 2 at the fuel cell stack outlet (used to monitor stack thermal output).'
-    de: 'Allgemeiner Fehler am Kühlmitteltemperatursensor 2 am Stack-Ausgang (überwacht die Wärmeabgabe des Stacks).'
-  affected_components:
-    - stack_outlet_coolant_temp_sensor_2
-    - sensor_wiring
-  common_causes:
-    - id: sensor_failed
-      likelihood: high
-      label:
-        en: Sensor failed
-        de: Sensor defekt
-    - id: gateway_module_fault
-      likelihood: low
-      label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
-  symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
-  repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1, 4]
-  flags:
-    mil: true
-    emissions_relevant: false
-    drive_cycle_required: true
-    limp_mode_possible: false
-  references:
-    - sae:J2012
-  related_codes: [U3571]
-  sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
-
-- code: U3573
-  category: network
-  title:
-    en: Coolant Mixing Valve Control Circuit
-    de: Kühlmittel-Mischventil Steuerschaltkreis
-  description:
-    en: Generic electrical fault on the coolant mixing valve control. The valve blends hot and cold coolant streams to maintain stack temperature.
-    de: Allgemeiner elektrischer Fehler an der Steuerung des Kühlmittel-Mischventils. Das Ventil mischt warme und kalte Kühlmittelströme zur Temperaturhaltung des Stacks.
-  affected_components:
-    - coolant_mixing_valve
-    - valve_wiring
-  common_causes:
-    - id: solenoid_failed
-      likelihood: high
-      label:
-        en: Valve actuator failed
-        de: Ventil-Aktuator defekt
-    - id: gateway_module_fault
-      likelihood: low
-      label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
-  symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
-  repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1, 4]
-  flags:
-    mil: true
-    emissions_relevant: false
-    drive_cycle_required: true
-    limp_mode_possible: false
-  references:
-    - sae:J2012
-  sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
-
-- code: U3574
-  category: network
-  title:
-    en: Coolant Mixing Valve
-    de: Kühlmittel-Mischventil
-  description:
-    en: 'Generic fault on the coolant mixing valve — combines circuit and mechanical issues. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Allgemeiner Fehler am Kühlmittel-Mischventil — fasst Schaltkreis- und mechanische Probleme zusammen. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
-  affected_components:
-    - coolant_mixing_valve
-  common_causes:
-    - id: valve_failed
-      likelihood: high
-      label:
-        en: Valve electrical or mechanical failure
-        de: Ventil elektrisch oder mechanisch defekt
-    - id: gateway_module_fault
-      likelihood: low
-      label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
-  symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
-  repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1, 4]
-  flags:
-    mil: true
-    emissions_relevant: false
-    drive_cycle_required: true
-    limp_mode_possible: false
-  references:
-    - sae:J2012
-  sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
-
-- code: U3575
-  category: network
-  title:
-    en: Coolant Mixing Valve Position Sensor Circuit
-    de: Kühlmittel-Mischventil Positionssensor Schaltkreis
-  description:
-    en: 'Generic fault on the position sensor of the coolant mixing valve. A communication loss with this module breaks any function relying on its data — diagnostic tools may show ''no response'' and dependent modules can fall into limp mode.'
-    de: 'Allgemeiner Fehler am Positionssensor des Kühlmittel-Mischventils. Ein Kommunikationsausfall mit diesem Modul bricht jede Funktion, die seine Daten benötigt — Diagnosegeräte zeigen ''keine Antwort'' und abhängige Steuergeräte können in den Notlauf wechseln.'
-  affected_components:
-    - coolant_mixing_valve_position_sensor
-    - sensor_wiring
-  common_causes:
-    - id: sensor_failed
-      likelihood: high
-      label:
-        en: Position sensor failed
-        de: Positionssensor defekt
-    - id: gateway_module_fault
-      likelihood: low
-      label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
-  symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
-  repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1, 4]
-  flags:
-    mil: true
-    emissions_relevant: false
-    drive_cycle_required: true
-    limp_mode_possible: false
-  references:
-    - sae:J2012
-  sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
-
-- code: U3576
-  category: network
-  title:
-    en: Stack Differential Pressure Sensor Circuit
-    de: Stack-Differenzdrucksensor Schaltkreis
-  description:
-    en: Generic fault on the differential pressure sensor across the fuel cell stack — measures the pressure drop between cathode and anode (used to detect membrane damage or flooding).
-    de: Allgemeiner Fehler am Differenzdrucksensor am Stack — misst den Druckunterschied zwischen Kathode und Anode (erkennt Membranschäden oder Wasseransammlung).
-  affected_components:
-    - stack_differential_pressure_sensor
-    - sensor_wiring
-  common_causes:
-    - id: sensor_failed
-      likelihood: high
-      label:
-        en: Sensor failed
-        de: Sensor defekt
-    - id: gateway_module_fault
-      likelihood: low
-      label:
-        en: 'Gateway module routing CAN messages incorrectly'
-        de: 'Gateway-Modul leitet CAN-Botschaften fehlerhaft'
-    - id: terminator_resistor_drift
-      likelihood: low
-      label:
-        en: 'CAN terminating resistor (120 Ω) drifted out of spec'
-        de: 'CAN-Abschlusswiderstand (120 Ω) außerhalb der Spezifikation'
-  symptoms:
-    - en: 'Multiple warning lights may illuminate'
-      de: 'Mehrere Warnleuchten können aufleuchten'
-    - en: 'Affected modules may go into limp mode or shut down'
-      de: 'Betroffene Steuergeräte können in Notlauf gehen oder abschalten'
-    - en: 'Specific functions inoperative depending on module'
-      de: 'Spezifische Funktionen je nach Modul außer Betrieb'
-    - en: 'Diagnostic tools may show communication faults'
-      de: 'Diagnosegeräte können Kommunikationsfehler anzeigen'
-  repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [300, 2000]
-    estimated_hours: [1, 5]
   flags:
     mil: true
     emissions_relevant: false
@@ -9353,6 +8805,601 @@
     limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [U356A, U356D, U356E, U3569]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Proton-exchange_membrane_fuel_cell
+    - https://patents.google.com/patent/US10756367B2/en
+    - https://patents.google.com/patent/US10700369B2/en
+    - https://patents.google.com/patent/US20200136158A1/en
+  reviewed: '2026-11-06'
+
+- code: U356C
+  category: network
+  title:
+    en: Anode Header Drain Valve Control Circuit
+    de: Anoden-Sammler-Ablassventil Steuerkreis
+  description:
+    en: "U356C covers the drive circuit of a second drain valve mounted directly on the anode exhaust header, the channel inside the stack that gathers the gas leaving every cell. GM lists three valves behind the stack: a bleed valve at the top of the anode sump, a drain valve at its bottom and this header valve, which empties into the cathode exhaust. Condensate pooling in the outlet header harms cell durability, above all when the car stands on a steep slope, and GM has also patented heating of these manifolds against ice. Older logic opened the header valve only at shutdown or on a tilt sensor signal; GM's newer scheme lets it serve a share of bleed requests, by default the fifth. If the drive is open or shorted, the water stays put. No maker documents U356C publicly; a warning and limited operation are likely. The sump drain circuit is U356A."
+    de: "U356C betrifft den Ansteuerkreis eines zweiten Ablassventils direkt am Anoden-Austrittssammler, dem Kanal im Stack, in dem das Gas aller Zellen zusammenläuft. GM nennt hinter dem Stack drei Ventile: ein Spülventil oben am Anodensumpf, ein Ablassventil an dessen Boden und dieses Sammlerventil, das ins Kathodenabgas entleert. Kondensat im Sammler schadet der Lebensdauer der Zellen, vor allem am steilen Hang; gegen Eis in diesen Kanälen hat GM zudem eine Beheizung patentiert. Früher öffnete das Sammlerventil nur beim Abstellen oder auf ein Neigungssignal, in der neueren GM-Logik übernimmt es einen Teil der Spülanforderungen, standardmäßig jede fünfte. Ist der Antrieb unterbrochen oder kurzgeschlossen, bleibt Wasser stehen. U356C hat keinen öffentlichen Beleg; Warnung und Drosselung sind wahrscheinlich. Den Sumpf-Ablasskreis meldet U356A."
+  affected_components:
+    - anode_header_drain_valve
+    - valve_wiring
+  common_causes:
+    - id: harness_connector_header_valve
+      likelihood: high
+      label:
+        en: Open, short or corrosion in wiring or connector of the header drain valve
+        de: Unterbrechung, Kurzschluss oder Korrosion an Leitung oder Stecker des Sammler-Ablassventils
+    - id: solenoid_coil_open_shorted
+      likelihood: medium
+      label:
+        en: Valve solenoid coil open or shorted
+        de: Magnetspule des Ventils unterbrochen oder kurzgeschlossen
+    - id: fuel_cell_controller_driver
+      likelihood: low
+      label:
+        en: Driver stage of the fuel cell control unit faulty
+        de: Endstufe des Brennstoffzellen-Steuergeräts defekt
+  symptoms:
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Power limited, especially after parking on a slope
+      de: Leistung begrenzt, besonders nach Parken am Hang
+    - en: Often no noticeable effect at first
+      de: Anfangs oft keine spürbare Auswirkung
+  repair:
+    difficulty: shop_only
+    diy_possible: false
+    estimated_cost_eur: [150, 1000]
+    estimated_hours: [0.5, 3]
+  flags:
+    mil: true
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
+  references:
+    - sae:J2012
+  related_codes: [U356D, U356A, U356F, U3568]
+  sources:
+    - https://patents.google.com/patent/US11735751B1/en
+    - https://patents.google.com/patent/US8603695B2/en
+  reviewed: '2026-11-06'
+
+- code: U356D
+  category: network
+  title:
+    en: Anode Header Drain Valve
+    de: Anoden-Sammler-Ablassventil
+  description:
+    en: "U356D is set when the header drain valve responds electrically yet does not empty the header as intended. GM splits each opening into two phases: first water runs out of the header, then nitrogen-rich gas is bled off. The end of the water phase is recognised from stack voltage or from an estimated gas flow across the valve, and the bleed phase is sized by the hydrogen content of the anode. If the water phase takes unusually long, GM concludes the stack is tilted or the header overfilled and calls on the valve more often. A valve stuck closed lets water build up and starve the cells farthest along the header; one stuck open keeps venting hydrogen into the cathode exhaust. Ice is a further risk at outlet manifolds. No maker publishes U356D. A warning and less power follow; circuit faults are U356C."
+    de: "U356D steht für ein Sammler-Ablassventil, das elektrisch reagiert, den Sammler aber nicht wie vorgesehen leert. GM teilt jede Öffnung in zwei Abschnitte: Erst läuft Wasser aus dem Sammler, dann wird stickstoffreiches Gas abgelassen. Das Ende der Wasserphase erkennt das Steuergerät an der Stackspannung oder an einem geschätzten Gasdurchfluss; die Spüldauer richtet sich nach dem Wasserstoffanteil der Anode. Dauert die Wasserphase ungewöhnlich lange, schließt GM auf Schräglage oder einen überfüllten Sammler und setzt das Ventil häufiger ein. Hängt es zu, staut sich Wasser und die Zellen am Sammlerende bekommen zu wenig Wasserstoff; hängt es offen, strömt laufend Wasserstoff ins Kathodenabgas. Dazu kommt Eis in den Austrittskanälen. Kein Hersteller dokumentiert U356D öffentlich. Folge: Warnung und weniger Leistung; Kreisfehler meldet U356C."
+  affected_components:
+    - anode_header_drain_valve
+  common_causes:
+    - id: valve_frozen
+      likelihood: medium
+      label:
+        en: Header drain valve or its line frozen
+        de: Sammler-Ablassventil oder seine Leitung eingefroren
+    - id: valve_sticking_deposits
+      likelihood: medium
+      label:
+        en: Valve sticking or leaking from deposits or a worn seat
+        de: Ventil klemmt oder ist undicht durch Ablagerungen oder verschlissenen Sitz
+    - id: drain_line_blocked
+      likelihood: low
+      label:
+        en: Header drain line to the cathode exhaust blocked
+        de: Ablassleitung vom Sammler zum Kathodenabgas verstopft
+  symptoms:
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Reduced power, uneven cell voltages
+      de: Weniger Leistung, ungleichmäßige Zellspannungen
+    - en: Higher hydrogen consumption if the valve stays open
+      de: Höherer Wasserstoffverbrauch, wenn das Ventil offen hängt
+  repair:
+    difficulty: shop_only
+    diy_possible: false
+    estimated_cost_eur: [300, 1500]
+    estimated_hours: [1, 4]
+  flags:
+    mil: true
+    emissions_relevant: false
+    drive_cycle_required: true
+    limp_mode_possible: true
+  references:
+    - sae:J2012
+  related_codes: [U356C, U356B, U356F, U3576]
+  sources:
+    - https://patents.google.com/patent/US11735751B1/en
+    - https://patents.google.com/patent/US8603695B2/en
+  reviewed: '2026-11-06'
+
+- code: U356E
+  category: network
+  title:
+    en: Anode Drain Valve Heater Relay Control Circuit
+    de: Anoden-Ablassventil Heizrelais Steuerkreis
+  description:
+    en: U356E refers to the relay that powers the heater on the anode drain valve, more precisely to its coil drive from the fuel cell controller. Drain valves sit in the wettest corner of the hydrogen loop and can freeze shut after a cold night. Hyundai fits PTC heaters to its purge valves, fed by the battery and switched on when a start below freezing is detected; Parker Hannifin places a PTC element right at the seat of a fuel cell drain valve, and Hilite sells drain valves with built-in heating that still open at minus 40 °C. If the relay cannot be driven, the heater stays off, or stays on and drains the battery. In mild weather nothing may be noticeable; in frost an iced drain valve can delay or prevent the start. No maker documents U356E publicly, and its MIL handling is unknown.
+    de: Gemeint ist die Steuerseite des Relais, das die Heizung am Anoden-Ablassventil schaltet, meist die Ansteuerung der Relaisspule durch das Brennstoffzellen-Steuergerät. Ablassventile sitzen an der nassesten Stelle des Wasserstoffkreises und können nach einer Frostnacht festfrieren. Hyundai versieht Spülventile mit PTC-Heizern, die aus der Batterie gespeist und bei einem Start unter dem Gefrierpunkt zugeschaltet werden; Parker Hannifin setzt das PTC-Element direkt an den Ventilsitz, Hilite bietet beheizte Ablassventile an, die noch bei −40 °C öffnen. Lässt sich das Relais nicht ansteuern, bleibt die Heizung aus – oder dauerhaft an und leert die Batterie. Bei milder Witterung fällt oft nichts auf; bei Frost kann ein vereistes Ventil den Start verzögern oder verhindern. Öffentlich dokumentiert ist U356E nicht, die MIL-Behandlung ist offen.
+  affected_components:
+    - anode_drain_heater_relay
+    - relay_wiring
+  common_causes:
+    - id: relay_coil_circuit_open_short
+      likelihood: high
+      label:
+        en: Open, short or corrosion in the relay coil wiring or connector
+        de: Unterbrechung, Kurzschluss oder Korrosion an Leitung oder Stecker der Relaisspule
+    - id: relay_faulty
+      likelihood: medium
+      label:
+        en: Heater relay faulty
+        de: Heizrelais defekt
+    - id: fuse_or_supply_missing
+      likelihood: low
+      label:
+        en: Fuse or supply of the relay circuit missing
+        de: Sicherung oder Versorgung des Relaiskreises fehlt
+    - id: fuel_cell_controller_driver
+      likelihood: low
+      label:
+        en: Relay driver in the fuel cell control unit faulty
+        de: Relaistreiber im Brennstoffzellen-Steuergerät defekt
+  symptoms:
+    - en: Fuel cell warning message
+      de: Warnmeldung des Brennstoffzellensystems
+    - en: Delayed or failed start in frost
+      de: Verzögerter oder gescheiterter Start bei Frost
+    - en: Often no noticeable effect in warm weather
+      de: Bei warmem Wetter oft keine spürbare Auswirkung
+  repair:
+    difficulty: medium
+    diy_possible: false
+    estimated_cost_eur: [80, 600]
+    estimated_hours: [0.5, 2]
+  flags:
+    mil: false
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
+  references:
+    - sae:J2012
+  related_codes: [U356F, U356A, U356B]
+  sources:
+    - https://patents.google.com/patent/US20110097637A1/en
+    - https://patents.google.com/patent/WO2008008963A1/en
+    - https://www.hilite.com/en/products/hydrogen/purge-drain-valve
+  reviewed: '2026-11-06'
+
+- code: U356F
+  category: network
+  title:
+    en: Anode Header Drain Valve Heater Relay Control Circuit
+    de: Anoden-Sammler-Ablassventil Heizrelais Steuerkreis
+  description:
+    en: U356F reports that the relay feeding the heater on the anode header drain valve cannot be driven properly because its coil circuit is open or shorted. That valve hangs on the stack's anode outlet header, where condensate gathers and can freeze during a cold soak. GM targets exactly this zone with heated outlet manifolds so ice does not block them during subzero starts. Whether the header valve carries its own heater and when it is switched is not described in public maker documents; the code only implies a relay separate from the one for the sump drain valve (U356E). Such a fault can leave the heater dead, risking an iced valve and a delayed or failed cold start, or keep it powered, which costs battery energy. In warm weather the effect is rarely noticeable. U356F has no public manufacturer source.
+    de: Gestört ist der Steuerkreis des Relais, das die Heizung am Anoden-Sammler-Ablassventil versorgt. Das Ventil hängt am Austrittssammler der Anode, wo sich Kondensat sammelt und beim Parken in der Kälte gefrieren kann. Genau diesen Bereich beheizt GM laut Patent, damit Eis die Austrittskanäle beim Start unter null nicht verstopft. Ob das Sammlerventil eine eigene Heizung hat und wann sie läuft, beschreibt keine öffentliche Herstellerunterlage; der Code setzt nur ein eigenes Relais neben dem des Sumpf-Ablassventils (U356E) voraus. Ist der Spulenkreis unterbrochen oder kurzgeschlossen, bleibt die Heizung kalt – mit dem Risiko eines vereisten Ventils und eines verzögerten oder gescheiterten Kaltstarts – oder sie läuft dauernd und zieht Batterieenergie. Bei Wärme merkt man davon selten etwas. Eine öffentliche Herstellerquelle zu U356F fehlt.
+  affected_components:
+    - anode_header_drain_heater_relay
+    - relay_wiring
+  common_causes:
+    - id: relay_coil_circuit_open_short
+      likelihood: high
+      label:
+        en: Open, short or corrosion in the relay coil wiring or connector
+        de: Unterbrechung, Kurzschluss oder Korrosion an Leitung oder Stecker der Relaisspule
+    - id: relay_faulty
+      likelihood: medium
+      label:
+        en: Heater relay faulty
+        de: Heizrelais defekt
+    - id: fuel_cell_controller_driver
+      likelihood: low
+      label:
+        en: Relay driver in the fuel cell control unit faulty
+        de: Relaistreiber im Brennstoffzellen-Steuergerät defekt
+  symptoms:
+    - en: Fuel cell warning message
+      de: Warnmeldung des Brennstoffzellensystems
+    - en: Start problems after a frosty night
+      de: Startprobleme nach einer Frostnacht
+    - en: Battery discharged if the heater stays on
+      de: Batterie entladen, wenn die Heizung dauerhaft läuft
+  repair:
+    difficulty: medium
+    diy_possible: false
+    estimated_cost_eur: [80, 600]
+    estimated_hours: [0.5, 2]
+  flags:
+    mil: false
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
+  references:
+    - sae:J2012
+  related_codes: [U356E, U356C, U356D]
+  sources:
+    - https://patents.google.com/patent/US8603695B2/en
+    - https://patents.google.com/patent/US11735751B1/en
+    - https://patents.google.com/patent/US20110097637A1/en
+  reviewed: '2026-11-06'
+
+- code: U3570
+  category: network
+  title:
+    en: Stack Inlet Coolant Temperature Sensor Circuit
+    de: Stack-Eintritt Kühlmitteltemperatursensor Stromkreis
+  description:
+    en: "U3570 signals that the sensor for coolant entering the stack sends a broken, shorted or out-of-range reading. Thermal control is steered by this value: Hyundai describes a three-port valve which gets the stack inlet temperature from the fuel cell control unit over CAN and sets its opening from it, and in a Nissan patent the current drawn from the stack is capped once inlet coolant passes a set point, so that the outlet cannot overheat. GM shows that the inlet figure can also be estimated from pump inlet temperature, flow rate and a heat exchanger model. No maker documents U3570 publicly. Without a valid reading the system has to run on a substitute; a warning lamp and held-back power are to be expected. Outlet sensors report as U3571 and U3572."
+    de: "Der Code meldet einen elektrischen Fehler am Temperaturfühler im Kühlmittelzulauf des Stacks: Unterbrechung, Kurzschluss oder ein Signal außerhalb des gültigen Bereichs. Nach diesem Wert richtet sich die Temperaturregelung. Bei Hyundai bekommt das Dreiwegeventil die Stack-Eintrittstemperatur vom Brennstoffzellen-Steuergerät über CAN und stellt danach seine Öffnung ein; Nissan begrenzt laut Patent den entnehmbaren Strom, sobald das zulaufende Kühlmittel eine Schwelle überschreitet, damit der Austritt nicht zu heiß wird. GM zeigt, dass sich der Eintrittswert auch aus Pumpenzulauftemperatur, Durchfluss und einem Wärmetauschermodell schätzen lässt. Öffentlich belegt ist U3570 bei keinem Hersteller. Zu erwarten sind Warnmeldung und gedrosselte Leistung; die Austrittsfühler melden U3571 und U3572."
+  affected_components:
+    - stack_inlet_coolant_temp_sensor
+    - sensor_wiring
+  common_causes:
+    - id: sensor_connector_wiring
+      likelihood: high
+      label:
+        en: Open, short or corrosion in wiring or connector of the inlet sensor
+        de: Unterbrechung, Kurzschluss oder Korrosion an Leitung oder Stecker des Eintrittsfühlers
+    - id: sensor_internal_fault
+      likelihood: medium
+      label:
+        en: Inlet coolant temperature sensor faulty internally (drift, internal open)
+        de: Eintritts-Temperaturfühler intern defekt (Drift, innere Unterbrechung)
+    - id: coolant_leak_at_sensor
+      likelihood: low
+      label:
+        en: Coolant seeping past the sensor seal into the connector
+        de: Kühlmittel dringt an der Fühlerdichtung vorbei in den Stecker
+    - id: fuel_cell_controller_input
+      likelihood: low
+      label:
+        en: Input stage of the fuel cell control unit faulty
+        de: Eingangsstufe des Brennstoffzellen-Steuergeräts defekt
+  symptoms:
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Reduced power, especially under high load
+      de: Weniger Leistung, vor allem bei hoher Last
+    - en: Implausible stack inlet temperature in live data
+      de: Unplausible Stack-Eintrittstemperatur in den Messwerten
+  repair:
+    difficulty: hard
+    diy_possible: false
+    estimated_cost_eur: [100, 600]
+    estimated_hours: [0.5, 2.5]
+  flags:
+    mil: true
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
+  references:
+    - sae:J2012
+  related_codes: [U3571, U3572, U3573, U3574]
+  sources:
+    - https://patents.google.com/patent/US8485226B2/en
+    - https://patents.google.com/patent/US8268499B2/en
+    - https://patents.google.com/patent/US7465508B2/en
+  reviewed: '2026-11-06'
+
+- code: U3571
+  category: network
+  title:
+    en: Stack Outlet Coolant Temperature Sensor 1 Circuit
+    de: Stack-Austritt Kühlmitteltemperatursensor 1 Stromkreis
+  description:
+    en: "U3571 concerns the wiring and signal of sensor 1 in the coolant stream leaving the stack. Coolant is hottest here, so the reading serves as the main overheat guard: GM holds stack outlet temperature mainly with a three-port valve sending coolant past or through the radiator and shuts the stack off when coolant at this point gets too hot. A wrong outlet value can therefore force a needless shutdown or hide genuine overheating. GM cross-checks the sensor against end cell temperatures and treats it as suspect when it reads more than 3 °C above their average. Hyundai can fall back on the exhaust temperature of the air side as a stand-in. No public maker document names U3571. Warning and lower output follow; U3572 covers sensor 2 at this location, U3570 the inlet."
+    de: "Hier liegt ein Kreisfehler am ersten Temperaturfühler im Kühlmittelaustritt des Stacks vor. Dort ist das Kühlmittel am wärmsten, deshalb dient der Wert als Überhitzungsschutz: GM regelt die Austrittstemperatur vor allem über ein Dreiwege-Bypassventil am Kühler und schaltet den Stack ab, wenn es dort zu heiß wird. Liefert der Fühler falsche Werte, droht entweder ein unnötiges Abschalten oder eine unerkannte Überhitzung. GM gleicht ihn deshalb mit den Temperaturen der Endzellen ab und hält ihn für verdächtig, wenn er mehr als 3 °C über deren Mittel liegt. Hyundai kann ersatzweise mit der Ablufttemperatur der Luftseite weiterregeln. U3571 ist bei keinem Hersteller öffentlich dokumentiert. Folgen: Warnung und weniger Leistung. Fühler 2 an derselben Stelle meldet U3572, den Eintritt U3570."
+  affected_components:
+    - stack_outlet_coolant_temp_sensor_1
+    - sensor_wiring
+  common_causes:
+    - id: sensor_connector_wiring
+      likelihood: high
+      label:
+        en: Open, short or corrosion in wiring or connector of outlet sensor 1
+        de: Unterbrechung, Kurzschluss oder Korrosion an Leitung oder Stecker von Austrittsfühler 1
+    - id: sensor_internal_fault
+      likelihood: medium
+      label:
+        en: Outlet temperature sensor 1 faulty internally or drifting
+        de: Austritts-Temperaturfühler 1 intern defekt oder driftend
+    - id: sensor_heat_damage
+      likelihood: low
+      label:
+        en: Connector or wiring near the hot outlet line damaged by heat
+        de: Stecker oder Leitung an der heißen Austrittsleitung durch Hitze beschädigt
+  symptoms:
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Power reduced or fuel cell system switched off as a precaution
+      de: Leistung reduziert oder Brennstoffzellensystem vorsorglich abgeschaltet
+    - en: Outlet temperatures of sensor 1 and sensor 2 disagree in live data
+      de: Austrittstemperaturen von Fühler 1 und Fühler 2 weichen in den Messwerten voneinander ab
+  repair:
+    difficulty: hard
+    diy_possible: false
+    estimated_cost_eur: [100, 600]
+    estimated_hours: [0.5, 2.5]
+  flags:
+    mil: true
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
+  references:
+    - sae:J2012
+  related_codes: [U3572, U3570, U3574]
+  sources:
+    - https://patents.google.com/patent/DE102007059738B4/en
+    - https://patents.google.com/patent/US7465508B2/en
+    - https://patents.google.com/patent/US12062823B2/en
+  reviewed: '2026-11-06'
+
+- code: U3572
+  category: network
+  title:
+    en: Stack Outlet Coolant Temperature Sensor 2 Circuit
+    de: Stack-Austritt Kühlmitteltemperatursensor 2 Stromkreis
+  description:
+    en: "U3572 is logged when the second coolant temperature sensor at the stack outlet has a wiring or signal problem. No maker explains in public why two sensors share this spot; mutual checking is the obvious reason. A Toyota patent for systems with several stacks shows one way: outlet temperature is estimated from inlet temperature and stack output, and an outlet sensor whose reading departs from that estimate is reported as faulty. GM compares the outlet value with an expected figure to spot a failed coolant pump and may then lower stack output. Hyundai campaign 21-01-045H-1 for the Nexo shows that a stack coolant fault (pump code P1D3D94) lights the check engine lamp. No maker documents U3572 publicly. With sensor 1 still valid a warning may be all; with both lost, power will be cut. Sensor 1 is U3571."
+    de: "U3572 betrifft den Stromkreis des zweiten Kühlmitteltemperaturfühlers am Stack-Austritt. Warum dort zwei Fühler sitzen, legt kein Hersteller offen; naheliegend ist eine gegenseitige Kontrolle. Ein Beispiel liefert ein Toyota-Patent für Anlagen mit mehreren Stacks: Aus Eintrittstemperatur und Stackleistung wird die Austrittstemperatur geschätzt, und ein Fühler, der davon abweicht, wird als defekt gemeldet. GM vergleicht den Austrittswert mit einem Erwartungswert, erkennt so eine ausgefallene Kühlmittelpumpe und drosselt dann gegebenenfalls. Dass Störungen im Stack-Kühlkreis die Motorkontrollleuchte einschalten, belegt Hyundais Nexo-Kampagne 21-01-045H-1 (Pumpencode P1D3D94). Öffentlich dokumentiert ist U3572 nicht. Misst Fühler 1 plausibel, bleibt es womöglich bei einer Warnung; fallen beide aus, wird gedrosselt. Fühler 1: U3571."
+  affected_components:
+    - stack_outlet_coolant_temp_sensor_2
+    - sensor_wiring
+  common_causes:
+    - id: sensor_connector_wiring
+      likelihood: high
+      label:
+        en: Open, short or corrosion in wiring or connector of outlet sensor 2
+        de: Unterbrechung, Kurzschluss oder Korrosion an Leitung oder Stecker von Austrittsfühler 2
+    - id: sensor_internal_fault
+      likelihood: medium
+      label:
+        en: Outlet temperature sensor 2 faulty internally
+        de: Austritts-Temperaturfühler 2 intern defekt
+    - id: shared_ground_fault
+      likelihood: low
+      label:
+        en: Shared sensor ground faulty (often with U3571 at the same time)
+        de: Gemeinsame Fühlermasse gestört (oft zusammen mit U3571)
+  symptoms:
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Little or no change in driving as long as sensor 1 is valid
+      de: Kaum Auswirkung auf das Fahren, solange Fühler 1 gültig misst
+    - en: Reduced power if both outlet sensors are affected
+      de: Weniger Leistung, wenn beide Austrittsfühler betroffen sind
+  repair:
+    difficulty: hard
+    diy_possible: false
+    estimated_cost_eur: [100, 600]
+    estimated_hours: [0.5, 2.5]
+  flags:
+    mil: true
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
+  references:
+    - sae:J2012
+  related_codes: [U3571, U3570, U3574]
+  sources:
+    - https://patents.google.com/patent/US12224464B2/en
+    - https://patents.google.com/patent/US7682720B2/en
+    - https://static.nhtsa.gov/odi/tsbs/2021/MC-10202182-0001.pdf
+  reviewed: '2026-11-06'
+
+- code: U3573
+  category: network
+  title:
+    en: Coolant Mixing Valve Control Circuit
+    de: Kühlmittel-Mischventil Steuerkreis
+  description:
+    en: "U3573 concerns how the coolant mixing valve is powered: its actuator line may be interrupted or shorted, or the output stage may have failed. This three-way valve splits stack coolant between radiator and bypass and so decides how warm it is when it returns to the stack. Designs vary: in a Hyundai application a solenoid pushes a spool and its current sets the split, while Toyota describes a rotary valve turned by a stepper motor through a gear train. In the conventional Hyundai layout the valve takes the stack inlet temperature over CAN from the fuel cell control unit. If the actuator cannot be powered, coolant temperature is no longer regulated. U3573 appears in no public maker document. Likely consequences are a warning and capped output; how the valve itself responds is judged under U3574."
+    de: "Gemeldet wird ein elektrischer Fehler im Ansteuerkreis des Kühlmittel-Mischventils – Unterbrechung, Kurzschluss oder defekte Endstufe. Das Dreiwegeventil teilt das Kühlmittel zwischen Kühler und Bypass auf und legt so fest, wie warm es in den Stack zurückläuft. Die Bauarten unterscheiden sich: In einer Hyundai-Anmeldung schiebt ein Elektromagnet einen Kolben, und der Spulenstrom bestimmt die Aufteilung; Toyota beschreibt einen Drehschieber mit Schrittmotor und Zahnradgetriebe. Beim herkömmlichen Hyundai-Aufbau erhält das Ventil die Stack-Eintrittstemperatur über CAN vom Brennstoffzellen-Steuergerät. Lässt sich der Antrieb nicht bestromen, ist die Kühlmitteltemperatur nicht mehr regelbar. Kein Hersteller nennt U3573 öffentlich. Warnung und Leistungsrücknahme sind wahrscheinlich; das Verhalten des Ventils selbst bewertet U3574."
+  affected_components:
+    - coolant_mixing_valve
+    - valve_wiring
+  common_causes:
+    - id: harness_connector_mixing_valve
+      likelihood: high
+      label:
+        en: Open, short or corrosion in wiring or connector of the valve actuator
+        de: Unterbrechung, Kurzschluss oder Korrosion an Leitung oder Stecker des Ventilantriebs
+    - id: valve_actuator_motor_fault
+      likelihood: medium
+      label:
+        en: Actuator motor or solenoid coil of the mixing valve faulty
+        de: Stellmotor oder Magnetspule des Mischventils defekt
+    - id: fuel_cell_controller_driver
+      likelihood: low
+      label:
+        en: Driver stage or CAN link of the controlling unit faulty
+        de: Endstufe oder CAN-Anbindung des ansteuernden Steuergeräts gestört
+  symptoms:
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Stack temperature too high or too low, reduced power
+      de: Stacktemperatur zu hoch oder zu niedrig, weniger Leistung
+    - en: Slow warm-up of the fuel cell system
+      de: Brennstoffzellensystem wird nur langsam warm
+  repair:
+    difficulty: hard
+    diy_possible: false
+    estimated_cost_eur: [200, 1200]
+    estimated_hours: [1, 3]
+  flags:
+    mil: true
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
+  references:
+    - sae:J2012
+  related_codes: [U3574, U3575, U3570]
+  sources:
+    - https://patents.google.com/patent/US20110132483A1/en
+    - https://patents.google.com/patent/US8142946B2/en
+    - https://patents.google.com/patent/US8485226B2/en
+  reviewed: '2026-11-06'
+
+- code: U3574
+  category: network
+  title:
+    en: Coolant Mixing Valve
+    de: Kühlmittel-Mischventil
+  description:
+    en: "U3574 serves as the catch-all for the coolant mixing valve when the trouble lies in its behaviour rather than its wiring: it sticks, moves too slowly or misses the commanded split between radiator and bypass. Temperatures reveal it, because GM sets stack outlet temperature with this valve and the inlet-to-outlet difference with pump speed, so a jammed valve upsets both. Toyota plans for the case: before each start the valve runs to a fully open end position to reset its zero point, and in one variant it is left open toward the radiator at shutdown, so a valve that seizes later still cools the stack. Hyundai patented a lower-friction plunger seal for its stack coolant valve against leaks and wear. No maker documents U3574 publicly. Expect a warning, swinging temperatures and less power."
+    de: "U3574 fasst Fehler zusammen, bei denen das Mischventil elektrisch in Ordnung ist, sich aber falsch verhält: Es klemmt, verstellt sich zu träge oder erreicht die vorgegebene Aufteilung zwischen Kühler und Bypass nicht. Sichtbar wird das an den Temperaturen, denn GM regelt über dieses Ventil die Austrittstemperatur des Stacks und über die Pumpendrehzahl den Temperaturhub zwischen Ein- und Austritt. Toyota sorgt laut Patent für diesen Fall vor: Vor dem Start fährt das Ventil zum Nullpunktabgleich in eine Endlage, in einer Variante bleibt es beim Abstellen zum Kühler hin offen, damit auch ein später festsitzendes Ventil den Stack noch kühlt. Hyundai hat für sein Stack-Kühlmittelventil eine reibungsärmere, dichtere Kolbenabdichtung patentiert. Öffentlich belegt ist U3574 nicht. Folgen: Warnung, schwankende Temperaturen, weniger Leistung."
+  affected_components:
+    - coolant_mixing_valve
+  common_causes:
+    - id: valve_sticking_deposits
+      likelihood: medium
+      label:
+        en: Valve element sticking from deposits, worn seal or unsuitable coolant
+        de: Ventilkörper klemmt durch Ablagerungen, verschlissene Dichtung oder ungeeignetes Kühlmittel
+    - id: valve_actuator_gear_wear
+      likelihood: medium
+      label:
+        en: Actuator gear or motor worn, valve moves sluggishly
+        de: Getriebe oder Motor des Stellantriebs verschlissen, Ventil bewegt sich träge
+    - id: valve_internal_leak
+      likelihood: low
+      label:
+        en: Internal leak, coolant passes the closed port
+        de: Innere Undichtigkeit, Kühlmittel strömt am geschlossenen Anschluss vorbei
+    - id: air_in_coolant_loop
+      likelihood: low
+      label:
+        en: Air in the stack coolant loop after service distorting the temperature response
+        de: Luft im Stack-Kühlkreis nach einer Wartung verfälscht das Temperaturverhalten
+  symptoms:
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Stack temperature swings or stays too high under load
+      de: Stacktemperatur schwankt oder bleibt unter Last zu hoch
+    - en: Reduced power, slow warm-up in cold weather
+      de: Weniger Leistung, langsames Warmwerden bei Kälte
+  repair:
+    difficulty: hard
+    diy_possible: false
+    estimated_cost_eur: [250, 1500]
+    estimated_hours: [1, 4]
+  flags:
+    mil: true
+    emissions_relevant: false
+    drive_cycle_required: true
+    limp_mode_possible: true
+  references:
+    - sae:J2012
+  related_codes: [U3573, U3575, U3570, U3571]
+  sources:
+    - https://patents.google.com/patent/US8420270B2/en
+    - https://patents.google.com/patent/US7465508B2/en
+    - https://patents.google.com/patent/US9528613B2/en
+  reviewed: '2026-11-06'
+
+- code: U3575
+  category: network
+  title:
+    en: Coolant Mixing Valve Position Sensor Circuit
+    de: Kühlmittel-Mischventil Positionssensor Stromkreis
+  description:
+    en: "U3575 deals with wiring and signal of the sensor reporting how far the coolant mixing valve is open. GM lists feedback of the valve position, next to two temperature sensors, among the parts its stack outlet temperature control relies on. In Toyota's design the sensor is built into the valve and returns the angle of the valving element; since it can drift, the controller re-zeroes it against an end position before the coolant pump starts. If the signal is missing or shorted, the controller no longer knows where the valve stands and may regulate from temperatures alone or move the valve to a safe setting. No maker documents U3575 publicly. Probable results: a warning lamp and capped output. Faults in driving this valve fall under U3573."
+    de: Gestört ist der Stromkreis jenes Gebers, der die Öffnung des Kühlmittel-Mischventils zurückmeldet. GM zählt einen solchen Stellungsgeber neben zwei Temperaturfühlern zu den Teilen, ohne die seine Regelung der Stack-Austrittstemperatur nicht auskommt. Bei Toyota steckt der Geber im Ventil und misst den Winkel des Ventilkörpers; weil er driften kann, gleicht das Steuergerät ihn vor dem Anlaufen der Kühlmittelpumpe an einer Endlage neu ab. Fehlt das Signal oder ist es kurzgeschlossen, weiß das Steuergerät nicht mehr, wo das Ventil steht. Es kann dann nur noch nach Temperaturen regeln oder das Ventil in eine sichere Lage fahren. Öffentlich nennt kein Hersteller U3575. Wahrscheinlich sind Warnmeldung und begrenzte Leistung; Antriebsfehler desselben Ventils meldet U3573.
+  affected_components:
+    - coolant_mixing_valve_position_sensor
+    - sensor_wiring
+  common_causes:
+    - id: sensor_connector_wiring
+      likelihood: high
+      label:
+        en: Open, short or moisture in the position sensor wiring or connector
+        de: Unterbrechung, Kurzschluss oder Feuchtigkeit an Leitung oder Stecker des Stellungsgebers
+    - id: position_sensor_internal_fault
+      likelihood: medium
+      label:
+        en: Position sensor faulty (usually replaced together with the valve)
+        de: Stellungsgeber defekt (meist nur zusammen mit dem Ventil erhältlich)
+    - id: sensor_supply_ground_fault
+      likelihood: low
+      label:
+        en: Sensor supply or ground missing
+        de: Versorgung oder Masse des Gebers fehlt
+  symptoms:
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Stack temperature regulated less precisely, reduced power
+      de: Stacktemperatur wird ungenauer geregelt, weniger Leistung
+    - en: Valve opening shown as invalid in live data
+      de: Ventilöffnung in den Messwerten als ungültig angezeigt
+  repair:
+    difficulty: hard
+    diy_possible: false
+    estimated_cost_eur: [200, 1200]
+    estimated_hours: [1, 3]
+  flags:
+    mil: true
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
+  references:
+    - sae:J2012
+  related_codes: [U3573, U3574, U3570]
+  sources:
+    - https://patents.google.com/patent/US7465508B2/en
+    - https://patents.google.com/patent/US8142946B2/en
+  reviewed: '2026-11-06'
+
+- code: U3576
+  category: network
+  title:
+    en: Stack Differential Pressure Sensor Circuit
+    de: Stack-Differenzdrucksensor Stromkreis
+  description:
+    en: "U3576 is set when the stack differential pressure sensor delivers no signal, a shorted one or one outside its valid range. The title leaves open which two pressures it compares. In a GM patent such a sensor is plumbed between anode and cathode side, as the anode is normally kept slightly above the cathode. GM also uses it ahead of start-up, with the cathode still at ambient pressure, to verify the anode pressure sensor: ambient plus differential reading should match the anode value. Ford keeps the difference across the membrane within a tolerance of around 600 mbar, may shut the system down when it is breached and heats such sensors so that ice cannot blind them. No maker documents U3576 publicly. Expect a warning, reduced power or no start; anode inlet pressure is U3566/U3567."
+    de: "U3576 steht für einen gestörten Signalkreis am Differenzdrucksensor des Stacks: Ausfall, Kurzschluss oder unzulässiger Wert. Welche beiden Drücke er vergleicht, lässt der Titel offen. In einem GM-Patent sitzt ein solcher Sensor zwischen Anoden- und Kathodenseite, weil die Anode üblicherweise etwas über dem Kathodendruck läuft. GM nutzt ihn zudem vor dem Start, solange die Kathode noch Umgebungsdruck hat, zur Kontrolle des Anodendrucksensors: Umgebungsdruck plus Differenz muss dessen Wert ergeben. Ford hält den Druckunterschied über der Membran in einer Toleranz von etwa 600 mbar, schaltet bei Überschreitung gegebenenfalls ab und beheizt solche Sensoren, damit Eis sie nicht lahmlegt. Öffentlich belegt ist U3576 bei keinem Hersteller. Folgen: Warnung, weniger Leistung oder kein Start; den Anodeneintrittsdruck melden U3566/U3567."
+  affected_components:
+    - stack_differential_pressure_sensor
+    - sensor_wiring
+  common_causes:
+    - id: sensor_connector_wiring
+      likelihood: high
+      label:
+        en: Open, short or corrosion in wiring or connector of the differential pressure sensor
+        de: Unterbrechung, Kurzschluss oder Korrosion an Leitung oder Stecker des Differenzdrucksensors
+    - id: sensor_frozen_or_wet
+      likelihood: medium
+      label:
+        en: Water or ice in the sensor ports or a failed sensor heater
+        de: Wasser oder Eis in den Sensoranschlüssen oder ausgefallene Sensorheizung
+    - id: sensor_internal_fault
+      likelihood: medium
+      label:
+        en: Differential pressure sensor faulty internally
+        de: Differenzdrucksensor intern defekt
+  symptoms:
+    - en: Fuel cell system warning, MIL on
+      de: Warnung des Brennstoffzellensystems, MIL an
+    - en: Reduced power or fuel cell system shuts down
+      de: Weniger Leistung oder Abschalten des Brennstoffzellensystems
+    - en: No start, especially after a cold night
+      de: Kein Start, vor allem nach einer kalten Nacht
+  repair:
+    difficulty: hard
+    diy_possible: false
+    estimated_cost_eur: [150, 900]
+    estimated_hours: [0.5, 3]
+  flags:
+    mil: true
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
+  references:
+    - sae:J2012
+  related_codes: [U3566, U3567, U356D]
+  sources:
+    - https://patents.google.com/patent/US8192878B2/en
+    - https://patents.google.com/patent/US8413517B2/en
+  reviewed: '2026-11-06'
