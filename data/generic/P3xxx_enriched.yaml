@@ -3511,45 +3511,56 @@
   category: powertrain
   title:
     en: Cylinder 7 Exhaust Valve Control Circuit Low
-    de: Zylinder 7 Auslassventil-Steuerkreis niedrig
+    de: Zylinder 7 Auslassventil Steuerkreis niedrig
   description:
-    en: The engine control module has detected a low voltage condition in the control circuit of the cylinder 7 exhaust valve deactivation solenoid. A short to ground or low-side driver fault prevents proper actuation of the exhaust valve during cylinder deactivation events on cylinder 7.
-    de: Das Motorsteuergerät hat eine zu niedrige Spannung im Steuerkreis des Abschalt-Magnetventils für das Auslassventil von Zylinder 7 erkannt. Ein Masseschluss oder ein Fehler des Low-Side-Treibers verhindert die korrekte Ansteuerung des Auslassventils während der Zylinderabschaltung von Zylinder 7.
+    en: "P3455 points to a ground fault on the line that would drive an exhaust-only actuator on cylinder 7. No manufacturer documents this code publicly. On GM V8 engines, AFM and DFM alike, a single lifter oil solenoid serves intake and exhaust of each cylinder, so a grounded line there sets the intake-side code P3451: the low-side driver is switched off, the output reads under 0.5 ohm to ground, and 20 of 25 checks taken every 250 ms must fail (Type B). On FCA's Hemi, MDS wiring rubbed through by the heat shield behind the driver-side head, next to cylinder 7, shows up as P3449. With its control line grounded, the actuator could switch on uncommanded, so the cylinder may lose its valve motion while fuel still flows. P3453 is the open, P3456 the short to power."
+    de: "P3455 steht für Masseschluss an der Ansteuerung eines separaten Stellglieds, das nur das Auslassventil von Zylinder 7 schaltet. Kein Hersteller dokumentiert diesen Code öffentlich. Bei GMs V8 – ob AFM oder DFM – arbeitet je Zylinder ein einziges Stößel-Ölmagnetventil für Ein- und Auslass; eine Leitung an Masse setzt dort den Einlass-Code P3451. Geprüft wird bei ausgeschalteter Low-Side-Endstufe auf unter 0,5 Ohm gegen Masse, 20 von 25 Messungen im 250-ms-Raster müssen scheitern (Type B). Beim Hemi von FCA landen durchgescheuerte MDS-Leitungen hinten am fahrerseitigen Zylinderkopf – dort liegt Zylinder 7 – unter P3449. Hat die Steuerleitung Masseschluss, zieht das Stellglied womöglich ohne Befehl an: Der Zylinder verliert seinen Ventilhub, obwohl weiter eingespritzt wird. P3453 meldet die Unterbrechung, P3456 den Plusschluss."
   affected_components:
     - cylinder_deactivation_solenoid
-    - engine_wiring_harness
+    - wiring_harness
     - ecm
   common_causes:
-    - id: solenoid_short_to_ground
+    - id: harness_chafed_to_ground
       likelihood: high
       label:
-        en: Solenoid or wiring shorted to ground
-        de: Magnetventil oder Verkabelung gegen Masse kurzgeschlossen
-    - id: ecm_driver_failed
+        en: Actuator wire chafed through against the cylinder head or a heat shield
+        de: Stellglied-Leitung am Zylinderkopf oder Hitzeschild durchgescheuert
+    - id: actuator_internal_short
       likelihood: medium
       label:
-        en: ECM low-side driver failed
-        de: Low-Side-Treiber im Steuergerät defekt
-    - id: connector_corrosion
+        en: Actuator coil shorted to its housing
+        de: Spule des Stellglieds mit Schluss zum Gehäuse
+    - id: ecm_driver_fault
       likelihood: low
       label:
-        en: Connector corrosion or pin damage
-        de: Korrodierter Stecker oder beschädigte Pins
+        en: Output stage in the engine control module damaged
+        de: Endstufe im Motorsteuergerät beschädigt
+  symptoms:
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
+    - en: Cylinder deactivation locked out
+      de: Zylinderabschaltung gesperrt
+    - en: Rough running or misfire on cylinder 7 if the actuator pulls in unbidden
+      de: Unruhiger Lauf oder Aussetzer an Zylinder 7, wenn das Stellglied ungewollt anzieht
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [150, 1200]
-    estimated_hours: [1.0, 6.0]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3454, P3453, P3462, P3446, P3438, P3431, P3423, P3487, P3415]
+  related_codes: [P3453, P3454, P3456, P3451, P3449, P3400, P0307]
   sources:
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
-    - https://en.wikipedia.org/wiki/Variable_displacement
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03A%20Diagnostics.pdf
+    - https://static.nhtsa.gov/odi/inv/2025/INRD-PE25001-11969.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10176548-9999.pdf
+  reviewed: '2026-11-06'
 
 - code: P3456
   category: powertrain
@@ -3994,45 +4005,54 @@
   category: powertrain
   title:
     en: Cylinder 8 Exhaust Valve Control Circuit High
-    de: Zylinder 8 Auslassventil-Steuerkreis hoch
+    de: Zylinder 8 Auslassventil Steuerkreis hoch
   description:
-    en: The engine control module has detected a high voltage condition in the control circuit of the cylinder 8 exhaust valve deactivation solenoid. A short to voltage or open low-side path causes the driver to read above the expected range, disabling cylinder deactivation requests for cylinder 8.
-    de: Das Motorsteuergerät hat eine zu hohe Spannung im Steuerkreis des Abschalt-Magnetventils für das Auslassventil von Zylinder 8 erkannt. Ein Kurzschluss gegen Plus oder ein offener Low-Side-Pfad führt zu einem Wert über dem Sollbereich und deaktiviert Abschaltanforderungen für Zylinder 8.
+    en: "P3464 is stored once the line to a stand-alone cylinder 8 exhaust actuator sits at a high level, typically a wire touching battery voltage. No manufacturer documents this code publicly. According to GM bulletin 20-NA-038, cylinder 8 is switched off only by DFM engines and by the LTA and LT2, whose fixed pattern is 2, 3, 5 and 8; classic AFM uses 1, 7, 6 and 4. On those engines a single solenoid also moves the exhaust lifter, and GM lists a short to power on it as P3460: with the low-side driver commanded on, less than 0.5 ohm to supply, 20 of 25 samples, Type B. Its malfunction text says cylinder 7, a copy slip in the 2019 table. The shorted output cannot pull in, so cylinder 8 simply stays active. P3463 is the ground fault."
+    de: "P3464 entsteht, sobald die Leitung zu einem gesonderten Auslass-Stellglied von Zylinder 8 einen zu hohen Pegel führt, typischerweise durch Kontakt mit Batteriespannung. Kein Hersteller dokumentiert diesen Code öffentlich. Laut GM-Bulletin 20-NA-038 legen nur DFM-Motoren sowie LTA und LT2 mit dem festen Muster 2, 3, 5 und 8 den Zylinder 8 still; das klassische AFM schaltet 1, 7, 6 und 4. Dort bewegt ein einziges Magnetventil auch den Auslassstößel, und einen Plusschluss daran führt GM als P3460: Endstufe eingeschaltet, unter 0,5 Ohm zur Versorgung, 20 von 25 Proben, Type B. Im Fehlertext der Tabelle von 2019 steht dabei Zylinder 7 – ein Kopierfehler. Weil der kurzgeschlossene Ausgang nicht schalten kann, bleibt Zylinder 8 einfach in Betrieb. Den Masseschluss meldet P3463."
   affected_components:
     - cylinder_deactivation_solenoid
-    - engine_wiring_harness
+    - wiring_harness
     - ecm
   common_causes:
-    - id: solenoid_short_to_power
-      likelihood: high
-      label:
-        en: Solenoid or wiring shorted to power
-        de: Magnetventil oder Verkabelung gegen Plus kurzgeschlossen
-    - id: solenoid_open
+    - id: wiring_short_to_voltage
       likelihood: medium
       label:
-        en: Solenoid coil open
-        de: Magnetventilspule unterbrochen
-    - id: ecm_driver_failed
+        en: Control wire of the cylinder 8 actuator touching a battery feed
+        de: Steuerleitung des Stellglieds von Zylinder 8 berührt eine Plusleitung
+    - id: actuator_coil_shorted
+      likelihood: medium
+      label:
+        en: Shorted turns in the actuator coil, resistance far too low
+        de: Windungsschluss in der Stellglied-Spule, Widerstand viel zu gering
+    - id: ecm_driver_fault
       likelihood: low
       label:
-        en: ECM driver failed
-        de: Treiber im Steuergerät defekt
+        en: Output stage in the engine control module failed
+        de: Endstufe im Motorsteuergerät ausgefallen
+  symptoms:
+    - en: Check engine lamp on
+      de: Motorkontrollleuchte an
+    - en: Engine keeps running on all eight cylinders, slightly higher fuel use
+      de: Motor läuft dauerhaft auf allen acht Zylindern, etwas höherer Verbrauch
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [150, 1200]
-    estimated_hours: [1.0, 6.0]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
-    drive_cycle_required: true
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3463, P3447, P3488, P3439, P3432, P3424, P3416]
+  related_codes: [P3461, P3462, P3463, P3460, P3497]
   sources:
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
-    - https://en.wikipedia.org/wiki/Variable_displacement
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03B%20Diagnostics.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2021/MC-10194084-9999.pdf
+    - https://static.nhtsa.gov/odi/inv/2025/INRD-PE25001-11969.pdf
+  reviewed: '2026-11-06'
 
 - code: P3465
   category: powertrain
@@ -5285,41 +5305,42 @@
   category: powertrain
   title:
     en: Cylinder 11 Exhaust Valve Control Circuit Low
-    de: Zylinder 11 Auslassventil-Steuerschaltkreis niedrig
+    de: Zylinder 11 Auslassventil Steuerkreis niedrig
   description:
-    en: Cylinder 11 exhaust valve control voltage below expected range — short to ground. Engines with twelve cylinders and cylinder deactivation, such as Lamborghini's Aventador V12, hold the exhaust valves of the shut-off cylinders closed with a switchable actuator; this code concerns that actuator's circuit on cylinder 11. While the circuit is faulty the module keeps all cylinders active, and if the valve gear is stuck in the off position the cylinder may misfire.
-    de: Steuerspannung Auslassventil Zylinder 11 unter Sollbereich — Masseschluss. Zwölfzylinder mit Zylinderabschaltung, etwa der V12 des Lamborghini Aventador, halten die Auslassventile der abgeschalteten Zylinder über einen schaltbaren Aktuator geschlossen; dieser Code betrifft dessen Stromkreis an Zylinder 11. Solange der Stromkreis gestört ist, lässt das Steuergerät alle Zylinder aktiv, und hängt der Ventiltrieb in der abgeschalteten Stellung, kann der Zylinder Aussetzer haben.
+    en: "P3487 would tell of a grounded control wire feeding a dedicated exhaust valve actuator on cylinder 11. No manufacturer documents this code publicly; cylinders 9 to 12 only exist on engines with nine or more, and J2012 keeps these codes for them. The closest real design is Mercedes' Active Cylinder Control on the CL 600 and S 600 V12 around 2000: it shut down one bank, and according to Wikipedia two solenoids uncoupled that bank's exhaust valves to keep pressure in the idle cylinders. That is one circuit per bank, not per cylinder. GM's V8 analogue flags a ground short below 0.5 ohm with the driver off. Grounded wiring could engage the actuator by itself and silence cylinder 11 when it is meant to fire. Siblings: P3485 (open), P3488 (high)."
+    de: "P3487 zeigte an, dass die Ansteuerleitung eines separaten Auslass-Stellglieds an Zylinder 11 Masse bekommt. Kein Hersteller dokumentiert diesen Code öffentlich; Zylinder 9 bis 12 gibt es erst ab neun Zylindern, für solche Motoren hält J2012 diese Codes bereit. Am nächsten kommt ihm die Active Cylinder Control des V12 in CL 600 und S 600 um das Jahr 2000: Sie legte eine Bank still, und laut Wikipedia entkoppelten zwei Magnetventile die Auslassventile dieser Bank, damit in den ruhenden Zylindern Druck blieb. Das ist ein Kreis je Bank, nicht je Zylinder. GMs V8-Gegenstück erkennt einen Masseschluss unter 0,5 Ohm bei ausgeschaltetem Treiber. Eine Leitung an Masse könnte das Stellglied ohne Befehl anziehen und Zylinder 11 abschalten, obwohl er zünden soll. Geschwister: P3485 (offen), P3488 (hoch)."
   affected_components:
-    - cyl11_exhaust_valve_actuator
-    - actuator_wiring
+    - cylinder_deactivation_solenoid
+    - wiring_harness
+    - ecm
   common_causes:
-    - id: short_to_ground
+    - id: wiring_short_to_ground
       likelihood: high
       label:
-        en: Wiring shorted to ground
-        de: Verkabelung mit Masseschluss
-    - id: connector_corrosion
+        en: Actuator wire chafed through to engine ground
+        de: Stellglied-Leitung zur Motormasse durchgescheuert
+    - id: actuator_internal_short
+      likelihood: medium
+      label:
+        en: Actuator coil shorted to its housing
+        de: Spule des Stellglieds mit Schluss zum Gehäuse
+    - id: connector_water
       likelihood: low
       label:
-        en: Connector pins corroded - high contact resistance
-        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
-    - id: harness_chafe
-      likelihood: low
-      label:
-        en: Harness chafing through insulation
-        de: Kabelbaum scheuert sich durch die Isolation
+        en: Moisture in the actuator connector bridging to ground
+        de: Feuchtigkeit im Stellglied-Stecker überbrückt nach Masse
   symptoms:
-    - en: Check engine light on
+    - en: Check engine lamp on
       de: Motorkontrollleuchte an
-    - en: Cylinder deactivation inactive
-      de: Zylinderabschaltung inaktiv
-    - en: Possible misfire on cylinder 11
-      de: Möglicherweise Zündaussetzer an Zylinder 11
+    - en: Bank shut-off no longer offered
+      de: Bankabschaltung wird nicht mehr angeboten
+    - en: Possible misfire on cylinder 11 (P0311)
+      de: Mögliche Aussetzer an Zylinder 11 (P0311)
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [80, 600]
-    estimated_hours: [0.5, 3]
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
@@ -5327,54 +5348,52 @@
     limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3462, P3455, P3454, P3453, P3446, P3438, P3431, P3423, P3415]
+  related_codes: [P3485, P3486, P3488, P3483, P0311, P3497]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
-    - https://www.mobilityengineeringtech.com/component/content/article/41966-sae-ma-01159
-    - https://patents.google.com/patent/US20070240659A1/en
-    - https://newatlas.com/aventador-lp-700-4-start-stop/24363/
+    - https://en.wikipedia.org/wiki/Mercedes-Benz_CL-Class_(C215)
+    - https://motorweek.org/road_tests/2001_mercedes_benz_cl600_s600_program_2033/
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03B%20Diagnostics.pdf
+  reviewed: '2026-11-06'
 
 - code: P3488
   category: powertrain
   title:
     en: Cylinder 11 Exhaust Valve Control Circuit High
-    de: Zylinder 11 Auslassventil-Steuerschaltkreis hoch
+    de: Zylinder 11 Auslassventil Steuerkreis hoch
   description:
-    en: Cylinder 11 exhaust valve control voltage above expected range — short to power or open ground. Engines with twelve cylinders and cylinder deactivation, such as Lamborghini's Aventador V12, hold the exhaust valves of the shut-off cylinders closed with a switchable actuator; this code concerns that actuator's circuit on cylinder 11. While the circuit is faulty the module keeps all cylinders active, and if the valve gear is stuck in the off position the cylinder may misfire.
-    de: Steuerspannung Auslassventil Zylinder 11 über Sollbereich — Plus-Schluss oder offene Masse. Zwölfzylinder mit Zylinderabschaltung, etwa der V12 des Lamborghini Aventador, halten die Auslassventile der abgeschalteten Zylinder über einen schaltbaren Aktuator geschlossen; dieser Code betrifft dessen Stromkreis an Zylinder 11. Solange der Stromkreis gestört ist, lässt das Steuergerät alle Zylinder aktiv, und hängt der Ventiltrieb in der abgeschalteten Stellung, kann der Zylinder Aussetzer haben.
+    en: "With P3488, the cylinder 11 exhaust actuator line sits too high, most often since the wire has picked up battery voltage. No manufacturer documents this code publicly; cylinders 9 to 12 only exist on engines with nine or more, and J2012 keeps these codes for them. Later V12 and W12 designs give it no job: Bentley's W12 idles a bank of six with its valves still moving, while the Aventador from Lamborghini parks one bank under 135 km/h. Only Mercedes' V12 of around 2000 uncoupled exhaust valves, using two solenoids for that bank. GM's comparable V8 check calls a circuit high below 0.5 ohm to supply while the driver is on, 20 of 25 samples, Type B. The actuator then cannot be engaged, and the engine just runs on all cylinders. P3487 is the ground fault."
+    de: "P3488 betrifft einen zu hoch liegenden Kreis des Auslass-Stellglieds von Zylinder 11, meist weil die Steuerleitung Batteriespannung abbekommt. Kein Hersteller dokumentiert diesen Code öffentlich; Zylinder 9 bis 12 gibt es erst ab neun Zylindern, für solche Motoren hält J2012 diese Codes bereit. Spätere Zwölfzylinder mit Abschaltung haben dafür keine Verwendung: Bentleys W12 legt eine Sechserbank still, deren Ventile weiterlaufen, und Lamborghini nimmt beim Aventador unter 135 km/h eine komplette Bank vom Netz. Nur der Mercedes-V12 um 2000 entkoppelte Auslassventile, mit zwei Magnetventilen für die Bank. GMs vergleichbare V8-Prüfung wertet unter 0,5 Ohm zur Versorgung bei eingeschalteter Endstufe als Fehler, 20 von 25 Proben, Type B. Das Stellglied bleibt dann aus, alle zwölf Zylinder arbeiten weiter. Masseschluss: P3487."
   affected_components:
-    - cyl11_exhaust_valve_actuator
-    - actuator_wiring
+    - cylinder_deactivation_solenoid
+    - wiring_harness
+    - ecm
   common_causes:
-    - id: short_to_power
+    - id: wiring_short_to_voltage
       likelihood: high
       label:
-        en: Wiring shorted to battery
-        de: Verkabelung mit Plus-Schluss
-    - id: connector_corrosion
+        en: Control wire of the cylinder 11 actuator touching a battery feed
+        de: Steuerleitung des Stellglieds von Zylinder 11 berührt eine Plusleitung
+    - id: actuator_coil_shorted
+      likelihood: medium
+      label:
+        en: Shorted turns in the actuator coil
+        de: Windungsschluss in der Stellglied-Spule
+    - id: ecm_driver_fault
       likelihood: low
       label:
-        en: Connector pins corroded - high contact resistance
-        de: Steckerkontakte korrodiert - hoher Übergangswiderstand
-    - id: supply_pinch
-      likelihood: low
-      label:
-        en: Supply wire pinched against B+ source
-        de: Versorgungsleitung gegen B+-Quelle eingeklemmt
+        en: Output stage in the engine control module failed
+        de: Endstufe im Motorsteuergerät ausgefallen
   symptoms:
-    - en: Check engine light on
+    - en: Check engine lamp on
       de: Motorkontrollleuchte an
-    - en: Cylinder deactivation inactive
-      de: Zylinderabschaltung inaktiv
-    - en: Possible misfire on cylinder 11
-      de: Möglicherweise Zündaussetzer an Zylinder 11
+    - en: Engine stays on all twelve cylinders
+      de: Motor bleibt auf allen zwölf Zylindern
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [80, 600]
-    estimated_hours: [0.5, 3]
+    estimated_cost_eur: [60, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: true
     emissions_relevant: true
@@ -5382,14 +5401,14 @@
     limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3464, P3463, P3447, P3439, P3432, P3424, P3416]
+  related_codes: [P3485, P3486, P3487, P3484, P3497]
   sources:
-    - https://github.com/Wal33D/dtc-database
-    - https://en.wikipedia.org/wiki/Cylinder_deactivation
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://www.mobilityengineeringtech.com/component/content/article/41966-sae-ma-01159
-    - https://patents.google.com/patent/US20070240659A1/en
     - https://newatlas.com/aventador-lp-700-4-start-stop/24363/
+    - https://en.wikipedia.org/wiki/Mercedes-Benz_CL-Class_(C215)
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03B%20Diagnostics.pdf
+  reviewed: '2026-11-06'
 
 - code: P3489
   category: powertrain
