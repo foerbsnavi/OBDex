@@ -31274,1001 +31274,1086 @@
   category: chassis
   title:
     en: Steering Effort Sensor Range/Performance
-    de: Lenkmoment-Sensor Bereich/Leistung
+    de: Lenkmomentsensor Bereich/Funktion
   description:
-    en: The electric power steering module has detected that the torque (effort) sensor signal is out of the expected range. Steering assist is reduced or disabled.
-    de: Das Lenkungssteuergerät hat erkannt, dass das Signal des Lenkmoment-Sensors außerhalb des erwarteten Bereichs liegt. Die Lenkunterstützung wird reduziert oder deaktiviert.
+    en: "No public code list, bulletin or service manual assigns C0825, so its use by any carmaker cannot be shown. The title points at the torque sensor of electric power steering: a torsion bar in the column or pinion twists under the driver's hand force, and Hall elements read that twist as a torque value. A range or performance fault means the reading stays inside its electrical limits but does not make sense, for example when the main and backup channels disagree. A Mitsubishi Electric patent checks both channels against a torque estimated from the motor current and stops assistance when none of them agree. Makers that publish torque sensor faults use their own numbers, e.g. Honda C1423-14 for the sensor supply on the 2022 CR-V. Expect an EPS warning and heavier steering."
+    de: "Weder Codelisten noch Bulletins oder Werkstatthandbücher führen C0825 öffentlich; welcher Hersteller ihn nutzt, lässt sich nicht nachweisen. Gemeint ist der Lenkmomentsensor der elektrischen Servolenkung: Ein Drehstab in Säule oder Ritzel verdrillt sich unter der Handkraft, Hall-Elemente setzen die Verdrehung in ein Momentsignal um. Ein Bereichs- oder Funktionsfehler heißt, dass das Signal elektrisch gültig, aber unplausibel ist – etwa wenn Haupt- und Nebenkanal auseinanderlaufen. Ein Patent von Mitsubishi Electric vergleicht beide Kanäle mit einem aus dem Motorstrom geschätzten Moment und nimmt die Unterstützung zurück, wenn keiner passt. Hersteller mit öffentlichen Unterlagen vergeben eigene Nummern, Honda etwa C1423-14 für die Sensorversorgung im CR-V 2022. Folge: EPS-Warnung, schwere Lenkung."
   affected_components:
     - torque_sensor
     - power_steering_module
     - sensor_wiring
   common_causes:
-    - id: torque_sensor_failed
+    - id: torque_sensor_drift
       likelihood: high
       label:
-        en: Steering torque sensor failed
-        de: Lenkmoment-Sensor defekt
-    - id: calibration_required
+        en: Torque sensor channel drifting or reading implausibly against the second channel
+        de: Kanal des Lenkmomentsensors driftet oder passt nicht zum zweiten Kanal
+    - id: sensor_supply_fault
       likelihood: medium
       label:
-        en: Calibration required after service
-        de: Kalibrierung nach Service erforderlich
-    - id: sensor_aged
+        en: Unstable sensor supply or internal short in the sensor (as in Honda bulletin 22-011)
+        de: Instabile Sensorversorgung oder innerer Kurzschluss im Sensor (wie Honda-Bulletin 22-011)
+    - id: connector_contact
       likelihood: low
       label:
-        en: 'Sensor element aged beyond calibration window'
-        de: 'Sensorelement gealtert über Kalibrierfenster hinaus'
+        en: Poor contact at the sensor or steering module connector
+        de: Schlechter Kontakt am Stecker von Sensor oder Lenkungssteuergerät
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Power steering warning lamp or message
+      de: Warnleuchte oder Meldung der Servolenkung
+    - en: Steering assist reduced or switched off, wheel feels heavy
+      de: Lenkunterstützung verringert oder abgeschaltet, Lenkrad geht schwer
+    - en: Uneven assistance between left and right turns
+      de: Ungleichmäßige Unterstützung zwischen Links- und Rechtseinschlag
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur:
-      - 300
-      - 1500
-    estimated_hours:
-      - 1
-      - 4
+    estimated_cost_eur: [300, 1800]
+    estimated_hours: [1, 4]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0827, C0720, C0735, C0740]
   sources:
-    - https://en.wikipedia.org/wiki/Power_steering
+    - https://patents.google.com/patent/US20060278467A1/en
+    - https://www.valeo.com/en/catalogue/cda/torque-and-or-angle-sensors/
+    - https://community.infineon.com/gfawx74859/attachments/gfawx74859/cnspeedsensor/69/1/Infineon-Sensor_Solutions_for_Automotive_Industrial_and%20Customer_Appl_BR-2015%20(1).pdf
+    - https://static.nhtsa.gov/odi/tsbs/2022/MC-10215492-0001.pdf
+  reviewed: '2026-11-06'
 - code: C0827
   category: chassis
   title:
     en: Steering Effort Sensor Stuck
-    de: Lenkmoment-Sensor blockiert
+    de: Lenkmomentsensor hängt
   description:
-    en: The power steering module has detected that the torque sensor signal does not change despite steering input — the sensor appears stuck. Assist is disabled to avoid uncontrolled steering torque.
-    de: Das Lenkungssteuergerät hat erkannt, dass sich das Signal des Lenkmoment-Sensors trotz Lenkbewegung nicht ändert — der Sensor scheint zu klemmen. Die Lenkunterstützung wird zur Vermeidung unkontrollierter Lenkmomente deaktiviert.
+    en: "C0827 appears in no accessible code list, bulletin or manufacturer table, so no carmaker can be named for it. The title describes a steering torque signal that freezes: the value no longer follows the driver, either because a short pins the output at a supply rail or because the sensor delivers a constant value while the wheel is clearly being turned. An NSK patent shows how such a case is handled: outputs close to 0 V or 5 V (about 0.3 V and 4.7 V) count as faulty, the controller then works with the smallest of the last few good samples and fades assistance to zero over a set time rather than cutting it at once. Unlike the plausibility fault C0825, here the signal stops changing. The driver sees an EPS warning and the steering turns heavy within seconds."
+    de: "C0827 steht in keiner zugänglichen Codeliste, keinem Bulletin und keiner Herstellertabelle; ein Hersteller lässt sich nicht nennen. Der Titel beschreibt ein eingefrorenes Lenkmomentsignal: Der Wert folgt der Hand des Fahrers nicht mehr, weil ein Kurzschluss den Ausgang an eine Versorgungsgrenze zieht oder der Sensor trotz deutlicher Lenkbewegung einen festen Wert liefert. Ein NSK-Patent zeigt die Behandlung: Werte nahe 0 V oder 5 V (etwa 0,3 V bzw. 4,7 V) gelten als fehlerhaft, das Steuergerät rechnet mit dem kleinsten der letzten gültigen Werte weiter und fährt die Unterstützung über eine feste Zeit auf null, statt sie schlagartig abzuschalten. Anders als beim Plausibilitätsfehler C0825 ändert sich hier das Signal gar nicht mehr. Folge: EPS-Warnung, die Lenkung wird binnen Sekunden schwer."
   affected_components:
     - torque_sensor
     - power_steering_module
   common_causes:
-    - id: torque_sensor_stuck
+    - id: sensor_output_shorted
       likelihood: high
       label:
-        en: Sensor mechanically stuck
-        de: Sensor mechanisch blockiert
-    - id: torque_sensor_failed
+        en: Sensor output shorted to supply or ground, holding the signal at a rail
+        de: Sensorausgang mit Versorgung oder Masse kurzgeschlossen, Signal klebt an der Grenze
+    - id: sensor_internal_failure
       likelihood: medium
       label:
-        en: Sensor electronics failed
-        de: Sensorelektronik defekt
+        en: Hall element or sensor electronics frozen, usually requiring a new steering gear or column
+        de: Hall-Element oder Sensorelektronik eingefroren, meist neues Lenkgetriebe bzw. neue Lenksäule nötig
+    - id: harness_damage
+      likelihood: low
+      label:
+        en: Chafed or pinched harness between sensor and steering module
+        de: Durchgescheuerte oder gequetschte Leitung zwischen Sensor und Lenkungssteuergerät
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Power steering warning lamp on
+      de: Warnleuchte der Servolenkung an
+    - en: Assistance fades out and steering becomes heavy
+      de: Unterstützung lässt nach, Lenkung wird schwer
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur:
-      - 300
-      - 1500
-    estimated_hours:
-      - 1
-      - 4
+    estimated_cost_eur: [300, 1800]
+    estimated_hours: [1, 4]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0825, C0720, C0735]
   sources:
-    - https://en.wikipedia.org/wiki/Power_steering
+    - https://patents.google.com/patent/US9352770B2/en
+    - https://www.valeo.com/en/catalogue/cda/torque-and-or-angle-sensors/
+    - https://www.nxp.com/docs/en/brochure/MatterofTorque.pdf
+  reviewed: '2026-11-06'
 - code: C0830
   category: chassis
   title:
     en: Steering Wheel Angle Sensor Center Position Not Learned
     de: Lenkwinkelsensor Mittelstellung nicht angelernt
   description:
-    en: The chassis control module has not stored a valid center (zero) position for the steering wheel angle sensor. ESP, lane assist and electric power steering may be limited until calibration is performed.
-    de: Das Fahrwerk-Steuergerät hat keine gültige Mittelstellung (Nullpunkt) des Lenkwinkelsensors hinterlegt. ESP, Spurhalte- und elektrische Lenkunterstützung können bis zur Kalibrierung eingeschränkt sein.
+    en: "No public list or bulletin uses C0830; its content overlaps with C0529 (missing calibration) and C0805. The stability control needs to know which sensor reading means wheels straight ahead; until that zero point is stored, it cannot compare steering input with yaw. GM files this as C0710-42 (calibration not programmed): Saab 9-5 and 9-4X of 2011 then disable both the stability system and the hill holder and light the indicator. Ram ProMaster 2022-23 sets C0529-00 after battery disconnect or gear replacement; turning lock to lock or a scan tool relearn fixes it (9100119). Kia asks for a centred wheel within 5 degrees when calibrating the Sorento column (PS547), and recalibrated 2025 Seltos sensors set wrong at the plant (SA641)."
+    de: "Keine öffentliche Liste und kein Bulletin nutzt C0830; inhaltlich deckt er sich mit C0529 (Kalibrierung fehlt) und C0805. Die Stabilitätsregelung muss wissen, welcher Sensorwert Geradeausfahrt bedeutet; solange dieser Nullpunkt fehlt, kann sie Lenkeingabe und Gierrate nicht vergleichen. GM legt den Fall als C0710-42 (Kalibrierung nicht programmiert) ab: Saab 9-5 und 9-4X von 2011 schalten dann Stabilitätsregelung und Berganfahrhilfe ab und zeigen die Kontrollleuchte. Der Ram ProMaster 2022–23 setzt C0529-00 nach Abklemmen der Batterie oder Getriebetausch; Anschlag-zu-Anschlag-Lenken oder ein Anlernen per Tester behebt es (9100119). Kia verlangt beim Kalibrieren der Sorento-Säule ein Lenkrad innerhalb 5 Grad Mitte (PS547) und kalibrierte ab Werk falsch gesetzte Sensoren im Seltos 2025 neu (SA641)."
   affected_components:
     - steering_angle_sensor
     - chassis_control_module
   common_causes:
-    - id: calibration_not_performed
+    - id: calibration_not_done
       likelihood: high
       label:
-        en: Sensor calibration not performed after replacement
-        de: Sensorkalibrierung nach Austausch nicht durchgeführt
-    - id: alignment_changed
+        en: Zero point not relearned after battery disconnect, alignment, sensor or steering gear replacement
+        de: Nullpunkt nach Batterie-Abklemmen, Spureinstellung, Sensor- oder Lenkgetriebetausch nicht neu angelernt
+    - id: wheel_off_centre
       likelihood: medium
       label:
-        en: Wheel alignment changed without calibration
-        de: Achsvermessung ohne anschließende Kalibrierung
+        en: Steering wheel not centred or alignment off during calibration
+        de: Lenkrad beim Kalibrieren nicht mittig oder Spur verstellt
+    - id: factory_calibration
+      likelihood: low
+      label:
+        en: Incorrect calibration from the factory (Kia service action SA641)
+        de: Fehlerhafte Werkskalibrierung (Kia-Serviceaktion SA641)
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Stability and traction control lamp on, ESC switched off
+      de: Kontrollleuchte für Stabilitäts- und Traktionsregelung an, ESP abgeschaltet
+    - en: Hill start assist or lane functions unavailable
+      de: Berganfahrhilfe oder Spurfunktionen nicht verfügbar
+    - en: Steering wheel slightly off centre when driving straight
+      de: Lenkrad bei Geradeausfahrt leicht schief
   repair:
-    difficulty: medium
+    difficulty: easy
     diy_possible: false
-    estimated_cost_eur:
-      - 50
-      - 300
-    estimated_hours:
-      - 0.3
-      - 1.5
+    estimated_cost_eur: [30, 200]
+    estimated_hours: [0.2, 1]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0529, C0805, C0710, C0460, C0605]
   sources:
-    - https://en.wikipedia.org/wiki/Electronic_stability_control
+    - https://saabwisonline.com/9-5-9650/2011/5-brakes/tcs-esp/fault-diagnosis-diagnostic-trouble-codes/dtc-c0460-or-c0710
+    - https://static.nhtsa.gov/odi/tsbs/2023/MC-10231683-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2018/MC-10133172-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2026/MC-11028508-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2016/MC-10120627-9999.pdf
+  reviewed: '2026-11-06'
 - code: C0840
   category: chassis
   title:
     en: Air Suspension Solenoid Valve Circuit
-    de: Luftfederungs-Magnetventil Stromkreis
+    de: Luftfederung Magnetventil Stromkreis
   description:
-    en: One of the level control solenoid valves reports an electrical fault. The corresponding axle cannot be levelled.
-    de: Eines der Niveauregulierungs-Magnetventile meldet einen elektrischen Fehler. Die zugehoerige Achse kann nicht angeglichen werden.
+    en: C0840 is not documented anywhere in public; no list, bulletin or manual of any carmaker uses it. The title concerns the electrical side of the valves that route air in a self-levelling suspension. Some systems carry one switching valve per air spring in a central block next to the compressor, as in a Continental patent that also places fast lowering valves there; older Ford and Lincoln designs put a two-position vent solenoid on top of each spring, opened by the vehicle dynamics module to fill or vent. A circuit fault means the module sees an open, a short or wrong current on a coil. Bentley logs such a case as C11C613, an open circuit at the rapid filling valve of the Bentayga, and checks the connector first. The affected corner can no longer be raised or lowered.
+    de: "C0840 ist öffentlich nirgends dokumentiert; keine Liste, kein Bulletin und kein Handbuch eines Herstellers nutzt ihn. Der Titel betrifft die elektrische Seite der Ventile, die in einer Niveauregulierung die Luft verteilen. Manche Systeme haben je Luftfeder ein Schaltventil in einem zentralen Block am Kompressor – ein Continental-Patent setzt dort zusätzlich Schnellablassventile ein; ältere Ford- und Lincoln-Ausführungen tragen oben auf jeder Feder ein Entlüftungs-Magnetventil mit zwei Stellungen, das das Fahrdynamikmodul zum Füllen oder Ablassen öffnet. Ein Kreisfehler heißt: Das Modul sieht Unterbrechung, Kurzschluss oder falschen Strom an einer Spule. Bentley führt so einen Fall als C11C613, Unterbrechung am Schnellfüllventil des Bentayga, und prüft zuerst den Stecker. Die betroffene Ecke lässt sich nicht mehr heben oder senken."
   affected_components:
     - air_suspension_valve
     - air_suspension_module
+    - sensor_wiring
   common_causes:
-    - id: solenoid_coil_open
+    - id: connector_corrosion
       likelihood: high
       label:
-        en: Solenoid coil open
-        de: Magnetspule unterbrochen
-    - id: connector_water_damage
+        en: Water or corrosion in the valve connector (Bentley 2064579/1 checks the plug first)
+        de: Wasser oder Korrosion im Ventilstecker (Bentley 2064579/1 prüft zuerst den Stecker)
+    - id: coil_open
       likelihood: medium
       label:
-        en: Connector water damage
-        de: Wassereintritt am Steckverbinder
+        en: Open or shorted valve coil, often after moisture got into the system
+        de: Ventilspule unterbrochen oder kurzgeschlossen, oft nach Feuchtigkeit im System
+    - id: harness_chafe
+      likelihood: low
+      label:
+        en: Chafed harness at the valve block or air spring
+        de: Durchgescheuerte Leitung am Ventilblock oder an der Luftfeder
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Air suspension warning or service message
+      de: Warnung oder Servicemeldung der Luftfederung
+    - en: One corner sags or ride height cannot be changed
+      de: Eine Ecke hängt durch oder das Niveau lässt sich nicht verstellen
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 200
-      - 900
-    estimated_hours:
-      - 1
-      - 3
+    estimated_cost_eur: [100, 900]
+    estimated_hours: [0.5, 3]
   flags:
     mil: false
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0810, C0815, C0820, C0821, C0822, C0823]
   sources:
-    - https://en.wikipedia.org/wiki/Air_suspension
+    - https://static.nhtsa.gov/odi/tsbs/2021/MC-10203221-0001.pdf
+    - https://www.motor.com/2023/03/diagnosing-and-repairing-ford-air-suspensions/
+    - https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11590819
+    - https://static.nhtsa.gov/odi/tsbs/2023/MC-10243264-9999.pdf
+  reviewed: '2026-11-06'
 - code: C0850
   category: chassis
   title:
     en: Active Damping Control Front Left
-    de: Aktive Daempferregelung vorne links
+    de: Aktive Dämpferregelung vorne links
   description:
-    en: The front left adjustable damper reports an electrical fault.
-    de: Der einstellbare Daempfer vorne links meldet einen elektrischen Fehler.
+    en: No manufacturer publishes C0850, and no code list carries it, so its use cannot be shown. The title refers to the electrically adjusted shock absorber at the left front. Its control unit sends a pulse width modulated current through a valve coil in the damper and measures the current that really flows; when the two differ, it stores a fault. GM does exactly this under its own number C0575 (Left Front Damper Actuator Circuit) on the 2011 Saab 9-5 and 9-4X, a meaning that differs from the J2012 use of C0575. The module then turns electronic damping off for that ignition cycle and shows SERVICE SUSPENSION SYSTEM. Stellantis uses C15C2 and C15C3 for the two left front valves (compression, rebound) on Ram 1500 and Charger from 2024.
+    de: Kein Hersteller veröffentlicht C0850, keine Codeliste führt ihn; seine Verwendung ist nicht nachweisbar. Der Titel meint den elektrisch verstellbaren Stoßdämpfer vorne links. Das Steuergerät schickt einen pulsweitenmodulierten Strom durch eine Ventilspule im Dämpfer und misst den tatsächlich fließenden Strom; weichen beide ab, legt es einen Fehler ab. GM macht genau das unter der eigenen Nummer C0575 (Dämpferaktor vorne links) bei den Saab-Jahrgängen 2011 (9-5, 9-4X) – abweichend von der J2012-Bedeutung von C0575. Das Modul schaltet die elektronische Dämpfung dann für den Zündzyklus ab und meldet SERVICE SUSPENSION SYSTEM. Stellantis vergibt C15C2 und C15C3 für die beiden Ventile vorne links (Druck- und Zugstufe) bei Ram 1500 und Charger ab 2024.
   affected_components:
     - active_damper_fl
     - damper_solenoid
     - suspension_control_module
   common_causes:
-    - id: solenoid_coil_open
+    - id: harness_strut
       likelihood: high
       label:
-        en: Damper solenoid coil open
-        de: Daempfer-Magnetspule unterbrochen
-    - id: wiring_chafe
+        en: Damaged or loose cable and plug at the front left strut
+        de: Beschädigtes oder lockeres Kabel bzw. Stecker am linken vorderen Federbein
+    - id: valve_coil_failed
       likelihood: medium
       label:
-        en: Wiring chafe at strut
-        de: Kabel am Federbein durchgescheuert
+        en: Valve coil inside the damper open or shorted, damper must be replaced
+        de: Ventilspule im Dämpfer unterbrochen oder kurzgeschlossen, Dämpfer muss getauscht werden
+    - id: module_output
+      likelihood: low
+      label:
+        en: Faulty driver stage in the suspension control module
+        de: Defekte Endstufe im Fahrwerkssteuergerät
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Service suspension message
+      de: Servicemeldung des Fahrwerks
+    - en: Damping no longer adapts, ride feels harsher or floatier
+      de: Dämpfung passt sich nicht mehr an, Fahrwerk wirkt härter oder schwammiger
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur:
-      - 400
-      - 1800
-    estimated_hours:
-      - 1.5
-      - 5
+    estimated_cost_eur: [150, 1800]
+    estimated_hours: [0.5, 4]
   flags:
     mil: false
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0851, C0852, C0853, C0920]
   sources:
-    - https://en.wikipedia.org/wiki/Active_suspension
+    - https://saabwisonline.com/9-5-9650/2011/7-suspension-wheels/electronic-chassis-control/fault-diagnosis-diagnostic-trouble-codes/dtc-c0575-c0580-c0585-or-c0590
+    - https://static.nhtsa.gov/odi/tsbs/2026/MC-11032345-0001.pdf
+    - https://aftermarket.zf.com/app/controller/ti/download/Binary/d94e3ef9-d750-11ec-a2ea-00505690da53.pdf
+  reviewed: '2026-11-06'
 - code: C0851
   category: chassis
   title:
     en: Active Damping Control Front Right
-    de: Aktive Daempferregelung vorne rechts
+    de: Aktive Dämpferregelung vorne rechts
   description:
-    en: The front right adjustable damper reports an electrical fault.
-    de: Der einstellbare Daempfer vorne rechts meldet einen elektrischen Fehler.
+    en: "C0851 has no public owner: neither code lists nor bulletins name it. Its subject is the adjustable damper at the right front corner. GM's electronic suspension on the 2011 Saab 9-5 files this corner as C0580 with three failure types: 02 when the high side is shorted to ground or to voltage, 04 for an open control line, 0F for an erratic coil current. The system works only between 9 and 16 V; a stored history entry clears after 41 fault-free ignition cycles. ZF's CDC design shows why wiring matters at this point: the proportional valve sits either inside, fed through the piston rod, or outside on the tube with its own sealed plug, and it is reset within milliseconds. Stellantis uses C15C4 and C15C5 for this corner. Damping falls back to a fixed setting."
+    de: "C0851 hat keinen öffentlichen Nutzer; weder Codelisten noch Bulletins nennen ihn. Es geht um den verstellbaren Dämpfer vorne rechts. GMs elektronisches Fahrwerk im Saab 9-5 von 2011 führt diese Ecke als C0580 mit drei Fehlerarten: 02 für Schluss nach Masse oder Plus auf der Plusseite, 04 für eine unterbrochene Steuerleitung, 0F für unsteten Spulenstrom. Geprüft wird nur zwischen 9 und 16 V; ein gespeicherter Eintrag verschwindet nach 41 fehlerfreien Zündzyklen. Am ZF-CDC-System sieht man, warum die Leitung hier zählt: Das Proportionalventil sitzt innen und wird durch die Kolbenstange versorgt oder außen am Rohr mit eigenem dichten Stecker und wird binnen Millisekunden nachgestellt. Stellantis nutzt C15C4 und C15C5 für diese Ecke. Die Dämpfung fällt auf eine feste Kennung zurück."
   affected_components:
     - active_damper_fr
     - damper_solenoid
     - suspension_control_module
   common_causes:
-    - id: solenoid_coil_open
+    - id: plug_corrosion
       likelihood: high
       label:
-        en: Damper solenoid coil open
-        de: Daempfer-Magnetspule unterbrochen
-    - id: wiring_chafe
+        en: Corroded or loose plug at the right front damper
+        de: Korrodierter oder lockerer Stecker am rechten vorderen Dämpfer
+    - id: damper_valve_failed
       likelihood: medium
       label:
-        en: Wiring chafe at strut
-        de: Kabel am Federbein durchgescheuert
+        en: Proportional valve in the damper failed
+        de: Proportionalventil im Dämpfer ausgefallen
+    - id: low_system_voltage
+      likelihood: low
+      label:
+        en: Supply outside 9-16 V causing erratic current readings
+        de: Versorgung außerhalb 9–16 V führt zu unstetem Strom
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Suspension warning in the instrument cluster
+      de: Fahrwerkswarnung im Kombiinstrument
+    - en: Body movements less controlled over bumps
+      de: Aufbaubewegungen auf Unebenheiten schlechter gedämpft
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur:
-      - 400
-      - 1800
-    estimated_hours:
-      - 1.5
-      - 5
+    estimated_cost_eur: [150, 1800]
+    estimated_hours: [0.5, 4]
   flags:
     mil: false
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0850, C0852, C0853, C0920]
   sources:
-    - https://en.wikipedia.org/wiki/Active_suspension
+    - https://saabwisonline.com/9-5-9650/2011/7-suspension-wheels/electronic-chassis-control/fault-diagnosis-diagnostic-trouble-codes/dtc-c0575-c0580-c0585-or-c0590
+    - https://aftermarket.zf.com/app/controller/ti/download/Binary/d94e3ef9-d750-11ec-a2ea-00505690da53.pdf
+    - https://www.zf.com/products/en/stories_9792.html
+  reviewed: '2026-11-06'
 - code: C0852
   category: chassis
   title:
     en: Active Damping Control Rear Left
-    de: Aktive Daempferregelung hinten links
+    de: Aktive Dämpferregelung hinten links
   description:
-    en: The rear left adjustable damper reports an electrical fault.
-    de: Der einstellbare Daempfer hinten links meldet einen elektrischen Fehler.
+    en: Nothing public ties C0852 to a manufacturer; it is absent from every list and index we checked. The title covers the adjustable rear left damper. Some modern units use two valves per damper, one for compression and one for rebound. Stellantis does so on the 2024-26 Ram 1500 and Dodge Charger and logs the rear left pair as C15C6 and C15C7; its bulletin S2623000031 warns that these faults can only be diagnosed while active, so a module should not be replaced for stored entries, and tap tests on harness and pin fit come first. GM's older single-valve layout on the 2011 Saab 9-4X calls the same corner C0585. Rear dampers sit low and close to road spray, so plugs and cables there suffer most. Electronic damping is switched off until the fault clears.
+    de: Nichts Öffentliches verbindet C0852 mit einem Hersteller; er fehlt in allen geprüften Listen und Indizes. Der Titel betrifft den verstellbaren Dämpfer hinten links. Neuere Systeme haben je Dämpfer zwei Ventile, eines für die Druck-, eines für die Zugstufe. Stellantis baut so beim Ram 1500 und Dodge Charger 2024–26 und führt das hintere linke Paar als C15C6 und C15C7; das Bulletin S2623000031 mahnt, diese Fehler nur im aktiven Zustand zu diagnostizieren, bei gespeicherten Einträgen kein Steuergerät zu tauschen und erst Klopftests an Leitung und Steckkontakten zu machen. GMs ältere Ein-Ventil-Bauart im Saab 9-4X 2011 nennt dieselbe Ecke C0585. Hintere Dämpfer sitzen tief im Spritzwasser, Stecker und Kabel leiden dort am meisten. Die elektronische Dämpfung bleibt aus, bis der Fehler weg ist.
   affected_components:
     - active_damper_rl
     - damper_solenoid
     - suspension_control_module
   common_causes:
-    - id: solenoid_coil_open
+    - id: pin_fit
       likelihood: high
       label:
-        en: Damper solenoid coil open
-        de: Daempfer-Magnetspule unterbrochen
-    - id: wiring_chafe
+        en: Loose pin fit or intermittent contact in the rear left damper connector
+        de: Lockerer Steckkontakt oder Wackelkontakt im Stecker des linken hinteren Dämpfers
+    - id: harness_spray
       likelihood: medium
       label:
-        en: Wiring chafe
-        de: Kabel durchgescheuert
+        en: Harness damaged by road spray, stones or corrosion near the rear axle
+        de: Leitung an der Hinterachse durch Spritzwasser, Steinschlag oder Korrosion beschädigt
+    - id: valve_failed
+      likelihood: medium
+      label:
+        en: Compression or rebound valve in the damper failed
+        de: Druck- oder Zugstufenventil im Dämpfer ausgefallen
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Service suspension warning
+      de: Warnung zur Fahrwerkswartung
+    - en: Rear feels bouncy or harsh, drive modes no longer change damping
+      de: Heck wippt oder poltert, Fahrmodi ändern die Dämpfung nicht mehr
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur:
-      - 400
-      - 1800
-    estimated_hours:
-      - 1.5
-      - 5
+    estimated_cost_eur: [150, 1800]
+    estimated_hours: [0.5, 4]
   flags:
     mil: false
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0850, C0851, C0853, C0920]
   sources:
-    - https://en.wikipedia.org/wiki/Active_suspension
+    - https://static.nhtsa.gov/odi/tsbs/2026/MC-11032345-0001.pdf
+    - https://saabwisonline.com/9-4x/2011/7-suspension-wheels/electronic-chassis-control/fault-diagnosis-diagnostic-trouble-codes/dtc-c0575-c0580-c0585-or-c0590
+    - https://www.zf.com/products/en/stories_9792.html
+  reviewed: '2026-11-06'
 - code: C0853
   category: chassis
   title:
     en: Active Damping Control Rear Right
-    de: Aktive Daempferregelung hinten rechts
+    de: Aktive Dämpferregelung hinten rechts
   description:
-    en: The rear right adjustable damper reports an electrical fault.
-    de: Der einstellbare Daempfer hinten rechts meldet einen elektrischen Fehler.
+    en: "C0853 is undocumented in public sources; no carmaker's list, bulletin or manual mentions it. The title is about the adjustable damper at the right rear. Such dampers only work as well as the inputs behind them: the control unit takes in body and wheel motion from accelerometers and sets each valve accordingly. BMW reprogrammed the variable damper control of X6 (F16) cars built in late 2014 because tolerance spread in the wheel accelerometers made it shut electronic damping off and leave the car on a conventional setting. For the actuator itself, GM's 2011 Saab models (9-5, 9-4X) use C0590 for this corner, and Stellantis uses C15C8 and C15C9 on the Ram 1500 from 2024. A failed rear right channel makes the car ride on fixed damping and shows a suspension warning."
+    de: "C0853 ist in öffentlichen Quellen nicht belegt; weder Herstellerlisten noch Bulletins oder Handbücher erwähnen ihn. Es geht um den verstellbaren Dämpfer hinten rechts. Solche Dämpfer sind nur so gut wie ihre Eingangssignale: Das Steuergerät liest Aufbau- und Radbeschleunigungssensoren und stellt danach jedes Ventil. BMW programmierte die Dämpferregelung von X6 (F16) aus Ende 2014 neu, weil Toleranzen der Radbeschleunigungssensoren die elektronische Dämpfung abschalteten und das Auto auf einer konventionellen Kennung fahren ließen. Für den Aktor selbst nutzt GM in den Saab-Modellen 9-5/9-4X des Jahrgangs 2011 für diese Ecke C0590, Stellantis beim Ram 1500 ab 2024 C15C8 und C15C9. Fällt der Kanal hinten rechts aus, fährt das Auto mit fester Dämpfung und zeigt eine Fahrwerkswarnung."
   affected_components:
     - active_damper_rr
     - damper_solenoid
     - suspension_control_module
   common_causes:
-    - id: solenoid_coil_open
+    - id: damper_circuit
       likelihood: high
       label:
-        en: Damper solenoid coil open
-        de: Daempfer-Magnetspule unterbrochen
-    - id: wiring_chafe
+        en: Open or shorted circuit to the right rear damper valve
+        de: Unterbrochener oder kurzgeschlossener Kreis zum Ventil des rechten hinteren Dämpfers
+    - id: sensor_input
       likelihood: medium
       label:
-        en: Wiring chafe
-        de: Kabel durchgescheuert
+        en: Implausible wheel acceleration sensor input causing shutdown (BMW SI B37 01 14)
+        de: Unplausibles Radbeschleunigungssignal führt zur Abschaltung (BMW SI B37 01 14)
+    - id: module_software
+      likelihood: low
+      label:
+        en: Damper control unit software needing an update
+        de: Software des Dämpfersteuergeräts muss aktualisiert werden
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Suspension fault message
+      de: Fahrwerks-Fehlermeldung
+    - en: Car stays on a fixed damper setting regardless of mode
+      de: Fahrzeug bleibt unabhängig vom Modus auf fester Dämpfung
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur:
-      - 400
-      - 1800
-    estimated_hours:
-      - 1.5
-      - 5
+    estimated_cost_eur: [100, 1800]
+    estimated_hours: [0.5, 4]
   flags:
     mil: false
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0850, C0851, C0852, C0920]
   sources:
-    - https://en.wikipedia.org/wiki/Active_suspension
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10148182-9999.pdf
+    - https://saabwisonline.com/9-5-9650/2011/7-suspension-wheels/electronic-chassis-control/fault-diagnosis-diagnostic-trouble-codes/dtc-c0575-c0580-c0585-or-c0590
+    - https://static.nhtsa.gov/odi/tsbs/2026/MC-11032345-0001.pdf
+  reviewed: '2026-11-06'
 - code: C0860
   category: chassis
   title:
     en: Trailer Stability Assist Performance
-    de: Anhaengerstabilisierung Leistung
+    de: Anhängerstabilisierung Funktion
   description:
-    en: The trailer stability assist function detects implausible trailer sway response or sensor input.
-    de: Die Anhaengerstabilisierung erkennt eine unplausible Pendelreaktion oder unplausible Sensorwerte.
+    en: "No carmaker documents C0860 openly, and it does not appear in any accessible list. The title names trailer sway control, an extra function of the stability control that uses the existing ESC sensors to spot a swinging trailer and then brakes single wheels and trims engine torque until the combination calms down. A Bosch patent detects sway as the gap between target and measured yaw rate, filtered to roughly 0.5 to 1.5 Hz so that normal steering is ignored, and can counter it by shifting drive torque between rear wheels instead of braking. A performance fault means the function cannot work as intended. Acura shows how makers label this: on the 2007-11 MDX the warning for trailer stability assist lit up together with codes 59-1, 66-1, 67-1 or 69-1, and a faulty brake pedal position switch was to blame."
+    de: "Kein Hersteller dokumentiert C0860 offen, und er steht in keiner zugänglichen Liste. Der Titel nennt die Anhängerstabilisierung, eine Zusatzfunktion des ESP, die mit den vorhandenen Sensoren einen pendelnden Anhänger erkennt und dann einzelne Räder bremst und das Motormoment zurücknimmt, bis das Gespann ruhig läuft. Ein Bosch-Patent erkennt das Pendeln an der Abweichung zwischen Soll- und Ist-Gierrate, gefiltert auf etwa 0,5 bis 1,5 Hz, damit normales Lenken nicht stört, und kann statt zu bremsen Antriebsmoment zwischen den Hinterrädern verschieben. Ein Funktionsfehler heißt, dass die Stabilisierung nicht wie vorgesehen arbeiten kann. Acura zeigt, wie Hersteller das ablegen: Beim MDX 2007–11 leuchtete die Warnung der Anhängerstabilisierung mit 59-1, 66-1, 67-1 oder 69-1; Ursache war ein defekter Bremspedalschalter."
   affected_components:
     - abs_control_module
-    - trailer_recognition_module
     - yaw_rate_sensor
+    - brake_light_switch
   common_causes:
-    - id: trailer_module_communication
+    - id: esc_input_fault
+      likelihood: high
+      label:
+        en: Fault in an ESC input such as brake pedal switch, yaw or wheel speed signal
+        de: Fehler an einem ESP-Eingang wie Bremspedalschalter, Gierraten- oder Raddrehzahlsignal
+    - id: trailer_detection
       likelihood: medium
       label:
-        en: Trailer module communication fault
-        de: Kommunikationsfehler zum Anhaengermodul
-    - id: yaw_sensor_drift
-      likelihood: medium
+        en: Trailer not recognised because of trailer socket or wiring faults
+        de: Anhänger wird wegen Fehler an Steckdose oder Leitung nicht erkannt
+    - id: module_software
+      likelihood: low
       label:
-        en: Yaw sensor drift
-        de: Gierratensensor-Drift
+        en: Stability control software or configuration needing an update
+        de: Software oder Konfiguration der Stabilitätsregelung muss aktualisiert werden
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Trailer stability or ESC warning lamp on
+      de: Warnleuchte für Anhängerstabilisierung oder ESP an
+    - en: No automatic braking when the trailer sways
+      de: Kein automatischer Bremseingriff bei pendelndem Anhänger
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 80
-      - 700
-    estimated_hours:
-      - 0.5
-      - 3
+    estimated_cost_eur: [50, 600]
+    estimated_hours: [0.3, 2]
   flags:
     mil: false
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C0727, C0784, C0196]
   sources:
-    - https://en.wikipedia.org/wiki/Trailer_stability_program
+    - https://www.bosch-mobility.com/en/solutions/driving-safety/esp-value-added-functions/
+    - https://patents.google.com/patent/US9061663B2/en
+    - https://static.nhtsa.gov/odi/tsbs/2014/MC-10128873-9999.pdf
+  reviewed: '2026-11-06'
 - code: C0870
   category: chassis
   title:
-    en: Adaptive Cruise Control Brake Request Performance
-    de: ACC-Bremsanforderung Leistung
+    en: Control Module Voltage Reference Output Circuit
+    de: Steuergerät Referenzspannungsausgang Stromkreis
   description:
-    en: A brake request from adaptive cruise control or AEB cannot be executed within the expected response time.
-    de: Eine Bremsanforderung des adaptiven Tempomats oder Notbremsassistenten kann nicht in der erwarteten Reaktionszeit umgesetzt werden.
+    en: "C0870 is missing from the accessible J2012 code lists; it is documented at GM, where it covers the 5 V reference that a module feeds to its sensors. Saab workshop pages for the 2011 9-5 and 9-4X use it in the suspension control module, which feeds five acceleration sensors on the body and at the wheels: subcode 03 means that line is shorted to ground and 07 that it touches battery voltage, each for 1.5 s, checked between 9 and 16 V. Electronic damping then shuts off for the ignition cycle. The fix is to unplug the sensors one by one and watch the reference return to 4.8-5.2 V. Under the older name Device Voltage Reference Output 1 Circuit, GM hybrid pickups of 2005 and 2007 used it for the pedal sensor supply of the steering pump (above 4.65 V or below 3.95 V, type C, no MIL)."
+    de: "In den zugänglichen J2012-Codelisten fehlt C0870; belegt ist er bei GM für die 5-V-Referenz, mit der ein Steuergerät seine Sensoren versorgt. Saabs Werkstattseiten für 9-5 und 9-4X von 2011 nutzen ihn im Fahrwerkssteuergerät, das fünf Aufbau- und Radbeschleunigungssensoren speist: Untercode 03 steht für Schluss nach Masse, 07 für Schluss nach Plus auf dieser Leitung über 1,5 s, geprüft zwischen 9 und 16 V. Die elektronische Dämpfung bleibt dann für den Zündzyklus aus. Zur Suche steckt man die Sensoren einzeln ab, bis die Referenz wieder 4,8–5,2 V zeigt. Unter dem älteren Namen Device Voltage Reference Output 1 Circuit nutzte GM ihn bei Hybrid-Pick-ups 2005 und 2007 für die Pedalsensorversorgung der Lenkpumpe (über 4,65 V oder unter 3,95 V, Typ C, keine MIL)."
   affected_components:
-    - abs_control_module
-    - acc_radar_module
-    - communication_bus
+    - sensor_reference_voltage_circuit
+    - suspension_control_module
+    - vertical_acceleration_sensor
   common_causes:
-    - id: bus_latency
+    - id: sensor_shorted
       likelihood: high
       label:
-        en: Bus communication latency
-        de: Latenz auf Kommunikationsbus
-    - id: hydraulic_block_response_slow
+        en: One acceleration sensor shorting the shared 5 V reference
+        de: Ein Beschleunigungssensor zieht die gemeinsame 5-V-Referenz zusammen
+    - id: reference_wiring
       likelihood: medium
       label:
-        en: Hydraulic block slow to build pressure
-        de: Hydraulikblock baut Druck zu langsam auf
+        en: Reference line chafed to ground or to battery voltage
+        de: Referenzleitung nach Masse oder Batteriespannung durchgescheuert
+    - id: module_internal
+      likelihood: low
+      label:
+        en: Module reference supply faulty, module replacement after wiring checks (Saab WIS)
+        de: Referenzversorgung im Steuergerät defekt, Tausch erst nach Leitungsprüfung (Saab WIS)
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: SERVICE SUSPENSION SYSTEM message
+      de: Meldung SERVICE SUSPENSION SYSTEM
+    - en: Adaptive damping inactive for the rest of the trip
+      de: Adaptive Dämpfung für den Rest der Fahrt inaktiv
+    - en: Several acceleration sensor codes stored at once
+      de: Mehrere Codes der Beschleunigungssensoren gleichzeitig gespeichert
   repair:
-    difficulty: hard
+    difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 200
-      - 1600
-    estimated_hours:
-      - 1
-      - 5
+    estimated_cost_eur: [80, 900]
+    estimated_hours: [0.5, 3]
   flags:
     mil: false
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0670, C0800, C0920]
   sources:
-    - https://en.wikipedia.org/wiki/Adaptive_cruise_control
+    - https://saabwisonline.com/9-5-9650/2011/7-suspension-wheels/electronic-chassis-control/fault-diagnosis-diagnostic-trouble-codes/dtc-c0870
+    - https://saabwisonline.com/9-4x/2011/7-suspension-wheels/electronic-chassis-control/fault-diagnosis-diagnostic-trouble-codes/dtc-c0870
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2007/07_GRP16_PHT_EHPS.pdf
+    - https://gsi.ext.gm.com/gmspo/mode6/pdf/2005/2005file11_EHPS.pdf
+  reviewed: '2026-11-06'
 - code: C0900
   category: chassis
   title:
     en: TPMS Sensor 1 Battery
     de: Reifendrucksensor 1 Batterie
   description:
-    en: 'TPMS Sensor 1 Battery: the control module has detected this fault condition.'
-    de: 'Reifendrucksensor 1 Batterie: das Steuergerät hat diesen Fehlerzustand erkannt.'
+    en: "C0900 does not appear in the J2012 code lists open to us, and no carmaker publishes it for tire pressure monitoring. The one official mention points elsewhere: GM upfitter bulletin 80C for the 2008-2014 Silverado and Sierra HD chassis cab lists C0900 subcode 07 as Device Voltage High, a supply fault logged by the PTO module. The title instead means the battery inside the first wheel transmitter. A Schrader patent describes a single lithium cell and spare function bits in every radio word that can carry a low battery message. Mitsubishi books exactly this case for tire 1 as C1910 and names the cell built into the transmitter as the likely cause. Expect the TPMS lamp; the unit is replaced and its ID registered again."
+    de: "In den uns zugänglichen J2012-Listen fehlt C0900, und für die Reifendrucküberwachung veröffentlicht ihn kein Hersteller. Die einzige offizielle Fundstelle meint etwas anderes: GMs Aufbauhersteller-Bulletin 80C für Silverado und Sierra HD Fahrgestell (2008–2014) führt C0900 mit Untercode 07 als zu hohe Versorgungsspannung des Nebenabtriebsmoduls. Der Titel dagegen meint die Batterie im ersten Radsender. Ein Schrader-Patent beschreibt eine einzelne Lithiumzelle und Funktionsbits in jedem Funktelegramm, über die der Sender eine schwache Batterie melden kann. Mitsubishi legt genau diesen Fall für Reifen 1 als C1910 ab und nennt die eingebaute Zelle als wahrscheinlichste Ursache. Die Reifendruckleuchte meldet sich; der Sender wird getauscht und seine Kennung neu angelernt."
   affected_components:
     - tpms_sensor
     - tpms_control_module
   common_causes:
-    - id: tpms_sensor_battery_low
+    - id: transmitter_battery_depleted
       likelihood: high
       label:
-        en: TPMS sensor battery depleted (end of life)
-        de: RDKS-Sensorbatterie am Lebensdauerende
-    - id: tpms_sensor_failed
+        en: Built-in lithium cell of the wheel transmitter at end of life
+        de: Eingebaute Lithiumzelle des Radsenders am Ende ihrer Lebensdauer
+    - id: cold_weather_voltage_drop
+      likelihood: medium
+      label:
+        en: Aged cell whose voltage sags in cold weather
+        de: Gealterte Zelle, deren Spannung bei Kälte einbricht
+    - id: vehicle_supply_overvoltage
       likelihood: low
       label:
-        en: Sensor electronics failed
-        de: Sensorelektronik defekt
+        en: On GM vehicles the code may instead stem from excessive module supply voltage (Device Voltage High)
+        de: Bei GM kann der Code stattdessen von zu hoher Versorgungsspannung eines Moduls stammen (Device Voltage High)
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: TPMS warning lamp flashes after start, then stays lit
+      de: Reifendruckleuchte blinkt nach dem Start und bleibt dann an
+    - en: Pressure reading for one wheel drops out intermittently, more often in cold weather
+      de: Druckanzeige eines Rades fällt zeitweise aus, häufiger bei Kälte
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 60
-      - 250
-    estimated_hours:
-      - 0.3
-      - 1
+    estimated_cost_eur: [50, 200]
+    estimated_hours: [0.5, 1.5]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: true
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [C0902]
+  related_codes: [C0902, C0905, C0907, C0750]
   sources:
-    - https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system
+    - https://www.gmupfitter.com/wp-content/uploads/2021/05/UI_Bulletin-80c.pdf
+    - https://mitsubishitechinfo.com/data/EL/2014/31/HTML/M131100810002000USA.htm
+    - https://patents.google.com/patent/EP0793579B1/en
+  reviewed: '2026-11-06'
 - code: C0901
   category: chassis
   title:
     en: TPMS Sensor 1 Position Performance
-    de: RDKS-Sensor 1 Position Leistung
+    de: Reifendrucksensor 1 Position Funktion
   description:
-    en: The tire pressure monitoring receiver cannot reliably localize sensor 1 to a wheel position. Pressure values may be assigned to the wrong wheel until relearn is completed.
-    de: Der RDKS-Empfänger kann Sensor 1 keiner Radposition mehr zuverlässig zuordnen. Druckwerte werden bis zum erneuten Anlernen ggf. dem falschen Rad zugewiesen.
+    en: "Nothing public ties C0901 to a carmaker: no code list, NHTSA bulletin or service index we searched contains it. Its title concerns the automatic assignment of wheel transmitter 1 to a corner of the car. Without that link the system knows a pressure value but not which tire it belongs to. Saab's 9-5 of 2011 learns the side from the sensor's turning direction and the axle from signal strength, which takes 3 to 9 minutes of driving. A Schrader patent instead compares the phase angle each sensor reports with ABS tooth counts and picks the best matching wheel. Land Rover's TPM module sets C1D18-55 while locations are still unknown and clears it after 10 minutes above 20 km/h. A performance fault means the learning did not finish or gave a doubtful result."
+    de: "Kein öffentlicher Beleg ordnet C0901 einem Hersteller zu: Weder Codelisten noch NHTSA-Bulletins oder Serviceindizes, die wir durchsucht haben, enthalten ihn. Der Titel betrifft die automatische Zuordnung von Radsender 1 zu einer Fahrzeugecke. Fehlt sie, kennt das System einen Druckwert, aber nicht den zugehörigen Reifen. Der Saab 9-5 (2011) erkennt die Seite an der Drehrichtung des Sensors und die Achse an der Signalstärke; das dauert 3 bis 9 Minuten Fahrt. Ein Schrader-Patent vergleicht stattdessen den gemeldeten Phasenwinkel mit den Zahnzählern der ABS-Sensoren und wählt das passende Rad. Land Rovers TPM-Modul setzt C1D18-55, solange die Positionen fehlen, und löscht ihn nach 10 Minuten über 20 km/h. Ein Funktionsfehler heißt: Die Zuordnung endete nicht oder unsicher."
   affected_components:
     - tpms_sensor
     - tpms_receiver
   common_causes:
-    - id: relearn_required
+    - id: autolocation_not_completed
       likelihood: high
       label:
-        en: Position relearn required after rotation
-        de: Anlernen nach Reifentausch erforderlich
-    - id: weak_signal
+        en: Learning drive too short or too slow after wheel change or sensor replacement
+        de: Lernfahrt nach Rad- oder Sensorwechsel zu kurz oder zu langsam
+    - id: wheel_speed_data_missing
       likelihood: medium
       label:
-        en: Weak sensor signal at receiver
-        de: Schwaches Sensorsignal am Empfänger
+        en: Wheel speed data from the ABS module missing or implausible, so phase comparison fails
+        de: Raddrehzahldaten des ABS-Steuergeräts fehlen oder sind unplausibel, der Phasenvergleich scheitert
+    - id: foreign_sensor_nearby
+      likelihood: low
+      label:
+        en: Transmitters of a spare wheel or a nearby vehicle disturbing the assignment
+        de: Sender eines Reserverads oder eines Nachbarfahrzeugs stören die Zuordnung
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: TPMS warning lamp lit or flashing although tire pressures are correct
+      de: Reifendruckleuchte an oder blinkend, obwohl die Drücke stimmen
+    - en: Pressures shown at the wrong wheel position or no position display at all
+      de: Druckwerte an falscher Radposition oder ganz ohne Positionsanzeige
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur:
-      - 0
-      - 80
-    estimated_hours:
-      - 0.2
-      - 0.8
+    estimated_cost_eur: [0, 80]
+    estimated_hours: [0.2, 1]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: true
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [C0903]
+  related_codes: [C0903, C0900, C0912]
   sources:
-    - https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system
+    - https://saabwisonline.com/9-5-9650/2011/7-suspension-wheels/wheels-and-tyres/fault-diagnosis-diagnostic-trouble-codes/dtc-c0775
+    - https://static.nhtsa.gov/odi/tsbs/2026/MC-11030749-0001.pdf
+    - https://patents.google.com/patent/US8332103B2/en
+  reviewed: '2026-11-06'
 - code: C0902
   category: chassis
   title:
     en: TPMS Sensor 2 Battery
     de: Reifendrucksensor 2 Batterie
   description:
-    en: 'TPMS Sensor 2 Battery: the control module has detected this fault condition.'
-    de: 'Reifendrucksensor 2 Batterie: das Steuergerät hat diesen Fehlerzustand erkannt.'
+    en: "C0902 cannot be traced in public sources; the NHTSA index only matches it inside an unrelated vehicle number. The title covers the cell feeding wheel transmitter 2. Which corner counts as number 2 is up to each maker; Mitsubishi numbers tires 1 to 4 and uses C1920 for a weak transmitter battery on tire 2. A CM Automotive patent shows how such a sensor watches itself: a resistor divider feeds the cell voltage to the microcontroller, every message carries a byte with that level, and the monitor lights a separate lamp once readings could become inaccurate. Honda splits the same fault by wheel, with codes 31, 33, 35 and 37. Because the cell is sealed into the transmitter, the fix is a new sensor plus ID learning."
+    de: "Öffentlich lässt sich C0902 nicht nachweisen; der NHTSA-Index trifft ihn nur zufällig in einer fremden Fahrgestellnummer. Der Titel meint die Zelle, die Radsender 2 versorgt. Welche Ecke als Nummer 2 gilt, legt jeder Hersteller selbst fest; Mitsubishi zählt die Reifen 1 bis 4 und vergibt C1920 für eine schwache Senderbatterie an Reifen 2. Ein Patent von CM Automotive zeigt, wie sich ein solcher Sensor selbst überwacht: Ein Spannungsteiler führt die Zellspannung auf den Mikrocontroller, jedes Telegramm enthält ein Byte mit diesem Wert, und das Anzeigegerät schaltet eine eigene Leuchte, sobald die Messung ungenau zu werden droht. Honda teilt denselben Fehler nach Rädern auf (Codes 31, 33, 35, 37). Da die Zelle fest im Sender sitzt, hilft nur ein neuer Sensor mit neuer Kennung."
   affected_components:
     - tpms_sensor
     - tpms_control_module
   common_causes:
-    - id: tpms_sensor_battery_low
+    - id: transmitter_battery_depleted
       likelihood: high
       label:
-        en: TPMS sensor battery depleted (end of life)
-        de: RDKS-Sensorbatterie am Lebensdauerende
-    - id: tpms_sensor_failed
+        en: Transmitter cell discharged after years of service
+        de: Senderzelle nach Jahren im Betrieb entladen
+    - id: sensor_electronics_drain
       likelihood: low
       label:
-        en: Sensor electronics failed
-        de: Sensorelektronik defekt
+        en: Sensor electronics drawing excess current, draining the cell early
+        de: Sensorelektronik zieht zu viel Strom und entlädt die Zelle vorzeitig
+    - id: wrong_sensor_numbering
+      likelihood: low
+      label:
+        en: After rotating wheels the battery warning is attributed to the wrong position
+        de: Nach Radtausch wird die Batteriewarnung der falschen Position zugeordnet
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: TPMS lamp or a service tire monitor message
+      de: Reifendruckleuchte oder Hinweis zur Prüfung der Reifendrucküberwachung
+    - en: Readings from one wheel update less often or vanish
+      de: Werte eines Rades aktualisieren seltener oder verschwinden
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 60
-      - 250
-    estimated_hours:
-      - 0.3
-      - 1
+    estimated_cost_eur: [50, 200]
+    estimated_hours: [0.5, 1.5]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: true
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [C0900]
+  related_codes: [C0900, C0905, C0907]
   sources:
-    - https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system
+    - https://mitsubishitechinfo.com/data/EL/2014/31/HTML/M131100810002000USA.htm
+    - https://patents.google.com/patent/US6408690B1/en
+    - https://www.ateq-tpms.com/en-us/article/tpms-diagnostic-information-2008-honda-accord/
+  reviewed: '2026-11-06'
 - code: C0903
   category: chassis
   title:
     en: TPMS Sensor 2 Position Performance
-    de: RDKS-Sensor 2 Position Leistung
+    de: Reifendrucksensor 2 Position Funktion
   description:
-    en: The tire pressure monitoring receiver cannot reliably localize sensor 2 to a wheel position. Pressure values may be assigned to the wrong wheel until relearn is completed.
-    de: Der RDKS-Empfänger kann Sensor 2 keiner Radposition mehr zuverlässig zuordnen. Druckwerte werden bis zum erneuten Anlernen ggf. dem falschen Rad zugewiesen.
+    en: "Our searches found C0903 neither in code lists nor in maker documents; a single NHTSA hit is a truck maker's campaign number. The title addresses locating transmitter 2 on the vehicle. Two methods are documented. A Ford patent puts a low frequency initiator into each wheel well: the controller fires it above about 20 mph, waits 3 seconds for the sensor to answer with its ID and a special status flag, raises the transmit power step by step and declares an error once the limit is reached without reply. A 2022 Mitsubishi system without initiators derives the position from the timing between the wheel speed sensors and each tire sensor. If either check ends without a clear match, the corner of sensor 2 stays unknown."
+    de: "Unsere Suche fand C0903 weder in Codelisten noch in Herstellerunterlagen; der einzige NHTSA-Treffer ist eine Aktionsnummer eines Lkw-Herstellers. Der Titel betrifft die Ortung von Sender 2 am Fahrzeug. Zwei Verfahren sind dokumentiert. Ein Ford-Patent setzt in jeden Radkasten einen Niederfrequenz-Initiator: Ab etwa 20 mph löst das Steuergerät ihn aus, wartet 3 Sekunden auf die Antwort mit Kennung und besonderem Statusbit, erhöht die Sendeleistung stufenweise und meldet einen Fehler, wenn auch die Höchststufe ohne Antwort bleibt. Ein Mitsubishi-System von 2022 ohne Initiatoren ermittelt die Lage aus dem zeitlichen Gleichlauf zwischen Raddrehzahlsensoren und Reifensensor. Endet eine dieser Prüfungen ohne eindeutiges Ergebnis, bleibt die Ecke von Sensor 2 offen."
   affected_components:
     - tpms_sensor
     - tpms_receiver
   common_causes:
-    - id: relearn_required
-      likelihood: high
-      label:
-        en: Position relearn required
-        de: Anlernen erforderlich
-    - id: weak_signal
+    - id: initiator_no_response
       likelihood: medium
       label:
-        en: Weak sensor signal at receiver
-        de: Schwaches Sensorsignal am Empfänger
+        en: Sensor does not answer the wheel well initiator (weak LF field, misaligned initiator)
+        de: Sensor antwortet dem Radkasten-Initiator nicht (schwaches NF-Feld, verrutschter Initiator)
+    - id: autolocation_not_completed
+      likelihood: high
+      label:
+        en: Location learning interrupted, e.g. short trips at low speed after tire service
+        de: Positionslernen unterbrochen, etwa durch kurze, langsame Fahrten nach Reifenservice
+    - id: sensor_motion_detection_fault
+      likelihood: low
+      label:
+        en: Acceleration or rotation detection inside the sensor faulty
+        de: Beschleunigungs- oder Drehungserkennung im Sensor defekt
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: TPMS lamp on with all tires correctly inflated
+      de: Reifendruckleuchte an, obwohl alle Reifen richtig befüllt sind
+    - en: Display shows pressures without assigning them to wheel positions
+      de: Anzeige zeigt Drücke ohne Zuordnung zu den Radpositionen
   repair:
-    difficulty: easy
-    diy_possible: true
-    estimated_cost_eur:
-      - 0
-      - 80
-    estimated_hours:
-      - 0.2
-      - 0.8
+    difficulty: medium
+    diy_possible: false
+    estimated_cost_eur: [0, 250]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: true
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [C0901]
+  related_codes: [C0901, C0902, C0912]
   sources:
-    - https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system
+    - https://patents.google.com/patent/US6771169B1/en
+    - https://mitsubishitechinfo.com/data/DG/2022/05/HTML/N5050402U0000200USA.htm
+  reviewed: '2026-11-06'
 - code: C0905
   category: chassis
   title:
     en: TPMS Sensor 3 Battery Low
-    de: RDKS-Sensor 3 Batterie schwach
+    de: Reifendrucksensor 3 Batterie schwach
   description:
-    en: The TPMS receiver reports that the internal battery of sensor 3 is at end of life. The sensor must be replaced as the battery is sealed inside the housing.
-    de: Der RDKS-Empfänger meldet, dass die interne Batterie von Sensor 3 am Lebensdauerende ist. Der Sensor muss getauscht werden, da die Batterie im Gehäuse vergossen ist.
+    en: No manufacturer is known to use C0905; none of the code lists, service indexes or NHTSA bulletins searched contains it. The title names a weak battery in the third wheel transmitter. GM and Saab file this condition by wheel rather than by number, as subcode 03 Low Voltage under C0750 to C0765; on the 2011 Saab 9-5 the check needs more than 40 km/h, when a centrifugal roll switch puts each sensor into rolling mode and the door lock receiver forwards its data to the body module. Mitsubishi's counterpart for tire 3 is C1930, raised when the reception warning stems from low transmitter voltage. A low battery alone leaves pressures readable at first, so this is an early warning; the sensor will soon need replacing.
+    de: Kein Hersteller nutzt C0905 nachweislich; weder Codelisten noch Serviceindizes oder NHTSA-Bulletins enthalten ihn. Der Titel meint eine schwache Batterie im dritten Radsender. GM und Saab führen diesen Zustand nach Rad statt nach Nummer, als Untercode 03 „Low Voltage“ unter C0750 bis C0765; beim Saab 9-5 (2011) läuft die Prüfung über 40 km/h, wenn ein Fliehkraftschalter jeden Sensor in den Rollmodus schaltet und der Funkempfänger der Zentralverriegelung die Daten an das Karosseriesteuergerät weitergibt. Mitsubishis Gegenstück für Reifen 3 ist C1930, gesetzt, wenn die Empfangswarnung auf zu geringe Senderspannung zurückgeht. Anfangs bleiben die Drücke noch lesbar; der Code ist eine Vorwarnung, der Sensor muss bald ersetzt werden.
   affected_components:
     - tpms_sensor
     - tpms_receiver
   common_causes:
-    - id: tpms_battery_eol
+    - id: transmitter_battery_depleted
       likelihood: high
       label:
-        en: TPMS sensor battery depleted
-        de: RDKS-Sensorbatterie am Lebensdauerende
-    - id: tpms_sensor_failed
+        en: Sensor cell near end of life (typically after many years)
+        de: Sensorzelle nahe am Lebensende (meist nach vielen Jahren)
+    - id: frequent_transmission
       likelihood: low
       label:
-        en: Sensor electronics failed
-        de: Sensorelektronik defekt
+        en: Sensor stuck in a fast transmit mode, drawing the cell down early
+        de: Sensor hängt in einem schnellen Sendemodus und entlädt die Zelle vorzeitig
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: TPMS lamp flashes about a minute after start, then stays on
+      de: Reifendruckleuchte blinkt nach dem Start etwa eine Minute, dann Dauerlicht
+    - en: Pressure values still shown, warning returns after every restart
+      de: Druckwerte noch sichtbar, Warnung kehrt nach jedem Neustart zurück
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 60
-      - 250
-    estimated_hours:
-      - 0.3
-      - 1
+    estimated_cost_eur: [50, 200]
+    estimated_hours: [0.5, 1.5]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: true
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [C0907]
+  related_codes: [C0907, C0900, C0902, C0952]
   sources:
-    - https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system
+    - https://saabwisonline.com/9-5-9650/2011/7-suspension-wheels/wheels-and-tyres/fault-diagnosis-diagnostic-trouble-codes/dtc-c0750-c0755-c0760-or-c0765
+    - https://mitsubishitechinfo.com/data/EL/2014/31/HTML/M131100810002000USA.htm
+  reviewed: '2026-11-06'
 - code: C0907
   category: chassis
   title:
     en: TPMS Sensor 4 Battery Low
-    de: RDKS-Sensor 4 Batterie schwach
+    de: Reifendrucksensor 4 Batterie schwach
   description:
-    en: The TPMS receiver reports that the internal battery of sensor 4 is at end of life. The sensor must be replaced as the battery is sealed inside the housing.
-    de: Der RDKS-Empfänger meldet, dass die interne Batterie von Sensor 4 am Lebensdauerende ist. Der Sensor muss getauscht werden, da die Batterie im Gehäuse vergossen ist.
+    en: "C0907 has no public owner: code lists, the NHTSA index and the GM, Saab and Mitsubishi service indexes all lack it. Per its title it flags a fading battery in transmitter 4. How that state is noticed: the sensor measures its cell through a voltage divider and sends a battery byte with each pressure message, as a CM Automotive patent shows. Mitsubishi stores C1940 for tire 4 in this case; once the cell sags further, the receiver stops hearing the sensor and the same family sets C1941 after roughly 20 minutes of driving without its ID. The 2011 Saab 9-4X handles it per corner, subcode 03 under C0750 to C0765. The code thus heralds a coming loss of signal; replacing the sensor before that avoids a dark pressure display."
+    de: "C0907 hat keinen öffentlichen Nutzer: Codelisten, NHTSA-Index und die Serviceindizes von GM, Saab und Mitsubishi kennen ihn nicht. Laut Titel meldet er eine nachlassende Batterie in Sender 4. So wird der Zustand erkannt: Der Sensor misst seine Zelle über einen Spannungsteiler und schickt mit jeder Druckmeldung ein Batteriebyte, wie ein Patent von CM Automotive zeigt. Mitsubishi legt in diesem Fall C1940 für Reifen 4 ab; sinkt die Zellspannung weiter, hört der Empfänger den Sensor nicht mehr, und dieselbe Familie setzt nach etwa 20 Minuten Fahrt ohne dessen Kennung C1941. Der Saab 9-4X (2011) behandelt das je Ecke als Untercode 03 unter C0750 bis C0765. Der Code kündigt also einen kommenden Signalausfall an; ein rechtzeitiger Sensortausch erspart eine leere Druckanzeige."
   affected_components:
     - tpms_sensor
     - tpms_receiver
   common_causes:
-    - id: tpms_battery_eol
+    - id: transmitter_battery_depleted
       likelihood: high
       label:
-        en: TPMS sensor battery depleted
-        de: RDKS-Sensorbatterie am Lebensdauerende
-    - id: tpms_sensor_failed
+        en: Transmitter cell weak from age
+        de: Senderzelle altersbedingt schwach
+    - id: low_temperature_operation
+      likelihood: medium
+      label:
+        en: Cold weather pushing an ageing cell below the warning level
+        de: Kälte drückt eine alternde Zelle unter die Warnschwelle
+    - id: sensor_internal_fault
       likelihood: low
       label:
-        en: Sensor electronics failed
-        de: Sensorelektronik defekt
+        en: Fault in the sensor's voltage measurement
+        de: Fehler in der Spannungsmessung des Sensors
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: TPMS warning lamp with a sensor fault message
+      de: Reifendruckleuchte mit Hinweis auf Sensorfehler
+    - en: Later, dashes instead of a value for the affected wheel
+      de: Später Striche statt eines Wertes für das betroffene Rad
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 60
-      - 250
-    estimated_hours:
-      - 0.3
-      - 1
+    estimated_cost_eur: [50, 200]
+    estimated_hours: [0.5, 1.5]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: true
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [C0905]
+  related_codes: [C0905, C0900, C0902, C0953]
   sources:
-    - https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system
+    - https://mitsubishitechinfo.com/data/EL/2014/31/HTML/M131100810002000USA.htm
+    - https://patents.google.com/patent/US6408690B1/en
+    - https://saabwisonline.com/9-4x/2011/7-suspension-wheels/wheels-and-tyres/fault-diagnosis-diagnostic-trouble-codes/dtc-c0750-c0755-c0760-or-c0765
+  reviewed: '2026-11-06'
 - code: C0910
   category: chassis
   title:
     en: TPMS Receiver Circuit Malfunction
-    de: RDKS-Empfänger Stromkreis-Fehlfunktion
+    de: RDKS-Empfänger Stromkreis Fehlfunktion
   description:
-    en: The body or chassis module has detected a fault in the TPMS RF receiver — for example open antenna or internal failure. No tire pressure data can be received.
-    de: Das Karosserie- oder Fahrwerk-Steuergerät hat einen Fehler im RDKS-RF-Empfänger erkannt — z. B. unterbrochene Antenne oder interner Defekt. Es können keine Reifendruckdaten empfangen werden.
+    en: "There is no public evidence that any carmaker assigns C0910. It describes a fault in the circuit of the radio receiver that collects the wheel sensor telegrams. Designs differ: GM and Saab route the sensors through the remote door lock receiver, which passes the decoded telegrams on to the BCM; Nissan-built cars lacking keyless entry use a stand-alone TPMS receiver that reports to the BCM as well. Honda keeps a separate code 41 for abnormal signal reception. GM bulletin PIC5650M lists sensor codes C0750 to C0765 and C0775 among the effects of radio interference from toll passes, other key fobs, LED lamps or phone chargers. A circuit fault of the receiver itself, such as lost supply, ground or data line, silences all four wheels at once rather than a single sensor."
+    de: "Kein öffentlicher Beleg zeigt, dass ein Hersteller C0910 vergibt. Gemeint ist ein Fehler im Stromkreis des Funkempfängers, der die Telegramme der Radsensoren sammelt. Die Bauweisen unterscheiden sich: GM und Saab leiten die Sensorsignale über den Empfänger der Funkfernbedienung an das Karosseriesteuergerät; Nissan-Fahrzeuge ohne schlüssellosen Zugang besitzen einen eigenen RDKS-Empfänger, der ebenfalls an dieses Steuergerät meldet. Honda führt für gestörten Empfang einen eigenen Code 41. GMs Bulletin PIC5650M nennt Sensorcodes C0750 bis C0765 und C0775 als Folge von Funkstörungen durch Mautgeräte, fremde Schlüssel, LED-Leuchten oder Handyladegeräte. Ein Kreisfehler am Empfänger selbst – fehlende Versorgung, Masse oder Datenleitung – lässt dagegen alle vier Räder gleichzeitig verstummen."
   affected_components:
     - tpms_receiver
     - antenna
-    - chassis_control_module
+    - body_control_module
   common_causes:
-    - id: receiver_failed
+    - id: receiver_power_or_ground
       likelihood: high
       label:
-        en: TPMS receiver failed
-        de: RDKS-Empfänger defekt
-    - id: antenna_open
+        en: Lost supply voltage or ground at the receiver, e.g. corroded connector
+        de: Fehlende Versorgung oder Masse am Empfänger, etwa korrodierter Stecker
+    - id: data_line_fault
       likelihood: medium
       label:
-        en: Antenna lead open or shorted
-        de: Antennenleitung unterbrochen oder kurzgeschlossen
+        en: Open or shorted data line between receiver and body control module
+        de: Unterbrochene oder kurzgeschlossene Datenleitung zwischen Empfänger und Karosseriesteuergerät
+    - id: rf_interference
+      likelihood: medium
+      label:
+        en: Radio interference from aftermarket devices (GM PIC5650M)
+        de: Funkstörung durch Zubehörgeräte (GM PIC5650M)
+    - id: receiver_failed
+      likelihood: low
+      label:
+        en: Receiver module or its antenna defective
+        de: Empfängermodul oder dessen Antenne defekt
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: TPMS malfunction indication with no pressure shown for any wheel
+      de: Störungsanzeige der Reifendrucküberwachung, für kein Rad ein Druckwert
+    - en: Poor remote key range where the receiver is shared with the door locks
+      de: Schwache Reichweite der Funkfernbedienung, wenn der Empfänger mit der Zentralverriegelung geteilt ist
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 120
-      - 600
-    estimated_hours:
-      - 0.5
-      - 2
+    estimated_cost_eur: [60, 400]
+    estimated_hours: [0.5, 2]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: true
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C0960, C0950, C0083]
   sources:
-    - https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11021792-0001.pdf
+    - https://automotivetechinfo.com/2018/05/initialize-this-troublesome-tpms/
+    - https://www.ateq-tpms.com/en-us/article/tpms-diagnostic-information-2008-honda-accord/
+    - https://saabwisonline.com/9-5-9650/2011/7-suspension-wheels/wheels-and-tyres/fault-diagnosis-diagnostic-trouble-codes/dtc-c0750-c0755-c0760-or-c0765
+  reviewed: '2026-11-06'
 - code: C0912
   category: chassis
   title:
     en: TPMS Initiator Front Circuit Malfunction
-    de: RDKS-Initiator vorne Stromkreis-Fehlfunktion
+    de: RDKS-Initiator vorn Stromkreis Fehlfunktion
   description:
-    en: The TPMS module has detected an electrical fault in the front low-frequency initiator (used to wake and locate sensors). Position learning of the front sensors fails.
-    de: Das RDKS-Steuergerät hat einen elektrischen Fehler im vorderen LF-Initiator (Wecken und Lokalisieren der Sensoren) erkannt. Das Anlernen der vorderen Sensoren schlägt fehl.
+    en: "C0912 could not be found in any code list, bulletin or service index, so its use remains unproven. The title refers to the front initiator: a coil near the wheel that wakes the tire sensor with a low frequency field so the system can tell which corner answered. A TRW patent mounts one such induction coil per wheel well and sends at about 125 kHz, relying on the field fading quickly with distance so only the adjacent sensor reacts. A Ford patent wires each initiator straight to the controller and raises the drive current step by step until the sensor replies. Honda reports a shorted initiator line as code 45. An open or shorted front circuit leaves the front sensors unlocated, so pressure values may lack their position."
+    de: "C0912 fand sich in keiner Codeliste, keinem Bulletin und keinem Serviceindex; seine Verwendung bleibt unbelegt. Der Titel betrifft den vorderen Initiator: eine Spule nahe dem Rad, die den Reifensensor mit einem Niederfrequenzfeld weckt, damit das System erkennt, welche Ecke antwortet. Ein TRW-Patent setzt je Radkasten eine solche Induktionsspule ein und sendet mit etwa 125 kHz; weil das Feld mit dem Abstand rasch abfällt, reagiert nur der nahe Sensor. Ein Ford-Patent verdrahtet jeden Initiator direkt mit dem Steuergerät und steigert den Spulenstrom schrittweise, bis der Sensor antwortet. Honda meldet einen Kurzschluss in der Initiatorleitung als Code 45. Ist der vordere Kreis unterbrochen oder kurzgeschlossen, bleiben die Vorderradsensoren ohne Position."
   affected_components:
     - tpms_initiator
     - tpms_module
     - initiator_wiring
   common_causes:
-    - id: initiator_failed
+    - id: initiator_wiring_damaged
       likelihood: high
       label:
-        en: LF initiator coil failed
-        de: LF-Initiatorspule defekt
-    - id: wiring_or_connector_fault
+        en: Initiator wiring in the wheel arch chafed, corroded or unplugged
+        de: Initiatorleitung im Radhaus durchgescheuert, korrodiert oder abgesteckt
+    - id: initiator_coil_failed
       likelihood: medium
       label:
-        en: Wiring or connector fault
-        de: Kabel- oder Steckerfehler
+        en: Initiator coil open or shorted internally
+        de: Initiatorspule innen unterbrochen oder kurzgeschlossen
+    - id: initiator_dislodged
+      likelihood: medium
+      label:
+        en: Initiator knocked out of its mount by wheel arch liner damage
+        de: Initiator durch beschädigte Radhausschale aus der Halterung gelöst
+    - id: module_driver_fault
+      likelihood: low
+      label:
+        en: Output stage in the TPMS module defective
+        de: Endstufe im RDKS-Steuergerät defekt
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: TPMS malfunction lamp on
+      de: Störungsleuchte der Reifendrucküberwachung an
+    - en: Front tire pressures shown without wheel position or not at all after a tire change
+      de: Vorderraddrücke nach Reifenwechsel ohne Radposition oder gar nicht angezeigt
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 120
-      - 500
-    estimated_hours:
-      - 0.5
-      - 2
+    estimated_cost_eur: [60, 300]
+    estimated_hours: [0.5, 2]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: true
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C0901, C0903, C0910]
   sources:
-    - https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system
+    - https://patents.google.com/patent/US6612165B2/en
+    - https://patents.google.com/patent/US6771169B1/en
+    - https://www.ateq-tpms.com/en-us/article/tpms-diagnostic-information-2008-honda-accord/
+  reviewed: '2026-11-06'
 - code: C0915
   category: chassis
   title:
     en: Active Roll Stabilisation Front Actuator Circuit
     de: Aktive Wankstabilisierung Aktor vorne Stromkreis
   description:
-    en: The front active anti-roll bar actuator reports an electrical fault.
-    de: Der Aktor des vorderen aktiven Stabilisators meldet einen elektrischen Fehler.
+    en: No list, bulletin or manual shows C0915 in use; the NHTSA index only matches unrelated BMW document numbers. The title names the front actuator of active roll control, which splits the anti-roll bar and twists its halves against each other to hold the body level in bends and to decouple them on rough roads. Schaeffler's 48 V design for the Audi SQ7 front axle drives this with a brushless motor and a three-stage planetary gearbox, up to about 30 degrees of twist and 850-1200 Nm; ZF quotes up to 1400 Nm. A circuit fault concerns motor or sensor wiring between actuator and control unit. Audi's Q7/Q8 family logs control unit faults as C129700 at addresses 00D4/00D5, while Land Rover's older hydraulic system used C1119 and needed bleeding.
+    de: "Keine Liste, kein Bulletin und kein Handbuch zeigt C0915 im Einsatz; im NHTSA-Index trifft er nur fremde BMW-Dokumentnummern. Der Titel nennt den vorderen Aktor der aktiven Wankstabilisierung: Er teilt den Stabilisator und verdreht beide Hälften gegeneinander, damit der Aufbau in Kurven gerade bleibt und auf schlechter Straße entkoppelt wird. Schaefflers 48-V-Ausführung für die Vorderachse des Audi SQ7 nutzt dafür einen bürstenlosen Motor mit dreistufigem Planetengetriebe, bis etwa 30 Grad Verdrehung und 850–1200 Nm; ZF nennt bis 1400 Nm. Ein Kreisfehler betrifft Motor- oder Sensorleitungen zwischen Aktor und Steuergerät. Audi legt bei Q7/Q8 Steuergerätefehler als C129700 unter den Adressen 00D4/00D5 ab; Land Rovers ältere hydraulische Anlage meldete C1119 und musste entlüftet werden."
   affected_components:
     - roll_stabilisation_actuator_front
     - roll_stabilisation_module
   common_causes:
-    - id: actuator_motor_open
+    - id: actuator_connector
       likelihood: high
       label:
-        en: Actuator motor winding open
-        de: Aktor-Motorwicklung unterbrochen
-    - id: hydraulic_pressure_low
+        en: Damaged plug or harness at the front stabiliser actuator
+        de: Beschädigter Stecker oder Leitung am vorderen Stabilisatoraktor
+    - id: actuator_motor
       likelihood: medium
       label:
-        en: Hydraulic supply pressure low
-        de: Hydraulikversorgungsdruck niedrig
+        en: Actuator motor or internal sensor failed
+        de: Aktormotor oder interner Sensor ausgefallen
+    - id: supply_48v
+      likelihood: low
+      label:
+        en: Fault in the 48 V supply feeding the actuator
+        de: Fehler in der 48-V-Versorgung des Aktors
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Suspension or roll stabilisation warning
+      de: Warnung zu Fahrwerk oder Wankstabilisierung
+    - en: Noticeably more body lean in corners
+      de: Deutlich mehr Seitenneigung in Kurven
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur:
-      - 600
-      - 2500
-    estimated_hours:
-      - 2
-      - 6
+    estimated_cost_eur: [200, 3500]
+    estimated_hours: [1, 6]
   flags:
     mil: false
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0916, C0920]
   sources:
-    - https://en.wikipedia.org/wiki/Active_suspension
+    - https://www.schaeffler.com/remotemedien/media/_shared_media/08_media_library/01_publications/schaeffler_2/technicalpaper_1/download_1/ATZ_Mechatronic-Roll-Controll.pdf
+    - https://www.zf.com/products/en/cars/products_64236.html
+    - https://static.nhtsa.gov/odi/tsbs/2024/MC-10249215-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2013/MC-10206492-9999.pdf
+  reviewed: '2026-11-06'
 - code: C0916
   category: chassis
   title:
     en: Active Roll Stabilisation Rear Actuator Circuit
     de: Aktive Wankstabilisierung Aktor hinten Stromkreis
   description:
-    en: The rear active anti-roll bar actuator reports an electrical fault.
-    de: Der Aktor des hinteren aktiven Stabilisators meldet einen elektrischen Fehler.
+    en: "C0916 has no documented user; it is absent from every accessible list, bulletin and index. It names the rear axle actuator of active roll control. Systems with actuators on both axles split the stabilising torque between front and rear, which also lets them tune self-steering; ZF describes this for its electromechanical roll control. Faults at the rear unit therefore change balance as well as body lean. Bulletins show how carmakers handle such cases under their own codes: Mercedes updated the front and rear roll stabilisation units of 2021 GLE and GLS models whose software could display a warning not to exceed 50 mph, and Land Rover quarantined 2022-23 Range Rover and Range Rover Sport cars whose front and rear roll control modules sometimes failed to initialise, lighting an amber suspension lamp."
+    de: "C0916 hat keinen belegten Nutzer; er fehlt in allen zugänglichen Listen, Bulletins und Indizes. Er nennt den Aktor der aktiven Wankstabilisierung an der Hinterachse. Mit Aktoren an beiden Achsen lässt sich das Stützmoment zwischen vorn und hinten verteilen und so auch das Eigenlenken beeinflussen, wie ZF für seine Wankregelung beschreibt. Ein Fehler hinten ändert deshalb neben der Seitenneigung auch die Balance. Bulletins zeigen eigene Wege der Hersteller: Mercedes aktualisierte die vorderen und hinteren Steuergeräte der Wankstabilisierung bei GLE und GLS 2021, deren Software eine Warnung anzeigen konnte, nicht schneller als 50 mph zu fahren; Land Rover hielt Range Rover und Range Rover Sport 2022–23 zurück, deren Wankmodule vorn und hinten teils nicht starteten und eine gelbe Fahrwerksleuchte zeigten."
   affected_components:
     - roll_stabilisation_actuator_rear
     - roll_stabilisation_module
   common_causes:
-    - id: actuator_motor_open
+    - id: rear_actuator_wiring
       likelihood: high
       label:
-        en: Actuator motor winding open
-        de: Aktor-Motorwicklung unterbrochen
-    - id: hydraulic_pressure_low
+        en: Damaged harness or plug at the rear stabiliser actuator, exposed to road spray
+        de: Beschädigte Leitung oder Stecker am hinteren Stabilisatoraktor im Spritzwasserbereich
+    - id: module_software
       likelihood: medium
       label:
-        en: Hydraulic supply pressure low
-        de: Hydraulikversorgungsdruck niedrig
+        en: Roll control software needing an update (Mercedes 2021060016, Land Rover N733)
+        de: Software der Wankregelung muss aktualisiert werden (Mercedes 2021060016, Land Rover N733)
+    - id: actuator_failed
+      likelihood: low
+      label:
+        en: Rear actuator motor or gearbox failed
+        de: Motor oder Getriebe des hinteren Aktors ausgefallen
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Amber suspension warning lamp
+      de: Gelbe Fahrwerkswarnleuchte
+    - en: Speed limit advice in the cluster, more body roll and changed handling balance
+      de: Tempohinweis im Kombiinstrument, mehr Wanken und veränderte Fahrbalance
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur:
-      - 600
-      - 2500
-    estimated_hours:
-      - 2
-      - 6
+    estimated_cost_eur: [100, 3500]
+    estimated_hours: [0.5, 6]
   flags:
     mil: false
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0915, C0920]
   sources:
-    - https://en.wikipedia.org/wiki/Active_suspension
+    - https://www.zf.com/products/en/cars/products_64236.html
+    - https://static.nhtsa.gov/odi/tsbs/2021/MC-10199467-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2022/MC-10224372-0001.pdf
+  reviewed: '2026-11-06'
 - code: C0920
   category: chassis
   title:
     en: Suspension Control Module Internal Fault
-    de: Fahrwerks-Steuergeraet interner Fehler
+    de: Fahrwerkssteuergerät interner Fehler
   description:
-    en: The suspension control module fails its internal self-test. Adaptive damping or air suspension is disabled.
-    de: Das Fahrwerks-Steuergeraet besteht den internen Selbsttest nicht. Adaptive Daempfung oder Luftfederung wird deaktiviert.
+    en: "C0920 is not found in any accessible list or bulletin. The title describes a suspension control unit that fails its own checks. GM names such a fault C0550 Electronic Control Unit, as the 2011 Saab 9-5 pages show: the self-test runs at power-up and needs only supply and ground, the module ignores further inputs, and it should only be replaced if the code is present as current and history entry; a history entry clears after 50 clean ignition cycles. Not every module swap is an internal fault: GM's PI0954 had 2010 LaCrosse suspension modules replaced because they did not accept service accelerometers, and Stellantis warns against replacing the damping module for stored codes. Audi logs C129700 for a limiting fault inside its roll stabiliser units."
+    de: "In keiner zugänglichen Liste und keinem Bulletin findet sich C0920. Gemeint ist ein Fahrwerkssteuergerät, das seinen Selbsttest nicht besteht. GM nennt so einen Fehler C0550 Electronic Control Unit, wie die Saab-9-5-Seiten von 2011 zeigen: Der Test läuft beim Einschalten und braucht nur Versorgung und Masse; das Modul ignoriert danach weitere Eingänge und ist nur zu tauschen, wenn der Code aktuell und gespeichert vorliegt; ein gespeicherter Eintrag erlischt nach 50 fehlerfreien Zündzyklen. Nicht jeder Modultausch ist ein interner Fehler: Mit PI0954 ließ GM Fahrwerksmodule des LaCrosse 2010 ersetzen, weil sie Ersatz-Beschleunigungssensoren nicht annahmen, und Stellantis rät, das Dämpfungsmodul bei nur gespeicherten Codes nicht zu tauschen. Audi legt für eine Funktionseinschränkung in den Wankstabilisator-Steuergeräten C129700 ab."
   affected_components:
     - suspension_control_module
   common_causes:
     - id: module_internal_failure
       likelihood: high
       label:
-        en: Module internal failure
-        de: Steuergeraet intern defekt
+        en: Internal hardware or memory fault confirmed as current and history code
+        de: Interner Hardware- oder Speicherfehler, aktuell und gespeichert bestätigt
+    - id: supply_ground
+      likelihood: medium
+      label:
+        en: Poor supply or ground at the module triggering self-test failures
+        de: Schlechte Versorgung oder Masse am Steuergerät löst Selbsttestfehler aus
+    - id: software_or_compatibility
+      likelihood: low
+      label:
+        en: Software or parts incompatibility (GM PI0954, Audi 2067804/3)
+        de: Software- oder Teileunverträglichkeit (GM PI0954, Audi 2067804/3)
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Suspension service message, adaptive damping or levelling off
+      de: Fahrwerks-Servicemeldung, adaptive Dämpfung oder Niveauregelung aus
+    - en: Other suspension codes may be stored alongside
+      de: Weitere Fahrwerkscodes können zusätzlich gespeichert sein
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur:
-      - 400
-      - 1600
-    estimated_hours:
-      - 1
-      - 4
+    estimated_cost_eur: [100, 1600]
+    estimated_hours: [0.5, 3]
   flags:
     mil: false
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: true
   references:
     - sae:J2012
+  related_codes: [C0850, C0851, C0852, C0853, C0870, C0915]
   sources:
-    - https://en.wikipedia.org/wiki/Active_suspension
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-c0550
+    - https://static.nhtsa.gov/odi/tsbs/2013/MC-10130636-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2026/MC-11032345-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2024/MC-10249215-0001.pdf
+  reviewed: '2026-11-06'
 - code: C0950
   category: chassis
   title:
     en: Tire Pressure Monitoring Sensor Front Left
-    de: Reifendruck-Sensor vorne links
+    de: Reifendrucksensor vorn links
   description:
-    en: The TPMS sensor at the front left wheel does not transmit a valid signal. Indirect TPMS variants raise this when the wheel-speed-based estimation fails for that wheel.
-    de: Der TPMS-Sensor am linken Vorderrad sendet kein gueltiges Signal. Bei indirekten TPMS-Varianten wird der Code gesetzt, wenn die raddrehzahlbasierte Schaetzung fuer dieses Rad fehlschlaegt.
+    en: "No public source links C0950 to a carmaker. The same content, the left front tire sensor, is documented under other numbers: GM and Saab use C0750, whose 2011 Saab 9-5 subcodes split a weak cell (03), too few telegrams (29) and an internal defect (39); Mitsubishi's 2022 index carries C1731 for the front left sensor and C1741 when its data stay away. GM bulletin PIC5650M lists C0750 among the codes that radio interference from aftermarket devices can cause, so the environment belongs in the diagnosis. As a catch-all for the front left unit the code covers a sensor that falls silent, reports nonsense or is not learned. Air pressure itself is not the issue; the indicator shows a system fault and that wheel loses its value."
+    de: "Keine öffentliche Quelle verbindet C0950 mit einem Hersteller. Derselbe Inhalt, der Sensor im linken Vorderrad, ist unter anderen Nummern belegt: GM und Saab nutzen C0750, dessen Untercodes beim Saab 9-5 (2011) schwache Zelle (03), zu wenige Telegramme (29) und inneren Defekt (39) trennen; Mitsubishis Index von 2022 führt C1731 für den Sensor vorn links und C1741, wenn seine Daten ausbleiben. GMs Bulletin PIC5650M zählt C0750 zu den Codes, die Funkstörungen durch Zubehörgeräte auslösen können – das Umfeld gehört also in die Diagnose. Als Sammelcode für das Gerät vorn links umfasst er einen verstummten, unplausibel meldenden oder nicht angelernten Sensor. Nicht der Luftdruck ist das Problem; die Leuchte zeigt eine Systemstörung, und dieses Rad verliert seinen Wert."
   affected_components:
     - tpms_sensor_fl
     - tpms_module
@@ -32276,213 +32361,246 @@
     - id: sensor_battery_depleted
       likelihood: high
       label:
-        en: Sensor battery depleted
-        de: Sensorbatterie leer
-    - id: sensor_damaged
+        en: Cell of the left front sensor exhausted
+        de: Zelle des Sensors vorn links erschöpft
+    - id: sensor_damaged_or_missing
       likelihood: medium
       label:
-        en: Sensor damaged during tire change
-        de: Sensor beim Reifenwechsel beschaedigt
+        en: Sensor broken during tire fitting or wheel swapped for one without sensor
+        de: Sensor bei der Reifenmontage beschädigt oder Rad ohne Sensor montiert
+    - id: sensor_not_learned
+      likelihood: medium
+      label:
+        en: New sensor ID not registered for the front left position
+        de: Neue Sensorkennung für die Position vorn links nicht angelernt
+    - id: rf_interference
+      likelihood: low
+      label:
+        en: Radio interference from aftermarket devices (GM PIC5650M)
+        de: Funkstörung durch Zubehörgeräte (GM PIC5650M)
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: TPMS lamp flashes, then stays on
+      de: Reifendruckleuchte blinkt und bleibt dann an
+    - en: No pressure value for the left front tire
+      de: Kein Druckwert für den linken Vorderreifen
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 60
-      - 250
-    estimated_hours:
-      - 0.3
-      - 1.5
+    estimated_cost_eur: [40, 250]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: false
+    emissions_relevant: false
+    drive_cycle_required: true
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C0951, C0952, C0953, C0750]
   sources:
-    - https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system
+    - https://saabwisonline.com/9-5-9650/2011/7-suspension-wheels/wheels-and-tyres/fault-diagnosis-diagnostic-trouble-codes/dtc-c0750-c0755-c0760-or-c0765
+    - https://mitsubishitechinfo.com/data/DG/2022/14/HTML/N5140203N0000300USA.htm
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11021792-0001.pdf
+  reviewed: '2026-11-06'
 - code: C0951
   category: chassis
   title:
     en: Tire Pressure Monitoring Sensor Front Right
-    de: Reifendruck-Sensor vorne rechts
+    de: Reifendrucksensor vorn rechts
   description:
-    en: The TPMS sensor at the front right wheel does not transmit a valid signal.
-    de: Der TPMS-Sensor am rechten Vorderrad sendet kein gueltiges Signal.
+    en: "C0951 is not documented by any maker we could find. For the front right sensor GM and Saab rely on C0755 instead, on the 2011 9-4X with the subcodes 03, 29 and 39. Mitsubishi's 2022 data spell out the no-data case in detail as C1742-21: the BCM watches for the right front signal once the car has covered 10 minutes in total at 40 km/h or more, and it stores the code if nothing arrives. Its listed causes reach beyond the sensor: driving through radio interference, an incomplete ID registration, wiring or the BCM itself. A front right sensor code therefore calls for checking the learned ID and the surroundings before buying a sensor. The driver loses the front right reading and sees the TPMS warning."
+    de: "C0951 dokumentiert kein Hersteller, den wir finden konnten. Für den Sensor vorn rechts setzen GM und Saab stattdessen C0755 ein, beim 9-4X (2011) mit den Untercodes 03, 29 und 39. Mitsubishis Daten von 2022 beschreiben den Fall fehlender Daten genau als C1742-21: Das Karosseriesteuergerät erwartet das Signal vorn rechts, sobald das Auto insgesamt 10 Minuten mit 40 km/h oder mehr gefahren ist, und speichert den Code, wenn nichts ankommt. Die genannten Ursachen gehen über den Sensor hinaus: Fahrt durch Funkstörungen, unvollständiges Anlernen der Kennung, Leitungen oder das Steuergerät selbst. Ein Code für den Sensor vorn rechts verlangt also erst einen Blick auf angelernte Kennung und Umgebung, bevor ein Sensor gekauft wird. Der Fahrer verliert den Wert vorn rechts und sieht die Reifendruckwarnung."
   affected_components:
     - tpms_sensor_fr
     - tpms_module
   common_causes:
-    - id: sensor_battery_depleted
+    - id: sensor_not_learned
       likelihood: high
       label:
-        en: Sensor battery depleted
-        de: Sensorbatterie leer
-    - id: sensor_damaged
+        en: ID registration of the front right sensor incomplete
+        de: Anlernen der Kennung des Sensors vorn rechts unvollständig
+    - id: sensor_battery_depleted
       likelihood: medium
       label:
-        en: Sensor damaged during tire change
-        de: Sensor beim Reifenwechsel beschaedigt
+        en: Sensor cell exhausted
+        de: Sensorzelle erschöpft
+    - id: rf_interference
+      likelihood: medium
+      label:
+        en: Radio interference along the route or from devices in the car
+        de: Funkstörungen auf der Strecke oder durch Geräte im Fahrzeug
+    - id: module_fault
+      likelihood: low
+      label:
+        en: Receiving control module defective
+        de: Empfangendes Steuergerät defekt
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: Dashes instead of a value for the right front tire
+      de: Striche statt Wert für den rechten Vorderreifen
+    - en: TPMS lamp lit after about ten minutes of driving
+      de: Reifendruckleuchte nach etwa zehn Minuten Fahrt an
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 60
-      - 250
-    estimated_hours:
-      - 0.3
-      - 1.5
+    estimated_cost_eur: [40, 250]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: false
+    emissions_relevant: false
+    drive_cycle_required: true
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C0950, C0952, C0953]
   sources:
-    - https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system
+    - https://mitsubishitechinfo.com/data/DG/2022/05/HTML/N5050401D0001000USA.htm
+    - https://saabwisonline.com/9-4x/2011/7-suspension-wheels/wheels-and-tyres/fault-diagnosis-diagnostic-trouble-codes/dtc-c0750-c0755-c0760-or-c0765
+  reviewed: '2026-11-06'
 - code: C0952
   category: chassis
   title:
     en: Tire Pressure Monitoring Sensor Rear Left
-    de: Reifendruck-Sensor hinten links
+    de: Reifendrucksensor hinten links
   description:
-    en: The TPMS sensor at the rear left wheel does not transmit a valid signal.
-    de: Der TPMS-Sensor am linken Hinterrad sendet kein gueltiges Signal.
+    en: "A manufacturer using C0952 is not on record; the number is absent from all lists and bulletins searched. What it names, the left rear tire sensor, carries other codes elsewhere: C0760 at GM and Saab, C1734 and C1744 in Mitsubishi's 2022 index, and on a 2008 Honda Accord the codes 37 for a low sensor battery and 38 for a sensor that stopped transmitting at the left rear. Relearning follows a fixed sequence of corners; Honda starts with the front left wheel, moves on to the rear left one, then the rear right, and finishes at the front right, and Saab's autolearn tells the axles apart by signal strength. A left rear fault therefore often follows a wheel rotation or a missed relearn step. The left rear pressure is no longer monitored."
+    de: "Ein Hersteller, der C0952 nutzt, ist nicht belegt; die Nummer fehlt in allen durchsuchten Listen und Bulletins. Was sie benennt, den Sensor im linken Hinterrad, führen andere unter eigenen Nummern: GM und Saab als C0760, Mitsubishis Index von 2022 als C1734 und C1744, beim Honda Accord 2008 die Codes 37 für schwache Sensorbatterie und 38 für einen Sensor hinten links, der nicht mehr sendet. Das Anlernen folgt einer festen Reihenfolge der Ecken; bei Honda vorn links, hinten links, hinten rechts, vorn rechts, während Saabs Selbstlernen die Achsen an der Signalstärke unterscheidet. Ein Fehler hinten links folgt deshalb häufig einem Radtausch oder einem ausgelassenen Lernschritt. Der Druck hinten links wird nicht mehr überwacht."
   affected_components:
     - tpms_sensor_rl
     - tpms_module
   common_causes:
-    - id: sensor_battery_depleted
+    - id: wheel_rotation_not_relearned
       likelihood: high
       label:
-        en: Sensor battery depleted
-        de: Sensorbatterie leer
-    - id: sensor_damaged
+        en: Wheels rotated without relearning sensor positions
+        de: Räder getauscht, ohne die Sensorpositionen neu anzulernen
+    - id: sensor_battery_depleted
       likelihood: medium
       label:
-        en: Sensor damaged during tire change
-        de: Sensor beim Reifenwechsel beschaedigt
+        en: Cell of the left rear sensor exhausted
+        de: Zelle des Sensors hinten links erschöpft
+    - id: sensor_damaged_or_missing
+      likelihood: medium
+      label:
+        en: Sensor damaged or missing after tire work
+        de: Sensor nach Reifenarbeiten beschädigt oder nicht vorhanden
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: No reading for the left rear tire
+      de: Kein Wert für den linken Hinterreifen
+    - en: TPMS warning after a tire rotation
+      de: Reifendruckwarnung nach einem Radtausch
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 60
-      - 250
-    estimated_hours:
-      - 0.3
-      - 1.5
+    estimated_cost_eur: [40, 250]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: false
+    emissions_relevant: false
+    drive_cycle_required: true
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C0950, C0951, C0953]
   sources:
-    - https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system
+    - https://www.ateq-tpms.com/en-us/article/tpms-diagnostic-information-2008-honda-accord/
+    - https://mitsubishitechinfo.com/data/DG/2022/14/HTML/N5140203N0000300USA.htm
+    - https://saabwisonline.com/9-5-9650/2011/7-suspension-wheels/wheels-and-tyres/fault-diagnosis-diagnostic-trouble-codes/dtc-c0775
+  reviewed: '2026-11-06'
 - code: C0953
   category: chassis
   title:
     en: Tire Pressure Monitoring Sensor Rear Right
-    de: Reifendruck-Sensor hinten rechts
+    de: Reifendrucksensor hinten rechts
   description:
-    en: The TPMS sensor at the rear right wheel does not transmit a valid signal.
-    de: Der TPMS-Sensor am rechten Hinterrad sendet kein gueltiges Signal.
+    en: "C0953 stays without a documented user; neither J2012 lists nor bulletins name it. The right rear sensor appears at GM and Saab as C0765, where subcode 39 marks an internal malfunction. Mitsubishi's 2022 page for C1733-68 shows how implausible data from that corner are caught: above 40 km/h the BCM checks pressure, temperature and G sensor values in each telegram from the right rear unit and flags a fault within one second; the only cause listed is the sensor. Unlike a silent sensor, this one still transmits, but its content is unusable. Replacing the right rear sensor and registering its ID is the usual cure. Until then the TPMS lamp stays on and no valid right rear pressure is shown."
+    de: "C0953 bleibt ohne belegten Nutzer; weder J2012-Listen noch Bulletins nennen ihn. Den Sensor hinten rechts führen GM und Saab als C0765, wo Untercode 39 einen inneren Defekt bezeichnet. Mitsubishis Seite von 2022 zu C1733-68 zeigt, wie unplausible Daten dieser Ecke auffallen: Über 40 km/h prüft das Karosseriesteuergerät in jedem Telegramm des Sensors hinten rechts Druck, Temperatur und Beschleunigungswert und meldet einen Fehler binnen einer Sekunde; als Ursache nennt es nur den Sensor. Anders als bei einem verstummten Sensor kommt hier noch ein Signal an, sein Inhalt ist aber unbrauchbar. Üblich ist der Tausch des Sensors hinten rechts mit Anlernen der Kennung. Bis dahin bleibt die Reifendruckleuchte an, und für hinten rechts fehlt ein gültiger Druck."
   affected_components:
     - tpms_sensor_rr
     - tpms_module
   common_causes:
-    - id: sensor_battery_depleted
+    - id: sensor_internal_fault
       likelihood: high
       label:
-        en: Sensor battery depleted
-        de: Sensorbatterie leer
+        en: Pressure, temperature or acceleration element inside the right rear sensor defective
+        de: Druck-, Temperatur- oder Beschleunigungselement im Sensor hinten rechts defekt
     - id: sensor_damaged
       likelihood: medium
       label:
-        en: Sensor damaged during tire change
-        de: Sensor beim Reifenwechsel beschaedigt
+        en: Sensor damaged by tire fitting, sealant or impact
+        de: Sensor durch Reifenmontage, Dichtmittel oder Schlag beschädigt
+    - id: sensor_battery_depleted
+      likelihood: low
+      label:
+        en: Weak cell causing corrupted telegrams
+        de: Schwache Zelle verursacht fehlerhafte Telegramme
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: TPMS lamp on with no valid value for the right rear tire
+      de: Reifendruckleuchte an, kein gültiger Wert für den rechten Hinterreifen
+    - en: Implausible or jumping pressure reading at the right rear
+      de: Unplausibler oder springender Druckwert hinten rechts
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur:
-      - 60
-      - 250
-    estimated_hours:
-      - 0.3
-      - 1.5
+    estimated_cost_eur: [40, 250]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: false
+    emissions_relevant: false
+    drive_cycle_required: true
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C0950, C0951, C0952]
   sources:
-    - https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system
+    - https://mitsubishitechinfo.com/data/DG/2022/05/HTML/N5050401D0000W00USA.htm
+    - https://saabwisonline.com/9-5-9650/2011/7-suspension-wheels/wheels-and-tyres/fault-diagnosis-diagnostic-trouble-codes/dtc-c0750-c0755-c0760-or-c0765
+  reviewed: '2026-11-06'
 - code: C0960
   category: chassis
   title:
     en: Tire Pressure Monitoring Module Internal Fault
-    de: TPMS-Steuergeraet interner Fehler
+    de: Reifendruck-Steuergerät interner Fehler
   description:
-    en: The tire pressure monitoring module fails its internal self-test.
-    de: Das Reifendruckkontrollsystem-Steuergeraet besteht den internen Selbsttest nicht.
+    en: "Public material does not show C0960 in use by any maker; it is missing from the lists, indexes and bulletins we searched. The title points to a self-test failure in the control unit that evaluates the tire sensors. Makers with their own codes for this: Honda's TPMS unit reports code 81 when its RAM, ROM, A/D converter, EEPROM or arithmetic unit fails the check, and Mitsubishi's 2022 BCM-based system lists C1700 control unit faults with several subcodes. Land Rover keeps the function in a separate TPM module. FMVSS 138 requires a malfunction telltale within 20 minutes of any fault that stops the system working, so the warning lamp is the visible sign. Wheel sensors are usually fine; the module is reprogrammed or replaced."
+    de: "Öffentliche Unterlagen zeigen keinen Hersteller, der C0960 nutzt; in den durchsuchten Listen, Indizes und Bulletins fehlt er. Der Titel meint einen fehlgeschlagenen Selbsttest im Steuergerät, das die Reifensensoren auswertet. Hersteller mit eigenen Codes dafür: Hondas RDKS-Steuergerät meldet Code 81, wenn RAM, ROM, A/D-Wandler, EEPROM oder Rechenwerk die Prüfung nicht bestehen; Mitsubishis System von 2022 im Karosseriesteuergerät führt Steuergerätefehler als C1700 mit mehreren Untercodes. Land Rover legt die Funktion in ein eigenes TPM-Modul. FMVSS 138 verlangt eine Störungsanzeige spätestens 20 Minuten nach jedem Fehler, der das System lahmlegt; die Warnleuchte ist daher das sichtbare Zeichen. Die Radsensoren sind meist in Ordnung; das Steuergerät wird neu programmiert oder ersetzt."
   affected_components:
     - tpms_module
   common_causes:
     - id: module_internal_failure
       likelihood: high
       label:
-        en: Module internal failure
-        de: Steuergeraet intern defekt
+        en: Memory or processor fault inside the TPMS control unit
+        de: Speicher- oder Prozessorfehler im RDKS-Steuergerät
+    - id: software_corrupted
+      likelihood: medium
+      label:
+        en: Corrupted or incomplete software after programming
+        de: Beschädigte oder unvollständige Software nach dem Programmieren
+    - id: supply_voltage_dip
+      likelihood: low
+      label:
+        en: Low supply voltage or poor ground disturbing the self-test
+        de: Zu geringe Versorgungsspannung oder schlechte Masse stört den Selbsttest
   symptoms:
-    - en: 'ABS warning light on'
-      de: 'ABS-Warnleuchte an'
-    - en: 'ESC/stability control deactivated'
-      de: 'ESP/Stabilitätskontrolle deaktiviert'
-    - en: 'Possible reduced brake assist'
-      de: 'Möglicherweise reduzierte Bremskraftunterstützung'
-    - en: 'Speedometer may behave erratically'
-      de: 'Tachometer kann sich auffällig verhalten'
+    - en: TPMS malfunction lamp lit permanently
+      de: Störungsleuchte der Reifendrucküberwachung dauerhaft an
+    - en: No tire pressures shown at all
+      de: Gar keine Reifendrücke angezeigt
   repair:
-    difficulty: hard
+    difficulty: shop_only
     diy_possible: false
-    estimated_cost_eur:
-      - 200
-      - 800
-    estimated_hours:
-      - 0.8
-      - 3
+    estimated_cost_eur: [100, 600]
+    estimated_hours: [0.5, 2]
   flags:
     mil: false
+    emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [C0910, C0083]
   sources:
-    - https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system
-    - https://en.wikipedia.org/wiki/Anti-lock_braking_system
+    - https://www.ateq-tpms.com/en-us/article/tpms-diagnostic-information-2008-honda-accord/
+    - https://mitsubishitechinfo.com/data/DG/2022/14/HTML/N5140203N0000300USA.htm
+    - https://www.law.cornell.edu/cfr/text/49/571.138
+    - https://static.nhtsa.gov/odi/tsbs/2026/MC-11030749-0001.pdf
+  reviewed: '2026-11-06'
