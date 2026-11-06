@@ -16575,40 +16575,58 @@
     en: Mirror Heater Circuit
     de: Spiegelheizung Stromkreis
   description:
-    en: A fault has been detected in the heated mirror circuit. Mirrors will not defog.
-    de: Im Stromkreis der Spiegelheizung wurde ein Fehler erkannt. Spiegel beschlagen nicht ab.
+    en: "Public J2012 lists, OEM manuals and NHTSA bulletins all lack B0610; its use cannot be verified. The title describes the heating element behind the outside mirror glass. In the 2003–2012 Saab 9-3 each door module watches this load on its own: if the heater draws too much current when switched on, it stores B1640 02 and tries again only in the next drive cycle. Magna's US9481304B2 gives a typical pad of roughly 23 W (1.8 A at 13 V), often a PTC element, whose power is cut back while the car stands still. According to TI, a mirror module has to supervise both the folding motor and the heater load for faults. A dead heater only affects demisting; adjustment faults have their own codes (B0600, B0601)."
+    de: "Öffentliche J2012-Listen, Werkstattunterlagen und NHTSA-Bulletins kennen B0610 nicht; seine Verwendung ist unbelegt. Gemeint ist das Heizelement hinter dem Glas des Außenspiegels. Beim Saab 9-3 (2003–2012) überwacht das jeweilige Türmodul diese Last selbst: Fließt beim Einschalten zu viel Strom, legt es B1640 02 ab und versucht es erst im nächsten Fahrzyklus erneut. Magnas Patent US9481304B2 nennt als Beispiel eine Heizfolie von rund 23 W (1,8 A bei 13 V), oft als PTC-Element, deren Leistung im Stand zurückgenommen wird. TI zählt die Fehlerüberwachung von Klappmotor und Heizung zu den Grundaufgaben eines Spiegelmoduls. Ein Ausfall betrifft nur das Abtauen; die Verstellung hat eigene Codes (B0600, B0601)."
   affected_components:
     - mirror_heater_element
     - body_control_module
   common_causes:
-    - id: heating_element_open
+    - id: heater_element
       likelihood: high
       label:
-        en: Mirror heating element open
-        de: Spiegelheizelement unterbrochen
-    - id: relay_fault
+        en: Heating pad behind the mirror glass broken or shorted
+        de: Heizfolie hinter dem Spiegelglas unterbrochen oder kurzgeschlossen
+    - id: mirror_connector
       likelihood: medium
       label:
-        en: Mirror heater relay failed
-        de: Spiegelheizungs-Relais defekt
+        en: Corroded plug at the mirror glass or in the mirror base
+        de: Korrodierter Stecker am Spiegelglas oder im Spiegelfuß
+    - id: door_harness
+      likelihood: medium
+      label:
+        en: Wire chafed in the door hinge passage
+        de: Leitung im Scharnierdurchgang der Tür durchgescheuert
+    - id: module_output
+      likelihood: low
+      label:
+        en: Heater output of the door or body control module faulty
+        de: Heizungsausgang des Tür- oder Karosseriesteuergeräts defekt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Outside mirror stays fogged or iced while the rear window clears
+      de: Außenspiegel bleibt beschlagen oder vereist, während die Heckscheibe frei wird
+    - en: Mirror glass does not warm up when the heating is switched on
+      de: Spiegelglas wird bei eingeschalteter Heizung nicht warm
+    - en: Code returns after every restart
+      de: Code kehrt nach jedem Neustart zurück
   repair:
-    difficulty: medium
+    difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [80, 350]
-    estimated_hours: [0.5, 2.0]
+    estimated_cost_eur: [40, 300]
+    estimated_hours: [0.3, 2]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0600, B0601, B0950]
   sources:
-    - https://en.wikipedia.org/wiki/Wing_mirror
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/ddm/b1640-02/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/pdm/b1640-02/
+    - https://patents.google.com/patent/US9481304B2/en
+    - https://www.ti.com/solution/side-mirror-module
+  reviewed: '2026-11-06'
 
 - code: B0700
   category: body
@@ -16616,45 +16634,59 @@
     en: Sunroof Open/Close Circuit
     de: Schiebedach Öffnen/Schließen Stromkreis
   description:
-    en: A fault has been detected in the sunroof open/close motor circuit.
-    de: Im Stellkreis des Schiebedach-Öffnen-/Schließmotors wurde ein Fehler erkannt.
+    en: "No accessible J2012 list, public manufacturer manual or NHTSA bulletin contains B0700, so the code cannot be verified. Its title points to the circuit that drives a power sunroof open and shut. GM-era Saab cars report such faults under their own numbers: the 9-3 sunroof module stores B3661 0E when motor current is too high and B3664 04 for an open switch line, after which button presses are ignored; B3664 0A follows if the same switch position is seen for over 30 s. In the 2011 Saab 9-5 the module reads the switch as a resistor ladder and reports B3664 to the BCM via LIN. FMVSS 118 demands that a closing roof panel reverses before it squeezes with 100 N, which is why motor current is supervised at all. Position feedback: B0710."
+    de: "Weder eine zugängliche J2012-Liste noch eine öffentliche Herstellerunterlage oder ein NHTSA-Bulletin enthält B0700; der Code ist nicht nachweisbar. Der Titel meint den Stromkreis, der ein elektrisches Schiebedach auf- und zufährt. Saab-Modelle aus der GM-Zeit melden solche Fehler unter eigenen Nummern: Das Dachmodul des 9-3 speichert B3661 0E bei zu hohem Motorstrom und B3664 04 bei unterbrochener Schalterleitung, danach ignoriert es Tastendrücke; B3664 0A folgt, wenn eine Schalterstellung länger als 30 s anliegt. Beim 9-5 von 2011 liest das Modul den Schalter als Widerstandskette und meldet B3664 per LIN an das Karosseriesteuergerät. FMVSS 118 verlangt, dass ein schließendes Dach vor 100 N Klemmkraft umkehrt – deshalb wird der Motorstrom überhaupt überwacht. Positionsrückmeldung: B0710."
   affected_components:
     - sunroof_motor
     - sunroof_control_module
   common_causes:
-    - id: motor_failure
+    - id: rail_friction
       likelihood: high
       label:
-        en: Sunroof motor failed
-        de: Schiebedachmotor defekt
-    - id: drain_blocked
+        en: Dirty or dry guide rails raising motor current
+        de: Verschmutzte oder trockene Führungsschienen erhöhen den Motorstrom
+    - id: sunroof_switch
       likelihood: medium
       label:
-        en: Blocked drain causing water/electrical damage
-        de: Verstopfter Ablauf verursacht Wasser-/Elektronikschaden
-    - id: switch_failure
+        en: Sunroof switch or its wiring faulty
+        de: Schiebedachschalter oder dessen Leitung defekt
+    - id: motor_worn
       likelihood: medium
       label:
-        en: Sunroof switch failure
-        de: Schiebedachschalter defekt
+        en: Sunroof motor or gearbox worn
+        de: Schiebedachmotor oder Getriebe verschlissen
+    - id: module_fault
+      likelihood: low
+      label:
+        en: Sunroof control electronics faulty
+        de: Steuerelektronik des Schiebedachs defekt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Sunroof does not move when the button is pressed
+      de: Schiebedach bewegt sich bei Tastendruck nicht
+    - en: Roof stops or reverses on its own while closing
+      de: Dach bleibt beim Schließen stehen oder fährt von selbst zurück
+    - en: Motor hums without the panel moving
+      de: Motor brummt, ohne dass sich der Deckel bewegt
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [200, 1500]
-    estimated_hours: [1.5, 6.0]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [50, 900]
+    estimated_hours: [0.5, 4]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0710]
   sources:
-    - https://en.wikipedia.org/wiki/Sunroof
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/srm/b3661-0e/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/srm/b3664-04/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/srm/b3664-0a/
+    - https://saabwisonline.com/9-5-9650/2011/8-body/sunroof/fault-diagnosis-diagnostic-trouble-codes/dtc-b3664
+    - https://www.law.cornell.edu/cfr/text/49/571.118
+  reviewed: '2026-11-06'
 
 - code: B0710
   category: body
@@ -16662,40 +16694,59 @@
     en: Sunroof Position Sensor Circuit
     de: Schiebedach Positionssensor Stromkreis
   description:
-    en: A fault is detected in the sunroof position sensor circuit; one-touch and pinch protection may not function.
-    de: Im Stromkreis des Schiebedach-Positionssensors wurde ein Fehler erkannt; Einknopf-Bedienung und Einklemmschutz funktionieren möglicherweise nicht.
+    en: "Nothing public confirms B0710: it is missing from J2012 extracts, workshop manuals and recall bulletins alike. The title refers to the position feedback of a power sunroof. Typical designs count pulses from a Hall sensor at the motor shaft: Nedap's NL1001829C2 derives panel position and speed from the pole changes, and Bosch's DE19815960A1 resets such a counter at a mechanical stop and uses it to separate sliding from tilting travel. Without valid pulses neither the anti-trap function required by FMVSS 118 nor one-touch travel can work. In the 2011 Saab 9-5 the motor unit reports an unlearned calibration as B3697 4B; the 9-3 disables express operation with B3696 0B when the motor is misfitted or the mechanism blocked. Drive circuit: B0700."
+    de: "Nichts Öffentliches bestätigt B0710 – weder J2012-Auszüge noch Werkstatthandbücher oder Rückruf-Bulletins. Der Titel betrifft die Positionsrückmeldung eines elektrischen Schiebedachs. Üblich ist ein Hall-Sensor an der Motorwelle, dessen Impulse gezählt werden: Nedaps NL1001829C2 gewinnt aus den Polwechseln Lage und Geschwindigkeit des Deckels, Boschs DE19815960A1 setzt einen solchen Zähler an einem mechanischen Anschlag zurück und unterscheidet damit Schiebe- und Ausstellbereich. Fehlen gültige Impulse, arbeiten weder der von FMVSS 118 geforderte Einklemmschutz noch die Tipp-Automatik. Beim Saab 9-5 von 2011 meldet die Motoreinheit eine fehlende Kalibrierung als B3697 4B; der 9-3 schaltet bei falsch montiertem Motor oder blockierter Mechanik mit B3696 0B die Automatik ab. Antrieb: B0700."
   affected_components:
     - sunroof_position_sensor
     - sunroof_control_module
   common_causes:
-    - id: hall_sensor_failure
+    - id: not_initialised
       likelihood: high
       label:
-        en: Hall sensor failure
-        de: Hall-Sensor defekt
-    - id: motor_clutch_slip
+        en: End positions not relearned after battery disconnection or motor replacement
+        de: Endlagen nach Abklemmen der Batterie oder Motortausch nicht neu angelernt
+    - id: hall_sensor
       likelihood: medium
       label:
-        en: Motor clutch slipping
-        de: Motorkupplung rutscht
+        en: Hall sensor or motor electronics faulty
+        de: Hall-Sensor oder Motorelektronik defekt
+    - id: mechanism_binding
+      likelihood: medium
+      label:
+        en: Binding mechanism or misfitted motor
+        de: Schwergängige Mechanik oder falsch montierter Motor
+    - id: wiring
+      likelihood: low
+      label:
+        en: Signal wire or connector at the motor damaged
+        de: Signalleitung oder Stecker am Motor beschädigt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: One-touch opening or closing no longer works
+      de: Tipp-Automatik zum Öffnen oder Schließen funktioniert nicht mehr
+    - en: Roof stops short of its end position or reverses unexpectedly
+      de: Dach stoppt vor der Endlage oder fährt unerwartet zurück
+    - en: Roof can only be moved step by step until reinitialised
+      de: Dach lässt sich bis zum Neuanlernen nur schrittweise bewegen
   repair:
-    difficulty: hard
-    diy_possible: false
-    estimated_cost_eur: [200, 1000]
-    estimated_hours: [1.0, 4.0]
+    difficulty: medium
+    diy_possible: true
+    estimated_cost_eur: [20, 700]
+    estimated_hours: [0.3, 3]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0700]
   sources:
-    - https://en.wikipedia.org/wiki/Sunroof
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://patents.google.com/patent/NL1001829C2/en
+    - https://patents.google.com/patent/DE19815960A1/en
+    - https://saabwisonline.com/9-5-9650/2011/8-body/sunroof/fault-diagnosis-diagnostic-trouble-codes/dtc-b3697
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/srm/b3696-0b/
+    - https://www.law.cornell.edu/cfr/text/49/571.118
+  reviewed: '2026-11-06'
 
 - code: B0800
   category: body
@@ -16703,41 +16754,58 @@
     en: Headlamp Switch Circuit
     de: Lichtschalter Stromkreis
   description:
-    en: A fault has been detected in the headlamp switch circuit. Light functions may not switch properly.
-    de: Im Stromkreis des Lichtschalters wurde ein Fehler erkannt. Lichtfunktionen schalten möglicherweise nicht korrekt.
+    en: B0800 lacks any public evidence; no J2012 extract or service document mentions it. The title concerns the light switch that tells the body control module which lamps to energise. In the GM-developed Saab 9-3 the BCM checks switch positions 1 and 2 and logs B2585 05 or B2575 05 when the respective line rises above 10.2 V; dipped beam then stays on whatever the switch says. GM's 2011 Saab 9-5 compares its headlamp-on and headlamp-off inputs, stores B257A on an implausible combination and falls back to automatic headlamp control. FMVSS 108 requires every car to have a dipper switch and a high-beam telltale. Both fallbacks keep the lights usable, so the fault mostly shows as lost manual control rather than darkness.
+    de: Für B0800 gibt es keinen öffentlichen Beleg; kein J2012-Auszug und keine Serviceunterlage erwähnt ihn. Der Titel betrifft den Lichtschalter, über den das Karosseriesteuergerät erfährt, welche Leuchten es einschalten soll. Beim Saab 9-3 der zweiten Generation prüft das BCM die Schalterstellungen 1 und 2 und speichert B2585 05 bzw. B2575 05, wenn die jeweilige Leitung über 10,2 V steigt; das Abblendlicht leuchtet dann unabhängig von der Schalterstellung. Der GM-Saab 9-5 von 2011 vergleicht seine Eingänge für Licht an und Licht aus, legt bei unplausibler Kombination B257A ab und schaltet auf Lichtautomatik. FMVSS 108 schreibt Abblendschalter und Fernlichtkontrolle vor. Beide Ersatzreaktionen halten das Licht nutzbar – auffällig ist vor allem die fehlende Handbedienung.
   affected_components:
     - headlamp_switch
     - body_control_module
   common_causes:
-    - id: switch_failure
+    - id: switch_contacts
       likelihood: high
       label:
-        en: Headlamp switch internal failure
-        de: Interner Lichtschalter-Fehler
-    - id: connector_loose
+        en: Worn or corroded contacts in the light switch
+        de: Verschlissene oder korrodierte Kontakte im Lichtschalter
+    - id: short_to_voltage
       likelihood: medium
       label:
-        en: Loose switch connector
-        de: Loser Schalterstecker
+        en: Switch signal wire shorted to battery voltage
+        de: Signalleitung des Schalters mit Plus kurzgeschlossen
+    - id: connector
+      likelihood: medium
+      label:
+        en: Loose or damaged plug behind the switch
+        de: Lockerer oder beschädigter Stecker hinter dem Schalter
+    - id: bcm_input
+      likelihood: low
+      label:
+        en: Switch input of the body control module faulty
+        de: Schaltereingang des Karosseriesteuergeräts defekt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Dipped beam stays on regardless of switch position
+      de: Abblendlicht bleibt unabhängig von der Schalterstellung an
+    - en: Lights only work in automatic mode
+      de: Licht arbeitet nur noch im Automatikbetrieb
+    - en: Parking lights cannot be selected separately
+      de: Standlicht lässt sich nicht getrennt einschalten
   repair:
-    difficulty: medium
+    difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [60, 300]
-    estimated_hours: [0.5, 2.0]
+    estimated_cost_eur: [30, 250]
+    estimated_hours: [0.3, 1.5]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [B0240]
+  related_codes: [B0240, B0810, B0811]
   sources:
-    - https://en.wikipedia.org/wiki/Headlamp
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/bcm/b2575-05/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/bcm/b2585-05/
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/lighting-and-signalling-systems/fault-diagnosis-diagnostic-trouble-codes/dtc-b257a
+    - https://www.law.cornell.edu/cfr/text/49/571.108
+  reviewed: '2026-11-06'
 
 - code: B0810
   category: body
@@ -16745,40 +16813,63 @@
     en: Left Headlamp Low Beam Circuit
     de: Abblendlicht links Stromkreis
   description:
-    en: The body control module has detected a fault in the left low beam headlamp circuit. Bulb may be burnt out or wiring shorted.
-    de: Das Karosserie-Steuergerät hat einen Fehler im Stromkreis des linken Abblendlichts erkannt. Die Glühlampe ist möglicherweise durchgebrannt oder die Verkabelung kurzgeschlossen.
+    en: "Whether any carmaker sets B0810 is unknown – the number shows up in no J2012 excerpt and no service literature. The title covers the left dipped-beam output. The GM-era Saab 9-3 checks it in the front electrical centre under the number B2575: with the switch at dipped beam (position 2), a draw below 0.8 A sets B2575 04 (open) and one of 7.9–30 A sets B2575 0B, which may also mean a bulb of the wrong rating. With xenon lamps the ignition has to be on for 30 s before the test can run. HELLA explains why: the xenon ballast first fires the lamp with up to 30 kV and only then regulates it to a steady 35 W. A dark left dipped beam is a road-safety defect and should be repaired before driving at night. Right side: B0811."
+    de: "Ob ein Hersteller B0810 setzt, ist offen – die Nummer erscheint in keinem J2012-Auszug und keiner Werkstattliteratur. Der Titel betrifft den Ausgang für das linke Abblendlicht. Der Saab 9-3 aus der GM-Zeit kontrolliert ihn in der vorderen Elektrozentrale unter der Nummer B2575: Bei Lichtschalter in Stellung 2 führt eine Stromaufnahme unter 0,8 A zu B2575 04 (Unterbrechung), eine zwischen 7,9 und 30 A zu B2575 0B – das kann auch auf eine Lampe falscher Leistung hindeuten. Bei Xenonlicht muss die Zündung 30 s eingeschaltet sein, bevor die Prüfung läuft. HELLA erklärt den Grund: Das Vorschaltgerät zündet die Lampe mit bis zu 30 kV und regelt sie erst danach auf konstant 35 W. Ein dunkles linkes Abblendlicht ist ein Sicherheitsmangel; vor einer Nachtfahrt instand setzen. Rechte Seite: B0811."
   affected_components:
     - left_low_beam_lamp
     - body_control_module
   common_causes:
-    - id: bulb_burnt_out
+    - id: bulb_failed
       likelihood: high
       label:
-        en: Burnt out bulb
-        de: Durchgebrannte Glühlampe
-    - id: wiring_short
+        en: Low-beam bulb burnt out
+        de: Glühlampe des Abblendlichts durchgebrannt
+    - id: wrong_bulb
       likelihood: medium
       label:
-        en: Wiring short
-        de: Verkabelungs-Kurzschluss
+        en: Bulb of the wrong wattage fitted
+        de: Lampe mit falscher Leistung eingesetzt
+    - id: xenon_ballast
+      likelihood: medium
+      label:
+        en: Xenon ballast or igniter faulty
+        de: Xenon-Vorschaltgerät oder Zündgerät defekt
+    - id: connector_ground
+      likelihood: medium
+      label:
+        en: Corroded headlamp plug or poor ground
+        de: Korrodierter Scheinwerferstecker oder schlechte Masse
+    - id: module_output
+      likelihood: low
+      label:
+        en: Lamp output of the lighting or body module faulty
+        de: Lampenausgang des Licht- oder Karosseriesteuergeräts defekt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Left dipped beam dark, lamp failure message in the display
+      de: Linkes Abblendlicht dunkel, Lampenausfall-Meldung im Display
+    - en: Reduced view of the left road edge at night; repair before driving in the dark
+      de: Schlechtere Sicht auf den linken Fahrbahnrand bei Nacht; vor Fahrten im Dunkeln reparieren
+    - en: Light flickers or fails only after the lamp has warmed up
+      de: Licht flackert oder fällt erst nach dem Warmwerden aus
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [20, 200]
-    estimated_hours: [0.2, 1.5]
+    estimated_cost_eur: [10, 600]
+    estimated_hours: [0.2, 2]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0811, B0800, B0820]
   sources:
-    - https://en.wikipedia.org/wiki/Headlamp
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/uec/b2575-04/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/uec/b2575-0b/
+    - https://www.hella.com/techworld/uk/technical/automotive-lighting/xenon-headlights/
+    - https://www.law.cornell.edu/cfr/text/49/571.108
+  reviewed: '2026-11-06'
 
 - code: B0811
   category: body
@@ -16786,35 +16877,58 @@
     en: Right Headlamp Low Beam Circuit
     de: Abblendlicht rechts Stromkreis
   description:
-    en: The body control module has detected a fault in the right low beam headlamp circuit.
-    de: Das Karosserie-Steuergerät hat einen Fehler im Stromkreis des rechten Abblendlichts erkannt.
+    en: "No J2012 excerpt or published service text uses B0811, which leaves the code undocumented. The title names the right dipped-beam circuit. In GM's 2011 Saab 9-5 the body control module powers low beam or daytime running lamps, while a separate headlamp control module stores B2699 (02 grounded, 04 open, 00 malfunction) when it sees a commanded lamp stay dark. The older 9-3 uses the same number B2699 for its right dipped beam and sets 04 below 0.8 A or 0B at 7.9–30 A, for instance after a bulb of the wrong rating has been fitted. FMVSS 108 sets the lower-beam requirements every car has to meet. A failed right dipped beam leaves the kerb side poorly lit at night and should be fixed quickly. Left side: B0810."
+    de: "Kein J2012-Auszug und kein veröffentlichter Servicetext verwendet B0811; der Code bleibt undokumentiert. Der Titel nennt den Stromkreis des rechten Abblendlichts. Beim GM-Saab 9-5 von 2011 versorgt das Karosseriesteuergerät Abblend- oder Tagfahrlicht, und ein eigenes Scheinwerfersteuergerät legt B2699 ab (02 Masseschluss, 04 Unterbrechung, 00 Fehlfunktion), wenn eine angesteuerte Leuchte dunkel bleibt. Der ältere 9-3 verwendet dieselbe Nummer B2699 für sein rechtes Abblendlicht und setzt 04 unter 0,8 A bzw. 0B zwischen 7,9 und 30 A, etwa nach Einbau einer Lampe falscher Leistung. FMVSS 108 regelt die Anforderungen an das Abblendlicht jedes Fahrzeugs. Fällt es rechts aus, ist der Fahrbahnrand nachts schlecht ausgeleuchtet – zügig reparieren. Linke Seite: B0810."
   affected_components:
     - right_low_beam_lamp
     - body_control_module
   common_causes:
-    - id: bulb_burnt_out
+    - id: bulb_failed
       likelihood: high
       label:
-        en: Burnt out bulb
-        de: Durchgebrannte Glühlampe
+        en: Right low-beam bulb or LED unit failed
+        de: Lampe oder LED-Einheit des rechten Abblendlichts ausgefallen
+    - id: wrong_bulb
+      likelihood: medium
+      label:
+        en: Incorrect bulb rating after a replacement
+        de: Falsche Lampenleistung nach einem Tausch
+    - id: harness
+      likelihood: medium
+      label:
+        en: Open or grounded supply wire to the headlamp
+        de: Versorgungsleitung zum Scheinwerfer unterbrochen oder an Masse
+    - id: headlamp_module
+      likelihood: low
+      label:
+        en: Headlamp or body control module output faulty
+        de: Ausgang des Scheinwerfer- oder Karosseriesteuergeräts defekt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Right dipped beam or daytime running lamp stays dark
+      de: Rechtes Abblend- oder Tagfahrlicht bleibt dunkel
+    - en: Lamp warning shown in the instrument cluster
+      de: Lampenwarnung im Kombiinstrument
+    - en: Kerb side poorly lit at night; have it repaired promptly
+      de: Fahrbahnrand nachts schlecht ausgeleuchtet; umgehend reparieren lassen
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [20, 200]
-    estimated_hours: [0.2, 1.5]
+    estimated_cost_eur: [10, 600]
+    estimated_hours: [0.2, 2]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0810, B0800, B0821]
   sources:
-    - https://en.wikipedia.org/wiki/Headlamp
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/lighting-and-signalling-systems/fault-diagnosis-diagnostic-trouble-codes/dtc-b2575-or-b2699
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/uec/b2699-04/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/uec/b2699-0b/
+    - https://www.law.cornell.edu/cfr/text/49/571.108
+  reviewed: '2026-11-06'
 
 - code: B0820
   category: body
@@ -16822,35 +16936,59 @@
     en: Left Headlamp High Beam Circuit
     de: Fernlicht links Stromkreis
   description:
-    en: A fault has been detected in the left high beam headlamp circuit.
-    de: Im Stromkreis des linken Fernlichts wurde ein Fehler erkannt.
+    en: "B0820 is undocumented: neither open J2012 material nor factory or NHTSA papers list it. The title refers to the left main-beam output. In the second-generation Saab 9-3 the front electrical centre flags B2580 04 when the left main beam draws under 0.8 A while switched on and B2580 0B for 7.9 to 30 A. GM's 2011 Saab 9-5 works differently: both main beams are fed through one relay whose coil the body control module grounds, and if that control line is shorted to battery plus, B2580 01 is stored with both high beams off. HELLA points out that bi-xenon units form low and high beam in one module by moving a shutter, so a fault can also sit in that mechanism. FMVSS 108 requires an upper-beam indicator for the driver. Right side: B0821."
+    de: "B0820 ist undokumentiert: Weder offene J2012-Unterlagen noch Werks- oder NHTSA-Papiere führen ihn. Der Titel betrifft den Ausgang des linken Fernlichts. Beim Saab 9-3 der Baureihe 9440 meldet die vordere Elektrozentrale B2580 04, wenn das eingeschaltete linke Fernlicht weniger als 0,8 A aufnimmt, und B2580 0B bei 7,9 bis 30 A. Der GM-Saab 9-5 von 2011 ist anders aufgebaut: Beide Fernlichter hängen an einem Relais, dessen Spule das Karosseriesteuergerät nach Masse schaltet; ein Schluss nach Plus auf dieser Steuerleitung ergibt B2580 01, und beide Fernlichter bleiben aus. Laut HELLA erzeugen Bi-Xenon-Module beide Lichtarten über eine bewegliche Blende – der Fehler kann auch dort liegen. FMVSS 108 verlangt eine Fernlichtkontrolle. Rechte Seite: B0821."
   affected_components:
     - left_high_beam_lamp
     - body_control_module
   common_causes:
-    - id: bulb_burnt_out
+    - id: bulb_failed
       likelihood: high
       label:
-        en: Burnt out bulb
-        de: Durchgebrannte Glühlampe
+        en: Left high-beam bulb burnt out
+        de: Glühlampe des linken Fernlichts durchgebrannt
+    - id: high_beam_relay
+      likelihood: medium
+      label:
+        en: High-beam relay or its control line faulty
+        de: Fernlichtrelais oder dessen Steuerleitung defekt
+    - id: bixenon_shutter
+      likelihood: medium
+      label:
+        en: Shutter actuator in a bi-xenon module stuck
+        de: Blendenversteller im Bi-Xenon-Modul klemmt
+    - id: connector
+      likelihood: low
+      label:
+        en: Corroded headlamp connector
+        de: Korrodierter Scheinwerferstecker
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Left main beam stays dark when high beam is selected
+      de: Linkes Fernlicht bleibt beim Aufblenden dunkel
+    - en: Both main beams fail if the shared relay circuit is affected
+      de: Beide Fernlichter fallen aus, wenn der gemeinsame Relaiskreis betroffen ist
+    - en: Lamp failure message in the display
+      de: Lampenausfall-Meldung im Display
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [20, 200]
-    estimated_hours: [0.2, 1.5]
+    estimated_cost_eur: [10, 500]
+    estimated_hours: [0.2, 2]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0821, B0810, B0800]
   sources:
-    - https://en.wikipedia.org/wiki/Headlamp
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/uec/b2580-04/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/uec/b2580-0b/
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/lighting-and-signalling-systems/fault-diagnosis-diagnostic-trouble-codes/dtc-b2580
+    - https://www.hella.com/techworld/uk/technical/automotive-lighting/xenon-headlights/
+    - https://www.law.cornell.edu/cfr/text/49/571.108
+  reviewed: '2026-11-06'
 
 - code: B0821
   category: body
@@ -16858,35 +16996,56 @@
     en: Right Headlamp High Beam Circuit
     de: Fernlicht rechts Stromkreis
   description:
-    en: A fault has been detected in the right high beam headlamp circuit.
-    de: Im Stromkreis des rechten Fernlichts wurde ein Fehler erkannt.
+    en: "For B0821 there is no public trace in J2012 extracts, factory manuals or NHTSA files. The title describes the right main-beam circuit. Saab's 9-3 (type 9440) watches it under its own number B3866: open (04) when the lamp draws under 0.8 A with main beam on, overcurrent (0B) in the 7.9–30 A band; apart from the warning the module takes no action. Because high beam is only used on empty roads, a one-sided failure is often noticed late, mostly as a darker right verge. In GM's 2011 Saab 9-5, by contrast, a fault on the shared relay line (B2580 01) switches off both sides together. FMVSS 108 lists the beam switching device and the upper-beam indicator as required equipment. Left side: B0820."
+    de: "Zu B0821 findet sich keine öffentliche Spur in J2012-Auszügen, Werkshandbüchern oder NHTSA-Akten. Der Titel beschreibt den Stromkreis des rechten Fernlichts. Der Saab 9-3 der GM-Ära überwacht ihn unter eigener Nummer B3866: Unterbrechung (04), wenn die Lampe bei eingeschaltetem Fernlicht unter 0,8 A aufnimmt, Überstrom (0B) zwischen 7,9 und 30 A; außer der Warnung reagiert das Modul nicht. Da Fernlicht nur auf freier Strecke genutzt wird, fällt ein einseitiger Ausfall oft spät auf, meist als dunklerer rechter Fahrbahnrand. Beim GM-Saab 9-5 von 2011 schaltet dagegen ein Fehler im gemeinsamen Relaiskreis (B2580 01) beide Seiten zugleich ab. FMVSS 108 zählt Abblendschalter und Fernlichtkontrolle zur Pflichtausstattung. Linke Seite: B0820."
   affected_components:
     - right_high_beam_lamp
     - body_control_module
   common_causes:
-    - id: bulb_burnt_out
+    - id: bulb_failed
       likelihood: high
       label:
-        en: Burnt out bulb
-        de: Durchgebrannte Glühlampe
+        en: Right high-beam bulb failed
+        de: Lampe des rechten Fernlichts ausgefallen
+    - id: harness
+      likelihood: medium
+      label:
+        en: Supply wire to the right headlamp open or shorted
+        de: Versorgungsleitung zum rechten Scheinwerfer unterbrochen oder kurzgeschlossen
+    - id: wrong_bulb
+      likelihood: medium
+      label:
+        en: Higher-wattage bulb fitted, triggering overcurrent
+        de: Lampe höherer Leistung eingesetzt, Überstrom erkannt
+    - id: module_output
+      likelihood: low
+      label:
+        en: Main-beam output of the lighting module faulty
+        de: Fernlichtausgang des Lichtsteuergeräts defekt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Right main beam stays dark, left one works
+      de: Rechtes Fernlicht bleibt dunkel, linkes funktioniert
+    - en: Lamp warning in the display when high beam is switched on
+      de: Lampenwarnung im Display beim Aufblenden
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [20, 200]
-    estimated_hours: [0.2, 1.5]
+    estimated_cost_eur: [10, 500]
+    estimated_hours: [0.2, 2]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0820, B0811]
   sources:
-    - https://en.wikipedia.org/wiki/Headlamp
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/uec/b3866-04/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/uec/b3866-0b/
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/lighting-and-signalling-systems/fault-diagnosis-diagnostic-trouble-codes/dtc-b2580
+    - https://www.law.cornell.edu/cfr/text/49/571.108
+  reviewed: '2026-11-06'
 
 - code: B0830
   category: body
@@ -16894,35 +17053,58 @@
     en: Left Front Turn Signal Circuit
     de: Blinker vorn links Stromkreis
   description:
-    en: A fault has been detected in the left front turn signal circuit.
-    de: Im Stromkreis des Blinkers vorn links wurde ein Fehler erkannt.
+    en: "Open J2012 sources do not include B0830, and no workshop or NHTSA text quotes it, so it remains unconfirmed. The title covers the left front indicator. The GM-developed Saab 9-3 monitors this lamp as B0530 in its front electrical centre: a draw above 6 A for longer than 6 ms counts as a short to ground and the output is switched off, while less than 50 mA counts as an open circuit. FMVSS 108 (S9.3.6) requires that a failed turn lamp becomes visible to the driver through the pilot indicator, as steady light, no light or a clearly changed flash rate. HELLA advises checking the bulb, corrosion in the holder, the fuse and the plug before suspecting electronics. A dead front indicator hides turning intentions from oncoming traffic. Other corners: B0831, B0840, B0841."
+    de: "Offene J2012-Quellen enthalten B0830 nicht, und kein Werkstatt- oder NHTSA-Text zitiert ihn – er bleibt unbestätigt. Der Titel betrifft den linken vorderen Blinker. Der Saab 9-3 der zweiten Generation überwacht diese Leuchte in der vorderen Elektrozentrale als B0530: Mehr als 6 A für länger als 6 ms gilt als Masseschluss, und der Ausgang wird abgeschaltet; unter 50 mA gilt als Unterbrechung. FMVSS 108 (S9.3.6) verlangt, dass eine ausgefallene Blinkleuchte über die Kontrollleuchte erkennbar wird – durch Dauerlicht, Dunkelbleiben oder deutlich geänderte Blinkfrequenz. HELLA rät, zuerst Lampe, Korrosion in der Fassung, Sicherung und Stecker zu prüfen, bevor die Elektronik in Verdacht gerät. Ein toter vorderer Blinker verbirgt die Abbiegeabsicht vor dem Gegenverkehr. Übrige Ecken: B0831, B0840, B0841."
   affected_components:
     - left_front_turn_signal
     - body_control_module
   common_causes:
-    - id: bulb_burnt_out
+    - id: bulb_failed
       likelihood: high
       label:
-        en: Burnt out turn signal bulb
-        de: Durchgebrannte Blinker-Glühlampe
+        en: Indicator bulb burnt out
+        de: Blinkerlampe durchgebrannt
+    - id: holder_corrosion
+      likelihood: medium
+      label:
+        en: Corroded bulb holder or plug in the headlamp housing
+        de: Korrodierte Fassung oder Stecker im Scheinwerfergehäuse
+    - id: short_to_ground
+      likelihood: medium
+      label:
+        en: Supply wire shorted to ground, output shut off
+        de: Versorgungsleitung mit Masse kurzgeschlossen, Ausgang abgeschaltet
+    - id: module_output
+      likelihood: low
+      label:
+        en: Indicator output of the electrical centre faulty
+        de: Blinkerausgang der Elektrozentrale defekt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Left front indicator dark, warning in the display
+      de: Linker vorderer Blinker dunkel, Warnung im Display
+    - en: Pilot light stays steady or flashes noticeably faster
+      de: Kontrollleuchte leuchtet dauernd oder blinkt deutlich schneller
+    - en: Turning intention not visible to oncoming traffic; repair promptly
+      de: Abbiegeabsicht für Gegenverkehr nicht erkennbar; umgehend reparieren
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [10, 100]
-    estimated_hours: [0.2, 1.0]
+    estimated_cost_eur: [5, 250]
+    estimated_hours: [0.2, 1.5]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0831, B0840, B0841]
   sources:
-    - https://en.wikipedia.org/wiki/Automotive_lighting
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/uec/b0530-02/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/uec/b0530-04/
+    - https://www.law.cornell.edu/cfr/text/49/571.108
+    - https://www.hella.com/techworld/uk/technical/automotive-lighting/signal-lights-in-cars/
+  reviewed: '2026-11-06'
 
 - code: B0831
   category: body
@@ -16930,35 +17112,58 @@
     en: Right Front Turn Signal Circuit
     de: Blinker vorn rechts Stromkreis
   description:
-    en: A fault has been detected in the right front turn signal circuit.
-    de: Im Stromkreis des Blinkers vorn rechts wurde ein Fehler erkannt.
+    en: "B0831 has no published definition; J2012 extracts, factory literature and NHTSA records are silent on it. Its title names the right front indicator circuit. In the GM-era Saab 9-3 this lamp is checked as B0525 by the front electrical centre, with the same limits as on the left: under 50 mA means open (04), while over 6 A lasting beyond 6 ms is read as a short to ground (02) and cuts the output. The same number B0525 is reused by the rear centre for the right rear lamp, so the module reporting the code matters. FMVSS 108 makes every car carry a flasher, a pilot indicator and a hazard warning system. HELLA lists defective bulbs, corroded contacts and damaged plugs as the common culprits. Left front: B0830; right rear: B0841."
+    de: "B0831 hat keine veröffentlichte Definition; J2012-Auszüge, Werksliteratur und NHTSA-Bestände schweigen dazu. Der Titel nennt den Stromkreis des rechten vorderen Blinkers. Beim Saab 9-3 aus der GM-Zeit prüft die vordere Elektrozentrale diese Leuchte als B0525 mit denselben Grenzen wie links: weniger als 50 mA wertet sie als Unterbrechung (04), mehr als 6 A über 6 ms hinaus als Masseschluss (02) mit Abschaltung des Ausgangs. Dieselbe Nummer B0525 nutzt die hintere Zentrale für die rechte Heckleuchte – entscheidend ist also, welches Modul den Code meldet. FMVSS 108 schreibt jedem Fahrzeug Blinkgeber, Kontrollleuchte und Warnblinkanlage vor. HELLA nennt defekte Lampen, korrodierte Kontakte und beschädigte Stecker als häufigste Ursachen. Vorn links: B0830; hinten rechts: B0841."
   affected_components:
     - right_front_turn_signal
     - body_control_module
   common_causes:
-    - id: bulb_burnt_out
+    - id: bulb_failed
       likelihood: high
       label:
-        en: Burnt out turn signal bulb
-        de: Durchgebrannte Blinker-Glühlampe
+        en: Right front indicator bulb failed
+        de: Lampe des rechten vorderen Blinkers ausgefallen
+    - id: water_ingress
+      likelihood: medium
+      label:
+        en: Water in the lamp housing corroding the contacts
+        de: Wasser im Leuchtengehäuse korrodiert die Kontakte
+    - id: harness_damage
+      likelihood: medium
+      label:
+        en: Wire damaged after front-end repair or impact
+        de: Leitung nach Frontschaden oder Reparatur beschädigt
+    - id: module_output
+      likelihood: low
+      label:
+        en: Front electrical centre output faulty
+        de: Ausgang der vorderen Elektrozentrale defekt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Right front indicator dark when signalling right
+      de: Rechter vorderer Blinker bleibt beim Rechtsblinken dunkel
+    - en: Changed flash rate or steady pilot light in the cluster
+      de: Geänderte Blinkfrequenz oder Dauerlicht der Kontrollleuchte
+    - en: Hazard lights incomplete on the right front corner
+      de: Warnblinkanlage vorn rechts unvollständig
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [10, 100]
-    estimated_hours: [0.2, 1.0]
+    estimated_cost_eur: [5, 250]
+    estimated_hours: [0.2, 1.5]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0830, B0841, B0840]
   sources:
-    - https://en.wikipedia.org/wiki/Automotive_lighting
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/uec/b0525-04/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/uec/b0525-02/
+    - https://www.law.cornell.edu/cfr/text/49/571.108
+    - https://www.hella.com/techworld/uk/technical/automotive-lighting/signal-lights-in-cars/
+  reviewed: '2026-11-06'
 
 - code: B0840
   category: body
@@ -16966,35 +17171,58 @@
     en: Left Rear Turn Signal Circuit
     de: Blinker hinten links Stromkreis
   description:
-    en: A fault has been detected in the left rear turn signal circuit.
-    de: Im Stromkreis des Blinkers hinten links wurde ein Fehler erkannt.
+    en: "Neither J2012 extracts nor any OEM or NHTSA publication name B0840; its use is unproven. The title concerns the left rear indicator. In the 2003–2012 Saab 9-3 the rear electrical centre supervises this lamp under the number B0530: an open lamp (04) or a short to ground (02) shows up as a warning message and the remaining indicators flashing at double speed, which is exactly the pilot-indicator behaviour FMVSS 108 permits for a failed turn lamp. HELLA notes that modern rear lamps are driven by body or lighting control units and may consist of LED segments, so diagnosis should include fault codes, connectors and the supply to the lamp unit. A failed rear indicator hides lane changes from following traffic. Right rear: B0841."
+    de: "Weder J2012-Auszüge noch eine Hersteller- oder NHTSA-Veröffentlichung nennen B0840; seine Verwendung ist unbewiesen. Der Titel betrifft den linken hinteren Blinker. Beim Saab 9-3 (2003–2012) überwacht die hintere Elektrozentrale diese Leuchte unter der Nummer B0530: Eine Unterbrechung (04) oder ein Masseschluss (02) zeigt sich als Warnmeldung und als doppelt schnelles Blinken der übrigen Blinker – genau das Verhalten der Kontrollleuchte, das FMVSS 108 für eine ausgefallene Blinkleuchte zulässt. Laut HELLA steuern heute Karosserie- oder Lichtsteuergeräte die Heckleuchten an, oft mit LED-Segmenten; zur Diagnose gehören Fehlerspeicher, Stecker und Versorgung. Ein ausgefallener hinterer Blinker verbirgt Spurwechsel vor dem nachfolgenden Verkehr. Hinten rechts: B0841."
   affected_components:
     - left_rear_turn_signal
     - body_control_module
   common_causes:
-    - id: bulb_burnt_out
+    - id: bulb_failed
       likelihood: high
       label:
-        en: Burnt out turn signal bulb
-        de: Durchgebrannte Blinker-Glühlampe
+        en: Rear indicator bulb or LED segment failed
+        de: Lampe oder LED-Segment des hinteren Blinkers ausgefallen
+    - id: lamp_connector
+      likelihood: medium
+      label:
+        en: Corroded plug or bulb carrier in the rear lamp
+        de: Korrodierter Stecker oder Lampenträger in der Heckleuchte
+    - id: tailgate_harness
+      likelihood: medium
+      label:
+        en: Wire break in the boot lid or tailgate harness
+        de: Leitungsbruch im Kabelstrang von Kofferraumdeckel oder Heckklappe
+    - id: module_output
+      likelihood: low
+      label:
+        en: Rear electrical centre output faulty
+        de: Ausgang der hinteren Elektrozentrale defekt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Indicators flash at double speed when signalling left
+      de: Blinker blinken beim Linksblinken doppelt so schnell
+    - en: Left rear indicator dark, warning message shown
+      de: Linker hinterer Blinker dunkel, Warnmeldung im Display
+    - en: Lane changes not visible to following traffic; repair promptly
+      de: Spurwechsel für nachfolgenden Verkehr nicht erkennbar; umgehend reparieren
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [10, 100]
-    estimated_hours: [0.2, 1.0]
+    estimated_cost_eur: [5, 300]
+    estimated_hours: [0.2, 1.5]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0841, B0830, B0850]
   sources:
-    - https://en.wikipedia.org/wiki/Automotive_lighting
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/rec/b0530-04/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/rec/b0530-02/
+    - https://www.law.cornell.edu/cfr/text/49/571.108
+    - https://www.hella.com/techworld/uk/technical/automotive-lighting/contemporary-rear-lamps/
+  reviewed: '2026-11-06'
 
 - code: B0841
   category: body
@@ -17002,112 +17230,174 @@
     en: Right Rear Turn Signal Circuit
     de: Blinker hinten rechts Stromkreis
   description:
-    en: A fault has been detected in the right rear turn signal circuit.
-    de: Im Stromkreis des Blinkers hinten rechts wurde ein Fehler erkannt.
+    en: "No public record of B0841 exists in J2012 lists, OEM manuals or bulletins. The title refers to the right rear indicator circuit. The second-generation Saab 9-3 logs this lamp in its rear electrical centre as B0525: under 50 mA is treated as open (04), more than 6 A for over 6 ms as a short to ground (02), after which the output is switched off. In both cases the driver sees a message and a doubled flash rate. FMVSS 108 accepts such a change in flash rate as the required failure indication. HELLA recommends checking lamp, holder and plug for corrosion and, on PWM-driven lamps, checking the PWM signal on a scope or scan tool. A dark right rear indicator means turns and lane changes go unannounced to following traffic. Left rear: B0840."
+    de: "Einen öffentlichen Nachweis für B0841 gibt es weder in J2012-Listen noch in Handbüchern oder Bulletins. Der Titel betrifft den Stromkreis des rechten hinteren Blinkers. Der Saab 9-3 der Baureihe 9440 führt diese Leuchte in der hinteren Elektrozentrale als B0525: eine Stromaufnahme unter 50 mA steht für Unterbrechung (04); fließen länger als 6 ms über 6 A, erkennt sie Masseschluss (02) und schaltet ab. In beiden Fällen sieht der Fahrer eine Meldung und verdoppelte Blinkfrequenz. FMVSS 108 lässt eine solche Frequenzänderung als vorgeschriebene Ausfallanzeige zu. HELLA empfiehlt, Lampe, Fassung und Stecker auf Korrosion zu prüfen und bei PWM-angesteuerten Leuchten das Signal mit Oszilloskop oder Tester zu messen. Ein dunkler Blinker hinten rechts kündigt Abbiegen und Spurwechsel nicht an. Hinten links: B0840."
   affected_components:
     - right_rear_turn_signal
     - body_control_module
   common_causes:
-    - id: bulb_burnt_out
+    - id: bulb_failed
       likelihood: high
       label:
-        en: Burnt out turn signal bulb
-        de: Durchgebrannte Blinker-Glühlampe
+        en: Right rear indicator bulb burnt out
+        de: Lampe des rechten hinteren Blinkers durchgebrannt
+    - id: holder_corrosion
+      likelihood: medium
+      label:
+        en: Corroded contacts in the bulb holder
+        de: Korrodierte Kontakte im Lampenträger
+    - id: short_to_ground
+      likelihood: medium
+      label:
+        en: Pinched wire shorting to body ground
+        de: Eingeklemmte Leitung mit Masseschluss zur Karosserie
+    - id: module_output
+      likelihood: low
+      label:
+        en: Lamp driver in the rear module faulty
+        de: Lampentreiber im hinteren Steuergerät defekt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Indicators flash at double speed when signalling right
+      de: Blinker blinken beim Rechtsblinken doppelt so schnell
+    - en: Right rear indicator does not light, message in the display
+      de: Rechter hinterer Blinker leuchtet nicht, Meldung im Display
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [10, 100]
-    estimated_hours: [0.2, 1.0]
+    estimated_cost_eur: [5, 300]
+    estimated_hours: [0.2, 1.5]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0840, B0831, B0851]
   sources:
-    - https://en.wikipedia.org/wiki/Automotive_lighting
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/rec/b0525-04/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/rec/b0525-02/
+    - https://www.law.cornell.edu/cfr/text/49/571.108
+    - https://www.hella.com/techworld/uk/technical/automotive-lighting/signal-lights-in-cars/
+  reviewed: '2026-11-06'
 
 - code: B0850
   category: body
   title:
     en: Left Brake Lamp Circuit
-    de: Bremslicht links Stromkreis
+    de: Bremsleuchte links Stromkreis
   description:
-    en: A fault has been detected in the left brake lamp circuit.
-    de: Im Stromkreis des linken Bremslichts wurde ein Fehler erkannt.
+    en: "B0850 cannot be confirmed from any open source – J2012 tables, OEM documentation and NHTSA bulletins omit it. The title covers the left stop lamp. In Saab's 9-3 (type 9440) the rear electrical centre checks it while braking under its own number B3445: below 50 mA it records an open circuit (04), and once current tops 6 A for over 6 ms a short to ground (02), shutting the output down. The third, high-level brake light is logged separately there (B3884). FMVSS 108 makes stop lamps mandatory and defines the high-mounted lamp as a steady stop warning visible through other vehicles. HELLA lists bulbs, holders, fuses and plug connections as the first checks. A missing brake light weakens the warning to following drivers and should be repaired at once. Right side: B0851."
+    de: "B0850 lässt sich aus keiner offenen Quelle bestätigen – J2012-Tabellen, Herstellerdoku und NHTSA-Bulletins lassen ihn aus. Der Titel betrifft die linke Bremsleuchte. Beim Saab 9-3 der GM-Ära prüft die hintere Elektrozentrale sie beim Bremsen unter eigener Nummer B3445: unter 50 mA erkennt sie eine Unterbrechung (04), über 6 A länger als 6 ms einen Masseschluss (02) und schaltet den Ausgang ab. Die hochgesetzte dritte Bremsleuchte hat dort einen eigenen Code (B3884). FMVSS 108 schreibt Bremsleuchten vor und beschreibt die hochgesetzte Leuchte als dauerhafte Bremswarnung, die durch andere Fahrzeuge hindurch sichtbar ist. HELLA nennt Lampe, Fassung, Sicherung und Steckverbindung als erste Prüfpunkte. Eine fehlende Bremsleuchte schwächt die Warnung an den Hintermann – sofort reparieren. Rechte Seite: B0851."
   affected_components:
     - left_brake_lamp
     - body_control_module
   common_causes:
-    - id: bulb_burnt_out
+    - id: bulb_failed
       likelihood: high
       label:
-        en: Burnt out brake lamp bulb
-        de: Durchgebrannte Bremslicht-Glühlampe
-    - id: brake_switch_fault
+        en: Left stop-lamp bulb or filament failed
+        de: Lampe oder Glühfaden der linken Bremsleuchte ausgefallen
+    - id: holder_corrosion
       likelihood: medium
       label:
-        en: Brake light switch fault
-        de: Bremslichtschalter defekt
+        en: Corroded bulb holder in the tail lamp
+        de: Korrodierter Lampenträger in der Heckleuchte
+    - id: harness
+      likelihood: medium
+      label:
+        en: Open or grounded wire to the left tail lamp
+        de: Leitung zur linken Heckleuchte unterbrochen oder an Masse
+    - id: module_output
+      likelihood: low
+      label:
+        en: Stop-lamp output of the rear module faulty
+        de: Bremslichtausgang des hinteren Steuergeräts defekt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Left brake light stays dark when braking, warning shown
+      de: Linke Bremsleuchte bleibt beim Bremsen dunkel, Warnung im Display
+    - en: Weaker warning to following traffic; repair before further driving
+      de: Schwächere Warnung an den nachfolgenden Verkehr; vor Weiterfahrt reparieren
+    - en: Tail light on the same side may also be affected with combined bulbs
+      de: Bei Zweifadenlampen kann auch das Rücklicht derselben Seite betroffen sein
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [10, 100]
-    estimated_hours: [0.2, 1.0]
+    estimated_cost_eur: [5, 250]
+    estimated_hours: [0.2, 1.5]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0851, B0235]
   sources:
-    - https://en.wikipedia.org/wiki/Automotive_lighting
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/rec/b3445-04/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/rec/b3445-02/
+    - https://www.law.cornell.edu/cfr/text/49/571.108
+    - https://www.hella.com/techworld/uk/technical/automotive-lighting/signal-lights-in-cars/
+  reviewed: '2026-11-06'
 
 - code: B0851
   category: body
   title:
     en: Right Brake Lamp Circuit
-    de: Bremslicht rechts Stromkreis
+    de: Bremsleuchte rechts Stromkreis
   description:
-    en: A fault has been detected in the right brake lamp circuit.
-    de: Im Stromkreis des rechten Bremslichts wurde ein Fehler erkannt.
+    en: "Published J2012 tables skip B0851, and service literature and NHTSA filings never cite it either. The title names the right stop-lamp circuit. The GM-developed Saab 9-3 tests this lamp whenever the brake light is on and stores B3878 04 once the right lamp draws less than 50 mA; the high-mounted lamp is judged separately under B3884 with a lower limit of 20 mA. If both sides and the third lamp go dark together, the cause usually lies upstream, at the brake light switch or a shared fuse, not in one lamp circuit. For today's networked rear lamps HELLA names failed LED segments and faulty plugs as typical findings. FMVSS 108 requires working stop lamps on every car. Repair without delay; left side: B0850."
+    de: "Veröffentlichte J2012-Tabellen überspringen B0851, und auch Serviceliteratur und NHTSA-Akten nennen ihn nie. Der Titel nennt den Stromkreis der rechten Bremsleuchte. Der Saab 9-3 der zweiten Generation prüft diese Leuchte bei jedem Bremsen und speichert B3878 04, sobald die rechte Lampe weniger als 50 mA aufnimmt; die hochgesetzte Leuchte bewertet er getrennt unter B3884 mit einer Grenze von 20 mA. Bleiben beide Seiten und die dritte Leuchte zugleich dunkel, liegt die Ursache meist davor – am Bremslichtschalter oder an einer gemeinsamen Sicherung – und nicht in einem einzelnen Leuchtenkreis. HELLA nennt bei heutigen, vernetzt angesteuerten Heckleuchten ausgefallene LED-Segmente und defekte Stecker als typische Befunde. FMVSS 108 verlangt funktionierende Bremsleuchten. Unverzüglich reparieren; links: B0850."
   affected_components:
     - right_brake_lamp
     - body_control_module
   common_causes:
-    - id: bulb_burnt_out
+    - id: bulb_failed
       likelihood: high
       label:
-        en: Burnt out brake lamp bulb
-        de: Durchgebrannte Bremslicht-Glühlampe
+        en: Right stop-lamp bulb or LED segment failed
+        de: Lampe oder LED-Segment der rechten Bremsleuchte ausgefallen
+    - id: lamp_connector
+      likelihood: medium
+      label:
+        en: Loose or corroded plug at the right tail lamp
+        de: Lockerer oder korrodierter Stecker an der rechten Heckleuchte
+    - id: harness
+      likelihood: medium
+      label:
+        en: Wire to the right tail lamp broken
+        de: Leitung zur rechten Heckleuchte gebrochen
+    - id: module_output
+      likelihood: low
+      label:
+        en: Lamp driver in the rear module faulty
+        de: Lampentreiber im hinteren Steuergerät defekt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Right brake light dark while the left one and the third lamp work
+      de: Rechte Bremsleuchte dunkel, linke und dritte Bremsleuchte funktionieren
+    - en: Brake light warning in the display
+      de: Bremslichtwarnung im Display
+    - en: Reduced braking signal to following drivers; repair at once
+      de: Schwächeres Bremssignal an nachfolgende Fahrer; sofort reparieren
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [10, 100]
-    estimated_hours: [0.2, 1.0]
+    estimated_cost_eur: [5, 300]
+    estimated_hours: [0.2, 1.5]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0850, B0235]
   sources:
-    - https://en.wikipedia.org/wiki/Automotive_lighting
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/rec/b3878-04/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/rec/b3884-04/
+    - https://www.hella.com/techworld/uk/technical/automotive-lighting/contemporary-rear-lamps/
+    - https://www.law.cornell.edu/cfr/text/49/571.108
+  reviewed: '2026-11-06'
 
 - code: B0860
   category: body
@@ -17115,41 +17405,58 @@
     en: License Plate Lamp Circuit
     de: Kennzeichenleuchte Stromkreis
   description:
-    en: A fault has been detected in the license plate lamp circuit.
-    de: Im Stromkreis der Kennzeichenleuchte wurde ein Fehler erkannt.
+    en: "B0860 is not traceable in public J2012 extracts, and no manufacturer or regulator text refers to it. The title describes the lamp lighting the rear number plate. GM's 2011 Saab 9-5 switches it through the body control module whenever parking or dipped lights are selected, logging B3883 02 for a grounded and B3883 04 for an open feed. The older Saab 9-3 uses the same number in its rear electrical centre with stated limits: an open circuit below 20 mA, a short once over 3.5 A flows for longer than 10 ms, which also cuts the output. FMVSS 108 defines the licence plate lamp and requires it on every car. A dark plate light is not a driving hazard, but it is a roadworthiness defect that police checks can pick up."
+    de: "B0860 ist in öffentlichen J2012-Auszügen nicht auffindbar, und kein Hersteller- oder Behördentext bezieht sich darauf. Der Titel beschreibt die Leuchte, die das hintere Kennzeichen anstrahlt. Im GM-Saab 9-5 (Modelljahr 2011) schaltet das Karosseriesteuergerät sie ein, sobald der Lichtschalter auf Stand- oder Abblendlicht steht, und speichert B3883 02 bei Masseschluss bzw. B3883 04 bei Unterbrechung. Der ältere Saab 9-3 verwendet dieselbe Nummer in der hinteren Elektrozentrale mit genannten Grenzen: Unterbrechung unter 20 mA, Kurzschluss über 3,5 A für mehr als 10 ms, danach wird der Ausgang abgeschaltet. FMVSS 108 definiert die Kennzeichenleuchte und schreibt sie vor. Eine dunkle Kennzeichenleuchte gefährdet die Fahrt nicht, ist aber ein Mangel, der bei Kontrollen auffällt."
   affected_components:
     - license_plate_lamp
     - body_control_module
   common_causes:
-    - id: bulb_burnt_out
+    - id: bulb_failed
       likelihood: high
       label:
-        en: Burnt out license plate bulb
-        de: Durchgebrannte Kennzeichenleuchte
-    - id: water_in_lamp_housing
+        en: Plate lamp bulb burnt out
+        de: Lampe der Kennzeichenleuchte durchgebrannt
+    - id: water_ingress
       likelihood: medium
       label:
-        en: Water intrusion in lamp housing
-        de: Wassereintritt im Leuchtengehäuse
+        en: Water in the lamp housing corroding contacts
+        de: Wasser im Leuchtengehäuse korrodiert die Kontakte
+    - id: tailgate_harness
+      likelihood: medium
+      label:
+        en: Wire break in the boot lid hinge area
+        de: Leitungsbruch im Scharnierbereich des Kofferraumdeckels
+    - id: module_output
+      likelihood: low
+      label:
+        en: Lamp output of the body or rear module faulty
+        de: Lampenausgang des Karosserie- oder Hecksteuergeräts defekt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Number plate not illuminated with lights on
+      de: Kennzeichen bei eingeschaltetem Licht nicht beleuchtet
+    - en: Lamp warning in the display
+      de: Lampenwarnung im Display
+    - en: Plate lamp stays on permanently in some short-circuit cases
+      de: Kennzeichenleuchte bleibt bei manchen Kurzschlüssen dauernd an
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [10, 80]
-    estimated_hours: [0.2, 0.8]
+    estimated_cost_eur: [5, 150]
+    estimated_hours: [0.2, 1]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [B0239]
+  related_codes: [B0239, B0850]
   sources:
-    - https://en.wikipedia.org/wiki/Automotive_lighting
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/lighting-and-signalling-systems/fault-diagnosis-diagnostic-trouble-codes/dtc-b3883
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/rec/b3883-04/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/rec/b3883-02/
+    - https://www.law.cornell.edu/cfr/text/49/571.108
+  reviewed: '2026-11-06'
 
 - code: B0900
   category: body
@@ -17157,46 +17464,62 @@
     en: Wiper Motor Front Circuit
     de: Scheibenwischermotor vorn Stromkreis
   description:
-    en: A fault has been detected in the front wiper motor circuit.
-    de: Im Stromkreis des vorderen Scheibenwischermotors wurde ein Fehler erkannt.
+    en: "Open J2012 material, factory manuals and NHTSA bulletins contain no entry for B0900, so it is unconfirmed. The title concerns the windscreen wiper motor circuit. GM-era Saab models diagnose it at the relays: the 9-3 sets B3874 06 or B3875 06 when the low- or high-speed relay output stays below 6 V, so the wipers stop, run constantly or only at high speed. GM's 2011 Saab 9-5 logs B3715 and B3875 for the relay control lines and B371A when the park-switch signal does not match the switch position. FMVSS 104 asks for two or more speeds: a fast one with 45 or more wipes a minute and a slower one with 20 or more, separated by 15 or more. Bosch supplies brushless and reversing wiper drives; TI names position control with stall detection as a design requirement. Rear: B0910."
+    de: "Offene J2012-Unterlagen, Werkshandbücher und NHTSA-Bulletins haben keinen Eintrag für B0900; er ist unbestätigt. Der Titel betrifft den Stromkreis des Frontwischermotors. Saab-Modelle aus der GM-Zeit prüfen ihn an den Relais: Der 9-3 setzt B3874 06 bzw. B3875 06, wenn der Ausgang für das Relais der langsamen oder schnellen Stufe unter 6 V bleibt – die Wischer stehen, laufen dauernd oder nur schnell. Der GM-Saab 9-5 von 2011 meldet B3715 und B3875 für die Relais-Steuerleitungen und B371A, wenn das Signal des Parkschalters nicht zur Schalterstellung passt. FMVSS 104 verlangt zwei Stufen: eine mit mindestens 45 Takten pro Minute, eine langsamere mit mindestens 20, Abstand 15. Bosch baut bürstenlose und reversierende Antriebe; TI fordert Positionsregelung mit Blockiererkennung. Heckwischer: B0910."
   affected_components:
     - front_wiper_motor
     - wiper_relay
     - body_control_module
   common_causes:
-    - id: motor_failure
+    - id: wiper_relay
       likelihood: high
       label:
-        en: Wiper motor failure
-        de: Scheibenwischermotor defekt
-    - id: motor_overload
+        en: Wiper relay sticking or with burnt contacts
+        de: Wischerrelais klebt oder hat verbrannte Kontakte
+    - id: motor_worn
       likelihood: medium
       label:
-        en: Motor overload from frozen wipers
-        de: Motorüberlast durch festgefrorene Wischer
-    - id: relay_fault
+        en: Wiper motor worn or park switch faulty
+        de: Wischermotor verschlissen oder Parkschalter defekt
+    - id: linkage_seized
       likelihood: medium
       label:
-        en: Wiper relay failure
-        de: Wischerrelais defekt
+        en: Seized linkage overloading the motor
+        de: Festgegangenes Gestänge überlastet den Motor
+    - id: harness
+      likelihood: low
+      label:
+        en: Damaged wiring in the scuttle area
+        de: Beschädigte Leitung im Wasserkasten
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Wipers do not run, run continuously or only at one speed
+      de: Wischer laufen nicht, laufen dauernd oder nur in einer Stufe
+    - en: Wipers stop outside the park position
+      de: Wischer bleiben außerhalb der Parkstellung stehen
+    - en: Poor visibility in rain; do not drive in wet weather until repaired
+      de: Schlechte Sicht bei Regen; bei Nässe erst nach Reparatur fahren
   repair:
     difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [80, 400]
-    estimated_hours: [0.5, 2.5]
+    estimated_cost_eur: [20, 500]
+    estimated_hours: [0.3, 2.5]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0910, B0920, B0220, B0190, B0192]
   sources:
-    - https://en.wikipedia.org/wiki/Windscreen_wiper
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/uec/b3874-06/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/uec/b3875-06/
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/wash-wipe-systems/fault-diagnosis-diagnostic-trouble-codes/dtc-b3715-or-b3875
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/wash-wipe-systems/fault-diagnosis-diagnostic-trouble-codes/dtc-b371a
+    - https://www.law.cornell.edu/cfr/text/49/571.104
+    - https://www.bosch-mobility.com/en/solutions/wipers/
+    - https://www.ti.com/solution/wiper-module
+  reviewed: '2026-11-06'
 
 - code: B0910
   category: body
@@ -17204,35 +17527,56 @@
     en: Wiper Motor Rear Circuit
     de: Scheibenwischermotor hinten Stromkreis
   description:
-    en: A fault has been detected in the rear wiper motor circuit.
-    de: Im Stromkreis des hinteren Scheibenwischermotors wurde ein Fehler erkannt.
+    en: "A public definition of B0910 is lacking in J2012 extracts as well as in OEM and NHTSA documents. The title refers to the rear window wiper motor circuit. On the second-generation Saab 9-3 the rear electrical centre drives it through a relay and stores B3720: 01 if more than 6 V sits on the output during activation, so the wiper does not work, and 06 if over 6 V is present with the wiper off, where a short to ground makes the wiper run constantly and an open line stops it. In Bosch's rear wiper a single arm is driven directly by a compact drive unit. TI names stall detection and low losses as key requirements for any wiper drive. Unlike the front wiper (B0900) no safety standard prescribes it, so failure is a comfort and visibility issue."
+    de: "Eine öffentliche Definition von B0910 fehlt in J2012-Auszügen ebenso wie in Hersteller- und NHTSA-Dokumenten. Der Titel betrifft den Stromkreis des Heckwischermotors. Beim Saab 9-3 der Baureihe 9440 steuert die hintere Elektrozentrale ihn über ein Relais an und speichert B3720: 01, wenn der Ausgang bei Ansteuerung über 6 V liegt – der Wischer arbeitet nicht –, und 06, wenn er bei ausgeschaltetem Wischer über 6 V liegt; ein Masseschluss lässt den Wischer dann dauernd laufen, eine Unterbrechung legt ihn still. Beim Bosch-Heckwischer treibt eine kompakte Antriebseinheit einen einzelnen Wischarm direkt an. TI fordert für Wischerantriebe Blockiererkennung und geringe Verluste. Anders als vorn (B0900) schreibt keine Sicherheitsnorm ihn vor; ein Ausfall betrifft Komfort und Sicht nach hinten."
   affected_components:
     - rear_wiper_motor
     - body_control_module
   common_causes:
-    - id: motor_failure
+    - id: tailgate_harness
       likelihood: high
       label:
-        en: Rear wiper motor failure
-        de: Hinterer Scheibenwischermotor defekt
+        en: Wire break in the tailgate hinge harness
+        de: Leitungsbruch im Kabelstrang am Heckklappenscharnier
+    - id: motor_seized
+      likelihood: medium
+      label:
+        en: Rear wiper motor or spindle seized by corrosion
+        de: Heckwischermotor oder Welle durch Korrosion festgegangen
+    - id: wiper_relay
+      likelihood: medium
+      label:
+        en: Rear wiper relay faulty
+        de: Heckwischerrelais defekt
+    - id: module_output
+      likelihood: low
+      label:
+        en: Rear module relay driver faulty
+        de: Relaistreiber im hinteren Steuergerät defekt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Rear wiper does not run when switched on
+      de: Heckwischer läuft beim Einschalten nicht
+    - en: Rear wiper keeps running after switching off
+      de: Heckwischer läuft nach dem Ausschalten weiter
   repair:
-    difficulty: medium
+    difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [80, 400]
-    estimated_hours: [0.5, 2.5]
+    estimated_cost_eur: [20, 350]
+    estimated_hours: [0.3, 2]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0900, B0188, B0920]
   sources:
-    - https://en.wikipedia.org/wiki/Windscreen_wiper
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/rec/b3720-06/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/rec/b3720-01/
+    - https://www.bosch-mobility.com/en/solutions/wipers/rear-wipers/
+    - https://www.ti.com/solution/wiper-module
+  reviewed: '2026-11-06'
 
 - code: B0920
   category: body
@@ -17240,40 +17584,59 @@
     en: Washer Pump Circuit
     de: Wischwasserpumpe Stromkreis
   description:
-    en: A fault has been detected in the windshield washer pump circuit.
-    de: Im Stromkreis der Scheibenwaschpumpe wurde ein Fehler erkannt.
+    en: "B0920 has no verifiable source: it is absent from J2012 excerpts and from all published service information. The title covers the washer fluid pump circuit. GM's 2011 Saab 9-5 lets the body control module start the pump together with low-speed wiping as soon as washing is requested; with a supply of 9 to 16 V it watches the relay control line, stores B3873 02 on a short to ground and suspends washing. Headlamp washing there is a separate circuit (B3810) and only runs with low or high beam on, then pauses for 4 wash cycles or 48 hours. The 9-3 sets B3873 06 below 6 V on its relay output. FMVSS 104 requires a windscreen washing system on passenger cars, and HELLA describes centrifugal pumps in the reservoir for such systems. Wipers: B0900, B0910."
+    de: "B0920 hat keine prüfbare Quelle: Er fehlt in J2012-Auszügen und in jeder veröffentlichten Serviceinformation. Der Titel betrifft den Stromkreis der Wischwasserpumpe. Beim GM-Saab 9-5 von 2011 startet das Karosseriesteuergerät die Pumpe zusammen mit der langsamen Wischstufe, sobald der Waschschalter schließt; bei 9 bis 16 V Bordspannung überwacht es die Relais-Steuerleitung, legt bei Masseschluss B3873 02 ab und setzt das Waschen aus. Die Scheinwerferreinigung ist dort ein eigener Kreis (B3810), läuft nur bei Abblend- oder Fernlicht und pausiert danach für 4 Waschvorgänge oder 48 Stunden. Der 9-3 setzt B3873 06, wenn sein Relaisausgang unter 6 V bleibt. FMVSS 104 schreibt Pkw eine Scheibenwaschanlage vor; HELLA beschreibt Kreiselpumpen im Behälter solcher Anlagen. Wischer: B0900, B0910."
   affected_components:
     - washer_pump
     - body_control_module
   common_causes:
-    - id: pump_failure
+    - id: pump_failed
       likelihood: high
       label:
-        en: Washer pump motor failure
-        de: Waschpumpenmotor defekt
-    - id: connector_corrosion
+        en: Washer pump motor seized, often after running dry or freezing
+        de: Pumpenmotor festgegangen, oft nach Trockenlauf oder Frost
+    - id: pump_connector
       likelihood: medium
       label:
-        en: Corroded pump connector
-        de: Korrodierter Pumpenstecker
+        en: Corroded plug at the pump in the wheel arch
+        de: Korrodierter Stecker an der Pumpe im Radhaus
+    - id: washer_relay
+      likelihood: medium
+      label:
+        en: Washer relay or its control line faulty
+        de: Waschrelais oder dessen Steuerleitung defekt
+    - id: module_output
+      likelihood: low
+      label:
+        en: Relay driver in the body control module faulty
+        de: Relaistreiber im Karosseriesteuergerät defekt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: No washer fluid sprays when the wash switch is used
+      de: Beim Betätigen des Waschschalters kommt kein Wasser
+    - en: Washer pump runs continuously
+      de: Waschpumpe läuft dauernd
+    - en: Headlamp washers inoperative as well on shared circuits
+      de: Bei gemeinsamem Kreis fällt auch die Scheinwerferreinigung aus
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [30, 150]
+    estimated_cost_eur: [20, 200]
     estimated_hours: [0.3, 1.5]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0900, B0910]
   sources:
-    - https://en.wikipedia.org/wiki/Windscreen_wiper
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/wash-wipe-systems/fault-diagnosis-diagnostic-trouble-codes/dtc-b3873
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/wash-wipe-systems/fault-diagnosis-diagnostic-trouble-codes/dtc-b3810
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/uec/b3873-06/
+    - https://www.law.cornell.edu/cfr/text/49/571.104
+    - https://www.hella.com/techworld/uk/technical/automotive-lighting/headlamp-cleaning-system/
+  reviewed: '2026-11-06'
 
 - code: B0950
   category: body
@@ -17281,88 +17644,122 @@
     en: Heated Rear Window Circuit
     de: Heckscheibenheizung Stromkreis
   description:
-    en: A fault has been detected in the heated rear window circuit. Defrost may not function.
-    de: Im Stromkreis der Heckscheibenheizung wurde ein Fehler erkannt. Defrost funktioniert möglicherweise nicht.
+    en: "None of the accessible J2012 lists, OEM manuals or NHTSA bulletins mention B0950; it is therefore unverified. The title refers to the electrically heated rear window. GM-era Saab cars monitor this heater under other numbers: in the 2011 Saab 9-5 the climate control module energises the relay coil that switches battery voltage to the grid, and faults on that control line are stored as B0283. The 9-3 checks the relay output in the rear electrical centre (B0283 06 below 6 V) and the indicator lamp in the button separately (B0969 02 above 1 A). A broken grid line or a loose tab on the glass usually disables only part of the heated area, while relay or supply faults stop it entirely. The main consequence is poor rear visibility in cold or damp weather."
+    de: "Keine der zugänglichen J2012-Listen, Werkstattunterlagen oder NHTSA-Bulletins erwähnt B0950; er ist daher unbelegt. Der Titel betrifft die elektrisch beheizte Heckscheibe. Saab-Modelle aus der GM-Zeit überwachen diese Heizung unter anderen Nummern: Beim 9-5 von 2011 bestromt das Klimasteuergerät die Relaisspule, die Batteriespannung auf das Heizgitter schaltet, und Fehler dieser Steuerleitung erscheinen als B0283. Der 9-3 prüft den Relaisausgang in der hinteren Elektrozentrale (B0283 06 unter 6 V) und die Kontrollleuchte im Taster getrennt (B0969 02 über 1 A). Ein gerissener Heizfaden lässt meist nur einen Teil der Fläche kalt, Relais- oder Versorgungsfehler legen die Heizung ganz still. Folge ist vor allem schlechte Sicht nach hinten bei Kälte oder Nässe."
   affected_components:
     - rear_window_heating_element
     - rear_defrost_relay
     - body_control_module
   common_causes:
-    - id: heating_grid_open
+    - id: grid_damage
       likelihood: high
       label:
-        en: Broken heating grid line
-        de: Heizgitter-Leitung gebrochen
-    - id: relay_fault
+        en: Broken heater line or detached terminal tab on the glass
+        de: Unterbrochener Heizfaden oder gelöste Anschlussfahne an der Scheibe
+    - id: relay
       likelihood: medium
       label:
-        en: Rear defrost relay failed
-        de: Heckscheibenheizungs-Relais defekt
+        en: Rear defogger relay faulty
+        de: Relais der Heckscheibenheizung defekt
+    - id: tailgate_harness
+      likelihood: medium
+      label:
+        en: Wire break in the tailgate or boot lid harness
+        de: Leitungsbruch im Kabelstrang von Heckklappe oder Kofferraumdeckel
+    - id: control_module
+      likelihood: low
+      label:
+        en: Climate or body control module output faulty
+        de: Ausgang des Klima- oder Karosseriesteuergeräts defekt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Rear window does not clear when the heater is switched on
+      de: Heckscheibe wird bei eingeschalteter Heizung nicht frei
+    - en: Only some heater lines warm up
+      de: Nur einige Heizfäden werden warm
+    - en: Indicator in the button does not light
+      de: Kontrollleuchte im Taster leuchtet nicht
   repair:
-    difficulty: medium
+    difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [40, 400]
-    estimated_hours: [0.4, 2.5]
+    estimated_cost_eur: [10, 400]
+    estimated_hours: [0.3, 2]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0283, B0610]
   sources:
-    - https://en.wikipedia.org/wiki/Defogger
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-5-9650/2011/8-body/glass-windows-and-mirrors/fault-diagnosis-diagnostic-trouble-codes/dtc-b0283
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/rec/b0283-06/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/bcm/b0969-02/
+  reviewed: '2026-11-06'
 
 - code: B0960
   category: body
   title:
-    en: Horn Relay Circuit
-    de: Hupenrelais Stromkreis
+    en: Parking Assist Rear Sensor Right Middle Circuit
+    de: Einparkhilfe Sensor hinten rechts Mitte Stromkreis
   description:
-    en: A fault has been detected in the horn relay control circuit.
-    de: Im Stellkreis des Hupenrelais wurde ein Fehler erkannt.
+    en: B0960 does not appear in the accessible J2012 lists; it is documented by GM and the GM-era Saab models as the right middle rear parking sensor. The 2011 Saab 9-5 and 9-4X list B0960 01 (short to battery), 06 (low voltage or open), 08 (invalid signal), 21 (incorrect period) and 3A (wrong part fitted); B0958, B0959 and B0961 cover the other rear sensors. The older 9-3 uses B0960 for its right centre distance sensor and checks it with reverse gear engaged and more than 9 V; on a fault the system stops measuring and mutes the warning tones. Bosch explains that such sensors emit short ultrasonic pulses and pass the echoes to a central unit, measuring up to 5.5 m. The horn relay, by contrast, is monitored by the same makers as B2750.
+    de: B0960 steht in keiner der zugänglichen J2012-Listen; belegt ist er bei GM und den Saab-Modellen der GM-Zeit als mittlerer rechter Parksensor hinten. Der Saab 9-5 und 9-4X von 2011 führen B0960 01 (Schluss nach Plus), 06 (Spannung zu niedrig oder Unterbrechung), 08 (ungültiges Signal), 21 (falsche Periode) und 3A (falsches Bauteil verbaut); B0958, B0959 und B0961 decken die übrigen Sensoren hinten ab. Der ältere 9-3 nutzt B0960 für seinen rechten mittleren Abstandssensor und prüft ihn bei eingelegtem Rückwärtsgang und mehr als 9 V; bei einem Fehler stellt die Anlage die Messung ein und schaltet die Warntöne ab. Laut Bosch senden solche Sensoren kurze Ultraschallimpulse aus und geben die Echos an ein zentrales Steuergerät weiter, Reichweite bis 5,5 m. Das Hupenrelais überwachen dieselben Hersteller dagegen als B2750.
   affected_components:
-    - horn_relay
-    - horn
-    - body_control_module
+    - parking_assist_sensor
+    - parking_assist_module
   common_causes:
-    - id: relay_fault
+    - id: sensor_dirty
       likelihood: high
       label:
-        en: Horn relay failed
-        de: Hupenrelais defekt
-    - id: horn_button_fault
+        en: Sensor face dirty, iced or covered
+        de: Sensorfläche verschmutzt, vereist oder abgedeckt
+    - id: sensor_failed
       likelihood: medium
       label:
-        en: Horn button (clock spring) fault
-        de: Hupentaster (Wickelfeder) defekt
-    - id: horn_failure
+        en: Ultrasonic sensor defective or wrong part fitted
+        de: Ultraschallsensor defekt oder falsches Teil verbaut
+    - id: bumper_harness
       likelihood: medium
       label:
-        en: Horn unit failed
-        de: Hupe defekt
+        en: Bumper harness damaged after a parking knock or repair
+        de: Stoßfänger-Kabelstrang nach Parkrempler oder Reparatur beschädigt
+    - id: module_fault
+      likelihood: low
+      label:
+        en: Parking assist control module faulty
+        de: Steuergerät der Einparkhilfe defekt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Parking assist switches off with a message when reversing
+      de: Einparkhilfe schaltet sich beim Rückwärtsfahren mit Meldung ab
+    - en: No warning tones although an obstacle is close
+      de: Keine Warntöne, obwohl ein Hindernis nah ist
+    - en: Obstacles behind the car must be checked visually until repaired
+      de: Hindernisse hinter dem Auto bis zur Reparatur selbst prüfen
   repair:
-    difficulty: easy
+    difficulty: medium
     diy_possible: true
-    estimated_cost_eur: [30, 200]
-    estimated_hours: [0.3, 1.5]
+    estimated_cost_eur: [20, 400]
+    estimated_hours: [0.3, 2]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: []
   sources:
-    - https://en.wikipedia.org/wiki/Horn_(acoustic)
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/traffic-safety-system/fault-diagnosis-diagnostic-trouble-codes/dtc-b0958-b0959-b0960-or-b0961
+    - https://saabwisonline.com/9-4x/2011/3-electrical-system/traffic-safety-system/fault-diagnosis-diagnostic-trouble-codes/dtc-b0958-b0959-b0960-or-b0961
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/spa/b0960-01/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/spa/b0960-06/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/spa/b0960-0f/
+    - https://www.bosch-mobility.com/en/solutions/sensors/ultrasonic-sensor/
+    - https://www.hella.com/techworld/uk/car-parts/auto-electronics/parking-sensors/
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/lighting-and-signalling-systems/fault-diagnosis-diagnostic-trouble-codes/dtc-b2750
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/uec/b2750-06/
+  reviewed: '2026-11-06'
 
 - code: B0970
   category: body
@@ -17370,41 +17767,59 @@
     en: Interior Light Circuit
     de: Innenraumbeleuchtung Stromkreis
   description:
-    en: A fault has been detected in the interior light circuit.
-    de: Im Stromkreis der Innenraumbeleuchtung wurde ein Fehler erkannt.
+    en: "B0970 is not documented anywhere public, whether in J2012 extracts, workshop literature or NHTSA bulletins. The title covers the interior lighting circuit. The 2003–2012 Saab 9-3 supervises it through its BCM: B2556 02 when more than 10 A flows on the lamp feed, B2555 0F when the lamps are powered although they should be off, and B2610 02 when the dimmed PWM line drops below 2.0 V. GM's 2011 Saab 9-5 reports a grounded courtesy lamp feed as B2615 02, stops driving the lamps and clears the history entry after 100 fault-free ignition cycles. HELLA warns that fitting bulbs of higher wattage overheats lamps and surrounding trim. A constantly lit interior lamp can drain the battery overnight."
+    de: "B0970 ist nirgends öffentlich dokumentiert, weder in J2012-Auszügen noch in Werkstattliteratur oder NHTSA-Bulletins. Der Titel betrifft den Stromkreis der Innenbeleuchtung. Im Saab 9-3 (2003–2012) wacht das Karosseriesteuergerät darüber: B2556 02, wenn mehr als 10 A über die Lampenversorgung fließen, B2555 0F, wenn die Leuchten Spannung führen, obwohl sie aus sein sollten, und B2610 02, wenn die gedimmte PWM-Leitung unter 2,0 V fällt. Im GM-Saab 9-5 (2011) wird eine an Masse liegende Versorgung der Innenleuchten als B2615 02 gemeldet; das Steuergerät schaltet sie dann nicht mehr an und löscht den gespeicherten Eintrag nach 100 fehlerfreien Zündzyklen. HELLA warnt, dass Lampen höherer Leistung Leuchte und Verkleidung überhitzen. Eine dauernd brennende Innenleuchte kann die Batterie über Nacht entladen."
   affected_components:
     - interior_lamp
     - body_control_module
   common_causes:
-    - id: bulb_burnt_out
+    - id: door_switch
       likelihood: high
       label:
-        en: Burnt out interior bulb
-        de: Durchgebrannte Innenraumlampe
-    - id: door_switch_stuck
+        en: Door contact switch stuck, keeping the lamps on
+        de: Türkontaktschalter hängt und hält die Leuchten an
+    - id: lamp_short
       likelihood: medium
       label:
-        en: Door switch stuck closed
-        de: Türschalter klemmt geschlossen
+        en: Short in a roof or footwell lamp, often after bulb changes
+        de: Kurzschluss in Dach- oder Fußraumleuchte, oft nach Lampentausch
+    - id: roof_harness
+      likelihood: medium
+      label:
+        en: Chafed wire in the headliner or A-pillar
+        de: Durchgescheuerte Leitung im Dachhimmel oder an der A-Säule
+    - id: module_output
+      likelihood: low
+      label:
+        en: Lamp output of the body control module faulty
+        de: Leuchtenausgang des Karosseriesteuergeräts defekt
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Interior lights stay off when a door is opened
+      de: Innenbeleuchtung bleibt beim Öffnen einer Tür aus
+    - en: Interior lights stay on permanently
+      de: Innenbeleuchtung leuchtet dauernd
+    - en: Battery flat after the car has stood overnight
+      de: Batterie nach einer Nacht Standzeit leer
   repair:
     difficulty: easy
     diy_possible: true
-    estimated_cost_eur: [10, 100]
-    estimated_hours: [0.2, 1.0]
+    estimated_cost_eur: [10, 250]
+    estimated_hours: [0.3, 2]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
   related_codes: [B0260]
   sources:
-    - https://en.wikipedia.org/wiki/Automotive_lighting
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/bcm/b2556-02/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/bcm/b2555-0f/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/bcm/b2610-02/
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/lighting-and-signalling-systems/fault-diagnosis-diagnostic-trouble-codes/dtc-b2615
+    - https://www.hella.com/techworld/uk/technical/automotive-lighting/retrofit-interior-lighting/
+  reviewed: '2026-11-06'
 
 - code: B0980
   category: body
@@ -17412,40 +17827,58 @@
     en: Ignition Switch Run/Start Position Circuit
     de: Zündschalter Run/Start-Position Stromkreis
   description:
-    en: The body control module reports an implausible signal from the ignition switch run/start position circuit.
-    de: Das Karosserie-Steuergerät meldet ein unplausibles Signal aus dem Zündschalter Run/Start-Position-Stromkreis.
+    en: "Public sources give no meaning for B0980: J2012 extracts and OEM or NHTSA documents leave it out. The title concerns the signal by which the ignition switch reports its run and start positions. GM-era Saab vehicles use other numbers for this: the 9-3 column module sets B1440 0F when the +15 supply from the ignition switch module is open and B1368 00 when that input is shorted to battery; in both cases it blocks cranking and deactivates the steering lock. GM's 2011 Saab 9-5 energises an ignition 1 relay in run and start and stores B144A 02 for a grounded control line, giving a no-start or an engine that keeps running after the key is removed. FMVSS 114 defines the key-operated starting system and its anti-theft requirements."
+    de: "Öffentliche Quellen geben B0980 keine Bedeutung: J2012-Auszüge sowie Hersteller- und NHTSA-Dokumente lassen ihn aus. Der Titel betrifft das Signal, mit dem der Zündschalter die Stellungen Fahrt und Start meldet. Saab-Fahrzeuge aus der GM-Zeit nutzen dafür andere Nummern: Das Lenksäulenmodul des 9-3 setzt B1440 0F, wenn die Klemme-15-Versorgung vom Zündschaltermodul unterbrochen ist, und B1368 00 bei Schluss dieses Eingangs nach Plus; in beiden Fällen sperrt es den Anlasser und deaktiviert die Lenkradsperre. Der GM-Saab 9-5 von 2011 bestromt in Fahrt- und Startstellung ein Zündungsrelais und speichert B144A 02 bei Masseschluss der Steuerleitung – der Motor springt nicht an oder läuft nach Abziehen des Schlüssels weiter. FMVSS 114 regelt das schlüsselbetätigte Startsystem und dessen Diebstahlschutz."
   affected_components:
     - ignition_switch
     - body_control_module
   common_causes:
-    - id: ignition_switch_worn
+    - id: switch_contacts
       likelihood: high
       label:
-        en: Worn ignition switch contacts
-        de: Verschlissene Zündschalter-Kontakte
-    - id: wiring_open
+        en: Worn contacts in the ignition switch
+        de: Verschlissene Kontakte im Zündschalter
+    - id: supply_wiring
       likelihood: medium
       label:
-        en: Open wire from switch to BCM
-        de: Unterbrochener Draht zwischen Schalter und BCM
+        en: Open or shorted ignition feed wire
+        de: Zündungsplus-Leitung unterbrochen oder kurzgeschlossen
+    - id: ignition_relay
+      likelihood: medium
+      label:
+        en: Ignition relay or its control line faulty
+        de: Zündungsrelais oder dessen Steuerleitung defekt
+    - id: low_battery
+      likelihood: low
+      label:
+        en: Low battery voltage causing implausible signals
+        de: Niedrige Batteriespannung erzeugt unplausible Signale
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Engine does not crank although the key is turned
+      de: Anlasser dreht nicht, obwohl der Schlüssel gedreht wird
+    - en: Ignition cannot be switched off or key cannot be removed
+      de: Zündung lässt sich nicht ausschalten oder Schlüssel nicht abziehen
+    - en: Steering lock or electrical consumers behave erratically
+      de: Lenkradsperre oder Verbraucher verhalten sich unstet
   repair:
     difficulty: medium
     diy_possible: false
-    estimated_cost_eur: [100, 600]
-    estimated_hours: [0.8, 3.0]
+    estimated_cost_eur: [60, 600]
+    estimated_hours: [0.5, 3]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0990]
   sources:
-    - https://en.wikipedia.org/wiki/Ignition_switch
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/cim/b1440-0f/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/cim/b1368-00/
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/wiring-harness-and-components/fault-diagnosis-diagnostic-trouble-codes/dtc-b144a
+    - https://www.law.cornell.edu/cfr/text/49/571.114
+  reviewed: '2026-11-06'
 
 - code: B0990
   category: body
@@ -17453,40 +17886,55 @@
     en: Body Control Module Internal Fault
     de: Karosserie-Steuergerät Interner Fehler
   description:
-    en: The body control module (BCM) has detected an internal fault and may need to be replaced.
-    de: Das Karosserie-Steuergerät (BCM) hat einen internen Fehler erkannt und muss möglicherweise getauscht werden.
+    en: "For B0990 no public evidence exists, be it in J2012 lists or in carmaker or NHTSA papers. The title describes a self-detected failure inside the body control module. GM-era Saab models report this as B1000 or B101D: on the 2011 Saab 9-5 the module runs its internal test at every power-up, refuses further inputs on a fault and clears a history entry after 50 fault-free ignition cycles; a module should only be replaced if the code is current. The 9-3 BCM stores B1000 37 for an internal timeout, and its column module logs B3985 when the immobiliser code cannot be written into the BCM. TI lists open-load and short detection and fail-safe behaviour among the core BCM functions. Rule out supply and ground faults before replacing it."
+    de: "Für B0990 existiert weder in J2012-Listen noch in Hersteller- oder NHTSA-Unterlagen ein öffentlicher Beleg. Der Titel beschreibt einen selbst erkannten Fehler im Inneren des Karosseriesteuergeräts. Saab-Modelle aus der GM-Zeit melden das als B1000 oder B101D: Beim 9-5 von 2011 läuft der interne Test bei jedem Einschalten, das Gerät nimmt bei einem Fehler keine weiteren Eingaben an, und ein gespeicherter Eintrag erlischt nach 50 fehlerfreien Zündzyklen; getauscht wird nur, wenn der Code aktuell ansteht. Das BCM des 9-3 speichert B1000 37 bei einem internen Zeitüberlauf, und sein Lenksäulenmodul legt B3985 ab, wenn der Wegfahrsperren-Code nicht ins BCM geschrieben werden kann. TI zählt Leerlauf- und Kurzschlusserkennung sowie Notlauf zu den Kernaufgaben eines BCM. Vor dem Tausch Versorgung und Masse prüfen."
   affected_components:
     - body_control_module
   common_causes:
-    - id: module_internal_fault
+    - id: supply_ground
       likelihood: high
       label:
-        en: BCM internal hardware fault
-        de: Interner BCM-Hardwarefehler
-    - id: voltage_spike_damage
+        en: Poor supply voltage or ground at the module
+        de: Schlechte Versorgungsspannung oder Masse am Steuergerät
+    - id: water_damage
       likelihood: medium
       label:
-        en: Voltage spike damage from jump-start
-        de: Spannungsspitzen-Schaden durch Starthilfe
-    - id: water_intrusion
+        en: Moisture or corrosion inside the module
+        de: Feuchtigkeit oder Korrosion im Steuergerät
+    - id: software
       likelihood: medium
       label:
-        en: Water intrusion at module
-        de: Wassereintritt am Modul
+        en: Corrupted or outdated module software
+        de: Beschädigte oder veraltete Steuergeräte-Software
+    - id: module_hardware
+      likelihood: low
+      label:
+        en: Internal electronic failure of the module
+        de: Interner Elektronikdefekt des Steuergeräts
   symptoms:
-    - en: 'Warning light or symbol related to the affected system'
-      de: 'Warnleuchte oder Symbol zum betroffenen System'
-    - en: 'Comfort or safety function impaired'
-      de: 'Komfort- oder Sicherheitsfunktion beeinträchtigt'
+    - en: Several body functions fail at once, such as lights, locks or wipers
+      de: Mehrere Karosseriefunktionen fallen zugleich aus, etwa Licht, Schlösser oder Wischer
+    - en: Car will not start if the immobiliser data cannot be read
+      de: Fahrzeug startet nicht, wenn die Wegfahrsperren-Daten nicht lesbar sind
+    - en: Code stored only as history without any noticeable effect
+      de: Code nur als Historie gespeichert, ohne spürbare Auswirkung
   repair:
     difficulty: hard
     diy_possible: false
-    estimated_cost_eur: [300, 1500]
-    estimated_hours: [1.5, 5.0]
+    estimated_cost_eur: [100, 1200]
+    estimated_hours: [1, 4]
   flags:
     mil: false
     emissions_relevant: false
+    drive_cycle_required: false
+    limp_mode_possible: false
   references:
     - sae:J2012
+  related_codes: [B0980]
   sources:
-    - https://en.wikipedia.org/wiki/Body_control_module
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-b1000
+    - https://saabwisonline.com/9-5-9650/2011/3-electrical-system/bus-and-diagnostics-communication/fault-diagnosis-diagnostic-trouble-codes/dtc-b101d
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/bcm/b1000-37/
+    - https://saabwisonline.com/9-3-9440/2007/dtcs/cim/b3985-00/
+    - https://www.ti.com/solution/body-control-module-bcm
+  reviewed: '2026-11-06'
