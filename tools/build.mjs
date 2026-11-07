@@ -342,7 +342,7 @@ const indexHtml = `<!doctype html>
   <p class="lead">Between ${fmtDate(reviewFirst)} and ${fmtDate(reviewLast)} each of the ${totalCodes.toLocaleString("en-US")} codes was taken up on its own, researched and rewritten from scratch in English and German. A code counts as reviewed only after five checks:</p>
   <ul class="checks">
     <li><b>1 · Title</b> confirmed against at least two independent code lists.</li>
-    <li><b>2 · Sources</b> — at least ${minSources} per code that explain this very code or its monitor, every URL fetched and read.</li>
+    <li><b>2 · Sources</b> — at least ${minSources} per code that explain this very code or its monitor, every URL fetched and checked.</li>
     <li><b>3 · Text</b> — what the module monitors, when it sets the code, which makers use it and what it means for the driver.</li>
     <li><b>4 · Details</b> — causes with likelihood, symptoms, repair estimate and the MIL, emissions, drive-cycle and limp-mode flags.</li>
     <li><b>5 · Links</b> — related codes exist and belong together: other bank, high/low pair, range/performance.</li>

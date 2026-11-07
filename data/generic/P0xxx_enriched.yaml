@@ -53323,8 +53323,8 @@
     en: Ignition Coil K Primary Control Circuit/Open
     de: Zündspule K Primär-Steuerkreis/Unterbrechung
   description:
-    en: "P0361 monitors the primary control circuit of ignition coil K – the line from the engine module to the coil or to its built-in output stage – for an open circuit or high resistance. Coil K usually serves cylinder 11, so the code only occurs on engines with at least 11 cylinders. In practice these are V12 or W12 engines. No manufacturer document available to us uses the code: GM goes up to coil H, Ford's descriptions end at coil J (P0360). CARB requires the ignition outputs to be monitored for open and short circuits; the implementation is likely the same as for the manufacturer's coils A to J."
-    de: "P0361 überwacht den Primär-Steuerkreis von Zündspule K – die Leitung vom Motorsteuergerät zur Spule bzw. zu ihrer eingebauten Endstufe – auf Unterbrechung oder hohen Widerstand. Spule K gehört meist zu Zylinder 11, der Code kommt also nur bei Motoren mit mindestens 11 Zylindern vor. Praktisch sind das V12- oder W12-Motoren. Keine uns vorliegende Herstellerunterlage nutzt den Code: GM geht bis Spule H, Fords Beschreibungen enden bei Spule J (P0360). CARB verlangt, die Zündausgänge auf Unterbrechung und Kurzschluss zu überwachen; die Umsetzung dürfte der für die Spulen A bis J desselben Herstellers entsprechen."
+    en: "P0361 monitors the primary control circuit of ignition coil K – the line from the engine module to the coil or to its built-in output stage – for an open circuit or high resistance. Coil K usually serves cylinder 11, so the code only occurs on engines with at least 11 cylinders; in practice these are V12 or W12 engines. No manufacturer document available to us uses the code: GM goes up to coil H, Ford's descriptions end at coil J (P0360). CARB requires the ignition outputs to be monitored for open and short circuits. Ford's description of the same check for coils A to J shows how it works: it runs continuously between 200 and about 3,200 rpm at 11–16 V, judges either the current confirmation from the coil driver or the current and voltage at the driver output, and after a coil fault shuts off that cylinder's injector for 30 s at a time to protect the catalyst. Coil K's control circuit low and high are P2330 and P2331, its secondary circuit P2332."
+    de: "P0361 überwacht den Primär-Steuerkreis von Zündspule K – die Leitung vom Motorsteuergerät zur Spule bzw. zu ihrer eingebauten Endstufe – auf Unterbrechung oder hohen Widerstand. Spule K gehört meist zu Zylinder 11, der Code kommt also nur bei Motoren mit mindestens 11 Zylindern vor, praktisch bei V12- oder W12-Motoren. Keine uns vorliegende Herstellerunterlage nutzt den Code: GM geht bis Spule H, Fords Beschreibungen enden bei Spule J (P0360). CARB verlangt, die Zündausgänge auf Unterbrechung und Kurzschluss zu überwachen. Wie das arbeitet, zeigt Fords Beschreibung derselben Prüfung für die Spulen A bis J: Sie läuft ständig zwischen 200 und etwa 3.200 U/min bei 11–16 V, wertet entweder die Strom-Rückmeldung der Endstufe oder Strom und Spannung am Treiberausgang aus und schaltet nach einem Spulenfehler das Einspritzventil des Zylinders jeweils für 30 s ab, um den Katalysator zu schützen. Steuerkreis zu niedrig und zu hoch der Spule K sind P2330 und P2331, ihr Sekundärkreis P2332."
   affected_components:
     - ignition_coil_k
     - ignition_wiring
@@ -53374,8 +53374,8 @@
   related_codes: [P2330, P2331, P2332, P0350, P0311, P0300]
   sources:
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
-    - https://raw.githubusercontent.com/Wal33D/dtc-database/main/data/source-data/p_codes.txt
-  reviewed: '2026-10-10'
+    - https://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
+  reviewed: '2026-11-07'
 
 - code: P0362
   category: powertrain
@@ -53383,8 +53383,8 @@
     en: Ignition Coil L Primary Control Circuit/Open
     de: Zündspule L Primär-Steuerkreis/Unterbrechung
   description:
-    en: "P0362 monitors the primary control circuit of ignition coil L – the line from the engine module to the coil or to its built-in output stage – for an open circuit or high resistance. Coil L usually serves cylinder 12, so the code only occurs on engines with at least 12 cylinders. In practice these are V12 or W12 engines. No manufacturer document available to us uses the code: GM goes up to coil H, Ford's descriptions end at coil J (P0360). CARB requires the ignition outputs to be monitored for open and short circuits; the implementation is likely the same as for the manufacturer's coils A to J."
-    de: "P0362 überwacht den Primär-Steuerkreis von Zündspule L – die Leitung vom Motorsteuergerät zur Spule bzw. zu ihrer eingebauten Endstufe – auf Unterbrechung oder hohen Widerstand. Spule L gehört meist zu Zylinder 12, der Code kommt also nur bei Motoren mit mindestens 12 Zylindern vor. Praktisch sind das V12- oder W12-Motoren. Keine uns vorliegende Herstellerunterlage nutzt den Code: GM geht bis Spule H, Fords Beschreibungen enden bei Spule J (P0360). CARB verlangt, die Zündausgänge auf Unterbrechung und Kurzschluss zu überwachen; die Umsetzung dürfte der für die Spulen A bis J desselben Herstellers entsprechen."
+    en: "P0362 monitors the primary control circuit of ignition coil L – the line from the engine module to the coil or to its built-in output stage – for an open circuit or high resistance. Coil L usually serves cylinder 12, so the code only occurs on engines with at least 12 cylinders; in practice these are V12 or W12 engines. No manufacturer document available to us uses the code: GM goes up to coil H, Ford's descriptions end at coil J (P0360). CARB requires the ignition outputs to be monitored for open and short circuits. Ford's description of the same check for coils A to J shows how it works: it runs continuously between 200 and about 3,200 rpm at 11–16 V, judges either the current confirmation from the coil driver or the current and voltage at the driver output, and after a coil fault shuts off that cylinder's injector for 30 s at a time to protect the catalyst. Coil L's control circuit low and high are P2333 and P2334, its secondary circuit P2335."
+    de: "P0362 überwacht den Primär-Steuerkreis von Zündspule L – die Leitung vom Motorsteuergerät zur Spule bzw. zu ihrer eingebauten Endstufe – auf Unterbrechung oder hohen Widerstand. Spule L gehört meist zu Zylinder 12, der Code kommt also nur bei Motoren mit mindestens 12 Zylindern vor, praktisch bei V12- oder W12-Motoren. Keine uns vorliegende Herstellerunterlage nutzt den Code: GM geht bis Spule H, Fords Beschreibungen enden bei Spule J (P0360). CARB verlangt, die Zündausgänge auf Unterbrechung und Kurzschluss zu überwachen. Wie das arbeitet, zeigt Fords Beschreibung derselben Prüfung für die Spulen A bis J: Sie läuft ständig zwischen 200 und etwa 3.200 U/min bei 11–16 V, wertet entweder die Strom-Rückmeldung der Endstufe oder Strom und Spannung am Treiberausgang aus und schaltet nach einem Spulenfehler das Einspritzventil des Zylinders jeweils für 30 s ab, um den Katalysator zu schützen. Steuerkreis zu niedrig und zu hoch der Spule L sind P2333 und P2334, ihr Sekundärkreis P2335."
   affected_components:
     - ignition_coil_l
     - ignition_wiring
@@ -53434,8 +53434,8 @@
   related_codes: [P2333, P2334, P2335, P0350, P0312, P0300]
   sources:
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
-    - https://raw.githubusercontent.com/Wal33D/dtc-database/main/data/source-data/p_codes.txt
-  reviewed: '2026-10-10'
+    - https://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
+  reviewed: '2026-11-07'
 
 - code: P0363
   category: powertrain
@@ -53507,8 +53507,8 @@
     en: DC/AC Converter Control Module Control Circuit Range/Performance
     de: DC/AC-Wandler-Steuermodul Steuerkreis Bereich/Funktion
   description:
-    en: "By its J2012 name P0364 means the control circuit to the control module of a DC/AC converter (inverter) behaves implausibly – the command or enable line is present but its signal does not fit what the engine module expects. The code is a late assignment in the P03xx block: older code lists show the slot as reserved, and the other DC/AC converter codes sit in the P2DAx range (P2DA8–P2DAB). Which converter is meant – a traction inverter in a hybrid or a 120/230 V socket inverter – the name does not say, and no manufacturer document available to us uses P0364. The description is therefore limited to the code name and CARB's general requirement to monitor electronic powertrain components. Whether the check engine light comes on and what the vehicle restricts depends on the manufacturer."
-    de: "Nach seinem J2012-Namen heißt P0364: Der Steuerkreis zum Steuermodul eines DC/AC-Wandlers (Wechselrichters) verhält sich unplausibel – die Befehls- oder Freigabeleitung ist vorhanden, aber ihr Signal passt nicht zu dem, was das Motorsteuergerät erwartet. Der Code ist eine späte Belegung im P03xx-Block: Ältere Codelisten führen den Platz als reserviert, und die übrigen DC/AC-Wandler-Codes liegen im Bereich P2DAx (P2DA8–P2DAB). Welcher Wandler gemeint ist – ein Traktions-Wechselrichter im Hybrid oder ein Steckdosen-Wechselrichter für 120/230 V –, sagt der Name nicht, und keine uns vorliegende Herstellerunterlage nutzt P0364. Die Beschreibung beschränkt sich deshalb auf den Code-Namen und die allgemeine CARB-Pflicht zur Überwachung elektronischer Antriebskomponenten. Ob die Motorkontrollleuchte angeht und was das Fahrzeug einschränkt, hängt vom Hersteller ab."
+    en: P0364 reports that the control circuit between the engine module and the control module of a DC/AC converter (inverter) behaves implausibly – the command or enable line is present but its signal does not fit what the engine module expects. The code is a late assignment in the P03xx block; the other DC/AC converter codes sit in the P2DAx range (P2DA8–P2DAB). Ford uses it on the 2021 F-150. On the 3.5 L PowerBoost hybrid, whose DC/AC converter module A feeds the Pro Power Onboard sockets, bulletin 21-2229 links P0364 in the PCM to a disabled Pro Power Onboard and a 'Pro Power Onboard Service Required' message; the cause was software parameters in the inverter and the PCM, fixed by reprogramming both. Bulletin 21-2087 lists P0364 among the codes that 3.5 L EcoBoost trucks built up to 2 March 2021 stored with the MIL on, cured by a PCM update alone. Without such a bulletin, check the enable and command wiring between PCM and inverter and the software levels of both modules.
+    de: P0364 meldet, dass sich der Steuerkreis zwischen Motorsteuergerät und dem Steuermodul eines DC/AC-Wandlers (Wechselrichters) unplausibel verhält – die Befehls- oder Freigabeleitung ist vorhanden, aber ihr Signal passt nicht zu dem, was das Motorsteuergerät erwartet. Der Code ist eine späte Belegung im P03xx-Block; die übrigen DC/AC-Wandler-Codes liegen im Bereich P2DAx (P2DA8–P2DAB). Ford nutzt ihn beim F-150 von 2021. Beim 3,5-l-PowerBoost-Hybrid, dessen DC/AC-Wandlermodul A die Pro-Power-Onboard-Steckdosen speist, verknüpft Bulletin 21-2229 P0364 im PCM mit abgeschaltetem Pro Power Onboard und der Meldung „Pro Power Onboard Service Required“; Ursache waren Softwareparameter in Wechselrichter und PCM, behoben durch Neuprogrammieren beider Module. Bulletin 21-2087 führt P0364 unter den Codes, die 3,5-l-EcoBoost-Pickups mit Baudatum bis 2. März 2021 bei leuchtender MIL speicherten; dort half ein PCM-Update allein. Ohne passendes Bulletin Freigabe- und Befehlsleitung zwischen PCM und Wechselrichter sowie die Softwarestände beider Module prüfen.
   affected_components:
     - dc_ac_converter_control_module
     - module_wiring
@@ -53548,9 +53548,10 @@
     - sae:J2012
   related_codes: [P2DA8, P2DA9, P2DAA, P2DAB]
   sources:
-    - https://raw.githubusercontent.com/Wal33D/dtc-database/main/data/source-data/p_codes.txt
+    - https://static.nhtsa.gov/odi/tsbs/2021/MC-10199530-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2021/MC-10189792-0001.pdf
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
-  reviewed: '2026-10-10'
+  reviewed: '2026-11-07'
 
 - code: P0365
   category: powertrain
@@ -104924,8 +104925,8 @@
     en: Cylinder 1 Glow Plug Circuit Range/Performance
     de: Zylinder 1 Glühkerze Stromkreis Bereich/Funktion
   description:
-    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. Ram's 6.7 L Cummins (from model year 2025, with glow plugs instead of the grid heater) set these codes falsely; the fix was reprogramming the engine module. On the 2014–15 Ram ProMaster 3.0 L diesel, plugs without an inner O-ring caused it; all plugs were replaced.
-    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Rams 6,7-l-Cummins (ab Modelljahr 2025, mit Glühkerzen statt Heizgitter) setzte diese Codes fälschlich; Abhilfe war das Neuprogrammieren des Motorsteuergeräts. Beim Ram ProMaster 3.0 l Diesel 2014–15 waren Kerzen ohne inneren O-Ring die Ursache; alle Kerzen wurden getauscht."
+    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. Ram's 6.7 L Cummins (from model year 2025, with glow plugs instead of the grid heater) set these codes falsely; the fix was reprogramming the engine module. On the 2014–15 Ram ProMaster 3.0 L diesel, plugs without an inner O-ring caused it; all plugs were replaced. P06B9 concerns the glow plug of cylinder 1 alone; the same plug's open circuit is P0671, its control circuit low and high P066A/P066B, and an incorrect plug fitted P06C5.
+    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Rams 6,7-l-Cummins (ab Modelljahr 2025, mit Glühkerzen statt Heizgitter) setzte diese Codes fälschlich; Abhilfe war das Neuprogrammieren des Motorsteuergeräts. Beim Ram ProMaster 3.0 l Diesel 2014–15 waren Kerzen ohne inneren O-Ring die Ursache; alle Kerzen wurden getauscht. P06B9 betrifft allein die Glühkerze von Zylinder 1; Unterbrechung derselben Kerze ist P0671, Steuerkreis zu niedrig und zu hoch P066A/P066B, eine falsche Kerze P06C5."
   affected_components:
     - glow_plug
     - glow_plug_wiring
@@ -104981,7 +104982,7 @@
     - https://static.nhtsa.gov/odi/tsbs/2026/MC-11029680-0001.pdf
     - https://www.vehicleservicepros.com/tsbs/article/53094419/glow-plug-problem-for-ram
     - https://www.techtips.ie/Hella-Ireland/glow-plugs.pdf
-  reviewed: '2026-10-12'
+  reviewed: '2026-11-07'
 
 - code: P06BA
   category: powertrain
@@ -104989,8 +104990,8 @@
     en: Cylinder 2 Glow Plug Circuit Range/Performance
     de: Zylinder 2 Glühkerze Stromkreis Bereich/Funktion
   description:
-    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. Ram's 6.7 L Cummins (from model year 2025, with glow plugs instead of the grid heater) set these codes falsely; the fix was reprogramming the engine module. On the 2014–15 Ram ProMaster 3.0 L diesel, plugs without an inner O-ring caused it; all plugs were replaced.
-    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Rams 6,7-l-Cummins (ab Modelljahr 2025, mit Glühkerzen statt Heizgitter) setzte diese Codes fälschlich; Abhilfe war das Neuprogrammieren des Motorsteuergeräts. Beim Ram ProMaster 3.0 l Diesel 2014–15 waren Kerzen ohne inneren O-Ring die Ursache; alle Kerzen wurden getauscht."
+    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. Ram's 6.7 L Cummins (from model year 2025, with glow plugs instead of the grid heater) set these codes falsely; the fix was reprogramming the engine module. On the 2014–15 Ram ProMaster 3.0 L diesel, plugs without an inner O-ring caused it; all plugs were replaced. P06BA concerns the glow plug of cylinder 2 alone; the same plug's open circuit is P0672, its control circuit low and high P066C/P066D, and an incorrect plug fitted P06C6.
+    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Rams 6,7-l-Cummins (ab Modelljahr 2025, mit Glühkerzen statt Heizgitter) setzte diese Codes fälschlich; Abhilfe war das Neuprogrammieren des Motorsteuergeräts. Beim Ram ProMaster 3.0 l Diesel 2014–15 waren Kerzen ohne inneren O-Ring die Ursache; alle Kerzen wurden getauscht. P06BA betrifft allein die Glühkerze von Zylinder 2; Unterbrechung derselben Kerze ist P0672, Steuerkreis zu niedrig und zu hoch P066C/P066D, eine falsche Kerze P06C6."
   affected_components:
     - glow_plug
     - glow_plug_wiring
@@ -105046,7 +105047,7 @@
     - https://static.nhtsa.gov/odi/tsbs/2026/MC-11029680-0001.pdf
     - https://www.vehicleservicepros.com/tsbs/article/53094419/glow-plug-problem-for-ram
     - https://www.techtips.ie/Hella-Ireland/glow-plugs.pdf
-  reviewed: '2026-10-12'
+  reviewed: '2026-11-07'
 
 - code: P06BB
   category: powertrain
@@ -105054,8 +105055,8 @@
     en: Cylinder 3 Glow Plug Circuit Range/Performance
     de: Zylinder 3 Glühkerze Stromkreis Bereich/Funktion
   description:
-    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. Ram's 6.7 L Cummins (from model year 2025, with glow plugs instead of the grid heater) set these codes falsely; the fix was reprogramming the engine module. On the 2014–15 Ram ProMaster 3.0 L diesel, plugs without an inner O-ring caused it; all plugs were replaced.
-    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Rams 6,7-l-Cummins (ab Modelljahr 2025, mit Glühkerzen statt Heizgitter) setzte diese Codes fälschlich; Abhilfe war das Neuprogrammieren des Motorsteuergeräts. Beim Ram ProMaster 3.0 l Diesel 2014–15 waren Kerzen ohne inneren O-Ring die Ursache; alle Kerzen wurden getauscht."
+    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. Ram's 6.7 L Cummins (from model year 2025, with glow plugs instead of the grid heater) set these codes falsely; the fix was reprogramming the engine module. On the 2014–15 Ram ProMaster 3.0 L diesel, plugs without an inner O-ring caused it; all plugs were replaced. P06BB concerns the glow plug of cylinder 3 alone; the same plug's open circuit is P0673, its control circuit low and high P066E/P066F, and an incorrect plug fitted P06C7.
+    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Rams 6,7-l-Cummins (ab Modelljahr 2025, mit Glühkerzen statt Heizgitter) setzte diese Codes fälschlich; Abhilfe war das Neuprogrammieren des Motorsteuergeräts. Beim Ram ProMaster 3.0 l Diesel 2014–15 waren Kerzen ohne inneren O-Ring die Ursache; alle Kerzen wurden getauscht. P06BB betrifft allein die Glühkerze von Zylinder 3; Unterbrechung derselben Kerze ist P0673, Steuerkreis zu niedrig und zu hoch P066E/P066F, eine falsche Kerze P06C7."
   affected_components:
     - glow_plug
     - glow_plug_wiring
@@ -105111,7 +105112,7 @@
     - https://static.nhtsa.gov/odi/tsbs/2026/MC-11029680-0001.pdf
     - https://www.vehicleservicepros.com/tsbs/article/53094419/glow-plug-problem-for-ram
     - https://www.techtips.ie/Hella-Ireland/glow-plugs.pdf
-  reviewed: '2026-10-12'
+  reviewed: '2026-11-07'
 
 - code: P06BC
   category: powertrain
@@ -105119,8 +105120,8 @@
     en: Cylinder 4 Glow Plug Circuit Range/Performance
     de: Zylinder 4 Glühkerze Stromkreis Bereich/Funktion
   description:
-    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. Ram's 6.7 L Cummins (from model year 2025, with glow plugs instead of the grid heater) set these codes falsely; the fix was reprogramming the engine module. On the 2014–15 Ram ProMaster 3.0 L diesel, plugs without an inner O-ring caused it; all plugs were replaced.
-    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Rams 6,7-l-Cummins (ab Modelljahr 2025, mit Glühkerzen statt Heizgitter) setzte diese Codes fälschlich; Abhilfe war das Neuprogrammieren des Motorsteuergeräts. Beim Ram ProMaster 3.0 l Diesel 2014–15 waren Kerzen ohne inneren O-Ring die Ursache; alle Kerzen wurden getauscht."
+    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. Ram's 6.7 L Cummins (from model year 2025, with glow plugs instead of the grid heater) set these codes falsely; the fix was reprogramming the engine module. On the 2014–15 Ram ProMaster 3.0 L diesel, plugs without an inner O-ring caused it; all plugs were replaced. P06BC concerns the glow plug of cylinder 4 alone; the same plug's open circuit is P0674, its control circuit low and high P067A/P067B, and an incorrect plug fitted P06C8.
+    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Rams 6,7-l-Cummins (ab Modelljahr 2025, mit Glühkerzen statt Heizgitter) setzte diese Codes fälschlich; Abhilfe war das Neuprogrammieren des Motorsteuergeräts. Beim Ram ProMaster 3.0 l Diesel 2014–15 waren Kerzen ohne inneren O-Ring die Ursache; alle Kerzen wurden getauscht. P06BC betrifft allein die Glühkerze von Zylinder 4; Unterbrechung derselben Kerze ist P0674, Steuerkreis zu niedrig und zu hoch P067A/P067B, eine falsche Kerze P06C8."
   affected_components:
     - glow_plug
     - glow_plug_wiring
@@ -105176,7 +105177,7 @@
     - https://static.nhtsa.gov/odi/tsbs/2026/MC-11029680-0001.pdf
     - https://www.vehicleservicepros.com/tsbs/article/53094419/glow-plug-problem-for-ram
     - https://www.techtips.ie/Hella-Ireland/glow-plugs.pdf
-  reviewed: '2026-10-12'
+  reviewed: '2026-11-07'
 
 - code: P06BD
   category: powertrain
@@ -105184,8 +105185,8 @@
     en: Cylinder 5 Glow Plug Circuit Range/Performance
     de: Zylinder 5 Glühkerze Stromkreis Bereich/Funktion
   description:
-    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. Ram's 6.7 L Cummins (from model year 2025, with glow plugs instead of the grid heater) set these codes falsely; the fix was reprogramming the engine module.
-    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Rams 6,7-l-Cummins (ab Modelljahr 2025, mit Glühkerzen statt Heizgitter) setzte diese Codes fälschlich; Abhilfe war das Neuprogrammieren des Motorsteuergeräts."
+    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. Ram's 6.7 L Cummins (from model year 2025, with glow plugs instead of the grid heater) set these codes falsely; the fix was reprogramming the engine module. P06BD concerns the glow plug of cylinder 5 alone; the same plug's open circuit is P0675, its control circuit low and high P067C/P067D, and an incorrect plug fitted P06C9.
+    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Rams 6,7-l-Cummins (ab Modelljahr 2025, mit Glühkerzen statt Heizgitter) setzte diese Codes fälschlich; Abhilfe war das Neuprogrammieren des Motorsteuergeräts. P06BD betrifft allein die Glühkerze von Zylinder 5; Unterbrechung derselben Kerze ist P0675, Steuerkreis zu niedrig und zu hoch P067C/P067D, eine falsche Kerze P06C9."
   affected_components:
     - glow_plug
     - glow_plug_wiring
@@ -105240,7 +105241,7 @@
     - https://static.nhtsa.gov/odi/tsbs/2026/MC-11028764-0001.pdf
     - https://static.nhtsa.gov/odi/tsbs/2026/MC-11029680-0001.pdf
     - https://www.techtips.ie/Hella-Ireland/glow-plugs.pdf
-  reviewed: '2026-10-12'
+  reviewed: '2026-11-07'
 
 - code: P06BE
   category: powertrain
@@ -105248,8 +105249,8 @@
     en: Cylinder 6 Glow Plug Circuit Range/Performance
     de: Zylinder 6 Glühkerze Stromkreis Bereich/Funktion
   description:
-    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. Ram's 6.7 L Cummins (from model year 2025, with glow plugs instead of the grid heater) set these codes falsely; the fix was reprogramming the engine module.
-    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Rams 6,7-l-Cummins (ab Modelljahr 2025, mit Glühkerzen statt Heizgitter) setzte diese Codes fälschlich; Abhilfe war das Neuprogrammieren des Motorsteuergeräts."
+    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. Ram's 6.7 L Cummins (from model year 2025, with glow plugs instead of the grid heater) set these codes falsely; the fix was reprogramming the engine module. P06BE concerns the glow plug of cylinder 6 alone; the same plug's open circuit is P0676, its control circuit low and high P067E/P067F, and an incorrect plug fitted P06CA.
+    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Rams 6,7-l-Cummins (ab Modelljahr 2025, mit Glühkerzen statt Heizgitter) setzte diese Codes fälschlich; Abhilfe war das Neuprogrammieren des Motorsteuergeräts. P06BE betrifft allein die Glühkerze von Zylinder 6; Unterbrechung derselben Kerze ist P0676, Steuerkreis zu niedrig und zu hoch P067E/P067F, eine falsche Kerze P06CA."
   affected_components:
     - glow_plug
     - glow_plug_wiring
@@ -105304,7 +105305,7 @@
     - https://static.nhtsa.gov/odi/tsbs/2026/MC-11028764-0001.pdf
     - https://static.nhtsa.gov/odi/tsbs/2026/MC-11029680-0001.pdf
     - https://www.techtips.ie/Hella-Ireland/glow-plugs.pdf
-  reviewed: '2026-10-12'
+  reviewed: '2026-11-07'
 
 - code: P06BF
   category: powertrain
@@ -105312,8 +105313,8 @@
     en: Cylinder 7 Glow Plug Circuit Range/Performance
     de: Zylinder 7 Glühkerze Stromkreis Bereich/Funktion
   description:
-    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. At Ford it exists only on the 6.7 L V8.
-    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Bei Ford gibt es ihn nur beim 6,7-l-V8."
+    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. At Ford it exists only on the 6.7 L V8. P06BF concerns the glow plug of cylinder 7 alone; the same plug's open circuit is P0677, its control circuit low and high P068C/P068D, and an incorrect plug fitted P06CB.
+    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Bei Ford gibt es ihn nur beim 6,7-l-V8. P06BF betrifft allein die Glühkerze von Zylinder 7; Unterbrechung derselben Kerze ist P0677, Steuerkreis zu niedrig und zu hoch P068C/P068D, eine falsche Kerze P06CB."
   affected_components:
     - glow_plug
     - glow_plug_wiring
@@ -105366,7 +105367,7 @@
     - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
     - https://www.techtips.ie/Hella-Ireland/glow-plugs.pdf
     - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG04%20Engine%20Diagnostics.pdf
-  reviewed: '2026-10-12'
+  reviewed: '2026-11-07'
 
 - code: P06C0
   category: powertrain
@@ -105374,8 +105375,8 @@
     en: Cylinder 8 Glow Plug Circuit Range/Performance
     de: Zylinder 8 Glühkerze Stromkreis Bereich/Funktion
   description:
-    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. At Ford it exists only on the 6.7 L V8.
-    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Bei Ford gibt es ihn nur beim 6,7-l-V8."
+    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. At Ford it exists only on the 6.7 L V8. P06C0 concerns the glow plug of cylinder 8 alone; the same plug's open circuit is P0678, its control circuit low and high P068E/P068F, and an incorrect plug fitted P06CC.
+    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Bei Ford gibt es ihn nur beim 6,7-l-V8. P06C0 betrifft allein die Glühkerze von Zylinder 8; Unterbrechung derselben Kerze ist P0678, Steuerkreis zu niedrig und zu hoch P068E/P068F, eine falsche Kerze P06CC."
   affected_components:
     - glow_plug
     - glow_plug_wiring
@@ -105428,7 +105429,7 @@
     - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
     - https://www.techtips.ie/Hella-Ireland/glow-plugs.pdf
     - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG04%20Engine%20Diagnostics.pdf
-  reviewed: '2026-10-12'
+  reviewed: '2026-11-07'
 
 - code: P06C1
   category: powertrain
@@ -105436,8 +105437,8 @@
     en: Cylinder 9 Glow Plug Circuit Range/Performance
     de: Zylinder 9 Glühkerze Stromkreis Bereich/Funktion
   description:
-    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. No manufacturer document available to us uses this code for cylinders 9 and above; the description follows cylinders 1–8.
-    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Keine uns vorliegende Herstellerunterlage nutzt diesen Code für Zylinder ab 9; die Beschreibung folgt den Zylindern 1–8."
+    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. No manufacturer document available to us uses this code for cylinders 9 and above; the description follows cylinders 1–8. P06C1 concerns the glow plug of cylinder 9 alone; the same plug's open circuit is P0679, its control circuit low and high P069A/P069B, and an incorrect plug fitted P06CD.
+    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Keine uns vorliegende Herstellerunterlage nutzt diesen Code für Zylinder ab 9; die Beschreibung folgt den Zylindern 1–8. P06C1 betrifft allein die Glühkerze von Zylinder 9; Unterbrechung derselben Kerze ist P0679, Steuerkreis zu niedrig und zu hoch P069A/P069B, eine falsche Kerze P06CD."
   affected_components:
     - glow_plug
     - glow_plug_wiring
@@ -105489,7 +105490,7 @@
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://www.techtips.ie/Hella-Ireland/glow-plugs.pdf
     - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
-  reviewed: '2026-10-12'
+  reviewed: '2026-11-07'
 
 - code: P06C2
   category: powertrain
@@ -105497,8 +105498,8 @@
     en: Cylinder 10 Glow Plug Circuit Range/Performance
     de: Zylinder 10 Glühkerze Stromkreis Bereich/Funktion
   description:
-    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. No manufacturer document available to us uses this code for cylinders 9 and above; the description follows cylinders 1–8.
-    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Keine uns vorliegende Herstellerunterlage nutzt diesen Code für Zylinder ab 9; die Beschreibung folgt den Zylindern 1–8."
+    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. No manufacturer document available to us uses this code for cylinders 9 and above; the description follows cylinders 1–8. P06C2 concerns the glow plug of cylinder 10 alone; the same plug's open circuit is P0680, its control circuit low and high P069C/P069D, and an incorrect plug fitted P06CE.
+    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Keine uns vorliegende Herstellerunterlage nutzt diesen Code für Zylinder ab 9; die Beschreibung folgt den Zylindern 1–8. P06C2 betrifft allein die Glühkerze von Zylinder 10; Unterbrechung derselben Kerze ist P0680, Steuerkreis zu niedrig und zu hoch P069C/P069D, eine falsche Kerze P06CE."
   affected_components:
     - glow_plug
     - glow_plug_wiring
@@ -105550,7 +105551,7 @@
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://www.techtips.ie/Hella-Ireland/glow-plugs.pdf
     - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
-  reviewed: '2026-10-12'
+  reviewed: '2026-11-07'
 
 - code: P06C3
   category: powertrain
@@ -105558,8 +105559,8 @@
     en: Cylinder 11 Glow Plug Circuit Range/Performance
     de: Zylinder 11 Glühkerze Stromkreis Bereich/Funktion
   description:
-    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. No manufacturer document available to us uses this code for cylinders 9 and above; the description follows cylinders 1–8.
-    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Keine uns vorliegende Herstellerunterlage nutzt diesen Code für Zylinder ab 9; die Beschreibung folgt den Zylindern 1–8."
+    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. No manufacturer document available to us uses this code for cylinders 9 and above; the description follows cylinders 1–8. P06C3 concerns the glow plug of cylinder 11 alone; the same plug's open circuit is P0681, its control circuit low and high P06E0/P06E1, and an incorrect plug fitted P06CF.
+    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Keine uns vorliegende Herstellerunterlage nutzt diesen Code für Zylinder ab 9; die Beschreibung folgt den Zylindern 1–8. P06C3 betrifft allein die Glühkerze von Zylinder 11; Unterbrechung derselben Kerze ist P0681, Steuerkreis zu niedrig und zu hoch P06E0/P06E1, eine falsche Kerze P06CF."
   affected_components:
     - glow_plug
     - glow_plug_wiring
@@ -105611,7 +105612,7 @@
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://www.techtips.ie/Hella-Ireland/glow-plugs.pdf
     - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
-  reviewed: '2026-10-12'
+  reviewed: '2026-11-07'
 
 - code: P06C4
   category: powertrain
@@ -105619,8 +105620,8 @@
     en: Cylinder 12 Glow Plug Circuit Range/Performance
     de: Zylinder 12 Glühkerze Stromkreis Bereich/Funktion
   description:
-    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. No manufacturer document available to us uses this code for cylinders 9 and above; the description follows cylinders 1–8.
-    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Keine uns vorliegende Herstellerunterlage nutzt diesen Code für Zylinder ab 9; die Beschreibung folgt den Zylindern 1–8."
+    en: The glow module calculates each plug's resistance from voltage and current while glowing. 'Range/performance' means the circuit is electrically intact but the resistance or current lies outside the specified window – typically an aged, high-resistance or wrong plug or contact resistance at the connector. CARB requires a single plug outside specification to be detected from model year 2010. Ford's 2023 6.7 L/3.0 L Power Stroke runs this check during heating after the open and short checks and flags a circuit above 2 Ω after about 3 s. GM does not use this code family. No manufacturer document available to us uses this code for cylinders 9 and above; the description follows cylinders 1–8. P06C4 concerns the glow plug of cylinder 12 alone; the same plug's open circuit is P0682, its control circuit low and high P06E2/P06E3, and an incorrect plug fitted P06D0.
+    de: "Das Glühsteuergerät berechnet beim Glühen aus Spannung und Strom den Widerstand jeder Kerze. „Bereich/Funktion“ heißt: Der Kreis ist elektrisch intakt, aber Widerstand oder Strom liegen außerhalb des Sollfensters – typisch eine gealterte, hochohmige oder falsche Kerze oder ein Übergangswiderstand am Stecker. CARB verlangt ab Modelljahr 2010, schon eine einzelne Kerze außerhalb der Spezifikation zu erkennen. Fords Power Stroke 6,7 l/3,0 l von 2023 prüft das beim Glühen nach den Unterbrechungs- und Kurzschlussprüfungen und meldet einen Kreis über 2 Ω nach etwa 3 s. GM nutzt diese Codefamilie nicht. Keine uns vorliegende Herstellerunterlage nutzt diesen Code für Zylinder ab 9; die Beschreibung folgt den Zylindern 1–8. P06C4 betrifft allein die Glühkerze von Zylinder 12; Unterbrechung derselben Kerze ist P0682, Steuerkreis zu niedrig und zu hoch P06E2/P06E3, eine falsche Kerze P06D0."
   affected_components:
     - glow_plug
     - glow_plug_wiring
@@ -105672,7 +105673,7 @@
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://www.techtips.ie/Hella-Ireland/glow-plugs.pdf
     - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/obd-summary-diesel-2023.pdf
-  reviewed: '2026-10-12'
+  reviewed: '2026-11-07'
 
 - code: P06C5
   category: powertrain
@@ -119694,8 +119695,8 @@
     en: Transmission Friction Element F Performance/Stuck Off
     de: Getriebe-Reibelement F Funktion/hängt aus
   description:
-    en: "Each friction element (clutch or brake) has three functional codes: slip while commanded locked (P079A ff), performance/stuck off – it does not apply or applies too weakly – and stuck on – it does not release. No manufacturer document available to us uses this code: the documented hybrids have at most five monitored clutches. The description follows the family. A clutch that does not apply means a missing gear or slip, typically from worn plates, low pressure or a sticking valve."
-    de: "Jedes Reibelement (Kupplung oder Bremse) hat drei Funktionscodes: Schlupf trotz Schließbefehl (P079A ff), Funktion/hängt aus – es rückt nicht oder zu schwach ein – und hängt ein – es löst nicht. Keine uns vorliegende Herstellerunterlage nutzt diesen Code: die belegten Hybride haben höchstens fünf überwachte Kupplungen. Die Beschreibung folgt der Familie. Eine Kupplung, die nicht einrückt, bedeutet fehlenden Gang oder Schlupf, typisch durch verschlissene Lamellen, zu wenig Druck oder ein klemmendes Ventil."
+    en: "Each friction element (clutch or brake) has three functional codes: slip while commanded locked (P079A ff), performance/stuck off – it does not apply or applies too weakly – and stuck on – it does not release. No manufacturer document available to us uses this code: the documented hybrids have at most five monitored clutches. The description follows the family. A clutch that does not apply means a missing gear or slip, typically from worn plates, low pressure or a sticking valve. P07AC belongs to element F; the same element's stuck-on code is P07AD, its slip P079F and its apply time P2705."
+    de: "Jedes Reibelement (Kupplung oder Bremse) hat drei Funktionscodes: Schlupf trotz Schließbefehl (P079A ff), Funktion/hängt aus – es rückt nicht oder zu schwach ein – und hängt ein – es löst nicht. Keine uns vorliegende Herstellerunterlage nutzt diesen Code: die belegten Hybride haben höchstens fünf überwachte Kupplungen. Die Beschreibung folgt der Familie. Eine Kupplung, die nicht einrückt, bedeutet fehlenden Gang oder Schlupf, typisch durch verschlissene Lamellen, zu wenig Druck oder ein klemmendes Ventil. P07AC gehört zu Element F; „hängt ein“ desselben Elements ist P07AD, sein Schlupf P079F, seine Einrückzeit P2705."
   affected_components:
     - transmission_clutches
     - transmission_valve_body
@@ -119745,7 +119746,7 @@
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://patents.google.com/patent/US8548703
     - https://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
-  reviewed: '2026-10-12'
+  reviewed: '2026-11-07'
 
 - code: P07AD
   category: powertrain
@@ -119814,8 +119815,8 @@
     en: Transmission Friction Element G Performance/Stuck Off
     de: Getriebe-Reibelement G Funktion/hängt aus
   description:
-    en: "Each friction element (clutch or brake) has three functional codes: slip while commanded locked (P079A ff), performance/stuck off – it does not apply or applies too weakly – and stuck on – it does not release. No manufacturer document available to us uses this code: the documented hybrids have at most five monitored clutches. The description follows the family. A clutch that does not apply means a missing gear or slip, typically from worn plates, low pressure or a sticking valve."
-    de: "Jedes Reibelement (Kupplung oder Bremse) hat drei Funktionscodes: Schlupf trotz Schließbefehl (P079A ff), Funktion/hängt aus – es rückt nicht oder zu schwach ein – und hängt ein – es löst nicht. Keine uns vorliegende Herstellerunterlage nutzt diesen Code: die belegten Hybride haben höchstens fünf überwachte Kupplungen. Die Beschreibung folgt der Familie. Eine Kupplung, die nicht einrückt, bedeutet fehlenden Gang oder Schlupf, typisch durch verschlissene Lamellen, zu wenig Druck oder ein klemmendes Ventil."
+    en: "Each friction element (clutch or brake) has three functional codes: slip while commanded locked (P079A ff), performance/stuck off – it does not apply or applies too weakly – and stuck on – it does not release. No manufacturer document available to us uses this code: the documented hybrids have at most five monitored clutches. The description follows the family. A clutch that does not apply means a missing gear or slip, typically from worn plates, low pressure or a sticking valve. P07AE belongs to element G; the same element's stuck-on code is P07AF, its slip P07A0 and its apply time P273A."
+    de: "Jedes Reibelement (Kupplung oder Bremse) hat drei Funktionscodes: Schlupf trotz Schließbefehl (P079A ff), Funktion/hängt aus – es rückt nicht oder zu schwach ein – und hängt ein – es löst nicht. Keine uns vorliegende Herstellerunterlage nutzt diesen Code: die belegten Hybride haben höchstens fünf überwachte Kupplungen. Die Beschreibung folgt der Familie. Eine Kupplung, die nicht einrückt, bedeutet fehlenden Gang oder Schlupf, typisch durch verschlissene Lamellen, zu wenig Druck oder ein klemmendes Ventil. P07AE gehört zu Element G; „hängt ein“ desselben Elements ist P07AF, sein Schlupf P07A0, seine Einrückzeit P273A."
   affected_components:
     - transmission_clutches
     - transmission_valve_body
@@ -119865,7 +119866,7 @@
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://patents.google.com/patent/US8548703
     - https://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
-  reviewed: '2026-10-12'
+  reviewed: '2026-11-07'
 
 - code: P07AF
   category: powertrain
@@ -119934,8 +119935,8 @@
     en: Transmission Friction Element H Performance/Stuck Off
     de: Getriebe-Reibelement H Funktion/hängt aus
   description:
-    en: "Each friction element (clutch or brake) has three functional codes: slip while commanded locked (P079A ff), performance/stuck off – it does not apply or applies too weakly – and stuck on – it does not release. No manufacturer document available to us uses this code: the documented hybrids have at most five monitored clutches. The description follows the family. A clutch that does not apply means a missing gear or slip, typically from worn plates, low pressure or a sticking valve."
-    de: "Jedes Reibelement (Kupplung oder Bremse) hat drei Funktionscodes: Schlupf trotz Schließbefehl (P079A ff), Funktion/hängt aus – es rückt nicht oder zu schwach ein – und hängt ein – es löst nicht. Keine uns vorliegende Herstellerunterlage nutzt diesen Code: die belegten Hybride haben höchstens fünf überwachte Kupplungen. Die Beschreibung folgt der Familie. Eine Kupplung, die nicht einrückt, bedeutet fehlenden Gang oder Schlupf, typisch durch verschlissene Lamellen, zu wenig Druck oder ein klemmendes Ventil."
+    en: "Each friction element (clutch or brake) has three functional codes: slip while commanded locked (P079A ff), performance/stuck off – it does not apply or applies too weakly – and stuck on – it does not release. No manufacturer document available to us uses this code: the documented hybrids have at most five monitored clutches. The description follows the family. A clutch that does not apply means a missing gear or slip, typically from worn plates, low pressure or a sticking valve. P07B0 belongs to element H; the same element's stuck-on code is P07B1, its slip P07A1 and its apply time P273B."
+    de: "Jedes Reibelement (Kupplung oder Bremse) hat drei Funktionscodes: Schlupf trotz Schließbefehl (P079A ff), Funktion/hängt aus – es rückt nicht oder zu schwach ein – und hängt ein – es löst nicht. Keine uns vorliegende Herstellerunterlage nutzt diesen Code: die belegten Hybride haben höchstens fünf überwachte Kupplungen. Die Beschreibung folgt der Familie. Eine Kupplung, die nicht einrückt, bedeutet fehlenden Gang oder Schlupf, typisch durch verschlissene Lamellen, zu wenig Druck oder ein klemmendes Ventil. P07B0 gehört zu Element H; „hängt ein“ desselben Elements ist P07B1, sein Schlupf P07A1, seine Einrückzeit P273B."
   affected_components:
     - transmission_clutches
     - transmission_valve_body
@@ -119985,7 +119986,7 @@
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://patents.google.com/patent/US8548703
     - https://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
-  reviewed: '2026-10-12'
+  reviewed: '2026-11-07'
 
 - code: P07B1
   category: powertrain
@@ -215953,11 +215954,11 @@
     en: Not Documented - No Defined Meaning
     de: Nicht belegt - keine festgelegte Bedeutung
   description:
-    en: P0FFF has no documented meaning. The published code lists for SAE J2012 end the P0 range at P0EFE, and the block P0F00 onward is held back by ISO and SAE as reserved. No vehicle maker, no regulator filing and no service bulletin in the NHTSA archive uses P0FFF. A meaning sometimes shown online belongs to a different code. If a scan tool reports P0FFF, the likely causes are a reading error, a tool with a faulty code table or a maker-specific code shown with the wrong prefix; check the raw data and the manufacturer's own code list.
-    de: Für P0FFF gibt es keine belegte Bedeutung. Die veröffentlichten Code-Listen zu SAE J2012 enden im P0-Bereich bei P0EFE, der Block ab P0F00 ist von ISO und SAE als reserviert zurückgehalten. Kein Fahrzeughersteller, keine Zulassungsunterlage und kein Bulletin im NHTSA-Archiv nutzt P0FFF. Eine im Netz kursierende Bedeutung gehört zu einem anderen Code. Zeigt ein Diagnosegerät P0FFF an, steckt meist ein Lesefehler, eine fehlerhafte Codetabelle im Gerät oder ein Herstellercode mit falschem Präfix dahinter; Rohdaten und die Codeliste des Herstellers prüfen.
+    en: P0FFF has no documented meaning. CARB requires the SAE J2012-defined codes such as P0xxx and P2xxx wherever possible and allows manufacturer-defined codes only in the ranges J2012 sets aside for them, such as P1xxx. None of the public J2012 title lists checked for obdex assigns a code in the P0Fxx block, and no vehicle maker, regulator filing or bulletin in the NHTSA archive uses P0FFF. If a scan tool reports P0FFF, the likely causes are a reading error, a tool with a faulty code table or a maker-specific code shown with the wrong prefix; check the raw data and the manufacturer's own code list.
+    de: Für P0FFF gibt es keine belegte Bedeutung. CARB verlangt, wo immer möglich die in SAE J2012 festgelegten Codes wie P0xxx und P2xxx zu verwenden, und lässt herstellereigene Codes nur in den Bereichen zu, die J2012 dafür vorsieht, etwa P1xxx. Keine der öffentlichen J2012-Titellisten, die für obdex geprüft wurden, belegt einen Code im Block P0Fxx, und kein Fahrzeughersteller, keine Zulassungsunterlage und kein Bulletin im NHTSA-Archiv nutzt P0FFF. Zeigt ein Diagnosegerät P0FFF an, steckt meist ein Lesefehler, eine fehlerhafte Codetabelle im Gerät oder ein Herstellercode mit falschem Präfix dahinter; Rohdaten und die Codeliste des Herstellers prüfen.
   references:
     - sae:J2012
   sources:
-    - https://raw.githubusercontent.com/Wal33D/dtc-database/main/data/source-data/p_codes.txt
-    - https://cdn.mycarly.com/sitemaps/obd-codes/sitemap_en.xml
-  reviewed: '2026-11-03'
+    - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://www.sae.org/standards/content/j2012_201612/
+  reviewed: '2026-11-07'

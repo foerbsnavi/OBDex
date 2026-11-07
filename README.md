@@ -4,7 +4,7 @@
 
 **The most detailed open database of generic OBD-II codes — every code individually reviewed, with sources.**
 
-9,533 SAE J2012 codes · 30,875 sources · English and German · 132 PIDs · free to use under CC0
+9,533 SAE J2012 codes · 30,884 sources · English and German · 132 PIDs · free to use under CC0
 
 [![reviewed](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ffoerbsnavi.github.io%2FOBDex%2Fmeta.json&query=%24.counts.generic.reviewed&label=reviewed&suffix=%20of%209%2C533&color=2f7d32)](#every-code-reviewed-individually)
 [![data: CC0-1.0](https://img.shields.io/badge/data-CC0--1.0-blue.svg)](LICENSE-DATA)
@@ -60,7 +60,7 @@ Between 9 October and 7 November 2026 all 9,533 codes were worked through in 195
 A reviewed code has passed five checks:
 
 1. **Title** — confirmed against at least two independent code lists.
-2. **Sources** — at least two that explain this very code or its monitor, one of them a regulation (CARB 13 CCR § 1968.2) or a manufacturer or supplier document; every URL fetched and read.
+2. **Sources** — at least two that explain this very code or its monitor, one of them a regulation (CARB 13 CCR § 1968.2) or a manufacturer or supplier document; every URL fetched and checked.
 3. **Text** — English and German descriptions written fresh for this code: what is monitored, when the module sets the code, which makers use it, what it means for the driver.
 4. **Details** — causes with likelihood, symptoms, repair estimate and flags (MIL, emissions, drive cycle, limp mode) checked for this code.
 5. **Links** — related codes exist in obdex and belong together: other bank, high/low pair, range/performance.
@@ -75,13 +75,13 @@ const reviewed = codes.filter(c => c.reviewed);
 
 ### Where the sources come from
 
-The 30,875 source links point to 246 sites. The largest groups:
+The 30,884 source links point to 245 sites. The largest groups:
 
 | Source | Links |
 |---|---:|
-| Manufacturer service bulletins (NHTSA archive) | 6,857 |
-| OBD regulation, mainly CARB 13 CCR § 1968.2 | 6,307 |
-| Manufacturer OBD and service documents (GM, Ford, Saab, Mitsubishi, Deutz …) | 11,328 |
+| Manufacturer service bulletins (NHTSA archive) | 6,861 |
+| OBD regulation, mainly CARB 13 CCR § 1968.2 | 6,308 |
+| Manufacturer OBD and service documents (GM, Ford, Saab, Mitsubishi, Deutz …) | 11,336 |
 | Patents describing the monitor | 2,749 |
 
 Code lists are used only to cross-check titles, never as a source; forums and AI-generated code pages are not used at all.
@@ -90,6 +90,8 @@ Code lists are used only to cross-check titles, never as a source; forums and AI
 
 Some generic codes are reserved in SAE J2012 but used by only one maker, or by none that publishes its documents. 276 chassis and body codes appear in none of the public J2012 title lists that could be checked. These entries say so plainly — "no manufacturer documents this code publicly" — name the makers that do use the number, and explain the monitored function from the regulation, patents and comparable codes. They are kept because a driver who reads such a code from a car still deserves an honest answer.
 
+770 codes rest on the regulation, patents and reference works alone, without a manufacturer bulletin or service document. A patent shows how a monitor can work, not how a given maker uses it, so these entries are the first place where the next edition adds manufacturer evidence.
+
 ## What the data holds
 
 - **9,533 generic DTCs** — the full SAE J2012 / ISO 15031-6 code space in seven families.
@@ -97,7 +99,7 @@ Some generic codes are reserved in SAE J2012 but used by only one maker, or by n
 - **Diagnosis help** — affected components, common causes with likelihood, symptoms, repair difficulty, DIY flag, cost in euros and working hours.
 - **Flags** — MIL, emissions relevance, drive cycle, limp mode.
 - **Cross-references** — 46,824 links between related codes.
-- **Sources** — 30,875 links, at least two per code, every one fetched and checked.
+- **Sources** — 30,884 links, at least two per code, every one fetched and checked.
 - **Depth** — 33,401 causes with likelihood and 26,762 symptoms, written for each code.
 - **132 PIDs** — Mode 01 live data and Mode 09 vehicle information, with formula, unit and range.
 

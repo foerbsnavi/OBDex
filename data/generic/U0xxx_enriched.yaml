@@ -16216,8 +16216,8 @@
     en: Lost Communication With Park Lock/Pawl Control Module
     de: Kommunikation mit Parksperren-Steuermodul verloren
   description:
-    en: With park-by-wire, an electric actuator drives the parking pawl into a toothed wheel on the transmission output; no cable links it to the selector, so the park lock module alone decides when the pawl may drop in, normally only at standstill because at speed it would just ratchet over the teeth. U01BA is set when the transmission or vehicle controller loses contact with this module. No manufacturer documents the code publicly. U019E differs, as it concerns the module that selects the whole transmission range. Without confirmed pawl position the car may refuse to leave Park, or it tells the driver to set the electric parking brake, and a warning to secure the vehicle appears. U04BD reports invalid data from the same module.
-    de: Bei Park-by-Wire schiebt ein elektrischer Aktuator die Parksperrenklinke in ein Zahnrad am Getriebeausgang; eine Seilverbindung zum Wählhebel gibt es nicht, also entscheidet allein das Parksperren-Steuermodul, wann die Klinke einfallen darf – normalerweise nur im Stand, weil sie bei Fahrt über die Zähne rattern würde. U01BA wird gesetzt, wenn das Getriebe- oder Fahrzeugsteuergerät dieses Modul nicht mehr erreicht. Kein Hersteller dokumentiert den Code öffentlich. Davon zu trennen ist U019E für das Modul, das die gesamte Fahrstufe wählt. Ohne bestätigte Klinkenstellung verweigert das Auto womöglich das Verlassen von P oder verlangt die elektrische Parkbremse; dazu erscheint eine Warnung, das Fahrzeug zu sichern. Ungültige Daten desselben Moduls meldet U04BD.
+    en: "With park-by-wire, an electric actuator drives the parking pawl into a toothed wheel on the transmission output; no cable links it to the selector, so the park lock module alone decides when the pawl may drop in, normally only at standstill because at speed it would just ratchet over the teeth. U01BA is set when the transmission or vehicle controller loses contact with this module. No manufacturer documents the code publicly. Ford, for one, has no separate unit: its 2024 OBD description monitors park-by-wire through the gear shift module and the transmission range control module, whose implausible data set non-MIL codes, and the transmission controller reads the park position sensors itself (P07B3–P07BD). Ford's 2012 description shows the general rule for such network codes: a message that does not arrive counts as lost communication (U0140), one that arrives with values out of range as invalid data (U0422). U019E differs, as it concerns the module that selects the whole transmission range. Without confirmed pawl position the car may refuse to leave Park, or it tells the driver to set the electric parking brake, and a warning to secure the vehicle appears. U04BD reports invalid data from the same module."
+    de: "Bei Park-by-Wire schiebt ein elektrischer Aktuator die Parksperrenklinke in ein Zahnrad am Getriebeausgang; eine Seilverbindung zum Wählhebel gibt es nicht, also entscheidet allein das Parksperren-Steuermodul, wann die Klinke einfallen darf – normalerweise nur im Stand, weil sie bei Fahrt über die Zähne rattern würde. U01BA wird gesetzt, wenn das Getriebe- oder Fahrzeugsteuergerät dieses Modul nicht mehr erreicht. Kein Hersteller dokumentiert den Code öffentlich. Ford etwa kommt ohne eigenes Gerät aus: Seine OBD-Beschreibung von 2024 überwacht Park-by-Wire über das Wählhebelmodul und das Fahrstufen-Steuergerät, deren unplausible Daten Codes ohne MIL setzen, und das Getriebesteuergerät liest die Parkstellungssensoren selbst (P07B3–P07BD). Die allgemeine Regel für solche Netzwerkcodes zeigt Fords Beschreibung von 2012: Eine Botschaft, die ausbleibt, gilt als verlorene Kommunikation (U0140), eine, die mit Werten außerhalb des gültigen Bereichs ankommt, als ungültige Daten (U0422). Davon zu trennen ist U019E für das Modul, das die gesamte Fahrstufe wählt. Ohne bestätigte Klinkenstellung verweigert das Auto womöglich das Verlassen von P oder verlangt die elektrische Parkbremse; dazu erscheint eine Warnung, das Fahrzeug zu sichern. Ungültige Daten desselben Moduls meldet U04BD."
   affected_components:
     - park_lock_module
     - can_bus
@@ -16256,9 +16256,11 @@
     - sae:J2012
   related_codes: [U04BD, U019E, U0103, U0101]
   sources:
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBDSM2400OUTPUT_16Jul2024_WSM_final_V2_MCS7001.pdf
+    - https://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
     - https://en.wikipedia.org/wiki/Parking_pawl
     - https://en.wikipedia.org/wiki/Shift-by-wire
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 
 - code: U01BB
   category: network
@@ -39666,8 +39668,8 @@
     en: Invalid Data Received From Park Lock/Pawl Control Module
     de: Ungültige Daten vom Parksperren-Steuergerät empfangen
   description:
-    en: With park-by-wire, an electronic unit drives an actuator that pushes the parking pawl into the toothed park wheel on the gearbox output and pulls it out again; there is no mechanical link to the selector. Software holds back engagement until the vehicle has stopped, since the pawl would otherwise ratchet over the teeth. U04BD is stored when the park lock module keeps sending messages but their content, such as the reported pawl position, is implausible. It differs from U049F, which covers the module that moves the whole transmission range. No manufacturer documents this code publicly. U01BA marks a module that has gone quiet. Expect a warning to secure the vehicle, a car that refuses to leave Park, or a Park state that the display does not confirm.
-    de: Bei Park-by-Wire bewegt ein Stellantrieb mit eigener Elektronik die Parksperrenklinke in das verzahnte Parkrad des Getriebes und wieder heraus; eine mechanische Verbindung zum Wählhebel gibt es nicht. Die Software lässt das Einrasten erst im Stillstand zu, weil die Klinke sonst über die Zähne ratschen würde. U04BD wird gespeichert, wenn das Parksperren-Steuergerät weiter sendet, der Inhalt – etwa die gemeldete Klinkenstellung – aber unplausibel ist. Abzugrenzen ist U049F für das Modul, das den gesamten Getriebebereich umlegt. Öffentlich dokumentiert kein Hersteller den Code. U01BA steht für ein verstummtes Modul. Zu erwarten sind die Aufforderung, das Fahrzeug zu sichern, ein Auto, das P nicht verlässt, oder eine Parkstellung, die die Anzeige nicht bestätigt.
+    en: "With park-by-wire, an electronic unit drives an actuator that pushes the parking pawl into the toothed park wheel on the gearbox output and pulls it out again; there is no mechanical link to the selector. Software holds back engagement until the vehicle has stopped, since the pawl would otherwise ratchet over the teeth. U04BD is stored when the park lock module keeps sending messages but their content, such as the reported pawl position, is implausible. It differs from U049F, which covers the module that moves the whole transmission range. No manufacturer documents this code publicly. How a maker checks such data is shown by Ford's 2024 OBD description: on park-by-wire vehicles the engine module rejects implausible monitoring data from the gear shift module and the transmission range control module as non-MIL faults, and the two park position sensor inputs are compared with each other (P07B5). Per Ford's 2012 description, it is a value that arrives but lies outside its valid range that makes a network fault an invalid-data code rather than a lost-communication one (U0422 instead of U0140). U01BA marks a module that has gone quiet. Expect a warning to secure the vehicle, a car that refuses to leave Park, or a Park state that the display does not confirm."
+    de: "Bei Park-by-Wire bewegt ein Stellantrieb mit eigener Elektronik die Parksperrenklinke in das verzahnte Parkrad des Getriebes und wieder heraus; eine mechanische Verbindung zum Wählhebel gibt es nicht. Die Software lässt das Einrasten erst im Stillstand zu, weil die Klinke sonst über die Zähne ratschen würde. U04BD wird gespeichert, wenn das Parksperren-Steuergerät weiter sendet, der Inhalt – etwa die gemeldete Klinkenstellung – aber unplausibel ist. Abzugrenzen ist U049F für das Modul, das den gesamten Getriebebereich umlegt. Öffentlich dokumentiert kein Hersteller den Code. Wie ein Hersteller solche Daten prüft, zeigt Fords OBD-Beschreibung von 2024: Bei Park-by-Wire verwirft das Motorsteuergerät unplausible Überwachungsdaten von Wählhebelmodul und Fahrstufen-Steuergerät als Fehler ohne MIL, und die beiden Eingänge der Parkstellungssensoren werden miteinander verglichen (P07B5). Nach Fords Beschreibung von 2012 macht ein Wert, der ankommt, aber außerhalb seines gültigen Bereichs liegt, aus einem Netzwerkfehler einen Code für ungültige Daten statt für verlorene Kommunikation (U0422 statt U0140). U01BA steht für ein verstummtes Modul. Zu erwarten sind die Aufforderung, das Fahrzeug zu sichern, ein Auto, das P nicht verlässt, oder eine Parkstellung, die die Anzeige nicht bestätigt."
   affected_components:
     - park_lock_module
   common_causes:
@@ -39712,9 +39714,11 @@
     - sae:J2012
   related_codes: [U01BA, U049F]
   sources:
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBDSM2400OUTPUT_16Jul2024_WSM_final_V2_MCS7001.pdf
+    - https://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
     - https://en.wikipedia.org/wiki/Shift-by-wire
     - https://en.wikipedia.org/wiki/Parking_pawl
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 
 - code: U04BE
   category: network
@@ -44745,8 +44749,8 @@
     en: Invalid Data Received From Image Processing Sensor I
     de: Ungültige Daten vom Bildverarbeitungssensor I empfangen
   description:
-    en: "The higher letters of the image-sensor series cover the further cameras that newer vehicles add. One growing group looks into the cabin: driver monitoring cameras check whether the driver is watching the road, as Super Cruise does at Cadillac, starting with the 2017 CT6, or Ford's BlueCruise, which uses a module on the steering column of the 2021 Mustang Mach-E and F-150; in the EU such warning systems fall under regulation 2019/2144. Whether any maker files such a camera under letter I is not documented, and neither U056E nor its partner U026D appears in public service material. If the receiver keeps rejecting sensor I's data, the dependent assistant becomes unavailable. No MIL."
-    de: "Die hinteren Buchstaben der Bildsensor-Reihe stehen für weitere Kameras, die neuere Fahrzeuge mitbringen. Eine wachsende Gruppe schaut in den Innenraum: Fahrerbeobachtungskameras prüfen, ob der Fahrer auf die Straße blickt – so bei Cadillacs Super Cruise ab dem CT6 von 2017 oder bei Fords BlueCruise mit einem Modul an der Lenksäule im Mustang Mach-E und F-150 von 2021; in der EU regelt die Verordnung 2019/2144 solche Warnsysteme. Ob ein Hersteller eine solche Kamera unter I führt, ist nicht belegt, und weder U056E noch der Partnercode U026D stehen in öffentlichen Werkstattunterlagen. Verwirft der Empfänger die Daten von Sensor I dauerhaft, ist der davon abhängige Assistent nicht nutzbar. Keine MIL."
+    en: "The higher letters of the image-sensor series cover the further cameras that newer vehicles add. One growing group looks into the cabin: driver monitoring cameras check whether the driver is watching the road, as Super Cruise does at Cadillac, starting with the 2017 CT6, or Ford's BlueCruise, which uses a module on the steering column of the 2021 Mustang Mach-E and F-150; in the EU such warning systems fall under regulation 2019/2144. Ford's driver monitoring camera module on the 2021–2023 Mustang Mach-E and F-150, the 2022–2023 Expedition and Navigator and the 2023 Corsair reports its own faults as B-codes (B115E, B15E1, B15E2), mostly a blocked view, and Ford's 2024 OBD description treats invalid data from an image processing module as a non-MIL fault (U053B). Whether any maker files such a camera under letter I is not documented, and neither U056E nor its partner U026D appears in public service material. If the receiver keeps rejecting sensor I's data, the dependent assistant becomes unavailable. No MIL."
+    de: "Die hinteren Buchstaben der Bildsensor-Reihe stehen für weitere Kameras, die neuere Fahrzeuge mitbringen. Eine wachsende Gruppe schaut in den Innenraum: Fahrerbeobachtungskameras prüfen, ob der Fahrer auf die Straße blickt – so bei Cadillacs Super Cruise ab dem CT6 von 2017 oder bei Fords BlueCruise mit einem Modul an der Lenksäule im Mustang Mach-E und F-150 von 2021; in der EU regelt die Verordnung 2019/2144 solche Warnsysteme. Fords Fahrerbeobachtungskamera in Mustang Mach-E und F-150 (2021–2023), Expedition und Navigator (2022–2023) sowie Corsair (2023) meldet eigene Fehler als B-Codes (B115E, B15E1, B15E2), meist eine verdeckte Sicht, und Fords OBD-Beschreibung von 2024 behandelt ungültige Daten eines Bildverarbeitungsmoduls als Fehler ohne MIL (U053B). Ob ein Hersteller eine solche Kamera unter I führt, ist nicht belegt, und weder U056E noch der Partnercode U026D stehen in öffentlichen Werkstattunterlagen. Verwirft der Empfänger die Daten von Sensor I dauerhaft, ist der davon abhängige Assistent nicht nutzbar. Keine MIL."
   affected_components:
     - image_processing_sensor_i
   common_causes:
@@ -44784,9 +44788,12 @@
     - sae:J2012
   related_codes: [U026D, U056D, U056F]
   sources:
+    - https://static.nhtsa.gov/odi/tsbs/2022/MC-10207055-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2023/MC-10239098-0001.pdf
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBDSM2400OUTPUT_16Jul2024_WSM_final_V2_MCS7001.pdf
     - https://en.wikipedia.org/wiki/Driver_monitoring_system
     - https://en.wikipedia.org/wiki/Advanced_driver-assistance_system
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 
 - code: U056F
   category: network
@@ -46560,8 +46567,8 @@
     en: Invalid Data Received From Drive Motor Control Module D
     de: Ungültige Daten vom Antriebsmotor-Steuergerät D empfangen
   description:
-    en: "Module D only exists where four drive motors are fitted, one per wheel. Rivian's R1T and R1S Quad-Motor are production examples: each wheel has its own motor, so a single faulty controller costs one corner of drive, not a whole axle. U059D records that the fourth controller keeps sending frames whose torque, speed or diagnostic content fails the receiving controller's checks. No manufacturer documents U059D publicly, so the corner it refers to and the reaction are maker-specific. A typical response is to switch off that motor, mirror the limit on the opposite wheel so the vehicle stays straight, and drop to a reduced power mode. Distinguish it from U029C, where the module is silent, and from codes B and C for the other motors."
-    de: "Modul D gibt es nur, wenn vier Antriebsmotoren verbaut sind, einer pro Rad. Rivians R1T und R1S Quad-Motor sind Serienbeispiele: Jedes Rad hat einen eigenen Motor, ein einzelnes defektes Steuergerät kostet also den Antrieb einer Ecke, nicht einer ganzen Achse. U059D hält fest, dass das vierte Steuergerät weiter Botschaften schickt, deren Drehmoment-, Drehzahl- oder Diagnoseinhalt die Prüfung des Empfängers nicht besteht. Kein Hersteller dokumentiert U059D öffentlich; welche Ecke gemeint ist und wie reagiert wird, bleibt herstellerabhängig. Typisch ist, diesen Motor abzuschalten, die Grenze am gegenüberliegenden Rad zu spiegeln, damit das Auto geradeaus läuft, und in einen leistungsreduzierten Modus zu gehen. Abzugrenzen ist U029C (Modul schweigt) sowie B und C."
+    en: "Module D only exists where four drive motors are fitted, one per wheel. Rivian's R1T and R1S Quad-Motor are production examples: each wheel has its own motor, so a single faulty controller costs one corner of drive, not a whole axle. U059D records that the fourth controller keeps sending frames whose torque, speed or diagnostic content fails the receiving controller's checks. Ford's hybrid OBD description shows the usual check for electrified modules: a CAN message missing for 5 s sets the lost-communication code, a signal reporting invalid states for 5 s the invalid-data code (U0111 and U0412 for the battery energy control module). No manufacturer documents U059D publicly, so the corner it refers to and the reaction are maker-specific. A typical response is to switch off that motor, mirror the limit on the opposite wheel so the vehicle stays straight, and drop to a reduced power mode. Distinguish it from U029C, where the module is silent, and from codes B and C for the other motors."
+    de: "Modul D gibt es nur, wenn vier Antriebsmotoren verbaut sind, einer pro Rad. Rivians R1T und R1S Quad-Motor sind Serienbeispiele: Jedes Rad hat einen eigenen Motor, ein einzelnes defektes Steuergerät kostet also den Antrieb einer Ecke, nicht einer ganzen Achse. U059D hält fest, dass das vierte Steuergerät weiter Botschaften schickt, deren Drehmoment-, Drehzahl- oder Diagnoseinhalt die Prüfung des Empfängers nicht besteht. Fords OBD-Beschreibung für Hybride zeigt die übliche Prüfung elektrifizierter Module: Fehlt eine CAN-Botschaft 5 s lang, entsteht der Code für verlorene Kommunikation, meldet ein Signal 5 s lang ungültige Zustände, der für ungültige Daten (U0111 und U0412 beim Batteriesteuergerät). Kein Hersteller dokumentiert U059D öffentlich; welche Ecke gemeint ist und wie reagiert wird, bleibt herstellerabhängig. Typisch ist, diesen Motor abzuschalten, die Grenze am gegenüberliegenden Rad zu spiegeln, damit das Auto geradeaus läuft, und in einen leistungsreduzierten Modus zu gehen. Abzugrenzen ist U029C (Modul schweigt) sowie B und C."
   affected_components:
     - drive_motor_module_d
   common_causes:
@@ -46599,9 +46606,10 @@
     - sae:J2012
   related_codes: [U029C, U059C, U0593]
   sources:
+    - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBDSM1901_HEV.pdf
     - https://en.wikipedia.org/wiki/Rivian_R1T
     - https://en.wikipedia.org/wiki/Rivian_R1S
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 
 - code: U059E
   category: network
