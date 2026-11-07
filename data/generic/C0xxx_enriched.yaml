@@ -4,8 +4,8 @@
     en: TCS Control Channel A Valve 1
     de: Traktionskontrolle Steuerkanal A Ventil 1
   description:
-    en: Covers the first solenoid valve in control channel A of the traction control system, part of the ABS/ESC hydraulic modulator. During a traction event the control module pulses this valve to build and hold brake pressure at a spinning driven wheel without driver pedal input. The module monitors the valve coil circuit for opens, shorts to power or ground and for a resistance outside the expected range, and also checks that commanded and achieved pressure agree. A fault disables traction control and usually the stability function. No manufacturer publishes a code-specific bulletin; the entry follows the SAE J2012 generic definition and the documented operating principle of channel-based ABS modulators.
-    de: Betrifft das erste Magnetventil im Steuerkanal A der Antriebsschlupfregelung, das im Hydraulikblock von ABS/ESP sitzt. Bei einem Traktionseingriff taktet das Steuergerät dieses Ventil, um an einem durchdrehenden Antriebsrad ohne Zutun des Fahrers Bremsdruck aufzubauen und zu halten. Überwacht werden Spulenkreis auf Unterbrechung sowie Kurzschluss nach Plus oder Masse, ein Widerstand außerhalb des Sollbereichs und die Übereinstimmung von Soll- und Ist-Druck. Bei Fehler fällt die Traktionskontrolle und meist auch die Stabilitätsregelung aus. Kein Hersteller dokumentiert den Code öffentlich codegenau; der Eintrag folgt der generischen SAE-J2012-Definition.
+    en: "C0001 concerns the first traction control valve of hydraulic channel A, usually one of the two brake circuits in the ABS/ESC modulator. To brake a spinning drive wheel without driver input, a TCS-capable modulator carries an extra isolation valve and priming valve per circuit: the normally open isolation valve closes off the master cylinder, while the normally closed priming valve opens so the pump can draw fluid and build pressure. Which of the two a maker numbers as valve 1 is not published. The module watches the coil circuit and whether pressure follows the command; a fault switches off traction and usually stability control and lights the warning lamp, while ordinary braking remains. No manufacturer documents this code publicly."
+    de: "C0001 meldet einen Fehler am ersten Ventil der Antriebsschlupfregelung in Hydraulikkanal A, meist einem der beiden Bremskreise im ABS/ESP-Hydroaggregat. Damit die Pumpe ein durchdrehendes Antriebsrad ohne Pedaldruck abbremsen kann, besitzt ein ASR-fähiges Aggregat je Kreis ein zusätzliches Trenn- und ein Ansaugventil: Das stromlos offene Trennventil sperrt den Hauptbremszylinder ab, das stromlos geschlossene Ansaugventil öffnet den Zulauf zur Pumpe. Welches davon ein Hersteller als Ventil 1 zählt, ist nicht veröffentlicht. Überwacht werden Spulenkreis und Druckantwort; bei Fehler fallen ASR und meist ESP aus, die Warnleuchte geht an, die normale Bremse bleibt. Kein Hersteller dokumentiert diesen Code öffentlich."
   affected_components:
     - tcs_valve_a1
   common_causes:
@@ -45,17 +45,18 @@
     - sae:J2012
   related_codes: [C0002, C0003, C0004]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
+    - https://patents.google.com/patent/US8365654B2/en
     - https://en.wikipedia.org/wiki/Traction_control_system
-    - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0002
   category: chassis
   title:
     en: TCS Control Channel A Valve 2
     de: Traktionskontrolle Steuerkanal A Ventil 2
   description:
-    en: Covers the second solenoid valve in control channel A of the traction control system. Where valve 1 typically isolates or applies pressure, valve 2 handles the complementary release or dump function so the modulator can both raise and reduce pressure at the controlled wheel during a traction intervention. The control module watches the coil circuit for opens, shorts and out-of-range resistance and verifies that the pressure response matches the command. Detection of a fault sets the ABS lamp and turns off traction and stability control while leaving conventional braking intact. There is no public code-specific service document; the entry reflects the SAE J2012 generic definition and standard two-valve channel modulator design.
-    de: Betrifft das zweite Magnetventil im Steuerkanal A der Antriebsschlupfregelung. Während Ventil 1 meist absperrt oder Druck aufbaut, übernimmt Ventil 2 die ergänzende Ablass- oder Abbaufunktion, sodass der Hydroblock am geregelten Rad den Druck sowohl erhöhen als auch senken kann. Das Steuergerät prüft den Spulenkreis auf Unterbrechung, Kurzschluss und einen Widerstand außerhalb des Sollbereichs und kontrolliert, ob die Druckantwort zum Befehl passt. Ein erkannter Fehler setzt die ABS-Leuchte und schaltet Traktions- und Stabilitätsregelung ab, die normale Bremse bleibt. Eine codegenaue Herstellerquelle gibt es nicht; Grundlage ist die generische SAE-J2012-Definition.
+    en: "C0002 points to the second traction control valve of channel A. Together with valve 1 it forms the valve pair a TCS modulator adds to each brake circuit: an isolation valve that cuts the circuit off from the master cylinder and a priming valve that opens the path from the master cylinder to the return pump, so pressure can rise at a driven wheel while the pedal is released. The public record does not say which of the pair J2012 calls valve 2. The module flags an open or shorted coil, an implausible current or a pressure response that does not match the command. Traction and stability control are switched off and the ABS or ESC lamp comes on; foundation braking still works. No manufacturer documents this code publicly."
+    de: "C0002 betrifft das zweite ASR-Ventil in Kanal A. Mit Ventil 1 bildet es das Ventilpaar, das ein Aggregat mit Antriebsschlupfregelung jedem Bremskreis hinzufügt: ein Trennventil, das den Kreis vom Hauptbremszylinder abkoppelt, und ein Ansaugventil, das die Rückförderpumpe versorgt, damit an einem Antriebsrad Druck entsteht, obwohl niemand bremst. Welches der beiden J2012 als Ventil 2 führt, lässt sich öffentlich nicht belegen. Das Steuergerät erkennt eine offene oder kurzgeschlossene Spule, einen unplausiblen Strom oder eine Druckantwort, die nicht zum Befehl passt. ASR und ESP werden abgeschaltet, die ABS- oder ESP-Leuchte geht an; die Betriebsbremse arbeitet weiter. Kein Hersteller dokumentiert diesen Code öffentlich."
   affected_components:
     - tcs_valve_a2
   common_causes:
@@ -95,17 +96,18 @@
     - sae:J2012
   related_codes: [C0001, C0003, C0004]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
+    - https://patents.google.com/patent/US8365654B2/en
     - https://en.wikipedia.org/wiki/Traction_control_system
-    - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0003
   category: chassis
   title:
     en: TCS Control Channel B Valve 1
     de: Traktionskontrolle Steuerkanal B Ventil 1
   description:
-    en: Covers the first solenoid valve in control channel B of the traction control system. Channel B serves the second controlled wheel or axle side of the modulator, mirroring channel A; valve 1 builds and holds brake pressure at that wheel when the system acts against drive-wheel spin. The control module tests the coil circuit for opens, shorts to supply or ground and resistance outside the expected window, and cross-checks commanded against measured pressure. A confirmed fault lights the ABS indicator and suspends traction and stability control, with base hydraulic braking unaffected. No code-specific manufacturer bulletin is published; the description follows the SAE J2012 generic meaning and the symmetrical channel layout of ABS/TCS modulators.
-    de: Betrifft das erste Magnetventil im Steuerkanal B der Antriebsschlupfregelung. Kanal B bedient das zweite geregelte Rad bzw. die andere Achsseite des Hydroblocks und spiegelt Kanal A; Ventil 1 baut an diesem Rad Bremsdruck auf und hält ihn, wenn das System gegen durchdrehende Antriebsräder eingreift. Das Steuergerät prüft den Spulenkreis auf Unterbrechung, Kurzschluss nach Plus oder Masse und einen Widerstand außerhalb des erwarteten Bereichs und vergleicht Soll- mit Ist-Druck. Ein bestätigter Fehler setzt die ABS-Leuchte und setzt Traktions- und Stabilitätsregelung aus; die Grundbremse bleibt. Eine codegenaue Herstellerquelle fehlt; Grundlage ist die generische SAE-J2012-Definition.
+    en: "C0003 is the counterpart of C0001 in channel B, the second brake circuit of the modulator. A pump patent for such units shows the layout plainly: two normally open isolation valves and two normally closed priming valves, one of each per circuit, operated by the control unit alongside the apply and release valves when traction control intervenes. Valve 1 of channel B therefore matches the first valve of the other circuit; the published sources do not fix which function carries the number. A coil open or short, a current outside the expected window or a pressure that fails to follow the command sets the code. Traction and stability control are disabled and the warning lamp lights, while ordinary braking is unaffected. No manufacturer documents this code publicly."
+    de: "C0003 ist das Gegenstück zu C0001 in Kanal B, dem zweiten Bremskreis des Aggregats. Ein Pumpenpatent für solche Einheiten zeigt den Aufbau deutlich: zwei stromlos offene Trennventile und zwei stromlos geschlossene Ansaugventile, je eines pro Kreis, die das Steuergerät bei einem ASR-Eingriff zusammen mit Einlass- und Auslassventilen schaltet. Ventil 1 in Kanal B entspricht also dem ersten Ventil des anderen Kreises; welche Funktion die Nummer trägt, legen die öffentlichen Quellen nicht fest. Eine offene oder kurzgeschlossene Spule, ein Strom außerhalb des Fensters oder ein Druck, der dem Befehl nicht folgt, setzt den Code. ASR und ESP fallen aus, die Warnleuchte leuchtet, die normale Bremse bleibt. Kein Hersteller dokumentiert diesen Code öffentlich."
   affected_components:
     - tcs_valve_b1
   common_causes:
@@ -145,17 +147,18 @@
     - sae:J2012
   related_codes: [C0001, C0002, C0004]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
+    - https://patents.google.com/patent/US8365654B2/en
     - https://en.wikipedia.org/wiki/Traction_control_system
-    - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0004
   category: chassis
   title:
     en: TCS Control Channel B Valve 2
     de: Traktionskontrolle Steuerkanal B Ventil 2
   description:
-    en: Covers the second solenoid valve in control channel B of the traction control system. It provides the release or dump path for channel B, letting the modulator reduce brake pressure at the controlled wheel after valve 1 has applied it, so the intervention can be modulated smoothly. The control module monitors the coil circuit for opens, shorts and abnormal resistance and confirms that measured pressure follows the command. When a fault is stored the ABS lamp comes on and traction and stability control are switched off, leaving ordinary foundation braking available. No manufacturer offers a code-level document; the entry is based on the SAE J2012 generic definition and the standard dual-valve-per-channel modulator architecture.
-    de: Betrifft das zweite Magnetventil im Steuerkanal B der Antriebsschlupfregelung. Es bildet den Ablasspfad für Kanal B und lässt den Hydroblock den Bremsdruck am geregelten Rad wieder senken, nachdem Ventil 1 ihn aufgebaut hat, damit der Eingriff fein dosiert werden kann. Das Steuergerät überwacht den Spulenkreis auf Unterbrechung, Kurzschluss und ungewöhnlichen Widerstand und bestätigt, dass der gemessene Druck dem Befehl folgt. Ist ein Fehler gespeichert, leuchtet die ABS-Lampe, und Traktions- sowie Stabilitätsregelung werden abgeschaltet; die gewöhnliche Betriebsbremse bleibt verfügbar. Eine Herstellerquelle auf Code-Ebene gibt es nicht; Grundlage ist die generische SAE-J2012-Definition.
+    en: C0004 completes the set with the second traction control valve of channel B. During an intervention the module closes the isolation valve and opens the priming valve of the circuit concerned so the pump can supply pressure to a wheel that is spinning; afterwards both return to rest so the driver's pedal again acts through the master cylinder. A valve that sticks or a coil that fails can therefore leave the pump without supply or keep the circuit isolated from the pedal, which is why the module reacts at once. It sets the code for an electrical fault or an implausible pressure response, switches off traction and stability control and lights the warning lamp. Base braking stays available. No manufacturer documents this code publicly.
+    de: C0004 schließt die Reihe mit dem zweiten ASR-Ventil in Kanal B ab. Bei einem Eingriff schließt das Steuergerät das Trennventil des betroffenen Kreises und öffnet dessen Ansaugventil, damit die Pumpe einem durchdrehenden Rad Druck liefern kann; danach kehren beide in die Ruhelage zurück, und das Pedal wirkt wieder über den Hauptbremszylinder. Ein klemmendes Ventil oder eine ausgefallene Spule kann deshalb die Pumpe ohne Zulauf lassen oder den Kreis vom Pedal abgekoppelt halten – darum reagiert das Steuergerät sofort. Es speichert den Code bei elektrischem Fehler oder unplausibler Druckantwort, schaltet ASR und ESP ab und setzt die Warnleuchte. Die Grundbremse bleibt verfügbar. Kein Hersteller dokumentiert diesen Code öffentlich.
   affected_components:
     - tcs_valve_b2
   common_causes:
@@ -195,9 +198,10 @@
     - sae:J2012
   related_codes: [C0001, C0002, C0003]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
+    - https://patents.google.com/patent/US8365654B2/en
     - https://en.wikipedia.org/wiki/Traction_control_system
-    - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0010
   category: chassis
   title:
@@ -254,8 +258,8 @@
     en: Left Front Outlet Control
     de: Auslassventil vorne links
   description:
-    en: Covers the left front outlet (release) solenoid valve of the ABS hydraulic modulator. This valve opens to dump brake fluid from the left front caliper into the low-pressure accumulator so the module can reduce wheel pressure during an ABS or stability event, then closes to allow reapply. The control module monitors the coil for opens, shorts to power or ground and resistance outside the normal range. It is the release counterpart to the left front inlet valve C0010. A confirmed fault disables ABS, traction and stability control and lights the ABS indicator while leaving base braking functional. No code-specific manufacturer bulletin is published; the entry follows the SAE J2012 generic definition and standard inlet/outlet modulator design.
-    de: Betrifft das Auslass- bzw. Ablassventil vorne links im ABS-Hydroblock. Dieses Ventil öffnet, um Bremsflüssigkeit aus dem linken vorderen Bremssattel in den Niederdruckspeicher abzulassen, damit das Steuergerät bei ABS- oder Stabilitätseingriff den Raddruck senken kann, und schließt dann für den erneuten Druckaufbau. Das Steuergerät überwacht die Spule auf Unterbrechung, Kurzschluss nach Plus oder Masse und einen Widerstand außerhalb des Normalbereichs. Es ist das Gegenstück zum Einlassventil vorne links C0010. Ein bestätigter Fehler schaltet ABS, Traktion und Stabilität ab und setzt die ABS-Leuchte; die Grundbremse bleibt. Eine codegenaue Herstellerquelle fehlt; Grundlage ist die generische SAE-J2012-Definition.
+    en: Covers the left front outlet (release) solenoid valve of the ABS hydraulic modulator. This valve opens to dump brake fluid from the left front caliper into the low-pressure accumulator so the module can reduce wheel pressure during an ABS or stability event, then closes to allow reapply. The control module monitors the coil for opens, shorts to power or ground and resistance outside the normal range. It is the release counterpart to the left front inlet valve C0010. A confirmed fault disables ABS, traction and stability control and lights the ABS indicator while leaving base braking functional. No manufacturer documents this code publicly; NHTSA's brake safety study names the release valve the module opens to lower wheel pressure, and a pump patent shows it as a normally closed valve beside each apply valve.
+    de: Betrifft das Auslass- bzw. Ablassventil vorne links im ABS-Hydroblock. Dieses Ventil öffnet, um Bremsflüssigkeit aus dem linken vorderen Bremssattel in den Niederdruckspeicher abzulassen, damit das Steuergerät bei ABS- oder Stabilitätseingriff den Raddruck senken kann, und schließt dann für den erneuten Druckaufbau. Das Steuergerät überwacht die Spule auf Unterbrechung, Kurzschluss nach Plus oder Masse und einen Widerstand außerhalb des Normalbereichs. Es ist das Gegenstück zum Einlassventil vorne links C0010. Ein bestätigter Fehler schaltet ABS, Traktion und Stabilität ab und setzt die ABS-Leuchte; die Grundbremse bleibt. Kein Hersteller dokumentiert diesen Code öffentlich; die NHTSA-Studie zu hydraulischen Bremsen nennt das Ablassventil, das den Raddruck senkt, ein Pumpenpatent zeigt es stromlos geschlossen neben jedem Einlassventil.
   affected_components:
     - lf_abs_outlet_valve
   common_causes:
@@ -295,17 +299,18 @@
     - sae:J2012
   related_codes: [C0010, C0012, C0015]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
+    - https://patents.google.com/patent/US8365654B2/en
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-    - https://en.wikipedia.org/wiki/Hydraulic_brake
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0012
   category: chassis
   title:
     en: Left Front Hydraulic Release Too Long
     de: Druckabbau vorne links zu lang
   description:
-    en: "Set when the ABS modulator cannot release pressure at the left front wheel within the expected time during a control cycle. Rather than a pure electrical fault it is a performance or plausibility code: after the module commands the left front outlet valve to dump pressure, it expects wheel speed to recover and pressure to fall; if the release takes longer than the calibrated limit the module concludes the hydraulic path is restricted, the valve is sticking or the pump/accumulator cannot accept fluid. ABS and stability control are disabled and the ABS lamp is set. No public code-level bulletin exists; the entry follows the SAE J2012 generic definition and documented ABS release-timing diagnostics."
-    de: "Wird gesetzt, wenn der ABS-Hydroblock den Druck am linken Vorderrad während eines Regelzyklus nicht in der erwarteten Zeit abbauen kann. Es ist kein reiner Elektrikfehler, sondern ein Funktions- bzw. Plausibilitätscode: Nachdem das Steuergerät das Auslassventil vorne links zum Ablassen angesteuert hat, erwartet es, dass die Raddrehzahl zurückkehrt und der Druck fällt; dauert der Abbau länger als der Kalibrierwert, schließt das Steuergerät auf einen verengten Hydraulikpfad, ein klemmendes Ventil oder einen Speicher, der keine Flüssigkeit aufnimmt. ABS und Stabilität werden abgeschaltet und die ABS-Leuchte gesetzt. Eine codegenaue Quelle fehlt; Grundlage ist die generische SAE-J2012-Definition."
+    en: "Set when the ABS modulator cannot release pressure at the left front wheel within the expected time during a control cycle. Rather than a pure electrical fault it is a performance or plausibility code: after the module commands the left front outlet valve to dump pressure, it expects wheel speed to recover and pressure to fall; if the release takes longer than the calibrated limit the module concludes the hydraulic path is restricted, the valve is sticking or the pump/accumulator cannot accept fluid. ABS and stability control are disabled and the ABS lamp is set. No manufacturer documents this code publicly. NHTSA describes ABS control as a hold, release and reapply cycle, and a patent explains that a well-filled low-pressure accumulator can keep the outlet valves from lowering pressure as demanded."
+    de: "Wird gesetzt, wenn der ABS-Hydroblock den Druck am linken Vorderrad während eines Regelzyklus nicht in der erwarteten Zeit abbauen kann. Es ist kein reiner Elektrikfehler, sondern ein Funktions- bzw. Plausibilitätscode: Nachdem das Steuergerät das Auslassventil vorne links zum Ablassen angesteuert hat, erwartet es, dass die Raddrehzahl zurückkehrt und der Druck fällt; dauert der Abbau länger als der Kalibrierwert, schließt das Steuergerät auf einen verengten Hydraulikpfad, ein klemmendes Ventil oder einen Speicher, der keine Flüssigkeit aufnimmt. ABS und Stabilität werden abgeschaltet und die ABS-Leuchte gesetzt. Kein Hersteller dokumentiert diesen Code öffentlich; die NHTSA beschreibt ABS als Halten, Ablassen und Wiederaufbau, ein Patent zeigt, wie ein voller Niederdruckspeicher das Ablassen bremst."
   affected_components:
     - lf_abs_outlet_valve
     - hcu
@@ -346,17 +351,18 @@
     - sae:J2012
   related_codes: [C0010, C0011, C0016]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
+    - https://patents.google.com/patent/US20100045099A1/en
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-    - https://en.wikipedia.org/wiki/Hydraulic_brake
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0014
   category: chassis
   title:
     en: Right Front Inlet Control
     de: Einlassventil vorne rechts
   description:
-    en: Covers the right front inlet (apply) solenoid valve of the ABS hydraulic modulator, the mirror of C0010 on the right front corner. The module closes this valve to isolate the right front brake circuit and hold wheel pressure during ABS, traction or stability control, then opens it to reapply pressure from the master cylinder or pump. It monitors the coil for opens, shorts to supply or ground and resistance outside the calibrated window. A confirmed electrical fault disables ABS and the stability functions and turns on the ABS warning lamp, with conventional foundation braking unaffected. No manufacturer publishes a code-specific document; the entry follows the SAE J2012 generic definition and standard per-wheel inlet valve design.
-    de: Betrifft das Einlass- bzw. Zuschaltventil vorne rechts im ABS-Hydroblock, das Spiegelbild von C0010 an der rechten Vorderecke. Das Steuergerät schließt dieses Ventil, um den rechten vorderen Bremskreis zu trennen und den Raddruck bei ABS-, Traktions- oder Stabilitätseingriff zu halten, und öffnet es, um wieder Druck aus Hauptbremszylinder oder Pumpe zuzulassen. Es überwacht die Spule auf Unterbrechung, Kurzschluss nach Plus oder Masse und einen Widerstand außerhalb des Kalibrierfensters. Ein bestätigter Elektrikfehler schaltet ABS und Stabilität ab und setzt die ABS-Leuchte; die Betriebsbremse bleibt. Eine codegenaue Herstellerquelle fehlt; Grundlage ist die generische SAE-J2012-Definition.
+    en: Covers the right front inlet (apply) solenoid valve of the ABS hydraulic modulator, the mirror of C0010 on the right front corner. The module closes this valve to isolate the right front brake circuit and hold wheel pressure during ABS, traction or stability control, then opens it to reapply pressure from the master cylinder or pump. It monitors the coil for opens, shorts to supply or ground and resistance outside the calibrated window. A confirmed electrical fault disables ABS and the stability functions and turns on the ABS warning lamp, with conventional foundation braking unaffected. No manufacturer documents this code publicly; NHTSA's safety study of hydraulic ABS/ESC brakes describes the hold valve used per wheel, and a pump patent shows it as a normally open apply valve.
+    de: Betrifft das Einlass- bzw. Zuschaltventil vorne rechts im ABS-Hydroblock, das Spiegelbild von C0010 an der rechten Vorderecke. Das Steuergerät schließt dieses Ventil, um den rechten vorderen Bremskreis zu trennen und den Raddruck bei ABS-, Traktions- oder Stabilitätseingriff zu halten, und öffnet es, um wieder Druck aus Hauptbremszylinder oder Pumpe zuzulassen. Es überwacht die Spule auf Unterbrechung, Kurzschluss nach Plus oder Masse und einen Widerstand außerhalb des Kalibrierfensters. Ein bestätigter Elektrikfehler schaltet ABS und Stabilität ab und setzt die ABS-Leuchte; die Betriebsbremse bleibt. Kein Hersteller dokumentiert diesen Code öffentlich; die NHTSA-Sicherheitsstudie zu ABS/ESP beschreibt das Halteventil je Rad, ein Pumpenpatent zeigt es als stromlos offenes Einlassventil.
   affected_components:
     - rf_abs_inlet_valve
   common_causes:
@@ -396,17 +402,18 @@
     - sae:J2012
   related_codes: [C0010, C0015, C0016]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
+    - https://patents.google.com/patent/US8365654B2/en
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-    - https://en.wikipedia.org/wiki/Hydraulic_brake
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0015
   category: chassis
   title:
     en: Right Front Outlet Control
     de: Auslassventil vorne rechts
   description:
-    en: Covers the right front outlet (release) solenoid valve of the ABS hydraulic modulator, the release counterpart to inlet valve C0014. It opens to dump brake fluid from the right front caliper into the low-pressure accumulator so wheel pressure can fall during an ABS or stability cycle, then closes for reapply. The module monitors the coil circuit for opens, shorts and out-of-range resistance and checks valve response. A confirmed fault disables ABS, traction and stability control and sets the ABS warning lamp while base hydraulic braking stays available. There is no code-specific manufacturer bulletin; the entry reflects the SAE J2012 generic definition and the standard inlet/outlet valve pair used per wheel.
-    de: Betrifft das Auslass- bzw. Ablassventil vorne rechts im ABS-Hydroblock, das Gegenstück zum Einlassventil C0014. Es öffnet, um Bremsflüssigkeit aus dem rechten vorderen Bremssattel in den Niederdruckspeicher abzulassen, damit der Raddruck im ABS- oder Stabilitätszyklus fallen kann, und schließt dann für den erneuten Aufbau. Das Steuergerät überwacht den Spulenkreis auf Unterbrechung, Kurzschluss und einen Widerstand außerhalb des Sollbereichs und prüft das Ansprechen. Ein bestätigter Fehler schaltet ABS, Traktion und Stabilität ab und setzt die ABS-Leuchte; die hydraulische Grundbremse bleibt. Eine codegenaue Herstellerquelle gibt es nicht; Grundlage ist die generische SAE-J2012-Definition.
+    en: Covers the right front outlet (release) solenoid valve of the ABS hydraulic modulator, the release counterpart to inlet valve C0014. It opens to dump brake fluid from the right front caliper into the low-pressure accumulator so wheel pressure can fall during an ABS or stability cycle, then closes for reapply. The module monitors the coil circuit for opens, shorts and out-of-range resistance and checks valve response. A confirmed fault disables ABS, traction and stability control and sets the ABS warning lamp while base hydraulic braking stays available. No manufacturer documents this code publicly; the inlet/outlet pair per wheel is described in NHTSA's brake safety study and in a pump patent for ABS/ESC units.
+    de: Betrifft das Auslass- bzw. Ablassventil vorne rechts im ABS-Hydroblock, das Gegenstück zum Einlassventil C0014. Es öffnet, um Bremsflüssigkeit aus dem rechten vorderen Bremssattel in den Niederdruckspeicher abzulassen, damit der Raddruck im ABS- oder Stabilitätszyklus fallen kann, und schließt dann für den erneuten Aufbau. Das Steuergerät überwacht den Spulenkreis auf Unterbrechung, Kurzschluss und einen Widerstand außerhalb des Sollbereichs und prüft das Ansprechen. Ein bestätigter Fehler schaltet ABS, Traktion und Stabilität ab und setzt die ABS-Leuchte; die hydraulische Grundbremse bleibt. Kein Hersteller dokumentiert diesen Code öffentlich; das Ventilpaar je Rad beschreiben die NHTSA-Bremsstudie und ein Pumpenpatent für ABS/ESP-Aggregate.
   affected_components:
     - rf_abs_outlet_valve
   common_causes:
@@ -446,17 +453,18 @@
     - sae:J2012
   related_codes: [C0014, C0016, C0011]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
+    - https://patents.google.com/patent/US8365654B2/en
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-    - https://en.wikipedia.org/wiki/Hydraulic_brake
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0016
   category: chassis
   title:
     en: Right Front Hydraulic Release Too Long
     de: Druckabbau vorne rechts zu lang
   description:
-    en: Set when the ABS modulator cannot release pressure at the right front wheel within the expected time during a control cycle, the right front equivalent of C0012. After commanding the right front outlet valve to dump pressure the module expects wheel speed to recover and line pressure to fall; if the release exceeds the calibrated time limit it infers a sticking valve, a restricted hydraulic path or an accumulator/pump that cannot take fluid. The module disables ABS and stability control and sets the ABS warning lamp. No code-level service document is published; the entry follows the SAE J2012 generic definition and documented ABS release-timing plausibility checks.
-    de: Wird gesetzt, wenn der ABS-Hydroblock den Druck am rechten Vorderrad im Regelzyklus nicht in der erwarteten Zeit abbauen kann, das Gegenstück zu C0012. Nachdem das Steuergerät das Auslassventil vorne rechts zum Ablassen angesteuert hat, erwartet es, dass die Raddrehzahl zurückkehrt und der Leitungsdruck fällt; überschreitet der Abbau den Kalibrierwert, schließt es auf ein klemmendes Ventil, einen verengten Hydraulikpfad oder einen Speicher bzw. eine Pumpe, die keine Flüssigkeit aufnimmt. Das Steuergerät schaltet ABS und Stabilität ab und setzt die ABS-Leuchte. Eine Quelle auf Code-Ebene fehlt; Grundlage ist die generische SAE-J2012-Definition.
+    en: "Set when the ABS modulator cannot release pressure at the right front wheel within the expected time during a control cycle, the right front equivalent of C0012. After commanding the right front outlet valve to dump pressure the module expects wheel speed to recover and line pressure to fall; if the release exceeds the calibrated time limit it infers a sticking valve, a restricted hydraulic path or an accumulator/pump that cannot take fluid. The module disables ABS and stability control and sets the ABS warning lamp. No manufacturer documents this code publicly. A patent on ABS low-pressure accumulators shows why release can stall: once the accumulator pressure is high, fluid no longer leaves the wheel through the outlet valve as requested."
+    de: "Wird gesetzt, wenn der ABS-Hydroblock den Druck am rechten Vorderrad im Regelzyklus nicht in der erwarteten Zeit abbauen kann, das Gegenstück zu C0012. Nachdem das Steuergerät das Auslassventil vorne rechts zum Ablassen angesteuert hat, erwartet es, dass die Raddrehzahl zurückkehrt und der Leitungsdruck fällt; überschreitet der Abbau den Kalibrierwert, schließt es auf ein klemmendes Ventil, einen verengten Hydraulikpfad oder einen Speicher bzw. eine Pumpe, die keine Flüssigkeit aufnimmt. Das Steuergerät schaltet ABS und Stabilität ab und setzt die ABS-Leuchte. Kein Hersteller dokumentiert diesen Code öffentlich. Ein Patent zu ABS-Niederdruckspeichern zeigt, warum das Ablassen stocken kann: Ist der Speicherdruck hoch, fließt über das Auslassventil nicht mehr genug Fluid ab."
   affected_components:
     - rf_abs_outlet_valve
     - hcu
@@ -497,17 +505,18 @@
     - sae:J2012
   related_codes: [C0014, C0015, C0012]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
+    - https://patents.google.com/patent/US20100045099A1/en
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-    - https://en.wikipedia.org/wiki/Hydraulic_brake
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0018
   category: chassis
   title:
     en: Left Rear Inlet Control
     de: Einlassventil hinten links
   description:
-    en: Covers the left rear inlet (apply) solenoid valve of the ABS hydraulic modulator, the rear-axle counterpart of C0010. The module closes this valve to isolate the left rear brake circuit and hold wheel pressure during ABS, traction or stability control, then opens it to reapply pressure. On many vehicles the rear channel also carries electronic brake-force distribution. The module monitors the coil for opens, shorts to supply or ground and resistance outside the calibrated range. A confirmed electrical fault disables ABS and the stability functions and lights the ABS warning lamp while leaving base braking intact. No code-specific manufacturer bulletin is published; the entry follows the SAE J2012 generic definition.
-    de: Betrifft das Einlass- bzw. Zuschaltventil hinten links im ABS-Hydroblock, das Gegenstück zu C0010 an der Hinterachse. Das Steuergerät schließt dieses Ventil, um den linken hinteren Bremskreis zu trennen und den Raddruck bei ABS-, Traktions- oder Stabilitätseingriff zu halten, und öffnet es für den erneuten Aufbau. Bei vielen Fahrzeugen übernimmt der Hinterachskanal zugleich die elektronische Bremskraftverteilung. Das Steuergerät überwacht die Spule auf Unterbrechung, Kurzschluss nach Plus oder Masse und einen Widerstand außerhalb des Kalibrierbereichs. Ein bestätigter Elektrikfehler schaltet ABS und Stabilität ab und setzt die ABS-Leuchte; die Grundbremse bleibt. Eine codegenaue Herstellerquelle fehlt; Grundlage ist SAE J2012.
+    en: Covers the left rear inlet (apply) solenoid valve of the ABS hydraulic modulator, the rear-axle counterpart of C0010. The module closes this valve to isolate the left rear brake circuit and hold wheel pressure during ABS, traction or stability control, then opens it to reapply pressure. On many vehicles the rear channel also carries electronic brake-force distribution. The module monitors the coil for opens, shorts to supply or ground and resistance outside the calibrated range. A confirmed electrical fault disables ABS and the stability functions and lights the ABS warning lamp while leaving base braking intact. No manufacturer documents this code publicly; NHTSA's brake safety study and a pump patent describe the per-wheel apply valve.
+    de: Betrifft das Einlass- bzw. Zuschaltventil hinten links im ABS-Hydroblock, das Gegenstück zu C0010 an der Hinterachse. Das Steuergerät schließt dieses Ventil, um den linken hinteren Bremskreis zu trennen und den Raddruck bei ABS-, Traktions- oder Stabilitätseingriff zu halten, und öffnet es für den erneuten Aufbau. Bei vielen Fahrzeugen übernimmt der Hinterachskanal zugleich die elektronische Bremskraftverteilung. Das Steuergerät überwacht die Spule auf Unterbrechung, Kurzschluss nach Plus oder Masse und einen Widerstand außerhalb des Kalibrierbereichs. Ein bestätigter Elektrikfehler schaltet ABS und Stabilität ab und setzt die ABS-Leuchte; die Grundbremse bleibt. Kein Hersteller dokumentiert diesen Code öffentlich; Einlassventile je Rad beschreiben die NHTSA-Bremsstudie und ein Pumpenpatent.
   affected_components:
     - lr_abs_inlet_valve
   common_causes:
@@ -547,17 +556,18 @@
     - sae:J2012
   related_codes: [C0019, C001A, C001C]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
+    - https://patents.google.com/patent/US8365654B2/en
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-    - https://en.wikipedia.org/wiki/Hydraulic_brake
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0019
   category: chassis
   title:
     en: Left Rear Outlet Control
     de: Auslassventil hinten links
   description:
-    en: Covers the left rear outlet (release) solenoid valve of the ABS hydraulic modulator, the release counterpart to inlet valve C0018. It opens to dump brake fluid from the left rear caliper or wheel cylinder into the low-pressure accumulator so pressure can fall during an ABS or stability cycle, then closes for reapply. The module monitors the coil circuit for opens, shorts and out-of-range resistance and verifies valve response. A confirmed fault disables ABS, traction and stability control and sets the ABS warning lamp while base hydraulic braking remains. No code-specific manufacturer document exists; the entry follows the SAE J2012 generic definition and standard rear-channel modulator design.
-    de: Betrifft das Auslass- bzw. Ablassventil hinten links im ABS-Hydroblock, das Gegenstück zum Einlassventil C0018. Es öffnet, um Bremsflüssigkeit aus dem linken hinteren Bremssattel oder Radzylinder in den Niederdruckspeicher abzulassen, damit der Druck im ABS- oder Stabilitätszyklus fallen kann, und schließt dann für den erneuten Aufbau. Das Steuergerät überwacht den Spulenkreis auf Unterbrechung, Kurzschluss und einen Widerstand außerhalb des Sollbereichs und prüft das Ansprechen. Ein bestätigter Fehler schaltet ABS, Traktion und Stabilität ab und setzt die ABS-Leuchte; die hydraulische Grundbremse bleibt. Eine codegenaue Herstellerquelle gibt es nicht; Grundlage ist SAE J2012.
+    en: Covers the left rear outlet (release) solenoid valve of the ABS hydraulic modulator, the release counterpart to inlet valve C0018. It opens to dump brake fluid from the left rear caliper or wheel cylinder into the low-pressure accumulator so pressure can fall during an ABS or stability cycle, then closes for reapply. The module monitors the coil circuit for opens, shorts and out-of-range resistance and verifies valve response. A confirmed fault disables ABS, traction and stability control and sets the ABS warning lamp while base hydraulic braking remains. No manufacturer documents this code publicly; the release valve per wheel appears in NHTSA's brake safety study and, normally closed, in a pump patent.
+    de: Betrifft das Auslass- bzw. Ablassventil hinten links im ABS-Hydroblock, das Gegenstück zum Einlassventil C0018. Es öffnet, um Bremsflüssigkeit aus dem linken hinteren Bremssattel oder Radzylinder in den Niederdruckspeicher abzulassen, damit der Druck im ABS- oder Stabilitätszyklus fallen kann, und schließt dann für den erneuten Aufbau. Das Steuergerät überwacht den Spulenkreis auf Unterbrechung, Kurzschluss und einen Widerstand außerhalb des Sollbereichs und prüft das Ansprechen. Ein bestätigter Fehler schaltet ABS, Traktion und Stabilität ab und setzt die ABS-Leuchte; die hydraulische Grundbremse bleibt. Kein Hersteller dokumentiert diesen Code öffentlich; das Auslassventil je Rad steht in der NHTSA-Bremsstudie und, stromlos geschlossen, in einem Pumpenpatent.
   affected_components:
     - lr_abs_outlet_valve
   common_causes:
@@ -597,17 +607,18 @@
     - sae:J2012
   related_codes: [C0018, C001A, C001D]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
+    - https://patents.google.com/patent/US8365654B2/en
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-    - https://en.wikipedia.org/wiki/Hydraulic_brake
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C001A
   category: chassis
   title:
     en: Left Rear Hydraulic Release Too Long
     de: Druckabbau hinten links zu lang
   description:
-    en: Set when the ABS modulator cannot release pressure at the left rear wheel within the expected time during a control cycle, the left rear equivalent of C0012 and C0016. After the module commands the left rear outlet valve to dump pressure it expects wheel speed to recover and line pressure to fall; a release that exceeds the calibrated time limit indicates a sticking valve, a restricted hydraulic path or an accumulator or pump unable to accept fluid. ABS and stability control are disabled and the ABS warning lamp is set. No public code-level bulletin exists; the entry follows the SAE J2012 generic definition and documented ABS release-timing plausibility monitoring.
-    de: Wird gesetzt, wenn der ABS-Hydroblock den Druck am linken Hinterrad im Regelzyklus nicht in der erwarteten Zeit abbauen kann, das Gegenstück zu C0012 und C0016. Nachdem das Steuergerät das Auslassventil hinten links zum Ablassen angesteuert hat, erwartet es, dass die Raddrehzahl zurückkehrt und der Leitungsdruck fällt; überschreitet der Abbau den Kalibrierwert, weist das auf ein klemmendes Ventil, einen verengten Hydraulikpfad oder einen Speicher bzw. eine Pumpe hin, die keine Flüssigkeit aufnimmt. ABS und Stabilität werden abgeschaltet und die ABS-Leuchte gesetzt. Eine Quelle auf Code-Ebene fehlt; Grundlage ist die generische SAE-J2012-Definition.
+    en: Set when the ABS modulator cannot release pressure at the left rear wheel within the expected time during a control cycle, the left rear equivalent of C0012 and C0016. After the module commands the left rear outlet valve to dump pressure it expects wheel speed to recover and line pressure to fall; a release that exceeds the calibrated time limit indicates a sticking valve, a restricted hydraulic path or an accumulator or pump unable to accept fluid. ABS and stability control are disabled and the ABS warning lamp is set. No manufacturer documents this code publicly; NHTSA's study covers the release step of the ABS cycle, and a patent shows how a full low-pressure accumulator slows it.
+    de: Wird gesetzt, wenn der ABS-Hydroblock den Druck am linken Hinterrad im Regelzyklus nicht in der erwarteten Zeit abbauen kann, das Gegenstück zu C0012 und C0016. Nachdem das Steuergerät das Auslassventil hinten links zum Ablassen angesteuert hat, erwartet es, dass die Raddrehzahl zurückkehrt und der Leitungsdruck fällt; überschreitet der Abbau den Kalibrierwert, weist das auf ein klemmendes Ventil, einen verengten Hydraulikpfad oder einen Speicher bzw. eine Pumpe hin, die keine Flüssigkeit aufnimmt. ABS und Stabilität werden abgeschaltet und die ABS-Leuchte gesetzt. Kein Hersteller dokumentiert diesen Code öffentlich; die NHTSA-Studie behandelt den Ablassschritt des ABS-Zyklus, ein Patent zeigt, wie ein voller Niederdruckspeicher ihn bremst.
   affected_components:
     - lr_abs_outlet_valve
     - hcu
@@ -648,17 +659,18 @@
     - sae:J2012
   related_codes: [C0018, C0019, C001E]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
+    - https://patents.google.com/patent/US20100045099A1/en
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-    - https://en.wikipedia.org/wiki/Hydraulic_brake
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C001C
   category: chassis
   title:
     en: Right Rear Inlet Control
     de: Einlassventil hinten rechts
   description:
-    en: Covers the right rear inlet (apply) solenoid valve of the ABS hydraulic modulator, the right rear counterpart of C0010 and C0018. The module closes this valve to isolate the right rear brake circuit and hold wheel pressure during ABS, traction or stability control, then opens it to reapply pressure; on the rear axle the same channel often supports electronic brake-force distribution. It monitors the coil for opens, shorts to supply or ground and resistance outside the calibrated range. A confirmed electrical fault disables ABS and stability control and lights the ABS warning lamp while base braking remains. No code-specific manufacturer bulletin is published; the entry follows the SAE J2012 generic definition.
-    de: Betrifft das Einlass- bzw. Zuschaltventil hinten rechts im ABS-Hydroblock, das Gegenstück zu C0010 und C0018. Das Steuergerät schließt dieses Ventil, um den rechten hinteren Bremskreis zu trennen und den Raddruck bei ABS-, Traktions- oder Stabilitätseingriff zu halten, und öffnet es für den erneuten Aufbau; an der Hinterachse trägt derselbe Kanal oft die elektronische Bremskraftverteilung. Es überwacht die Spule auf Unterbrechung, Kurzschluss nach Plus oder Masse und einen Widerstand außerhalb des Kalibrierbereichs. Ein bestätigter Elektrikfehler schaltet ABS und Stabilität ab und setzt die ABS-Leuchte; die Grundbremse bleibt. Eine codegenaue Herstellerquelle fehlt; Grundlage ist SAE J2012.
+    en: Covers the right rear inlet (apply) solenoid valve of the ABS hydraulic modulator, the right rear counterpart of C0010 and C0018. The module closes this valve to isolate the right rear brake circuit and hold wheel pressure during ABS, traction or stability control, then opens it to reapply pressure; on the rear axle the same channel often supports electronic brake-force distribution. It monitors the coil for opens, shorts to supply or ground and resistance outside the calibrated range. A confirmed electrical fault disables ABS and stability control and lights the ABS warning lamp while base braking remains. No manufacturer documents this code publicly; the apply valve per wheel is described by NHTSA and in a pump patent.
+    de: Betrifft das Einlass- bzw. Zuschaltventil hinten rechts im ABS-Hydroblock, das Gegenstück zu C0010 und C0018. Das Steuergerät schließt dieses Ventil, um den rechten hinteren Bremskreis zu trennen und den Raddruck bei ABS-, Traktions- oder Stabilitätseingriff zu halten, und öffnet es für den erneuten Aufbau; an der Hinterachse trägt derselbe Kanal oft die elektronische Bremskraftverteilung. Es überwacht die Spule auf Unterbrechung, Kurzschluss nach Plus oder Masse und einen Widerstand außerhalb des Kalibrierbereichs. Ein bestätigter Elektrikfehler schaltet ABS und Stabilität ab und setzt die ABS-Leuchte; die Grundbremse bleibt. Kein Hersteller dokumentiert diesen Code öffentlich; das Einlassventil je Rad beschreiben die NHTSA und ein Pumpenpatent.
   affected_components:
     - rr_abs_inlet_valve
   common_causes:
@@ -698,17 +710,18 @@
     - sae:J2012
   related_codes: [C001D, C001E, C0018]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
+    - https://patents.google.com/patent/US8365654B2/en
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-    - https://en.wikipedia.org/wiki/Hydraulic_brake
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C001D
   category: chassis
   title:
     en: Right Rear Outlet Control
     de: Auslassventil hinten rechts
   description:
-    en: Covers the right rear outlet (release) solenoid valve of the ABS hydraulic modulator, the release counterpart to inlet valve C001C. It opens to dump brake fluid from the right rear caliper or wheel cylinder into the low-pressure accumulator so pressure can fall during an ABS or stability cycle, then closes for reapply. The module monitors the coil circuit for opens, shorts and out-of-range resistance and checks valve response. A confirmed fault disables ABS, traction and stability control and sets the ABS warning lamp while base hydraulic braking remains available. No code-specific manufacturer document exists; the entry follows the SAE J2012 generic definition and the standard per-wheel inlet/outlet valve pair.
-    de: Betrifft das Auslass- bzw. Ablassventil hinten rechts im ABS-Hydroblock, das Gegenstück zum Einlassventil C001C. Es öffnet, um Bremsflüssigkeit aus dem rechten hinteren Bremssattel oder Radzylinder in den Niederdruckspeicher abzulassen, damit der Druck im ABS- oder Stabilitätszyklus fallen kann, und schließt dann für den erneuten Aufbau. Das Steuergerät überwacht den Spulenkreis auf Unterbrechung, Kurzschluss und einen Widerstand außerhalb des Sollbereichs und prüft das Ansprechen. Ein bestätigter Fehler schaltet ABS, Traktion und Stabilität ab und setzt die ABS-Leuchte; die hydraulische Grundbremse bleibt. Eine codegenaue Herstellerquelle gibt es nicht; Grundlage ist SAE J2012.
+    en: Covers the right rear outlet (release) solenoid valve of the ABS hydraulic modulator, the release counterpart to inlet valve C001C. It opens to dump brake fluid from the right rear caliper or wheel cylinder into the low-pressure accumulator so pressure can fall during an ABS or stability cycle, then closes for reapply. The module monitors the coil circuit for opens, shorts and out-of-range resistance and checks valve response. A confirmed fault disables ABS, traction and stability control and sets the ABS warning lamp while base hydraulic braking remains available. No manufacturer documents this code publicly; NHTSA's brake study and a pump patent describe the release valve that sits beside each apply valve.
+    de: Betrifft das Auslass- bzw. Ablassventil hinten rechts im ABS-Hydroblock, das Gegenstück zum Einlassventil C001C. Es öffnet, um Bremsflüssigkeit aus dem rechten hinteren Bremssattel oder Radzylinder in den Niederdruckspeicher abzulassen, damit der Druck im ABS- oder Stabilitätszyklus fallen kann, und schließt dann für den erneuten Aufbau. Das Steuergerät überwacht den Spulenkreis auf Unterbrechung, Kurzschluss und einen Widerstand außerhalb des Sollbereichs und prüft das Ansprechen. Ein bestätigter Fehler schaltet ABS, Traktion und Stabilität ab und setzt die ABS-Leuchte; die hydraulische Grundbremse bleibt. Kein Hersteller dokumentiert diesen Code öffentlich; NHTSA-Bremsstudie und Pumpenpatent beschreiben das Auslassventil neben jedem Einlassventil.
   affected_components:
     - rr_abs_outlet_valve
   common_causes:
@@ -748,17 +761,18 @@
     - sae:J2012
   related_codes: [C001C, C001E, C0019]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
+    - https://patents.google.com/patent/US8365654B2/en
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-    - https://en.wikipedia.org/wiki/Hydraulic_brake
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C001E
   category: chassis
   title:
     en: Right Rear Hydraulic Release Too Long
     de: Druckabbau hinten rechts zu lang
   description:
-    en: Set when the ABS modulator cannot release pressure at the right rear wheel within the expected time during a control cycle, completing the per-wheel set with C0012, C0016 and C001A. After commanding the right rear outlet valve to dump pressure the module expects wheel speed to recover and line pressure to fall; a release longer than the calibrated limit points to a sticking valve, a restricted hydraulic path or an accumulator or pump that cannot accept fluid. ABS and stability control are disabled and the ABS warning lamp is set. No code-level service document is published; the entry follows the SAE J2012 generic definition and documented ABS release-timing diagnostics.
-    de: Wird gesetzt, wenn der ABS-Hydroblock den Druck am rechten Hinterrad im Regelzyklus nicht in der erwarteten Zeit abbauen kann, und vervollständigt mit C0012, C0016 und C001A den Satz je Rad. Nachdem das Steuergerät das Auslassventil hinten rechts zum Ablassen angesteuert hat, erwartet es, dass die Raddrehzahl zurückkehrt und der Leitungsdruck fällt; ein Abbau über dem Kalibrierwert weist auf ein klemmendes Ventil, einen verengten Hydraulikpfad oder einen Speicher bzw. eine Pumpe hin, die keine Flüssigkeit aufnimmt. ABS und Stabilität werden abgeschaltet und die ABS-Leuchte gesetzt. Eine Quelle auf Code-Ebene fehlt; Grundlage ist SAE J2012.
+    en: Set when the ABS modulator cannot release pressure at the right rear wheel within the expected time during a control cycle, completing the per-wheel set with C0012, C0016 and C001A. After commanding the right rear outlet valve to dump pressure the module expects wheel speed to recover and line pressure to fall; a release longer than the calibrated limit points to a sticking valve, a restricted hydraulic path or an accumulator or pump that cannot accept fluid. ABS and stability control are disabled and the ABS warning lamp is set. No manufacturer documents this code publicly; the release phase is covered by NHTSA's brake study, the accumulator limit by a patent on low-pressure accumulators.
+    de: Wird gesetzt, wenn der ABS-Hydroblock den Druck am rechten Hinterrad im Regelzyklus nicht in der erwarteten Zeit abbauen kann, und vervollständigt mit C0012, C0016 und C001A den Satz je Rad. Nachdem das Steuergerät das Auslassventil hinten rechts zum Ablassen angesteuert hat, erwartet es, dass die Raddrehzahl zurückkehrt und der Leitungsdruck fällt; ein Abbau über dem Kalibrierwert weist auf ein klemmendes Ventil, einen verengten Hydraulikpfad oder einen Speicher bzw. eine Pumpe hin, die keine Flüssigkeit aufnimmt. ABS und Stabilität werden abgeschaltet und die ABS-Leuchte gesetzt. Kein Hersteller dokumentiert diesen Code öffentlich; die Ablassphase behandelt die NHTSA-Bremsstudie, die Grenze des Speichers ein Patent zu Niederdruckspeichern.
   affected_components:
     - rr_abs_outlet_valve
     - hcu
@@ -799,9 +813,10 @@
     - sae:J2012
   related_codes: [C001C, C001D, C001A]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
+    - https://patents.google.com/patent/US20100045099A1/en
     - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-    - https://en.wikipedia.org/wiki/Hydraulic_brake
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0020
   category: chassis
   title:
@@ -911,8 +926,8 @@
     en: Brake Booster Solenoid
     de: Bremskraftverstärker Magnetventil
   description:
-    en: Covers the solenoid or control valve of the power brake booster, used on electronically controlled boosters and brake-by-wire assemblies to regulate assist and support functions such as automatic emergency braking and stability control. The module monitors the solenoid coil circuit for opens, shorts to power or ground and resistance outside the expected range, and checks that assist follows the command. No manufacturer publishes a retrievable code-specific document for C0022; the entry follows the SAE J2012 generic definition and the design of electronically controlled boosters, where an unusual noise or a solenoid circuit fault can require booster or connector repair. A fault reduces or disables controlled assist; the brake or ABS warning lamp is set and the driver may feel changed pedal effort.
-    de: Betrifft das Magnet- bzw. Steuerventil des Bremskraftverstärkers, das bei elektronisch geregelten Verstärkern und Brake-by-wire-Einheiten die Unterstützung und Zusatzfunktionen wie Notbremsassistent und Stabilitätsregelung steuert. Das Steuergerät überwacht den Spulenkreis auf Unterbrechung, Kurzschluss nach Plus oder Masse und einen Widerstand außerhalb des Sollbereichs und prüft, ob die Unterstützung dem Befehl folgt. Eine codegenaue Herstellerquelle gibt es nicht; Grundlage ist die generische SAE-J2012-Definition; ein ungewöhnliches Geräusch oder ein Fehler im Magnetventilkreis kann den Tausch von Verstärker oder Steckern verlangen. Ein Fehler mindert oder deaktiviert die geregelte Unterstützung; die Brems- oder ABS-Leuchte wird gesetzt, und der Pedaldruck kann sich ändern.
+    en: "C0022 covers the solenoid valve of an electronically controllable brake booster. Patent literature shows a vacuum booster that works in two ways: by the driver's pedal in normal braking, and through a solenoid valve that changes the pressure in an auxiliary chamber so the booster applies the brakes without the pedal. NHTSA's brake study describes the conventional vacuum booster, which this valve extends, sitting ahead of the master cylinder. The module checks the coil circuit for opens, shorts and resistance out of range and whether assist follows the command. A fault removes automatic braking and can change pedal effort; the brake or ABS lamp lights. No manufacturer documents this code publicly with a retrievable bulletin."
+    de: "C0022 betrifft das Magnetventil eines elektronisch ansteuerbaren Bremskraftverstärkers. Die Patentliteratur zeigt einen Unterdruckverstärker mit zwei Betriebsarten: über das Pedal bei normaler Bremsung und über ein Magnetventil, das den Druck in einer Hilfskammer ändert, sodass der Verstärker ohne Pedal bremst. Den herkömmlichen Verstärker zwischen Pedal und Hauptbremszylinder, den dieses Ventil erweitert, beschreibt die NHTSA-Bremsstudie. Geprüft werden Spulenkreis auf Unterbrechung, Kurzschluss und Widerstand sowie die Frage, ob die Unterstützung dem Befehl folgt. Ein Fehler nimmt die automatische Bremsung weg und kann die Pedalkraft verändern; Brems- oder ABS-Leuchte gehen an. Eine abrufbare codegenaue Herstellerquelle gibt es nicht."
   affected_components:
     - brake_booster_solenoid
   common_causes:
@@ -952,17 +967,18 @@
     - sae:J2012
   related_codes: [C0021, C0047, C0048]
   sources:
-    - https://en.wikipedia.org/wiki/Brake-by-wire
+    - https://patents.google.com/patent/US6446537B1/en
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
     - https://en.wikipedia.org/wiki/Vacuum_servo
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0023
   category: chassis
   title:
     en: Stop Lamp Control
     de: Bremslicht-Ansteuerung
   description:
-    en: Covers the stop lamp (brake light) control circuit as driven or monitored by the brake or stability control module. Modern ABS/ESC systems can command the stop lamps during autonomous braking events such as traction control, stability control and automatic emergency braking, independent of the driver pressing the pedal, and they monitor the circuit for opens, shorts and lamp-output disagreement. The code is stored when the commanded stop lamp state does not match the measured output or the circuit is faulty. Effects range from stop lamps that stay on or off to disabled driver-assist functions that rely on brake-light actuation. No code-specific public bulletin was confirmed; the entry follows the SAE J2012 generic definition and documented ESC brake-light actuation.
-    de: Betrifft den Bremslicht-Steuerkreis, wie ihn das Brems- oder Stabilitätssteuergerät ansteuert oder überwacht. Moderne ABS/ESP-Systeme können die Bremsleuchten bei selbsttätigen Bremsungen wie Traktions-, Stabilitätsregelung und Notbremsassistent unabhängig vom Pedaltritt ansteuern und überwachen den Kreis auf Unterbrechung, Kurzschluss und Abweichung der Lampenausgabe. Der Code wird gespeichert, wenn der befohlene Bremslichtzustand nicht zur gemessenen Ausgabe passt oder der Kreis gestört ist. Die Folgen reichen von dauernd leuchtenden oder ausbleibenden Bremsleuchten bis zu abgeschalteten Assistenzfunktionen, die auf die Bremslichtansteuerung angewiesen sind. Eine codegenaue öffentliche Quelle wurde nicht bestätigt; Grundlage ist SAE J2012.
+    en: Covers the stop lamp (brake light) control circuit as driven or monitored by the brake or stability control module. Modern ABS/ESC systems can command the stop lamps during autonomous braking events such as traction control, stability control and automatic emergency braking, independent of the driver pressing the pedal, and they monitor the circuit for opens, shorts and lamp-output disagreement. The code is stored when the commanded stop lamp state does not match the measured output or the circuit is faulty. Effects range from stop lamps that stay on or off to disabled driver-assist functions that rely on brake-light actuation. Mazda stores C0023:14 as a brake light circuit malfunction and names a retrofitted brake light flasher as one trigger (service alert SA-041-26). NHTSA's brake study lists brake lights on/off as a CHB output.
+    de: Betrifft den Bremslicht-Steuerkreis, wie ihn das Brems- oder Stabilitätssteuergerät ansteuert oder überwacht. Moderne ABS/ESP-Systeme können die Bremsleuchten bei selbsttätigen Bremsungen wie Traktions-, Stabilitätsregelung und Notbremsassistent unabhängig vom Pedaltritt ansteuern und überwachen den Kreis auf Unterbrechung, Kurzschluss und Abweichung der Lampenausgabe. Der Code wird gespeichert, wenn der befohlene Bremslichtzustand nicht zur gemessenen Ausgabe passt oder der Kreis gestört ist. Folgen sind dauernd leuchtende oder dunkle Bremsleuchten und abgeschaltete Assistenzfunktionen. Mazda speichert C0023:14 als Störung im Bremslichtkreis und nennt einen nachgerüsteten Bremslicht-Blinker als Auslöser (Service-Hinweis SA-041-26). Die NHTSA-Bremsstudie führt das Bremslicht als Ausgang der Bremsregelung.
   affected_components:
     - stop_lamp_control_circuit
   common_causes:
@@ -1002,9 +1018,10 @@
     - sae:J2012
   related_codes: [C0040, C0041, C0042]
   sources:
+    - https://static.nhtsa.gov/odi/tsbs/2026/MC-11034447-0001.pdf
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
     - https://en.wikipedia.org/wiki/Electronic_stability_control
-    - https://en.wikipedia.org/wiki/Hydraulic_brake
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0024
   category: chassis
   title:
@@ -1061,8 +1078,8 @@
     en: Brake Pedal Feedback Pressure Sensor Circuit
     de: Sensor Pedalrückmeldedruck Stromkreis
   description:
-    en: Covers the sensor that measures brake pedal feedback pressure in an electronic or brake-by-wire braking system, the measurement counterpart to the feedback solenoid C0024. The sensor reports the counter-pressure in the pedal-feel simulator so the module can close the loop and keep pedal feel consistent. The module monitors the sensor circuit for a signal outside the valid voltage range, opens, shorts and implausible values that disagree with commanded pressure. No manufacturer publishes a retrievable code-specific document for C0025; it is documented here as the measurement counterpart to the feedback solenoid C0024, following the SAE J2012 generic definition, where feedback-path faults cause loss of assist and changed pedal feel. A fault alters pedal feel and may reduce controlled assist; the brake or ABS warning lamp is set.
-    de: Betrifft den Sensor, der in einem elektronischen bzw. Brake-by-wire-Bremssystem den Pedalrückmeldedruck misst, das messende Gegenstück zum Rückmeldeventil C0024. Der Sensor meldet den Gegendruck im Pedalgefühlsimulator, damit das Steuergerät den Regelkreis schließen und das Pedalgefühl gleichmäßig halten kann. Das Steuergerät überwacht den Sensorkreis auf ein Signal außerhalb des gültigen Spannungsbereichs, Unterbrechung, Kurzschluss und unplausible Werte, die nicht zum befohlenen Druck passen. Eine codegenaue Herstellerquelle gibt es nicht; der Code ist hier als Gegenstück zum Rückmeldeventil C0024 nach SAE J2012 erfasst, wobei Fehler im Rückmeldepfad Unterstützungsverlust und verändertes Pedalgefühl bewirken. Ein Fehler verändert das Pedalgefühl und kann die Unterstützung mindern; die Brems- oder ABS-Leuchte wird gesetzt.
+    en: C0025 covers the pressure sensor on the pedal feedback side of a decoupled or brake-by-wire system, the measuring partner of the feedback valve C0024. In such systems the pedal pushes fluid into a pedal feel simulator via a simulator valve the module can open or close, while separate sensors read pressure in the simulator circuit and in the wheel circuit. A patent for this layout reads the driver's request from a pressure sensor on the master cylinder side and describes a standstill self-test that opens the simulator valve and watches the pressure rise. The module sets C0025 for a signal out of range, an open or short, or a value that does not fit pedal travel. Pedal feel changes, assist may drop to a mechanical fallback, and the brake or ABS lamp lights. No manufacturer documents this code publicly.
+    de: C0025 betrifft den Drucksensor auf der Rückmeldeseite eines entkoppelten oder Brake-by-wire-Bremssystems, das messende Gegenstück zum Rückmeldeventil C0024. Dort drückt das Pedal Fluid über ein Simulatorventil in einen Pedalgefühlsimulator; eigene Sensoren messen den Druck in Simulator- und Radkreis. Ein Patent zu diesem Aufbau liest den Bremswunsch über einen Drucksensor auf der Seite des Hauptbremszylinders und beschreibt einen Selbsttest im Stand, der das Simulatorventil öffnet und den Druckanstieg beobachtet. Das Steuergerät setzt C0025 bei einem Signal außerhalb des Bereichs, Unterbrechung, Kurzschluss oder einem Wert, der nicht zum Pedalweg passt. Das Pedalgefühl ändert sich, die Bremse kann in eine mechanische Rückfallebene wechseln, eine Warnleuchte geht an. Kein Hersteller dokumentiert diesen Code öffentlich.
   affected_components:
     - brake_pedal_feedback_pressure_sensor
   common_causes:
@@ -1102,9 +1119,9 @@
     - sae:J2012
   related_codes: [C0024, C0021, C0047]
   sources:
+    - https://patents.google.com/patent/US10046748B2/en
     - https://en.wikipedia.org/wiki/Brake-by-wire
-    - https://en.wikipedia.org/wiki/Hydraulic_brake
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0030
   category: chassis
   title:
@@ -1211,8 +1228,8 @@
     en: Left Front Wheel Speed Sensor Supply
     de: Versorgung Raddrehzahlsensor vorne links
   description:
-    en: Covers the supply circuit that powers the left front active wheel speed sensor. Active sensors need a regulated voltage from the ABS/ESC module; this code is set when that supply is open, shorted to ground or to another voltage, or is outside the regulated range so the sensor cannot report a valid signal. It is distinct from the sensor-signal code C0031 in that the fault is on the feed rather than in the sensor element or its output. A fault disables ABS, traction and stability control for that corner and lights the ABS warning lamp while base braking remains. No code-specific public bulletin was confirmed; the entry follows the SAE J2012 generic definition and active wheel speed sensor supply design.
-    de: Betrifft den Versorgungskreis des aktiven Raddrehzahlsensors vorne links. Aktive Sensoren brauchen eine geregelte Spannung vom ABS/ESP-Steuergerät; dieser Code wird gesetzt, wenn diese Versorgung unterbrochen, nach Masse oder auf eine andere Spannung kurzgeschlossen oder außerhalb des geregelten Bereichs ist, sodass der Sensor kein gültiges Signal liefern kann. Er unterscheidet sich vom Signalcode C0031 dadurch, dass der Fehler auf der Speiseleitung liegt, nicht im Sensorelement oder dessen Ausgang. Ein Fehler schaltet ABS, Traktion und Stabilität für dieses Rad ab und setzt die ABS-Leuchte; die Grundbremse bleibt. Eine codegenaue öffentliche Quelle wurde nicht bestätigt; Grundlage ist SAE J2012.
+    en: Covers the supply circuit that powers the left front active wheel speed sensor. Active sensors need a regulated voltage from the ABS/ESC module; this code is set when that supply is open, shorted to ground or to another voltage, or is outside the regulated range so the sensor cannot report a valid signal. It is distinct from the sensor-signal code C0031 in that the fault is on the feed rather than in the sensor element or its output. A fault disables ABS, traction and stability control for that corner and lights the ABS warning lamp while base braking remains. No manufacturer documents this code publicly; NHTSA reproduces the J2012 wheel speed sensor codes, with C0032 as left front supply, in its EPS safety report.
+    de: Betrifft den Versorgungskreis des aktiven Raddrehzahlsensors vorne links. Aktive Sensoren brauchen eine geregelte Spannung vom ABS/ESP-Steuergerät; dieser Code wird gesetzt, wenn diese Versorgung unterbrochen, nach Masse oder auf eine andere Spannung kurzgeschlossen oder außerhalb des geregelten Bereichs ist, sodass der Sensor kein gültiges Signal liefern kann. Er unterscheidet sich vom Signalcode C0031 dadurch, dass der Fehler auf der Speiseleitung liegt, nicht im Sensorelement oder dessen Ausgang. Ein Fehler schaltet ABS, Traktion und Stabilität für dieses Rad ab und setzt die ABS-Leuchte; die Grundbremse bleibt. Kein Hersteller dokumentiert diesen Code öffentlich; die NHTSA führt C0032 als Versorgung vorne links in ihrer J2012-Tabelle zum EPS-Bericht.
   affected_components:
     - lf_wss
     - wss_supply_circuit
@@ -1253,9 +1270,10 @@
     - sae:J2012
   related_codes: [C0031, C0030, C0038]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37209/dot_37209_DS1.pdf
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
     - https://en.wikipedia.org/wiki/Wheel_speed_sensor
-    - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0033
   category: chassis
   title:
@@ -1359,44 +1377,47 @@
 - code: C0035
   category: chassis
   title:
-    en: Left Front Wheel Speed Sensor Circuit Malfunction
-    de: Raddrehzahlsensor vorne links Stromkreis gestört
+    en: Right Front Wheel Speed Sensor Supply
+    de: Versorgung Raddrehzahlsensor vorne rechts
   description:
-    en: "A general circuit-malfunction code for the left front wheel speed sensor, covering an electrical fault that is not resolved to a more specific sub-type: open circuit, short to power or ground, or a signal that drops out or becomes implausible while driving. No manufacturer publishes a retrievable code-specific document for C0035; a well-documented cause of left front wheel speed sensor circuit faults is damaged or chafed sensor harness wiring, which makes the condition intermittent and is diagnosed by inspecting and repairing the broken sensor wire. A fault disables ABS, traction and stability control and lights the ABS warning lamp while conventional braking stays available. The condition can be intermittent when caused by chafed or broken wiring."
-    de: "Ein allgemeiner Stromkreis-Störungscode für den Raddrehzahlsensor vorne links; er erfasst einen elektrischen Fehler, der keiner spezielleren Unterart zugeordnet ist: Unterbrechung, Kurzschluss nach Plus oder Masse oder ein Signal, das bei Fahrt aussetzt oder unplausibel wird. Eine abrufbare codegenaue Herstellerquelle gibt es nicht; eine gut dokumentierte Ursache für Stromkreisfehler des Raddrehzahlsensors vorne links ist eine beschädigte oder gescheuerte Sensorverkabelung, die den Fehler sporadisch macht und durch Prüfen und Instandsetzen der gebrochenen Leitung behoben wird. Ein Fehler schaltet ABS, Traktion und Stabilität ab und setzt die ABS-Leuchte; die normale Bremse bleibt. Bei gescheuerter oder gebrochener Leitung tritt der Fehler sporadisch auf."
+    en: "C0035 reports a fault in the feed that powers the right front active wheel speed sensor, the right-hand partner of C0032. The ABS/ESC module supplies the sensor with a regulated voltage; an open feed, a short to ground or to another voltage, or a supply outside its window leaves the sensor unable to send a speed signal. NHTSA's EPS safety report lists C0035 with this meaning in its table of J2012 wheel speed codes. Caution with older GM vehicles: GM numbers its four wheel speed sensor circuits C0035 to C0050 in its own scheme (bulletin 16-NA-248, PIE0456), so a GM C0035 is a sensor circuit fault rather than a supply fault. ABS, traction and stability control switch off and the ABS lamp lights; normal braking remains."
+    de: "C0035 meldet einen Fehler in der Speisung des aktiven Raddrehzahlsensors vorne rechts, des rechten Gegenstücks zu C0032. Das ABS/ESP-Steuergerät versorgt den Sensor mit geregelter Spannung; eine unterbrochene Speiseleitung, ein Kurzschluss nach Masse oder auf eine Fremdspannung oder eine Versorgung außerhalb ihres Fensters nimmt dem Sensor die Möglichkeit, ein Drehzahlsignal zu senden. Die NHTSA führt C0035 mit dieser Bedeutung in der J2012-Tabelle ihres EPS-Sicherheitsberichts. Vorsicht bei älteren GM-Fahrzeugen: GM nummeriert seine vier Raddrehzahl-Sensorkreise nach eigenem Schema als C0035 bis C0050 (Bulletin 16-NA-248, PIE0456); dort ist C0035 ein Sensorkreisfehler. ABS, ASR und ESP fallen aus, die ABS-Leuchte geht an, die normale Bremse bleibt."
   affected_components:
-    - wheel_speed_sensor
-    - abs_control_module
-    - tone_ring
-    - sensor_wiring
+    - rf_wss
+    - wss_supply_circuit
   common_causes:
-    - id: wiring
+    - id: supply_wiring
       likelihood: high
       label:
-        en: Broken or chafed sensor harness wiring
-        de: Gebrochene oder gescheuerte Sensorverkabelung
-    - id: sensor_fault
+        en: Open or shorted supply wire to the right front sensor
+        de: Unterbrochene oder kurzgeschlossene Versorgungsleitung zum Sensor vorne rechts
+    - id: connector_corrosion
       likelihood: medium
       label:
-        en: Wheel speed sensor failed
-        de: Raddrehzahlsensor defekt
-    - id: connector_corrosion
+        en: Corroded or loose sensor connector
+        de: Korrodierter oder lockerer Sensorstecker
+    - id: sensor_internal_short
+      likelihood: medium
+      label:
+        en: Sensor shorted internally and pulling the supply down
+        de: Sensor intern kurzgeschlossen, zieht die Versorgung herunter
+    - id: module_supply
       likelihood: low
       label:
-        en: Corroded sensor connector
-        de: Korrodierter Sensorstecker
+        en: Sensor supply output of the ABS module faulty
+        de: Sensorversorgungsausgang des ABS-Steuergeräts defekt
   symptoms:
     - en: ABS warning lamp on
       de: ABS-Warnleuchte an
-    - en: ABS and traction control disabled
-      de: ABS und Traktionskontrolle abgeschaltet
-    - en: Unwanted traction control activation
-      de: Ungewollter Traktionskontrolleingriff
+    - en: ABS, traction and stability control disabled
+      de: ABS, ASR und ESP abgeschaltet
+    - en: No speed signal from the right front wheel
+      de: Kein Drehzahlsignal vom Rad vorne rechts
   repair:
     difficulty: medium
     diy_possible: true
     estimated_cost_eur: [60, 450]
-    estimated_hours: [0.5, 2.5]
+    estimated_hours: [0.5, 2]
   flags:
     mil: false
     emissions_relevant: false
@@ -1404,11 +1425,13 @@
     limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [C0031, C0032, C0040]
+  related_codes: [C0032, C0034, C0033, C0038, C003B]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37209/dot_37209_DS1.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2017/MC-10116543-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2018/MC-10137396-9999.pdf
     - https://en.wikipedia.org/wiki/Wheel_speed_sensor
-    - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0036
   category: chassis
   title:
@@ -1666,8 +1689,8 @@
     en: Right Rear Wheel Speed Sensor Supply
     de: Versorgung Raddrehzahlsensor hinten rechts
   description:
-    en: Covers the supply circuit that powers the right rear active wheel speed sensor, completing the supply set with C0032 and C0038. Active sensors need a regulated voltage from the ABS/ESC module; this code is set when that supply is open, shorted to ground or to another voltage, or outside the regulated range so the sensor cannot produce a valid signal. It is distinct from the sensor-signal code C003A in that the fault is on the feed rather than in the sensor element. A fault disables ABS, traction and stability control for that corner and lights the ABS warning lamp while base braking remains. No code-specific public bulletin was confirmed; the entry follows the SAE J2012 generic definition and active sensor supply design.
-    de: Betrifft den Versorgungskreis des aktiven Raddrehzahlsensors hinten rechts und vervollständigt mit C0032 und C0038 den Versorgungssatz. Aktive Sensoren brauchen eine geregelte Spannung vom ABS/ESP-Steuergerät; dieser Code wird gesetzt, wenn diese Versorgung unterbrochen, nach Masse oder auf eine andere Spannung kurzgeschlossen oder außerhalb des geregelten Bereichs ist, sodass der Sensor kein gültiges Signal erzeugen kann. Er unterscheidet sich vom Signalcode C003A dadurch, dass der Fehler auf der Speiseleitung liegt, nicht im Sensorelement. Ein Fehler schaltet ABS, Traktion und Stabilität für dieses Rad ab und setzt die ABS-Leuchte; die Grundbremse bleibt. Eine codegenaue öffentliche Quelle wurde nicht bestätigt; Grundlage ist SAE J2012.
+    en: Covers the supply circuit that powers the right rear active wheel speed sensor, completing the supply set with C0032 and C0038. Active sensors need a regulated voltage from the ABS/ESC module; this code is set when that supply is open, shorted to ground or to another voltage, or outside the regulated range so the sensor cannot produce a valid signal. It is distinct from the sensor-signal code C003A in that the fault is on the feed rather than in the sensor element. A fault disables ABS, traction and stability control for that corner and lights the ABS warning lamp while base braking remains. No manufacturer documents this code publicly; NHTSA lists C003B as right rear supply in the J2012 table of its EPS safety report.
+    de: Betrifft den Versorgungskreis des aktiven Raddrehzahlsensors hinten rechts und vervollständigt mit C0032 und C0038 den Versorgungssatz. Aktive Sensoren brauchen eine geregelte Spannung vom ABS/ESP-Steuergerät; dieser Code wird gesetzt, wenn diese Versorgung unterbrochen, nach Masse oder auf eine andere Spannung kurzgeschlossen oder außerhalb des geregelten Bereichs ist, sodass der Sensor kein gültiges Signal erzeugen kann. Er unterscheidet sich vom Signalcode C003A dadurch, dass der Fehler auf der Speiseleitung liegt, nicht im Sensorelement. Ein Fehler schaltet ABS, Traktion und Stabilität für dieses Rad ab und setzt die ABS-Leuchte; die Grundbremse bleibt. Kein Hersteller dokumentiert diesen Code öffentlich; die NHTSA führt C003B als Versorgung hinten rechts in der J2012-Tabelle ihres EPS-Berichts.
   affected_components:
     - rr_wss
     - sensor_supply
@@ -1708,17 +1731,18 @@
     - sae:J2012
   related_codes: [C003A, C0038, C0032]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37209/dot_37209_DS1.pdf
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
     - https://en.wikipedia.org/wiki/Wheel_speed_sensor
-    - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C003C
   category: chassis
   title:
     en: Rear Tone Wheel
     de: Tonrad hinten
   description:
-    en: Covers a single rear tone wheel (reluctor or encoder ring) on vehicles that use one combined rear wheel speed signal, for example from a differential or rear axle sensor, rather than separate left and right rear rings. It is a signal-plausibility code set when the module sees an erratic, noisy or intermittent rear speed signal consistent with a damaged, contaminated or loose tone ring rather than a sensor circuit failure. A fault disables ABS, traction and stability control and lights the ABS warning lamp while base braking remains; on such vehicles rear-based functions like electronic brake-force distribution are affected. No code-specific public bulletin was confirmed; the entry follows the SAE J2012 generic definition and single-rear-sensor layouts.
-    de: Betrifft ein einzelnes hinteres Tonrad (Impulsring bzw. Encoderring) bei Fahrzeugen, die ein kombiniertes Hinterrad-Drehzahlsignal nutzen, etwa von einem Differential- oder Hinterachssensor, statt getrennter Ringe links und rechts. Es ist ein Signalplausibilitätscode, gesetzt, wenn das Steuergerät ein unstetes, verrauschtes oder aussetzendes Hinterrad-Drehzahlsignal sieht, das zu einem beschädigten, verschmutzten oder losen Tonrad passt, nicht zu einem Stromkreisfehler. Ein Fehler schaltet ABS, Traktion und Stabilität ab und setzt die ABS-Leuchte; bei solchen Fahrzeugen sind hinterradbasierte Funktionen wie die elektronische Bremskraftverteilung betroffen. Eine codegenaue öffentliche Quelle wurde nicht bestätigt; Grundlage ist SAE J2012.
+    en: Covers a single rear tone wheel (reluctor or encoder ring) on vehicles that use one combined rear wheel speed signal, for example from a differential or rear axle sensor, rather than separate left and right rear rings. It is a signal-plausibility code set when the module sees an erratic, noisy or intermittent rear speed signal consistent with a damaged, contaminated or loose tone ring rather than a sensor circuit failure. A fault disables ABS, traction and stability control and lights the ABS warning lamp while base braking remains; on such vehicles rear-based functions like electronic brake-force distribution are affected. No manufacturer documents this code publicly; NHTSA's EPS safety report lists the rear tone wheel code C003C among the J2012 wheel speed codes.
+    de: Betrifft ein einzelnes hinteres Tonrad (Impulsring bzw. Encoderring) bei Fahrzeugen, die ein kombiniertes Hinterrad-Drehzahlsignal nutzen, etwa von einem Differential- oder Hinterachssensor, statt getrennter Ringe links und rechts. Es ist ein Signalplausibilitätscode, gesetzt, wenn das Steuergerät ein unstetes, verrauschtes oder aussetzendes Hinterrad-Drehzahlsignal sieht, das zu einem beschädigten, verschmutzten oder losen Tonrad passt, nicht zu einem Stromkreisfehler. Ein Fehler schaltet ABS, Traktion und Stabilität ab und setzt die ABS-Leuchte; bei solchen Fahrzeugen sind hinterradbasierte Funktionen wie die elektronische Bremskraftverteilung betroffen. Kein Hersteller dokumentiert diesen Code öffentlich; der EPS-Bericht der NHTSA führt C003C als hinteres Geberrad unter den J2012-Raddrehzahlcodes.
   affected_components:
     - rear_tone_wheel
   common_causes:
@@ -1758,17 +1782,18 @@
     - sae:J2012
   related_codes: [C003D, C003E, C0036]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37209/dot_37209_DS1.pdf
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
     - https://en.wikipedia.org/wiki/Wheel_speed_sensor
-    - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C003D
   category: chassis
   title:
     en: Rear Wheel Speed Sensor
     de: Raddrehzahlsensor hinten
   description:
-    en: Covers a single rear wheel speed sensor on vehicles that use one combined rear speed signal, for example a rear axle or differential-mounted sensor, instead of separate left and right rear sensors. It reports rear rotation to the ABS/ESC module for anti-lock, traction and stability control and electronic brake-force distribution. The module monitors the circuit for opens, shorts to power or ground, a signal outside the valid range and a missing signal while moving. A fault disables ABS, traction and stability control and lights the ABS warning lamp while base braking remains. No code-specific public bulletin was confirmed; the entry follows the SAE J2012 generic definition and single-rear-sensor system design.
-    de: Betrifft einen einzelnen hinteren Raddrehzahlsensor bei Fahrzeugen, die ein kombiniertes Hinterrad-Signal nutzen, etwa einen an Hinterachse oder Differential sitzenden Sensor, statt getrennter Sensoren links und rechts. Er meldet die Hinterraddrehung an das ABS/ESP-Steuergerät für Antiblockier-, Traktions- und Stabilitätsregelung sowie die elektronische Bremskraftverteilung. Das Steuergerät überwacht den Kreis auf Unterbrechung, Kurzschluss nach Plus oder Masse, ein Signal außerhalb des gültigen Bereichs und ein fehlendes Signal bei Fahrt. Ein Fehler schaltet ABS, Traktion und Stabilität ab und setzt die ABS-Leuchte; die Grundbremse bleibt. Eine codegenaue öffentliche Quelle wurde nicht bestätigt; Grundlage ist SAE J2012.
+    en: Covers a single rear wheel speed sensor on vehicles that use one combined rear speed signal, for example a rear axle or differential-mounted sensor, instead of separate left and right rear sensors. It reports rear rotation to the ABS/ESC module for anti-lock, traction and stability control and electronic brake-force distribution. The module monitors the circuit for opens, shorts to power or ground, a signal outside the valid range and a missing signal while moving. A fault disables ABS, traction and stability control and lights the ABS warning lamp while base braking remains. No manufacturer documents this code publicly; NHTSA's EPS safety report carries C003D as the rear wheel speed sensor in its J2012 table.
+    de: Betrifft einen einzelnen hinteren Raddrehzahlsensor bei Fahrzeugen, die ein kombiniertes Hinterrad-Signal nutzen, etwa einen an Hinterachse oder Differential sitzenden Sensor, statt getrennter Sensoren links und rechts. Er meldet die Hinterraddrehung an das ABS/ESP-Steuergerät für Antiblockier-, Traktions- und Stabilitätsregelung sowie die elektronische Bremskraftverteilung. Das Steuergerät überwacht den Kreis auf Unterbrechung, Kurzschluss nach Plus oder Masse, ein Signal außerhalb des gültigen Bereichs und ein fehlendes Signal bei Fahrt. Ein Fehler schaltet ABS, Traktion und Stabilität ab und setzt die ABS-Leuchte; die Grundbremse bleibt. Kein Hersteller dokumentiert diesen Code öffentlich; der EPS-Bericht der NHTSA nennt C003D in seiner J2012-Tabelle als hinteren Raddrehzahlsensor.
   affected_components:
     - rear_wss
   common_causes:
@@ -1808,17 +1833,18 @@
     - sae:J2012
   related_codes: [C003C, C003E, C0037]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37209/dot_37209_DS1.pdf
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
     - https://en.wikipedia.org/wiki/Wheel_speed_sensor
-    - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C003E
   category: chassis
   title:
     en: Rear Wheel Speed Sensor Supply
     de: Versorgung Raddrehzahlsensor hinten
   description:
-    en: Covers the supply circuit that powers a single rear active wheel speed sensor on vehicles with one combined rear speed signal. Active sensors need a regulated voltage from the ABS/ESC module; this code is set when that supply is open, shorted to ground or another voltage, or outside the regulated range so the sensor cannot produce a valid signal. It is distinct from the sensor-signal code C003D in that the fault is on the feed rather than the sensor element. A fault disables ABS, traction and stability control and lights the ABS warning lamp while base braking remains. No code-specific public bulletin was confirmed; the entry follows the SAE J2012 generic definition and active sensor supply design.
-    de: Betrifft den Versorgungskreis eines einzelnen hinteren aktiven Raddrehzahlsensors bei Fahrzeugen mit kombiniertem Hinterrad-Signal. Aktive Sensoren brauchen eine geregelte Spannung vom ABS/ESP-Steuergerät; dieser Code wird gesetzt, wenn diese Versorgung unterbrochen, nach Masse oder auf eine andere Spannung kurzgeschlossen oder außerhalb des geregelten Bereichs ist, sodass der Sensor kein gültiges Signal erzeugen kann. Er unterscheidet sich vom Signalcode C003D dadurch, dass der Fehler auf der Speiseleitung liegt, nicht im Sensorelement. Ein Fehler schaltet ABS, Traktion und Stabilität ab und setzt die ABS-Leuchte; die Grundbremse bleibt. Eine codegenaue öffentliche Quelle wurde nicht bestätigt; Grundlage ist SAE J2012.
+    en: Covers the supply circuit that powers a single rear active wheel speed sensor on vehicles with one combined rear speed signal. Active sensors need a regulated voltage from the ABS/ESC module; this code is set when that supply is open, shorted to ground or another voltage, or outside the regulated range so the sensor cannot produce a valid signal. It is distinct from the sensor-signal code C003D in that the fault is on the feed rather than the sensor element. A fault disables ABS, traction and stability control and lights the ABS warning lamp while base braking remains. No manufacturer documents this code publicly; the J2012 table in NHTSA's EPS safety report lists C003E as the rear sensor supply.
+    de: Betrifft den Versorgungskreis eines einzelnen hinteren aktiven Raddrehzahlsensors bei Fahrzeugen mit kombiniertem Hinterrad-Signal. Aktive Sensoren brauchen eine geregelte Spannung vom ABS/ESP-Steuergerät; dieser Code wird gesetzt, wenn diese Versorgung unterbrochen, nach Masse oder auf eine andere Spannung kurzgeschlossen oder außerhalb des geregelten Bereichs ist, sodass der Sensor kein gültiges Signal erzeugen kann. Er unterscheidet sich vom Signalcode C003D dadurch, dass der Fehler auf der Speiseleitung liegt, nicht im Sensorelement. Ein Fehler schaltet ABS, Traktion und Stabilität ab und setzt die ABS-Leuchte; die Grundbremse bleibt. Kein Hersteller dokumentiert diesen Code öffentlich; die J2012-Tabelle im EPS-Bericht der NHTSA führt C003E als Versorgung des hinteren Sensors.
   affected_components:
     - rear_wss
     - sensor_supply
@@ -1859,17 +1885,18 @@
     - sae:J2012
   related_codes: [C003D, C003C, C003B]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37209/dot_37209_DS1.pdf
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
     - https://en.wikipedia.org/wiki/Wheel_speed_sensor
-    - https://en.wikipedia.org/wiki/Anti-lock_braking_system
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C003F
   category: chassis
   title:
     en: Wheel Speed Sensors Rotation Direction Correlation
     de: Raddrehzahlsensoren Drehrichtung Plausibilität
   description:
-    en: A correlation code set when the directional information from the wheel speed sensors does not agree across wheels or with other motion inputs. Directional (bidirectional) wheel speed sensors tell the ABS/ESC module whether a wheel turns forward or backward, which the module uses for hill-hold, rollback detection and stability functions. The code stores when one wheel reports a rotation direction that is implausible against the others, the selected gear or the yaw and acceleration sensors. It points to a faulty directional sensor, a wiring fault or a tone-ring problem rather than a simple speed-signal loss. Affected functions are disabled and the ABS warning lamp is set while base braking remains. The entry follows the SAE J2012 generic definition.
-    de: Ein Plausibilitätscode, gesetzt, wenn die Richtungsinformation der Raddrehzahlsensoren zwischen den Rädern oder gegenüber anderen Bewegungsgrößen nicht übereinstimmt. Richtungserkennende (bidirektionale) Raddrehzahlsensoren melden dem ABS/ESP-Steuergerät, ob ein Rad vorwärts oder rückwärts dreht, was es für Berganfahrhilfe, Rollback-Erkennung und Stabilitätsfunktionen nutzt. Der Code wird gespeichert, wenn ein Rad eine Drehrichtung meldet, die zu den übrigen Rädern, zum eingelegten Gang oder zu Gier- und Beschleunigungssensoren unplausibel ist. Er deutet auf einen fehlerhaften Richtungssensor, einen Leitungsfehler oder ein Tonradproblem, nicht auf einen bloßen Signalverlust. Betroffene Funktionen werden abgeschaltet und die ABS-Leuchte gesetzt; die Grundbremse bleibt. Grundlage ist SAE J2012.
+    en: A correlation code set when the directional information from the wheel speed sensors does not agree across wheels or with other motion inputs. Directional (bidirectional) wheel speed sensors tell the ABS/ESC module whether a wheel turns forward or backward, which the module uses for hill-hold, rollback detection and stability functions. The code stores when one wheel reports a rotation direction that is implausible against the others, the selected gear or the yaw and acceleration sensors. It points to a faulty directional sensor, its wiring or the tone ring. Affected functions are disabled and the ABS warning lamp is set while base braking remains. Direction-capable sensor ICs such as Allegro's A19302 send speed plus direction over PW or AK protocol. No manufacturer documents this code publicly.
+    de: Ein Plausibilitätscode, gesetzt, wenn die Richtungsinformation der Raddrehzahlsensoren zwischen den Rädern oder gegenüber anderen Bewegungsgrößen nicht übereinstimmt. Richtungserkennende Raddrehzahlsensoren melden dem ABS/ESP-Steuergerät, ob ein Rad vorwärts oder rückwärts dreht – wichtig für Berganfahrhilfe, Rückrollerkennung und Stabilitätsfunktionen. Der Code wird gespeichert, wenn ein Rad eine Drehrichtung meldet, die zu den übrigen Rädern, zum eingelegten Gang oder zu Gier- und Beschleunigungssensoren unplausibel ist. Er deutet auf Richtungssensor, Leitung oder Geberrad. Betroffene Funktionen fallen aus, die ABS-Leuchte geht an; die Grundbremse bleibt. Drehrichtungsfähige Sensor-ICs wie der A19302 von Allegro senden Drehzahl und Richtung per PW- oder AK-Protokoll. Kein Hersteller dokumentiert diesen Code öffentlich.
   affected_components:
     - wheel_speed_sensors
   common_causes:
@@ -1909,42 +1936,48 @@
     - sae:J2012
   related_codes: [C0031, C0034, C0037]
   sources:
+    - https://www.allegromicro.com/en/products/sense/magnetic-speed/wheel-speed-sensor-ics/a19302
     - https://en.wikipedia.org/wiki/Wheel_speed_sensor
     - https://en.wikipedia.org/wiki/Electronic_stability_control
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0040
   category: chassis
   title:
     en: Brake Pedal Switch A
     de: Bremslichtschalter A
   description:
-    en: Covers brake pedal switch A, the primary brake switch that tells the brake, powertrain and driver-assist modules when the pedal is pressed. Modern vehicles use two independent switch signals for redundancy; signal A is the main one, used for stop lamps, cruise and adaptive cruise cancel, stop-start and stability functions. The module sets the code when the switch state is implausible, stuck, or disagrees with switch B or the pedal position sensor. This entry follows the current SAE J2012 generic meaning as a brake pedal switch, the primary counterpart to brake pedal switch B (C0041); no manufacturer publishes a retrievable document that defines C0040 specifically as brake pedal switch A. A fault can disable cruise and assist functions and illuminate warning lamps.
-    de: Betrifft den Bremslichtschalter A, den primären Bremsschalter, der Brems-, Antriebs- und Assistenzsteuergeräten meldet, wann das Pedal getreten ist. Moderne Fahrzeuge nutzen zwei unabhängige Schaltsignale zur Redundanz; Signal A ist das Hauptsignal für Bremsleuchten, Abschaltung von Tempomat und Abstandsregeltempomat, Start-Stopp und Stabilitätsfunktionen. Das Steuergerät setzt den Code, wenn der Schaltzustand unplausibel ist, hängt oder nicht zu Schalter B oder zum Pedalpositionssensor passt. Dieser Eintrag folgt der heutigen generischen SAE-J2012-Bedeutung als Bremsschalter, dem primären Gegenstück zum Bremslichtschalter B (C0041); eine abrufbare Herstellerquelle, die C0040 ausdrücklich als Bremslichtschalter A definiert, gibt es nicht. Ein Fehler kann Tempomat und Assistenz abschalten und Warnleuchten auslösen.
+    en: C0040 reports a fault on brake pedal switch A, the first of two switch signals that tell the brake, engine and transmission modules the pedal is pressed. Mazda defines C0040:24 as a circuit malfunction of brake switch signal no. 1; on the 2024 CX-90 it appears with P0504 and a push button start warning, and service alert SA-062-23 cures it by moving the switch one adjustment notch. Ford sees C0040 with P0504 on 2020-2022 F-Super Duty trucks that cannot be moved out of park, pointing to corrosion inside the battery junction box or a damaged shift-interlock circuit. Typical effects are stop lamps that stay lit (Ford TSB 22-2044), a start system warning and a shift interlock that will not release. Older GM vehicles use C0040 for a wheel speed sensor circuit in their own scheme.
+    de: C0040 meldet einen Fehler am Bremslichtschalter A, dem ersten von zwei Schaltsignalen, mit denen Brems-, Motor- und Getriebesteuerung erfahren, dass das Pedal getreten ist. Mazda definiert C0040:24 als Kreisstörung des Bremsschaltersignals Nr. 1; am CX-90 von 2024 tritt es mit P0504 und einer Startknopf-Warnung auf, und der Service-Hinweis SA-062-23 behebt es, indem der Schalter um eine Raste verstellt wird. Ford kennt C0040 mit P0504 an F-Super-Duty-Modellen 2020–2022, die sich nicht aus P schalten lassen; Ursache sind Korrosion im Batterie-Verteilerkasten oder ein beschädigter Kreis der Schaltsperre. Typisch sind dauernd leuchtende Bremsleuchten (Ford TSB 22-2044), eine Warnung des Startsystems und eine Schaltsperre, die nicht freigibt. Ältere GM-Fahrzeuge nutzen C0040 nach eigenem Schema für einen Raddrehzahlkreis.
   affected_components:
     - brake_pedal_switch_a
   common_causes:
-    - id: switch_fault
+    - id: switch_misadjusted
       likelihood: high
       label:
-        en: Brake switch failed or misadjusted
-        de: Bremsschalter defekt oder falsch eingestellt
+        en: Brake switch out of adjustment (Mazda SA-062-23)
+        de: Bremslichtschalter falsch eingestellt (Mazda SA-062-23)
+    - id: junction_box_corrosion
+      likelihood: medium
+      label:
+        en: Water or corrosion in the battery junction box (Ford TSB 22-2044)
+        de: Wasser oder Korrosion im Batterie-Verteilerkasten (Ford TSB 22-2044)
     - id: wiring
       likelihood: medium
       label:
-        en: Open or shorted switch wiring
-        de: Unterbrochene oder kurzgeschlossene Schalterleitung
-    - id: connector
+        en: Damaged switch or shift-interlock wiring
+        de: Beschädigte Leitung zu Schalter oder Schaltsperre
+    - id: switch_fault
       likelihood: low
       label:
-        en: Corroded or loose connector
-        de: Korrodierter oder loser Stecker
+        en: Brake switch failed internally
+        de: Bremslichtschalter intern defekt
   symptoms:
     - en: Stop lamps stay on or do not light
-      de: Bremsleuchten bleiben an oder leuchten nicht
-    - en: Cruise or adaptive cruise will not set
-      de: Tempomat oder Abstandsregeltempomat lässt sich nicht aktivieren
-    - en: Warning lamp or driver message
-      de: Warnleuchte oder Fahrermeldung
+      de: Bremsleuchten dauernd an oder ohne Funktion
+    - en: Vehicle will not shift out of park
+      de: Fahrzeug lässt sich nicht aus P schalten
+    - en: Push button start malfunction warning (Mazda)
+      de: Warnung „Startknopf gestört“ (Mazda)
   repair:
     difficulty: easy
     diy_possible: true
@@ -1959,9 +1992,12 @@
     - sae:J2012
   related_codes: [C0041, C0042, C0043]
   sources:
-    - https://en.wikipedia.org/wiki/Hydraulic_brake
-    - https://en.wikipedia.org/wiki/Electronic_stability_control
-  reviewed: '2026-11-05'
+    - https://static.nhtsa.gov/odi/tsbs/2023/MC-10244568-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2022/MC-10214488-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2022/MC-10208141-0001.pdf
+    - https://rosap.ntl.bts.gov/view/dot/37209/dot_37209_DS1.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2017/MC-10116543-9999.pdf
+  reviewed: '2026-11-07'
 - code: C0041
   category: chassis
   title:
@@ -2068,8 +2104,8 @@
     en: Brake Pedal Position Sensor Circuit B
     de: Bremspedalpositionssensor Stromkreis B
   description:
-    en: Covers circuit B of the brake pedal position sensor, the redundant second channel that the module cross-checks against channel A (C0042). Dual-channel pedal position sensors provide two independent voltage signals, often with opposite slopes, so the module can detect a single-channel fault by correlation. This code is set when channel B is out of range, open, shorted or does not track channel A within tolerance. It supports brake-by-wire assist, regenerative braking blending and precise stop-lamp and cruise control. A fault can disable assist and cruise functions and set a warning lamp while base braking remains. No code-specific public bulletin was confirmed; the entry follows the SAE J2012 generic definition and dual-channel pedal sensor design.
-    de: Betrifft Kanal B des Bremspedalpositionssensors, den redundanten zweiten Kanal, den das Steuergerät gegen Kanal A (C0042) gegenprüft. Zweikanalige Pedalpositionssensoren liefern zwei unabhängige Spannungssignale, oft mit gegenläufiger Kennlinie, sodass das Steuergerät einen Einkanalfehler über die Korrelation erkennt. Dieser Code wird gesetzt, wenn Kanal B außerhalb des Bereichs, unterbrochen, kurzgeschlossen ist oder Kanal A nicht innerhalb der Toleranz folgt. Er stützt Brake-by-wire-Unterstützung, die Mischung mit Rekuperation und präzise Brems- und Tempomatsteuerung. Ein Fehler kann Unterstützung und Tempomat abschalten und eine Warnleuchte setzen; die Grundbremse bleibt. Eine codegenaue öffentliche Quelle wurde nicht bestätigt; Grundlage ist SAE J2012.
+    en: Covers circuit B of the brake pedal position sensor, the redundant second channel that the module cross-checks against channel A (C0042). Dual-channel pedal position sensors provide two independent voltage signals, often with opposite slopes, so the module can detect a single-channel fault by correlation. This code is set when channel B is out of range, open, shorted or does not track channel A within tolerance. It supports brake-by-wire assist, regenerative braking blending and precise stop-lamp and cruise control. A fault can disable assist and cruise functions and set a warning lamp while base braking remains. No manufacturer documents this code publicly; NHTSA's EPS report lists C0043 in its J2012 table, and its brake study explains how the module uses the pedal sensor to read driver intent.
+    de: Betrifft Kanal B des Bremspedalpositionssensors, den redundanten zweiten Kanal, den das Steuergerät gegen Kanal A (C0042) gegenprüft. Zweikanalige Pedalpositionssensoren liefern zwei unabhängige Spannungssignale, oft mit gegenläufiger Kennlinie, sodass das Steuergerät einen Einkanalfehler über die Korrelation erkennt. Dieser Code wird gesetzt, wenn Kanal B außerhalb des Bereichs, unterbrochen, kurzgeschlossen ist oder Kanal A nicht innerhalb der Toleranz folgt. Er dient Brake-by-wire, der Mischung mit Rekuperation und dem Tempomat. Ein Fehler kann Unterstützung und Tempomat abschalten und eine Warnleuchte setzen; die Grundbremse bleibt. Kein Hersteller dokumentiert diesen Code öffentlich; die NHTSA führt C0043 in der J2012-Tabelle ihres EPS-Berichts, ihre Bremsstudie beschreibt den Pedalsensor als Quelle des Fahrerwunschs.
   affected_components:
     - brake_pedal_position_sensor
   common_causes:
@@ -2109,9 +2145,10 @@
     - sae:J2012
   related_codes: [C0042, C0040, C0041]
   sources:
-    - https://en.wikipedia.org/wiki/Hydraulic_brake
+    - https://rosap.ntl.bts.gov/view/dot/37209/dot_37209_DS1.pdf
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
     - https://en.wikipedia.org/wiki/Brake-by-wire
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0044
   category: chassis
   title:
@@ -2168,8 +2205,8 @@
     en: Brake Pressure Sensor B
     de: Bremsdrucksensor B
   description:
-    en: Covers brake pressure sensor B (sensor 2) in the ABS/ESC hydraulic unit, the second pressure transducer used alongside sensor A (C0044). Dual pressure sensors let the module measure both brake circuits or provide a redundant reading for stability, brake assist and brake-by-wire control. The module sets the code for a signal outside the valid range, an open or short, or a value that does not correlate with sensor A or with pedal demand. On integrated brake units the sensor is built into the hydraulic control unit, so repair typically means replacing the complete brake unit rather than a single sensor. A fault disables stability and assist functions and sets the ABS or brake warning lamp while base braking remains.
-    de: Betrifft den Bremsdrucksensor B (Sensor 2) im ABS/ESP-Hydroaggregat, den zweiten Druckaufnehmer neben Sensor A (C0044). Zwei Drucksensoren lassen das Steuergerät beide Bremskreise messen oder liefern einen redundanten Wert für Stabilität, Bremsassistent und Brake-by-wire-Steuerung. Das Steuergerät setzt den Code bei einem Signal außerhalb des gültigen Bereichs, Unterbrechung oder Kurzschluss oder einem Wert, der nicht mit Sensor A oder dem Pedalwunsch korreliert. In integrierten Bremsaggregaten sitzt der Sensor im Hydraulikaggregat, sodass die Reparatur meist den Tausch der kompletten Bremseinheit statt eines einzelnen Sensors bedeutet. Ein Fehler schaltet Stabilität und Assistenz ab und setzt die ABS- oder Bremsleuchte; die Grundbremse bleibt.
+    en: C0045 covers brake pressure sensor B, the second pressure transducer in the ABS/ESC hydraulic unit next to sensor A (C0044). Two sensors let the module watch both brake circuits or check one reading against the other for stability control, brake assist and brake-by-wire functions. The code sets for a signal out of range, an open or short, or a value that disagrees with sensor A or the pedal demand. Where the sensor sits inside an integrated brake unit, repair usually means replacing the whole unit. NHTSA's EPS safety report lists C0045 with this J2012 meaning. Older GM vehicles use C0045 for the left rear wheel speed sensor circuit instead (GM PIE0456, 16-NA-248), so the make decides what a stored C0045 means.
+    de: C0045 betrifft den Bremsdrucksensor B, den zweiten Druckaufnehmer im ABS/ESP-Hydroaggregat neben Sensor A (C0044). Mit zwei Sensoren überwacht das Steuergerät beide Bremskreise oder prüft einen Wert gegen den anderen – für Stabilitätsregelung, Bremsassistent und Brake-by-wire. Der Code entsteht bei einem Signal außerhalb des Bereichs, Unterbrechung, Kurzschluss oder einem Wert, der nicht zu Sensor A oder zum Pedalwunsch passt. Sitzt der Sensor in einer integrierten Bremseinheit, wird meist die ganze Einheit getauscht. Der EPS-Bericht der NHTSA führt C0045 mit dieser J2012-Bedeutung. Ältere GM-Fahrzeuge nutzen C0045 dagegen für den Raddrehzahlkreis hinten links (GM PIE0456, 16-NA-248) – welche Bedeutung gilt, hängt also von der Marke ab.
   affected_components:
     - brake_pressure_sensor_b
   common_causes:
@@ -2209,17 +2246,19 @@
     - sae:J2012
   related_codes: [C0044, C0046, C0024]
   sources:
-    - https://en.wikipedia.org/wiki/Hydraulic_brake
-    - https://en.wikipedia.org/wiki/Brake-by-wire
-  reviewed: '2026-11-05'
+    - https://rosap.ntl.bts.gov/view/dot/37209/dot_37209_DS1.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2018/MC-10137396-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2017/MC-10116543-9999.pdf
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
+  reviewed: '2026-11-07'
 - code: C0046
   category: chassis
   title:
     en: Brake Pressure Sensor A/B
     de: Bremsdrucksensoren A/B Plausibilität
   description:
-    en: "A correlation code for the pair of brake pressure sensors A and B, set when their readings do not agree within the expected tolerance. Where C0044 and C0045 flag a single-sensor electrical fault, this code is a plausibility fault: at the same instant both sensors should report consistent pressure (allowing for their known relationship), and a persistent mismatch indicates one sensor has drifted, a hydraulic fault separates the circuits, or a signal is corrupted. The stability and brake modules rely on agreement to trust the pressure reading for stability, brake assist and brake-by-wire control. A fault disables those functions and sets the ABS or brake warning lamp while base braking remains. The entry follows the SAE J2012 generic definition and dual-sensor correlation monitoring."
-    de: "Ein Plausibilitätscode für das Paar der Bremsdrucksensoren A und B, gesetzt, wenn ihre Werte nicht innerhalb der erwarteten Toleranz übereinstimmen. Während C0044 und C0045 einen Einzelsensor-Elektrikfehler melden, ist dies ein Plausibilitätsfehler: Beide Sensoren sollten im selben Moment einen stimmigen Druck melden (unter Berücksichtigung ihres bekannten Verhältnisses), und eine dauerhafte Abweichung deutet auf einen driftenden Sensor, einen die Kreise trennenden Hydraulikfehler oder ein gestörtes Signal. Stabilitäts- und Bremssteuergerät verlassen sich auf die Übereinstimmung, um dem Druckwert für Stabilität, Bremsassistent und Brake-by-wire zu trauen. Ein Fehler schaltet diese Funktionen ab und setzt die ABS- oder Bremsleuchte; die Grundbremse bleibt. Grundlage ist SAE J2012."
+    en: "A correlation code for the pair of brake pressure sensors A and B, set when their readings do not agree within the expected tolerance. Where C0044 and C0045 flag a single-sensor electrical fault, this code is a plausibility fault: at the same instant both sensors should report consistent pressure (allowing for their known relationship), and a persistent mismatch indicates one sensor has drifted, a hydraulic fault separates the circuits, or a signal is corrupted. The stability and brake modules rely on agreement to trust the pressure reading for stability, brake assist and brake-by-wire control. A fault disables those functions and sets the ABS or brake warning lamp while base braking remains. NHTSA lists C0046 in the J2012 table of its EPS report. No manufacturer documents it publicly."
+    de: "Ein Plausibilitätscode für das Paar der Bremsdrucksensoren A und B, gesetzt, wenn ihre Werte nicht innerhalb der erwarteten Toleranz übereinstimmen. Während C0044 und C0045 einen Einzelsensor-Elektrikfehler melden, ist dies ein Plausibilitätsfehler: Beide Sensoren sollten im selben Moment einen stimmigen Druck melden, und eine dauerhafte Abweichung deutet auf einen driftenden Sensor, einen die Kreise trennenden Hydraulikfehler oder ein gestörtes Signal. Stabilitäts- und Bremssteuergerät verlassen sich auf die Übereinstimmung, um dem Druckwert für Stabilität, Bremsassistent und Brake-by-wire zu trauen. Ein Fehler schaltet diese Funktionen ab und setzt die ABS- oder Bremsleuchte; die Grundbremse bleibt. Die NHTSA führt C0046 in der J2012-Tabelle ihres EPS-Berichts. Kein Hersteller dokumentiert den Code öffentlich."
   affected_components:
     - brake_pressure_sensors
   common_causes:
@@ -2259,9 +2298,10 @@
     - sae:J2012
   related_codes: [C0044, C0045, C0024]
   sources:
-    - https://en.wikipedia.org/wiki/Hydraulic_brake
+    - https://rosap.ntl.bts.gov/view/dot/37209/dot_37209_DS1.pdf
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
     - https://en.wikipedia.org/wiki/Brake-by-wire
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0047
   category: chassis
   title:
@@ -2318,8 +2358,8 @@
     en: Brake Booster Travel Sensor
     de: Bremskraftverstärker Wegsensor
   description:
-    en: "Covers the travel (position) sensor of the power brake booster or brake actuation unit, which reports how far the booster input rod or piston has moved so the module can match assist to driver demand. The module monitors the sensor for a signal outside the valid range, an open or short and a position that is implausible against pedal position or boost pressure. It complements the booster pressure sensor C0047: travel gives displacement while pressure gives force, and together they let the module close the assist loop in electronic and brake-by-wire boosters. A fault reduces or disables controlled assist, changes pedal feel and sets the brake or ABS warning lamp while base braking remains. The entry follows the SAE J2012 generic definition."
-    de: "Betrifft den Weg- bzw. Positionssensor des Bremskraftverstärkers bzw. der Bremsbetätigungseinheit, der meldet, wie weit Eingangsstange oder Kolben des Verstärkers gewandert sind, damit das Steuergerät die Unterstützung dem Fahrerwunsch anpassen kann. Das Steuergerät überwacht den Sensor auf ein Signal außerhalb des gültigen Bereichs, Unterbrechung oder Kurzschluss und auf eine Position, die zu Pedalstellung oder Verstärkungsdruck unplausibel ist. Er ergänzt den Verstärker-Drucksensor C0047: Der Weg liefert die Verschiebung, der Druck die Kraft, und zusammen schließen sie in elektronischen und Brake-by-wire-Verstärkern den Regelkreis. Ein Fehler mindert oder deaktiviert die Unterstützung, ändert das Pedalgefühl und setzt die Brems- oder ABS-Leuchte; die Grundbremse bleibt. Grundlage ist SAE J2012."
+    en: "Covers the travel (position) sensor of the power brake booster or brake actuation unit, which reports how far the booster input rod or piston has moved so the module can match assist to driver demand. The module monitors the sensor for a signal outside the valid range, an open or short and a position that is implausible against pedal position or boost pressure. It complements the booster pressure sensor C0047: travel gives displacement while pressure gives force, and together they let the module close the assist loop in electronic and brake-by-wire boosters. A fault reduces or disables controlled assist, changes pedal feel and sets the brake or ABS warning lamp while base braking remains. Patents describe an electrical travel sensor that tracks the moving wall inside a vacuum booster. No manufacturer documents this code publicly."
+    de: "Betrifft den Wegsensor des Bremskraftverstärkers bzw. der Bremsbetätigungseinheit; er meldet, wie weit Eingangsstange oder Kolben gewandert sind, damit die Unterstützung zum Fahrerwunsch passt. Das Steuergerät überwacht den Sensor auf ein Signal außerhalb des gültigen Bereichs, Unterbrechung oder Kurzschluss und auf eine Position, die zu Pedalstellung oder Verstärkungsdruck unplausibel ist. Er ergänzt den Verstärker-Drucksensor C0047: Weg und Druck zusammen schließen in elektronischen Verstärkern den Regelkreis. Ein Fehler mindert oder deaktiviert die Unterstützung, ändert das Pedalgefühl und setzt die Brems- oder ABS-Leuchte; die Grundbremse bleibt. Patente beschreiben einen elektrischen Wegsensor an der beweglichen Wand eines Unterdruckverstärkers. Kein Hersteller dokumentiert den Code öffentlich."
   affected_components:
     - brake_booster_travel_sensor
   common_causes:
@@ -2359,9 +2399,10 @@
     - sae:J2012
   related_codes: [C0047, C0021, C0022]
   sources:
+    - https://patents.google.com/patent/US5231913A/en
     - https://en.wikipedia.org/wiki/Vacuum_servo
     - https://en.wikipedia.org/wiki/Brake-by-wire
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0049
   category: chassis
   title:
@@ -2418,8 +2459,8 @@
     en: Brake Lining Wear Sensor
     de: Bremsbelag-Verschleißsensor
   description:
-    en: "Covers the brake lining (pad) wear sensor circuit, which warns the driver when friction material is worn to its limit. Electronic wear sensors use a loop embedded in the pad that the disc contacts and opens, or a wear-indicator circuit, as the lining wears down; the module reports pad wear and may store this code for an open, shorted or implausible sensor circuit as well as for a genuine worn-pad signal. It is an advisory function rather than a safety-critical control loss: braking and ABS continue, but the driver is told to inspect or replace the pads. The code can appear after pad replacement if the sensor was not renewed or reconnected. The entry follows the SAE J2012 generic definition and standard wear-sensor design."
-    de: "Betrifft den Stromkreis des Bremsbelag-Verschleißsensors, der den Fahrer warnt, wenn das Reibmaterial seine Grenze erreicht. Elektronische Verschleißsensoren nutzen eine im Belag eingebettete Schleife, die die Scheibe berührt und öffnet, oder einen Verschleißanzeigekreis, sobald der Belag abgenutzt ist; das Steuergerät meldet den Verschleiß und kann diesen Code bei unterbrochenem, kurzgeschlossenem oder unplausiblem Sensorkreis sowie bei einem echten Verschleißsignal speichern. Es ist eine Hinweisfunktion, kein sicherheitskritischer Regelverlust: Bremse und ABS arbeiten weiter, der Fahrer wird aber zur Prüfung oder zum Tausch der Beläge aufgefordert. Der Code kann nach einem Belagwechsel auftreten, wenn der Sensor nicht erneuert oder angeschlossen wurde. Grundlage ist SAE J2012."
+    en: "Covers the brake lining (pad) wear sensor circuit, which warns the driver when friction material is worn to its limit. Electronic wear sensors use a loop embedded in the pad that the disc contacts and opens, or a wear-indicator circuit, as the lining wears down; the module reports pad wear and may store this code for an open, shorted or implausible sensor circuit as well as for a genuine worn-pad signal. It is an advisory function rather than a safety-critical control loss: braking and ABS continue, but the driver is told to inspect or replace the pads. The code can appear after pad replacement if the sensor was not renewed or reconnected. Delphi describes both the single loop and two-stage sensors with two resistor circuits. No manufacturer documents this code publicly."
+    de: Betrifft den Stromkreis des Bremsbelag-Verschleißsensors, der den Fahrer warnt, wenn das Reibmaterial seine Grenze erreicht. Elektronische Verschleißsensoren nutzen eine im Belag eingebettete Schleife, die die Scheibe berührt und öffnet, oder einen Verschleißanzeigekreis, sobald der Belag abgenutzt ist; das Steuergerät meldet den Verschleiß und kann diesen Code bei unterbrochenem, kurzgeschlossenem oder unplausiblem Sensorkreis sowie bei einem echten Verschleißsignal speichern. Bremse und ABS arbeiten weiter; der Fahrer soll die Beläge prüfen oder tauschen lassen. Der Code kann nach einem Belagwechsel auftreten, wenn der Sensor nicht erneuert oder angeschlossen wurde. Delphi beschreibt einfache Schleifen und zweistufige Sensoren mit zwei Widerstandskreisen. Kein Hersteller dokumentiert den Code öffentlich.
   affected_components:
     - brake_pads
   common_causes:
@@ -2459,17 +2500,18 @@
     - sae:J2012
   related_codes: [C0049, C004B, C0047]
   sources:
+    - https://www.delphiautoparts.com/en-gb/mom/how-to/article/the-what-when-and-wear-of-brake-pad-wear-sensors
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
     - https://en.wikipedia.org/wiki/Disc_brake
-    - https://en.wikipedia.org/wiki/Hydraulic_brake
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C004B
   category: chassis
   title:
     en: Brake Fluid Level Sensor/Switch Circuit/Open
     de: Bremsflüssigkeits-Füllstandsensor/-schalter Stromkreis/Unterbrechung
   description:
-    en: Covers an electrical fault, specifically an open or out-of-range circuit, in the brake fluid level sensor or switch, as opposed to C0049 which reports an actual low-level condition. The float switch or level sensor in the reservoir provides a defined signal to the brake or stability module; this code is set when that circuit is open, shorted or gives an implausible value so the module can no longer trust the level reading. Because the level warning is a safety function, the module may illuminate the red brake warning indicator and treat the level as unknown. A fault is usually a broken wire, a corroded connector or a failed switch rather than low fluid itself. The entry follows the SAE J2012 generic definition and standard reservoir level-switch design.
-    de: Betrifft einen elektrischen Fehler, speziell einen unterbrochenen oder außerhalb des Bereichs liegenden Kreis, im Bremsflüssigkeits-Füllstandsensor oder -schalter, im Unterschied zu C0049, der einen tatsächlichen Tiefstand meldet. Der Schwimmerschalter oder Füllstandsensor im Behälter liefert ein definiertes Signal an Brems- oder Stabilitätssteuergerät; dieser Code wird gesetzt, wenn dieser Kreis unterbrochen, kurzgeschlossen ist oder einen unplausiblen Wert liefert, sodass das Steuergerät dem Füllstand nicht mehr trauen kann. Da die Füllstandswarnung eine Sicherheitsfunktion ist, kann das Steuergerät die rote Bremswarnleuchte einschalten und den Stand als unbekannt behandeln. Ursache ist meist ein Leitungsbruch, ein korrodierter Stecker oder ein defekter Schalter, nicht der Stand selbst. Grundlage ist SAE J2012.
+    en: Covers an electrical fault, specifically an open or out-of-range circuit, in the brake fluid level sensor or switch, as opposed to C0049 which reports an actual low-level condition. The float switch or level sensor in the reservoir provides a defined signal to the brake or stability module; this code is set when that circuit is open, shorted or gives an implausible value so the module can no longer trust the level reading. Because the level warning is a safety function, the module may illuminate the red brake warning indicator and treat the level as unknown. A fault is usually a broken wire, a corroded connector or a failed switch rather than low fluid itself. Patents show the usual float magnet acting on a reed or Hall switch. No manufacturer documents this code publicly.
+    de: Betrifft einen elektrischen Fehler im Kreis des Bremsflüssigkeits-Füllstandsensors oder -schalters; C0049 meldet dagegen einen echten Tiefstand. Der Schwimmerschalter oder Füllstandsensor im Behälter liefert ein definiertes Signal an Brems- oder Stabilitätssteuergerät; dieser Code wird gesetzt, wenn dieser Kreis unterbrochen, kurzgeschlossen ist oder einen unplausiblen Wert liefert, sodass das Steuergerät dem Füllstand nicht mehr trauen kann. Weil die Füllstandswarnung der Sicherheit dient, kann das Steuergerät die rote Bremswarnleuchte einschalten. Ursache ist meist ein Leitungsbruch, ein korrodierter Stecker oder ein defekter Schalter. Patente zeigen den üblichen Schwimmermagneten, der einen Reed- oder Hall-Schalter betätigt. Kein Hersteller dokumentiert den Code öffentlich.
   affected_components:
     - brake_fluid_level_switch
   common_causes:
@@ -2509,9 +2551,10 @@
     - sae:J2012
   related_codes: [C0049, C004A, C0044]
   sources:
+    - https://patents.google.com/patent/US5827962A/en
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
     - https://en.wikipedia.org/wiki/Brake_fluid
-    - https://en.wikipedia.org/wiki/Hydraulic_brake
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C004C
   category: chassis
   title:
@@ -3125,40 +3168,45 @@
     en: Lateral Acceleration Sensor
     de: Querbeschleunigungssensor
   description:
-    en: Covers the lateral acceleration sensor, part of the ESC inertial sensor cluster that measures sideways acceleration during cornering. The ESC module compares measured lateral acceleration with the value expected from steering angle, yaw rate and speed to judge whether the vehicle follows the driver's intent, and sets this code for a signal out of range, stuck, noisy or implausible against the other inertial channels. Mazda logs C0061:54 in the deployment/standard control system and FCA documents C0061-29 on Jeep Compass alongside C0062 and C0063. A fault disables stability and roll control and sets the ABS/ESC warning lamp while base braking remains. Modern clusters combine lateral, longitudinal and vertical accelerometers with yaw and roll gyros in one housing. The entry follows the SAE J2012 generic definition.
-    de: Betrifft den Querbeschleunigungssensor im ESP-Inertialsensorcluster, der die seitliche Beschleunigung in Kurven misst. Das ESP-Steuergerät vergleicht die gemessene Querbeschleunigung mit dem aus Lenkwinkel, Gierrate und Geschwindigkeit erwarteten Wert, um zu beurteilen, ob das Fahrzeug dem Fahrerwunsch folgt, und setzt diesen Code bei einem Signal außerhalb des Bereichs, festsitzend, verrauscht oder unplausibel gegenüber den anderen Inertialkanälen. Mazda setzt C0061:54 im Standard-Steuersystem, FCA dokumentiert C0061-29 am Jeep Compass neben C0062 und C0063. Ein Fehler schaltet Stabilitäts- und Wankregelung ab und setzt die ABS/ESP-Leuchte; die Grundbremse bleibt. Moderne Cluster vereinen Quer-, Längs- und Vertikalbeschleuniger mit Gier- und Wankkreiseln in einem Gehäuse. Grundlage ist SAE J2012.
+    en: "C0061 flags the lateral acceleration signal, which the stability module compares with the value expected from steering angle, yaw rate and speed. The code sets when the signal is out of range, frozen, noisy or implausible against the other inertial channels. FCA uses it on the 2022 Jeep Compass as C0061-29, signal invalid, together with C0062-29 and C0063-29; customers see the MIL plus ESC and parking brake warnings, and bulletin 08-007-23 reflashes the ABS module. FCA also lists C0061 in a PCM update for the 2016 Jeep Renegade 2.4 l. Mazda uses the same number in the headlight auto-leveling module: on the 2018 CX-3, C0061:54 means the acceleration sensor's initial position was not learned, typically after transport on a trailer (bulletin 09-012/18)."
+    de: "C0061 meldet das Querbeschleunigungssignal, das die Stabilitätsregelung mit dem aus Lenkwinkel, Gierrate und Geschwindigkeit erwarteten Wert vergleicht. Gesetzt wird der Code, wenn das Signal außerhalb des Bereichs liegt, einfriert, rauscht oder nicht zu den übrigen Inertialkanälen passt. FCA nutzt ihn am Jeep Compass 2022 als C0061-29 (Signal ungültig) zusammen mit C0062-29 und C0063-29; Kunden sehen die MIL sowie ESP- und Parkbremswarnungen, das Bulletin 08-007-23 programmiert das ABS-Steuergerät neu. Auch ein PCM-Update für den Jeep Renegade 2016 mit 2,4 l nennt C0061. Mazda verwendet die Nummer in der automatischen Leuchtweitenregelung: Beim CX-3 von 2018 heißt C0061:54, dass die Grundstellung des Beschleunigungssensors nicht angelernt wurde, meist nach einem Transport auf dem Anhänger (Bulletin 09-012/18)."
   affected_components:
     - inertial_sensor_cluster
   common_causes:
-    - id: sensor_fault
-      likelihood: high
-      label:
-        en: Lateral accelerometer failed or out of range
-        de: Querbeschleuniger defekt oder außerhalb des Bereichs
-    - id: mounting
+    - id: abs_software
       likelihood: medium
       label:
-        en: Loose or shifted sensor cluster mounting
-        de: Lose oder verschobene Clusterbefestigung
-    - id: wiring
+        en: ABS module software fault (FCA bulletin 08-007-23)
+        de: Softwarefehler im ABS-Steuergerät (FCA-Bulletin 08-007-23)
+    - id: leveling_not_learned
+      likelihood: medium
+      label:
+        en: Headlight leveling sensor position not learned after transport (Mazda)
+        de: Grundstellung des Leuchtweitensensors nach Transport nicht angelernt (Mazda)
+    - id: sensor_fault
+      likelihood: medium
+      label:
+        en: Lateral accelerometer failed or out of range
+        de: Querbeschleunigungssensor defekt oder außerhalb des Bereichs
+    - id: mounting
       likelihood: low
       label:
-        en: Harness or connector fault
-        de: Fehler an Leitung oder Stecker
+        en: Sensor cluster loose or shifted on its mount
+        de: Sensorcluster locker oder verschoben
   symptoms:
-    - en: Stability and roll control disabled
-      de: Stabilitäts- und Wankregelung abgeschaltet
-    - en: ABS/ESC warning lamp on
-      de: ABS/ESP-Warnleuchte an
-    - en: TCS/DSC indicator on
-      de: TCS/DSC-Anzeige an
+    - en: Stability control disabled, ESC warning lamp on
+      de: Stabilitätsregelung abgeschaltet, ESP-Leuchte an
+    - en: MIL on together with ESC and parking brake warnings (FCA)
+      de: MIL zusammen mit ESP- und Parkbremswarnung an (FCA)
+    - en: Headlight leveling warning flashes (Mazda)
+      de: Warnleuchte der Leuchtweitenregelung blinkt (Mazda)
   repair:
     difficulty: medium
     diy_possible: false
     estimated_cost_eur: [120, 900]
     estimated_hours: [0.6, 3]
   flags:
-    mil: false
+    mil: true
     emissions_relevant: false
     drive_cycle_required: false
     limp_mode_possible: true
@@ -3166,30 +3214,38 @@
     - sae:J2012
   related_codes: [C0062, C0063, C006A]
   sources:
+    - https://static.nhtsa.gov/odi/tsbs/2023/MC-10231774-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2016/MC-10141283-9999.pdf
     - https://static.nhtsa.gov/odi/tsbs/2018/MC-10134696-9999.pdf
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
     - https://patents.google.com/patent/US9352731B2/en
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0062
   category: chassis
   title:
     en: Longitudinal Acceleration Sensor
     de: Längsbeschleunigungssensor
   description:
-    en: Covers the longitudinal acceleration sensor in the ESC inertial cluster, which measures fore-aft acceleration used for hill-hold, grade compensation, all-wheel-drive torque split and brake distribution. The ESC module checks the signal against speed change, brake and throttle inputs and the other inertial channels, and sets this code when it is out of range, stuck, noisy or implausible. FCA documents C0062-29 on Jeep Compass together with C0061 and C0063 when an ABS-module or related software fault sets the inertial-cluster codes. A fault disables stability, hill-hold and related functions and sets the ABS/ESC warning lamp while base braking remains. The longitudinal accelerometer usually shares the housing with the lateral and vertical accelerometers and the yaw and roll gyros. The entry follows the SAE J2012 generic definition.
-    de: Betrifft den Längsbeschleunigungssensor im ESP-Inertialcluster, der die Längsbeschleunigung für Berganfahrhilfe, Steigungskompensation, Allrad-Momentverteilung und Bremsaufteilung misst. Das ESP-Steuergerät prüft das Signal gegen Geschwindigkeitsänderung, Brems- und Gaspedaleingaben und die übrigen Inertialkanäle und setzt diesen Code, wenn es außerhalb des Bereichs, festsitzend, verrauscht oder unplausibel ist. FCA dokumentiert C0062-29 am Jeep Compass zusammen mit C0061 und C0063, wenn ein ABS-Modul- oder Softwarefehler die Clustercodes setzt. Ein Fehler schaltet Stabilität, Berganfahrhilfe und verwandte Funktionen ab und setzt die ABS/ESP-Leuchte; die Grundbremse bleibt. Der Längsbeschleuniger teilt sich meist das Gehäuse mit Quer- und Vertikalbeschleuniger sowie Gier- und Wankkreisel. Grundlage ist SAE J2012.
+    en: C0062 flags the longitudinal acceleration signal, the fore-aft reading used for hill hold, grade detection, all-wheel-drive torque split and brake distribution. The module checks it against the change in wheel speed, braking and throttle and against the other inertial channels, and stores the code for a value out of range, frozen, noisy or implausible. FCA documents C0062-29, invalid signal, on the 2022 Jeep Compass with C0061-29 and C0063-29, lighting the MIL and the ESC and parking brake warnings until the ABS module receives new software (08-007-23). On the 2019 RAM 1500, FCA lists C0062 among the codes a PCM software update addresses (18-058-20). Stability and hill hold are switched off while the fault is present; normal braking remains.
+    de: C0062 meldet das Längsbeschleunigungssignal, das für Berganfahrhilfe, Steigungserkennung, Allrad-Momentverteilung und Bremskraftaufteilung genutzt wird. Das Steuergerät prüft es gegen die Änderung der Raddrehzahl, gegen Bremse und Gaspedal sowie gegen die übrigen Inertialkanäle und speichert den Code bei einem Wert außerhalb des Bereichs, eingefroren, verrauscht oder unplausibel. FCA belegt C0062-29 (Signal ungültig) am Jeep Compass 2022 mit C0061-29 und C0063-29; MIL, ESP- und Parkbremswarnung leuchten, bis das ABS-Steuergerät neue Software erhält (08-007-23). Beim RAM 1500 von 2019 führt FCA C0062 unter den Codes, die ein PCM-Update behebt (18-058-20). Solange der Fehler besteht, sind ESP und Berganfahrhilfe aus; die normale Bremse bleibt.
   affected_components:
     - inertial_sensor_cluster
   common_causes:
-    - id: sensor_fault
-      likelihood: high
-      label:
-        en: Longitudinal accelerometer failed
-        de: Längsbeschleuniger defekt
-    - id: mounting
+    - id: module_software
       likelihood: medium
       label:
-        en: Loose or shifted sensor cluster mounting
-        de: Lose oder verschobene Clusterbefestigung
+        en: ABS or PCM software fault (FCA 08-007-23, 18-058-20)
+        de: Softwarefehler in ABS- oder Motorsteuergerät (FCA 08-007-23, 18-058-20)
+    - id: sensor_fault
+      likelihood: medium
+      label:
+        en: Longitudinal accelerometer failed
+        de: Längsbeschleunigungssensor defekt
+    - id: mounting
+      likelihood: low
+      label:
+        en: Sensor cluster loose or shifted on its mount
+        de: Sensorcluster locker oder verschoben
     - id: wiring
       likelihood: low
       label:
@@ -3208,7 +3264,7 @@
     estimated_cost_eur: [120, 900]
     estimated_hours: [0.6, 3]
   flags:
-    mil: false
+    mil: true
     emissions_relevant: false
     drive_cycle_required: false
     limp_mode_possible: true
@@ -3217,34 +3273,36 @@
   related_codes: [C0061, C0063, C006A]
   sources:
     - https://static.nhtsa.gov/odi/tsbs/2023/MC-10231774-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10180250-9999.pdf
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
     - https://patents.google.com/patent/US9352731B2/en
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0063
   category: chassis
   title:
     en: Yaw Rate Sensor
     de: Gierratensensor
   description:
-    en: Covers the yaw rate sensor in the ESC inertial cluster, which measures the vehicle's rotation about its vertical axis, the core input for stability control. The ESC module compares measured yaw rate with a reference computed from steering angle, lateral acceleration and speed; a persistent difference indicates understeer or oversteer and triggers braking or torque intervention. This code is set when the yaw signal is out of range, stuck, noisy or implausible against the reference and the other channels. FCA documents C0063-29 (and -9A) on Jeep Compass with the inertial-cluster codes. A fault disables stability control and sets the ABS/ESC warning lamp while base braking remains. Modern yaw sensors are MEMS gyroscopes integrated in the cluster housing. The entry follows the SAE J2012 generic definition.
-    de: Betrifft den Gierratensensor im ESP-Inertialcluster, der die Drehung des Fahrzeugs um die Hochachse misst — der Kerneingang der Stabilitätsregelung. Das ESP-Steuergerät vergleicht die gemessene Gierrate mit einem aus Lenkwinkel, Querbeschleunigung und Geschwindigkeit berechneten Referenzwert; eine dauerhafte Abweichung zeigt Unter- oder Übersteuern an und löst einen Brems- oder Momenteneingriff aus. Dieser Code wird gesetzt, wenn das Giersignal außerhalb des Bereichs, festsitzend, verrauscht oder unplausibel gegenüber Referenz und übrigen Kanälen ist. FCA dokumentiert C0063-29 (und -9A) am Jeep Compass mit den Clustercodes. Ein Fehler schaltet die Stabilitätsregelung ab und setzt die ABS/ESP-Leuchte; die Grundbremse bleibt. Moderne Giersensoren sind MEMS-Kreisel im Clustergehäuse. Grundlage ist SAE J2012.
+    en: "C0063 flags the yaw rate signal, the rotation about the vertical axis that stability control compares with a reference built from steering angle, lateral acceleration and speed. A lasting gap means understeer or oversteer, so a corrupt signal would trigger wrong interventions; the module therefore stores the code and stops ESC when the value is out of range, frozen, noisy or implausible. FCA documents two variants on the Jeep Compass: C0063-29, invalid signal, with C0061-29 and C0062-29 on 2022 models, cured by ABS software (08-007-23), and C0063-9A, component or system operating conditions, on 2024 models, where the MIL is on and the driver assistance module is reprogrammed (08-128-24). Normal braking stays available throughout."
+    de: "C0063 meldet das Gierratensignal, also die Drehung um die Hochachse, das die Stabilitätsregelung mit einer Referenz aus Lenkwinkel, Querbeschleunigung und Geschwindigkeit vergleicht. Eine anhaltende Differenz bedeutet Unter- oder Übersteuern; ein verfälschtes Signal würde also falsche Eingriffe auslösen. Darum speichert das Steuergerät den Code und schaltet ESP ab, wenn der Wert außerhalb des Bereichs liegt, einfriert, rauscht oder unplausibel ist. FCA belegt zwei Varianten am Jeep Compass: C0063-29 (Signal ungültig) mit C0061-29 und C0062-29 bei Modellen von 2022, behoben per ABS-Software (08-007-23), und C0063-9A (Betriebsbedingungen von Bauteil oder System) bei Modellen von 2024 mit leuchtender MIL, behoben durch Neuprogrammierung des Fahrerassistenz-Steuergeräts (08-128-24). Die normale Bremse bleibt."
   affected_components:
     - inertial_sensor_cluster
   common_causes:
-    - id: sensor_fault
+    - id: module_software
       likelihood: high
       label:
-        en: Yaw rate gyro failed or out of range
-        de: Gierkreisel defekt oder außerhalb des Bereichs
-    - id: mounting
+        en: ABS or driver assistance module software (FCA 08-007-23, 08-128-24)
+        de: Software in ABS- oder Fahrerassistenz-Steuergerät (FCA 08-007-23, 08-128-24)
+    - id: sensor_fault
       likelihood: medium
       label:
-        en: Loose or shifted sensor cluster mounting
-        de: Lose oder verschobene Clusterbefestigung
-    - id: wiring
+        en: Yaw rate gyro failed or out of range
+        de: Gierratensensor defekt oder außerhalb des Bereichs
+    - id: mounting
       likelihood: low
       label:
-        en: Harness or connector fault
-        de: Fehler an Leitung oder Stecker
+        en: Sensor cluster loose or shifted on its mount
+        de: Sensorcluster locker oder verschoben
   symptoms:
     - en: Stability control disabled
       de: Stabilitätsregelung abgeschaltet
@@ -3258,7 +3316,7 @@
     estimated_cost_eur: [120, 900]
     estimated_hours: [0.6, 3]
   flags:
-    mil: false
+    mil: true
     emissions_relevant: false
     drive_cycle_required: false
     limp_mode_possible: true
@@ -3267,16 +3325,18 @@
   related_codes: [C0061, C0062, C0064]
   sources:
     - https://static.nhtsa.gov/odi/tsbs/2023/MC-10231774-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2024/MC-11001274-0001.pdf
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
     - https://en.wikipedia.org/wiki/Yaw-rate_sensor
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0064
   category: chassis
   title:
     en: Roll Rate Sensor
     de: Wankratensensor
   description:
-    en: Covers the roll rate sensor, a gyroscope in the inertial cluster that measures rotation about the vehicle's longitudinal axis. It is used by roll stability control and rollover-mitigation systems, especially on taller vehicles, to detect the onset of a rollover and intervene with braking and torque reduction. The module checks the roll signal against lateral acceleration and the other inertial channels and sets this code when it is out of range, stuck, noisy or implausible. A fault disables roll stability control and sets the ABS/ESC warning lamp while base braking remains. Patent literature on integrated vehicle control describes five- and six-axis clusters that add roll and pitch gyros to the basic yaw and lateral-acceleration set for combined yaw and roll control. The entry follows the SAE J2012 generic definition.
-    de: Betrifft den Wankratensensor, einen Kreisel im Inertialcluster, der die Drehung um die Längsachse des Fahrzeugs misst. Wankstabilitäts- und Überschlagschutzsysteme nutzen ihn, vor allem bei hohen Fahrzeugen, um einen beginnenden Überschlag zu erkennen und mit Bremse und Momentenrücknahme einzugreifen. Das Steuergerät prüft das Wanksignal gegen die Querbeschleunigung und die übrigen Inertialkanäle und setzt diesen Code, wenn es außerhalb des Bereichs, festsitzend, verrauscht oder unplausibel ist. Ein Fehler schaltet die Wankstabilitätsregelung ab und setzt die ABS/ESP-Leuchte; die Grundbremse bleibt. Patentliteratur zur integrierten Fahrzeugregelung beschreibt Fünf- und Sechs-Achsen-Cluster, die Wank- und Nickkreisel zum Grundsatz aus Gier und Querbeschleunigung ergänzen. Grundlage ist SAE J2012.
+    en: C0064 covers the roll rate sensor, a gyroscope that measures rotation about the vehicle's longitudinal axis. NHTSA's brake safety study names roll rate among the vehicle dynamics inputs of the ABS/ESC module, and roll stability control uses it, mainly on tall vehicles, to spot the onset of a rollover and counter it with braking and torque reduction. The module checks the roll signal against lateral acceleration and the other inertial channels and sets C0064 when it is out of range, stuck, noisy or implausible. In current six-axis inertial units such as Bosch's IMU the roll gyro shares one housing with pitch and yaw gyros and three accelerometers. Roll stability control switches off and the ESC lamp lights; base braking remains. No manufacturer documents this code publicly.
+    de: C0064 betrifft den Wankratensensor, einen Kreisel, der die Drehung um die Fahrzeuglängsachse misst. Die NHTSA-Bremsstudie zählt die Wankrate zu den Fahrdynamik-Eingängen des ABS/ESP-Steuergeräts; die Wankstabilitätsregelung nutzt sie vor allem bei hohen Fahrzeugen, um einen beginnenden Überschlag zu erkennen und mit Bremseingriff und Momentenrücknahme gegenzusteuern. Das Steuergerät prüft das Signal gegen die Querbeschleunigung und die übrigen Kanäle und setzt C0064, wenn es außerhalb des Bereichs liegt, hängt, rauscht oder unplausibel ist. In heutigen Sechs-Achsen-Einheiten wie der IMU von Bosch sitzt der Wankkreisel mit Nick- und Gierkreisel sowie drei Beschleunigungssensoren in einem Gehäuse. Die Wankregelung fällt aus, die ESP-Leuchte geht an. Kein Hersteller dokumentiert diesen Code öffentlich.
   affected_components:
     - inertial_sensor_cluster
   common_causes:
@@ -3316,17 +3376,18 @@
     - sae:J2012
   related_codes: [C0063, C0065, C006A]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
+    - https://www.bosch-mobility.com/en/solutions/sensors/inertial-measurement-unit/
     - https://patents.google.com/patent/US9352731B2/en
-    - https://en.wikipedia.org/wiki/Gyroscope
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0065
   category: chassis
   title:
     en: Vertical Acceleration Sensor
     de: Vertikalbeschleunigungssensor
   description:
-    en: Covers the vertical acceleration sensor in the inertial cluster, which measures up-and-down acceleration of the body. It supports rollover detection, rough-road and wheel-lift recognition and, on vehicles with adaptive damping, the suspension control. The module checks the vertical signal against the other inertial channels and sets this code when it is out of range, stuck, noisy or implausible. A fault disables the dependent stability or suspension functions and sets the ABS/ESC or suspension warning lamp while base braking remains. Six-axis inertial clusters described in integrated vehicle control patents add a vertical accelerometer and a pitch gyro to the yaw, roll, lateral and longitudinal set so the controller can separate road inputs from genuine vehicle motion. The entry follows the SAE J2012 generic definition.
-    de: Betrifft den Vertikalbeschleunigungssensor im Inertialcluster, der die Auf- und Abbeschleunigung des Aufbaus misst. Er stützt Überschlagerkennung, Schlechtweg- und Radabheberkennung und bei Fahrzeugen mit adaptiver Dämpfung die Fahrwerkregelung. Das Steuergerät prüft das Vertikalsignal gegen die übrigen Inertialkanäle und setzt diesen Code, wenn es außerhalb des Bereichs, festsitzend, verrauscht oder unplausibel ist. Ein Fehler schaltet die abhängigen Stabilitäts- oder Fahrwerkfunktionen ab und setzt die ABS/ESP- oder Fahrwerkleuchte; die Grundbremse bleibt. Sechs-Achsen-Cluster aus Patenten zur integrierten Fahrzeugregelung ergänzen Vertikalbeschleuniger und Nickkreisel zum Satz aus Gier, Wank, Quer und Längs, damit das Steuergerät Fahrbahneinflüsse von echter Fahrzeugbewegung trennen kann. Grundlage ist SAE J2012.
+    en: "C0065 covers the vertical acceleration sensor, which measures up-and-down acceleration of the body. Bosch's inertial measurement unit shows where it lives today: one housing measures the rates of yaw, pitch and roll plus vertical, longitudinal and lateral acceleration and serves several control systems at once. The vertical channel supports rough-road and wheel-lift detection, rollover recognition and, with adaptive damping, the suspension control. The module checks the vertical reading against the other channels and stores C0065 when it is out of range, stuck, noisy or implausible. Depending on the vehicle, stability or suspension functions are reduced and the ESC or suspension lamp lights, while normal braking is unaffected. No manufacturer documents this code publicly."
+    de: "C0065 betrifft den Vertikalbeschleunigungssensor, der die Auf- und Abbewegung des Aufbaus misst. Die Inertialmesseinheit von Bosch zeigt, wo er heute sitzt: Ein Gehäuse misst Gier-, Nick- und Wankrate sowie Vertikal-, Längs- und Querbeschleunigung und versorgt mehrere Regelsysteme zugleich. Der Vertikalkanal dient der Schlechtweg- und Radabheberkennung, der Überschlagerkennung und bei adaptiver Dämpfung der Fahrwerkregelung. Das Steuergerät prüft den Wert gegen die übrigen Kanäle und speichert C0065, wenn er außerhalb des Bereichs liegt, hängt, rauscht oder unplausibel ist. Je nach Fahrzeug werden Stabilitäts- oder Fahrwerkfunktionen eingeschränkt und die ESP- oder Fahrwerkleuchte geht an; die normale Bremse bleibt. Kein Hersteller dokumentiert diesen Code öffentlich."
   affected_components:
     - inertial_sensor_cluster
   common_causes:
@@ -3366,48 +3427,46 @@
     - sae:J2012
   related_codes: [C0064, C0063, C006A]
   sources:
+    - https://www.bosch-mobility.com/en/solutions/sensors/inertial-measurement-unit/
     - https://patents.google.com/patent/US9352731B2/en
     - https://en.wikipedia.org/wiki/Accelerometer
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C0066
   category: chassis
   title:
-    en: Right Rear Wheel Speed Sensor Circuit Intermittent
-    de: Raddrehzahlsensor hinten rechts Stromkreis sporadisch
+    en: Pitch Rate Sensor
+    de: Nickratensensor
   description:
-    en: Covers an intermittent fault in the right rear wheel speed sensor circuit, where the signal is lost or corrupted only part of the time rather than permanently, the right rear counterpart of C0056. The ABS/ESC module expects a clean pulse train proportional to wheel speed; a chafed wire that opens over bumps, a loose or corroded connector, a cracked sensor or a contaminated encoder ring can make the signal drop out briefly. Because the fault is sporadic it may set and self-clear, and ABS, traction and stability control drop out only during the glitches while the ABS warning lamp is set and base braking remains. Bosch active wheel speed sensors depend on a stable two-wire supply and a clean air gap to the encoder. No code-specific public bulletin was confirmed; the entry follows the SAE J2012 generic definition.
-    de: Betrifft einen sporadischen Fehler im Stromkreis des Raddrehzahlsensors hinten rechts, bei dem das Signal nur zeitweise aussetzt oder gestört ist, das Gegenstück zu C0056. Das ABS/ESP-Steuergerät erwartet eine saubere, zur Raddrehzahl proportionale Impulsfolge; eine über Unebenheiten öffnende gescheuerte Leitung, ein loser oder korrodierter Stecker, ein gerissener Sensor oder ein verschmutzter Encoderring kann das Signal kurz aussetzen lassen. Da der Fehler sporadisch ist, kann er setzen und sich selbst löschen, und ABS, Traktion und Stabilität fallen nur während der Aussetzer aus, während die ABS-Leuchte gesetzt ist und die Grundbremse bleibt. Aktive Bosch-Raddrehzahlsensoren brauchen eine stabile Zweileiter-Versorgung und einen sauberen Luftspalt zum Geber.
+    en: Public SAE J2012 code lists still mark C0066 as ISO/SAE reserved, and no manufacturer documents the code in a retrievable bulletin or service text. One current code table assigns it to the pitch rate sensor, which fits its place between roll rate (C0064), vertical acceleration (C0065) and the yaw/longitudinal pair (C0069); the title follows that use. Such a sensor tracks rotation about the vehicle's lateral axis, as when the body dives under braking or squats under acceleration. Bosch's six-axis inertial unit reports pitch rate next to yaw and roll rate, and a GM patent compares the measured pitch rate with a virtual value built from suspension heights, wheel speeds and accelerations, flags a fault from the difference and rebuilds the signal. Where fitted, a fault limits rollover and stability functions and lights the ESC lamp.
+    de: Öffentliche J2012-Listen führen C0066 noch als ISO/SAE-reserviert; kein Hersteller dokumentiert ihn in einem abrufbaren Bulletin oder Werkstatttext. Eine aktuelle Codetabelle ordnet ihn dem Nickratensensor zu, passend zu seinem Platz neben Wankrate (C0064), Vertikalbeschleunigung (C0065) und Gier-/Längssensoren (C0069); der Titel folgt dieser Verwendung. Gemessen wird die Drehung um die Querachse, etwa wenn der Aufbau beim Bremsen eintaucht. Die Sechs-Achsen-Inertialeinheit von Bosch liefert die Nickrate neben Gier- und Wankrate; ein GM-Patent vergleicht die gemessene Nickrate mit einem aus Federwegen, Raddrehzahlen und Beschleunigungen gebildeten Schätzwert, erkennt am Unterschied einen Fehler und ersetzt das Signal. Ein Fehler schränkt Überschlag- und Stabilitätsfunktionen ein, die ESP-Leuchte geht an.
   affected_components:
-    - wheel_speed_sensor_rr
-    - sensor_wiring
+    - inertial_sensor_cluster
   common_causes:
-    - id: intermittent_wiring
-      likelihood: high
-      label:
-        en: Chafed wire or loose connector
-        de: Gescheuerte Leitung oder loser Stecker
-    - id: sensor_cracked
+    - id: sensor_fault
       likelihood: medium
       label:
-        en: Cracked sensor or contaminated encoder
-        de: Gerissener Sensor oder verschmutzter Geber
-    - id: air_gap
+        en: Pitch rate gyro failed, drifting or out of range
+        de: Nickratenkreisel defekt, driftend oder außerhalb des Bereichs
+    - id: mounting
+      likelihood: medium
+      label:
+        en: Sensor cluster loose or tilted on its mount
+        de: Sensorcluster locker oder schräg montiert
+    - id: wiring
       likelihood: low
       label:
-        en: Excessive or varying air gap
-        de: Zu großer oder schwankender Luftspalt
+        en: Harness or connector fault at the sensor cluster
+        de: Fehler an Leitung oder Stecker des Sensorclusters
   symptoms:
-    - en: Intermittent ABS warning lamp
-      de: Sporadische ABS-Warnleuchte
-    - en: ABS/ESC drops out briefly
-      de: ABS/ESP fällt kurz aus
-    - en: Speedometer flickers
-      de: Tacho flackert
+    - en: ESC or stability warning lamp on
+      de: ESP- bzw. Stabilitätswarnleuchte an
+    - en: Rollover and stability functions reduced
+      de: Überschlag- und Stabilitätsfunktionen eingeschränkt
   repair:
     difficulty: medium
-    diy_possible: true
-    estimated_cost_eur: [60, 400]
-    estimated_hours: [0.5, 2.5]
+    diy_possible: false
+    estimated_cost_eur: [60, 500]
+    estimated_hours: [0.5, 2]
   flags:
     mil: false
     emissions_relevant: false
@@ -3415,19 +3474,20 @@
     limp_mode_possible: true
   references:
     - sae:J2012
-  related_codes: [C0060, C0050, C0056]
+  related_codes: [C0064, C0065, C0063, C006A]
   sources:
-    - https://www.bosch-mobility.com/en/solutions/sensors/wheel-speed-sensor/
-    - https://en.wikipedia.org/wiki/Wheel_speed_sensor
-  reviewed: '2026-11-05'
+    - https://www.bosch-mobility.com/en/solutions/sensors/inertial-measurement-unit/
+    - https://patents.google.com/patent/US10000215B2/en
+    - https://patents.google.com/patent/US9352731B2/en
+  reviewed: '2026-11-07'
 - code: C0069
   category: chassis
   title:
     en: Yaw Rate/Longitude Sensors
     de: Gierraten-/Längssensoren Plausibilität
   description:
-    en: A correlation code covering the yaw rate and longitudinal acceleration sensors together, set when their signals do not agree with each other or with the rest of the inertial set as physics requires. During combined braking and cornering the controller expects a defined relationship between yaw, longitudinal and lateral motion; a persistent mismatch means one of these channels has drifted, a sensor shares a fault or the cluster has moved on its mount. The module sets this code and disables stability and related functions, lighting the ABS/ESC warning lamp while base braking remains. Integrated vehicle-control sensor clusters combine these channels in one housing so the controller can validate each against the others. No code-specific public bulletin was confirmed; the entry follows the SAE J2012 generic definition.
-    de: Ein Plausibilitätscode für Gierraten- und Längsbeschleunigungssensor gemeinsam, gesetzt, wenn ihre Signale untereinander oder mit dem übrigen Inertialsatz nicht wie physikalisch gefordert übereinstimmen. Bei gleichzeitigem Bremsen und Kurvenfahren erwartet das Steuergerät eine definierte Beziehung zwischen Gier-, Längs- und Querbewegung; eine dauerhafte Abweichung bedeutet, dass einer dieser Kanäle driftet, ein Sensor einen gemeinsamen Fehler hat oder der Cluster sich auf seiner Halterung bewegt hat. Das Steuergerät setzt diesen Code und schaltet Stabilität und verwandte Funktionen ab, setzt die ABS/ESP-Leuchte; die Grundbremse bleibt. Integrierte Sensorcluster vereinen diese Kanäle in einem Gehäuse, damit das Steuergerät jeden gegen die anderen prüfen kann.
+    en: C0069 is a plausibility code for the yaw rate and longitudinal acceleration sensors taken together. When the vehicle brakes in a bend, yaw, longitudinal and lateral motion must stay in a physical relationship; if the two signals keep contradicting each other or the rest of the inertial set, one channel has drifted, both share a fault, or the cluster has shifted on its mount. NHTSA's brake safety study lists yaw rate and longitudinal acceleration as inputs of the stability module and notes that several vehicle dynamics sensors are often combined in one unit, which is what makes such cross-checks possible. The module stores C0069, switches off stability and related functions and lights the ESC lamp; base braking remains. No manufacturer documents this code publicly.
+    de: C0069 ist ein Plausibilitätscode für Gierraten- und Längsbeschleunigungssensor gemeinsam. Bremst das Fahrzeug in einer Kurve, müssen Gier-, Längs- und Querbewegung in einem physikalischen Verhältnis bleiben; widersprechen sich die beiden Signale oder der übrige Inertialsatz dauerhaft, ist ein Kanal gedriftet, beide teilen einen Fehler oder der Cluster hat sich auf seiner Halterung verschoben. Die NHTSA-Bremsstudie führt Gierrate und Längsbeschleunigung als Eingänge der Stabilitätsregelung und vermerkt, dass mehrere Fahrdynamiksensoren oft in einer Einheit sitzen – genau das ermöglicht solche Quervergleiche. Das Steuergerät speichert C0069, schaltet ESP und verwandte Funktionen ab und setzt die ESP-Leuchte; die Grundbremse bleibt. Kein Hersteller dokumentiert diesen Code öffentlich.
   affected_components:
     - yaw_long_sensor_cluster
   common_causes:
@@ -3467,30 +3527,32 @@
     - sae:J2012
   related_codes: [C0063, C0062, C006A]
   sources:
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
+    - https://www.bosch-mobility.com/en/solutions/sensors/inertial-measurement-unit/
     - https://patents.google.com/patent/US7590481B2/en
     - https://patents.google.com/patent/US9352731B2/en
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C006A
   category: chassis
   title:
     en: Multi-axis Acceleration Sensor
     de: Mehrachsiger Beschleunigungssensor
   description:
-    en: Covers a combined multi-axis acceleration (and rate) sensor that reports several motion axes from one device, the integrated form of the separate lateral, longitudinal, vertical, yaw and roll sensors. The ESC module treats the unit as a whole and sets this code when the device reports an internal fault, fails its self-test, loses communication or returns values implausible across its axes. RAM documents C006A-49 where the module flags the multi-axis sensor; the sub-type points to an internal or deployment-control fault rather than a single-axis electrical defect. A fault disables stability, roll and related functions and sets the ABS/ESC warning lamp while base braking remains. The entry follows the SAE J2012 generic definition and integrated inertial sensor design.
-    de: Betrifft einen kombinierten mehrachsigen Beschleunigungs- (und Raten-)Sensor, der mehrere Bewegungsachsen aus einem Gerät meldet — die integrierte Form der getrennten Quer-, Längs-, Vertikal-, Gier- und Wanksensoren. Das ESP-Steuergerät behandelt die Einheit als Ganzes und setzt diesen Code, wenn das Gerät einen internen Fehler meldet, den Selbsttest nicht besteht, die Kommunikation verliert oder über seine Achsen unplausible Werte liefert. RAM dokumentiert C006A-49, wo das Steuergerät den Mehrachssensor meldet; der Subtyp deutet auf einen internen oder Steuersystemfehler, nicht auf einen Einzelachs-Elektrikdefekt. Ein Fehler schaltet Stabilität, Wank und verwandte Funktionen ab und setzt die ABS/ESP-Leuchte; die Grundbremse bleibt. Grundlage ist SAE J2012.
+    en: "C006A covers a combined multi-axis sensor that delivers several motion axes from one device, the integrated form of the separate lateral, longitudinal, vertical, yaw and roll sensors; NHTSA's brake study and Bosch's six-axis IMU describe such units. The module treats the device as a whole and sets C006A for an internal fault, a failed self-test, lost communication or values that disagree across the axes. FCA documents C006A-49, internal electronic failure, on 2019-2020 RAM 2500 to 5500 trucks: the MIL comes on and bulletin 08-061-20 cures it with new ABS software; a RAM 2500 case report lists it as an active code in the ABS module. Stability, roll and related functions stay off while the fault is present; normal braking remains."
+    de: "C006A betrifft einen kombinierten Mehrachssensor, der mehrere Bewegungsachsen aus einem Bauteil liefert – die integrierte Form der getrennten Quer-, Längs-, Vertikal-, Gier- und Wanksensoren; die NHTSA-Bremsstudie und die Sechs-Achsen-IMU von Bosch beschreiben solche Einheiten. Das Steuergerät behandelt das Bauteil als Ganzes und setzt C006A bei internem Fehler, nicht bestandenem Selbsttest, verlorener Kommunikation oder Werten, die über die Achsen nicht zusammenpassen. FCA belegt C006A-49 (interner Elektronikfehler) an RAM 2500 bis 5500 der Jahre 2019–2020: Die MIL leuchtet, das Bulletin 08-061-20 behebt es mit neuer ABS-Software; ein Fallbericht zum RAM 2500 führt ihn als aktiven Code im ABS-Steuergerät. Solange der Fehler besteht, bleiben ESP, Wankregelung und verwandte Funktionen aus; die normale Bremse bleibt."
   affected_components:
     - multi_axis_accel_sensor
   common_causes:
-    - id: internal_fault
+    - id: abs_software
       likelihood: high
       label:
-        en: Internal sensor fault or failed self-test
-        de: Interner Sensorfehler oder Selbsttest nicht bestanden
-    - id: communication
+        en: ABS module software fault (FCA bulletin 08-061-20)
+        de: Softwarefehler im ABS-Steuergerät (FCA-Bulletin 08-061-20)
+    - id: internal_fault
       likelihood: medium
       label:
-        en: Loss of communication with the module
-        de: Kommunikationsverlust mit dem Steuergerät
+        en: Internal sensor fault or failed self-test
+        de: Interner Sensorfehler oder nicht bestandener Selbsttest
     - id: wiring
       likelihood: low
       label:
@@ -3509,7 +3571,7 @@
     estimated_cost_eur: [150, 1000]
     estimated_hours: [0.6, 3]
   flags:
-    mil: false
+    mil: true
     emissions_relevant: false
     drive_cycle_required: false
     limp_mode_possible: true
@@ -3517,9 +3579,12 @@
     - sae:J2012
   related_codes: [C0061, C0063, C0069]
   sources:
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10177522-9999.pdf
     - https://static.nhtsa.gov/odi/tsbs/2020/MC-10177473-9999.pdf
+    - https://rosap.ntl.bts.gov/view/dot/37210/dot_37210_DS1.pdf
+    - https://www.bosch-mobility.com/en/solutions/sensors/inertial-measurement-unit/
     - https://patents.google.com/patent/US9352731B2/en
-  reviewed: '2026-11-05'
+  reviewed: '2026-11-07'
 - code: C006B
   category: chassis
   title:

@@ -2787,33 +2787,33 @@
     en: Cylinder 6 Deactivation/Intake Valve Control Performance
     de: Zylinder 6 Abschaltung/Einlassventil Steuerung Funktion
   description:
-    en: "P3442 would flag cylinder 6 failing to switch off or back on while its control circuit is electrically sound. No manufacturer documents this code publicly. Both large users of cylinder 6 deactivation picked their own numbers instead: GM's L84 reports a cylinder 6 that keeps breathing as P349D, judged from filtered manifold pressure in 22 of 25 opportunities (Type B), and Chrysler's 5.7 L Hemi uses P1416, Cylinder 6 Reactivation Control Performance. GM also warns that P349D can set after a voltage dip during cranking, which an ECM update cures. Real mechanical faults usually trace back to the oil supply or a lifter that does not latch. Electrical faults on the same channel are P3441, P3443 and P3444."
-    de: "P3442 stünde für einen Zylinder 6, der sich nicht ab- oder wieder zuschalten lässt, obwohl sein Steuerkreis elektrisch einwandfrei ist. Kein Hersteller dokumentiert diesen Code öffentlich. Beide großen Nutzer der Abschaltung von Zylinder 6 vergeben eigene Nummern: GMs L84 meldet einen Zylinder 6, der weiter Luft ansaugt, als P349D – erkannt am gefilterten Saugrohrdruck in 22 von 25 Gelegenheiten (Type B); Chryslers 5,7-l-Hemi nutzt P1416 „Cylinder 6 Reactivation Control Performance“. GM weist zudem darauf hin, dass P349D nach einem Spannungseinbruch beim Anlassen gesetzt werden kann; dann hilft ein Software-Update. Echte mechanische Fehler gehen meist auf die Ölversorgung oder einen nicht einrastenden Stößel zurück. Elektrische Fehler desselben Kanals sind P3441, P3443 und P3444."
+    en: "P3442 reports that cylinder 6 does not switch off or back on as commanded although its control circuit tests fine. FCA uses it as Cylinder 6 Deactivation Control Performance on the 6.4 l Heavy Duty Hemi with MDS in RAM 2500 to 5500 trucks: bulletins 18-082-16 and 18-036-20 list it with P3402, P3426 and P3450 under a lit MIL and fix it with new PCM software. Ford stores it on 2025 F-150 5.0 l trucks built January to April 2025: bulletin 25-2487, replaced by 26-2093, traces P3442 and P3450 to a restricted oil feed tube for the left-bank deactivation solenoids, which is renewed under the valve cover. GM's L84 judges cylinder 6 under its own code P349D. Electrical faults on the same channel are P3441, P3443 and P3444."
+    de: "P3442 meldet, dass Zylinder 6 sich nicht wie befohlen ab- oder wieder zuschaltet, obwohl sein Steuerkreis elektrisch in Ordnung ist. FCA nutzt den Code als „Cylinder 6 Deactivation Control Performance“ beim 6,4-l-Heavy-Duty-Hemi mit MDS in RAM 2500 bis 5500: Die Bulletins 18-082-16 und 18-036-20 nennen ihn mit P3402, P3426 und P3450 bei leuchtender MIL und beheben ihn per neuer Motorsoftware. Ford speichert ihn beim F-150 5,0 l, gebaut Januar bis April 2025: Bulletin 25-2487, ersetzt durch 26-2093, führt P3442 und P3450 auf ein verengtes Ölzulaufrohr der Abschalt-Magnetventile der linken Bank zurück, das unter dem Ventildeckel erneuert wird. GMs L84 bewertet Zylinder 6 unter dem eigenen Code P349D. Elektrische Fehler desselben Kanals sind P3441, P3443 und P3444."
   affected_components:
     - cylinder_deactivation_solenoid
     - lifter
     - engine_oil
   common_causes:
+    - id: pcm_software
+      likelihood: medium
+      label:
+        en: Outdated PCM calibration (FCA 6.4 l, bulletins 18-082-16 and 18-036-20)
+        de: Veraltete Motorsoftware (FCA 6,4 l, Bulletins 18-082-16 und 18-036-20)
+    - id: oil_feed_tube_restricted
+      likelihood: medium
+      label:
+        en: Restricted oil feed tube to the left-bank solenoids (Ford 5.0 l, TSB 26-2093)
+        de: Verengtes Ölzulaufrohr zu den Magnetventilen der linken Bank (Ford 5,0 l, TSB 26-2093)
     - id: low_or_degraded_oil
-      likelihood: high
+      likelihood: medium
       label:
         en: Oil level too low, wrong grade or worn oil, so pressure builds too slowly
         de: Zu wenig, falsches oder verbrauchtes Öl, der Druck baut sich zu langsam auf
     - id: lifter_stuck
-      likelihood: medium
+      likelihood: low
       label:
         en: Deactivating lifter of cylinder 6 not locking or unlocking
         de: Abschaltstößel von Zylinder 6 verriegelt oder entriegelt nicht
-    - id: solenoid_sticking
-      likelihood: medium
-      label:
-        en: Cylinder 6 solenoid valve sticking or its oil screen clogged
-        de: Magnetventil von Zylinder 6 klemmt oder sein Ölsieb ist zugesetzt
-    - id: ecm_software
-      likelihood: low
-      label:
-        en: Code stored after a voltage dip during cranking, cured by an ECM update (GM analogue 20-NA-204)
-        de: Code nach Spannungseinbruch beim Anlassen, behoben per Software-Update (GM-Analogie 20-NA-204)
   symptoms:
     - en: Check engine lamp on
       de: Motorkontrollleuchte an
@@ -2835,13 +2835,15 @@
     limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3441, P3443, P3444, P3446, P349D, P0306, P3497]
+  related_codes: [P3441, P3443, P3444, P3450, P3402, P3426, P349D, P0306]
   sources:
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2016/MC-10121651-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10175723-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11024415-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2026/MC-11030102-0001.pdf
     - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03B%20Diagnostics.pdf
-    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11013168-0001.pdf
-    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10183203-9999.pdf
-  reviewed: '2026-11-02'
+  reviewed: '2026-11-07'
 
 - code: P3443
   category: powertrain
@@ -3233,15 +3235,25 @@
     en: Cylinder 7 Deactivation/Intake Valve Control Performance
     de: Zylinder 7 Abschaltung/Einlassventil Steuerung Funktion
   description:
-    en: "P3450 is meant for a cylinder 7 whose valves do not switch as commanded while the solenoid circuit itself checks out. No manufacturer documents this code publicly. In practice the lifters do the switching: NHTSA's account of GM's system shows oil pressure pushing spring-loaded locking pins inward so the lifter body moves without lifting the valve, and DFM only engages with coolant between 40 and 126 °C, more than 20 s of running and above 13 km/h. When that mechanism fails on cylinder 7, GM's L84 sets P349E from manifold pressure, and Chrysler's Hemi sets P1417, Cylinder 7 Reactivation Control Performance. P3449, P3451 and P3452 are the electrical codes for the same cylinder."
-    de: "P3450 ist für einen Zylinder 7 gedacht, dessen Ventile nicht wie befohlen umschalten, obwohl der Kreis des Magnetventils keinen Fehler zeigt. Kein Hersteller dokumentiert diesen Code öffentlich. Umgeschaltet wird in Wirklichkeit im Stößel: Nach der NHTSA-Darstellung von GMs System drückt Öldruck federbelastete Sperrstifte nach innen, sodass sich der Stößelkörper bewegt, ohne das Ventil anzuheben. DFM greift zudem erst bei 40 bis 126 °C Kühlmittel, nach mehr als 20 s Laufzeit und über 13 km/h. Versagt diese Mechanik an Zylinder 7, setzt GMs L84 anhand des Saugrohrdrucks P349E, Chryslers Hemi setzt P1417 „Cylinder 7 Reactivation Control Performance“. P3449, P3451 und P3452 sind die elektrischen Codes desselben Zylinders."
+    en: "P3450 reports that cylinder 7 does not deactivate or reactivate as commanded while its solenoid circuit checks out. FCA lists it as Cylinder 7 Deactivation Control Performance for the 6.4 l Heavy Duty Hemi with MDS (RAM 2500 to 5500, bulletins 18-082-16 and 18-036-20): the MIL lights and a PCM reflash cures it, with an optional calibration that also eases drone and shudder in MDS mode. On the 2025 F-150 5.0 l, Ford bulletin 26-2093, which replaces 25-2487, pairs it with P3442 and has the left-bank solenoid oil feed tube replaced under the valve cover. In GM's system, as NHTSA describes it, oil pressure moves locking pins so the lifter body travels without opening the valve. GM's L84 uses P349E. Electrical faults: P3449, P3451, P3452."
+    de: "P3450 meldet, dass Zylinder 7 sich nicht wie befohlen ab- oder zuschaltet, obwohl der Kreis seines Magnetventils in Ordnung ist. FCA führt ihn als „Cylinder 7 Deactivation Control Performance“ beim 6,4-l-Heavy-Duty-Hemi mit MDS (RAM 2500 bis 5500, Bulletins 18-082-16 und 18-036-20): Die MIL leuchtet, eine neue Motorsoftware behebt den Fehler; eine wahlweise Kalibrierung mildert zudem Dröhnen und Ruckeln im MDS-Betrieb. Beim F-150 5,0 l von 2025 nennt Fords Bulletin 26-2093, Nachfolger von 25-2487, ihn zusammen mit P3442 und lässt das Ölzulaufrohr der Magnetventile der linken Bank unter dem Ventildeckel tauschen. In GMs System verschiebt laut NHTSA Öldruck Sperrstifte, sodass sich der Stößelkörper bewegt, ohne das Ventil zu öffnen. GMs L84 nutzt P349E. Elektrische Fehler: P3449, P3451, P3452."
   affected_components:
     - cylinder_deactivation_solenoid
     - lifter
     - engine_oil
   common_causes:
+    - id: oil_feed_tube_restricted
+      likelihood: medium
+      label:
+        en: Restricted oil feed tube to the left-bank solenoids (Ford 5.0 l, TSB 26-2093)
+        de: Verengtes Ölzulaufrohr zu den Magnetventilen der linken Bank (Ford 5,0 l, TSB 26-2093)
+    - id: pcm_software
+      likelihood: medium
+      label:
+        en: Outdated PCM calibration (FCA 6.4 l, bulletins 18-082-16 and 18-036-20)
+        de: Veraltete Motorsoftware (FCA 6,4 l, Bulletins 18-082-16 und 18-036-20)
     - id: lifter_locking_pin_stuck
-      likelihood: high
+      likelihood: medium
       label:
         en: Locking pins in a cylinder 7 lifter sticking from wear or dirt
         de: Sperrstifte in einem Stößel von Zylinder 7 klemmen durch Verschleiß oder Schmutz
@@ -3250,16 +3262,6 @@
       label:
         en: Insufficient or aged oil delaying the switch
         de: Zu wenig oder gealtertes Öl verzögert das Umschalten
-    - id: oil_screen_blocked
-      likelihood: medium
-      label:
-        en: Oil screen or passage to the cylinder 7 solenoid blocked
-        de: Ölsieb oder Kanal zum Magnetventil von Zylinder 7 verstopft
-    - id: solenoid_oring_leak
-      likelihood: low
-      label:
-        en: Leaking O-ring on the solenoid lets pressure escape
-        de: Undichter O-Ring am Magnetventil lässt Druck entweichen
   symptoms:
     - en: Check engine lamp on
       de: Motorkontrollleuchte an
@@ -3281,13 +3283,16 @@
     limp_mode_possible: false
   references:
     - sae:J2012
-  related_codes: [P3449, P3451, P3452, P3454, P349E, P0307, P3400]
+  related_codes: [P3449, P3451, P3452, P3442, P3402, P3426, P349E, P0307]
   sources:
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
+    - https://static.nhtsa.gov/odi/tsbs/2016/MC-10121651-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2020/MC-10175723-9999.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11024415-0001.pdf
+    - https://static.nhtsa.gov/odi/tsbs/2026/MC-11030102-0001.pdf
     - https://static.nhtsa.gov/odi/inv/2025/INRD-PE25001-11969.pdf
     - https://gsi.ext.gm.com/gmspo/mode6/pdf/2019/19OBDG03B%20Diagnostics.pdf
-    - https://static.nhtsa.gov/odi/tsbs/2025/MC-11013168-0001.pdf
-  reviewed: '2026-11-02'
+  reviewed: '2026-11-07'
 
 - code: P3451
   category: powertrain
