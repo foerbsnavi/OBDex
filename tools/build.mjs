@@ -61,6 +61,30 @@ const totalCauses = generic.reduce((s, c) => s + (Array.isArray(c.common_causes)
 const totalSources = generic.reduce((s, c) => s + (Array.isArray(c.sources) ? c.sources.length : 0), 0);
 const totalRelated = generic.reduce((s, c) => s + (Array.isArray(c.related_codes) ? c.related_codes.length : 0), 0);
 
+// Quellen nach Art für die Startseite: Domains, Hersteller-Bulletins, Vorschrift, Herstellerunterlagen, Patente
+const sourceHosts = new Map();
+for (const c of generic) {
+  for (const s of c.sources || []) {
+    try {
+      const h = new URL(s).hostname.replace(/^www\./, "");
+      sourceHosts.set(h, (sourceHosts.get(h) || 0) + 1);
+    } catch { /* keine URL */ }
+  }
+}
+const hostSum = re => [...sourceHosts].reduce((a, [h, n]) => a + (re.test(h) ? n : 0), 0);
+const sourceKinds = {
+  domains: sourceHosts.size,
+  bulletins: hostSum(/(^|\.)nhtsa\.gov$/),
+  regulation: hostSum(/(^|\.)(law\.cornell\.edu|arb\.ca\.gov|ecfr\.gov|govinfo\.gov|eur-lex\.europa\.eu)$/),
+  oem: hostSum(/(^|\.)(gm\.com|fordservicecontent\.com|ford\.com|saabwisonline\.com|mitsubishitechinfo\.com|newtonnet\.co\.uk|deutz\.com)$/),
+  patents: hostSum(/^(patents\.google\.com|image-ppubs\.uspto\.gov|patentimages\.storage\.googleapis\.com)$/)
+};
+const minSources = generic.reduce((m, c) => Math.min(m, (c.sources || []).length), Infinity);
+const reviewDates = generic.map(c => c.reviewed).filter(Boolean).map(String).sort();
+const reviewFirst = reviewDates[0] || "";
+const reviewLast = reviewDates[reviewDates.length - 1] || "";
+const fmtDate = d => d ? new Date(d + "T00:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) : "";
+
 const meta = {
   generated_at: new Date().toISOString(),
   license: "CC0-1.0",
@@ -156,9 +180,9 @@ const FAMILY_LABELS = {
 const coverageRows = families
   .filter(f => coverage[f].total > 0)
   .map(f => {
-    const e = coverage[f].enriched;
+    const e = coverage[f].reviewed;
     const t = coverage[f].total;
-    const pct = t === 0 ? 0 : Math.round((e / t) * 100);
+    const pct = t === 0 ? 0 : Math.floor((e / t) * 100);
     return `      <tr><td><code>${f}</code> <span class="count">${FAMILY_LABELS[f] || ""}</span></td><td class="num">${t.toLocaleString("en-US")}</td><td class="bar"><div class="bar-row"><div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div></div><span class="bar-pct">${pct} %</span></div></td></tr>`;
   })
   .join("\n");
@@ -168,10 +192,10 @@ const indexHtml = `<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>obdex — OBD-II diagnostic codes &amp; PIDs</title>
-  <meta name="description" content="Open, machine-readable database of ${totalCodes.toLocaleString("en-US")} OBD-II diagnostic trouble codes and ${totalPids} PIDs. CC0 data, MIT tooling.">
-  <meta property="og:title" content="obdex — OBD-II diagnostic codes &amp; PIDs">
-  <meta property="og:description" content="Open, machine-readable database of ${totalCodes.toLocaleString("en-US")} generic OBD-II codes and ${totalPids} PIDs. SAE J2012, CC0.">
+  <title>obdex — the most detailed open database of generic OBD-II codes</title>
+  <meta name="description" content="The most detailed open database of generic OBD-II codes: all ${totalCodes.toLocaleString("en-US")} SAE J2012 codes individually reviewed, with ${totalSources.toLocaleString("en-US")} sources, in English and German. Free JSON, CC0.">
+  <meta property="og:title" content="obdex — the most detailed open database of generic OBD-II codes">
+  <meta property="og:description" content="Every one of ${totalCodes.toLocaleString("en-US")} generic OBD-II codes individually reviewed, with sources: regulations, manufacturer bulletins, service documents. English and German, CC0.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://foerbsnavi.github.io/OBDex/">
   <meta name="twitter:card" content="summary">
@@ -193,10 +217,19 @@ const indexHtml = `<!doctype html>
     li { padding: .35rem 0; display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; border-bottom: 1px solid var(--border); }
     li:last-child { border-bottom: none; }
     .count { color: var(--muted); font: 0.85em ui-monospace, "SF Mono", Consolas, monospace; }
-    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem 1.5rem; margin: 1.5rem 0 0; padding: 1.25rem 1.5rem; background: var(--card); border: 1px solid var(--border); border-radius: 10px; }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(95px, 1fr)); gap: 1rem 1rem; margin: 1.5rem 0 0; padding: 1.25rem 1.5rem; background: var(--card); border: 1px solid var(--border); border-radius: 10px; }
     .stat { color: var(--muted); font-size: .82rem; text-transform: uppercase; letter-spacing: .04em; }
     .stat strong { color: var(--fg); font-size: 1.7em; font-weight: 700; display: block; line-height: 1.05; letter-spacing: -.02em; font-variant-numeric: tabular-nums; margin-bottom: .15rem; text-transform: none; }
     .stat strong.accent { color: var(--accent); }
+    .lead { font-size: 1.05rem; margin: 0 0 .5rem; }
+    .checks { margin: .5rem 0 0; }
+    .checks li { display: block; }
+    .checks b { color: var(--pill-fg); }
+    .kinds { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .75rem 1.5rem; margin: .75rem 0 0; }
+    .kinds div { border-left: 3px solid var(--accent); padding-left: .75rem; }
+    .kinds strong { display: block; font-size: 1.25rem; font-variant-numeric: tabular-nums; }
+    .kinds span { color: var(--muted); font-size: .85rem; }
+    .reviewed-pill { font-size: .72rem; padding: .12rem .55rem; border-radius: 999px; background: var(--pill-bg); color: var(--pill-fg); font-weight: 600; }
     .complete-badge { display: inline-flex; align-items: center; gap: .4rem; background: linear-gradient(135deg, #1ea66c, #0f7a4e); color: white; padding: .35rem .9rem; border-radius: 999px; font-size: .8rem; font-weight: 600; letter-spacing: .02em; margin-top: .75rem; }
     .complete-badge::before { content: "✓"; font-weight: 900; }
     .demo-cta { display: flex; align-items: center; gap: 1rem; padding: 1.25rem 1.5rem; margin: 1.5rem 0 0; background: linear-gradient(135deg, var(--pill-bg), transparent); border: 1px solid var(--accent); border-radius: 10px; }
@@ -277,16 +310,16 @@ const indexHtml = `<!doctype html>
 <body>
 <main>
   <h1>obdex</h1>
-  <p class="tagline">The complete open database of OBD-II diagnostic trouble codes and PIDs.</p>
-  <div class="complete-badge">100 % complete · all 7 families</div>
+  <p class="tagline">The most detailed open database of generic OBD-II codes — every code individually reviewed, with sources.</p>
+  <div class="complete-badge">${totalReviewed.toLocaleString("en-US")} of ${totalCodes.toLocaleString("en-US")} codes reviewed individually</div>
 
   <div class="stats" aria-label="Database statistics">
     <div class="stat"><strong class="accent">${totalCodes.toLocaleString("en-US")}</strong>codes</div>
-    <div class="stat"><strong>${totalPids}</strong>PIDs</div>
+    <div class="stat"><strong class="accent">${totalSources.toLocaleString("en-US")}</strong>sources</div>
     <div class="stat"><strong>${totalCauses.toLocaleString("en-US")}</strong>causes</div>
     <div class="stat"><strong>${totalSymptoms.toLocaleString("en-US")}</strong>symptoms</div>
     <div class="stat"><strong>${totalRelated.toLocaleString("en-US")}</strong>cross-refs</div>
-    <div class="stat"><strong>${totalSources.toLocaleString("en-US")}</strong>sources</div>
+    <div class="stat"><strong>${totalPids}</strong>PIDs</div>
   </div>
 
   <div class="demo-cta">
@@ -305,14 +338,33 @@ const indexHtml = `<!doctype html>
   <p class="ex">Try: <code data-q="P0420">P0420</code> · <code data-q="oxygen sensor">oxygen sensor</code> · <code data-q="Lambdasonde">Lambdasonde</code> · <code data-q="0C">0C</code> (PID) · <code data-q="01:0C">01:0C</code> (Mode 01 PID 0C)</p>
   <div id="result"></div>
 
-  <h2>Coverage</h2>
-  <p class="hint">Every code carries the full schema: bilingual title and description, affected components, common causes with likelihood, repair difficulty / cost / hours, MIL / emissions / limp-mode flags, related codes, and at least one public source.</p>
+  <h2>Every code, checked on its own</h2>
+  <p class="lead">Between ${fmtDate(reviewFirst)} and ${fmtDate(reviewLast)} each of the ${totalCodes.toLocaleString("en-US")} codes was taken up on its own, researched and rewritten from scratch in English and German. A code counts as reviewed only after five checks:</p>
+  <ul class="checks">
+    <li><b>1 · Title</b> confirmed against at least two independent code lists.</li>
+    <li><b>2 · Sources</b> — at least ${minSources} per code that explain this very code or its monitor, every URL fetched and read.</li>
+    <li><b>3 · Text</b> — what the module monitors, when it sets the code, which makers use it and what it means for the driver.</li>
+    <li><b>4 · Details</b> — causes with likelihood, symptoms, repair estimate and the MIL, emissions, drive-cycle and limp-mode flags.</li>
+    <li><b>5 · Links</b> — related codes exist and belong together: other bank, high/low pair, range/performance.</li>
+  </ul>
+
+  <h2>Where the sources come from</h2>
+  <p class="hint">${totalSources.toLocaleString("en-US")} source links from ${sourceKinds.domains.toLocaleString("en-US")} sites, chosen per code. Code lists and forums serve only to cross-check titles, never as a source.</p>
+  <div class="kinds">
+    <div><strong>${sourceKinds.bulletins.toLocaleString("en-US")}</strong><span>manufacturer service bulletins (NHTSA)</span></div>
+    <div><strong>${sourceKinds.regulation.toLocaleString("en-US")}</strong><span>references to OBD regulations (mainly CARB 13 CCR § 1968.2)</span></div>
+    <div><strong>${sourceKinds.oem.toLocaleString("en-US")}</strong><span>manufacturer OBD and service documents (GM, Ford, Saab, Mitsubishi …)</span></div>
+    <div><strong>${sourceKinds.patents.toLocaleString("en-US")}</strong><span>patents describing the monitor</span></div>
+  </div>
+  <p class="hint">Where no maker documents a code publicly, the entry says so plainly and explains the function from the regulation and comparable codes instead of guessing.</p>
+
+  <h2>Reviewed per family</h2>
   <table class="coverage">
-    <thead><tr><th>Family</th><th class="num">Codes</th><th class="bar-h">Coverage</th></tr></thead>
+    <thead><tr><th>Family</th><th class="num">Codes</th><th class="bar-h">Reviewed</th></tr></thead>
     <tbody>
 ${coverageRows}
     </tbody>
-    <tfoot><tr><td><strong>All generic</strong></td><td class="num">${totalCodes.toLocaleString("en-US")}</td><td class="bar"><div class="bar-row"><div class="bar-track"><div class="bar-fill" style="width:${Math.round((totalEnriched / totalCodes) * 100)}%"></div></div><span class="bar-pct">${Math.round((totalEnriched / totalCodes) * 100)} %</span></div></td></tr></tfoot>
+    <tfoot><tr><td><strong>All generic</strong></td><td class="num">${totalCodes.toLocaleString("en-US")}</td><td class="bar"><div class="bar-row"><div class="bar-track"><div class="bar-fill" style="width:${Math.floor((totalReviewed / totalCodes) * 100)}%"></div></div><span class="bar-pct">${Math.floor((totalReviewed / totalCodes) * 100)} %</span></div></td></tr></tfoot>
   </table>
 
   <h2>Use the data</h2>
@@ -326,7 +378,7 @@ ${pidLinks}
 
   <footer>
     <p>Source on <a href="https://github.com/foerbsnavi/obdex">GitHub</a> · <a href="https://github.com/foerbsnavi/obdex/blob/main/CONTRIBUTING.md">contributing</a> · <a href="https://github.com/foerbsnavi/obdex/issues">report a wrong description</a> · <a href="https://obd.signalwelt.de/">live search</a></p>
-    <p>Identifiers follow SAE J2012. Descriptions are independently authored, with Wikipedia and source references on each code.</p>
+    <p>Identifiers follow SAE J2012. Every description is written independently, in English and German, and lists the public sources it rests on.</p>
     <p>Data <a href="https://github.com/foerbsnavi/obdex/blob/main/LICENSE-DATA">CC0-1.0</a> · code <a href="https://github.com/foerbsnavi/obdex/blob/main/LICENSE-CODE">MIT</a> · credit is voluntary, but appreciated: <a href="https://github.com/foerbsnavi/obdex#how-to-credit">how to credit</a></p>
   </footer>
 </main>
@@ -376,7 +428,7 @@ ${pidLinks}
 
   function renderSources(arr) {
     if (!Array.isArray(arr) || !arr.length) return '';
-    return '<h3>Sources</h3><ul class="sources">' +
+    return '<h3>Sources (' + arr.length + ')</h3><ul class="sources">' +
       arr.map(s => /^https?:\\/\\//.test(s)
         ? '<li><a href="' + esc(s) + '" target="_blank" rel="noopener">' + esc(s) + '</a></li>'
         : '<li>' + esc(s) + '</li>'
@@ -427,7 +479,8 @@ ${pidLinks}
     }
 
     return '<div class="card">' +
-      '<div class="card-head"><span class="card-code">' + esc(c.code) + '</span><span class="card-cat">' + cat + '</span></div>' +
+      '<div class="card-head"><span class="card-code">' + esc(c.code) + '</span><span class="card-cat">' + cat + '</span>' +
+        (c.reviewed ? '<span class="reviewed-pill">reviewed ' + esc(c.reviewed) + '</span>' : '') + '</div>' +
       titleEn + titleDe + descEn + descDe + flags + causes + repair + renderSources(c.sources) +
       '</div>';
   }

@@ -2,20 +2,20 @@
 
 # obdex
 
-**The open database of generic OBD-II trouble codes**
+**The most detailed open database of generic OBD-II codes — every code individually reviewed, with sources.**
 
-9,533 codes and 132 PIDs in English and German, free to use under CC0
+9,533 SAE J2012 codes · 30,875 sources · English and German · 132 PIDs · free to use under CC0
 
-[![reviewed](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ffoerbsnavi.github.io%2FOBDex%2Fmeta.json&query=%24.counts.generic.reviewed&label=reviewed&suffix=%20of%209%2C533&color=2f7d32)](#edition-2-every-code-reviewed-individually)
+[![reviewed](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ffoerbsnavi.github.io%2FOBDex%2Fmeta.json&query=%24.counts.generic.reviewed&label=reviewed&suffix=%20of%209%2C533&color=2f7d32)](#every-code-reviewed-individually)
 [![data: CC0-1.0](https://img.shields.io/badge/data-CC0--1.0-blue.svg)](LICENSE-DATA)
 [![code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE-CODE)
 [![validate](https://github.com/foerbsnavi/obdex/actions/workflows/validate.yml/badge.svg)](https://github.com/foerbsnavi/obdex/actions/workflows/validate.yml)
 
-[Live search](https://obd.signalwelt.de/) · [Data browser](https://foerbsnavi.github.io/OBDex/) · [Quick start](#quick-start) · [Review progress](#edition-2-every-code-reviewed-individually) · [Contributing](#contributing)
+[Live search](https://obd.signalwelt.de/) · [Data browser](https://foerbsnavi.github.io/OBDex/) · [Quick start](#quick-start) · [How codes are reviewed](#every-code-reviewed-individually) · [Contributing](#contributing)
 
 </div>
 
-Your scan tool says `P0420`. obdex tells you what the engine module checked, why it set the code, what usually causes it, what you will notice and roughly what the repair costs. Every code is one open entry you can read, fork and embed — a single fetch from GitHub Pages, free and without an account.
+Your scan tool says `P0420`. obdex tells you what the engine module checked, when it set the code, which makers use it and how, what usually causes it, what you will notice and roughly what the repair costs — and it shows you where each statement comes from. Every one of the 9,533 generic codes was researched on its own and rewritten from regulations, manufacturer bulletins and service documents. Each code is one open entry you can read, fork and embed — a single fetch from GitHub Pages, free and without an account.
 
 - **[obd.signalwelt.de](https://obd.signalwelt.de/)** — the live search app with a full English and German interface, installable as a PWA, with deep links and PDF export. Try `P0420`, `oxygen sensor` or `Lambdasonde`.
 - **[Data browser](https://foerbsnavi.github.io/OBDex/)** — search the raw database and download the JSON bundles.
@@ -46,14 +46,14 @@ codes = json.load(urllib.request.urlopen("https://foerbsnavi.github.io/OBDex/gen
 print(next(c for c in codes if c["code"] == "P0420")["title"]["de"])
 ```
 
-## Edition 2: every code reviewed individually
+## Every code reviewed individually
 
-The first edition gave all 9,533 codes a complete entry. Edition 2 checks every code on its own: since October 2026 we work through the database in 195 packages of 50 codes, family by family, and rewrite each entry from verified sources. The chart is rebuilt from the data on every release.
+Between 9 October and 7 November 2026 all 9,533 codes were worked through in 195 packages of about 50, family by family, and every entry was rewritten from verified sources. No code was filled from a template; where two codes look alike, their texts still explain what sets each one apart.
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://foerbsnavi.github.io/OBDex/progress-dark.svg">
-    <img src="https://foerbsnavi.github.io/OBDex/progress.svg" width="720" alt="Review progress per code family: share of codes that carry a reviewed date. Live numbers are in meta.json under counts.generic.by_family.">
+    <img src="https://foerbsnavi.github.io/OBDex/progress.svg" width="720" alt="Reviewed per code family: all seven families at 100 percent. Live numbers are in meta.json under counts.generic.by_family.">
   </picture>
 </p>
 
@@ -61,11 +61,11 @@ A reviewed code has passed five checks:
 
 1. **Title** — confirmed against at least two independent code lists.
 2. **Sources** — at least two that explain this very code or its monitor, one of them a regulation (CARB 13 CCR § 1968.2) or a manufacturer or supplier document; every URL fetched and read.
-3. **Text** — English and German descriptions written fresh for this code: what is monitored, when the module sets the code, what it means for the driver.
+3. **Text** — English and German descriptions written fresh for this code: what is monitored, when the module sets the code, which makers use it, what it means for the driver.
 4. **Details** — causes with likelihood, symptoms, repair estimate and flags (MIL, emissions, drive cycle, limp mode) checked for this code.
 5. **Links** — related codes exist in obdex and belong together: other bank, high/low pair, range/performance.
 
-It then carries the field `reviewed: 'YYYY-MM-DD'`; codes awaiting their review keep their complete first-edition entry. The order of work is P0, P2, U0, C0, B0, P3, U3. Reviews from community pull requests count towards the chart as soon as they are merged.
+Each reviewed code carries the field `reviewed: 'YYYY-MM-DD'`.
 
 To work with reviewed codes only, filter on that field:
 
@@ -73,14 +73,32 @@ To work with reviewed codes only, filter on that field:
 const reviewed = codes.filter(c => c.reviewed);
 ```
 
+### Where the sources come from
+
+The 30,875 source links point to 246 sites. The largest groups:
+
+| Source | Links |
+|---|---:|
+| Manufacturer service bulletins (NHTSA archive) | 6,857 |
+| OBD regulation, mainly CARB 13 CCR § 1968.2 | 6,307 |
+| Manufacturer OBD and service documents (GM, Ford, Saab, Mitsubishi, Deutz …) | 11,328 |
+| Patents describing the monitor | 2,749 |
+
+Code lists are used only to cross-check titles, never as a source; forums and AI-generated code pages are not used at all.
+
+### Where public sources stop
+
+Some generic codes are reserved in SAE J2012 but used by only one maker, or by none that publishes its documents. 276 chassis and body codes appear in none of the public J2012 title lists that could be checked. These entries say so plainly — "no manufacturer documents this code publicly" — name the makers that do use the number, and explain the monitored function from the regulation, patents and comparable codes. They are kept because a driver who reads such a code from a car still deserves an honest answer.
+
 ## What the data holds
 
 - **9,533 generic DTCs** — the full SAE J2012 / ISO 15031-6 code space in seven families.
 - **Two languages** — title, description, causes and symptoms in English and German.
 - **Diagnosis help** — affected components, common causes with likelihood, symptoms, repair difficulty, DIY flag, cost in euros and working hours.
 - **Flags** — MIL, emissions relevance, drive cycle, limp mode.
-- **Cross-references** — more than 34,000 links between related codes.
-- **Sources** — more than 24,000 links, at least one per code and at least two per reviewed code.
+- **Cross-references** — 46,824 links between related codes.
+- **Sources** — 30,875 links, at least two per code, every one fetched and checked.
+- **Depth** — 33,401 causes with likelihood and 26,762 symptoms, written for each code.
 - **132 PIDs** — Mode 01 live data and Mode 09 vehicle information, with formula, unit and range.
 
 obdex covers the generic layer that every OBD-II tool speaks. Manufacturer-specific codes such as P1xxx or B1xxx stay with their makers.
@@ -166,7 +184,7 @@ Plain JSON on GitHub Pages under `https://foerbsnavi.github.io/OBDex`. Every fil
 - **Garage and workshop software** — bilingual code lookup that runs on your own server.
 - **Scan-tool front-ends** — turn the codes from an ELM327 dongle into readable explanations with cause hints.
 - **Driver and DIY apps** — show repair difficulty and a cost range before the workshop visit.
-- **Training material** — every code explained, with sources.
+- **Training material** — every code explained, with the sources to follow up.
 - **Research** — 9,533 codes with consistent fields in one JSON file.
 
 ## Languages
@@ -178,7 +196,7 @@ English and German are complete for every code. The schema accepts any ISO 639-1
 Corrections, reviews and translations are all welcome. CI validates the schema, duplicates and related-code links on every pull request.
 
 - **Found a wrong code?** Open a [correction issue](https://github.com/foerbsnavi/obdex/issues/new/choose) or a pull request.
-- **Want to review codes?** [CONTRIBUTING.md › Reviewing codes](CONTRIBUTING.md#reviewing-codes) explains the package tools and what a review needs.
+- **Know a better source?** A manufacturer bulletin or service document that pins down a code more precisely is the most valuable contribution. [CONTRIBUTING.md › Reviewing codes](CONTRIBUTING.md#reviewing-codes) explains what a review needs.
 - **Rules of thumb:** cite your sources, write in your own words, one pull request per code or coherent batch.
 
 Thank you to everyone who has improved obdex so far, among them [rslnautic](https://github.com/rslnautic) (reviewed P2 codes, cleaned-up prose and titles) and [Noabza](https://github.com/Noabza) (142 corrected titles).

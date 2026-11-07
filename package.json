@@ -1,7 +1,7 @@
 {
   "name": "obdex",
   "version": "0.1.0",
-  "description": "Open machine-readable database of OBD-II diagnostic codes and PIDs",
+  "description": "The most detailed open database of generic OBD-II codes - every code individually reviewed, with sources",
   "type": "module",
   "private": true,
   "scripts": {
