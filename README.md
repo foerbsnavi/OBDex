@@ -4,7 +4,7 @@
 
 **The most detailed open database of generic OBD-II codes — every code individually reviewed, with sources.**
 
-9,533 SAE J2012 codes · 30,884 sources · English and German · 132 PIDs · free to use under CC0
+9,533 SAE J2012 codes · 30,875 sources · English and German · 132 PIDs · free to use under CC0
 
 [![reviewed](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Ffoerbsnavi.github.io%2FOBDex%2Fmeta.json&query=%24.counts.generic.reviewed&label=reviewed&suffix=%20of%209%2C533&color=2f7d32)](#every-code-reviewed-individually)
 [![data: CC0-1.0](https://img.shields.io/badge/data-CC0--1.0-blue.svg)](LICENSE-DATA)
@@ -75,7 +75,7 @@ const reviewed = codes.filter(c => c.reviewed);
 
 ### Where the sources come from
 
-The 30,884 source links point to 245 sites. The largest groups:
+The 30,875 source links point to 244 sites. The largest groups:
 
 | Source | Links |
 |---|---:|
@@ -99,7 +99,7 @@ Some generic codes are reserved in SAE J2012 but used by only one maker, or by n
 - **Diagnosis help** — affected components, common causes with likelihood, symptoms, repair difficulty, DIY flag, cost in euros and working hours.
 - **Flags** — MIL, emissions relevance, drive cycle, limp mode.
 - **Cross-references** — 46,824 links between related codes.
-- **Sources** — 30,884 links, at least two per code, every one fetched and checked.
+- **Sources** — 30,875 links, at least two per code, every one fetched and checked.
 - **Depth** — 33,401 causes with likelihood and 26,762 symptoms, written for each code.
 - **132 PIDs** — Mode 01 live data and Mode 09 vehicle information, with formula, unit and range.
 

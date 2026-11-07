@@ -97832,7 +97832,6 @@
   sources:
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://saabwisonline.com/9-5-9650/2010/3-electrical-system/driver-information-main-instrument-unit-and-sid/fault-diagnosis-diagnostic-trouble-codes/dtc-p0461-p0463-p2066-p2067-or-p2068
-    - https://www.mycarly.com/obd-codes/p0644-driver-display-serial-communication-circuit/
   reviewed: '2026-10-12'
 
 - code: P0645
@@ -98073,7 +98072,6 @@
   sources:
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://saabwisonline.com/9-5-9650/2010/3-electrical-system/theft-protection/fault-diagnosis-diagnostic-trouble-codes/dtc-p0633
-    - https://www.mycarly.com/obd-codes/p0648-immobilizer-lamp-control-circuit/
   reviewed: '2026-10-12'
 
 - code: P0649
@@ -98132,7 +98130,6 @@
   sources:
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://gsi.ext.gm.com/gmspo/mode6/pdf/2018/18OBDG03A%20Engine%20Diagnostics.pdf
-    - https://www.mycarly.com/obd-codes/p0649-speed-control-lamp-control-circuit/
   reviewed: '2026-10-12'
 
 - code: P064A
@@ -99363,7 +99360,6 @@
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://www.law.cornell.edu/cfr/text/40/1036.111
     - https://static.nhtsa.gov/odi/tsbs/2019/MC-10161147-9999.pdf
-    - https://www.mycarly.com/obd-codes/p065d-reductant-system-malfunction-lamp-control-circuit/
   reviewed: '2026-10-12'
 
 - code: P065E
@@ -103441,7 +103437,6 @@
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://www.newtonnet.co.uk/fiesta/fordobd2012.pdf
     - https://www.fordservicecontent.com/Ford_Content/catalog/motorcraft/OBD-Operations-Summary-Gasoline-2020-2023.pdf
-    - https://www.mycarly.com/obd-codes/p069f-throttle-actuator-control-lamp-control-circuit/
   reviewed: '2026-10-12'
 
 - code: P06A0
@@ -106613,7 +106608,6 @@
   sources:
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://static.nhtsa.gov/odi/tsbs/2023/MC-10241065-9999.pdf
-    - https://www.mycarly.com/obd-codes/p06d3-sensor-reference-voltage-'e'-circuit-low/
   reviewed: '2026-10-12'
 
 - code: P06D4
@@ -106674,7 +106668,6 @@
   sources:
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://static.nhtsa.gov/odi/tsbs/2023/MC-10241065-9999.pdf
-    - https://www.mycarly.com/obd-codes/p06d4-sensor-reference-voltage-'e'-circuit-high/
   reviewed: '2026-10-12'
 
 - code: P06D5
@@ -106857,7 +106850,6 @@
   sources:
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://static.nhtsa.gov/odi/tsbs/2023/MC-10241065-9999.pdf
-    - https://www.mycarly.com/obd-codes/p06d7-sensor-reference-voltage-'f'-circuit-low/
   reviewed: '2026-10-12'
 
 - code: P06D8
@@ -106918,7 +106910,6 @@
   sources:
     - https://www.law.cornell.edu/regulations/california/13-CCR-1968.2
     - https://static.nhtsa.gov/odi/tsbs/2023/MC-10241065-9999.pdf
-    - https://www.mycarly.com/obd-codes/p06d8-sensor-reference-voltage-'f'-circuit-high/
   reviewed: '2026-10-12'
 
 - code: P06D9
